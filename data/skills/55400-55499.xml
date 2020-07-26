@@ -3,8 +3,7 @@
     <skill id="55400" name="Commemorative Olympiad Bracelet">
         <!-- Activates 2 Talisman slots, Max. HP/ MP/ CP +3%%. -->
         <icon initial="icon.dimension_bracelet_i05"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <effect name="TalismanSlot">
@@ -24,14 +23,13 @@
     <skill id="55401" name="Olympiad Warrior's Talisman">
         <!-- P./ M. Skill Critical Damage +7%%. -->
         <icon initial="icon.npoint_talisman_stat"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify stat="CRITICAL_DAMAGE" mode="PER">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
                 <power initial="7.0"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" mode="PER">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="7.0"/>
             </stat-modify>
         </effects>
@@ -39,8 +37,7 @@
     <skill id="55402" name="Olympiad Warrior's Belt">
         <!-- P. Def. +15, weight limit +2000. -->
         <icon initial="icon.belt_i03"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT">
@@ -71,8 +68,7 @@
     <skill id="55405" name="Cheerleader Mae's Support">
         <!-- P./ M. Atk. +5%%, Atk. Spd./ Casting Spd. +5%%, Skill MP Consumption -10%%, P./ M. Critical Damage +3%%. -->
         <icon initial="BranchSys.icon.br_aga_local2009_g_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="55406" name="For victory in Tryout - XP/SP" action="A1">
@@ -99,8 +95,7 @@
     <skill id="55408" name="Expertise Rune (A-grade)">
         <!-- When possessed, you get Expertise A skill -->
         <icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="55409" name="Kusto's Support Box: Enhance Weapon (A-grade)" action="A1">
@@ -876,7 +871,7 @@
         <!-- Brooch radiates bright light. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
-			<effect-range initial="-1"/>
+            <effect-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
@@ -906,8 +901,7 @@
     <skill id="55468" name="Lv. 1 Brooch">
         <!-- Activates 2 jewel slots. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="BROOCH_JEWELS">
@@ -918,8 +912,7 @@
     <skill id="55469" name="Lv. 2 Brooch">
         <!-- Activates 3 jewel slots. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
@@ -935,8 +928,7 @@
         <icon initial="icon.etc_bm_brooch_lavianrose_i00">
             <value level="2">icon.etc_bm_brooch_lavianrose_i01</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <enlarge-slot type="INVENTORY_NORMAL">
@@ -989,10 +981,9 @@
         <icon initial="icon.etc_bm_jewel_vital">
             <value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-        <!-- <abnormal type="EXP_SP_U"/> -->         
+        <!-- <abnormal type="EXP_SP_U"/> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1088,8 +1079,7 @@
         <icon initial="icon.etc_bm_jewel_jade_i00">
             <value level="6">icon.bm_jewel_speedup_lv1_high</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
@@ -1126,9 +1116,9 @@
                     <value level="10">7</value>
                 </power>
             </speed>
-			<defence-trait start-level="10">
+            <defence-trait start-level="10">
                 <trait type="BOW">
-                    <power initial="10"/>                    
+                    <power initial="10"/>
                 </trait>
                 <trait type="DUAL">
                     <power initial="10"/>
@@ -1170,8 +1160,7 @@
         <icon initial="icon.etc_bm_jewel_diamond_i00">
             <value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -1218,8 +1207,7 @@
         <icon initial="icon.etc_bm_jewel_pearl_i00">
             <value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE">
@@ -1232,7 +1220,7 @@
                     <value level="7">100</value>
                     <value level="8">125</value>
                     <value level="9">160</value>
-					<value level="10">250</value>
+                    <value level="10">250</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" start-level="4" stat="MAGIC_CRITICAL_DAMAGE">
@@ -1266,7 +1254,7 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55478" name="Ruby" max-level="10" action="A1">
@@ -1285,7 +1273,7 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55479" name="Ruby" max-level="10" action="A1">
@@ -1304,7 +1292,7 @@
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55481" name="Sapphire" max-level="10" action="A1">
@@ -1323,7 +1311,7 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55482" name="Sapphire" max-level="10" action="A1">
@@ -1342,7 +1330,7 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55483" name="Sapphire" max-level="10" action="A1">
@@ -1361,7 +1349,7 @@
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
         <attributes>
-            </attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="55485" name="Garnet" max-level="10">
@@ -1380,8 +1368,7 @@
         <icon initial="icon.etc_bm_jewel_garnet">
             <value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1424,7 +1411,7 @@
                         <value level="10">40</value>
                     </power>
                 </trait>
-				<trait type="DERANGEMENT">
+                <trait type="DERANGEMENT">
                     <power initial="3">
                         <value level="2">5</value>
                         <value level="3">8</value>
@@ -1437,13 +1424,13 @@
                         <value level="10">40</value>
                     </power>
                 </trait>
-				<trait type="SLEEP">
-                    <power>                       
+                <trait type="SLEEP">
+                    <power>
                         <value level="10">10</value>
                     </power>
                 </trait>
-				<trait type="POISON">
-                    <power>                       
+                <trait type="POISON">
+                    <power>
                         <value level="10">10</value>
                     </power>
                 </trait>

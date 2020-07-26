@@ -810,7 +810,7 @@
             <base-stat start-level="4" type="STR">
                 <power initial="1.0"/>
             </base-stat>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" start-level="4">
+            <stat-modify mode="PER" start-level="4" stat="PHYSICAL_ATTACK">
                 <power initial="4.0"/>
             </stat-modify>
             <stat-modify start-level="2" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -1391,8 +1391,8 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="3557" name="Valakas' Necklace">	
-	<!-- Frre item, all players - Event! -->
+    <skill id="3557" name="Valakas' Necklace">
+        <!-- Increases Fire Resistance, Sleep Resistance, Sleep Atk. Rate, Max HP/P. Atk./M. Atk., and P. Critical Rate of damage-dealing magic. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
         <icon initial="icon.accessory_necklace_of_valakas_i00"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
@@ -1416,7 +1416,7 @@
             </stat-modify>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
                 <power initial="5.0"/>
-            </stat-modify>                        
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1426,10 +1426,10 @@
             <reuse skill-type="MAGIC">
                 <power initial="-4.0"/>
             </reuse>
-			<reuse skill-type="PHYSIC">
+            <reuse skill-type="PHYSIC">
                 <power initial="-4.0"/>
             </reuse>
-			<reuse skill-type="DANCE">
+            <reuse skill-type="DANCE">
                 <power initial="-4.0"/>
             </reuse>
         </effects>
@@ -1466,10 +1466,10 @@
                         <value level="7">10</value>
                         <value level="13">20</value>
                         <value level="14">30</value>
-						<value level="15">40</value>
+                        <value level="15">40</value>
                     </power>
                 </trait>
-				<trait type="SHOCK">
+                <trait type="SHOCK">
                     <power>
                         <value level="8">3</value>
                         <value level="9">4</value>
@@ -1478,7 +1478,7 @@
                         <value level="14">20</value>
                         <value level="15">30</value>
                     </power>
-                </trait>               
+                </trait>
                 <trait type="DERANGEMENT">
                     <power>
                         <value level="12">5</value>
@@ -1496,10 +1496,10 @@
                         <value level="7">10</value>
                         <value level="13">20</value>
                         <value level="14">30</value>
-						<value level="15">40</value>
+                        <value level="15">40</value>
                     </power>
                 </trait>
-				<trait type="SHOCK">
+                <trait type="SHOCK">
                     <power>
                         <value level="8">3</value>
                         <value level="9">4</value>
@@ -1508,7 +1508,7 @@
                         <value level="14">20</value>
                         <value level="15">30</value>
                     </power>
-                </trait>               
+                </trait>
                 <trait type="DERANGEMENT">
                     <power>
                         <value level="12">5</value>
@@ -1534,7 +1534,7 @@
                     <value level="14">15.0</value>
                     <value level="15">20.0</value>
                 </power>
-            </stat-modify>          
+            </stat-modify>
             <magic-cost>
                 <power>
                     <value level="10">-1.0</value>
@@ -1551,7 +1551,7 @@
                     <value level="15">20.0</value>
                 </power>
             </stat-modify>
-            <base-stats types="CON MEN" start-level="14">
+            <base-stats start-level="14" types="CON MEN">
                 <power initial="1">
                     <value level="15">2</value>
                 </power>
@@ -1583,14 +1583,14 @@
         <target/>
         <effects>
             <attack-trait>
-				<trait type="BLEED">
+                <trait type="BLEED">
                     <power initial="1">
                         <value level="5">6</value>
                         <value level="6">8</value>
                         <value level="7">10</value>
                         <value level="13">15</value>
                         <value level="14">20</value>
-						<value level="15">30</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
                 <trait type="SHOCK">
@@ -1601,7 +1601,7 @@
                         <value level="14">15</value>
                         <value level="15">20</value>
                     </power>
-                </trait>               
+                </trait>
                 <trait type="DERANGEMENT">
                     <power>
                         <value level="12">5</value>
@@ -1612,14 +1612,14 @@
                 </trait>
             </attack-trait>
             <defence-trait>
-				<trait type="BLEED">
+                <trait type="BLEED">
                     <power initial="1">
                         <value level="5">6</value>
                         <value level="6">8</value>
                         <value level="7">10</value>
                         <value level="13">15</value>
                         <value level="14">20</value>
-						<value level="15">30</value>
+                        <value level="15">30</value>
                     </power>
                 </trait>
                 <trait type="SHOCK">
@@ -1630,7 +1630,7 @@
                         <value level="14">15</value>
                         <value level="15">20</value>
                     </power>
-                </trait>               
+                </trait>
                 <trait type="DERANGEMENT">
                     <power>
                         <value level="12">5</value>
@@ -1641,7 +1641,7 @@
                 </trait>
             </defence-trait>
             <vampiric-attack chance="70">
-                <power>                   
+                <power>
                     <value level="14">8.0</value>
                     <value level="15">8.0</value>
                 </power>
@@ -1654,7 +1654,7 @@
                     <value level="14">10.0</value>
                     <value level="15">15.0</value>
                 </power>
-            </stat-modify>            
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3560" name="Orfen's Earring" max-level="4">
@@ -1751,14 +1751,14 @@
         </attributes>
         <target/>
         <effects>
-			<vital-stat-modify stat="MAX_MP" start-level="11" stop-level="12">
-				<power>                        
+            <vital-stat-modify start-level="11" stat="MAX_MP" stop-level="12">
+                <power>
                     <value level="11">10.0</value>
                 </power>
             </vital-stat-modify>
             <attack-trait>
                 <trait type="SHOCK">
-                    <power>                        
+                    <power>
                         <value level="12">10</value>
                         <value level="13">15</value>
                         <value level="14">20</value>
@@ -1766,12 +1766,12 @@
                     </power>
                 </trait>
                 <trait type="BLEED">
-                    <power>                        
+                    <power>
                         <value level="12">5</value>
                         <value level="13">10</value>
                         <value level="14">15</value>
                         <value level="15">20</value>
-                    </power>          
+                    </power>
                 </trait>
             </attack-trait>
             <defence-trait>
@@ -1793,10 +1793,10 @@
                         <value level="13">10</value>
                         <value level="14">15</value>
                         <value level="15">20</value>
-                    </power>          
+                    </power>
                 </trait>
             </defence-trait>
-			<stat-modify stat="ACCURACY">
+            <stat-modify stat="ACCURACY">
                 <power>
                     <value level="9">1.0</value>
                     <value level="12">2.0</value>
@@ -1814,17 +1814,17 @@
                     <value level="15">8.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK_SPEED" start-level="10" stop-level="12">
+            <stat-modify start-level="10" stat="PHYSICAL_ATTACK_SPEED" stop-level="12">
                 <power>
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED" start-level="10" stop-level="12">
+            <stat-modify start-level="10" stat="MAGIC_ATTACK_SPEED" stop-level="12">
                 <power>
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power>
                     <value level="12">3.0</value>
                     <value level="13">4.0</value>
@@ -1978,7 +1978,7 @@
                         <value level="3">20</value>
                         <value level="4">30</value>
                     </power>
-                </trait>            
+                </trait>
                 <trait type="SLEEP">
                     <power>
                         <value level="4">20</value>
@@ -1999,7 +1999,7 @@
                     <value level="4">5.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
@@ -2007,7 +2007,7 @@
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
-				<power initial="2.0">
+                <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
                     <value level="4">10.0</value>
@@ -2019,8 +2019,8 @@
                     <value level="3">6.0</value>
                     <value level="4">10.0</value>
                 </power>
-            </stat-modify>			
-			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
@@ -2028,7 +2028,7 @@
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
-				<power initial="2.0">
+                <power initial="2.0">
                     <value level="2">4.0</value>
                     <value level="3">6.0</value>
                     <value level="4">10.0</value>
@@ -2040,7 +2040,7 @@
                     <value level="3">6.0</value>
                     <value level="4">10.0</value>
                 </power>
-            </stat-modify>            
+            </stat-modify>
         </effects>
     </skill>
     <skill id="3571" name="Special Ability: Critical Stun" max-level="2" debuff="true" action="A2">

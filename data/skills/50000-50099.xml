@@ -117,22 +117,19 @@
             level 42: Enchanted by Shilen, enshrouded in darkness, reborn with a greater power.
          -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50010" name="Greater Hold Resistance" max-level="5">
         <!-- Very strong Hold attack resistance. -->
         <icon initial="icon.skill4288"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50011" name="Greater Paralysis Resistance" max-level="5">
         <!-- Very strong Paralysis attack resistance. -->
         <icon initial="icon.skill4440"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50012" name="Paralysis" max-level="12" debuff="true" action="A1" type="MAGIC">
@@ -401,8 +398,7 @@
     <skill id="50028" name="62 Lv. Raid Boss" max-level="25">
         <!-- Raid Boss invited to the arena. Despite its mighty power, it doesn't show up in Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50029" name="Dancing Bard" debuff="true" action="A1" type="MAGIC">
@@ -1092,7 +1088,7 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
-        <resist-abnormals>DEPORT PUBLIC_SLOT PARALYZE TURN_STONE ROOT_MAGICALLY OBLIVION DISARM TURN_FLEE MIRAGE SILENCE_ALL ROOT_PHYSICALLY SILENCE_PHYSICAL AIRBIND SILENCE MIRAGE_TRAP CHANGEBODY ABSORB KNOCKDOWN STUN DERANGEMENT SLEEP
+        <resist-abnormals>ROOT_MAGICALLY AIRBIND KNOCKDOWN PUBLIC_SLOT PARALYZE TURN_STONE TURN_FLEE SILENCE_ALL MIRAGE_TRAP SILENCE_PHYSICAL CHANGEBODY DERANGEMENT DEPORT DISARM STUN SLEEP OBLIVION ROOT_PHYSICALLY MIRAGE ABSORB SILENCE
         </resist-abnormals>
         <effects>
             <magical-attack>
@@ -1181,20 +1177,19 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <cool-time initial="500"/>
+            <reuse initial="1000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <hit-time initial="1500"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal>
             <time initial="300"/>
         </abnormal>
         <effects>
-            <stat-modify stat="PHYSICAL_ATTACK" mode="PER">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify stat="PHYSICAL_ATTACK_SPEED" mode="PER">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="5"/>
             </stat-modify>
         </effects>
@@ -1205,23 +1200,22 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <cool-time initial="500"/>
+            <reuse initial="1000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <hit-time initial="1500"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal>
             <time initial="300"/>
         </abnormal>
-      <effects>
-             <stat-modify stat="CRITICAL_RATE">
-                 <power initial="30"/>
-             </stat-modify>
-              <stat-modify stat="ACCURACY">
-                  <power initial="6"/>
-              </stat-modify>
-      </effects>
+        <effects>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="6"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="50077" name="Magical Hot Spring" action="A1">
         <!-- Warmed by energy of Hot Springs Water. For 5 minutes M. Atk. +5%% and M. Atk. Spd. +5%%. -->
@@ -1229,20 +1223,19 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="75"/>
             <cast-range initial="600"/>
-            <cool-time initial="500"/>
+            <reuse initial="1000"/>
             <effect-point initial="100"/>
             <effect-range initial="-1"/>
-            <hit-time initial="1500"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal>
             <time initial="300"/>
         </abnormal>
         <effects>
-            <stat-modify stat="MAGIC_ATTACK" mode="PER">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify stat="MAGIC_ATTACK_SPEED" mode="PER">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="5"/>
             </stat-modify>
         </effects>
@@ -1263,57 +1256,49 @@
     <skill id="50079" name="Lv. 82 Raid Boss">
         <!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50080" name="Lv. 82 Raid Boss">
         <!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50081" name="Lv. 82 Raid Boss">
         <!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50082" name="Lv. 82 Raid Boss">
         <!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50083" name="Lv. 84 Raid Boss">
         <!-- King Ignis who rules over the Flame Spirits that have invaded the continent of Aden. Possesses a fiery flaming power and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50084" name="Lv. 84 Raid Boss">
         <!-- Queen Nebula who rules over the Water Spirits that have invaded the continent of Aden. Possesses the breathtaking power of Water and grows her strength while hidden in her abode, waiting for the day she will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50085" name="Lv. 84 Raid Boss">
         <!-- King Procella who rules over the Wind Spirits that have invaded the continent of Aden. Possesses the fierce and piercing power of Wind and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50086" name="Lv. 84 Raid Boss">
         <!-- King Petram who rules over the Earth Spirits that have invaded the continent of Aden. Possesses the solid and colossal power of Earth and grows his strength while hidden in his abode, waiting for the day he will emerge in the continent of Aden. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50087" name="Fire Rage" max-level="10" debuff="true" action="A1">
@@ -1485,7 +1470,6 @@
             </effect-point>
             <effect-range initial="-1"/>
             <hit-time initial="1000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="75">
@@ -1497,7 +1481,7 @@
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="10" affect-random="20"/>
 		<!-- TODO: Fix abnormal type! Need more info -->
-		<abnormal type="DEBUFF_NIGHTSHADE">
+        <abnormal type="DEBUFF_NIGHTSHADE">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>

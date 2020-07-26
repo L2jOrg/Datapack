@@ -212,15 +212,13 @@
     <skill id="50117" name="Sayha's Benefaction">
         <!-- Receives fixed damage thanks to Sayha's Benefaction. -->
         <icon initial="icon.skill11621"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50118" name="Gremlin">
         <!-- A monster that has the Blue Gemstone -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50119" name="Maphrian's Blessing" action="A1">
@@ -416,7 +414,7 @@
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
-            <hit-time initial="20000"/>
+            <hit-time initial="1000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <consume>
@@ -580,8 +578,7 @@
     <skill id="50147" name="Rune of Vitality">
         <!-- Maintains Sayha's Grace when you have it in the inventory. -->
         <icon initial="icon.bm_freya_rune"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50148" name="Wind Treasure Chest" action="A1">
@@ -665,7 +662,7 @@
         </consume>
         <target/>
         <conditions>
-			<condition name="NonChaotic"/>
+            <condition name="NonChaotic"/>
             <condition name="OpCanEscape"/>
         </conditions>
         <effects>
@@ -688,7 +685,7 @@
         </consume>
         <target/>
         <conditions>
-			<condition name="NonChaotic"/>
+            <condition name="NonChaotic"/>
             <condition name="OpCanEscape"/>
         </conditions>
         <effects>
@@ -770,8 +767,7 @@
             level 60: Increases the number of items an individual can possess by 300.
          -->
         <icon initial="icon.skill0332"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <enlarge-slot type="INVENTORY_NORMAL">
@@ -1083,10 +1079,6 @@
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
-        <consume>
-            <item initial="91984"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <conditions>
             <level min-level="78"/>
@@ -1143,8 +1135,7 @@
     <skill id="50183" name="Adventurer's Brooch">
         <!-- 1 Jewel can be equipped. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="BROOCH_JEWELS">
@@ -1155,8 +1146,7 @@
     <skill id="50184" name="Adventurer's Agathion Bracelet">
         <!-- Opens Agathion main slot. -->
         <icon initial="icon.agathion_magmeld_teleport"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="AGATHION_SLOTS">
@@ -1177,8 +1167,7 @@
     <skill id="50186" name="Adventurer's Griffin Agathion">
         <!-- P. Def. +5. -->
         <icon initial="icon.griffin_vehicle"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -1192,13 +1181,12 @@
             level 2: Max HP +10.
          -->
         <icon initial="icon.etc_crystal_piece_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="5.0">
-					<value level="2">10.0</value>
+                    <value level="2">10.0</value>
                 </power>
             </vital-stat-modify>
         </effects>
@@ -1206,10 +1194,9 @@
     <skill id="50188" name="Adventurer's Talisman">
         <!-- M. Def. +5. -->
         <icon initial="icon.etc_talisman_i07"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="MAGICAL_DEFENCE">
                 <power initial="5.0"/>
             </stat-modify>
@@ -1230,10 +1217,9 @@
             level 11: <Ring of Insolence>\n\nCON +5\nSTR +1\nINT +1\nSleep Resistance +30%\nMax HP +1000\nP. Atk. +300\nM. Atk. +300
          -->
         <icon initial="icon.ring_of_oman"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
+        <effects>
             <defence-trait>
                 <trait type="SLEEP">
                     <power initial="1.0">
@@ -1306,8 +1292,7 @@
             level 11: <Earring of Dragon World>\n\nMEN +5\nDEX +1\nWIT +1\nStun Attack Resistance +30%\nMax MP +1000\nAtk. Spd. +150\nCasting Spd. +150
          -->
         <icon initial="icon.accessary_catseye_earing_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1376,89 +1361,88 @@
             level 5: P. Atk. +201, M. Atk. +208, STR/INT/DEX/WIT/CON/MEN +1, Damage Magic Resistance +5%%, Skill Power +3%%, P./M. Critical Rate +30, Skill Cooldown -7%%.
          -->
         <icon initial="icon.baium_talisman_new"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify stat="CRITICAL_RATE">
-                <power> 
+        <effects>
+            <stat-modify stat="CRITICAL_RATE">
+                <power>
                     <value level="3">10.0</value>
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power> 
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power>
                     <value level="3">10.0</value>
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-                <power> 
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
                     <value level="5">3.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-                <power> 
+                <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
                     <value level="5">3.0</value>
                 </power>
             </stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK">
-                <power initial="16.0"> 
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="16.0">
                     <value level="2">50.0</value>
                     <value level="3">92.0</value>
                     <value level="4">142.0</value>
                     <value level="5">201.0</value>
                 </power>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-                <power initial="23.0"> 
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="23.0">
                     <value level="2">57.0</value>
                     <value level="3">99.0</value>
                     <value level="4">149.0</value>
                     <value level="5">208.0</value>
                 </power>
             </stat-modify>
-			<reuse skill-type="MAGIC">
-                <power initial="-1.0"> 
+            <reuse skill-type="MAGIC">
+                <power initial="-1.0">
                     <value level="2">-2.0</value>
                     <value level="3">-3.0</value>
                     <value level="4">-4.0</value>
                     <value level="5">-7.0</value>
                 </power>
             </reuse>
-			<reuse skill-type="PHYSIC">
-                <power initial="-1.0"> 
+            <reuse skill-type="PHYSIC">
+                <power initial="-1.0">
                     <value level="2">-2.0</value>
                     <value level="3">-3.0</value>
                     <value level="4">-4.0</value>
                     <value level="5">-7.0</value>
                 </power>
             </reuse>
-			<base-stat type="CON">
-                <power initial="1.0"/>                
+            <base-stat type="CON">
+                <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
-                <power initial="1.0"/>                
+            <base-stat type="MEN">
+                <power initial="1.0"/>
             </base-stat>
-			<base-stat type="DEX" start-level="2">
-                <power initial="1.0"/>                
+            <base-stat start-level="2" type="DEX">
+                <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT" start-level="2">
-                <power initial="1.0"/>                
+            <base-stat start-level="2" type="WIT">
+                <power initial="1.0"/>
             </base-stat>
-			<base-stat type="STR" start-level="3">
-                <power initial="1.0"/>                
+            <base-stat start-level="3" type="STR">
+                <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT" start-level="3">
-                <power initial="1.0"/>                
+            <base-stat start-level="3" type="INT">
+                <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="50195" name="Opal" max-level="10">
         <!--
@@ -1474,8 +1458,7 @@
             level 10: Stun/ Pulling/ Silence/ Paralysis/ Fear Resistance +30%.
          -->
         <icon initial="icon.etc_bm_jewel_opal_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50196" name="Opal - Special Ability" max-level="10" action="A1">
@@ -1514,8 +1497,7 @@
             level 10: Atk. Spd./Casting Spd. +20%, Movement Speed +7.
          -->
         <icon initial="icon.etc_bm_jewel_coral_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
     </skill>
     <skill id="50198" name="Onyx" max-level="10" action="A1">

@@ -701,7 +701,7 @@
     <skill id="1321" name="Dwarven Craft" action="A1">
         <!-- Can read Dwarven recipe books. -->
         <icon initial="icon.skill0172"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
@@ -2003,7 +2003,7 @@
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="MULTI_BUFF">
             <level initial="1">
-				<value level="2">2</value>
+                <value level="2">2</value>
             </level>
             <time initial="600"/>
             <chance initial="-1"/>
@@ -2375,8 +2375,7 @@
 		level 5: M. Atk. increases by 80% of P. Atk.
 	 -->
         <icon initial="icon.skill11820"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stats-linked base-stat="PHYSICAL_ATTACK" stat="MAGIC_ATTACK">
@@ -2398,8 +2397,7 @@
 		level 5: M. Critical Rate increases by 70% P. Critical Rate.
 	 -->
         <icon initial="icon.skill11821"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stats-linked base-stat="CRITICAL_RATE" stat="MAGIC_CRITICAL_RATE">
@@ -2996,13 +2994,13 @@
                     <value level="3">-20.0</value>
                 </power>
             </magic-cost>
-			<magic-cost>
+            <magic-cost>
                 <power initial="-4.0">
                     <value level="2">-7.0</value>
                     <value level="3">-10.0</value>
                 </power>
             </magic-cost>
-			<magic-cost type="DANCE">
+            <magic-cost type="DANCE">
                 <power initial="-10.0">
                     <value level="2">-15.0</value>
                     <value level="3">-20.0</value>

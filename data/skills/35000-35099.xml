@@ -11,7 +11,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target type="TARGET"/>
-		<abnormal type="PRESERVE_ABNORMAL">
+        <abnormal type="PRESERVE_ABNORMAL">
             <level initial="1"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -31,7 +31,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target type="TARGET"/>
-		<abnormal type="RESURRECTION_SPECIAL">
+        <abnormal type="RESURRECTION_SPECIAL">
             <level initial="2"/>
             <time initial="3600"/>
             <chance initial="-1"/>
@@ -65,7 +65,7 @@
             <hit-time initial="1000"/>
         </attributes>
         <target/>
-		<abnormal type="HERO_BUFF" visual="ULTIMATE_DEFENCE">
+        <abnormal type="HERO_BUFF" visual="ULTIMATE_DEFENCE">
             <level initial="3"/>
             <time initial="15"/>
             <chance initial="-1"/>
@@ -79,16 +79,15 @@
             </stat-modify>
             <resist-dispel-by-category category="BUFF">
                 <power initial="80.0"/>
-            </resist-dispel-by-category>            
+            </resist-dispel-by-category>
         </effects>
     </skill>
     <skill id="35004" name="Earth Dragon Pendant">
         <!-- M. Def. +9. -->
         <icon initial="icon.bm_pendant_pvp"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="9.0"/>
             </stat-modify>
@@ -109,19 +108,18 @@
             level 11: M. Def. +24, Max HP +600, Max CP +600, Max MP +300, Movement Speed +7, Damage Reflect Resistance +10%%, and Damage Received -20%%.
          -->
         <icon initial="icon.bm_pendant_pvp"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify mode="PER" stat="DAMAGE_TAKEN">
-				<power>
+        <effects>
+            <stat-modify mode="PER" stat="DAMAGE_TAKEN">
+                <power>
                     <value level="5">-3.0</value>
                     <value level="6">-5.0</value>
                     <value level="7">-10.0</value>
                     <value level="8">-20.0</value>
                 </power>
             </stat-modify>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power>
                     <value level="4">100.0</value>
                     <value level="5">150.0</value>
@@ -132,7 +130,7 @@
                     <value level="11">600.0</value>
                 </power>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
                 <power>
                     <value level="4">40.0</value>
                     <value level="5">50.0</value>
@@ -143,7 +141,7 @@
                     <value level="11">300.0</value>
                 </power>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
+            <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power>
                     <value level="6">200.0</value>
                     <value level="7">300.0</value>
@@ -165,9 +163,9 @@
                     <value level="10">21.0</value>
                     <value level="11">24.0</value>
                 </power>
-            </stat-modify>                                        
-			<stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
-                <power initial="10.0"/>               
+            </stat-modify>
+            <stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -202,7 +200,7 @@
         </attributes>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
+            <stat-modify stat="PHYSICAL_ATTACK">
                 <power>
                     <value level="5">10.0</value>
                     <value level="6">20.0</value>
@@ -213,7 +211,7 @@
                     <value level="11">80.0</value>
                 </power>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK">
                 <power>
                     <value level="5">10.0</value>
                     <value level="6">20.0</value>
@@ -257,21 +255,21 @@
                     <value level="8">25.0</value>
                     <value level="9">30.0</value>
                 </power>
-            </stat-modify>                       
+            </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="8">5.0</value>
                     <value level="11">10.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="8">5.0</value>
                     <value level="11">10.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
-                <power initial="10.0"/>               
+            <stat-modify mode="PER" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -282,15 +280,14 @@
             <reuse initial="30000"/>
             <effect-point initial="1"/>
             <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<abnormal type="RESIST_DEBUFF">
+        <abnormal type="RESIST_DEBUFF">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="-1"/>
         </abnormal>
-		<effects>            
+        <effects>
             <resist-abnormal-by-category category="DEBUFF">
                 <power initial="50.0"/>
             </resist-abnormal-by-category>
@@ -299,32 +296,30 @@
     <skill id="35009" name="Black Mask Power">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.accessory_jjoro_masj_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<base-stat type="STR">
+        <effects>
+            <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="35010" name="Refined Romantic Chapeau" action="A2">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.accessory_archer_hat2_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<base-stat type="STR">
+        <effects>
+            <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="35011" name="Return of the Refined Romantic Chapeau" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -347,17 +342,16 @@
     <skill id="35012" name="Pirate King Hat">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys2.icon.zaken_hair_accessary"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<base-stat type="STR">
+        <effects>
+            <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="35013" name="Return of the Pirate King Hat" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -369,7 +363,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<conditions>
+        <conditions>
             <condition name="OpCanEscape"/>
         </conditions>
         <effects>
@@ -379,17 +373,16 @@
     <skill id="35014" name="Demon's Circlet">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.Accessary_demon_circlet_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<base-stat type="STR">
+        <effects>
+            <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="35015" name="Return of the Demon's Circlet" action="A1">
         <!-- Teleports you to a close village. Cooldown: 2 hours -->
@@ -401,7 +394,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<conditions>
+        <conditions>
             <condition name="OpCanEscape"/>
         </conditions>
         <effects>
@@ -441,8 +434,7 @@
             <value level="6">icon.oman_tallisman_new_i01</value>
             <value level="7">icon.baium_talisman_new</value>
         </icon>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -565,7 +557,7 @@
                     <value level="7">1.0</value>
                 </power>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power>
                     <value level="4">1.0</value>
                     <value level="5">1.0</value>
@@ -573,26 +565,26 @@
                     <value level="7">1.0</value>
                 </power>
             </base-stat>
-			<base-stat type="STR">
+            <base-stat type="STR">
                 <power>
                     <value level="5">1.0</value>
                     <value level="6">1.0</value>
                     <value level="7">1.0</value>
                 </power>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power>
                     <value level="5">1.0</value>
                     <value level="6">1.0</value>
                     <value level="7">1.0</value>
                 </power>
             </base-stat>
-			<base-stat type="DEX">
+            <base-stat type="DEX">
                 <power>
                     <value level="7">1.0</value>
                 </power>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power>
                     <value level="7">1.0</value>
                 </power>
@@ -690,17 +682,16 @@
     <skill id="35022" name="Chic Silver Chapeau">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<base-stat type="STR">
+        <effects>
+            <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
-		</effects>
+        </effects>
     </skill>
     <skill id="35023" name="Chic Silver Chapeau Teleport" action="A1">
         <!-- Teleports you to the nearest village. Cooldown is 2 hours. -->
@@ -712,7 +703,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<conditions>
+        <conditions>
             <condition name="OpCanEscape"/>
         </conditions>
         <effects>
@@ -803,22 +794,22 @@
                 <power>
                     <value level="2">1.0</value>
                     <value level="6">2.0</value>
-					<value level="12">1.0</value>
-					<value level="13">2.0</value>
-					<value level="16">3.0</value>
-					<value level="18">4.0</value>
-					<value level="21">5.0</value>
+                    <value level="12">1.0</value>
+                    <value level="13">2.0</value>
+                    <value level="16">3.0</value>
+                    <value level="18">4.0</value>
+                    <value level="21">5.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="EVASION_RATE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="6">2.0</value>
-					<value level="12">1.0</value>
-					<value level="13">2.0</value>
-					<value level="16">3.0</value>
-					<value level="18">4.0</value>
-					<value level="21">5.0</value>
+                    <value level="12">1.0</value>
+                    <value level="13">2.0</value>
+                    <value level="16">3.0</value>
+                    <value level="18">4.0</value>
+                    <value level="21">5.0</value>
                 </power>
             </stat-modify>
             <vital-stat-modify stat="MAX_HP">
@@ -830,7 +821,7 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
-					<value level="12">150.0</value>
+                    <value level="12">150.0</value>
                     <value level="13">200.0</value>
                     <value level="14">250.0</value>
                     <value level="15">300.0</value>
@@ -851,7 +842,7 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
-					<value level="12">150.0</value>
+                    <value level="12">150.0</value>
                     <value level="13">200.0</value>
                     <value level="14">250.0</value>
                     <value level="15">300.0</value>
@@ -872,7 +863,7 @@
                     <value level="9">240.0</value>
                     <value level="10">280.0</value>
                     <value level="11">320.0</value>
-					<value level="12">150.0</value>
+                    <value level="12">150.0</value>
                     <value level="13">200.0</value>
                     <value level="14">250.0</value>
                     <value level="15">300.0</value>
@@ -919,7 +910,7 @@
                     <value level="6">15.0</value>
                     <value level="10">20.0</value>
                     <value level="11">30.0</value>
-					<value level="11">10.0</value>
+                    <value level="11">10.0</value>
                     <value level="13">15.0</value>
                     <value level="16">20.0</value>
                     <value level="17">30.0</value>
@@ -1030,13 +1021,13 @@
         <target type="TARGET"/>
         <effects>
             <dispel>
-				<abnormal type="PARALYZE">
+                <abnormal type="PARALYZE">
                     <power initial="1.0"/>
                 </abnormal>
                 <abnormal type="POISON">
                     <power initial="9.0"/>
                 </abnormal>
-				<abnormal type="BLEEDING">
+                <abnormal type="BLEEDING">
                     <power initial="9.0"/>
                 </abnormal>
             </dispel>
@@ -1054,7 +1045,7 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <effect name="CpHeal">
                 <power initial="2680.0"/>
             </effect>
@@ -1096,7 +1087,7 @@
                 <value level="7">7</value>
                 <value level="8">8</value>
                 <value level="9">9</value>
-			</level>
+            </level>
             <time initial="15"/>
             <chance initial="-1"/>
         </abnormal>
@@ -1131,13 +1122,13 @@
                     <value level="3">40.0</value>
                 </power>
             </stat-modify>
-			 <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
                 <power initial="10.0">
                     <value level="2">30.0</value>
                     <value level="3">40.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="CRITICAL_RATE">
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power>
                     <value level="6">2.0</value>
                     <value level="7">3.0</value>
@@ -1145,7 +1136,7 @@
                     <value level="9">10.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power>
                     <value level="6">2.0</value>
                     <value level="7">3.0</value>
@@ -1158,17 +1149,16 @@
     <skill id="35028" name="Bracelet of Fate">
         <!-- HP Recovery Bonus/MP Recovery Bonus +7%%, P. Accuracy +1, M. Accuracy +1, and Weight Limit +7000. -->
         <icon initial="icon.dimension_bracelet_i05"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>                      
+        <effects>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
                 <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
                 <power initial="7.0"/>
             </stat-modify>
-			<stat-modify stat="ACCURACY">
+            <stat-modify stat="ACCURACY">
                 <power initial="1.0"/>
             </stat-modify>
             <stat-modify stat="ACCURACY_MAGIC">
@@ -1176,7 +1166,7 @@
             </stat-modify>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
                 <power initial="7000.0"/>
-            </stat-modify> 
+            </stat-modify>
         </effects>
     </skill>
     <skill id="35029" name="Item Skill: Might in Duel - PvE" max-level="5">
@@ -1185,11 +1175,10 @@
             level 5: Item Skill: PvE P. Atk.+6%% when equipped.
          -->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+        <effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
@@ -1198,8 +1187,8 @@
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
-            </stat-modify>          
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35030" name="Item Skill: Defense in Duel - PvP" max-level="5">
         <!--
@@ -1207,21 +1196,20 @@
             level 5: Item Skill: PvP P. Def. +6%% when equipped.
          -->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+        <effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
-            </stat-modify>           
+            </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="35031" name="Item Skill: Defense in Duel - PvE" max-level="5">
         <!--
@@ -1229,11 +1217,10 @@
             level 5: Item Skill: PvE P. Def. +6%% when equipped.
          -->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+        <effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
@@ -1242,8 +1229,8 @@
                 <power initial="3.0">
                     <value level="5">6.0</value>
                 </power>
-            </stat-modify>           
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="35032" name="Item Skill: Enhance" max-level="5">
         <!--
@@ -1252,8 +1239,7 @@
             level 5: Item Skill: XP/SP Gain +10%% when equipped.
          -->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -1285,14 +1271,13 @@
             </effect-point>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana-init initial="10"/>
             <mana initial="48"/>
         </consume>
         <target/>
-		<abnormal type="ATTACK_SPEED_UP_BOW">
+        <abnormal type="ATTACK_SPEED_UP_BOW">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -1324,14 +1309,13 @@
             </effect-point>
             <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana-init initial="10"/>
             <mana initial="48"/>
         </consume>
         <target/>
-		<abnormal type="CASTING_TIME_DOWN">
+        <abnormal type="CASTING_TIME_DOWN">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -1339,16 +1323,16 @@
             <time initial="300"/>
             <chance initial="-1"/>
         </abnormal>
-		<effects>
+        <effects>
             <stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
                 <power initial="21.0">
                     <value level="2">26.0</value>
-                    <value level="3">60.0</value>                    
+                    <value level="3">60.0</value>
                 </power>
             </stat-modify>
         </effects>
     </skill>
-    <skill id="35035" name="Item Skill: Cleanse" action="A1" type="MAGIC">
+    <skill id="35035" name="Item Skill: Cleanse" action="A1">
         <!-- Skill: Cancels debuffs. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
@@ -1512,8 +1496,7 @@
     <skill id="35040" name="Belt">
         <!-- Inventory Slot +2 and Weight Limit +1000 when equipped with a belt. Can be upgraded to a Cloth Belt using a magic pin. -->
         <icon initial="icon.belt_i00"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1527,8 +1510,7 @@
     <skill id="35041" name="Rag Belt">
         <!-- Inventory Slot +2, Weight Limit +2000, HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, and CP Recovery Bonus +1.66 when equipped with a belt. Can be upgraded to a Leather Belt using a mid-grade magic pin. -->
         <icon initial="icon.belt_i01"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1551,8 +1533,7 @@
     <skill id="35042" name="Leather Belt">
         <!-- Inventory Slot +3, Weight limit +3000, HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery Bonus +1.96, and Max HP/Max MP/Max CP +100 when equipped with a belt. Can be upgraded to an Iron Belt using a high-grade magic pin. -->
         <icon initial="icon.belt_i02"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1584,8 +1565,7 @@
     <skill id="35043" name="Iron Belt">
         <!-- Inventory Slot +4, Weight limit +4000, HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery Bonus +2.26, and Max HP/Max MP/Max CP +150 when equipped with a belt. Can be upgraded to an Mithril Belt using a top-grade magic pin. -->
         <icon initial="icon.belt_i03"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1617,8 +1597,7 @@
     <skill id="35044" name="Mithril Belt">
         <!-- Inventory Slot +5, Weight limit +5000, HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery Bonus +2.56, and Max HP/Max MP/Max CP +200 when equipped with a belt. -->
         <icon initial="icon.belt_i04"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1667,11 +1646,10 @@
     <skill id="35046" name="Earth Dragon Belt">
         <!-- When belt is equipped. CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +15%%, Inventory Slots +6, Weight Gauge +7,000, HP Potions Effect +100, Incoming Damage -6%%. -->
         <icon initial="icon.bm_antaras_belt"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-        <effects>			           
-			<enlarge-slot type="INVENTORY_NORMAL">
+        <effects>
+            <enlarge-slot type="INVENTORY_NORMAL">
                 <power initial="6.0"/>
             </enlarge-slot>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1680,7 +1658,7 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
             <stat-modify stat="REGENERATE_HP_RATE">
@@ -1701,13 +1679,13 @@
             <vital-stat-modify mode="PER" stat="MAX_CP">
                 <power initial="15.0"/>
             </vital-stat-modify>
-			<stat-modify stat="ADDITIONAL_POTION_HP">
+            <stat-modify stat="ADDITIONAL_POTION_HP">
                 <power initial="100.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_DAMAGE_TAKEN">
                 <power initial="-6.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PVE_DAMAGE_TAKEN">
+            <stat-modify mode="PER" stat="PVE_DAMAGE_TAKEN">
                 <power initial="-6.0"/>
             </stat-modify>
         </effects>
@@ -1715,14 +1693,13 @@
     <skill id="35047" name="Fire Dragon Belt">
         <!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
         <icon initial="icon.bm_vallakas_belt"/>
-        <attributes property="MAGIC">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1755,9 +1732,9 @@
             <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="4.0"/>
             </stat-modify>
-			<stat-modify stat="ADDITIONAL_POTION_HP">
+            <stat-modify stat="ADDITIONAL_POTION_HP">
                 <power initial="100.0"/>
-            </stat-modify>          
+            </stat-modify>
         </effects>
     </skill>
 </list>
