@@ -821,7 +821,31 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="EXPSP_RATE">
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">6.0</value>
+                    <value level="6">9.0</value>
+                    <value level="8">12.0</value>
+                    <value level="9">16.0</value>
+                    <value level="10">20.0</value>
+                    <value level="11">30.0</value>
+                    <value level="12">31.0</value>
+                    <value level="13">31.0</value>
+                    <value level="14">32.0</value>
+                    <value level="15">32.0</value>
+                    <value level="16">33.0</value>
+                    <value level="17">33.0</value>
+                    <value level="18">34.0</value>
+                    <value level="19">35.0</value>
+                    <value level="20">36.0</value>
+                    <value level="21">37.0</value>
+                    <value level="22">40.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
@@ -973,12 +997,16 @@
     <skill id="59123" name="Seal Agathion" action="A1">
         <!-- Dismiss a summoned Agathion. -->
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <effect-range initial="-1"/>
             <hit-time initial="3000"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
     </skill>
     <skill id="59124" name="Zodiac Agathion Box" action="A1">
         <!-- none -->
@@ -1510,7 +1538,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1531,7 +1559,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="10"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5"/>
@@ -1561,7 +1589,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20"/>
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="10"/>
@@ -1603,7 +1631,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="30"/>
+                <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="15"/>
@@ -1651,7 +1679,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="50"/>
+                <power initial="50.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="20"/>
@@ -1705,7 +1733,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1726,7 +1754,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="10"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5"/>
@@ -1756,7 +1784,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20"/>
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="10"/>
@@ -1798,7 +1826,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="30"/>
+                <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="15"/>
@@ -1846,7 +1874,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="50"/>
+                <power initial="50.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="20"/>
@@ -1900,7 +1928,7 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
         </effects>
     </skill>
@@ -1921,13 +1949,13 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="10"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
             <base-stats types="CON MEN">
                 <power initial="1"/>
@@ -1951,22 +1979,22 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20"/>
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="10"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
-                <power initial="5"/>
+                <power initial="5.0"/>
             </stat-modify>
             <speed mode="PER">
                 <power initial="5"/>

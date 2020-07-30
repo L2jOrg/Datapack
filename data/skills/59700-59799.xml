@@ -396,9 +396,53 @@
 	<skill id="59726" name="VIP Battle Scroll">
 		<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. -->
 		<icon initial="icon.ev_charge_scroll"/>
-		<attributes property="PHYSIC" auto-use="BUFF">
-		</attributes>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
+        </attributes>
 		<target/>
+		<abnormal type="BATTLE_SCROLL">
+            <level initial="2"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="250.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="400.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="300.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="300.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="700.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="700.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP">
+                <power initial="700.0"/>
+            </vital-stat-modify>
+        </effects>
 	</skill>
 	<skill id="59727" name="Scroll: VIP XP/SP Boost">
 		<!-- For 20 minutes, XP/SP Gain from hunting +120%. Does not disappear when dying. -->
@@ -467,121 +511,240 @@
 	<skill id="59735" name="Unseal Agathion - Taurus (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59736" name="Unseal Agathion - Leo (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59737" name="Unseal Agathion - Scorpio (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59738" name="Unseal Agathion - Sagittarius (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59739" name="Unseal Agathion - Virgo (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59740" name="Unseal Agathion - Aquarius (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59741" name="Unseal Agathion - Capricorn (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59742" name="Unseal Agathion - Libra (PvE)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59743" name="Unseal Agathion - Gemini (Advanced)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59744" name="Unseal Agathion - Taurus (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59745" name="Unseal Agathion - Leo (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59746" name="Unseal Agathion - Scorpio (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59747" name="Unseal Agathion - Sagittarius (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59748" name="Unseal Agathion - Virgo (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59749" name="Unseal Agathion - Aquarius (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59750" name="Unseal Agathion - Capricorn (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59751" name="Unseal Agathion - Libra (PvP)">
 		<!-- Unseals the Agathion. -->
 		<icon initial="icon.etc_summon_aga_agit_i00"/>
-		<attributes>
-		</attributes>
-		<target/>
+		<attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <effect-range initial="-1"/>
+            <hit-time initial="3000"/>
+            <activate-rate initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <effect name="UnsummonAgathion"/>
+        </effects>
 	</skill>
 	<skill id="59761" name="Virgo: PvE" max-level="5">
 		<!--
