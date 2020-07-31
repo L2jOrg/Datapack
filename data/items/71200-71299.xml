@@ -301,8 +301,11 @@
 
 	<item id="71244" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="10080"/>
+		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes duration="10080" immediate-effect="true"/>
+		<skill-reducer>
+			<skill id="56003" value="-1"/>  <!-- Attendance Reward XP Rune. -->
+		</skill-reducer>
 	</item>
 
 	<item id="71245" name="XP/SP Rune - 50%" type="RUNE" icon="icon.skill19226">
@@ -332,7 +335,10 @@
 	<item id="71249" name="XP/SP Rune - 50% (7-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
+		<extract >
+			<item id="71244" min-count="1" max-count="1" chance="100000000"/>  <!-- XP/SP Rune - 50% -->
+		</extract>
 	</item>
 
 	<item id="71250" name="XP/SP Rune - 50% (30-day) Pack" type="NONE" icon="icon.etc_pi_gift_box_i00">
