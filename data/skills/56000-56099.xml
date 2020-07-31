@@ -34,8 +34,17 @@
     <skill id="56003" name="XP/SP Rune - 50%">
         <!-- XP/SP +50%%, while hunting. -->
         <icon initial="icon.skill19226"/>
-        <attributes property="MAGIC"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
+        </attributes>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56004" name="Summon Agathion - Mermaid" action="A1">
         <!-- Summons Agathion. -->
