@@ -34,17 +34,8 @@
     <skill id="56003" name="XP/SP Rune - 50%">
         <!-- XP/SP +50%%, while hunting. -->
         <icon initial="icon.skill19226"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true">
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
-        <effects>
-            <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="50.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="50.0"/>
-            </stat-modify>
-        </effects>
     </skill>
     <skill id="56004" name="Summon Agathion - Mermaid" action="A1">
         <!-- Summons Agathion. -->
@@ -332,6 +323,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9039"/>
+        </effects>
     </skill>
     <skill id="56035" name="Agathion Summon - Elizabeth" action="A1">
         <!-- Summons Agathion. -->
@@ -342,6 +336,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9040"/>
+        </effects>
     </skill>
     <skill id="56036" name="Agathion Summon - Hawk" action="A1">
         <!-- Summons Agathion. -->
@@ -352,6 +349,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9041"/>
+        </effects>
     </skill>
     <skill id="56037" name="Agathion Summon - Ban" action="A1">
         <!-- Summons Agathion. -->
@@ -362,6 +362,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9042"/>
+        </effects>
     </skill>
     <skill id="56038" name="Agathion Summon - Diane" action="A1">
         <!-- Summons Agathion. -->
@@ -372,6 +375,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9043"/>
+        </effects>
     </skill>
     <skill id="56039" name="Agathion Summon - King" action="A1">
         <!-- Summons Agathion. -->
@@ -382,6 +388,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9044"/>
+        </effects>
     </skill>
     <skill id="56040" name="Agathion Summon - Merlin" action="A1">
         <!-- Summons Agathion. -->
@@ -392,6 +401,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9045"/>
+        </effects>
     </skill>
     <skill id="56041" name="Agathion Summon - Gowther" action="A1">
         <!-- Summons Agathion. -->
@@ -402,6 +414,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9046"/>
+        </effects>
     </skill>
     <skill id="56042" name="Agathion Summon - Escanor" action="A1">
         <!-- Summons Agathion. -->
@@ -412,6 +427,9 @@
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <summon-agathion id="9047"/>
+        </effects>
     </skill>
     <skill id="56043" name="Seven Great Sins - Meliodas" max-level="9">
         <!--
@@ -428,6 +446,49 @@
         <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="STR INT">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56044" name="Seven Great Sins - Elizabeth" max-level="9">
         <!--
@@ -444,6 +505,49 @@
         <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="CON MEN">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56045" name="Seven Great Sins - Hawk" max-level="9">
         <!--
@@ -460,6 +564,49 @@
         <icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="CON">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56046" name="Seven Great Sins - Ban" max-level="9">
         <!--
@@ -476,6 +623,49 @@
         <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="DEX">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56047" name="Seven Great Sins - Diane" max-level="9">
         <!--
@@ -492,6 +682,49 @@
         <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="STR">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56048" name="Seven Great Sins - King" max-level="9">
         <!--
@@ -508,6 +741,49 @@
         <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="WIT">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56049" name="Seven Great Sins - Meriln" max-level="9">
         <!--
@@ -524,6 +800,49 @@
         <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="INT">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56050" name="Seven Great Sins - Gowther" max-level="9">
         <!--
@@ -540,6 +859,49 @@
         <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="MEN">
+                <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56051" name="Seven Great Sins - Escanor" max-level="9">
         <!--
@@ -556,6 +918,49 @@
         <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_CP" stat-add="MAX_CP">
+                <power initial="1.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">10.0</value>
+                </power>
+            </vital-stat-modify>
+			<base-stats types="CON">
+               <power>
+                    <value level="9">1.0</value>
+                </power>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="56052" name="Sin of Wrath" max-level="9">
         <!--
@@ -572,6 +977,32 @@
         <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56053" name="Power of Goddess Clan" max-level="9">
         <!--
@@ -588,6 +1019,32 @@
         <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                    <value level="9">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56054" name="Boar Hat Bar's Main Pig" max-level="8">
         <!--
@@ -618,6 +1075,19 @@
         <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56056" name="Sin of Envy" max-level="8">
         <!--
@@ -633,6 +1103,19 @@
         <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56057" name="Sin of Sloth" max-level="8">
         <!--
@@ -648,6 +1131,41 @@
         <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <magic-cost type="PHYSIC">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="56058" name="Sin of Gluttony" max-level="8">
         <!--
@@ -663,6 +1181,19 @@
         <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56059" name="Sin of Lust" max-level="8">
         <!--
@@ -678,6 +1209,43 @@
         <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <defence-trait>
+                <trait type="HOLD">
+                    <power initial="0">
+                        <value level="2">10</value>
+                        <value level="3">20</value>
+                        <value level="4">30</value>
+						<value level="5">40</value>
+						<value level="6">50</value>
+						<value level="7">60</value>
+						<value level="8">70</value>
+                    </power>
+                </trait>
+                <trait type="SLEEP">
+                    <power initial="0">
+                        <value level="2">10</value>
+                        <value level="3">20</value>
+                        <value level="4">30</value>
+						<value level="5">40</value>
+						<value level="6">50</value>
+						<value level="7">60</value>
+						<value level="8">70</value>
+                    </power>
+                </trait>
+				<trait type="SHOCK">
+                    <power initial="0">
+                        <value level="2">10</value>
+                        <value level="3">20</value>
+                        <value level="4">30</value>
+						<value level="5">40</value>
+						<value level="6">50</value>
+						<value level="7">60</value>
+						<value level="8">70</value>
+                    </power>
+                </trait>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="56060" name="Sin of Pride" max-level="8">
         <!--
@@ -693,6 +1261,19 @@
         <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56061" name="Power of Demon Sword Lostvayne" max-level="8">
         <!--
@@ -708,6 +1289,30 @@
         <icon initial="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56062" name="Consolidation Super Magic" max-level="8">
         <!--
@@ -723,6 +1328,30 @@
         <icon initial="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56063" name="Leftovers Knights Mobilize!" max-level="8">
         <!--
@@ -738,6 +1367,30 @@
         <icon initial="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">7.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">7.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56064" name="Power of Holy Staff Courechouse" max-level="8">
         <!--
@@ -753,6 +1406,19 @@
         <icon initial="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<reuse skill-type="PHYSIC">
+				<power initial="0.0">
+                    <value level="2">-1.0</value>
+                    <value level="3">-2.0</value>
+                    <value level="4">-3.0</value>
+                    <value level="5">-4.0</value>
+                    <value level="6">-5.0</value>
+                    <value level="7">-6.0</value>
+                    <value level="8">-7.0</value>
+                </power>
+			</reuse>
+		</effects>
     </skill>
     <skill id="56065" name="Power of War Hammer Gideon" max-level="8">
         <!--
@@ -768,6 +1434,19 @@
         <icon initial="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56066" name="Power of Spirit Spear Chastiefol" max-level="8">
         <!--
@@ -783,6 +1462,19 @@
         <icon initial="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">7.0</value>
+                    <value level="6">10.0</value>
+                    <value level="7">13.0</value>
+                    <value level="8">17.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56067" name="Power of Morning Star Aldan" max-level="8">
         <!--
@@ -798,6 +1490,19 @@
         <icon initial="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">5.0</value>
+                    <value level="7">6.0</value>
+                    <value level="8">7.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56068" name="Power of Twin Bow Herritt" max-level="8">
         <!--
@@ -807,6 +1512,19 @@
         <icon initial="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56069" name="Power of Twin Bow Herritt" max-level="8">
         <!--
@@ -822,6 +1540,19 @@
         <icon initial="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
+                <power initial="0.0">
+                    <value level="2">1.0</value>
+                    <value level="3">2.0</value>
+                    <value level="4">3.0</value>
+                    <value level="5">4.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="56070" name="Power of Twin Bow Herritt" action="A1">
         <icon initial="icon.skill0000"/>
