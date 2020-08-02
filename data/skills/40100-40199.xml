@@ -40,9 +40,53 @@
     <skill id="40106" name="Battle Scroll - Event">
         <!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
         <icon initial="icon.ev_charge_scroll"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <effect-range initial="-1"/>
         </attributes>
         <target/>
+		<abnormal type="BATTLE_SCROLL">
+            <level initial="1"/>
+            <time initial="1200"/>
+            <chance initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="350.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="200.0"/>
+            </stat-modify>
+            <vital-stat-modify stat="MAX_HP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_MP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify stat="MAX_CP">
+                <power initial="500.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="40113" name="Sweet Grace Cookie">
         <!-- none -->
