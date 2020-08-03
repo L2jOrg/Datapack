@@ -1711,18 +1711,65 @@
 	<skill id="39298" name="Shining Moody’s Melody" action="A1">
 		<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
 		<icon initial="icon.bm_magmeld"/>
-		<attributes property="PHYSIC">
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-			<effect-range initial="-1"/>
-			<activate-rate initial="-1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-				<power initial="8.0"/>
-			</stat-modify>
-		</effects>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+            <effect-range initial="-1"/>
+        </attributes>
+		<consume>
+            <item initial="90519"/>
+            <item-count initial="1"/>
+        </consume>
+        <target/>
+        <!-- <abnormal type="BATTLE_SCROLL"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="-1"/> -->
+            <!-- <chance initial="-1"/> -->
+        <!-- </abnormal> -->
+        <effects>
+            <call-skill scope="SELF" skill="40000">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40001">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40002">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40003">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40004">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40005">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40006">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40007">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40008">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40009">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40010">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40011">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40012">
+                <power initial="1.0"/>
+            </call-skill>
+            <call-skill scope="SELF" skill="40013">
+                <power initial="1.0"/>
+            </call-skill>
+        </effects>
 	</skill>
 	<skill id="39299" name="Cube of Forsaken Isle" action="A1">
 		<!-- none -->
