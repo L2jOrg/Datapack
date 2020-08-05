@@ -26,8 +26,8 @@ b - Make it work
 ----------------------------------------------
 
 To make geodata working:
-* unpack your geodata files into "/data/geodata" folder
-* open "/config/GeoEngine.ini" with your favorite text editor and then edit following config:
+* unpack your geodata files into "geodata" folder
+* open "/config/geo-engine.properties" with your favorite text editor and then edit following config:
   - CoordSynchronize = 2
 * If you do not use any geodata files, the server will automatically change this setting to -1.
 
