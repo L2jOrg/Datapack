@@ -29,13 +29,13 @@
             <xs:element name="production" type="ItemInfo"/>
         </xs:sequence>
 
-
         <xs:attribute name="id" type="xs:integer" use="required"/>
         <xs:attribute name="category" type="Category" use="required"/>
         <xs:attribute name="limitPerDay" type="xs:integer" default="0"/>
         <xs:attribute name="minLevel" type="xs:positiveInteger" default="1"/>
         <xs:attribute name="isEvent" type="xs:boolean" default="0"/>
         <xs:attribute name="remainServerItemAmount" type="xs:integer" default="-1"/>
+        <xs:attribute name="expiration-date" type="xs:date"/>
     </xs:complexType>
 
 </xs:schema>
