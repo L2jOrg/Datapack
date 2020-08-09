@@ -172,71 +172,62 @@
 		</attributes>
 		<target/>
 		<effects>
-			<base-stat type="STR">
-				<power initial="2.0"/>
-			</base-stat>
-			<base-stat type="DEX">
-				<power initial="2.0"/>
-			</base-stat>
-			<base-stat type="INT">
-				<power initial="2.0"/>
-			</base-stat>
-			<base-stat type="WIT">
-				<power initial="2.0"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="2.0"/>
-			</base-stat>
-			<base-stat type="CON">
-				<power initial="2.0"/>
-			</base-stat>
 			<stat-modify mode="PER" stat="BONUS_EXP">
-				<power initial="35.0"/>
+				<power initial="35"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_SP">
-				<power initial="35.0"/>
+				<power initial="35"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_DROP_RATE">
-				<power initial="300.0"/>
+				<power initial="300"/>
 			</stat-modify>
-			<reduce-drop-penalty>
-				<experience initial="-30.0"/>
-				<death-penalty initial="-30.0"/>
-			</reduce-drop-penalty>
 			<stat-modify stat="WORLD_CHAT_POINTS">
-				<power initial="50.0"/>
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="50"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
-				<power initial="12.0"/>
+				<power initial="12"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="12.0"/>
+				<power initial="12"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-				<power initial="12.0"/>
+				<power initial="12"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
-				<power initial="20.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<base-stats types="STR CON DEX MEN WIT INT">
+				<power initial="2"/>
+			</base-stats>
+			<reuse skill-type="MAGIC">
+				<power initial="-1"/>
+			</reuse>
+			<reuse skill-type="DANCE">
+				<power initial="-1"/>
+			</reuse>
+			<reuse skill-type="PHYSIC">
+				<power initial="-1"/>
+			</reuse>
+			<reduce-drop-penalty>
+				<experience initial="-30"/>
+				<death-penalty initial="-30"/>
+			</reduce-drop-penalty>
+			<vital-stat-modify stat="MAX_HP" heal="true">
 				<power initial="100"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" heal="true">
 				<power initial="100"/>
 			</vital-stat-modify>
 		</effects>
@@ -248,71 +239,62 @@
 		</attributes>
 		<target/>
 		<effects>
-			<base-stat type="STR">
-				<power initial="3.0"/>
-			</base-stat>
-			<base-stat type="DEX">
-				<power initial="3.0"/>
-			</base-stat>
-			<base-stat type="INT">
-				<power initial="3.0"/>
-			</base-stat>
-			<base-stat type="WIT">
-				<power initial="3.0"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="3.0"/>
-			</base-stat>
-			<base-stat type="CON">
-				<power initial="3.0"/>
-			</base-stat>
 			<stat-modify mode="PER" stat="BONUS_EXP">
-				<power initial="40.0"/>
+				<power initial="40"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_SP">
-				<power initial="40.0"/>
+				<power initial="40"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_DROP_RATE">
-				<power initial="300.0"/>
+				<power initial="300"/>
 			</stat-modify>
-			<reduce-drop-penalty>
-				<experience initial="-40.0"/>
-				<death-penalty initial="-40.0"/>
-			</reduce-drop-penalty>
 			<stat-modify stat="WORLD_CHAT_POINTS">
-				<power initial="50.0"/>
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="80"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="80"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
-				<power initial="13.0"/>
+				<power initial="13"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="13.0"/>
+				<power initial="13"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-				<power initial="13.0"/>
+				<power initial="13"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="80.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="80.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
-				<power initial="20.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<base-stats types="STR CON DEX MEN WIT INT">
+				<power initial="3"/>
+			</base-stats>
+			<reuse skill-type="MAGIC">
+				<power initial="-3"/>
+			</reuse>
+			<reuse skill-type="DANCE">
+				<power initial="-3"/>
+			</reuse>
+			<reuse skill-type="PHYSIC">
+				<power initial="-3"/>
+			</reuse>
+			<reduce-drop-penalty>
+				<experience initial="-40"/>
+				<death-penalty initial="-40"/>
+			</reduce-drop-penalty>
+			<vital-stat-modify stat="MAX_HP" heal="true">
 				<power initial="200"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" heal="true">
 				<power initial="200"/>
 			</vital-stat-modify>
 		</effects>
@@ -324,71 +306,62 @@
 		</attributes>
 		<target/>
 		<effects>
-			<base-stat type="STR">
-				<power initial="4.0"/>
-			</base-stat>
-			<base-stat type="DEX">
-				<power initial="4.0"/>
-			</base-stat>
-			<base-stat type="INT">
-				<power initial="4.0"/>
-			</base-stat>
-			<base-stat type="WIT">
-				<power initial="4.0"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="4.0"/>
-			</base-stat>
-			<base-stat type="CON">
-				<power initial="4.0"/>
-			</base-stat>
 			<stat-modify mode="PER" stat="BONUS_EXP">
-				<power initial="50.0"/>
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_SP">
-				<power initial="50.0"/>
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="BONUS_DROP_RATE">
-				<power initial="300.0"/>
+				<power initial="300"/>
 			</stat-modify>
-			<reduce-drop-penalty>
-				<experience initial="-50.0"/>
-				<death-penalty initial="-50.0"/>
-			</reduce-drop-penalty>
 			<stat-modify stat="WORLD_CHAT_POINTS">
-				<power initial="50.0"/>
+				<power initial="50"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="100"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="100"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
 			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-				<power initial="15.0"/>
+				<power initial="15"/>
 			</stat-modify>
-			<stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="100.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-				<power initial="100.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="FISHING_EXP_SP_BONUS">
-				<power initial="20.0"/>
-			</stat-modify>
-			<vital-stat-modify stat="MAX_HP">
+			<base-stats types="STR CON DEX MEN WIT INT">
+				<power initial="4"/>
+			</base-stats>
+			<reuse skill-type="MAGIC">
+				<power initial="-5"/>
+			</reuse>
+			<reuse skill-type="DANCE">
+				<power initial="-5"/>
+			</reuse>
+			<reuse skill-type="PHYSIC">
+				<power initial="-5"/>
+			</reuse>
+			<reduce-drop-penalty>
+				<experience initial="-40"/>
+				<death-penalty initial="-40"/>
+			</reduce-drop-penalty>
+			<vital-stat-modify stat="MAX_HP" heal="true">
 				<power initial="500"/>
 			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
+			<vital-stat-modify stat="MAX_MP" heal="true">
 				<power initial="500"/>
 			</vital-stat-modify>
 		</effects>
