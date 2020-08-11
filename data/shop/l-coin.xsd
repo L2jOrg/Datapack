@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://l2j.org" xmlns="http://l2j.org" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
     <xs:element name="list">
         <xs:complexType>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -9,20 +11,6 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:simpleType name="Category">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Equip"/>
-            <xs:enumeration value="Special"/>
-            <xs:enumeration value="Supplies"/>
-            <xs:enumeration value="Other"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:complexType name="ItemInfo">
-        <xs:attribute name="id" type="xs:integer" use="required" />
-        <xs:attribute name="count" type="xs:positiveInteger" default="1" />
-    </xs:complexType>
-
     <xs:complexType name="ProductInfo">
         <xs:sequence>
             <xs:element name="ingredient" type="ItemInfo" maxOccurs="3"/>
@@ -30,10 +18,8 @@
         </xs:sequence>
 
         <xs:attribute name="id" type="xs:integer" use="required"/>
-        <xs:attribute name="category" type="Category" use="required"/>
         <xs:attribute name="limitPerDay" type="xs:integer" default="0"/>
         <xs:attribute name="minLevel" type="xs:positiveInteger" default="1"/>
-        <xs:attribute name="isEvent" type="xs:boolean" default="0"/>
         <xs:attribute name="remainServerItemAmount" type="xs:integer" default="-1"/>
         <xs:attribute name="expiration-date" type="xs:date"/>
     </xs:complexType>
