@@ -1508,18 +1508,31 @@
     <skill id="59156" name="Greater Aquamarine - Special Ability" action="A1">
         <!-- Recovers 10%% of MP right away. -->
         <icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
-        <attributes>
+        <attributes static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>          
+            <effect name="ManaHealPercent">
+                <power initial="10.0"/>
+            </effect>          
+        </effects>
     </skill>
     <skill id="59157" name="XP/SP Rune 50%">
         <!-- XP/SP Gain from hunting +50%%. -->
         <icon initial="icon.skill19226"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>          
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59158" name="Santa" action="A2">
         <!-- Transformed into a standard transformation. XP gain +5%%. Transformation remains after death. -->
@@ -1597,13 +1610,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -1639,13 +1652,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -1687,13 +1700,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -1792,13 +1805,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -1834,13 +1847,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -1882,13 +1895,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -1987,13 +2000,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>
             <speed mode="PER">
@@ -2029,13 +2042,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -2077,13 +2090,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -2182,13 +2195,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -2224,13 +2237,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -2272,13 +2285,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -2377,13 +2390,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -2419,13 +2432,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -2467,13 +2480,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -2572,13 +2585,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -2614,13 +2627,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -2662,13 +2675,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -2767,13 +2780,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -2809,13 +2822,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -2857,13 +2870,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">
@@ -2962,13 +2975,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="5"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5"/>
             </stat-modify>
             <speed mode="PER">
@@ -3004,13 +3017,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="10"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
             <speed mode="PER">
@@ -3052,13 +3065,13 @@
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="20"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL">
                 <power initial="15"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="15"/>
             </stat-modify>
             <speed mode="PER">

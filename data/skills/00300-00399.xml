@@ -706,23 +706,23 @@
         <attributes property="MAGIC" magic-critical-rate="5.0"/>
 		<target/>
 		<effects>
-			<defence-trait>
-				<trait type="SHOCK">
-					<power initial="20"/>
-				</trait>
-				<trait type="HOLD">
+			<defence-trait>				
+				<trait type="POISON">
 					<power initial="20"/>
 				</trait>
 				<trait type="BLEED">
 					<power initial="20"/>
 				</trait>
+				<trait type="HOLD">
+					<power initial="20"/>
+				</trait>				
 				<trait type="SLEEP">
 					<power initial="20"/>
 				</trait>
-				<trait type="DERANGEMENT">
+				<trait type="SHOCK">
 					<power initial="20"/>
-				</trait>
-				<trait type="POISON">
+				</trait>				
+				<trait type="DERANGEMENT">
 					<power initial="20"/>
 				</trait>
 			</defence-trait>
@@ -787,7 +787,7 @@
 		<target type="NONE"/>
 		<effects>
 			<effect name="HealDamOverTime" ticks="2">
-				<power initial="12"/>
+				<power initial="15"/>
 			</effect>
 			<stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
 				<power initial="10.0">
@@ -1493,13 +1493,13 @@
 			<stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
 				<power initial="-20.0"/>
 			</stat-modify>
-			<stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="FRONT" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="-30.0"/>
 			</stat-position-based>
 			<stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
-			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="90.0"/>
 			</stat-position-based>
 		</effects>
@@ -1568,13 +1568,13 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="FRONT" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="-30.0"/>
 			</stat-position-based>
-			<stat-position-based position="SIDE" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="SIDE" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="30.0"/>
 			</stat-position-based>
-			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE">
+			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
 				<power initial="60.0"/>
 			</stat-position-based>
 		</effects>

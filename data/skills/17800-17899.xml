@@ -107,27 +107,64 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<trigger-skill-by-magic skill="17824">
+				<power initial="1.0">
+				    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">7.0</value>
+                    <value level="8">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="10">10.0</value>                    
+                </power>
+				<chance initial="10.0"/>
+				<types>PHYSIC MAGIC STATIC DANCE</types>
+			</trigger-skill-by-magic>			
+		</effects>
     </skill>
     <skill id="17824" name="Aquamarine - Mana Drain" max-level="10" action="A1">
         <icon initial="icon.etc_bm_jewel_aquamarine_i00">
             <value level="6">icon.bm_jewel_castmpup_high_lv1_lavianrose</value>
         </icon>
-        <attributes>
+        <attributes static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="3000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>
+            <effect name="ManaHeal">
+                <power initial="12.0">
+                    <value level="2">16.0</value>
+                    <value level="3">20.0</value>
+                    <value level="4">30.0</value>
+                    <value level="5">50.0</value>
+                    <value level="6">60.0</value>
+                    <value level="7">80.0</value>
+                    <value level="8">100.0</value>
+                    <value level="9">130.0</value>
+                    <value level="10">200.0</value>                    
+                </power>
+            </effect>
+        </effects>
     </skill>
     <skill id="17825" name="Greater Aquamarine - Special Ability" action="A1">
         <!-- Recovers 10%% MP upon using a skill. -->
         <icon initial="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
-        <attributes>
+        <attributes static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="300000"/>
             <effect-range initial="-1"/>
             <activate-rate initial="-1"/>
         </attributes>
         <target/>
+		<effects>          
+            <effect name="ManaHealPercent">
+                <power initial="10.0"/>
+            </effect>          
+        </effects>
     </skill>
     <skill id="17888" name="Ruby" max-level="2" action="A1">
         <!--
