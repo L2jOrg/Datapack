@@ -49,7 +49,32 @@
         <enchant from="5" until="8" chance="25"/>
         <enchant from="9" until="10" chance="20"/>
     </chance-group>
-    
+
+    <chance-group name="TALISMAN_ADEN">
+        <enchant until="1" chance="100"/>
+        <enchant from="1" until="2" chance="80"/>
+        <enchant from="2" until="3" chance="70"/>
+        <enchant from="3" until="4" chance="60"/>
+        <enchant from="4" until="5" chance="40"/>
+        <enchant from="5" until="6" chance="30"/>
+        <enchant from="6" until="7" chance="24"/>
+        <enchant from="7" until="8" chance="16"/>
+        <enchant from="8" until="10" chance="10"/>
+    </chance-group>
+
+    <chance-group name="TALISMAN_EVA_SPEED">
+        <enchant until="1" chance="60"/>
+        <enchant from="1" until="2" chance="50"/>
+        <enchant from="2" until="3" chance="40"/>
+        <enchant from="3" until="4" chance="35"/>
+        <enchant from="4" until="5" chance="30"/>
+        <enchant from="5" until="6" chance="28"/>
+        <enchant from="6" until="7" chance="26"/>
+        <enchant from="7" until="8" chance="24"/>
+        <enchant from="8" until="9" chance="22"/>
+        <enchant from="9" until="10" chance="20"/>
+    </chance-group>
+
     <fail-rewards>
         <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
             <reward grade="D">
@@ -184,6 +209,18 @@
     <group id="1">
         <enchant-chance group="CURSED_GROUP">
             <slots>RIGHT_HAND TWO_HAND FULL_ARMOR LEFT_HAND HEAD CHEST LEGS FEET GLOVES NECK EAR FINGER</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="2">
+        <enchant-chance group="TALISMAN_ADEN">
+            <slots>TALISMAN</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="3">
+        <enchant-chance group="TALISMAN_EVA_SPEED">
+            <slots>TALISMAN</slots>
         </enchant-chance>
     </group>
 
@@ -325,17 +362,17 @@
     </scroll>
 
     <!-- Aden Talisman Enchant Scroll -->
-    <scroll id="91756" max-enchant="10">
+    <scroll id="91756" max-enchant="10" group="2">
         <items>91745</items> <!-- Talisman of Aden -->
     </scroll>
 
     <!-- Enchant Scroll: Talisman - Speed -->
-    <scroll id="92402" max-enchant="10">
+    <scroll id="92402" max-enchant="10" group="3">
         <items>92403</items> <!-- Talisman - Speed -->
     </scroll>
 
     <!-- Enchant Scroll: Eva's Talisman -->
-    <scroll id="92017" max-enchant="10">
+    <scroll id="92017" max-enchant="10"  group="3">
         <items>92018</items> <!-- Eva's Talisman -->
     </scroll>
 
