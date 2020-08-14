@@ -492,14 +492,43 @@
     <skill id="51341" name="S-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-            <reuse initial="500"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <effect-range initial="-1"/>
             <hit-time initial="500"/>
             <activate-rate initial="-1"/>
         </attributes>
+        <consume>
+            <item initial="91626"/>
+            <item-count initial="1"/>
+        </consume>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="5.88235294118" id="6379"/>
+                <item chance="5.88235294118" id="6380"/>
+                <item chance="5.88235294118" id="6381"/>
+                <item chance="5.88235294118" id="6382"/>
+                <item chance="5.88235294118" id="6383"/>
+                <item chance="5.88235294118" id="6384"/>
+                <item chance="5.88235294118" id="6385"/>
+                <item chance="5.88235294118" id="6386"/>
+                <item chance="5.88235294118" id="6373"/>
+                <item chance="5.88235294118" id="6374"/>
+                <item chance="5.88235294118" id="6375"/>
+                <item chance="5.88235294118" id="6376"/>
+                <item chance="5.88235294118" id="6377"/>
+                <item chance="5.88235294118" id="6378"/>
+                <item chance="5.88235294118" id="889"/>
+                <item chance="5.88235294118" id="858"/>
+                <item chance="5.88235294118" id="920"/>
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="51342" name="+10 A-grade Armor Pack" action="A1">
         <!-- none -->

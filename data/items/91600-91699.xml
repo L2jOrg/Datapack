@@ -185,9 +185,12 @@
 	</item>
 
 	<item id="91626" name="S-grade Armor Pack" type="NONE">
-	<!-- Double-click to obtain one S-grade armor or accessory. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<!-- Double-click to obtain one S-grade armor or accessory. -->
+		<restriction stackable="true" dropable="true" sellable="true"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51341" value="-1"/>  <!-- S-grade Armor Pack -->
+		</skill-reducer>
 	</item>
 
 	<item id="91627" name="+10 A-grade Armor Pack" type="NONE">
