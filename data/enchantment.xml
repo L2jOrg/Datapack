@@ -75,6 +75,78 @@
         <enchant from="9" until="10" chance="20"/>
     </chance-group>
 
+    <chance-group name="FIRE_LAND_PENDANT">
+        <enchant until="3" chance="100"/>
+        <enchant from="3" until="4" chance="50"/>
+        <enchant from="4" until="5" chance="40"/>
+        <enchant from="5" until="6" chance="30"/>
+        <enchant from="6" until="7" chance="27"/>
+        <enchant from="7" until="8" chance="17"/>
+        <enchant from="8" until="9" chance="9"/>
+        <enchant from="9" until="10" chance="1"/>
+    </chance-group>
+
+    <chance-group name="DRAGON_BELT">
+        <enchant until="1" chance="60"/>
+        <enchant from="1" until="2" chance="50"/>
+        <enchant from="2" until="3" chance="40"/>
+        <enchant from="3" until="4" chance="35"/>
+        <enchant from="4" until="5" chance="30"/>
+        <enchant from="5" until="6" chance="28"/>
+        <enchant from="6" until="7" chance="26"/>
+        <enchant from="7" until="8" chance="24"/>
+        <enchant from="8" until="9" chance="22"/>
+        <enchant from="9" until="10" chance="20"/>
+    </chance-group>
+
+    <chance-group name="SAYHAS_CLOAK">
+        <enchant until="1" chance="95"/>
+        <enchant from="1" until="2" chance="85"/>
+        <enchant from="2" until="3" chance="75"/>
+        <enchant from="3" until="4" chance="60"/>
+        <enchant from="4" until="5" chance="55"/>
+        <enchant from="5" until="6" chance="40"/>
+        <enchant from="6" until="7" chance="30"/>
+        <enchant from="7" until="8" chance="20"/>
+        <enchant from="8" until="9" chance="10"/>
+        <enchant from="9" until="10" chance="1"/>
+    </chance-group>
+
+    <chance-group name="HAIR_ACCESSORY">
+        <enchant until="3" chance="100"/>
+        <enchant from="3" until="4" chance="50"/>
+        <enchant from="4" until="5" chance="40"/>
+        <enchant from="5" until="6" chance="40"/>
+        <enchant from="6" until="7" chance="8"/>
+        <enchant from="7" until="8" chance="5"/>
+        <enchant from="8" until="9" chance="3"/>
+        <enchant from="9" until="10" chance="2"/>
+    </chance-group>
+
+    <chance-group name="INSOLENCE_AND_VALLEY">
+        <enchant until="1" chance="100"/>
+        <enchant from="1" until="2" chance="90"/>
+        <enchant from="2" until="3" chance="80"/>
+        <enchant from="3" until="4" chance="60"/>
+        <enchant from="4" until="5" chance="50"/>
+        <enchant from="5" until="6" chance="40"/>
+        <enchant from="6" until="7" chance="30"/>
+        <enchant from="7" until="8" chance="20"/>
+        <enchant from="8" until="9" chance="10"/>
+        <enchant from="9" until="10" chance="5"/>
+    </chance-group>
+
+    <chance-group name="AGATHION_CHANCE">
+        <enchant until="3" chance="100"/>
+        <enchant from="3" until="4" chance="65"/>
+        <enchant from="4" until="5" chance="50"/>
+        <enchant from="5" until="6" chance="35"/>
+        <enchant from="6" until="7" chance="12"/>
+        <enchant from="7" until="8" chance="9"/>
+        <enchant from="8" until="9" chance="7"/>
+        <enchant from="9" until="10" chance="4"/>
+    </chance-group>
+
     <fail-rewards>
         <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
             <reward grade="D">
@@ -224,6 +296,43 @@
         </enchant-chance>
     </group>
 
+    <group id="4">
+        <enchant-chance group="FIRE_LAND_PENDANT">
+            <slots>PENDANT</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="5">
+        <enchant-chance group="DRAGON_BELT">
+            <slots>BELT</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="6">
+        <enchant-chance group="SAYHAS_CLOAK">
+            <slots>BACK</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="7">
+        <enchant-chance group="HAIR_ACCESSORY">
+            <slots>HAIR HAIR2 HAIR_ALL</slots>
+        </enchant-chance>
+    </group>
+
+    <group id="8">
+        <enchant-chance group="INSOLENCE_AND_VALLEY">
+            <slots>EAR FINGER</slots>
+        </enchant-chance>
+    </group>
+
+
+    <group id="9">
+        <enchant-chance group="AGATHION_CHANCE">
+            <slots>AGATHION</slots>
+        </enchant-chance>
+    </group>
+
     <!-- Scrolls: Enchant Weapon -->
     <scroll id="729" grade="A"/>
     <scroll id="947" grade="B"/>
@@ -315,7 +424,7 @@
     </scroll>
 
     <!-- Sayha's Cloak - Enchant Scroll  -->
-    <scroll id="91213" max-enchant="10">
+    <scroll id="91213" max-enchant="10" group="6">
         <items>
             91719 <!-- Special Black Sayha's Cloak -->
             91720 <!-- Special White Sayha's Cloak -->
@@ -332,7 +441,7 @@
     </scroll>
 
     <!-- Eva's Scroll: Enchant Hair Accessory -->
-    <scroll id="70753" max-enchant="10">
+    <scroll id="70753" max-enchant="10" group="7">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -387,13 +496,13 @@
     </scroll>
 
     <!-- Enchant Scroll: Dragon Valley Earring -->
-    <scroll id="91967" max-enchant="10">
+    <scroll id="91967" max-enchant="10" group="8">
         <items>91953 <!-- Dragon Valley Earring -->
         </items>
     </scroll>
 
     <!-- Enchant Scroll: Dragon's Belt -->
-    <scroll id="91863" max-enchant="10">
+    <scroll id="91863" max-enchant="10" group="5">
         <items>
             91788 <!-- Dragon's Belt -->
             91862 <!-- Dragon's Belt -->
@@ -406,12 +515,12 @@
     </scroll>
 
     <!-- Sayha's Cloak Enchant Scroll -->
-    <scroll id="91213" max-enchant="10">
+    <scroll id="91213" max-enchant="10" group="6">
         <items>91210 91211 91212</items>
     </scroll>
 
     <!-- Pendant Polish -->
-    <scroll id="49469" max-enchant="10">
+    <scroll id="49469" max-enchant="10" group="4">
         <items>
             29704 29705 29706 29707 29708 29709 29710 29711 29712 29713 29714
             29715 29716 29717 29718 29719 29720 29721 29722 29723 49467 49468
@@ -424,7 +533,7 @@
     </scroll>
 
     <!-- Eva's Scroll Enchant Hair Accessory -->
-    <scroll id="90494" max-enchant="10">
+    <scroll id="90494" max-enchant="10" group="7">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -454,12 +563,12 @@
     </scroll>
 
     <!-- Dragon's Belt Ornament -->
-    <scroll id="91789" max-enchant="10">
+    <scroll id="91789" max-enchant="10" group="5">
         <items>91788 91862</items>
     </scroll>    
 
     <!-- Enchant Scroll Ring of Insolence -->
-    <scroll id="91966" max-enchant="10">
+    <scroll id="91966" max-enchant="10" group="8">
         <items>91952</items>
     </scroll>
 
@@ -546,7 +655,7 @@
     </scroll>
 	
     <!-- Dragon Varnish -->
-    <scroll id="91249" max-enchant="5">
+    <scroll id="91249" max-enchant="5" group="4">
         <items>
             71691 <!-- Dragon Pedant - Attack Type Lv. 1 -->
             71692 <!-- Dragon Pedant - Attack Type Lv. 2 -->
@@ -623,7 +732,7 @@
     <scroll id="93738" grade="S" min-enchant="10" max-enchant="14"/>
 
     <!-- Stabilized Eva's Scroll: Enchant Hair Accessory -->
-    <scroll id="70754" min-enchant="6" max-enchant="10">
+    <scroll id="70754" min-enchant="6" max-enchant="10" group="7">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -653,7 +762,7 @@
     </scroll>
 
     <!-- Brilliant Sayha's Cloak - Enchant Scroll -->
-    <scroll id="91214" max-enchant="9">
+    <scroll id="91214" max-enchant="9" group="6">
         <items>
             91719 <!-- Special Black Sayha's Cloak -->
             91720 <!-- Special White Sayha's Cloak -->
@@ -665,7 +774,7 @@
     </scroll>
 
     <!-- Shining Sayha's Cloak - Enchant Scroll -->
-    <scroll id="91215" max-enchant="7">
+    <scroll id="91215" max-enchant="7" group="6">
         <items>
             91719 <!-- Special Black Sayha's Cloak -->
             91720 <!-- Special White Sayha's Cloak -->
@@ -677,7 +786,7 @@
     </scroll>
 
     <!-- Sayha's Supreme Scroll: Enchant Cloak -->
-    <scroll id="91722" max-enchant="10">
+    <scroll id="91722" max-enchant="10" group="6">
         <items>
             91719 <!-- Special Black Sayha's Cloak -->
             91720 <!-- Special White Sayha's Cloak -->
@@ -759,7 +868,7 @@
     </scroll>
 
     <!-- Brilliant Dragon Varnish -->
-    <scroll id="91250" max-enchant="5">
+    <scroll id="91250" max-enchant="5" group="4">
         <items>
             71691 <!-- Dragon Pedant - Attack Type Lv. 1 -->
             71692 <!-- Dragon Pedant - Attack Type Lv. 2 -->
@@ -791,7 +900,7 @@
     </scroll>
 
     <!-- Shinning Pendant Varnish -->
-    <scroll id="49470" max-enchant="8">
+    <scroll id="49470" max-enchant="8" group="4">
         <items>
             29704 29705 29706 29707 29708 29709 29710 29711 29712 29713 29714 29715 29716
             29717 29718 29719 29720 29721 29722 29723 49467 49468 71701 71702 71703 71704
@@ -805,7 +914,7 @@
     </scroll>
 
     <!-- Shinning Pendant Varnish -->
-    <scroll id="70765" max-enchant="8">
+    <scroll id="70765" max-enchant="8" group="4">
         <items>
             29704 29705 29706 29707 29708 29709 29710 29711 29712 29713 29714 29715 29716
             29717 29718 29719 29720 29721 29722 29723 49467 49468 71701 71702 71703 71704
@@ -831,7 +940,7 @@
     </scroll>
 
     <!-- Matte Pendant Varnish -->
-    <scroll id="90137" max-enchant="6">
+    <scroll id="90137" max-enchant="6" group="4">
         <items>
             29704 29705 29706 29707 29708 29709 29710 29711 29712 29713 29714 29715 29716
             29717 29718 29719 29720 29721 29722 29723 49467 49468 71701 71702 71703 71704
@@ -839,7 +948,7 @@
     </scroll>
 
     <!-- Pendant Glittering Varnish -->
-    <scroll id="90138" max-enchant="9">
+    <scroll id="90138" max-enchant="9" group="4">
         <items>
             29704 29705 29706 29707 29708 29709 29710 29711 29712 29713 29714 29715 29716
             29717 29718 29719 29720 29721 29722 29723 49467 49468 71701 71702 71703 71704
@@ -847,7 +956,7 @@
     </scroll>
 
     <!-- Stabilized Eva's Scroll Enchant Hair Accessory -->
-    <scroll id="90855" max-enchant="9">
+    <scroll id="90855" max-enchant="9" group="7">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -877,7 +986,7 @@
     </scroll>
 
     <!-- Stable Eva's Enhancement Scroll Hair Accessories -->
-    <scroll id="90882" min-enchant="6" max-enchant="10">
+    <scroll id="90882" min-enchant="6" max-enchant="10" group="7">
         <items>
             70749  <!-- Chic Silver Chapeau <CON+1 MEN+1> -->
             70748  <!-- Chic Silver Chapeau <DEX +1 WIT +1> -->
@@ -927,17 +1036,17 @@
     </scroll>
 
     <!-- Brilliant Sayha's Cloak -->
-    <scroll id="91214" max-enchant="10">
+    <scroll id="91214" max-enchant="10" group="6">
         <items>91210 91211 91212</items>
     </scroll>
 
     <!-- Shinning Sayha's Cloak -->
-    <scroll id="91215" max-enchant="10">
+    <scroll id="91215" max-enchant="10" group="6">
         <items>91210 91211 91212</items>
     </scroll>
 
     <!-- Sayha's Supreme Scroll -->
-    <scroll id="91722" max-enchant="10">
+    <scroll id="91722" max-enchant="10" group="6">
         <items>91719 97120 91721
         </items>
     </scroll>
@@ -946,5 +1055,34 @@
     <scroll id="71211" max-enchant="7">
         <items>71184 71185 71186 71187 71188 71189 71190 71191 71192 71193 71194 71195 71196 71197 71198 71199 71200 71201 71202 71203 71204 71205 71206 71207 71208 71209 71210</items>
     </scroll>
-	
+
+    <!--Agathion Enchant Scroll-->
+    <scroll id="48046" max-enchant="10" group="9">
+        <items>
+            48048 <!--Agathion Virgo-->
+            48049 <!--Agathion Capricorn-->
+            48050 <!--Agathion Libra-->
+            48052 <!--Agathion Taurus-->
+            48053 <!--Agathion Leo-->
+            48054 <!--Agathion Gemini-->
+            48055 <!--Agathion Scorpio-->
+            48056 <!--Agathion Aquarius-->
+            48058 <!--Agathion Sagittarius-->
+        </items>
+    </scroll>
+
+    <!--Quality Agathion Enchant Scroll-->
+    <scroll id="48047" max-enchant="10" group="9">
+        <items>
+            48048<!--Agathion Virgo-->
+            48049<!--Agathion Capricorn-->
+            48050<!--Agathion Libra-->
+            48052<!--Agathion Taurus-->
+            48053<!--Agathion Leo-->
+            48054<!--Agathion Gemini-->
+            48055<!--Agathion Scorpio-->
+            48056<!--Agathion Aquarius-->
+            48058<!--Agathion Sagittarius-->
+        </items>
+    </scroll>
 </enchantment>
