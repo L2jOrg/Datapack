@@ -18,7 +18,7 @@
 	<item id="49502" name="Scroll of Escape: Giran Harbor" type="NONE">
 	<!-- Magic scroll that teleports you to Giran Harbor. -->
 		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39078" value="-1"/>  <!-- Return: Giran Harbor -->
 		</skill-reducer>
@@ -195,7 +195,7 @@
 	<item id="49525" name="Rare Accessory Lv. 1 Box" type="NONE">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1(15-day), Ring of Core Lv. 1(15-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="55089" value="-1"/>  <!-- Rare Accessory Pack -->
 		</skill-reducer>
@@ -304,7 +304,7 @@
 	<item id="49541" name="Spellbook Chest" type="NONE">
 	<!-- Double-click the chest to receive one of the Spellbooks, used after the 2nd Class Transfer.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39059" value="-1"/>  <!-- Spellbook Box -->
 		</skill-reducer>
@@ -313,7 +313,7 @@
 	<item id="49542" name="Greater Scroll of Resurrection" type="SCROLL">
 	<!-- Magic scroll, restoring 50% of XP and resurrecting the character.  -->
 		<restriction olympiad-restricted="true" stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
+		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="39109" value="-1"/>  <!-- Greater Scroll of Resurrection -->
 		</skill-reducer>

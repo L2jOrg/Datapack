@@ -5,9 +5,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="7000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <conditions>
@@ -19,9 +17,7 @@
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="7000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <conditions>
@@ -86,9 +82,7 @@
             <magic-level initial="85"/>
             <reuse initial="30000"/>
             <effect-point initial="-1000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
     </skill>
@@ -99,9 +93,7 @@
             <magic-level initial="85"/>
             <reuse initial="30000"/>
             <effect-point initial="-1000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
     </skill>
@@ -115,7 +107,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="500"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="83"/>
@@ -130,14 +121,12 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <reuse initial="20000"/>
             <effect-point initial="1000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
         <abnormal type="ATTACK_TIME_DOWN">
             <level initial="2"/>
             <time initial="30"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6711" name="Etis Power Up" max-level="3" action="A2">
@@ -146,7 +135,6 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <reuse initial="20000"/>
             <effect-point initial="1000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
@@ -156,7 +144,6 @@
                 <value level="3">3</value>
             </level>
             <time initial="30"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6714" name="Wind Walk of Elcadia" action="A2" type="MAGIC">
@@ -172,7 +159,6 @@
         <abnormal type="SPEED_UP">
             <level initial="3"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <speed>
@@ -193,7 +179,6 @@
         <abnormal type="ATTACK_TIME_DOWN">
             <level initial="3"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
@@ -214,7 +199,6 @@
         <abnormal type="PA_UP">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -235,7 +219,6 @@
         <abnormal type="BERSERKER">
             <level initial="3"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -277,7 +260,6 @@
         <abnormal type="CRITICAL_DMG_UP">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -298,7 +280,6 @@
         <abnormal type="HIT_UP">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
@@ -319,7 +300,6 @@
         <abnormal type="CRITICAL_PROB_UP">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
@@ -340,7 +320,6 @@
         <abnormal type="MA_UP">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
@@ -361,7 +340,6 @@
         <abnormal type="CASTING_TIME_DOWN">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
@@ -382,7 +360,6 @@
         <abnormal type="CANCEL_PROB_DOWN">
             <level initial="7"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="ATTACK_CANCEL" stat-add="ATTACK_CANCEL">
@@ -428,7 +405,6 @@
         <abnormal type="BLESS_THE_BLOOD">
             <level initial="1"/>
             <time initial="15"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <trigger-skill-by-damage min-damage="60" skill="6726">
@@ -443,8 +419,6 @@
         <attributes static-reuse="true" magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="85"/>
             <reuse initial="4000"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -466,7 +440,6 @@
         <abnormal type="VAMPIRIC_ATTACK">
             <level initial="5"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <vampiric-attack chance="80">
@@ -484,7 +457,6 @@
             <effect-point initial="655"/>
             <effect-range initial="900"/>
             <hit-time initial="6000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <effects>
@@ -507,7 +479,6 @@
         <abnormal type="ARMOR_HOLY">
             <level initial="4"/>
             <time initial="600"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify stat="DARK_RES" stat-add="DARK_RES">
@@ -525,7 +496,6 @@
             <effect-point initial="468"/>
             <effect-range initial="1100"/>
             <hit-time initial="2000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <effects>
@@ -546,7 +516,6 @@
         <abnormal type="STEALTH" visual="STEALTH">
             <level initial="1"/>
             <time initial="1200"/>
-            <chance initial="-1"/>
         </abnormal>
         <conditions>
             <target>
@@ -563,9 +532,7 @@
             <magic-level initial="85"/>
             <reuse initial="2000"/>
             <effect-point initial="-10000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="43"/>
@@ -592,7 +559,6 @@
         <abnormal type="TIME_BOMB" visual="TIME_BOMB">
             <level initial="1"/>
             <time initial="10"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6734" name="Energy of Destruction" debuff="true" action="A2">
@@ -601,7 +567,6 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="85"/>
             <effect-point initial="-100"/>
-            <effect-range initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -609,7 +574,6 @@
         <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="5"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6735" name="Petrify" debuff="true" action="A2">
@@ -618,13 +582,11 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="85"/>
             <effect-point initial="-1000"/>
-            <effect-range initial="-1"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="100"/>
         <abnormal type="TURN_STONE" visual="FLESH_STONE">
             <level initial="1"/>
             <time initial="5"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6736" name="Fierce Attack" action="A1">
@@ -637,7 +599,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="2000"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target type="ENEMY" scope="SQUARE" object="NOT_FRIEND">
             <fan-range start-angle="0" radius="500" angle="40"/>
@@ -655,9 +616,7 @@
             <magic-level initial="85"/>
             <reuse initial="1000"/>
             <effect-point initial="546"/>
-            <effect-range initial="-1"/>
             <hit-time initial="90000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="78"/>
@@ -687,7 +646,6 @@
         <abnormal type="ROOT_MAGICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="3"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6739" name="Presentation - Behemoth Leader Casting Preparation" action="A1">
@@ -696,9 +654,7 @@
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <effect-point initial="100"/>
-            <effect-range initial="-1"/>
             <hit-time initial="45000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -708,9 +664,7 @@
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <effect-point initial="100"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -720,9 +674,7 @@
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <effect-point initial="100"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -735,7 +687,6 @@
             <effect-point initial="100"/>
             <effect-range initial="2000"/>
             <hit-time initial="90000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <channeling skill="0" initial-delay="1000000" interval="0"/>
@@ -791,7 +742,6 @@
         <abnormal type="CASTING_TIME_UP">
             <level initial="3"/>
             <time initial="120"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6745" name="Dark Space" action="A2" type="MAGIC">
@@ -813,7 +763,6 @@
         <abnormal type="ARMOR_UNHOLY">
             <level initial="3"/>
             <time initial="120"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6746" name="Dark Space" debuff="true" action="A2" type="MAGIC">
@@ -836,7 +785,6 @@
         <abnormal type="ARMOR_UNHOLY">
             <level initial="3"/>
             <time initial="120"/>
-            <chance initial="-1"/>
         </abnormal>
     </skill>
     <skill id="6747" name="Dark Blade" action="A1">
@@ -849,7 +797,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="150"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -895,7 +842,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -919,7 +865,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -943,7 +888,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -959,9 +903,7 @@
             <magic-level initial="85"/>
             <reuse initial="300000"/>
             <effect-point initial="562"/>
-            <effect-range initial="-1"/>
             <hit-time initial="2000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="158"/>
@@ -969,7 +911,6 @@
         <target/>
         <abnormal>
             <time initial="60"/>
-            <chance initial="-1"/>
         </abnormal>
         <conditions>
             <remain-status amount="10" stat="HP"/>
@@ -989,7 +930,6 @@
             <effect-point initial="-337"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1010,7 +950,6 @@
             <magic-level initial="85"/>
             <reuse initial="10000"/>
             <effect-point initial="-10000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
 
             <element type="DARK" value="120"/>
@@ -1039,7 +978,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="1400"/>
             <hit-time initial="2500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1059,9 +997,7 @@
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <effect-point initial="-10000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1110,7 +1046,6 @@
             <magic-level initial="85"/>
             <reuse initial="60000"/>
             <effect-point initial="100000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
@@ -1120,7 +1055,6 @@
         <abnormal type="PA_UP">
             <level initial="3"/>
             <time initial="30"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1147,7 +1081,6 @@
             <effect-point initial="-897"/>
             <effect-range initial="1400"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1165,7 +1098,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1186,9 +1118,7 @@
             <magic-level initial="85"/>
             <reuse initial="5000"/>
             <effect-point initial="-1000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1209,7 +1139,6 @@
             <magic-level initial="85"/>
             <reuse initial="300000"/>
             <effect-point initial="100000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1000"/>
         </attributes>
         <consume>
@@ -1219,7 +1148,6 @@
         <abnormal type="ATTACK_TIME_DOWN">
             <level initial="2"/>
             <time initial="30"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1245,7 +1173,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1269,7 +1196,6 @@
             <effect-point initial="-897"/>
             <effect-range initial="1400"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1292,7 +1218,6 @@
             <effect-point initial="562"/>
             <effect-range initial="1400"/>
             <hit-time initial="2500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <effects>
@@ -1310,7 +1235,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="1400"/>
             <hit-time initial="2500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1330,9 +1254,7 @@
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <effect-point initial="-10000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="EARTH" value="120"/>
         </attributes>
@@ -1406,7 +1328,6 @@
             <effect-point initial="100"/>
             <effect-range initial="1400"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <consume>
             <mana initial="130"/>
@@ -1427,7 +1348,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1451,7 +1371,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1472,7 +1391,6 @@
             <magic-level initial="85"/>
             <reuse initial="60000"/>
             <effect-point initial="100000"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <consume>
@@ -1482,7 +1400,6 @@
         <abnormal type="PA_UP">
             <level initial="3"/>
             <time initial="30"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1537,7 +1454,6 @@
             <effect-point initial="-1000"/>
             <effect-range initial="200"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1596,7 +1512,6 @@
             <magic-level initial="85"/>
             <reuse initial="5000"/>
             <effect-point initial="-323"/>
-            <effect-range initial="-1"/>
             <hit-time initial="1500"/>
 
             <element type="DARK" value="120"/>
@@ -1629,7 +1544,6 @@
             <effect-point initial="-10000"/>
             <effect-range initial="300"/>
             <hit-time initial="1500"/>
-            <activate-rate initial="-1"/>
 
             <element type="DARK" value="120"/>
         </attributes>
@@ -1649,13 +1563,11 @@
         <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true">
             <magic-level initial="85"/>
             <effect-point initial="1"/>
-            <effect-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="PARALYZE" visual="PARALYZE">
             <level initial="1"/>
             <time initial="10"/>
-            <chance initial="-1"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1666,8 +1578,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1676,8 +1586,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1686,8 +1594,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1696,8 +1602,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1706,9 +1610,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1717,9 +1619,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1728,8 +1628,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1738,9 +1636,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="4000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1749,9 +1645,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1760,9 +1654,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="6000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1771,9 +1663,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="30000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1782,9 +1672,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1793,9 +1681,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="30000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1804,9 +1690,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="2000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1815,9 +1699,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="3000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1826,9 +1708,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
             <hit-time initial="5000"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1837,8 +1717,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1847,8 +1725,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1857,8 +1733,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1867,8 +1741,6 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <effect-range initial="-1"/>
-            <activate-rate initial="-1"/>
         </attributes>
         <target/>
     </skill>
