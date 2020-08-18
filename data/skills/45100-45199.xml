@@ -11,7 +11,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+        <abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">23</value>
+                    <value level="3">30</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45105" name="Empower" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -24,7 +43,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>              
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45106" name="Wild Magic" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -36,7 +74,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MAGIC_CRITICAL_UP">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45107" name="Wind Walk" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -48,7 +103,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="SPEED_UP">
+            <level initial="1">
+                <value level="2">2</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20">
+                    <value level="2">33</value>                   
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="45108" name="Magic Barrier" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -60,7 +132,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MD_UP">
+            <level initial="2">
+                <value level="2">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="250">
+                    <value level="2">350</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45109" name="Focus" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -73,7 +162,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_PROB_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20">
+                    <value level="2">30</value>
+                    <value level="3">40</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45110" name="Death Whisper" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -86,7 +194,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_DMG_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="25">
+                    <value level="2">30</value>
+                    <value level="3">35</value>                    
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45111" name="Haste" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -98,7 +225,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="ATTACK_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">33</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45112" name="Berserker Spirit" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -110,7 +254,54 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="BERSERKER">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>        
+        <effects>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="5">
+                    <value level="2">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </speed>                                   
+        </effects>
     </skill>
     <skill id="45113" name="Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -123,7 +314,38 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4">
+                    <value level="2">-7</value>
+                    <value level="3">-10</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="45114" name="Maphr's Focus" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -136,7 +358,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_PROB_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20">
+                    <value level="2">30</value>
+                    <value level="3">40</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45115" name="Maphr's Death Whisper" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -149,7 +390,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_DMG_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="25">
+                    <value level="2">30</value>
+                    <value level="3">35</value>                    
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45116" name="Maphr's Haste" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -161,7 +421,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="ATTACK_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">33</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45117" name="Maphr's Wind Walk" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -173,7 +450,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="SPEED_UP">
+            <level initial="1">
+                <value level="2">2</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20">
+                    <value level="2">33</value>                   
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="45118" name="Maphr's Magic Barrier" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -185,7 +479,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MD_UP">
+            <level initial="2">
+                <value level="2">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="250">
+                    <value level="2">350</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45119" name="Maphr's Might" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -198,7 +509,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="80">
+                    <value level="2">150</value>
+                    <value level="3">230</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45120" name="Maphr's Shield" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -211,7 +541,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+		<consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PD_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45121" name="Chant of Focus" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -224,7 +573,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_PROB_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20">
+                    <value level="2">30</value>
+                    <value level="3">40</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45122" name="Chant of Death Whisper" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -237,7 +605,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_DMG_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="25">
+                    <value level="2">30</value>
+                    <value level="3">35</value>                    
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45123" name="Chant of Haste" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -249,7 +636,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="ATTACK_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">33</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45124" name="Chant of Wind Walk" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -261,7 +665,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="SPEED_UP">
+            <level initial="1">
+                <value level="2">2</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20">
+                    <value level="2">33</value>                   
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="45125" name="Chant of Magic Barrier" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -273,7 +694,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MD_UP">
+            <level initial="2">
+                <value level="2">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="250">
+                    <value level="2">350</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45126" name="Chant of Might" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -286,7 +724,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="80">
+                    <value level="2">150</value>
+                    <value level="3">230</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45127" name="Chant of Shield" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -299,7 +756,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PD_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45128" name="Chant of Berserker Spirit" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -311,7 +787,54 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="BERSERKER">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>        
+        <effects>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="5">
+                    <value level="2">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </speed>                                   
+        </effects>
     </skill>
     <skill id="45129" name="Chant of Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -324,7 +847,38 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4">
+                    <value level="2">-7</value>
+                    <value level="3">-10</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="45130" name="Maphr's Acumen" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -337,7 +891,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+        <abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">23</value>
+                    <value level="3">30</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45131" name="Maphr's Empower" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -350,7 +923,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>              
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45132" name="Maphr's Wild Magic" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -362,7 +954,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MAGIC_CRITICAL_UP">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45133" name="Maphr's Berserker Spirit" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -374,7 +983,54 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="BERSERKER">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>        
+        <effects>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="5">
+                    <value level="2">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </speed>                                   
+        </effects>
     </skill>
     <skill id="45134" name="Maphr's Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -387,7 +1043,38 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4">
+                    <value level="2">-7</value>
+                    <value level="3">-10</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="45135" name="Chant of Acumen" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -400,7 +1087,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+        <abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">23</value>
+                    <value level="3">30</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45136" name="Chant of Empower" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -413,7 +1119,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>              
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45137" name="Chant of Wild Magic" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -425,7 +1150,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MAGIC_CRITICAL_UP">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45138" name="Chant of Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -438,7 +1180,38 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4">
+                    <value level="2">-7</value>
+                    <value level="3">-10</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="45139" name="Soul Focus" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -451,7 +1224,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_PROB_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20">
+                    <value level="2">30</value>
+                    <value level="3">40</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45140" name="Soul Death Whisper" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -464,7 +1256,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CRITICAL_DMG_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="25">
+                    <value level="2">30</value>
+                    <value level="3">35</value>                    
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45141" name="Soul Haste" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -476,7 +1287,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="ATTACK_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">33</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45142" name="Soul Wind Walk" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -488,7 +1316,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="SPEED_UP">
+            <level initial="1">
+                <value level="2">2</value>               
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20">
+                    <value level="2">33</value>                   
+                </power>
+            </speed>
+        </effects>
     </skill>
     <skill id="45143" name="Soul Magic Barrier" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -500,7 +1345,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MD_UP">
+            <level initial="2">
+                <value level="2">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="250">
+                    <value level="2">350</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45144" name="Soul Might" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -513,7 +1375,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="80">
+                    <value level="2">150</value>
+                    <value level="3">230</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45145" name="Soul Shield" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -526,7 +1407,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="PD_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45146" name="Soul Acumen" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -539,7 +1439,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+        <abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>                
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15">
+                    <value level="2">23</value>
+                    <value level="3">30</value>                   
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45147" name="Soul Empower" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -552,7 +1471,26 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>              
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>                  
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45148" name="Soul Wild Magic" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -564,7 +1502,24 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="MAGIC_CRITICAL_UP">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45149" name="Soul Berserker Spirit" max-level="2" action="A2" type="MAGIC">
         <!--
@@ -576,7 +1531,54 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="BERSERKER">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>        
+        <effects>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+			<vital-stat-modify heal="true" mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="-20">
+                    <value level="2">-15</value>                    
+                </power>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="5">
+                    <value level="2">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="5">
+                    <value level="2">8</value>
+                </power>
+            </speed>                                   
+        </effects>
     </skill>
     <skill id="45150" name="Soul Clarity" max-level="3" action="A2" type="MAGIC">
         <!--
@@ -589,7 +1591,38 @@
             <reuse initial="10000"/>
             <hit-time initial="1000"/>
         </attributes>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="3"/>            
+        </consume>
         <target/>
+		<abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4">
+                    <value level="2">-7</value>
+                    <value level="3">-10</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10">
+                    <value level="2">-15</value>
+                    <value level="3">-20</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="45151" name="Shine Soul Gathering" max-level="2" action="A1">
         <!--
@@ -642,13 +1675,18 @@
     <skill id="45153" name="Shadow Impact" action="A1">
         <!-- Inflicts double the damage of P. Atk. -->
         <icon initial="icon.skill19187"/>
-        <attributes auto-use="ACTIVE">
+        <attributes property="PHYSIC" static-reuse="true" auto-use="ACTIVE">
             <cast-range initial="900"/>
             <reuse initial="10000"/>
             <effect-point initial="-1000"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>
+		<effects>
+            <magical-attack-by-abnormal abnormals="PD_DOWN">
+                <power initial="500.0"/>
+            </magical-attack-by-abnormal>
+        </effects>
     </skill>
     <skill id="45154" name="Death Mark - Stage 1" max-level="5" debuff="true" action="A2" type="MAGIC">
         <!--
@@ -757,7 +1795,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="500">
                     <value level="2">850</value>
                     <value level="3">1360</value>
@@ -808,12 +1846,25 @@
                 <value level="8">63</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>TWO_HAND_SWORD ANCIENT_SWORD</type>
             </weapon>
         </conditions>
+		<effects>
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+                <power initial="650">
+                    <value level="2">1105</value>
+                    <value level="3">1768</value>
+                    <value level="4">2652</value>
+                    <value level="5">3712</value>
+                    <value level="6">4826</value>
+                    <value level="7">5791</value>
+                    <value level="8">6371</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45157" name="Enuma Elish" max-level="6" action="A1">
         <!--
@@ -864,7 +1915,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="1000">
                     <value level="2">2520</value>
                     <value level="3">3024</value>
@@ -907,12 +1958,25 @@
                 <value level="6">94</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="400" affect-min="5" affect-random="7">
+            <fan-range start-angle="0" radius="400" angle="90"/>
+        </target>
         <conditions>
             <weapon>
                 <type>TWO_HAND_SWORD ANCIENT_SWORD</type>
             </weapon>
         </conditions>
+        <effects>
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+                <power initial="2250">
+                    <value level="2">3150</value>
+                    <value level="3">3780</value>
+                    <value level="4">4347</value>
+                    <value level="5">4781</value>
+                    <value level="6">5020</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45159" name="Rush Impact" max-level="3" action="DA2">
         <!--
@@ -1032,7 +2096,7 @@
             </weapon>
         </conditions>
         <effects>
-            <fatal-blow chance-boost="300" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="125">
                     <value level="2">237</value>
                     <value level="3">427</value>
@@ -1044,7 +2108,7 @@
                     <value level="9">3809</value>
                     <value level="10">4190</value>
                 </power>
-            </fatal-blow>
+            </physical-attack>
         </effects>
     </skill>
     <skill id="45161" name="Soul Thrust" max-level="8" action="A2">
@@ -1137,7 +2201,7 @@
             level 8: <Jin Skill>\n\nAttacks the enemy three times with bonus 2705 Power added to P. Atk. Requires a Rapier. Has a chance to inflict additional magic damage and decrease M. Def. by 10%%. Has a chance to push the enemy in PvE. Critical. Ignores Defense. Over-hit.
          -->
         <icon initial="icon.skill0504"/>
-        <attributes auto-use="ACTIVE">
+        <attributes next-action="ATTACK" level-bonus-rate="20" auto-use="ACTIVE">
             <cast-range initial="120"/>
             <reuse initial="3000"/>
             <effect-point initial="-220">
@@ -1162,12 +2226,36 @@
                 <value level="8">63</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+        <abnormal type="KNOCKDOWN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="80"/>
+        </abnormal>
         <conditions>
             <weapon>
                 <type>RAPIER</type>
             </weapon>
         </conditions>
+        <effects>
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+                <power initial="276">
+                    <value level="2">470</value>
+                    <value level="3">750</value>
+                    <value level="4">1126</value>
+                    <value level="5">1576</value>
+                    <value level="6">2050</value>
+                    <value level="7">2459</value>
+                    <value level="8">2705</value>
+                </power>
+            </physical-attack>
+            <knockback knock-down="true" speed="400">
+                <power initial="50"/>
+            </knockback>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45163" name="Soul Spark" max-level="8" action="A1" type="MAGIC">
         <!--
@@ -1291,12 +2379,25 @@
                 <value level="8">48</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>RAPIER</type>
             </weapon>
         </conditions>
+        <effects>
+            <magical-attack>
+                <power initial="60">
+                    <value level="2">67</value>
+                    <value level="3">78</value>
+                    <value level="4">90</value>
+                    <value level="5">97</value>
+                    <value level="6">105</value>
+                    <value level="7">112</value>
+                    <value level="8">123</value>
+                </power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="45165" name="Soul Strike" max-level="10" action="A1" type="MAGIC">
         <!--
@@ -1503,7 +2604,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="25" over-hit="true">
+            <physical-attack critical-chance="15.0" over-hit="true">
                 <power initial="150">
                     <value level="2">375</value>
                     <value level="3">750</value>
@@ -1562,12 +2663,27 @@
                 <value level="10">99</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>BOW</type>
             </weapon>
         </conditions>
+        <effects>
+            <physical-attack critical-chance="15.0" over-hit="true">
+                <power initial="150">
+                    <value level="2">375</value>
+                    <value level="3">750</value>
+                    <value level="4">1275</value>
+                    <value level="5">2040</value>
+                    <value level="6">2856</value>
+                    <value level="7">3284</value>
+                    <value level="8">3448</value>
+                    <value level="9">3621</value>
+                    <value level="10">3802</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45170" name="Multiple Shot" max-level="8" action="A1">
         <!-- Attacks multiple enemies in the front with bonus 11030 Power. Critical. Over-hit. Requires a bow. -->
@@ -1598,7 +2714,7 @@
                 <value level="8">165</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="900" affect-min="8" affect-random="1">
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="900" affect-min="10" affect-random="1">
             <fan-range start-angle="0" radius="900" angle="60"/>
         </target>
         <conditions>
@@ -1607,7 +2723,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15" over-hit="true">
+            <physical-attack over-hit="true">
                 <power initial="340">
                     <value level="2">544</value>
                     <value level="3">816</value>
@@ -1658,12 +2774,27 @@
                 <value level="8">148</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="900" affect-min="8" affect-random="12">
+            <fan-range start-angle="0" radius="900" angle="60"/>
+        </target>
         <conditions>
             <weapon>
                 <type>BOW</type>
             </weapon>
         </conditions>
+        <effects>
+			<physical-attack critical-chance="15" ignore-shield="true" over-hit="true">
+                <power initial="408">
+                    <value level="2">652</value>
+                    <value level="3">979</value>
+                    <value level="4">1370</value>
+                    <value level="5">1645</value>
+                    <value level="6">1809</value>
+                    <value level="7">1900</value>
+                    <value level="8">1995</value>
+                </power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="45172" name="Sharp Aiming" max-level="9" action="A2">
         <!--
@@ -1725,48 +2856,48 @@
         </conditions>
         <effects>
             <stat-modify stat="ACCURACY">
-                <power initial="3.0">
-                    <value level="2">4.0</value>
-                    <value level="3">5.0</value>
-                    <value level="4">6.0</value>
-                    <value level="5">7.0</value>
-                    <value level="6">7.0</value>
-                    <value level="7">8.0</value>
-                    <value level="8">8.0</value>
-                    <value level="9">10.0</value>
+                <power initial="3">
+                    <value level="2">4</value>
+                    <value level="3">5</value>
+                    <value level="4">6</value>
+                    <value level="5">7</value>
+                    <value level="6">7</value>
+                    <value level="7">8</value>
+                    <value level="8">8</value>
+                    <value level="9">10</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="120.0">
-                    <value level="2">130.0</value>
-                    <value level="3">140.0</value>
-                    <value level="4">150.0</value>
-                    <value level="5">160.0</value>
-                    <value level="6">180.0</value>
-                    <value level="7">200.0</value>
-                    <value level="8">220.0</value>
-                    <value level="9">250.0</value>
+                <power initial="120">
+                    <value level="2">130</value>
+                    <value level="3">140</value>
+                    <value level="4">150</value>
+                    <value level="5">160</value>
+                    <value level="6">180</value>
+                    <value level="7">200</value>
+                    <value level="8">220</value>
+                    <value level="9">250</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="30.0">
-                    <value level="2">30.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">30.0</value>
-                    <value level="5">30.0</value>
-                    <value level="6">40.0</value>
-                    <value level="7">40.0</value>
-                    <value level="8">40.0</value>
-                    <value level="9">50.0</value>
+                <power initial="30">
+                    <value level="2">30</value>
+                    <value level="3">30</value>
+                    <value level="4">30</value>
+                    <value level="5">30</value>
+                    <value level="6">40</value>
+                    <value level="7">40</value>
+                    <value level="8">40</value>
+                    <value level="9">50</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-                <power initial="5.0">
-                    <value level="6">10.0</value>
-                    <value level="9">15.0</value>
+                <power initial="5">
+                    <value level="6">10</value>
+                    <value level="9">15</value>
                 </power>
                 <weapon-type>BOW</weapon-type>
             </stat-modify>
@@ -2250,6 +3381,15 @@
             <item-count initial="3"/>
         </consume>
         <target/>
+		<abnormal type="SAYHA_HP_R">
+			<level initial="1"/>
+			<time initial="1200"/>
+		</abnormal>
+		<effects>
+			<effect name="HealOverTime" ticks="8">
+				<power initial="200.0"/>
+			</effect>
+		</effects>
     </skill>
     <skill id="45177" name="Restore MP" action="A2">
         <!-- Recovers MP continuously for 20 minutes. Consumes 3 Spirit Ores. -->
@@ -2263,6 +3403,15 @@
             <item-count initial="3"/>
         </consume>
         <target/>
+		<abnormal type="SAYHA_MP_R">
+			<level initial="1"/>
+			<time initial="1200"/>
+		</abnormal>
+		<effects>
+			<effect name="ManaHealOverTime" ticks="8">
+				<power initial="100.0"/>
+			</effect>
+		</effects>
     </skill>
     <skill id="45178" name="Shine Mastery" max-level="2">
         <!--
@@ -2359,13 +3508,23 @@
     <skill id="45182" name="Soul Thrust" max-level="8" debuff="true" action="A1" type="MAGIC">
         <!-- M. Def. -10%. -->
         <icon initial="icon.skill_crofin_stun"/>
-        <attributes property="PHYSIC" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5">
             <cast-range initial="900"/>
             <reuse initial="8000"/>
             <effect-point initial="-200"/>
             <hit-time initial="1500"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>
+        <abnormal type="KNOCKDOWN">
+            <level initial="1"/>
+            <time initial="10"/>
+            <chance initial="80"/>
+        </abnormal>       
+        <effects>           
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-10"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45183" name="Soul Chase" action="DA1">
         <!-- Chases the enemy. Can be used when the distance from the enemy is greater than 100. -->
@@ -2409,18 +3568,18 @@
         <!-- Has a chance to make an additional attack. -->
         <icon initial="icon.skill19435"/>
         <attributes property="MAGIC"/>
-        <target/>
+        <target type="ENEMY"/>
     </skill>
     <skill id="45186" name="Fatal Slash" action="A1">
         <!-- Inflicts 1.5 times the damage of P. Atk. on the enemy. -->
-        <icon initial="icon.skill19435"/>
-        <attributes auto-use="ACTIVE">
+        <icon initial="icon.skill19435"/>       
+		<attributes property="PHYSIC" static-reuse="true" auto-use="ACTIVE">
             <cast-range initial="900"/>
             <reuse initial="10000"/>
             <effect-point initial="-1000"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>		
     </skill>
     <skill id="45187" name="Guard Crush" max-level="5" action="A1">
         <!--
@@ -2451,19 +3610,40 @@
                 <value level="5">54</value>
             </mana>
         </consume>
-        <target/>
+		<target type="ENEMY"/>      
+        <conditions>
+            <weapon>
+                <type>SWORD BLUNT DUAL_BLUNT DUAL</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <physical-attack ignore-shield="true" over-hit="true">
+                <power initial="811">
+                    <value level="2">1455</value>
+                    <value level="3">2123</value>
+                    <value level="4">2810</value>
+                    <value level="5">3160</value>                    
+                </power>
+            </physical-attack>            
+        </effects>
     </skill>
     <skill id="45188" name="Evolution Defense">
         <!-- P. Def. +-1400@0:20, M. Def. +-1050@0:15.\n\n<Level Synch Skill>\nStandard Level: 76\nDepending on the standard level, P. Def. +20, M. Def. +15. -->
         <icon initial="icon.skill19131"/>
         <attributes property="MAGIC"/>
         <target/>
+		<conditions>
+			<level max-level="90" min-level="76" scope="PASSIVE"/>
+        </conditions>
     </skill>
     <skill id="45189" name="Evolution Power">
         <!-- P. Def. +-1400@0:20, M. Def. +-1400@0:20.\n\n<Level Synch Skill>\nStandard Level: 80\nDepending on the standard level, P. Def. +20, M. Def. +20. -->
         <icon initial="icon.skill19132"/>
         <attributes property="MAGIC"/>
         <target/>
+		<conditions>
+			<level max-level="90" min-level="80" scope="PASSIVE"/>
+        </conditions>
     </skill>
     <skill id="45190" name="Detection" debuff="true" action="A1">
         <!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a weapon. -->
@@ -2477,7 +3657,21 @@
         <consume>
             <mana initial="70"/>
         </consume>
-        <target/>
+        <target scope="RANGE" object="INVISIBLE" range="300"/>
+        <abnormal type="BLOCK_ESCAPE">
+            <time initial="2"/>
+        </abnormal>
+        <conditions>
+            <weapon>
+                <type>BOW SWORD DAGGER</type>
+            </weapon>
+        </conditions>
+        <effects>
+            <effect name="Detection"/>
+            <block-abnormal>
+                <abnormals>HIDE</abnormals>
+            </block-abnormal>
+        </effects>
     </skill>
     <skill id="45191" name="STR enhancement bonus" max-level="3">
         <!--
@@ -2706,5 +3900,34 @@
                 <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR DUAL</type>
             </weapon>
         </conditions>
+		<effects>
+            <physical-attack over-hit="true">
+				<power initial="45">
+                    <value level="2">50</value>
+					<value level="3">55</value>
+					<value level="4">70</value>
+					<value level="5">75</value>
+					<value level="6">80</value>
+					<value level="7">95</value>
+					<value level="8">100</value>
+					<value level="9">105</value>
+					<value level="10">286</value>
+					<value level="11">298</value>
+					<value level="12">310</value>
+					<value level="13">334</value>
+					<value level="14">346</value>
+					<value level="15">358</value>
+					<value level="16">382</value>
+					<value level="17">394</value>
+					<value level="18">406</value>
+					<value level="19">430</value>
+					<value level="20">442</value>
+					<value level="21">454</value>
+					<value level="22">478</value>
+					<value level="23">490</value>
+					<value level="24">502</value>          
+                </power>
+            </physical-attack>            
+        </effects>
     </skill>
 </list>
