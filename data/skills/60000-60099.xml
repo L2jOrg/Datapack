@@ -15,29 +15,36 @@
             level 4: Being observed by Einhasad for having killed too much. P. Def./M. Def. -30%, Speed -35. Cannot use Escape skills and teleports.
          -->
 		<icon initial="icon.karma"/>
-		<attributes property="PHYSIC">
+		<attributes property="PHYSIC" stay-after-death="true">
 			<effect-point initial="-100"/>
 		</attributes>
 		<target/>
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
 				<power initial="-5">
 					<value level="2">-10</value>
 					<value level="3">-15</value>
+					<value level="4">-30</value>
 				</power>
 			</stat-modify>
 			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
 				<power initial="-5">
 					<value level="2">-10</value>
 					<value level="3">-15</value>
+					<value level="4">-30</value>
 				</power>
 			</stat-modify>
 			<speed>
 				<power initial="-5">
 					<value level="2">-10</value>
-					<value level="2">-30</value>
+					<value level="3">-30</value>
+					<value level="4">-35</value>
 				</power>
 			</speed>
+            <effect start-level="4" name="BlockEscape"/>
 		</effects>
 	</skill>
 	<skill id="60003" name="Server Level Ranking 1st Class" action="A2">
@@ -253,6 +260,20 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
+		<effects>
+			<base-stat type="CON">
+				<power initial="1"/>
+			</base-stat>			
+			<base-stat type="MEN">
+				<power initial="1"/>
+			</base-stat>			
+			<stat-modify stat="WEIGHT_LIMIT">
+				<power initial="5000"/>
+			</stat-modify>			
+		</effects>
 	</skill>
 	<skill id="60013" name="Server Ranking Benefit 2">
 		<!-- DEX+ 1\nWIT +1\nWeight Limit +5000. -->
@@ -260,6 +281,20 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
+		<effects>
+			<base-stat type="CON">
+				<power initial="1"/>
+			</base-stat>			
+			<base-stat type="MEN">
+				<power initial="1"/>
+			</base-stat>			
+			<stat-modify stat="WEIGHT_LIMIT">
+				<power initial="5000"/>
+			</stat-modify>			
+		</effects>
 	</skill>
 	<skill id="60014" name="Server Ranking Benefit 3">
 		<!-- STR + 1\nINT +1\nWeight Limit +90000\nP. Evasion +20\nHP Potion Effect +50 -->
@@ -267,6 +302,26 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
+		<abnormal>
+			<time initial="-1"/>
+		</abnormal>
+		<effects>
+			<base-stat type="STR">
+				<power initial="1"/>
+			</base-stat>
+			<base-stat type="INT">
+				<power initial="1"/>
+			</base-stat>						
+			<stat-modify stat="WEIGHT_LIMIT">
+				<power initial="90000"/>
+			</stat-modify>
+			<stat-modify stat="EVASION_RATE">
+				<power initial="20"/>
+			</stat-modify>
+			<stat-modify stat="ADDITIONAL_POTION_HP">
+				<power initial="20"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="60015" name="Race Ranking Benefit">
 		<!-- Benefits for Race Ranking 1st.\n\nHumans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion.\n\nBenefits for Race Ranking 1st-3rd.\n\nRanker Transformation Skill -->

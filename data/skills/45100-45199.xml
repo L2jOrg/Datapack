@@ -1795,7 +1795,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="500">
                     <value level="2">850</value>
                     <value level="3">1360</value>
@@ -1853,7 +1853,7 @@
             </weapon>
         </conditions>
 		<effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" physical-defense-mod="1.0" over-hit="true">
                 <power initial="650">
                     <value level="2">1105</value>
                     <value level="3">1768</value>
@@ -1915,7 +1915,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="1000">
                     <value level="2">2520</value>
                     <value level="3">3024</value>
@@ -1967,7 +1967,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" physical-defense-mod="1.0" over-hit="true">
                 <power initial="2250">
                     <value level="2">3150</value>
                     <value level="3">3780</value>
@@ -2238,7 +2238,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" physical-defense-mod="1.0" over-hit="true">
                 <power initial="276">
                     <value level="2">470</value>
                     <value level="3">750</value>
@@ -2670,7 +2670,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" physical-defense-mod="1.0" over-hit="true">
                 <power initial="150">
                     <value level="2">375</value>
                     <value level="3">750</value>
@@ -2723,7 +2723,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack over-hit="true">
+            <physical-attack critical-chance="15.0" over-hit="true">
                 <power initial="340">
                     <value level="2">544</value>
                     <value level="3">816</value>
@@ -2783,7 +2783,7 @@
             </weapon>
         </conditions>
         <effects>
-			<physical-attack critical-chance="15" ignore-shield="true" over-hit="true">
+			<physical-attack critical-chance="15.0" physical-defense-mod="1.0" over-hit="true">
                 <power initial="408">
                     <value level="2">652</value>
                     <value level="3">979</value>
@@ -3635,6 +3635,14 @@
 		<conditions>
 			<level max-level="90" min-level="76" scope="PASSIVE"/>
         </conditions>
+		<effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="1400"/>              
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="1050"/>              
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45189" name="Evolution Power">
         <!-- P. Def. +-1400@0:20, M. Def. +-1400@0:20.\n\n<Level Synch Skill>\nStandard Level: 80\nDepending on the standard level, P. Def. +20, M. Def. +20. -->
@@ -3644,6 +3652,14 @@
 		<conditions>
 			<level max-level="90" min-level="80" scope="PASSIVE"/>
         </conditions>
+		<effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="1400"/>              
+            </stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="1400"/>              
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45190" name="Detection" debuff="true" action="A1">
         <!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a weapon. -->
