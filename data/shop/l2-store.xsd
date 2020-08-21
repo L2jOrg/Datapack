@@ -1,7 +1,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://la2j.org"
-           xmlns="http://la2j.org"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
            elementFormDefault="qualified">
+
+    <xs:include schemaLocation="shop-common.xsd"/>
 
     <xs:element name="list">
         <xs:complexType>
@@ -47,12 +49,4 @@
         <xs:attribute type="xs:int" name="silver-coin" default="0"/>
         <xs:attribute type="xs:boolean" name="is-vip-gift" default="false"/>
     </xs:complexType>
-
-    <xs:simpleType name="RestrictionPeriod">
-        <xs:restriction base="xs:token">
-            <xs:enumeration value="DAY"/>
-            <xs:enumeration value="MONTH"/>
-            <xs:enumeration value="EVER"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>
