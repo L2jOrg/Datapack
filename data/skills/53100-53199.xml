@@ -5,13 +5,44 @@
         <icon initial="icon.skill0912"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+                <power initial="850"/>
+            </vital-stat-modify>
+			<trigger-skill-by-damage skill="53101">
+                <power initial="1"/>                 
+                <chance initial="60"/>                
+            </trigger-skill-by-damage>
+        </effects>
     </skill>
     <skill id="53101" name="Heroic Miracle" action="A1">
         <!-- Atk. Spd. +100, Casting Spd. +100, Speed +20, and continuously recovers MP. -->
         <icon initial="icon.skill0912"/>
-        <attributes property="PHYSIC">
+		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" triggered="true">
+			<magic-level initial="-1"/>
             <reuse initial="100000"/>
         </attributes>
         <target/>
-    </skill>
+		<abnormal type="HERO_BUFF">
+			<level initial="5"/>
+			<time initial="10"/>
+		</abnormal>
+		<effects>			
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="100"/>				
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="100"/>	
+			</stat-modify>
+			<speed>
+				<power initial="20"/>	
+			</speed>											
+			<stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+				<power initial="100"/>
+			</stat-modify>
+			<effect name="ManaHealOverTime" ticks="2">
+				<power initial="150.0"/>
+			</effect>
+		</effects>
+	</skill>
 </list>
