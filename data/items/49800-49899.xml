@@ -4,6 +4,9 @@
 	<!-- Double-click to receive 200 Oriana's Coins. -->
 		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49783" min-count="200" max-count="200" chance="100"/>  <!-- Sibi Coin's -->
+		</extract>
 	</item>
 
 	<armor id="49801" name="Dandy Pendant" type="NONE" body-part="PENDANT">
@@ -11,13 +14,12 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" />
 		<crystal />
-		<stats>
-			<stat type="BONUS_EXP" value="30.0"/>
-			<stat type="BONUS_SP" value="30.0"/>
-			<stat type="CRITICAL_DAMAGE" value="5.0"/>
-			<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
+		<stats>			
 			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
 		</stats>
+		<skills>
+			<skill id="7096" value="-1"/>
+		</skills>
 	</armor>
 
 	<armor id="49802" name="Dandy Shining Pendant" type="NONE" body-part="PENDANT">
@@ -25,13 +27,13 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="120" enchant-enabled="false" />
 		<crystal />
-		<stats>
-			<stat type="BONUS_EXP" value="30.0"/>
-			<stat type="BONUS_SP" value="30.0"/>
-			<stat type="CRITICAL_DAMAGE" value="5.0"/>
-			<stat type="MAGIC_CRITICAL_DAMAGE" value="5.0"/>
+		<stats>			
 			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
 		</stats>
+		<skills>
+			<skill id="7096" value="-1"/>
+			<skill id="35001" value="-1"/>
+		</skills>
 	</armor>
 
 	<armor id="49803" name="Dandy’s Uniform" type="HEAVY" body-part="ALL_DRESS">
@@ -318,8 +320,8 @@
 	<!-- Double-click to get Fire Dragon Pendant +10.  -->
 		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<extract >
-			<item id="49467" chance="100000000" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
+		<extract>
+			<item id="49467" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Fire Dragon Pendant -->
 		</extract>
 	</item>
 

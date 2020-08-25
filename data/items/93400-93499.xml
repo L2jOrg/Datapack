@@ -511,7 +511,10 @@
 	<item id="93457" name="+8 Dragon’s Belt Box" type="NONE">
 	<!-- Double-click to obtain a +8 Dragon’s Belt. -->
 		<restriction stackable="true" dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91788" chance="100" min-enchant="8" max-enchant="8"/>  <!-- Dragon's Belt +8 -->
+		</extract>
 	</item>
 
 	<item id="93458" name="Magic Lamp Acceleration Potion - Event" type="NONE">
@@ -632,7 +635,7 @@
 	<!-- Double-click to obtain 3000 L2 Coins. -->
 		<restriction stackable="true" tradable="true" dropable="false" sellable="true" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="3000" max-count="3000" chance="100000"/>  <!-- L2 Coin -->
 		</extract>
 	</item>
@@ -644,10 +647,9 @@
 			<player level-min="60"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="500" max-count="500" chance="100"/>  <!-- L2 Coin -->
-			<item id="91745" chance="100"/>  <!-- Aden Talisman -->
-			<item id="91756" min-count="2" max-count="2" chance="100"/>  <!-- Aden Talisman Enchant Scroll -->
+			<item id="91745" chance="100" min-enchant="2" max-enchant="2"/>  <!-- Aden Talisman -->
 			<item id="93479" chance="100"/>  <!-- Lv. 65 Reward Box -->
 		</extract>
 	</item>
@@ -659,10 +661,9 @@
 			<player level-min="65"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="500" max-count="500" chance="100"/>  <!-- L2 Coin -->
-			<item id="93301" chance="100"/>  <!-- Cloak of Protection -->
-			<item id="93302" min-count="2" max-count="2" chance="100"/>  <!-- Scroll: Enchant Cloak of Protection -->
+			<item id="93301" chance="100" min-enchant="2" max-enchant="2"/>  <!-- Cloak of Protection -->
 			<item id="93480" chance="100"/>  <!-- Lv. 70 Reward Box -->
 		</extract>
 	</item>
@@ -674,10 +675,9 @@
 			<player level-min="70"/>
 		</condition>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="1000" max-count="1000" chance="100"/>  <!-- L2 Coin -->
-			<item id="91862" chance="100"/>  <!-- Dragon's Belt -->
-			<item id="91863" min-count="2" max-count="2" chance="100"/>  <!-- Enchant Scroll: Dragon's Belt -->
+			<item id="91862" chance="100" min-enchant="2" max-enchant="2"/>  <!-- Dragon's Belt -->
 		</extract>
 	</item>
 
@@ -685,7 +685,7 @@
 	<!-- Double-click to obtain Sayha's Blessing x20. Can only be used once a day. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="49845" min-count="20" max-count="20" chance="100"/>  <!-- Enhanced Sayha's Blessing - Exchangeable -->
 		</extract>
 	</item>
@@ -694,7 +694,7 @@
 	<!-- Double-click to obtain 5000 L2 Coins. -->
 		<restriction stackable="true" tradable="true" dropable="false" sellable="true" private-sellable="true" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="5000" max-count="5000" chance="100000"/>  <!-- L2 Coin -->
 		</extract>
 	</item>
@@ -703,7 +703,7 @@
 	<!-- Double-click to obtain 3000 L2 Coins, Lv. 60 Reward Box. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="3000" max-count="3000" chance="100000"/>  <!-- L2 Coin -->
 			<item id="93478" chance="100"/>  <!-- Lv. 60 Reward Box -->
 		</extract>
@@ -713,7 +713,7 @@
 	<!-- Double-click to obtain 5000 L2 Coins and 1 Everyday Grace Cube. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		<extract >
+		<extract>
 			<item id="91663" min-count="5000" max-count="5000" chance="100000"/>  <!-- L2 Coin -->
 			<item id="93481" chance="100"/>  <!-- Everyday Grace Cube -->
 		</extract>
