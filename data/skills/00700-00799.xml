@@ -1872,7 +1872,7 @@
         <abnormal type="TOUCH_OF_DEATH">
             <level initial="1"/>
             <time initial="60"/>
-            <chance initial="40"/>
+            <chance initial="80"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -2133,7 +2133,7 @@
     <skill id="777" name="Demolition Impact" debuff="true" action="A2">
         <!-- Unleashes a shock of destruction to attack a frontal enemy with bonus 5980 Power. P. Def. -30%% and M. Def. -30%%. Requires a sword or blunt weapon. Critical. Over-hit. -->
         <icon initial="icon.skill0777"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="SHOCK" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0"  trait="DEATH" auto-use="ACTIVE">
             <magic-level initial="80"/>
             <cast-range initial="150"/>
             <reuse initial="75000"/>
@@ -2147,10 +2147,10 @@
         <target type="ENEMY_ONLY" range="500">
             <fan-range start-angle="0" radius="500" angle="60"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="TOUCH_OF_DEATH">
             <level initial="1"/>
             <time initial="10"/>
-            <chance initial="40"/>
+            <chance initial="80"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -2158,7 +2158,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="50.0" over-hit="true">
                 <power initial="5980.0"/>
             </physical-attack>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
