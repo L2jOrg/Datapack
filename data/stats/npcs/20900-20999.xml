@@ -3996,18 +3996,19 @@
         <parameters>
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <minions name="Privates">
-                <npc id="21073" count="1" respawnTime="0" weightPoint="1"/>
-                <npc id="21078" count="1" respawnTime="0" weightPoint="1"/>
-                <npc id="21079" count="1" respawnTime="0" weightPoint="1"/>
-            </minions>
+            <param name="MoveAroundSocial2" value="0"/>			
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4087" level="6"/>
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="20978" count="1" respawnTime="0" weightPoint="1"/>	<!--Elmoradan's Archer Escort-->
+                <npc id="20979" count="1" respawnTime="0" weightPoint="1"/>	<!--Elmoradan's Maid-->
+                <npc id="21073" count="1" respawnTime="0" weightPoint="1"/>	<!--Guardian Warrior of Elmoreden-->
+            </minions>			
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>
@@ -4070,6 +4071,7 @@
             <param name="MoveAroundSocial" value="157"/>
             <param name="MoveAroundSocial1" value="157"/>
             <param name="MoveAroundSocial2" value="157"/>
+			<param name="Party_Type" value="1"/>
             <param name="SetHateGroup" value="attacker_group"/>
             <param name="SetHateGroupRatio" value="35"/>
             <param name="SoulShot" value="100"/>
@@ -4127,6 +4129,7 @@
             <param name="MoveAroundSocial" value="50"/>
             <param name="MoveAroundSocial1" value="50"/>
             <param name="MoveAroundSocial2" value="50"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -4204,6 +4207,11 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="6"/> <!-- Stun -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="20981" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20982" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -4237,7 +4245,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="400">
+        <ai aggroRange="500" clanHelpRange="400" isAggressive="true">
             <clanList>
                 <clan>HALLATE</clan>
             </clanList>
@@ -4274,6 +4282,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4078" level="6"/> <!-- NPC Flamestrike -->
             <skill name="MagicHeal" id="4065" level="6"/> <!-- NPC Heal -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -4344,6 +4353,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4118" level="6"/> <!-- Paralysis -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -4411,6 +4421,12 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="20984" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="20985" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="21074" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -4480,6 +4496,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -4548,6 +4565,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <skill name="PhysicalSpecial" id="4120" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>

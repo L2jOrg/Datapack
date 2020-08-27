@@ -1956,9 +1956,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="144"/> <!-- Sword of Occult -->
-        <acquire exp="8647" sp="259"/>
+        <acquire exp="10089" sp="303"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="431.20670666667" hpRegen="5.5" mp="578.79" mpRegen="2.1"/>
+            <vitals hp="1108.45623972656" hpRegen="5.5" mp="531.79" mpRegen="2.1"/>
             <attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="149.8955727" magical="120.65578"/>
             <speed>
@@ -2037,9 +2037,9 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="18899" sp="566"/>
+        <acquire exp="22050" sp="662"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="467.41427666667" hpRegen="5.5" mp="637.2" mpRegen="2.1"/>
+            <vitals hp="1201.08570061422" hpRegen="5.5" mp="584.0" mpRegen="2.1"/>
             <attack physical="244.454232" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="157.6686545" magical="126.91259"/>
             <speed>
@@ -2092,9 +2092,9 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="12079" sp="362"/>
+        <acquire exp="14093" sp="423"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="523.81926666667" hpRegen="5.5" mp="724.815" mpRegen="2.1"/>
+            <vitals hp="1346.55725878612" hpRegen="5.5" mp="665.0" mpRegen="2.1"/>
             <attack physical="287.865039" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="169.6688091" magical="136.5719"/>
             <speed>
@@ -2184,9 +2184,9 @@
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
-        <acquire exp="23905" sp="717"/>
+        <acquire exp="27890" sp="837"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="563.14676333333" hpRegen="5.5" mp="784.995" mpRegen="2.1"/>
+            <vitals hp="1447.45325347694" hpRegen="5.5" mp="720.0" mpRegen="2.1"/>
             <attack physical="319.490468" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="177.8754727" magical="143.17771"/>
             <speed>
@@ -2323,9 +2323,9 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="127"/> <!-- Crimson Sword -->
-        <acquire exp="13942" sp="418"/>
+        <acquire exp="16266" sp="488"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="563.14676333333" hpRegen="5.5" mp="784.995" mpRegen="2.1"/>
+            <vitals hp="1447.45325347694" hpRegen="5.5" mp="720.0" mpRegen="2.1"/>
             <attack physical="351.4395148" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="161.7049752" magical="143.17771"/>
             <speed>
@@ -2396,6 +2396,11 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="SelfRangeDDMagic" id="4072" level="6"/> <!-- Stun -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="21060" count="1" respawnTime="0" weightPoint="1"/>	<!--Beast Seer-->
+                <npc id="21059" count="1" respawnTime="0" weightPoint="1"/>	<!--Beast Guardian-->
+            </minions>
         </parameters>
         <race>BEAST</race>
         <sex>MALE</sex>
@@ -2467,6 +2472,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4039" level="5"/> <!-- NPC MP Drain -->
             <skill name="MagicHeal" id="4097" level="5"/> <!-- NPC Chant of Life -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>BEAST</race>
         <sex>MALE</sex>
@@ -2535,6 +2541,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="MagicHeal" id="4065" level="5"/> <!-- NPC Heal -->
             <skill name="DeBuff" id="4098" level="5"/> <!-- Silence -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
@@ -2605,6 +2612,7 @@
             <skill name="SelfRangeDDMagic" id="4072" level="6"/> <!-- Stun -->
             <skill name="SelfBuff" id="4090" level="1"/> <!-- NPC Wolf Spirit Totem -->
             <skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
+			<!-- <param name="Party_Type" value="1"/> -->
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -2639,7 +2647,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>4</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="400">
+        <ai aggroRange="500">
             <clanList>
                 <clan>HALLATE</clan>
             </clanList>
@@ -2824,6 +2832,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <skill name="PhysicalSpecial" id="4040" level="7"/> <!-- NPC Bow Attack -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -2878,6 +2887,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -2951,6 +2961,7 @@
             <skill name="DDMagic1" id="4100" level="7"/> <!-- NPC Prominence -->
             <skill name="DDMagic2" id="4039" level="7"/> <!-- NPC MP Drain -->
             <skill name="DeBuff" id="4118" level="7"/> <!-- Paralysis -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3033,6 +3044,10 @@
             <skill name="SelfRangeDDMagic" id="4033" level="7"/> <!-- NPC Burn -->
             <skill name="SelfBuff" id="4091" level="1"/> <!-- NPC Ogre Spirit Totem -->
             <skill name="PhysicalSpecial" id="4032" level="7"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="20830" count="2" respawnTime="0" weightPoint="1"/>	<!--Guardian Angel-->
+            </minions>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3163,6 +3178,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3222,6 +3238,10 @@
             <skill name="SelfRangeDDMagic" id="4033" level="8"/> <!-- NPC Burn -->
             <skill name="SelfBuff" id="4092" level="1"/> <!-- NPC Puma Spirit Totem -->
             <skill name="PhysicalSpecial" id="4032" level="8"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="20831" count="2" respawnTime="0" weightPoint="1"/>	<!--Seal Angel-->
+            </minions>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3357,6 +3377,13 @@
             <skill name="W_LongRangeDDMagic" id="4158" level="8"/> <!-- NPC Prominence - Magic -->
             <skill name="W_ShortRangeDDMagic" id="4160" level="8"/> <!-- NPC Aura Burn - Magic -->
             <skill name="DeBuff" id="4102" level="2"/> <!-- Surrender To Fire -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="21069" count="1" respawnTime="0" weightPoint="1"/>	<!--Platinum Guardian Prefect-->
+                <npc id="21066" count="1" respawnTime="0" weightPoint="1"/>	<!--Platinum Guardian Shaman-->
+                <npc id="21065" count="1" respawnTime="0" weightPoint="1"/>	<!--Platinum Guardian Warrior-->
+                <npc id="21064" count="2" respawnTime="0" weightPoint="1"/>	<!--Platinum Guardian Archer-->
+            </minions>			
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3423,6 +3450,7 @@
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
             <param name="MoveAroundSocial2" value="215"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -3501,6 +3529,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4087" level="7"/> <!-- NPC Blaze -->
             <skill name="MagicHeal" id="4065" level="7"/> <!-- NPC Heal -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DIVINE</race>
         <sex>MALE</sex>
@@ -3570,6 +3599,11 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4073" level="6"/> <!-- Stun -->
+			<param name="Party_Type" value="2"/>
+			<minions name="Privates">
+                <npc id="21076" count="2" respawnTime="0" weightPoint="1"/> <!--Bathin's Knight-->
+                <npc id="21077" count="2" respawnTime="0" weightPoint="1"/> <!--Bathin's Wizard-->
+            </minions>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
@@ -3578,7 +3612,7 @@
         <stats str="40" int="21" dex="30" wit="20" con="28" men="10">
             <vitals hp="3221.5" hpRegen="6.5" mp="1130.145" mpRegen="2.4"/>
             <attack physical="595.592514" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="238.3584182" magical="191.86238"/>
+            <defence physical="262.19426" magical="191.86238"/>
             <speed>
                 <walk ground="27"/>
                 <run ground="174"/>
@@ -3603,7 +3637,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="200">
+        <ai aggroRange="450" clanHelpRange="200" isAggressive="true">
             <clanList>
                 <clan>HALLATE</clan>
             </clanList>
@@ -3631,6 +3665,7 @@
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
             <param name="MoveAroundSocial2" value="215"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -3698,6 +3733,7 @@
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -3776,6 +3812,11 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="SelfRangeDDMagic" id="4072" level="7"/> <!-- Stun -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="21079" count="4" respawnTime="0" weightPoint="1"/>
+                <npc id="21080" count="1" respawnTime="0" weightPoint="1"/>
+            </minions>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -3809,7 +3850,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="200">
+        <ai aggroRange="500" clanHelpRange="200" isAggressive="true">
             <clanList>
                 <clan>HALLATE</clan>
             </clanList>
@@ -3845,6 +3886,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4077" level="6"/> <!-- NPC Aura Burn -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>BEAST</race>
         <sex>MALE</sex>
@@ -3914,6 +3956,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4002" level="6"/> <!-- NPC HP Drain -->
             <skill name="MagicHeal" id="4065" level="6"/> <!-- NPC Heal -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -3982,9 +4025,10 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4118" level="8"/> <!-- Paralysis -->
+			<param name="Party_Type" value="2"/>
             <minions name="Privates">
                 <npc id="21082" count="1" respawnTime="0" weightPoint="1"/>
-                <npc id="21083" count="1" respawnTime="0" weightPoint="1"/>
+                <npc id="21083" count="2" respawnTime="0" weightPoint="1"/>
             </minions>
         </parameters>
         <race>DIVINE</race>
@@ -4019,7 +4063,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="200">
+        <ai aggroRange="450" clanHelpRange="400" isAggressive="true">
             <clanList>
                 <clan>TOWER_GUARD</clan>
             </clanList>
@@ -4048,6 +4092,7 @@
             <param name="MoveAroundSocial" value="90"/>
             <param name="MoveAroundSocial1" value="74"/>
             <param name="MoveAroundSocial2" value="90"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -4118,6 +4163,7 @@
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
+			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -4650,6 +4696,11 @@
             <skill name="W_LongRangeDDMagic" id="4152" level="8"/> <!-- NPC HP Drain - Magic -->
             <skill name="W_ShortRangeDDMagic" id="4160" level="8"/> <!-- NPC Aura Burn - Magic -->
             <skill name="DeBuff" id="4117" level="8"/> <!-- Paralysis -->
+			<param name="Party_Type" value="2"/>
+            <minions name="Privates">
+                <npc id="21091" count="1" respawnTime="0" weightPoint="1"/>	<!--Bloody Keeper-->
+                <npc id="21092" count="1" respawnTime="0" weightPoint="1"/>	<!--Bloody Mystic-->
+            </minions>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
@@ -4728,6 +4779,7 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4032" level="7"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -4802,6 +4854,7 @@
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="MagicHeal" id="4065" level="7"/> <!-- NPC Heal -->
             <skill name="DeBuff" id="4098" level="7"/> <!-- Silence -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>FEMALE</sex>

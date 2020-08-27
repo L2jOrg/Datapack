@@ -850,6 +850,7 @@
 		<icon initial="icon.skill1469"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1026,6 +1027,7 @@
 		<icon initial="icon.skill1469"/>
 		<attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1096,6 +1098,7 @@
 		<icon initial="icon.skill4282_new"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1261,6 +1264,7 @@
 		<icon initial="icon.skill4282_new"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1332,6 +1336,7 @@
 		<icon initial="icon.skill32100"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1498,6 +1503,7 @@
 		<icon initial="icon.skill32100"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1569,6 +1575,7 @@
 		<icon initial="icon.skill6435"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1735,6 +1742,7 @@
 		<icon initial="icon.skill6435"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1805,6 +1813,7 @@
 		<icon initial="icon.skill32633"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -1970,6 +1979,7 @@
 		<icon initial="icon.skill32633"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="900"/>
+			<reuse initial="10000"/>
             <effect-point initial="-300"/>
             <effect-range initial="1200"/>
         </attributes>
@@ -2009,8 +2019,7 @@
             level 11: P. Def./M. Def. +300, Max HP +2500, Speed +8.
          -->
 		<icon initial="icon.tallisman_rapid"/>
-		<attributes property="MAGIC">
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target/>
 		<effects>
 			<stat-modify stat="PHYSICAL_DEFENCE">
@@ -2055,7 +2064,7 @@
 					<value level="11">2500</value>
 				</power>
 			</vital-stat-modify>
-			<stat-modify stat="SPEED">
+			<speed>
 				<power>
 					<value level="2">1</value>
 					<value level="7">2</value>
@@ -2064,8 +2073,8 @@
 					<value level="10">6</value>
 					<value level="11">8</value>
 				</power>
-			</stat-modify>
-			<trigger-skill-by-attack skill="50294" target="ENEMY">
+			</speed>
+			<trigger-skill-by-attack skill="50294">
 				<power initial="1">
 					<value level="2">2</value>
 					<value level="3">3</value>
@@ -2078,10 +2087,10 @@
 					<value level="10">10</value>
 					<value level="11">11</value>
 				</power>
-				<chance initial="80.0"/>
+				<chance initial="33"/>
 				<min-damage initial="10"/>
 			</trigger-skill-by-attack>
-			<trigger-skill-by-magic skill="50294" target="ENEMY">
+			<trigger-skill-by-magic skill="50294">
 				<power initial="1">
 					<value level="2">2</value>
 					<value level="3">3</value>
@@ -2094,12 +2103,12 @@
 					<value level="10">10</value>
 					<value level="11">11</value>
 				</power>
-				<chance initial="80.0"/>
+				<chance initial="10"/>
 				<types>MAGIC PHYSIC</types>
 			</trigger-skill-by-magic>
 		</effects>
 	</skill>
-	<skill id="50294" name="Energy of Speed" max-level="11">
+	<skill id="50294" name="Energy of Speed" max-level="11" action="A2">
 		<!--
             level 1: Atk. Spd. +5 with the power of speed.
             level 2: Atk. Spd. +10 with the power of speed.
@@ -2112,12 +2121,15 @@
             level 9: P. Atk. Spd. +100, P. Critical Damage +500, M. Critical Damage +200 with the power of speed.
             level 10: P. Atk. Spd. +150, P. Critical Damage +800, M. Critical Damage +500 with the power of speed.
             level 11: P. Atk. Spd. +300, P. Critical Damage +1200, M. Critical Damage +1000 with the power of speed.
-         -->
+         -->		 
 		<icon initial="icon.skill5662"/>
-		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true"/>
-		<target/>
-		<abnormal type="ENERGY_SPEED_TRIGGER">
-			<level initial="1">
+		<attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+        </attributes>
+        <target/>
+        <abnormal type="ENERGY_SPEED_TRIGGER">
+            <level initial="1">
 				<value level="2">2</value>
 				<value level="3">3</value>
 				<value level="4">4</value>
@@ -2129,8 +2141,8 @@
 				<value level="10">10</value>
 				<value level="11">11</value>
 			</level>
-			<time initial="8"/>
-		</abnormal>
+            <time initial="12"/>
+        </abnormal>		
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
 				<power initial="5">
