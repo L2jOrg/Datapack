@@ -1,31 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/events.xsd">
-    <event name="World Olympiad" class="org.l2j.gameserver.engine.olympiad.OlympiadEngine">
-        <variables>
-            <variable name="start-date" value="2020-06-22"/>
-            <variable name="force-start-date" value="false"/>
-        </variables>
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://l2j.org"
+      xsi:schemaLocation="http://l2j.org events.xsd" >
+
+    <event name="World Olympiad" class="org.l2j.gameserver.engine.olympiad.Olympiad">
 
         <scheduler>
-
-            <schedule name="start-match" dayOfWeek="1-6" hour="22" minute="00">
-                <event name="onStartMatch"/>
-            </schedule>
-
-            <schedule name="stop-match" dayOfWeek="1-6" hour="23" minute="00">
-                <event name="onStopMatch"/>
-            </schedule>
-
-            <schedule name="new-season" dayOfWeek="1" hour="12" minute="00">
-                <event name="onNewSeason"/>
-            </schedule>
+            <schedule name="start-match" event="onStartMatch" dayOfWeek="1-6" hour="22" minute="00"/>
+            <schedule name="stop-match" event="onStopMatch" dayOfWeek="1-6" hour="23" minute="00"/>
+            <schedule name="new-season" event="onNewSeason" dayOfWeek="1" hour="12" minute="00"/>
 
             <conditionalSchedule>
                 <run name="start-match" if="BETWEEN">
-                    <name>start-match</name>
-                    <name>stop-match</name>
+                    <schedule>start-match</schedule>
+                    <schedule>stop-match</schedule>
                 </run>
             </conditionalSchedule>
         </scheduler>
+
+        <config>
+            <olympiad-config min-participant="20"/>
+        </config>
     </event>
 </list>
