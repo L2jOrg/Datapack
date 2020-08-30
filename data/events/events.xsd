@@ -1,0 +1,86 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns:l2jorg="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="event-configuration.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="event" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="scheduler" type="l2jorg:Scheduler">
+
+								<xs:key name="ScheduleId">
+									<xs:selector xpath="l2jorg:schedule"/>
+									<xs:field xpath="@name"/>
+								</xs:key>
+
+								<xs:keyref name="ScheduleIDRef" refer="l2jorg:ScheduleId">
+									<xs:selector xpath="l2jorg:conditionalSchedule/l2jorg:run"/>
+									<xs:field xpath="@name"/>
+								</xs:keyref>
+
+								<xs:keyref name="ScheduleIDRefI" refer="l2jorg:ScheduleId">
+									<xs:selector xpath="l2jorg:conditionalSchedule/l2jorg:run/l2jorg:schedule"/>
+									<xs:field xpath="."/>
+								</xs:keyref>
+
+							</xs:element>
+							<xs:element name="config" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="l2jorg:configuration"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:string" name="name" use="required" />
+						<xs:attribute type="xs:string" name="class" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Scheduler">
+		<xs:sequence>
+			<xs:element name="schedule" type="l2jorg:Schedule" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="conditionalSchedule" type="l2jorg:ConditionalSchedule" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Schedule">
+		<xs:attribute type="xs:string" name="event" use="required"/>
+		<xs:attribute type="xs:string" name="name" use="required"/>
+		<xs:attribute type="xs:string" name="repeat" default="false"/>
+		<xs:attribute type="xs:string" name="minute"/>
+		<xs:attribute type="xs:string" name="hour"/>
+		<xs:attribute type="xs:string" name="dayOfMonth"/>
+		<xs:attribute type="xs:string" name="month"/>
+		<xs:attribute type="xs:string" name="dayOfWeek"/>
+	</xs:complexType>
+
+	<xs:complexType name="ConditionalSchedule">
+		<xs:sequence>
+			<xs:element name="run" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element type="xs:string" name="schedule" maxOccurs="unbounded" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute type="xs:string" name="name" />
+					<xs:attribute name="if">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="BETWEEN" />
+								<xs:enumeration value="HAVENT_RUN" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

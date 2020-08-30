@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org events.xsd" >
+
+    <event name="Daily Reset" class="org.l2j.gameserver.instancemanager.DailyTaskManager">
+        <scheduler>
+            <!-- Schedule of the reset every day at 06:30 -->
+            <schedule name="reset" event="onReset" hour="06" minute="30"/>
+
+            <!-- Schedule the save task 30th or 0 minute -->
+            <schedule name="save" event="onSave" minute="30,0"/>
+
+            <!-- Schedule the clan leader apply task every WEDNESDAY at 6:30 -->
+            <schedule name="clanTasks" event="onClansTask" hour="06" minute="30" dayOfWeek="3"/>
+
+            <!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
+            <conditionalSchedule>
+                <run name="reset" if="HAVENT_RUN"/>
+                <run name="clanTasks" if="HAVENT_RUN"/>
+            </conditionalSchedule>
+        </scheduler>
+
+        <config>
+            <daily-config>
+                <reset-skill id="2510"/> <!-- Wondrous Cubic -->
+                <reset-skill id="22180"/>  <!-- Wondrous Cubic - 1 time use -->
+            </daily-config>
+        </config>
+    </event>
+</list>

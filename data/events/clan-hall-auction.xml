@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org events.xsd" >
+    <event name="Clan Hall Auction" class="org.l2j.gameserver.instancemanager.ClanHallAuctionManager">
+        <scheduler>
+            <!-- Schedule of the event start, Wednesday at 19:00 -->
+            <schedule name="startAuction" event="onEventStart" minute="00" hour="18" dayOfMonth="*" month="*" dayOfWeek="3"/>
+
+            <!-- Schedule of the event end, Wednesday at 11:00 -->
+            <schedule name="endAuction" event="onEventEnd" minute="00" hour="11" dayOfMonth="*" month="*" dayOfWeek="3"/>
+
+            <!-- Attach condition to re-launch start if server boots up in between start - end -->
+            <conditionalSchedule>
+                <run name="startAuction" if="BETWEEN">
+                    <schedule>startAuction</schedule>
+                    <schedule>endAuction</schedule>
+                </run>
+            </conditionalSchedule>
+        </scheduler>
+    </event>
+</list>

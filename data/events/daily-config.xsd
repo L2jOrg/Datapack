@@ -1,0 +1,21 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="event-configuration.xsd"/>
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="daily-config" type="DailyConfiguration" substitutionGroup="configuration"/>
+
+    <xs:complexType name="DailyConfiguration">
+        <xs:complexContent>
+            <xs:extension base="Configuration">
+                <xs:sequence>
+                    <xs:element name="reset-skill" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>
