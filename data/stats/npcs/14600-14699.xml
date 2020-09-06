@@ -785,24 +785,19 @@
             <height normal="33"/>
         </collision>
     </npc>
-    <npc id="14619" level="58" type="Pet" name="Nightshade">
+    <npc id="14619" level="77" type="Pet" name="Nightshade">
         <parameters>
-            <skill name="DeBuff1" id="4705" level="1"/>
-            <skill name="DeBuff2" id="4706" level="1"/>
-            <skill name="Heal" id="4707" level="1"/>
-            <skill name="buff3" id="5652" level="1"/>
-            <skill name="buff4" id="5653" level="1"/>
-            <skill name="buff5" id="5654" level="1"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
+			<skill name="Heal" id="4707" level="1"/>           
+            <skill name="DeBuff1" id="4706" level="1"/>
+            <skill name="DeBuff2" id="50094" level="1"/>
+			<skill name="DeBuff3" id="4705" level="1"/>			
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="1828" hpRegen="5.5" mp="977" mpRegen="2.4"/>
-            <attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="237.99" magical="174.15"/>
+            <vitals hp="2762.08447" hpRegen="6.5" mp="977.4" mpRegen="2.4"/>
+            <attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="237.99429" magical="174.1539"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="180"/>
@@ -823,11 +818,9 @@
             <skill id="4415" level="3"/> <!-- One-handed Sword -->
             <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4707" level="1"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="1"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="1"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="1"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="1"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="1"/> <!-- Curse of Shade -->
+            <skill id="4706" level="1"/> <!-- Nightshade - Mass Curse of Shade -->
+			<skill id="50094" level="1"/> <!-- Nightshade - Despair of Shade -->			
+            <skill id="4705" level="1"/> <!-- Nightshade - Curse of Shade -->
         </skillList>
         <shots soul="1" spirit="1"/>
         <exCrtEffect>false</exCrtEffect>
@@ -838,130 +831,19 @@
             <height normal="35.5"/>
         </collision>
     </npc>
-    <npc id="14620" level="60" type="Pet" name="Nightshade">
+    <npc id="14620" level="79" type="Pet" name="Nightshade">
         <parameters>
-            <skill name="DeBuff1" id="4705" level="1"/>
-            <skill name="DeBuff2" id="4706" level="1"/>
-            <skill name="Heal" id="4707" level="1"/>
-            <skill name="buff3" id="5652" level="2"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="1"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
+            <skill name="Heal" id="4707" level="2"/>           
+            <skill name="DeBuff1" id="4706" level="2"/>
+            <skill name="DeBuff2" id="50094" level="2"/>
+			<skill name="DeBuff3" id="4705" level="2"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="1933" hpRegen="5.5" mp="1036" mpRegen="2.4"/>
-            <attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="247.65" magical="181.22"/>
-            <speed>
-                <walk ground="30"/>
-                <run ground="180"/>
-            </speed>
-            <hitTime>590</hitTime>
-            <abnormalResist physical="10" magical="10"/>
-        </stats>
-        <status undying="false"/>
-        <skillList>
-            <skill id="4121" level="9"/> <!-- Summoned Monster Magic Protection -->
-            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
-            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
-            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
-            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
-            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="16"/> <!-- Very Strong M. Def. -->
-            <skill id="4414" level="2"/> <!-- Standard Type -->
-            <skill id="4415" level="3"/> <!-- One-handed Sword -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4707" level="1"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="1"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="1"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="2"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="1"/> <!-- Curse of Shade -->
-        </skillList>
-        <shots soul="2" spirit="1"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai type="BALANCED"/>
-        <collision>
-            <radius normal="10"/>
-            <height normal="35.5"/>
-        </collision>
-    </npc>
-    <npc id="14621" level="62" type="Pet" name="Nightshade">
-        <parameters>
-            <skill name="DeBuff1" id="4705" level="1"/>
-            <skill name="DeBuff2" id="4706" level="1"/>
-            <skill name="Heal" id="4707" level="1"/>
-            <skill name="buff3" id="5652" level="2"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="1"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
-        </parameters>
-        <race>DEMONIC</race>
-        <sex>MALE</sex>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="2037" hpRegen="5.5" mp="1097" mpRegen="2.7"/>
-            <attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="257.34" magical="188.31"/>
-            <speed>
-                <walk ground="30"/>
-                <run ground="180"/>
-            </speed>
-            <hitTime>590</hitTime>
-            <abnormalResist physical="10" magical="10"/>
-        </stats>
-        <status undying="false"/>
-        <skillList>
-            <skill id="4121" level="9"/> <!-- Summoned Monster Magic Protection -->
-            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
-            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
-            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
-            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
-            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="16"/> <!-- Very Strong M. Def. -->
-            <skill id="4414" level="2"/> <!-- Standard Type -->
-            <skill id="4415" level="3"/> <!-- One-handed Sword -->
-            <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4707" level="1"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="1"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="1"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="2"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="1"/> <!-- Curse of Shade -->
-        </skillList>
-        <shots soul="2" spirit="1"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai type="BALANCED"/>
-        <collision>
-            <radius normal="10"/>
-            <height normal="35.5"/>
-        </collision>
-    </npc>
-    <npc id="14622" level="64" type="Pet" name="Nightshade">
-        <parameters>
-            <skill name="DeBuff1" id="4705" level="2"/>
-            <skill name="DeBuff2" id="4706" level="2"/>
-            <skill name="Heal" id="4707" level="2"/>
-            <skill name="buff3" id="5652" level="3"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="2"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
-        </parameters>
-        <race>DEMONIC</race>
-        <sex>MALE</sex>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="2141" hpRegen="6.5" mp="1158" mpRegen="2.7"/>
-            <attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="267.04" magical="195.41"/>
+            <vitals hp="2842.35387" hpRegen="6.5" mp="1036.8" mpRegen="2.4"/>
+            <attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="247.65008" magical="181.21958"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="180"/>
@@ -983,9 +865,7 @@
             <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4707" level="2"/> <!-- Shade Sacrifice -->
             <skill id="4706" level="2"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="2"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="3"/> <!-- Nightshade - Death Whisper -->
+			<skill id="50094" level="2"/> <!-- Despair of the Shadow -->
             <skill id="4705" level="2"/> <!-- Curse of Shade -->
         </skillList>
         <shots soul="2" spirit="1"/>
@@ -997,24 +877,19 @@
             <height normal="35.5"/>
         </collision>
     </npc>
-    <npc id="14623" level="66" type="Pet" name="Nightshade">
+    <npc id="14621" level="81" type="Pet" name="Nightshade">
         <parameters>
-            <skill name="DeBuff1" id="4705" level="2"/>
-            <skill name="DeBuff2" id="4706" level="2"/>
-            <skill name="Heal" id="4707" level="2"/>
-            <skill name="buff3" id="5652" level="3"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="3"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
+            <skill name="Heal" id="4707" level="3"/>           
+            <skill name="DeBuff1" id="4706" level="3"/>
+            <skill name="DeBuff2" id="50094" level="3"/>
+			<skill name="DeBuff3" id="4705" level="3"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="2244" hpRegen="6.5" mp="1219" mpRegen="2.7"/>
-            <attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="276.73" magical="202.5"/>
+            <vitals hp="2916.89894" hpRegen="7.5" mp="1097" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="180"/>
@@ -1034,12 +909,10 @@
             <skill id="4414" level="2"/> <!-- Standard Type -->
             <skill id="4415" level="3"/> <!-- One-handed Sword -->
             <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4707" level="2"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="2"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="3"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="3"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="2"/> <!-- Curse of Shade -->
+            <skill id="4707" level="3"/> <!-- Shade Sacrifice -->
+            <skill id="4706" level="3"/> <!-- Mass Curse of Shade -->
+			<skill id="50094" level="3"/> <!-- Despair of the Shadow -->
+            <skill id="4705" level="3"/> <!-- Curse of Shade -->
         </skillList>
         <shots soul="2" spirit="1"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1050,24 +923,19 @@
             <height normal="35.5"/>
         </collision>
     </npc>
-    <npc id="14624" level="68" type="Pet" name="Nightshade">
+    <npc id="14622" level="83" type="Pet" name="Nightshade">
         <parameters>
-            <skill name="DeBuff1" id="4705" level="2"/>
-            <skill name="DeBuff2" id="4706" level="2"/>
-            <skill name="Heal" id="4707" level="2"/>
-            <skill name="buff3" id="5652" level="3"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="3"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
+            <skill name="Heal" id="4707" level="4"/>           
+            <skill name="DeBuff1" id="4706" level="4"/>
+            <skill name="DeBuff2" id="50094" level="4"/>
+			<skill name="DeBuff3" id="4705" level="4"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-            <vitals hp="2345" hpRegen="6.5" mp="1282" mpRegen="2.7"/>
-            <attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="286.36" magical="209.55"/>
+            <vitals hp="2985.1835" hpRegen="7.5" mp="1158.0" mpRegen="2.7"/>
+            <attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="267.04468" magical="195.41171"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="180"/>
@@ -1087,12 +955,10 @@
             <skill id="4414" level="2"/> <!-- Standard Type -->
             <skill id="4415" level="3"/> <!-- One-handed Sword -->
             <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4707" level="2"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="2"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="3"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="3"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="2"/> <!-- Curse of Shade -->
+            <skill id="4707" level="4"/> <!-- Shade Sacrifice -->
+            <skill id="4706" level="4"/> <!-- Mass Curse of Shade -->
+			<skill id="50094" level="4"/> <!-- Despair of the Shadow -->
+            <skill id="4705" level="4"/> <!-- Curse of Shade -->
         </skillList>
         <shots soul="2" spirit="1"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1103,17 +969,104 @@
             <height normal="35.5"/>
         </collision>
     </npc>
-    <npc id="14625" level="70" type="Pet" name="Nightshade">
+    <npc id="14623" level="84" type="Pet" name="Nightshade">
         <parameters>
-            <skill name="DeBuff1" id="4705" level="3"/>
-            <skill name="DeBuff2" id="4706" level="3"/>
-            <skill name="Heal" id="4707" level="3"/>
-            <skill name="buff3" id="5652" level="3"/>
-            <skill name="buff4" id="5653" level="2"/>
-            <skill name="buff5" id="5654" level="3"/>
-            <param name="buff_action3" value="1058"/>
-            <param name="buff_action4" value="1059"/>
-            <param name="buff_action5" value="1060"/>
+            <skill name="Heal" id="4707" level="5"/>           
+            <skill name="DeBuff1" id="4706" level="5"/>
+            <skill name="DeBuff2" id="50094" level="5"/>
+			<skill name="DeBuff3" id="4705" level="5"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="3016.82079" hpRegen="7.5" mp="1219.8" mpRegen="2.7"/>
+            <attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="276.72752" magical="202.49719"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>590</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4121" level="9"/> <!-- Summoned Monster Magic Protection -->
+            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
+            <skill id="4413" level="16"/> <!-- Very Strong M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4707" level="5"/> <!-- Shade Sacrifice -->
+            <skill id="4706" level="5"/> <!-- Mass Curse of Shade -->
+			<skill id="50094" level="5"/> <!-- Despair of the Shadow -->
+            <skill id="4705" level="5"/> <!-- Curse of Shade -->
+        </skillList>
+        <shots soul="2" spirit="1"/>
+        <exCrtEffect>false</exCrtEffect>
+        <sNpcPropHpRate>2</sNpcPropHpRate>
+        <ai type="BALANCED"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="35.5"/>
+        </collision>
+    </npc>
+    <npc id="14624" level="85" type="Pet" name="Nightshade">
+        <parameters>
+            <skill name="Heal" id="4707" level="6"/>           
+            <skill name="DeBuff1" id="4706" level="5"/>
+            <skill name="DeBuff2" id="50094" level="6"/>
+			<skill name="DeBuff3" id="4705" level="5"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="3046.70947" hpRegen="7.5" mp="1282.4" mpRegen="2.7"/>
+            <attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="286.3615" magical="209.54692"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>590</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4121" level="9"/> <!-- Summoned Monster Magic Protection -->
+            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
+            <skill id="4413" level="16"/> <!-- Very Strong M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4707" level="6"/> <!-- Shade Sacrifice -->
+            <skill id="4706" level="5"/> <!-- Mass Curse of Shade -->
+			<skill id="50094" level="6"/> <!-- Despair of the Shadow -->
+            <skill id="4705" level="5"/> <!-- Curse of Shade -->
+        </skillList>
+        <shots soul="2" spirit="1"/>
+        <exCrtEffect>false</exCrtEffect>
+        <sNpcPropHpRate>2</sNpcPropHpRate>
+        <ai type="BALANCED"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="35.5"/>
+        </collision>
+    </npc>
+    <npc id="14625" level="85" type="Pet" name="Nightshade">
+        <parameters>
+            <skill name="Heal" id="4707" level="6"/>           
+            <skill name="DeBuff1" id="4706" level="1"/>
+            <skill name="DeBuff2" id="50094" level="1"/>
+			<skill name="DeBuff3" id="4705" level="1"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -1140,12 +1093,10 @@
             <skill id="4414" level="2"/> <!-- Standard Type -->
             <skill id="4415" level="3"/> <!-- One-handed Sword -->
             <skill id="4416" level="9"/> <!-- Demons -->
-            <skill id="4707" level="3"/> <!-- Shade Sacrifice -->
-            <skill id="4706" level="3"/> <!-- Mass Curse of Shade -->
-            <skill id="5654" level="3"/> <!-- Nightshade - Guidance -->
-            <skill id="5653" level="2"/> <!-- Nightshade - Focus -->
-            <skill id="5652" level="3"/> <!-- Nightshade - Death Whisper -->
-            <skill id="4705" level="3"/> <!-- Curse of Shade -->
+            <skill id="4707" level="6"/> <!-- Shade Sacrifice -->
+            <skill id="4706" level="5"/> <!-- Mass Curse of Shade -->
+            <skill id="50094" level="6"/> <!-- Despair of the Shadow -->
+            <skill id="4705" level="5"/> <!-- Curse of Shade -->
         </skillList>
         <shots soul="2" spirit="1"/>
         <exCrtEffect>false</exCrtEffect>
