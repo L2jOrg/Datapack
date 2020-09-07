@@ -1990,20 +1990,25 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4066" level="6"/> <!-- NPC Twister -->
+			<param name="Party_Type" value="2"/>
+			<minions name="Privates">
+                <npc id="20772" count="1" respawnTime="0" weightPoint="1"/> <!-- Barif's Pet -->
+                <npc id="24015" count="1" respawnTime="0" weightPoint="1"/> <!-- Barif Camrin -->
+            </minions>
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment lhand="3938"/> <!-- lhand: Giant Rod -->
         <acquire exp="324802" sp="9744"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="2721.23288" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">           
+            <attack physical="1055.28566004965" magical="720.623302603812" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="349.77477" magical="255.95"/>
+			<vitals hp="5827.18" hpRegen="8.5" mp="2361.0" mpRegen="3"/>
             <speed>
                 <walk ground="55"/>
                 <run ground="180"/>
             </speed>
             <hitTime>560</hitTime>
-            <attack physical="946.44055895414" magical="603.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="382.4501" magical="296.777"/>
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
@@ -2058,14 +2063,15 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
         <acquire exp="196742" sp="5902"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="2233.04646" hpRegen="8.5" mp="2520.48" mpRegen="3"/>
-            <attack physical="902.3423" magical="562.9881" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="372.3891" magical="286.4427"/>
+            <vitals hp="5738.36" hpRegen="8.5" mp="2311.2" mpRegen="3"/>
+            <attack physical="501.08068" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="252.49346" magical="168.112997103103"/>
             <speed>
                 <walk ground="80"/>
                 <run ground="170"/>
@@ -2086,9 +2092,9 @@
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
         <ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>GIANT</clan>
-            </clanList>
+            <!-- <clanList> -->
+                <!-- <clan>GIANT</clan> -->
+            <!-- </clanList> -->
         </ai>
         <collision>
             <radius normal="15"/>
@@ -2128,20 +2134,24 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4038" level="5"/> <!-- Decrease Atk. Spd. -->
+			<param name="Party_Type" value="2"/>
+			<minions name="Privates">
+                <npc id="20774" count="3" respawnTime="120" weightPoint="1"/> <!-- Conjurer Bat -->
+            </minions>
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
 		<acquire exp="18539" sp="556" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
-            <speed>
+            <vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7"/>           
+            <attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="305.35947" magical="203.311781207645"/>
+			<speed>
                 <walk ground="60"/>
                 <run ground="174"/>
             </speed>
-            <hitTime>500</hitTime>
-            <attack physical="665.0227818" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="335.895417" magical="223.44881"/>
         </stats>
+		<hitTime>500</hitTime>
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4416" level="4"/> <!-- Animals -->
@@ -2202,19 +2212,20 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="MagicHeal" id="4065" level="5"/> <!-- NPC Heal -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
 		<acquire exp="18539" sp="556" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
-            <speed>
+            <vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7"/>           
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="197.024195544734"/>
+			<speed>
                 <walk ground="60"/>
                 <run ground="174"/>
             </speed>
             <hitTime>500</hitTime>
-            <attack physical="626.2397545" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="325.507567" magical="216.53847"/>
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>

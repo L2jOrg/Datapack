@@ -339,20 +339,33 @@
         </collision>
     </npc>
     <npc id="24015" level="76" type="Monster" name="Barif Camrin">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race> <!-- TODO: Magic Creatures -->
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+            <param name="SoulShot" value="100"/>
+            <param name="SoulShotRate" value="10"/>
+            <param name="SpiritShot" value="100"/>
+            <param name="SpiritShotRate" value="5"/>
+            <param name="LongRangeGuardRate" value="5"/>
+            <skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="1"/>
+        </parameters>
+		<race>CONSTRUCT</race>
         <acquire exp="196742" sp="5902"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="2233.04646" hpRegen="8.5" mp="2520.48" mpRegen="3"/>
-            <speed>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="5738.36" hpRegen="8.5" mp="2311.2" mpRegen="3"/>           
+            <attack physical="503.08068" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="252.49346" magical="168.112997103103"/>
+			<speed>
                 <walk ground="80"/>
                 <run ground="170"/>
             </speed>
-            <attack physical="19039.3" magical="2079.9" critical="4" attackSpeed="253" range="40"/>
-            <defence physical="8159.7" magical="1155.5"/>
+			<hitTime>720</hitTime>
         </stats>
-        <status attackable="true"/>
-        <skillList>
+        <status undying="false" canBeSown="true"/>
+		<skillList>
+            <skill id="4032" level="6"/> <!-- NPC Strike -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
@@ -360,6 +373,14 @@
             <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
             <skill id="4287" level="5"/> <!-- Hold Resistance -->
         </skillList>
+		<shots shotChance="30" spiritChance="30"/>
+        <exCrtEffect>false</exCrtEffect>
+        <sNpcPropHpRate>2</sNpcPropHpRate>
+        <ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+            <!-- <clanList> -->
+                <!-- <clan>GIANT</clan> -->
+            <!-- </clanList> -->
+        </ai>
         <collision>
             <radius normal="11"/>
             <height normal="32"/>
@@ -391,13 +412,13 @@
         <race>GIANT</race>
         <acquire exp="341811" sp="10254"/>
         <equipment rhand="3937"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2761.38141" hpRegen="8.5" mp="2629.335" mpRegen="3"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="220"/>
             </speed>
-            <attack physical="39240.6" magical="2169.9" critical="4" attackSpeed="253" range="40"/>
+            <attack physical="1240.6" magical="2169.9" critical="4" attackSpeed="253" range="40"/>
             <defence physical="16817.4" magical="1205.5"/>
         </stats>
         <status attackable="true"/>
@@ -478,13 +499,13 @@
     <npc id="24018" level="78" type="Monster" name="Hekaton Prime" title="Giants' Cave Master">
         <race>GIANT</race>
         <acquire exp="1444329" sp="43329"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="12944.48337375" hpRegen="8.5" mp="2629.335" mpRegen="3"/>
             <speed>
                 <walk ground="27"/>
                 <run ground="140"/>
             </speed>
-            <attack physical="294273" magical="2169.9" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <attack physical="19273" magical="2169.9" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="126117" magical="1205.5"/>
         </stats>
         <skillList>
@@ -521,13 +542,13 @@
         <race>GIANT</race>
         <acquire exp="528416" sp="15852"/>
         <equipment rhand="3937"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="5442.46576" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
             <speed>
                 <walk ground="30"/>
                 <run ground="140"/>
             </speed>
-            <attack physical="77332.5" magical="2124.9" critical="4" attackSpeed="253" range="40"/>
+            <attack physical="17332.5" magical="2124.9" critical="4" attackSpeed="253" range="40"/>
             <defence physical="33142.5" magical="1180.5"/>
         </stats>
         <status attackable="true"/>
@@ -608,7 +629,7 @@
         <race>GIANT</race>
         <acquire exp="326047" sp="9781"/>
         <equipment rhand="3937"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2721.23288" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
             <speed>
                 <walk ground="15"/>
@@ -656,7 +677,7 @@
         <race>GIANT</race>
         <acquire exp="257609" sp="7728"/>
         <equipment rhand="3938"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2267.7145925" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
             <speed>
                 <walk ground="15"/>
@@ -730,7 +751,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2261" mpRegen="3.6"/>
             <speed>
                 <walk ground="27"/>
@@ -817,7 +838,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="79766" sp="2392" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="60"/>
@@ -866,7 +887,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="86040" sp="2581" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
                 <walk ground="30"/>
@@ -915,7 +936,7 @@
         <race>UNDEAD</race>
         <acquire exp="89303" sp="2679" attribute_exp="40"/>
         <equipment rhand="234"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -963,7 +984,7 @@
         <race>DEMONIC</race>
         <acquire exp="90904" sp="2727" attribute_exp="40"/>
         <equipment rhand="78"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="60"/>
@@ -1012,7 +1033,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="129198" sp="3875" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="45"/>
@@ -1061,7 +1082,7 @@
         </parameters>
         <race>DEMONIC</race>
         <acquire exp="94263" sp="2827" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
                 <walk ground="70"/>
@@ -1110,7 +1131,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="77020" sp="2310" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2006.93388" hpRegen="7.5" mp="2200.995" mpRegen="2.7"/>
             <speed>
                 <walk ground="68"/>
@@ -1161,7 +1182,7 @@
         </parameters>
         <race>DEMONIC</race>
         <acquire exp="79766" sp="2392" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2046.220325" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="37"/>
@@ -1209,7 +1230,7 @@
         <race>DEMONIC</race>
         <acquire exp="86040" sp="2581" attribute_exp="40"/>
         <equipment rhand="5129" lhand="5129"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2085.137305" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
                 <walk ground="22"/>
@@ -1256,7 +1277,7 @@
         <race>UNDEAD</race>
         <acquire exp="89303" sp="2679" attribute_exp="40"/>
         <equipment rhand="84"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2123.68482" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -1301,7 +1322,7 @@
         </parameters>
         <race>DEMONIC</race>
         <acquire exp="90904" sp="2727" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2161.000785" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="70"/>
@@ -1345,7 +1366,7 @@
         </parameters>
         <race>DEMONIC</race>
         <acquire exp="129198" sp="3875" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2161.0418366667" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="70"/>
@@ -1389,7 +1410,7 @@
         </parameters>
         <race>BUG</race>
         <acquire exp="94263" sp="2827" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2197.208355" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
                 <walk ground="37"/>
@@ -1433,7 +1454,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="181912" sp="5457" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2197.2494066667" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
                 <walk ground="100"/>
@@ -1474,7 +1495,7 @@
         </parameters>
         <race>DEMONIC</race>
         <acquire exp="185062" sp="5551"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="2197.2494066667" hpRegen="8.5" mp="2465.61" mpRegen="3"/>
             <speed>
                 <walk ground="30"/>
@@ -1517,7 +1538,7 @@
         </parameters>
         <race>BEAST</race>
         <acquire exp="0" sp="0" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="25"/>
@@ -1544,7 +1565,7 @@
         </parameters>
         <race>UNDEAD</race>
         <acquire exp="0" sp="0"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="60"/>
@@ -1593,7 +1614,7 @@
         </parameters>
         <race>ETC</race> <!-- TODO: Magic Creatures -->
         <acquire exp="0" sp="0"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1620.4119125" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="30"/>
@@ -1640,7 +1661,7 @@
         <!-- Source: www.l2wiki.com -->
         <race>ETC</race> <!-- TODO: Magic Creatures -->
         <acquire exp="14700" sp="441" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1204.20959" hpRegen="7.5" mp="2200.995" mpRegen="2.7"/>
             <speed>
                 <walk ground="90"/>
@@ -1679,7 +1700,7 @@
         <!-- Source: www.l2wiki.com -->
         <race>ETC</race> <!-- TODO: Magic Creatures -->
         <acquire exp="15123" sp="453" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="90"/>
@@ -1723,7 +1744,7 @@
         </parameters>
         <race>HUMAN</race>
         <acquire exp="15123" sp="453" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -1760,7 +1781,7 @@
         <!-- Source: www.l2wiki.com -->
         <race>HUMAN</race>
         <acquire exp="15549" sp="466" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -1798,7 +1819,7 @@
         </parameters>
         <race>DIVINE</race>
         <acquire exp="15123" sp="453" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1227.85535" hpRegen="8.5" mp="2253.21" mpRegen="3"/>
             <speed>
                 <walk ground="70"/>
@@ -1846,7 +1867,7 @@
         <!-- Source: www.l2wiki.com -->
         <race>UNDEAD</race>
         <acquire exp="15549" sp="466" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
                 <walk ground="39"/>
@@ -1887,7 +1908,7 @@
         </parameters>
         <race>DIVINE</race>
         <acquire exp="15549" sp="466" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1251.2548" hpRegen="8.5" mp="2306.31" mpRegen="3"/>
             <speed>
                 <walk ground="61"/>
@@ -1932,7 +1953,7 @@
         <race>UNDEAD</race>
         <acquire exp="15987" sp="479" attribute_exp="40"/>
         <equipment rhand="47716"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -1973,7 +1994,7 @@
         </parameters>
         <race>HUMAN</race>
         <acquire exp="15987" sp="479" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1274.16163" hpRegen="8.5" mp="2358.525" mpRegen="3"/>
             <speed>
                 <walk ground="40"/>
@@ -2015,7 +2036,7 @@
         <!-- Source: www.l2wiki.com -->
         <race>UNDEAD</race>
         <acquire exp="16428" sp="492" attribute_exp="40"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="1296.32953" hpRegen="8.5" mp="2412.51" mpRegen="3"/>
             <speed>
                 <walk ground="39"/>
@@ -2052,7 +2073,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2071,7 +2092,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2090,7 +2111,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2109,7 +2130,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2128,7 +2149,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2147,7 +2168,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2166,7 +2187,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="80"/>
@@ -2185,7 +2206,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="80"/>
@@ -2204,7 +2225,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2223,7 +2244,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="1"/>
@@ -2242,7 +2263,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="80"/>
@@ -2261,7 +2282,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="80"/>
@@ -2280,7 +2301,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2299,7 +2320,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="1"/>
@@ -2318,7 +2339,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2337,7 +2358,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2356,7 +2377,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2375,7 +2396,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2394,7 +2415,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="50"/>
@@ -2413,7 +2434,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="1"/>
@@ -2432,7 +2453,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="1"/>
@@ -2451,7 +2472,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="1"/>
@@ -2470,7 +2491,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2489,7 +2510,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2508,7 +2529,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2527,7 +2548,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2546,7 +2567,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2565,7 +2586,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2584,7 +2605,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6"/>
             <speed>
                 <walk ground="60"/>
@@ -2603,7 +2624,7 @@
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <race>ETC</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6"/>
             <speed>
                 <walk ground="30"/>
@@ -2623,7 +2644,7 @@
         <race>ETC</race>
         <sex>FEMALE</sex>
         <equipment rhand="5129" lhand="5129"/>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
             <vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6"/>
             <speed>
                 <walk ground="22"/>
