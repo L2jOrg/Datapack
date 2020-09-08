@@ -1567,7 +1567,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="59575" name="Dragon's Blessing" action="A1">
+    <skill id="59575" name="Dragon's Blessing" max-level="1" action="A2" type="MAGIC">
         <!-- Keeps the target's buffs/debuffs. Dragon's Blessing disappears. -->
         <icon initial="icon.bm_blessing_dragon"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
@@ -1577,16 +1577,19 @@
             <effect-range initial="800"/>
             <hit-time initial="3000"/>
         </attributes>
+		<consume>
+            <mana initial="1"/>
+        </consume>
         <target type="TARGET"/>
         <abnormal type="PRESERVE_ABNORMAL">
-            <level initial="1"/>
+            <level initial="2"/>
             <time initial="3600"/>
         </abnormal>
         <effects>
             <effect name="NoblesseBless"/>
         </effects>
     </skill>
-    <skill id="59576" name="Dragon's Protection" action="A1">
+    <skill id="59576" name="Dragon's Protection" max-level="1" action="A2" type="MAGIC">
         <!-- Resurrects fully recovered from death. Buffs/debuffs remain at death. Dragon's Protection disappears. -->
         <icon initial="icon.bm_salvation_dragon"/>
         <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
@@ -1607,10 +1610,10 @@
             </effect>
         </effects>
     </skill>
-    <skill id="59577" name="Dragon Invocation" action="A1">
+    <skill id="59577" name="Dragon Invocation" max-level="1" action="A2" type="MAGIC">
         <!-- For 15 seconds, recovers HP by 100 and MP by 50 per second, and increases Speed by 33. -->
         <icon initial="icon.dragon_invocation"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <hit-time initial="1000"/>
@@ -1632,10 +1635,10 @@
             </speed>
         </effects>
     </skill>
-    <skill id="59578" name="Dragon Barrier" action="A1">
+    <skill id="59578" name="Dragon Barrier" max-level="1" action="A2" type="MAGIC">
         <!-- Creates a barrier for 10 seconds. Becomes invincible to normal hits, skills, and debuffs. -->
         <icon initial="icon.dragon_barrier"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <hit-time initial="2000"/>

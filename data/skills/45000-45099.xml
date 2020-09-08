@@ -658,20 +658,20 @@
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
-                <power initial="0.065">
-                    <value level="2">0.08</value>
-                    <value level="3">0.095</value>
-                    <value level="4">0.11</value>
-                    <value level="5">0.125</value>
-                    <value level="6">0.14</value>
-                    <value level="7">0.155</value>
+                <power initial="6.5">
+                    <value level="2">8.0</value>                   
                     <value level="8">9.5</value>
                     <value level="9">11.0</value>
                     <value level="10">12.5</value>
                     <value level="11">14.0</value>
                     <value level="12">15.5</value>
                     <value level="13">17.0</value>
-                    <value level="14">1.0</value>
+                    <value level="14">18.5</value>
+                    <value level="15">20.0</value>
+                    <value level="16">21.5</value>
+                    <value level="17">23.0</value>
+                    <value level="18">24.5</value>
+                    <value level="19">1.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -704,19 +704,18 @@
         <effects>
             <stat-modify stat="HEAL_POWER">
                 <power initial="30.0">
-                    <value level="2">38.0</value>
-                    <value level="3">46.0</value>
-                    <value level="4">54.0</value>
-                    <value level="5">62.0</value>
-                    <value level="6">70.0</value>
-                    <value level="7">78.0</value>
+                    <value level="2">38.0</value>                    
                     <value level="8">46.0</value>
                     <value level="9">54.0</value>
                     <value level="10">62.0</value>
                     <value level="11">70.0</value>
                     <value level="12">78.0</value>
                     <value level="13">86.0</value>
-                    <value level="14">126.0</value>
+                    <value level="14">94.0</value>
+                    <value level="15">102.0</value>
+                    <value level="16">110.0</value>
+                    <value level="17">118.0</value>
+                    <value level="18">126.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -724,67 +723,82 @@
     <skill id="45017" name="Orfen's Earring - Special Ability">
         <!-- Enemy's MP -10% during PvP. -->
         <icon initial="icon.accessory_earring_of_orfen_i04"/>
-        <attributes magic-critical-rate="5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <attack-trait>
-                <trait type="SHOCK">
-                    <power initial="5"/>
-                </trait>
-                <trait type="BLEED">
-                    <power initial="10"/>
-                </trait>
-                <trait type="DERANGEMENT">
-                    <power initial="5"/>
-                </trait>
-            </attack-trait>
-            <defence-trait>
-                <trait type="SHOCK">
-                    <power initial="5"/>
-                </trait>
-                <trait type="BLEED">
-                    <power initial="10"/>
-                </trait>
-                <trait type="DERANGEMENT">
-                    <power initial="5"/>
-                </trait>
-            </defence-trait>
-            <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-                <power initial="10.0"/>
-            </stat-modify>
-            <stat-modify stat="HEAL_RECEIVE">
-                <power initial="4.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A1">
-        <!-- For 30 seconds, limits enemy's CP/HP/MP Recovery up to 80% during PvP. -->
-        <icon initial="icon.accessory_earring_of_zaken_i04"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+			<magic-level initial="1"/>
             <cast-range initial="600"/>
             <reuse initial="120000"/>
             <effect-point initial="-679"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY_ONLY"/>
+        <abnormal type="MULTI_DEBUFF">
+            <level initial="1"/>
+            <time initial="30"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="-10.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
-    <skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A1">
+    <skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
+        <!-- For 30 seconds, limits enemy's CP/HP/MP Recovery up to 80% during PvP. -->
+        <icon initial="icon.accessory_earring_of_zaken_i04"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BOSS" level-bonus-rate="30">
+            <cast-range initial="600"/>
+            <reuse initial="120000"/>
+            <effect-point initial="-679"/>
+            <hit-time initial="1000"/>
+        </attributes>
+		<target type="ENEMY_ONLY"/>
+        <abnormal type="HP_REGEN_DOWN">
+            <level initial="2"/>
+            <time initial="30"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
+                <power initial="-80.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+                <power initial="-80.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
+                <power initial="-80.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
         <!-- Blocks all the enemy's P. Skills/M. Skills for 24 seconds. -->
         <icon initial="icon.accessory_earring_of_antaras_i04"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
             <cast-range initial="600"/>
             <reuse initial="120000"/>
             <effect-point initial="-666"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+		<target type="ENEMY_ONLY"/>
+        <abnormal type="SILENCE_ALL" visual="SILENCE">
+            <level initial="2"/>
+            <time initial="24"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <effect name="Mute"/>
+            <effect name="PhysicalMute"/>
+        </effects>
     </skill>
     <skill id="45020" name="Zaken's Cloak">
         <!-- Max HP +5%%. -->
         <icon initial="BranchSys2.Icon.br_zaken_cloak_i00"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+        </effects>
     </skill>
     <skill id="45021" name="White Uniform Hat (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
@@ -794,6 +808,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -808,6 +825,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45023" name="White Uniform Hat (CON +1 MEN +1)">
@@ -818,6 +838,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -832,6 +855,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)">
@@ -842,6 +868,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -856,6 +885,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)">
@@ -866,6 +898,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -880,6 +915,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)">
@@ -890,6 +928,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -904,6 +945,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)">
@@ -914,6 +958,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -928,6 +975,9 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45033" name="First Mate Hat (STR +1 INT +1)">
@@ -938,6 +988,9 @@
         <target/>
         <effects>
             <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -952,6 +1005,9 @@
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="WIT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45035" name="First Mate Hat (CON +1 MEN +1)">
@@ -962,6 +1018,9 @@
         <target/>
         <effects>
             <base-stat type="CON">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -976,6 +1035,9 @@
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)">
@@ -986,6 +1048,9 @@
         <target/>
         <effects>
             <base-stat type="DEX">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1000,13 +1065,57 @@
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
+			<base-stat type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="45039" name="Fire Dragon Belt">
         <!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
         <icon initial="icon.bm_vallakas_belt"/>
         <attributes property="MAGIC"/>
-        <target/>
+		<target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+            <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
+                <power initial="7000.0"/>
+            </stat-modify>
+            <enlarge-slot type="INVENTORY_NORMAL">
+                <power initial="6.0"/>
+            </enlarge-slot>
+            <stat-modify stat="REGENERATE_HP_RATE">
+                <power initial="2.31"/>
+            </stat-modify>
+            <stat-modify stat="REGENERATE_MP_RATE">
+                <power initial="1.54"/>
+            </stat-modify>
+            <stat-modify stat="REGENERATE_CP_RATE">
+                <power initial="3.07"/>
+            </stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_CP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify stat="ADDITIONAL_POTION_HP">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45040" name="Effect of Dragon Pendant Lv. 1" max-level="6">
         <!--
@@ -1020,6 +1129,65 @@
         <icon initial="icon.bm_pendant_dragon_i00"/>
         <attributes property="MAGIC"/>
         <target/>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="14.0">
+                    <value level="2">15.0</value>
+                    <value level="3">16.0</value>
+                    <value level="4">17.0</value>
+                    <value level="5">18.0</value>
+                    <value level="6">19.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power>
+                    <value level="4">5.0</value>
+                    <value level="6">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power>
+                    <value level="4">5.0</value>
+                    <value level="6">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power>
+                    <value level="5">3.0</value>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45041" name="Effect of Dragon Pendant Lv. 2" max-level="6">
         <!--
@@ -1033,6 +1201,73 @@
         <icon initial="icon.bm_pendant_dragon_i00"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="20.0">
+                    <value level="2">21.0</value>
+                    <value level="3">22.0</value>
+                    <value level="4">23.0</value>
+                    <value level="5">24.0</value>
+                    <value level="6">25.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="2.0">
+                    <value level="5">3.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="2.0">
+                    <value level="5">3.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power>
+                    <value level="6">5.0</value>
+                </power>
+            </stat-modify>           
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20.0"/>           
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="10.0">
+                    <value level="5">15.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="45042" name="Effect of Dragon Pendant Lv. 3" max-level="6">
         <!--

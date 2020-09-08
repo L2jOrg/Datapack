@@ -1858,21 +1858,44 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54040" name="Sayha's Blink" max-level="2" debuff="true" action="A1">
+    <skill id="54040" name="Sayha's Blink" max-level="2" debuff="true" action="A2">
         <!--
             level 1: Cancel Target, Teleport back to previous location.
             level 2: Triggers the Cancel Target effect and teleports to the rear.
-         -->
-        <icon initial="icon.sayha2017_blink"/>
-        <attributes>
-            <reuse initial="120000">
+         -->           
+		<icon initial="icon.sayha2017_blink"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+			<magic-level initial="1"/>				
+			<cast-range initial="40"/>
+			<reuse initial="120000">
                 <value level="2">60000</value>
             </reuse>
-            <cool-time initial="200"/>
-            <effect-point initial="-1"/>
-            <hit-time initial="100"/>
-        </attributes>
-        <target/>
+			<effect-point initial="-1"/>
+			<effect-range initial="400"/>
+			<hit-time initial="100"/>
+		</attributes>		
+		<target type="ENEMY_ONLY"/>
+		<abnormal type="STUN" visual="STUN">
+			<level initial="1"/>
+			<time initial="1"/>
+			<chance initial="80">
+				<value level="2">100</value>
+			</chance>
+		</abnormal>		
+		<effects>
+			<effect name="TargetCancel">
+				<power initial="100.0"/>
+			</effect>
+			<effect name="DeleteHateOfMe">
+				<power initial="100.0"/>
+			</effect>			
+			<effect name="BlockControl">
+				<power initial="100.0"/>
+			</effect>
+			<block-all-actions>
+				<allowed-skills>35016 35045</allowed-skills>
+			</block-all-actions>
+		</effects>
     </skill>
     <skill id="54041" name="Frintezza's Necklace" max-level="4">
         <!--
@@ -1888,16 +1911,110 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>			
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
+                <power>
+					<value level="3">5.0</value>
+					<value level="4">10.0</value>
+                </power>
+            </stat-modify>            
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_RATE" stat-add="DEFENCE_MAGIC_CRITICAL_RATE_ADD">
+                <power>
+					<value level="3">2.0</value>
+					<value level="4">5.0</value>
+                </power>
+            </stat-modify>
+			<defence-trait>               
+                <trait type="SLEEP">
+                    <power initial="10.0">
+						<value level="2">15.0</value>
+						<value level="3">20.0</value>
+						<value level="4">30.0</value>						
+					</power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="5.0">
+						<value level="2">10.0</value>
+						<value level="3">15.0</value>
+						<value level="4">20.0</value>						
+					</power>
+                </trait>
+                <trait type="POISON">
+                    <power initial="25"/>
+                </trait>
+            </defence-trait>
+            <attack-trait>
+                <trait type="SLEEP">
+                    <power initial="10.0">
+						<value level="2">15.0</value>
+						<value level="3">20.0</value>
+						<value level="4">30.0</value>						
+					</power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="5.0">
+						<value level="2">10.0</value>
+						<value level="3">15.0</value>
+						<value level="4">20.0</value>						
+					</power>
+                </trait>                
+            </attack-trait>        
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="2.0">
+					<value level="2">3.0</value>
+					<value level="3">4.0</value>
+					<value level="4">10.0</value>						
+				</power>
+            </stat-modify>   
+			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">15.0</value>
+					<value level="4">20.0</value>
+				</power>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+				<power initial="5.0">
+					<value level="2">10.0</value>
+					<value level="3">15.0</value>
+					<value level="4">20.0</value>
+				</power>
+			</stat-modify>
+            <reuse skill-type="PHYSIC">
+                <power initial="-2">
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-10</value>						
+				</power>
+            </reuse>
+			<reuse skill-type="MAGIC">
+                <power initial="-2">
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-10</value>						
+				</power>
+            </reuse>
+        </effects>
     </skill>
     <skill id="54042" name="Frintezza's Necklace - Special Ability" debuff="true" action="A1">
         <!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +100%. -->
         <icon initial="icon.accessory_necklace_of_frintessa_i05"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
             <reuse initial="120000"/>
             <effect-point initial="-666"/>
             <hit-time initial="4000"/>
         </attributes>
-        <target/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="10" affect-random="15"/>
+        <abnormal type="REUSE_DELAY_UP">
+            <level initial="2"/>
+            <time initial="120"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <reuse skill-type="PHYSIC">
+                <power initial="100.0"/>
+            </reuse>
+        </effects>
     </skill>
     <skill id="54043" name="Rapid Wind" action="A1">
         <!-- For 5 seconds, P. Def. +1000, M. Def. +1000, Movement Speed +50. -->
