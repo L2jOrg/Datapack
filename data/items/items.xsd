@@ -249,7 +249,7 @@
     <xs:complexType name="playerType">
         <xs:attribute name="castle">
             <xs:simpleType>
-                <xs:restriction base="xs:integer">
+                <xs:restriction base="xs:int">
                     <xs:minInclusive value="-1"/>
                     <xs:maxInclusive value="9"/>
                 </xs:restriction>
@@ -277,6 +277,7 @@
         </xs:attribute>
         <xs:attribute name="chaotic" type="xs:boolean"/>
         <xs:attribute name="flying" type="xs:boolean"/>
+        <xs:attribute name="races" type="RaceList"/>
     </xs:complexType>
 
     <xs:complexType name="ItemUseCondition">
