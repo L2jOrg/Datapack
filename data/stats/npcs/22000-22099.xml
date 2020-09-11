@@ -1218,7 +1218,7 @@
 	</npc>
 	<npc element="EARTH" id="22064" level="84" name="Cave Maiden" type="Monster">
 		<acquire attribute_exp="1428" exp="1394760" sp="41843"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1262,7 +1262,7 @@
 	</npc>
 	<npc element="EARTH" id="22065" level="85" name="Drake" type="Monster">
 		<acquire attribute_exp="1530" exp="1435319" sp="43060"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1302,7 +1302,7 @@
 	</npc>
 	<npc element="EARTH" id="22066" level="85" name="Blood Queen" type="Monster">
 		<acquire attribute_exp="1530" exp="1458078" sp="43743"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1341,7 +1341,7 @@
 	</npc>
 	<npc element="EARTH" id="22067" level="85" name="Headless Knight" type="Monster">
 		<acquire attribute_exp="1530" exp="1449841" sp="43496"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1383,18 +1383,49 @@
 		</skillList>
 	</npc>
 	<npc element="EARTH" id="22068" level="82" name="Shackle" type="Monster">
+		<parameters>
+            <param name="MoveAroundSocial" value="130"/>
+            <param name="MoveAroundSocial1" value="130"/>
+            <param name="MoveAroundSocial2" value="130"/>
+            <param name="SoulShot" value="100"/>
+            <param name="SoulShotRate" value="10"/>
+            <param name="SpiritShot" value="100"/>
+            <param name="SpiritShotRate" value="5"/>
+            <param name="LongRangeGuardRate" value="5"/>
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
 		<acquire attribute_exp="1230" exp="1341237" sp="40238"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="42970.026" hpRegen="10" mp="2614.5" mpRegen="5"/>
+			<attack physical="3999.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.86723" magical="861.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
 		</stats>
-		<status attackable="true"/>
-		<!--Shackle-->
+		<status undying="false" canBeSown="true"/>
+		<skillList>
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
+		<shots shotChance="30" spiritChance="30"/>
+        <exCrtEffect>false</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>CAVE_SERVANT</clan>
+            </clanList>
+        </ai>
 		<dropLists>
 			<drop>
 				<!--Sealed Shield of Nightmare (Запечатанный Щит Кошмаров)-->
@@ -1410,30 +1441,9 @@
 				<!--Sealed Shield of Nightmare Fragment (Часть Запечатанного Щита Кошмаров)-->
 				<item chance="15.75" id="5495" max="1" min="1"/>
 			</spoil>
-		</dropLists>
-		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
-			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
-			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
-			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
-			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
-			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
-			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
-			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
-			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
-			<skill id="4071" level="4"/>
-		</skillList>
+		</dropLists>		
 	</npc>
-	<npc element="EARTH" id="22069" level="83" name="Cave Servant" type="Monster">
-		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
-			<speed>
-				<walk ground="50"/>
-				<run ground="110"/>
-			</speed>
-		</stats>
+	<npc element="EARTH" id="22069" level="83" name="Cave Servant" type="Monster">		
 		<parameters>
 			<param name="MoveAroundSocial" value="167"/>
 			<param name="MoveAroundSocial1" value="167"/>
@@ -1444,9 +1454,31 @@
 			<param name="SpiritShotRate" value="5"/>
 			<param name="LongRangeGuardRate" value="5"/>
 		</parameters>
+		<equipment rhand="79" lhand="945"/> <!-- Damascus Sword / Skeleton Buckler -->
+		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>		
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="10" mp="2666.1" mpRegen="5"/>
+			<attack physical="3499.423617" magical="1750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.86723" magical="861.87171" />
+			<speed>
+				<walk ground="50"/>
+				<run ground="110"/>
+			</speed>
+		</stats>
 		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<status attackable="true"/>
+		<sex>MALE</sex>		
+		<status undying="false" canBeSown="true"/>
+		<skillList>
+			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
+			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
+			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
+			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
+			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
+			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
+			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
+			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
+			<skill id="4071" level="4"/>
+		</skillList>
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -1457,8 +1489,7 @@
 		<collision>
 			<radius normal="11" grown="13"/>
 			<height normal="25" grown="31"/>
-		</collision>
-		<!--Cave Servant-->
+		</collision>		
 		<dropLists>
 			<drop>
 				<!--Sealed Boots of Nightmare (Запечатанные Сапоги Кошмаров)-->
@@ -1480,25 +1511,14 @@
 				<!--Sealed Boots of Nightmare Lining (Подкладка Запечатанных Сапог Кошмаров)-->
 				<item chance="8.323999" id="5502" max="1" min="1"/>
 			</spoil>
-		</dropLists>
-		<skillList><!--Нежить: Поднятые из могил с помощью Черной Магии, проклятия или злой волей, большинству этих существ недостает ума, так что они способны выполнять лишь простейшие действия. Тем не менее высшая нежить обладает обширными знаниями по сравнении с обычными смертными.-->
-			<skill id="4416" level="1"/><!--HP увеличены (2x):-->
-			<skill id="4408" level="10"/><!--Сильная Физ. Атк.:-->
-			<skill id="4410" level="15"/><!--Сильная Маг. Атк.:-->
-			<skill id="4411" level="14"/><!--Усиленная Физ. Защ.:-->
-			<skill id="4412" level="12"/><!--Усиленная Маг. Защ.:-->
-			<skill id="4413" level="12"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
-			<skill id="48047" level="1"/><!--Устойчивость к Маг. Атк.: Сопротивление маг. урону.-->
-			<skill id="4116" level="6"/><!--Устойчивость к Лукам: Увеличивает сопротивление атакам из лука.-->
-			<skill id="4071" level="4"/>
-		</skillList>
+		</dropLists>		
 	</npc>
 	<npc element="EARTH" id="22070" level="83" name="Cave Servant Archer" type="Monster">
 		<acquire attribute_exp="1328" exp="1316282" sp="39489"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="10" mp="2666.1" mpRegen="5"/>
+			<attack physical="4899.423617" magical="2750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1257.86723" magical="961.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
@@ -1516,7 +1536,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="275"/> <!-- Longbow -->
+		<equipment rhand="15302"/> <!-- bow -->
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
@@ -1565,7 +1585,7 @@
 	</npc>
 	<npc element="EARTH" id="22071" level="84" name="Cave Servant Warrior" type="Monster">
 		<acquire attribute_exp="1428" exp="1480702" sp="44422"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1586,7 +1606,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="77"/> <!-- Tsurugi -->
+		<equipment lhand="2495" rhand="77"/> <!-- Tsurugi -->
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -1618,10 +1638,10 @@
 	</npc>
 	<npc element="EARTH" id="22072" level="84" name="Cave Servant Captain" type="Monster">
 		<acquire attribute_exp="1428" exp="1404286" sp="42129"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43915.74" hpRegen="10" mp="2718" mpRegen="5"/>
+			<attack physical="1999.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="857.86723" magical="761.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
@@ -1640,18 +1660,12 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="73"/> <!-- Shamshir -->
+		<equipment lhand="2495" rhand="73"/> <!-- Shamshir -->
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
 			</clanList>
 		</ai>
 		<collision>
@@ -1700,16 +1714,18 @@
 	</npc>
 	<npc element="EARTH" id="22073" level="85" name="Royal Cave Servant" type="Monster">
 		<acquire attribute_exp="1530" exp="1471516" sp="44146"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="10" mp="2770.2" mpRegen="5"/>
+			<attack physical="1999.423617" magical="1750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.86723" magical="861.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>520</hitTime>
+            <abnormalResist physical="10" magical="10"/>
 		</stats>
-		<status attackable="true"/>
+		<status undying="false" canBeSown="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="80"/>
 			<param name="MoveAroundSocial1" value="80"/>
@@ -1719,29 +1735,19 @@
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="5"/>
 			<param name="LongRangeGuardRate" value="5"/>
-			<skill name="SleepMagic" id="4046" level="5"/>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945"/> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" clanHelpRange="300">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
 			</clanList>
 		</ai>
 		<collision>
 			<radius normal="11"/>
 			<height normal="28.5"/>
 		</collision>
-		<!--Royal Cave Servant-->
 		<dropLists>
 			<drop>
 				<!--Daimon Crystal (Кристалл Дэймона)-->
@@ -1774,16 +1780,17 @@
 	</npc>
 	<npc element="EARTH" id="22074" level="82" name="Gargoyle Hunter" type="Monster">
 		<acquire attribute_exp="1230" exp="1396911" sp="41908"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="42970.026" hpRegen="10" mp="2614.5" mpRegen="5"/>
+			<attack physical="1999.423617" magical="1750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="857.86723" magical="861.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>370</hitTime>
 		</stats>
-		<status attackable="true"/>
+		<status undying="false" canBeSown="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="0"/>
 			<param name="MoveAroundSocial1" value="0"/>
@@ -1820,7 +1827,7 @@
 	</npc>
 	<npc element="EARTH" id="22075" level="82" name="Dustwind Gargoyle" type="Monster">
 		<acquire attribute_exp="1230" exp="1332159" sp="39965"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1884,7 +1891,7 @@
 	</npc>
 	<npc element="EARTH" id="22076" level="83" name="Thunder Wyrm" type="Monster">
 		<acquire attribute_exp="1328" exp="1365883" sp="40977"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -1947,7 +1954,7 @@
 	</npc>
 	<npc element="EARTH" id="22077" level="83" name="Maluk Succubus" type="Monster">
 		<acquire attribute_exp="1328" exp="1472524" sp="44176"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<speed>
@@ -2011,16 +2018,18 @@
 	</npc>
 	<npc element="EARTH" id="22078" level="83" name="Maluk Succubus Turen" type="Monster">
 		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="68000" hpRegen="10" mp="3285" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="10" mp="2666.1" mpRegen="5"/>
+			<attack physical="1499.423617" magical="1150.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="857.86723" magical="761.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>840</hitTime>
+            <abnormalResist physical="10" magical="10"/>
 		</stats>
-		<status attackable="true"/>
+		<status undying="false" canBeSown="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="110"/>
 			<param name="MoveAroundSocial1" value="110"/>
@@ -2075,11 +2084,12 @@
 			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
 			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
 			<skill id="48047" level="1"/>
+			<skill id="4034" level="5"/> <!-- Decrease Speed -->
 		</skillList>
 	</npc>
 	<npc element="EARTH" id="22079" level="84" name="Cave Keeper" type="Monster">
 		<acquire attribute_exp="1428" exp="1508220" sp="45247"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2107,15 +2117,7 @@
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
 			</clanList>
 		</ai>
@@ -2136,7 +2138,7 @@
 	</npc>
 	<npc element="EARTH" id="22080" level="83" name="Cave Servant" type="Monster">
 		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2207,7 +2209,7 @@
 	</npc>
 	<npc element="EARTH" id="22081" level="83" name="Cave Servant Archer" type="Monster">
 		<acquire attribute_exp="1328" exp="1316282" sp="39489"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2271,7 +2273,7 @@
 	</npc>
 	<npc element="EARTH" id="22082" level="84" name="Cave Servant Warrior" type="Monster">
 		<acquire attribute_exp="1428" exp="1480702" sp="44422"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2324,7 +2326,7 @@
 	</npc>
 	<npc element="EARTH" id="22083" level="84" name="Cave Servant Captain" type="Monster">
 		<acquire attribute_exp="1428" exp="1404286" sp="42129"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2352,12 +2354,6 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
 			</clanList>
 		</ai>
 		<collision>
@@ -2396,7 +2392,7 @@
 	</npc>
 	<npc element="EARTH" id="22084" level="85" name="Royal Cave Servant" type="Monster">
 		<acquire attribute_exp="1530" exp="1471516" sp="44146"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2425,14 +2421,6 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
 			</clanList>
 		</ai>
 		<collision>
@@ -2472,7 +2460,7 @@
 	</npc>
 	<npc element="EARTH" id="22085" level="84" name="Cave Keeper" type="Monster">
 		<acquire attribute_exp="1428" exp="1493403" sp="44803"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69386" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2501,15 +2489,7 @@
 		<ai clanHelpRange="300" aggroRange="450">
 			<clanList>
 				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
 			</clanList>
 		</ai>
@@ -2548,7 +2528,7 @@
 	</npc>
 	<npc element="EARTH" id="22086" level="82" name="Shackle" type="Monster">
 		<acquire attribute_exp="1230" exp="1341237" sp="40238"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2615,16 +2595,18 @@
 	</npc>
 	<npc element="EARTH" id="22087" level="85" name="Headless Knight" type="Monster">
 		<acquire attribute_exp="1530" exp="1475851" sp="44276"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="44350.854" hpRegen="10" mp="2770.2" mpRegen="5"/>
+			<attack physical="1999.423617" magical="850.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.86723" magical="861.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>520</hitTime>
+            <abnormalResist physical="10" magical="10"/>
 		</stats>
-		<status attackable="true"/>
+		<status undying="false" canBeSown="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="110"/>
 			<param name="MoveAroundSocial1" value="110"/>
@@ -2634,7 +2616,6 @@
 			<param name="SpiritShot" value="100"/>
 			<param name="SpiritShotRate" value="5"/>
 			<param name="LongRangeGuardRate" value="5"/>
-			<skill name="DDMagic" id="4078" level="5"/>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -2685,7 +2666,7 @@
 	</npc>
 	<npc element="EARTH" id="22088" level="82" name="Dustwind Gargoyle" type="Monster">
 		<acquire attribute_exp="1230" exp="1326108" sp="39784"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="67892" hpRegen="10" mp="3221" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2748,16 +2729,18 @@
 	</npc>
 	<npc element="EARTH" id="22089" level="83" name="Thunder Wyrm" type="Monster">
 		<acquire attribute_exp="1328" exp="1351416" sp="40543"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
-			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
-			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="10" mp="2666.1" mpRegen="5"/>
+			<attack physical="1999.423617" magical="1750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.86723" magical="861.87171" />
 			<speed>
 				<walk ground="50"/>
 				<run ground="110"/>
 			</speed>
+			<hitTime>190</hitTime>
+            <abnormalResist physical="10" magical="10"/>
 		</stats>
-		<status attackable="true"/>
+		<status undying="false" canBeSown="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="60"/>
 			<param name="MoveAroundSocial1" value="60"/>
@@ -2772,12 +2755,15 @@
 		<sex>MALE</sex>
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true"/>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>CAVE_SERVANT</clan>
+			</clanList>
+        </ai>
 		<collision>
 			<radius normal="29"/>
 			<height normal="72"/>
 		</collision>
-		<!--Thunder Wyrm-->
 		<dropLists>
 			<drop>
 				<!--Behemoth' Tuning Fork (Трезубец Чудовища)-->
@@ -2807,7 +2793,7 @@
 	</npc>
 	<npc element="EARTH" id="22090" level="83" name="Maluk Succubus" type="Monster">
 		<acquire attribute_exp="1328" exp="1472524" sp="44176"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2858,7 +2844,7 @@
 	</npc>
 	<npc element="EARTH" id="22091" level="83" name="Maluk Succubus Turen" type="Monster">
 		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2926,7 +2912,7 @@
 	</npc>
 	<npc element="EARTH" id="22092" level="85" name="Drake" type="Monster">
 		<acquire attribute_exp="1530" exp="1462846" sp="43886"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -2991,7 +2977,7 @@
 	</npc>
 	<npc element="EARTH" id="22093" level="82" name="Gargoyle Hunter" type="Monster">
 		<acquire attribute_exp="1230" exp="1409015" sp="42271"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="67893" hpRegen="10" mp="3221" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3037,7 +3023,7 @@
 	</npc>
 	<npc element="EARTH" id="22094" level="84" name="Cave Maiden" type="Monster">
 		<acquire attribute_exp="1428" exp="1409578" sp="42288"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3064,16 +3050,8 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<clanList>
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
 				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
 				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
 				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
 			</clanList>
@@ -3112,7 +3090,7 @@
 	</npc>
 	<npc element="EARTH" id="22095" level="83" name="Cave Banshee" type="Monster">
 		<acquire attribute_exp="1328" exp="1376009" sp="41281"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3183,7 +3161,7 @@
 	</npc>
 	<npc element="EARTH" id="22096" level="85" name="Dragon Bearer Captain" type="Monster">
 		<acquire attribute_exp="1530" exp="4188044" sp="125642"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="70073" hpRegen="10" mp="3413" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3246,7 +3224,7 @@
 	</npc>
 	<npc element="EARTH" id="22097" level="84" name="Dragon Bearer Warrior" type="Monster">
 		<acquire attribute_exp="1428" exp="4051344" sp="121541"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3312,7 +3290,7 @@
 	</npc>
 	<npc element="EARTH" id="22098" level="84" name="Dragon Bearer Archer" type="Monster">
 		<acquire attribute_exp="1428" exp="4045629" sp="121369"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="69385" hpRegen="10" mp="3349" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
@@ -3376,7 +3354,7 @@
 	</npc>
 	<npc element="EARTH" id="22099" level="83" name="Cave Banshee" type="Monster">
 		<acquire attribute_exp="1328" exp="1376009" sp="41281"/>
-		<stats con="28" dex="19" int="32" men="1" str="35" wit="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="68659" hpRegen="10" mp="3285" mpRegen="5"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
