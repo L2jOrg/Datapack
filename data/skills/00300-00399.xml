@@ -992,7 +992,7 @@
 				<value level="5">-210</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="1200"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="50">
@@ -1014,7 +1014,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack critical-chance="10.0" over-hit="true">
+			<physical-attack>
 				<power initial="195.0">
 					<value level="2">205.0</value>
 					<value level="3">215.0</value>
@@ -1030,7 +1030,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="346" name="Raging Force" max-level="5" debuff="true" action="A1">
+	<skill id="346" name="Raging Force" max-level="5" debuff="true" action="A2">
 		<!--
             level 1: Hurls a Wind Of Force to attack the target with 195 P. Atk damage. P. Def. -30%% and absorbs Momentum. Requires Fist Weapon.
             level 2: Hurls a Wind Of Force to attack the target with 205 P. Atk damage. P. Def. -30%% and absorbs Momentum. Requires Fist Weapon.
@@ -1039,7 +1039,7 @@
             level 5: Hurls a Wind Of Force to attack the target with 235 P. Atk damage. P. Def. -30%% and absorbs Momentum. Requires Fist Weapon.
          -->
 		<icon initial="icon.skill0346"/>
-		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
+		<attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
 			<magic-level initial="76">
 				<value level="2">78</value>
 				<value level="3">80</value>
@@ -1055,7 +1055,7 @@
 				<value level="5">-210</value>
 			</effect-point>
 			<effect-range initial="1100"/>
-			<hit-time initial="1200"/>
+			<hit-time initial="1500"/>
 		</attributes>
 		<consume>
 			<mana initial="50">
@@ -1067,6 +1067,7 @@
 		</consume>
 		<target type="ENEMY"/>
 		<abnormal type="PD_DOWN">
+			<level initial="5"/>
 			<time initial="20"/>
 			<chance initial="80"/>
 		</abnormal>
@@ -1076,7 +1077,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack critical-chance="0.0">
+			<physical-attack>
 				<power initial="195.0">
 					<value level="2">205.0</value>
 					<value level="3">215.0</value>
@@ -1084,8 +1085,8 @@
 					<value level="5">235.0</value>
 				</power>
 			</physical-attack>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-				<power initial="-23.0"/>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="-30"/>
 			</stat-modify>
 			<effect name="FocusMomentum" scope="SELF">
 				<power initial="8.0"/>

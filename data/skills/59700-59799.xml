@@ -416,10 +416,24 @@
 	</skill>
 	<skill id="59727" name="Scroll: VIP XP/SP Boost">
 		<!-- For 20 minutes, XP/SP Gain from hunting +120%. Does not disappear when dying. -->
-		<icon initial="icon.bm_elmoaden_exp_scrl"/>
-		<attributes property="PHYSIC">
-		</attributes>
-		<target/>
+		<icon initial="icon.bm_elmoaden_exp_scrl"/>		
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <reuse initial="60000"/>
+        </attributes>
+        <target/>
+        <abnormal type="EXP_SP_H">
+            <level initial="2"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="120"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="120"/>
+            </stat-modify>
+        </effects>
 	</skill>
 	<skill id="59728" name="Chronicle Successor’s Necklace">
 		<!-- Damage Reflect Resistance +1%%, P. Skill Power/M. Skill Power +4%%, and Skill Cooldown -1%%. -->
@@ -431,23 +445,64 @@
 	<skill id="59729" name="VIP Agathion Bracelet Resistance Increase">
 		<!-- MEN/Stun/Sleep/Paralysis Resistance +10%. -->
 		<icon initial="icon.skill6366_2"/>
-		<attributes property="MAGIC">
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target/>
+		<effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="10"/>
+                </trait>
+                <trait type="SLEEP">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="10"/>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="10"/>
+                </trait>
+            </defence-trait>
+        </effects>
 	</skill>
 	<skill id="59730" name="VIP Talisman Bracelet">
 		<!-- Can equip 6 Talismans.\n\n<Special Effects>\nHP Recovery Bonus/MP Recovery Bonus +20%, P. Accuracy +3, M. Accuracy +3, Weight Limit +10000. -->
 		<icon initial="icon.dimension_bracelet_i05"/>
-		<attributes property="MAGIC">
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target/>
+		<effects>
+            <effect name="TalismanSlot">
+                <power initial="6.0"/>                   
+            </effect>
+            <stat-modify mode="PER" start-level="4" stat="REGENERATE_MP_RATE">
+                <power initial="20"/>                
+            </stat-modify>
+            <stat-modify mode="PER" start-level="4" stat="REGENERATE_HP_RATE">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify start-level="4" stat="ACCURACY">
+                <power initial="3"/>
+            </stat-modify>
+            <stat-modify start-level="4" stat="ACCURACY_MAGIC">
+                <power initial="3"/>
+            </stat-modify>
+            <stat-modify start-level="4" stat="WEIGHT_LIMIT">
+                <power initial="10000"/>
+            </stat-modify>
+        </effects>
 	</skill>
 	<skill id="59731" name="XP Boosting Rune">
 		<!-- XP/SP Gain from hunting +150%%. -->
 		<icon initial="br_cashtex.item.br_cash_rune_of_exp_i00"/>
-		<attributes property="MAGIC">
-		</attributes>
+		<attributes property="MAGIC"/>
 		<target/>
+		<effects>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="150"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="150"/>
+            </stat-modify>
+		</effects>
 	</skill>
 	<skill id="59732" name="+3-+8 Talisman &amp; Belt Ticket Box">
 		<!-- none -->

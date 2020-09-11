@@ -3,7 +3,7 @@
     <skill id="55700" name="Scroll: Dance of Fire" action="A2">
         <!-- Increases P. Critical Damage +35%% for 10 minutes. -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
             <reuse initial="3000"/>
             <hit-time initial="2500"/>
@@ -307,10 +307,10 @@
         <icon initial="icon.skill19226"/>
         <attributes property="MAGIC"/>
         <target/>
-        <abnormal type="EXP_SP_D">
-            <level initial="1"/>
-            <time initial="-1"/>
-        </abnormal>
+        <!-- <abnormal type="EXP_SP_D"> -->
+            <!-- <level initial="1"/> -->
+            <!-- <time initial="-1"/> -->
+        <!-- </abnormal> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="50.0"/>

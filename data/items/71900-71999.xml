@@ -315,16 +315,22 @@
 		<attributes/>
 	</item>
 
-	<item id="71951" name="VIP Battle Scroll" type="NONE">
+	<item id="71951" name="VIP Battle Scroll" type="POTION">
 	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes auto-use="SUPPLY"/>
+		<attributes reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="59726"/>  <!--  Battle Scroll -->
+		</skill-reducer>
 	</item>
 
 	<item id="71952" name="Scroll: VIP XP/SP Boost" type="POTION">
 	<!-- For 20 min., XP/SP gain +120%. Effect remains even after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="59727"/>  <!-- XP/SP Boost Scroll -->
+		</skill-reducer>
 	</item>
 
 	<armor id="71953" name="VIP Agathion Bracelet - 30-day" type="NONE" body-part="LEFT_BRACELET">
@@ -333,7 +339,9 @@
 		<attributes weight="100" duration="43200" />
 		<crystal />
 		<skills>
-			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->			
+			<skill id="55885" level="2" value="-1"/>
+			<skill id="59729" value="-1"/>			
 		</skills>
 	</armor>
 
@@ -343,7 +351,7 @@
 		<attributes duration="43200" />
 		<crystal />
 		<skills>
-			<skill id="50912" level="6" value="-1"/>  <!-- Talisman Bracelet -->
+			<skill id="59730" level="1" value="-1"/>  <!-- Talisman Bracelet -->
 		</skills>
 	</armor>
 
@@ -455,7 +463,7 @@
 			<item id="49487" min-count="100" max-count="100"/>  <!-- Soulshot Ticket -->
 			<item id="71951" max-count="15" min-count="15"/>  <!-- Vip Battle Scroll -->
 			<item id="71952" max-count="15" min-count="15"/>  <!-- Scroll: VIP XP/SP Boost -->
-			<item id="91756"/>  <!-- Aden Talisman Enhancement Scroll -->
+			<item id="91767"/>  <!-- Aden Talisman Enchant Package -->
 			<item id="29520" min-count="700" max-count="700"/>  <!-- VIP Coin -->
 		</extract>
 	</item>
@@ -474,7 +482,7 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71831" min-count="2" max-count="2" chance="100"/>  <!-- XP/SP Rune - 50% (7-day) Pack -->
+			<item id="71831" min-count="1" max-count="1" chance="100"/>  <!-- XP/SP Rune - 50% (7-day) Pack -->
 		</extract>
 	</item>
 

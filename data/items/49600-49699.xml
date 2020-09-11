@@ -495,10 +495,10 @@
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49674" name="XP Boost Scroll" type="NONE">
+	<item id="49674" name="XP Boost Scroll" type="POTION">
 	<!-- When used, XP/SP Gain when hunting +30% for 20 minutes. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="39134"/>  <!-- XP Boost Scroll -->
 		</skill-reducer>
@@ -553,6 +553,9 @@
 	<armor id="49680" name="Talisman of Insolence Lv. 5" type="NONE" body-part="TALISMAN">
 	<!-- <Options>\nP. Atk. +170\nM. Atk. +235\nM. Damage Resistance +7%\nSkill P. Atk. +2%\nAll Weapon Resistance +2\nMP Consumption -2%\nSTR, INT +1\nCON, MEN +1\n\nBlacksmith Beggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player level-min="60"/>
+		</condition>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -563,9 +566,6 @@
 	<armor id="49681" name="Talisman of Insolence Lv. 6" type="NONE" body-part="TALISMAN">
 	<!-- <Options>\nP. Atk. +200\nM. Atk. +275\nM. Damage Resistance +8%\nSkill P. Atk. +3%\nAll Weapon Resistance +3\nP. Critical Rate +10\nM. Critical Rate +10\nMP Consumption -4%\nSTR, INT +1\nCON, MEN +1\n\nThe effect of the Talisman is applied starting at level 60. Bring a Lv. 6 Talisman and Baium’s Soul to Blacksmith Beggins in Giran to upgrade to a Talisman of Baium. Effects from two such Talismans do not stack. -->
 		<restriction freightable="false" sellable="false"/>
-		<condition add-name="true" msg-id="113">
-			<player level-min="60"/>
-		</condition>
 		<attributes weight="120" enchant-enabled="false" />
 		<crystal />
 		<skills>
@@ -706,5 +706,4 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
-
 </list>

@@ -1178,10 +1178,20 @@
     <skill id="55699" name="Song: Hunter's Song" action="A1">
         <!-- Increases P. Critical Rate +100%% for 10 minutes. -->
         <icon initial="icon.skill0269"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <magic-level initial="1"/>
             <reuse initial="3000"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
+		<abnormal type="SONG_OF_HUNTER">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
 </list>

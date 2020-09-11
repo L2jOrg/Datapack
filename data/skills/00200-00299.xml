@@ -666,7 +666,7 @@
                 </power>
                 <weapon-type>FIST</weapon-type>
             </stat-modify>
-            <trigger-skill-by-attack skill="1612" start-level="11">
+            <trigger-skill-by-attack skill="1612" start-level="11" target="ENEMY">
                 <power initial="1.0"/>
                 <chance initial="33"/>
                 <min-damage initial="1.0"/>
@@ -914,6 +914,7 @@
                     <value level="28">16.0</value>
                     <value level="42">20.0</value>
                 </power>
+				<weapon-type>SPEAR</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -6194,7 +6195,7 @@
         <target/>
         <abnormal type="POSSESSION">
             <level initial="1"/>
-            <time initial="300"/>
+            <time initial="1200"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -6282,7 +6283,7 @@
             <condition name="CanSummon"/>
         </conditions>
         <effects>
-            <summon consume-item="1459" life-time="-1">
+            <summon consume-item="0" life-time="-1">
                 <npc initial="14799.0">
                     <value level="2">14800.0</value>
                     <value level="3">14801.0</value>
@@ -6295,13 +6296,7 @@
                     <value level="10">14808.0</value>
                     <value level="11">14809.0</value>
                 </npc>
-                <consume-count initial="1.0">
-                    <value level="3">2.0</value>
-                    <value level="4">3.0</value>
-                    <value level="5">4.0</value>
-                    <value level="8">7.0</value>
-                    <value level="9">8.0</value>
-                    <value level="10">9.0</value>
+                <consume-count initial="1.0">                   
                 </consume-count>
             </summon>
         </effects>
@@ -7331,14 +7326,13 @@
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
-            <time initial="120">
-                <value level="3">180</value>
-            </time>
+            <time initial="1200"/>             
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0">
                     <value level="2">12.0</value>
+                    <value level="3">15.0</value>
                 </power>
                 <weapon-type>DUAL</weapon-type>
             </stat-modify>
@@ -7359,7 +7353,7 @@
         <target/>
         <abnormal type="POSSESSION">
             <level initial="1"/>
-            <time initial="300"/>
+            <time initial="1200"/>
         </abnormal>
         <conditions>
             <weapon>

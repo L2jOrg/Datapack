@@ -84,14 +84,14 @@
 			<item id="29652" min-count="7" max-count="7"/>  <!-- Major Healing Potion -->
 			<item id="49487" min-count="20" max-count="20"/>  <!-- Soulshot Ticket -->
 			<item id="71951" max-count="5" min-count="5"/>  <!-- Vip Battle Scroll -->
-			<item id="29520" min-count="150" max-count="150" chance="100"/>  <!-- VIP Coin -->
+			<item id="29520" min-count="150" max-count="150"/>  <!-- VIP Coin -->
 		</extract>
 	</item>
 
 	<item id="29008" name="Scroll: Low-grade XP/SP Boost" type="POTION">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
@@ -100,7 +100,7 @@
 	<item id="29009" name="Scroll: Regular XP/SP Boost" type="POTION">
 	<!-- For 20 min., XP/SP gain + 30% when hunting. Effect remains even after death. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="3" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
@@ -109,7 +109,7 @@
 	<item id="29010" name="Scroll: High-grade XP/SP Boost" type="POTION">
 	<!-- For 20 min., XP/SP gain + 100% when hunting. Effect remains even after death. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="4" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
@@ -118,7 +118,7 @@
 	<item id="29011" name="1st Class Transfer Buff Scroll" type="SCROLL">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55003"/>  <!-- 1st Class Transfer Buff Scroll -->
 		</skill-reducer>
@@ -127,7 +127,7 @@
 	<item id="29012" name="2nd Class Transfer Buff Scroll" type="SCROLL">
 	<!-- Bestows the following effects for 20 min.: Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55004" level="2"/>  <!-- 2nd Class Transfer Buff Scroll -->
 		</skill-reducer>
@@ -136,7 +136,7 @@
 	<item id="29013" name="Scroll: Hunter's Song" type="SCROLL">
 	<!-- Grants the effect of the Hunter's Song for 10 minutes. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55699" value="-1"/>  <!-- Song: Hunter's Song -->
 		</skill-reducer>
@@ -145,7 +145,7 @@
 	<item id="29014" name="Scroll: Dance of Fire" type="SCROLL">
 	<!-- Grants the effect of the Dance of Fire for 10 minutes. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55700" value="-1"/>  <!-- Scroll: Dance of Fire -->
 		</skill-reducer>

@@ -7,13 +7,13 @@
             level 4: For 20 minutes, XP/SP Gain from hunting +100%. Does not disappear when dying.
          -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
             <reuse initial="1200000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_H">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -60,7 +60,7 @@
     <skill id="55003" name="1st Class Transfer Buff Scroll" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 2, Might Lv. 2, Concentration Lv. 2, Acumen Lv. 1, Wind Walk Lv. 1, Focus Lv. 1, Agility Lv. 1, Empower Lv. 1. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -99,7 +99,7 @@
     <skill id="55004" name="2nd Class Transfer Buff Scroll" max-level="2" action="A2">
         <!-- For 20 minutes, grants an effect equal to Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
             <hit-time initial="4000"/>
         </attributes>
