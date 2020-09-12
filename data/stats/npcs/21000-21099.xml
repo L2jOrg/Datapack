@@ -1951,7 +1951,6 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="Skill01_ID" id="4032" level="4"/>
-            <skill name="Skill02_ID" id="4072" level="4"/>
         </parameters>
         <race>HUMANOID</race>
         <sex>MALE</sex>
@@ -1971,7 +1970,6 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4032" level="4"/> <!-- NPC Strike -->
-            <skill id="4072" level="4"/> <!-- Stun -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
@@ -1984,10 +1982,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
+        <ai aggroRange="300" isAggressive="false">            
         </ai>
         <collision>
             <radius normal="10"/>
@@ -2351,7 +2346,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>UNDEAD</clan>
             </clanList>

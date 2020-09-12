@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+	<!-- https://4gameforum.com/threads/823691/ -->
+    <npc id="29001" level="85" type="GrandBoss" name="Queen Ant">
+        <parameters>
+            <minions name="Privates">
+                <npc id="29003" count="6" respawnTime="160" weightPoint="1"/>
+                <npc id="29005" count="8" respawnTime="360" weightPoint="1"/>
+            </minions>
+        </parameters>
+        <race>BUG</race>
+        <sex>FEMALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="55" men="80">
+            <vitals hp="40218408.9219331" hpRegen="185.09694484" mp="1887395" mpRegen="96.8"/>
+            <attack physical="3105.353" magical="2000" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="3852" magical="3929"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>370</hitTime>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status attackable="true" undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4019" level="1"/> <!-- Decrease Speed -->
+			<skill id="4416" level="12"/> <!-- Bugs -->
+            <skill id="4021" level="1"/> <!-- Queen Ant -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->           
+            <skill id="4017" level="1"/> <!-- Queen Ant's Blow -->
+        </skillList>
+        <corpseTime>300</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="2000" aggroRange="2000">
+            <clanList>
+                <clan>QUEEN_ANT</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="45"/>
+            <height normal="53"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="6660" min="1" max="1" chance="7.758"/>
+				<item id="5315" min="1" max="1" chance="1.993"/>
+				<item id="5313" min="1" max="1" chance="1.960"/>
+				<item id="5287" min="1" max="1" chance="1.959"/>
+				<item id="5318" min="1" max="1" chance="1.952"/>
+				<item id="5317" min="1" max="1" chance="1.952"/>
+				<item id="5295" min="1" max="1" chance="1.951"/>
+				<item id="5316" min="1" max="1" chance="1.946"/>
+				<item id="5293" min="1" max="1" chance="1.954"/>
+				<item id="5297" min="1" max="1" chance="1.941"/>
+				<item id="5320" min="1" max="1" chance="1.926"/>
+				<item id="5308" min="1" max="1" chance="1.922"/>
+				<item id="5288" min="1" max="1" chance="1.921"/>
+				<item id="5323" min="1" max="1" chance="1.921"/>
+				<item id="5311" min="1" max="1" chance="1.917"/>
+				<item id="5298" min="1" max="1" chance="1.910"/>
+				<item id="5314" min="1" max="1" chance="1.906"/>
+				<item id="5289" min="1" max="1" chance="1.899"/>
+				<item id="5301" min="1" max="1" chance="1.894"/>
+				<item id="5319" min="1" max="1" chance="1.883"/>
+				<item id="5326" min="1" max="1" chance="1.878"/>
+				<item id="5312" min="1" max="1" chance="1.877"/>
+				<item id="5304" min="1" max="1" chance="1.870"/>
+				<item id="5291" min="1" max="1" chance="1.860"/>
+				<item id="5294" min="1" max="1" chance="1.859"/>
+				<item id="5305" min="1" max="1" chance="1.854"/>
+				<item id="5329" min="1" max="1" chance="1.853"/>
+				<item id="5290" min="1" max="1" chance="1.850"/>
+				<item id="5292" min="1" max="1" chance="1.835"/>
+				<item id="5296" min="1" max="1" chance="1.832"/>
+				<item id="235" min="1" max="1" chance="1.560"/>
+				<item id="7902" min="1" max="1" chance="1.564"/>
+				<item id="7899" min="1" max="1" chance="1.554"/>
+				<item id="269" min="1" max="1" chance="1.553"/>
+				<item id="80" min="1" max="1" chance="1.550"/>
+				<item id="7884" min="1" max="1" chance="1.549"/>
+				<item id="98" min="1" max="1" chance="1.536"/>
+				<item id="289" min="1" max="1" chance="1.534"/>
+				<item id="81" min="1" max="1" chance="1.522"/>
+				<item id="2500" min="1" max="1" chance="1.521"/>
+				<item id="236" min="1" max="1" chance="1.518"/>
+				<item id="7895" min="1" max="1" chance="1.516"/>
+				<item id="213" min="1" max="1" chance="1.516"/>
+				<item id="164" min="1" max="1" chance="1.499"/>
+				<item id="2504" min="1" max="1" chance="1.498"/>
+				<item id="151" min="1" max="1" chance="1.488"/>
+				<item id="270" min="1" max="1" chance="1.481"/>
+				<item id="7894" min="1" max="1" chance="1.468"/>
+				<item id="305" min="1" max="1" chance="1.459"/>
+				<item id="212" min="1" max="1" chance="1.459"/>
+				<item id="150" min="1" max="1" chance="1.457"/>
+				<item id="288" min="1" max="1" chance="1.432"/>
+				<item id="8687" min="1" max="1" chance="1"/>
+				<item id="8686" min="1" max="1" chance="1"/>
+				<item id="8685" min="1" max="1" chance="1"/>
+				<item id="8684" min="1" max="1" chance="1"/>
+				<item id="8683" min="1" max="1" chance="1"/>
+				<item id="8682" min="1" max="1" chance="1"/>
+				<item id="8681" min="1" max="1" chance="1"/>
+				<item id="8680" min="1" max="1" chance="1"/>
+				<item id="8679" min="1" max="1" chance="1"/>
+				<item id="8678" min="1" max="1" chance="1"/>
+				<item id="8688" min="1" max="1" chance="1"/>
+				<item id="70000" min="76" max="228" chance="100"/>
+				<item id="94188" min="1" max="1" chance="96.37"/>
+				<item id="33815" min="1" max="1" chance="52.97"/>
+				<item id="33809" min="1" max="1" chance="52.26"/>
+				<item id="91534" min="1" max="1" chance="44.92"/>
+				<item id="8618" min="1" max="1" chance="43.95"/>
+				<item id="91541" min="1" max="1" chance="42.96"/>
+				<item id="91527" min="1" max="1" chance="42.65"/>
+				<item id="91529" min="1" max="1" chance="33.38"/>
+				<item id="91536" min="1" max="1" chance="32.25"/>
+				<item id="91543" min="1" max="1" chance="31.90"/>
+				<item id="8619" min="1" max="1" chance="31.61"/>
+				<item id="91531" min="1" max="1" chance="22.91"/>
+				<item id="91538" min="1" max="1" chance="22.05"/>
+				<item id="8620" min="1" max="1" chance="21.58"/>
+				<item id="91545" min="1" max="1" chance="21.53"/>
+				<item id="94186" min="1" max="1" chance="17.33"/>
+				<item id="91549" min="1" max="1" chance="10.987"/>
+				<item id="91547" min="1" max="1" chance="10.954"/>
+				<item id="91257" min="1" max="1" chance="10.953"/>
+				<item id="8621" min="1" max="1" chance="10.935"/>
+				<item id="91548" min="1" max="1" chance="10.934"/>
+				<item id="91520" min="1" max="1" chance="1"/>
+				<item id="91519" min="1" max="1" chance="1"/>
+				<item id="91512" min="1" max="1" chance="1"/>
+				<item id="91518" min="1" max="1" chance="1"/>
+				<item id="91521" min="1" max="1" chance="1"/>
+				<item id="91523" min="1" max="1" chance="1"/>
+				<item id="91524" min="1" max="1" chance="1"/>
+				<item id="91525" min="1" max="1" chance="1"/>
+				<item id="91499" min="1" max="1" chance="1"/>
+				<item id="91517" min="1" max="1" chance="1"/>
+				<item id="91516" min="1" max="1" chance="1"/>
+				<item id="91500" min="1" max="1" chance="1"/>
+				<item id="91501" min="1" max="1" chance="1"/>
+				<item id="91502" min="1" max="1" chance="1"/>
+				<item id="91503" min="1" max="1" chance="1"/>
+				<item id="91505" min="1" max="1" chance="1"/>
+				<item id="91506" min="1" max="1" chance="1"/>
+				<item id="91507" min="1" max="1" chance="1"/>
+				<item id="91508" min="1" max="1" chance="1"/>
+				<item id="91509" min="1" max="1" chance="1"/>
+				<item id="91515" min="1" max="1" chance="1"/>
+				<item id="91514" min="1" max="1" chance="1"/>
+				<item id="91513" min="1" max="1" chance="1"/>
+				<item id="91522" min="1" max="1" chance="1"/>
+				<item id="91511" min="1" max="1" chance="1"/>
+				<item id="91510" min="1" max="1" chance="1"/>
+				<item id="91504" min="1" max="1" chance="1"/>
+				<item id="91401" min="1" max="1" chance="0.5"/>
+				<item id="91400" min="1" max="1" chance="0.5"/>
+				<item id="91405" min="1" max="1" chance="0.5"/>
+				<item id="91404" min="1" max="1" chance="0.5"/>
+				<item id="91403" min="1" max="1" chance="0.5"/>
+				<item id="91402" min="1" max="1" chance="0.5"/>                
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29002" level="84" type="Monster" name="Queen Ant Larva">
+        <race>BUG</race>
+        <sex>MALE</sex>
+        <acquire sp="1"/>
+        <stats str="40" int="27" dex="32" wit="33" con="48" men="53">
+            <vitals hp="13820191" hpRegen="300.5" mp="23515" mpRegen="10.5"/>
+            <attack physical="989.21" magical="959.01" random="30" critical="7" accuracy="40" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="918.72" magical="1184.16"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="60"/>
+            </speed>
+            <hitTime>350</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="4500" aggroRange="450">
+            <clanList>
+                <clan>QUEEN_ANT</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="12"/>
+            <height normal="8"/>
+        </collision>
+    </npc>
+    <npc id="29003" level="83" type="Monster" name="Nurse Ant">
+        <race>BUG</race>
+        <sex>MALE</sex>
+        <acquire sp="1"/>
+        <stats str="43" int="41" dex="43" wit="33" con="53" men="48">
+            <vitals hp="18921" hpRegen="108.9" mp="2402.6" mpRegen="7.8"/>
+            <attack physical="1137" magical="1395" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="947" magical="820"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="130"/>
+            </speed>
+            <hitTime>260</hitTime>
+            <abnormalResist physical="110" magical="110"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+            <skill id="4020" level="1"/> <!-- Recovery -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="2500">
+            <clanList>
+                <clan>QUEEN_ANT</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="29004" level="83" type="Monster" name="Escort Ant">
+        <parameters>
+            <param name="MoveAroundSocial" value="120"/>
+            <param name="MoveAroundSocial1" value="120"/>
+            <param name="MoveAroundSocial2" value="120"/>
+        </parameters>
+        <race>BUG</race>
+        <sex>MALE</sex>
+        <acquire sp="1"/>
+        <stats str="43" int="41" dex="43" wit="33" con="53" men="48">
+            <vitals hp="19929" hpRegen="108.9" mp="1402.6" mpRegen="7.8"/>
+            <attack physical="1108" magical="1827" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="978" magical="921"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>260</hitTime>
+            <abnormalResist physical="110" magical="110"/>
+        </stats>
+        <status undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="2000" isAggressive="false">
+            <clanList>
+                <clan>QUEEN_ANT</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="29005" level="83" type="Monster" name="Royal Guard Ant">
+        <parameters>
+            <param name="MoveAroundSocial" value="120"/>
+            <param name="MoveAroundSocial1" value="120"/>
+            <param name="MoveAroundSocial2" value="120"/>
+        </parameters>
+        <race>BUG</race>
+        <sex>MALE</sex>
+        <acquire sp="1"/>
+        <stats str="45" int="41" dex="43" wit="33" con="53" men="48">
+            <vitals hp="18921" hpRegen="108.9" mp="2402.6" mpRegen="7.8"/>
+            <attack physical="1890" magical="1074" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="961" magical="923"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>260</hitTime>
+            <abnormalResist physical="110" magical="110"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="2500">
+            <clanList>
+                <clan>QUEEN_ANT</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="29006" level="85" type="GrandBoss" name="Core">
+        <parameters>
+            <minions name="Privates">
+                <npc id="29008" count="3" respawnTime="360" weightPoint="1"/>
+                <npc id="29011" count="4" respawnTime="360" weightPoint="1"/>
+                <npc id="29007" count="10" respawnTime="360" weightPoint="1"/>
+            </minions>
+        </parameters>
+        <race>CONSTRUCT</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="55" men="80">
+            <vitals hp="40218408.9219331" hpRegen="185.09694484" mp="1887395" mpRegen="96.8"/>
+            <attack physical="2722.31" magical="2398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="2602" magical="2293"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="110"/>
+            </speed>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status attackable="true" undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="2"/> <!-- Magic Creatures -->
+        </skillList>
+        <corpseTime>10</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="4500" aggroRange="2000">
+            <clanList>
+                <clan>CURMA_CORE</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="140"/>
+            <height normal="75"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="6662" min="1" max="1" chance="7.765"/>
+				<item id="5315" min="1" max="1" chance="2.025"/>
+				<item id="5293" min="1" max="1" chance="1.975"/>
+				<item id="5316" min="1" max="1" chance="1.962"/>
+				<item id="5297" min="1" max="1" chance="1.961"/>
+				<item id="5295" min="1" max="1" chance="1.957"/>
+				<item id="5298" min="1" max="1" chance="1.953"/>
+				<item id="5292" min="1" max="1" chance="1.951"/>
+				<item id="5290" min="1" max="1" chance="1.940"/>
+				<item id="5289" min="1" max="1" chance="1.928"/>
+				<item id="5301" min="1" max="1" chance="1.928"/>
+				<item id="5317" min="1" max="1" chance="1.926"/>
+				<item id="5288" min="1" max="1" chance="1.922"/>
+				<item id="5296" min="1" max="1" chance="1.903"/>
+				<item id="5305" min="1" max="1" chance="1.900"/>
+				<item id="5287" min="1" max="1" chance="1.895"/>
+				<item id="5329" min="1" max="1" chance="1.890"/>
+				<item id="5318" min="1" max="1" chance="1.889"/>
+				<item id="5319" min="1" max="1" chance="1.875"/>
+				<item id="5323" min="1" max="1" chance="1.862"/>
+				<item id="5314" min="1" max="1" chance="1.852"/>
+				<item id="5304" min="1" max="1" chance="1.840"/>
+				<item id="5308" min="1" max="1" chance="1.837"/>
+				<item id="5312" min="1" max="1" chance="1.834"/>
+				<item id="5311" min="1" max="1" chance="1.834"/>
+				<item id="5313" min="1" max="1" chance="1.833"/>
+				<item id="5326" min="1" max="1" chance="1.829"/>
+				<item id="5320" min="1" max="1" chance="1.829"/>
+				<item id="5294" min="1" max="1" chance="1.828"/>
+				<item id="5291" min="1" max="1" chance="1.825"/>
+				<item id="269" min="1" max="1"  chance="1.563"/>
+				<item id="7895" min="1" max="1" chance="1.559"/>
+				<item id="288" min="1" max="1"  chance="1.552"/>
+				<item id="2500" min="1" max="1" chance="1.550"/>
+				<item id="98" min="1" max="1" chance="1.548"/>
+				<item id="150" min="1" max="1"  chance="1.530"/>
+				<item id="164" min="1" max="1"  chance="1.521"/>
+				<item id="7884" min="1" max="1" chance="1.509"/>
+				<item id="2504" min="1" max="1" chance="1.509"/>
+				<item id="151" min="1" max="1"  chance="1.490"/>
+				<item id="305" min="1" max="1"  chance="1.487"/>
+				<item id="7899" min="1" max="1" chance="1.486"/>
+				<item id="289" min="1" max="1"  chance="1.479"/>
+				<item id="7894" min="1" max="1" chance="1.472"/>
+				<item id="7902" min="1" max="1" chance="1.475"/>
+				<item id="236" min="1" max="1"  chance="1.457"/>
+				<item id="270" min="1" max="1"  chance="1.454"/>
+				<item id="212" min="1" max="1"  chance="1.451"/>
+				<item id="80" min="1" max="1" chance="1.443"/>
+				<item id="81" min="1" max="1" chance="1.440"/>
+				<item id="235" min="1" max="1"  chance="1.437"/>
+				<item id="213" min="1" max="1"  chance="1.434"/>
+				<item id="8687" min="1" max="1" chance="1"/>
+				<item id="8686" min="1" max="1" chance="1"/>
+				<item id="8685" min="1" max="1" chance="1"/>
+				<item id="8684" min="1" max="1" chance="1"/>
+				<item id="8683" min="1" max="1" chance="1"/>
+				<item id="8682" min="1" max="1" chance="1"/>
+				<item id="8681" min="1" max="1" chance="1"/>
+				<item id="8680" min="1" max="1" chance="1"/>
+				<item id="8679" min="1" max="1" chance="1"/>
+				<item id="8678" min="1" max="1" chance="1"/>
+				<item id="8688" min="1" max="1" chance="1"/>
+				<item id="70000" min="297" max="891" chance="100"/>
+				<item id="94188" min="1" max="1" chance="93.76"/>
+				<item id="33809" min="1" max="1" chance="53.11"/>
+				<item id="33815" min="1" max="1" chance="52.80"/>
+				<item id="91527" min="1" max="1" chance="45.08"/>
+				<item id="91541" min="1" max="1" chance="44.94"/>
+				<item id="91534" min="1" max="1" chance="44.38"/>
+				<item id="8618" min="1" max="1" chance="44.01"/>
+				<item id="91543" min="1" max="1" chance="34.06"/>
+				<item id="91536" min="1" max="1" chance="33.02"/>
+				<item id="8619" min="1" max="1" chance="32.69"/>
+				<item id="91529" min="1" max="1" chance="32.24"/>
+				<item id="8620" min="1" max="1" chance="21.80"/>
+				<item id="91538" min="1" max="1" chance="21.78"/>
+				<item id="91531" min="1" max="1" chance="21.41"/>
+				<item id="91545" min="1" max="1" chance="21.17"/>
+				<item id="94186" min="1" max="1" chance="17.96"/>
+				<item id="91549" min="1" max="1" chance="11.044"/>
+				<item id="8621" min="1" max="1" chance="11.043"/>
+				<item id="91548" min="1" max="1" chance="10.981"/>
+				<item id="91547" min="1" max="1" chance="10.950"/>
+				<item id="91521" min="1" max="1" chance="1"/>
+				<item id="91520" min="1" max="1" chance="1"/>
+				<item id="91513" min="1" max="1" chance="1"/>
+				<item id="91519" min="1" max="1" chance="1"/>
+				<item id="91522" min="1" max="1" chance="1"/>
+				<item id="91523" min="1" max="1" chance="1"/>
+				<item id="91524" min="1" max="1" chance="1"/>
+				<item id="91525" min="1" max="1" chance="1"/>
+				<item id="91500" min="1" max="1" chance="1"/>
+				<item id="91518" min="1" max="1" chance="1"/>
+				<item id="91517" min="1" max="1" chance="1"/>
+				<item id="91516" min="1" max="1" chance="1"/>
+				<item id="91499" min="1" max="1" chance="1"/>
+				<item id="91501" min="1" max="1" chance="1"/>
+				<item id="91502" min="1" max="1" chance="1"/>
+				<item id="91503" min="1" max="1" chance="1"/>
+				<item id="91504" min="1" max="1" chance="1"/>
+				<item id="91506" min="1" max="1" chance="1"/>
+				<item id="91507" min="1" max="1" chance="1"/>
+				<item id="91508" min="1" max="1" chance="1"/>
+				<item id="91505" min="1" max="1" chance="1"/>
+				<item id="91509" min="1" max="1" chance="1"/>
+				<item id="91510" min="1" max="1" chance="1"/>
+				<item id="91511" min="1" max="1" chance="1"/>
+				<item id="91512" min="1" max="1" chance="1"/>
+				<item id="91514" min="1" max="1" chance="1"/>
+				<item id="91515" min="1" max="1" chance="1"/>
+				<item id="91403" min="1" max="1" chance="0.5"/>
+				<item id="91404" min="1" max="1" chance="0.5"/>
+				<item id="91405" min="1" max="1" chance="0.5"/>
+				<item id="91401" min="1" max="1" chance="0.5"/>
+				<item id="91402" min="1" max="1" chance="0.5"/>
+				<item id="91400" min="1" max="1" chance="0.5"/>
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29014" level="85" type="GrandBoss" name="Orfen">
+        <parameters>
+            <param name="MoveAroundSocial" value="80"/>
+            <param name="MoveAroundSocial1" value="80"/>
+            <param name="MoveAroundSocial2" value="80"/>
+            <minions name="Privates">
+                <npc id="29016" count="4" respawnTime="360" weightPoint="1"/>
+            </minions>
+        </parameters>
+        <race>ELEMENTAL</race>
+        <sex>FEMALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="55" men="80">
+            <vitals hp="40218408.9219331" hpRegen="185.09694484" mp="1887395" mpRegen="96.8"/>
+            <attack physical="1105.353" magical="2398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1852" magical="1929"/>          
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>710</hitTime>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status attackable="true" undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4062" level="1"/> <!-- Orfen -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="13"/> <!-- Fairies -->
+        </skillList>
+        <corpseTime>300</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="1000" clanHelpRange="3500" isAggressive="true">
+            <clanList>
+                <clan>ORFEN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="35"/>
+            <height normal="143"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="6661" min="1" max="1" chance="7.742"/>
+				<item id="5294" min="1" max="1" chance="1.960"/>
+				<item id="5297" min="1" max="1" chance="1.955"/>
+				<item id="5305" min="1" max="1" chance="1.952"/>
+				<item id="5311" min="1" max="1" chance="1.946"/>
+				<item id="5293" min="1" max="1" chance="1.958"/>
+				<item id="5308" min="1" max="1" chance="1.938"/>
+				<item id="5291" min="1" max="1" chance="1.934"/>
+				<item id="5326" min="1" max="1" chance="1.934"/>
+				<item id="5298" min="1" max="1" chance="1.923"/>
+				<item id="5320" min="1" max="1" chance="1.912"/>
+				<item id="5295" min="1" max="1" chance="1.904"/>
+				<item id="5301" min="1" max="1" chance="1.895"/>
+				<item id="5316" min="1" max="1" chance="1.890"/>
+				<item id="5292" min="1" max="1" chance="1.890"/>
+				<item id="5315" min="1" max="1" chance="1.902"/>
+				<item id="5304" min="1" max="1" chance="1.887"/>
+				<item id="5287" min="1" max="1" chance="1.881"/>
+				<item id="5296" min="1" max="1" chance="1.880"/>
+				<item id="5319" min="1" max="1" chance="1.860"/>
+				<item id="5314" min="1" max="1" chance="1.860"/>
+				<item id="5323" min="1" max="1" chance="1.851"/>
+				<item id="5312" min="1" max="1" chance="1.845"/>
+				<item id="5313" min="1" max="1" chance="1.836"/>
+				<item id="5290" min="1" max="1" chance="1.834"/>
+				<item id="5329" min="1" max="1" chance="1.833"/>
+				<item id="5288" min="1" max="1" chance="1.829"/>
+				<item id="5289" min="1" max="1" chance="1.825"/>
+				<item id="5317" min="1" max="1" chance="1.824"/>
+				<item id="5318" min="1" max="1" chance="1.822"/>
+				<item id="7902" min="1" max="1" chance="1.606"/>
+				<item id="2504" min="1" max="1" chance="1.555"/>
+				<item id="7894" min="1" max="1" chance="1.549"/>
+				<item id="236" min="1" max="1" chance="1.542"/>
+				<item id="270" min="1" max="1" chance="1.539"/>
+				<item id="7899" min="1" max="1" chance="1.536"/>
+				<item id="288" min="1" max="1" chance="1.533"/>
+				<item id="7884" min="1" max="1" chance="1.531"/>
+				<item id="2500" min="1" max="1" chance="1.517"/>
+				<item id="150" min="1" max="1" chance="1.503"/>
+				<item id="213" min="1" max="1" chance="1.501"/>
+				<item id="212" min="1" max="1" chance="1.486"/>
+				<item id="7895" min="1" max="1" chance="1.476"/>
+				<item id="305" min="1" max="1" chance="1.464"/>
+				<item id="98" min="1" max="1" chance="1.462"/>
+				<item id="164" min="1" max="1" chance="1.462"/>
+				<item id="269" min="1" max="1" chance="1.451"/>
+				<item id="81" min="1" max="1" chance="1.447"/>
+				<item id="289" min="1" max="1" chance="1.445"/>
+				<item id="80" min="1" max="1" chance="1.445"/>
+				<item id="235" min="1" max="1" chance="1.437"/>
+				<item id="151" min="1" max="1" chance="1.436"/>
+				<item id="8687" min="1" max="1" chance="1"/>
+				<item id="8686" min="1" max="1" chance="1"/>
+				<item id="8685" min="1" max="1" chance="1"/>
+				<item id="8684" min="1" max="1" chance="1"/>
+				<item id="8683" min="1" max="1" chance="1"/>
+				<item id="8682" min="1" max="1" chance="1"/>
+				<item id="8681" min="1" max="1" chance="1"/>
+				<item id="8680" min="1" max="1" chance="1"/>
+				<item id="8679" min="1" max="1" chance="1"/>
+				<item id="8678" min="1" max="1" chance="1"/>
+				<item id="8688" min="1" max="1" chance="1"/>
+				<item id="70000" min="198" max="593" chance="100"/>
+				<item id="94188" min="1" max="1" chance="89.11"/>
+				<item id="33809" min="1" max="1" chance="52.78"/>
+				<item id="33815" min="1" max="1" chance="52.48"/>
+				<item id="91541" min="1" max="1" chance="44.66"/>
+				<item id="8618" min="1" max="1" chance="43.96"/>
+				<item id="91534" min="1" max="1" chance="42.43"/>
+				<item id="91527" min="1" max="1" chance="42.04"/>
+				<item id="91529" min="1" max="1" chance="34.21"/>
+				<item id="91536" min="1" max="1" chance="34.18"/>
+				<item id="8619" min="1" max="1" chance="33.87"/>
+				<item id="91543" min="1" max="1" chance="33.00"/>
+				<item id="91531" min="1" max="1" chance="22.67"/>
+				<item id="8620" min="1" max="1" chance="22.21"/>
+				<item id="91545" min="1" max="1" chance="21.64"/>
+				<item id="91538" min="1" max="1" chance="21.09"/>
+				<item id="94186" min="1" max="1" chance="16.85"/>
+				<item id="91549" min="1" max="1" chance="11.054"/>
+				<item id="8621" min="1" max="1" chance="11.036"/>
+				<item id="91258" min="1" max="1" chance="11.034"/>
+				<item id="91548" min="1" max="1" chance="10.992"/>
+				<item id="91547" min="1" max="1" chance="10.962"/>
+				<item id="91518" min="1" max="1" chance="1"/>
+				<item id="91519" min="1" max="1" chance="1"/>
+				<item id="91520" min="1" max="1" chance="1"/>
+				<item id="91521" min="1" max="1" chance="1"/>
+				<item id="91523" min="1" max="1" chance="1"/>
+				<item id="91524" min="1" max="1" chance="1"/>
+				<item id="91525" min="1" max="1" chance="1"/>
+				<item id="91499" min="1" max="1" chance="1"/>
+				<item id="91512" min="1" max="1" chance="1"/>
+				<item id="91517" min="1" max="1" chance="1"/>
+				<item id="91516" min="1" max="1" chance="1"/>
+				<item id="91500" min="1" max="1" chance="1"/>
+				<item id="91501" min="1" max="1" chance="1"/>
+				<item id="91502" min="1" max="1" chance="1"/>
+				<item id="91503" min="1" max="1" chance="1"/>
+				<item id="91505" min="1" max="1" chance="1"/>
+				<item id="91506" min="1" max="1" chance="1"/>
+				<item id="91507" min="1" max="1" chance="1"/>
+				<item id="91508" min="1" max="1" chance="1"/>
+				<item id="91509" min="1" max="1" chance="1"/>
+				<item id="91515" min="1" max="1" chance="1"/>
+				<item id="91514" min="1" max="1" chance="1"/>
+				<item id="91513" min="1" max="1" chance="1"/>
+				<item id="91522" min="1" max="1" chance="1"/>
+				<item id="91511" min="1" max="1" chance="1"/>
+				<item id="91510" min="1" max="1" chance="1"/>
+				<item id="91504" min="1" max="1" chance="1"/>
+				<item id="91401" min="1" max="1" chance="0.5"/>
+				<item id="91400" min="1" max="1" chance="0.5"/>
+				<item id="91405" min="1" max="1" chance="0.5"/>
+				<item id="91404" min="1" max="1" chance="0.5"/>
+				<item id="91403" min="1" max="1" chance="0.5"/>
+				<item id="91402" min="1" max="1" chance="0.5"/>
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29015" level="83" type="Monster" name="Laikel">
+        <parameters>
+            <param name="MoveAroundSocial" value="70"/>
+            <param name="MoveAroundSocial1" value="70"/>
+            <param name="MoveAroundSocial2" value="70"/>
+        </parameters>
+        <race>BEAST</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+            <vitals hp="18619" hpRegen="158" mp="36936" mpRegen="2.1"/>
+            <attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="965" magical="880"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>540</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="2500">
+            <clanList>
+                <clan>ORFEN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="37"/>
+            <height normal="64"/>
+        </collision>
+    </npc>
+    <npc id="29016" level="83" type="Monster" name="Laikel Leos">
+        <parameters>
+            <param name="MoveAroundSocial" value="70"/>
+            <param name="MoveAroundSocial1" value="70"/>
+            <param name="MoveAroundSocial2" value="70"/>
+        </parameters>
+        <race>BEAST</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+            <vitals hp="18619" hpRegen="162.7" mp="36936" mpRegen="2.1"/>
+            <attack physical="1858" magical="1563" random="30" critical="15" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="983" magical="886"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>540</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="2700" aggroRange="450">
+            <clanList>
+                <clan>ORFEN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="37"/>
+            <height normal="64"/>
+        </collision>
+    </npc>
+    <npc id="29017" level="83" type="Monster" name="Riba">
+        <parameters>
+            <param name="MoveAroundSocial" value="40"/>
+            <param name="MoveAroundSocial1" value="40"/>
+            <param name="MoveAroundSocial2" value="40"/>
+        </parameters>
+        <race>BUG</race>
+        <sex>FEMALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+            <vitals hp="18619" hpRegen="158" mp="36936" mpRegen="2.1"/>
+            <attack physical="1298" magical="1140" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="965" magical="880"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="2700" aggroRange="450">
+            <clanList>
+                <clan>ORFEN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="25"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="29018" level="83" type="Monster" name="Riba Iren">
+        <race>BUG</race>
+        <sex>FEMALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+            <vitals hp="18619" hpRegen="162" mp="36936" mpRegen="2.1"/>
+            <attack physical="1758" magical="1563" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1183" magical="986"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="12"/> <!-- Bugs -->
+            <skill id="4516" level="1"/> <!-- Orfen Heal -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="2900" isAggressive="true">
+            <clanList>
+                <clan>ORFEN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="25"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="29019" level="84" type="GrandBoss" name="Antharas">
+        <race>DRAGON</race>
+        <sex>MALE</sex>
+        <acquire exp="40664236032" sp="9759417" raidPoints="1000"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="7500000" hpRegen="1000" mp="18000" mpRegen="199"/>
+            <attack physical="3260" magical="1700" random="30" critical="4" accuracy="40" attackSpeed="206" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="1940" magical="1840"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="186"/>
+            </speed>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status undying="false" noSleepMode="true" isDeathPenalty="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4071" level="2"/> <!-- Resist Bow/Crossbow Weapons -->
+            <skill id="4106" level="1"/> <!-- Antharas Stun -->
+            <skill id="4108" level="1"/> <!-- Antharas Terror -->
+            <skill id="4109" level="1"/> <!-- Curse of Antharas -->
+            <skill id="4110" level="2"/> <!-- Breath Attack -->
+            <skill id="4111" level="1"/> <!-- Antharas Fossilization -->
+            <skill id="4112" level="1"/> <!-- Ordinary Attack -->
+            <skill id="4113" level="1"/> <!-- Animal doing ordinary attack -->
+            <skill id="4122" level="1"/> <!-- Antharas -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="10"/> <!-- Dragons -->
+            <skill id="5092" level="1"/> <!-- Antharas Terror -->
+            <skill id="5093" level="1"/> <!-- Antharas Meteor -->
+        </skillList>
+        <corpseTime>14</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="4500" clanHelpRange="2500" isAggressive="true"/>
+        <collision>
+            <radius normal="300"/>
+            <height normal="300"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="5315" min="1" max="3" chance="53.58"/>
+				<item id="5292" min="1" max="3" chance="52.18"/>
+				<item id="90992" min="1" max="1" chance="32.17"/>
+				<item id="5311" min="1" max="3" chance="22.50"/>
+				<item id="5329" min="1" max="3" chance="22.17"/>
+				<item id="5316" min="1" max="3" chance="22.10"/>
+				<item id="5326" min="1" max="3" chance="22.03"/>
+				<item id="5323" min="1" max="3" chance="21.86"/>
+				<item id="5320" min="1" max="3" chance="21.78"/>
+				<item id="5293" min="1" max="3" chance="21.75"/>
+				<item id="5308" min="1" max="3" chance="19.68"/>
+				<item id="7892" min="1" max="3" chance="18.92"/>
+				<item id="5301" min="1" max="3" chance="19.02"/>
+				<item id="7883" min="1" max="3" chance="18.71"/>
+				<item id="7893" min="1" max="3" chance="18.25"/>
+				<item id="7900" min="1" max="3" chance="18.02"/>
+				<item id="7901" min="1" max="3" chance="17.32"/>
+				<item id="7889" min="1" max="3" chance="17.18"/>
+				<item id="5317" min="1" max="3" chance="15.21"/>
+				<item id="5313" min="1" max="3" chance="15.05"/>
+				<item id="5318" min="1" max="3" chance="14.97"/>
+				<item id="5312" min="1" max="3" chance="14.92"/>
+				<item id="5319" min="1" max="3" chance="14.50"/>
+				<item id="5314" min="1" max="3" chance="14.44"/>
+				<item id="5304" min="1" max="3" chance="14.19"/>
+				<item id="5295" min="1" max="3" chance="14.18"/>
+				<item id="5305" min="1" max="3" chance="13.90"/>
+				<item id="5298" min="1" max="3" chance="13.86"/>
+				<item id="5296" min="1" max="3" chance="13.83"/>
+				<item id="5297" min="1" max="3" chance="13.79"/>
+				<item id="5289" min="1" max="3" chance="13.67"/>
+				<item id="5294" min="1" max="3" chance="13.41"/>
+				<item id="5288" min="1" max="3" chance="13.31"/>
+				<item id="5287" min="1" max="3" chance="13.25"/>
+				<item id="5291" min="1" max="3" chance="11.006"/>
+				<item id="5290" min="1" max="3" chance="10.933"/>
+				<item id="80" min="1" max="1" chance="9.303"/>
+				<item id="213" min="1" max="1" chance="9.254"/>
+				<item id="164" min="1" max="1" chance="9.242"/>
+				<item id="98" min="1" max="1" chance="9.238"/>
+				<item id="151" min="1" max="1" chance="9.214"/>
+				<item id="270" min="1" max="1" chance="9.185"/>
+				<item id="91888" min="1" max="1" chance="9.183"/>
+				<item id="150" min="1" max="1" chance="9.199"/>
+				<item id="7895" min="1" max="1" chance="9.179"/>
+				<item id="7894" min="1" max="1" chance="9.176"/>
+				<item id="81" min="1" max="1" chance="9.188"/>
+				<item id="235" min="1" max="1" chance="9.161"/>
+				<item id="7902" min="1" max="1" chance="9.157"/>
+				<item id="91903" min="1" max="1" chance="9.157"/>
+				<item id="288" min="1" max="1" chance="9.154"/>
+				<item id="212" min="1" max="1" chance="9.174"/>
+				<item id="236" min="1" max="1" chance="9.142"/>
+				<item id="7884" min="1" max="1" chance="9.141"/>
+				<item id="2504" min="1" max="1" chance="9.135"/>
+				<item id="269" min="1" max="1" chance="9.130"/>
+				<item id="305" min="1" max="1" chance="9.102"/>
+				<item id="289" min="1" max="1" chance="9.097"/>
+				<item id="2500" min="1" max="1" chance="9.094"/>
+				<item id="7899" min="1" max="1" chance="9.090"/>
+				<item id="8680" min="1" max="1" chance="7.981"/>
+				<item id="8679" min="1" max="1" chance="7.946"/>
+				<item id="8678" min="1" max="1" chance="7.945"/>
+				<item id="91887" min="1" max="1" chance="7.939"/>
+				<item id="8682" min="1" max="1" chance="7.874"/>
+				<item id="91902" min="1" max="1" chance="7.884"/>
+				<item id="8681" min="1" max="1" chance="7.869"/>
+				<item id="8684" min="1" max="1" chance="7.801"/>
+				<item id="5706" min="1" max="1" chance="7.800"/>
+				<item id="8687" min="1" max="1" chance="7.788"/>
+				<item id="8683" min="1" max="1" chance="7.780"/>
+				<item id="8685" min="1" max="1" chance="7.775"/>
+				<item id="8688" min="1" max="1" chance="7.755"/>
+				<item id="8686" min="1" max="1" chance="7.745"/>
+				<item id="959" min="1" max="1" chance="100"/>
+				<item id="91547" min="1" max="1" chance="100"/>
+				<item id="91548" min="1" max="1" chance="100"/>
+				<item id="91549" min="1" max="1" chance="100"/>
+				<item id="90998" min="1" max="3" chance="100"/>
+				<item id="90997" min="3" max="7" chance="100"/>
+				<item id="70000" min="1356" max="4068" chance="100"/>
+				<item id="49756" min="3" max="7" chance="100"/>
+				<item id="960" min="1" max="1" chance="100"/>
+				<item id="94188" min="1" max="1" chance="89.48"/>
+				<item id="33814" min="3" max="7" chance="53.26"/>
+				<item id="33808" min="3" max="7" chance="53.06"/>
+				<item id="33809" min="2" max="4" chance="52.35"/>
+				<item id="33807" min="3" max="7" chance="52.20"/>
+				<item id="33815" min="2" max="4" chance="52.10"/>
+				<item id="33813" min="3" max="7" chance="51.49"/>
+				<item id="91497" min="1" max="1" chance="22.17"/>
+				<item id="94186" min="1" max="1" chance="16.82"/>
+				<item id="91525" min="1" max="1" chance="4.211"/>
+				<item id="91501" min="1" max="1" chance="4.135"/>
+				<item id="91522" min="1" max="1" chance="4.130"/>
+				<item id="91512" min="1" max="1" chance="4.122"/>
+				<item id="91507" min="1" max="1" chance="4.122"/>
+				<item id="91513" min="1" max="1" chance="4.120"/>
+				<item id="91523" min="1" max="1" chance="4.119"/>
+				<item id="91502" min="1" max="1" chance="4.117"/>
+				<item id="91520" min="1" max="1" chance="4.116"/>
+				<item id="91500" min="1" max="1" chance="4.115"/>
+				<item id="91518" min="1" max="1" chance="4.114"/>
+				<item id="91515" min="1" max="1" chance="4.113"/>
+				<item id="91506" min="1" max="1" chance="4.101"/>
+				<item id="91503" min="1" max="1" chance="4.087"/>
+				<item id="91521" min="1" max="1" chance="4.077"/>
+				<item id="91524" min="1" max="1" chance="4.073"/>
+				<item id="91511" min="1" max="1" chance="4.073"/>
+				<item id="91510" min="1" max="1" chance="4.066"/>
+				<item id="91504" min="1" max="1" chance="4.041"/>
+				<item id="91519" min="1" max="1" chance="4.033"/>
+				<item id="91509" min="1" max="1" chance="4.031"/>
+				<item id="91514" min="1" max="1" chance="4.028"/>
+				<item id="91508" min="1" max="1" chance="4.023"/>
+				<item id="91499" min="1" max="1" chance="4.023"/>
+				<item id="91517" min="1" max="1" chance="4.015"/>
+				<item id="91505" min="1" max="1" chance="4.011"/>
+				<item id="91516" min="1" max="1" chance="4.008"/>
+				<item id="90899" min="1" max="1" chance="3.288"/>
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29020" level="85" type="GrandBoss" name="Baium">
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="53342293" hpRegen="319.2293199" mp="18000" mpRegen="3"/>
+            <attack physical="3874.18" magical="2607" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3709" magical="2460"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status attackable="true" undying="false"/>
+        <skillList>
+            <skill id="4127" level="1"/> <!-- Baium: General Attack -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+        </skillList>
+        <corpseTime>13</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="true">
+            <skill primaryId="4127"/>
+        </ai>
+        <collision>
+            <radius normal="65"/>
+            <height normal="174"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="49580" min="1" max="1" chance="7.731"/> 
+				<item id="49683" min="1" max="1" chance="3.314"/> 
+				<item id="5315" min="1" max="1" chance="1.993"/> 
+				<item id="5298" min="1" max="1" chance="1.959"/> 
+				<item id="5289" min="1" max="1" chance="1.959"/> 
+				<item id="5294" min="1" max="1" chance="1.956"/> 
+				<item id="5311" min="1" max="1" chance="1.943"/> 
+				<item id="5304" min="1" max="1" chance="1.942"/> 
+				<item id="5313" min="1" max="1" chance="1.937"/> 
+				<item id="5293" min="1" max="1" chance="1.947"/> 
+				<item id="5295" min="1" max="1" chance="1.925"/> 
+				<item id="5301" min="1" max="1" chance="1.921"/> 
+				<item id="5316" min="1" max="1" chance="1.920"/> 
+				<item id="5288" min="1" max="1" chance="1.896"/> 
+				<item id="5329" min="1" max="1" chance="1.895"/> 
+				<item id="5323" min="1" max="1" chance="1.881"/> 
+				<item id="5296" min="1" max="1" chance="1.878"/> 
+				<item id="5320" min="1" max="1" chance="1.871"/> 
+				<item id="5326" min="1" max="1" chance="1.870"/> 
+				<item id="5290" min="1" max="1" chance="1.855"/> 
+				<item id="5318" min="1" max="1" chance="1.845"/> 
+				<item id="5287" min="1" max="1" chance="1.839"/> 
+				<item id="5308" min="1" max="1" chance="1.836"/> 
+				<item id="5314" min="1" max="1" chance="1.835"/> 
+				<item id="5297" min="1" max="1" chance="1.832"/> 
+				<item id="5291" min="1" max="1" chance="1.832"/> 
+				<item id="5305" min="1" max="1" chance="1.830"/> 
+				<item id="5292" min="1" max="1" chance="1.828"/> 
+				<item id="5312" min="1" max="1" chance="1.827"/> 
+				<item id="5317" min="1" max="1" chance="1.827"/> 
+				<item id="5319" min="1" max="1" chance="1.825"/> 
+				<item id="269" min="1" max="1" chance="1.567"/> 
+				<item id="212" min="1" max="1" chance="1.564"/> 
+				<item id="151" min="1" max="1" chance="1.563"/> 
+				<item id="7895" min="1" max="1" chance="1.556"/> 
+				<item id="80" min="1" max="1" chance="1.554"/> 
+				<item id="235" min="1" max="1" chance="1.552"/> 
+				<item id="305" min="1" max="1" chance="1.546"/> 
+				<item id="270" min="1" max="1" chance="1.537"/> 
+				<item id="7902" min="1" max="1" chance="1.533"/> 
+				<item id="7884" min="1" max="1" chance="1.523"/> 
+				<item id="288" min="1" max="1" chance="1.521"/> 
+				<item id="150" min="1" max="1" chance="1.520"/> 
+				<item id="7899" min="1" max="1" chance="1.514"/> 
+				<item id="2504" min="1" max="1" chance="1.504"/> 
+				<item id="7894" min="1" max="1" chance="1.504"/> 
+				<item id="81" min="1" max="1" chance="1.500"/> 
+				<item id="2500" min="1" max="1" chance="1.493"/> 
+				<item id="289" min="1" max="1" chance="1.476"/> 
+				<item id="213" min="1" max="1" chance="1.454"/> 
+				<item id="164" min="1" max="1" chance="1.452"/> 
+				<item id="98" min="1" max="1" chance="1.443"/> 
+				<item id="236" min="1" max="1" chance="1.431"/> 
+				<item id="8688" min="1" max="1" chance="1"/> 
+				<item id="8687" min="1" max="1" chance="1"/> 
+				<item id="8686" min="1" max="1" chance="1"/> 
+				<item id="8685" min="1" max="1" chance="1"/> 
+				<item id="8684" min="1" max="1" chance="1"/> 
+				<item id="8683" min="1" max="1" chance="1"/> 
+				<item id="8681" min="1" max="1" chance="1"/> 
+				<item id="8680" min="1" max="1" chance="1"/> 
+				<item id="8679" min="1" max="1" chance="1"/> 
+				<item id="8678" min="1" max="1" chance="1"/> 
+				<item id="8682" min="1" max="1" chance="1"/> 
+				<item id="70000" min="1" max="1" chance="100"/> 
+				<item id="94188" min="1356" max="4068" chance="90.36"/> 
+				<item id="33809" min="1" max="1" chance="52.61"/> 
+				<item id="49756" min="1" max="1" chance="51.99"/> 
+				<item id="33815" min="2" max="4" chance="51.34"/> 
+				<item id="91527" min="1" max="1" chance="45.98"/> 
+				<item id="8618" min="1" max="1" chance="43.89"/> 
+				<item id="91541" min="1" max="1" chance="42.71"/> 
+				<item id="91534" min="1" max="1" chance="42.38"/> 
+				<item id="91529" min="1" max="1" chance="33.65"/> 
+				<item id="91543" min="1" max="1" chance="33.29"/> 
+				<item id="8619" min="1" max="1" chance="32.60"/> 
+				<item id="91536" min="1" max="1" chance="31.54"/> 
+				<item id="91545" min="1" max="1" chance="22.47"/> 
+				<item id="91538" min="1" max="1" chance="22.33"/> 
+				<item id="8620" min="1" max="1" chance="21.81"/> 
+				<item id="91531" min="1" max="1" chance="21.59"/> 
+				<item id="94186" min="1" max="1" chance="18.37"/> 
+				<item id="91549" min="1" max="1" chance="11.027"/> 
+				<item id="91256" min="1" max="1" chance="11.017"/> 
+				<item id="8621" min="1" max="1" chance="10.997"/> 
+				<item id="91548" min="1" max="1" chance="10.951"/> 
+				<item id="91547" min="1" max="1" chance="10.937"/> 
+				<item id="90899" min="1" max="1" chance="3.284"/> 
+				<item id="91519" min="1" max="1" chance="1"/> 
+				<item id="91520" min="1" max="1" chance="1"/> 
+				<item id="91521" min="1" max="1" chance="1"/> 
+				<item id="91522" min="1" max="1" chance="1"/> 
+				<item id="91525" min="1" max="1" chance="1"/> 
+				<item id="91523" min="1" max="1" chance="1"/> 
+				<item id="91524" min="1" max="1" chance="1"/> 
+				<item id="91503" min="1" max="1" chance="1"/> 
+				<item id="91511" min="1" max="1" chance="1"/> 
+				<item id="91518" min="1" max="1" chance="1"/> 
+				<item id="91517" min="1" max="1" chance="1"/> 
+				<item id="91516" min="1" max="1" chance="1"/> 
+				<item id="91499" min="1" max="1" chance="1"/> 
+				<item id="91500" min="1" max="1" chance="1"/> 
+				<item id="91501" min="1" max="1" chance="1"/> 
+				<item id="91502" min="1" max="1" chance="1"/> 
+				<item id="91504" min="1" max="1" chance="1"/> 
+				<item id="91505" min="1" max="1" chance="1"/> 
+				<item id="91506" min="1" max="1" chance="1"/> 
+				<item id="91507" min="1" max="1" chance="1"/> 
+				<item id="91508" min="1" max="1" chance="1"/> 
+				<item id="91515" min="1" max="1" chance="1"/> 
+				<item id="91514" min="1" max="1" chance="1"/> 
+				<item id="91513" min="1" max="1" chance="1"/> 
+				<item id="91512" min="1" max="1" chance="1"/> 
+				<item id="91510" min="1" max="1" chance="1"/> 
+				<item id="91509" min="1" max="1" chance="1"/> 
+				<item id="91404" min="1" max="1" chance="0.5"/> 
+				<item id="91405" min="1" max="1" chance="0.5"/> 
+				<item id="91403" min="1" max="1" chance="0.5"/> 
+				<item id="91402" min="1" max="1" chance="0.5"/> 
+				<item id="91401" min="1" max="1" chance="0.5"/> 
+				<item id="91400" min="1" max="1" chance="0.5"/> 
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29021" level="80" type="Monster" name="Archangel">
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="93"/> <!-- Winged Spear -->
+        <acquire exp="11520" sp="2"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="290966.74193" hpRegen="8.5" mp="1608.045" mpRegen="3"/>
+            <attack physical="895" magical="471" random="30" critical="4" accuracy="40" attackSpeed="206" type="SPEAR" range="40" distance="80" width="120"/>
+            <defence physical="5108" magical="1686"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4132" level="1"/> <!-- Spear: Pound the Ground -->
+            <skill id="4133" level="1"/> <!-- Heal -->
+            <skill id="4416" level="8"/> <!-- Angel -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>ARCHANGEL</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="29022" level="85" type="GrandBoss" name="Zaken">
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="20000000" hpRegen="310.756323" mp="12240" mpRegen="127.6"/>
+            <attack physical="33864" magical="42273" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3680" magical="4661"/>
+            <speed>
+                <walk ground="42"/>
+                <run ground="190"/>
+            </speed>
+            <hitTime>590</hitTime>
+            <abnormalResist physical="230" magical="230"/>
+        </stats>
+        <status undying="false" noSleepMode="true"/>
+        <skillList>
+            <skill id="4221" level="1"/> <!-- Range Dual Attack -->
+            <skill id="4220" level="1"/> <!-- Dual Attack -->
+            <skill id="4218" level="1"/> <!-- Drain -->
+            <skill id="4219" level="1"/> <!-- Hold -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+        </skillList>
+        <corpseTime>300</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="19.2"/>
+            <height normal="39"/>
+        </collision>
+        <dropLists>
+            <drop>
+				<item id="90763" min="1" max="1" chance="7.635"/> 
+				<item id="5293" min="1" max="1" chance="2.008"/> 
+				<item id="5320" min="1" max="1" chance="1.960"/> 
+				<item id="5313" min="1" max="1" chance="1.959"/> 
+				<item id="5318" min="1" max="1" chance="1.956"/> 
+				<item id="5287" min="1" max="1" chance="1.956"/> 
+				<item id="5308" min="1" max="1" chance="1.951"/> 
+				<item id="5290" min="1" max="1" chance="1.951"/> 
+				<item id="5298" min="1" max="1" chance="1.941"/> 
+				<item id="5319" min="1" max="1" chance="1.930"/> 
+				<item id="5314" min="1" max="1" chance="1.929"/> 
+				<item id="5294" min="1" max="1" chance="1.927"/> 
+				<item id="5317" min="1" max="1" chance="1.922"/> 
+				<item id="5289" min="1" max="1" chance="1.920"/> 
+				<item id="5304" min="1" max="1" chance="1.914"/> 
+				<item id="5291" min="1" max="1" chance="1.914"/> 
+				<item id="5297" min="1" max="1" chance="1.912"/> 
+				<item id="5315" min="1" max="1" chance="1.916"/> 
+				<item id="5292" min="1" max="1" chance="1.903"/> 
+				<item id="5323" min="1" max="1" chance="1.900"/> 
+				<item id="5288" min="1" max="1" chance="1.898"/> 
+				<item id="5311" min="1" max="1" chance="1.896"/> 
+				<item id="5312" min="1" max="1" chance="1.895"/> 
+				<item id="5295" min="1" max="1" chance="1.888"/> 
+				<item id="5326" min="1" max="1" chance="1.865"/> 
+				<item id="5329" min="1" max="1" chance="1.863"/> 
+				<item id="5316" min="1" max="1" chance="1.859"/> 
+				<item id="5301" min="1" max="1" chance="1.848"/> 
+				<item id="5305" min="1" max="1" chance="1.829"/> 
+				<item id="5296" min="1" max="1" chance="1.829"/> 
+				<item id="270" min="1" max="1" chance="1.557"/> 
+				<item id="150" min="1" max="1" chance="1.556"/> 
+				<item id="7899" min="1" max="1" chance="1.549"/> 
+				<item id="151" min="1" max="1" chance="1.546"/> 
+				<item id="2504" min="1" max="1" chance="1.543"/> 
+				<item id="288" min="1" max="1" chance="1.543"/> 
+				<item id="235" min="1" max="1" chance="1.541"/> 
+				<item id="289" min="1" max="1" chance="1.540"/> 
+				<item id="236" min="1" max="1" chance="1.538"/> 
+				<item id="305" min="1" max="1" chance="1.524"/> 
+				<item id="98" min="1" max="1" chance=" 1.522"/> 
+				<item id="7894" min="1" max="1" chance="1.497"/> 
+				<item id="164" min="1" max="1" chance="1.488"/> 
+				<item id="7895" min="1" max="1" chance="1.483"/> 
+				<item id="212" min="1" max="1" chance="1.477"/> 
+				<item id="81" min="1" max="1" chance=" 1.474"/> 
+				<item id="7902" min="1" max="1" chance="1.471"/> 
+				<item id="269" min="1" max="1" chance="1.458"/> 
+				<item id="2500" min="1" max="1" chance="1.456"/> 
+				<item id="7884" min="1" max="1" chance="1.455"/> 
+				<item id="213" min="1" max="1" chance="1.446"/> 
+				<item id="80" min="1" max="1" chance=" 1.432"/> 
+				<item id="8685" min="1" max="1" chance="1"/> 
+				<item id="8686" min="1" max="1" chance="1"/> 
+				<item id="8687" min="1" max="1" chance="1"/> 
+				<item id="8688" min="1" max="1" chance="1"/> 
+				<item id="8684" min="1" max="1" chance="1"/> 
+				<item id="8683" min="1" max="1" chance="1"/> 
+				<item id="8681" min="1" max="1" chance="1"/> 
+				<item id="8680" min="1" max="1" chance="1"/> 
+				<item id="8679" min="1" max="1" chance="1"/> 
+				<item id="8678" min="1" max="1" chance="1"/> 
+				<item id="8682" min="1" max="1" chance="1"/> 
+				<item id="70000" min="1356" max="4068" chance="100"/>
+				<item id="94188" min="1" max="1" chance="95.20"/> 
+				<item id="33815" min="1" max="1" chance="53.36"/> 
+				<item id="33809" min="1" max="1" chance="51.27"/> 
+				<item id="91534" min="1" max="1" chance="45.95"/> 
+				<item id="91527" min="1" max="1" chance="45.73"/> 
+				<item id="8618" min="1" max="1" chance="44.48"/> 
+				<item id="91541" min="1" max="1" chance="42.94"/> 
+				<item id="91543" min="1" max="1" chance="34.24"/> 
+				<item id="91529" min="1" max="1" chance="33.28"/> 
+				<item id="8619" min="1" max="1" chance="32.93"/> 
+				<item id="91536" min="1" max="1" chance="32.66"/> 
+				<item id="91545" min="1" max="1" chance="21.98"/> 
+				<item id="91531" min="1" max="1" chance="21.71"/> 
+				<item id="91538" min="1" max="1" chance="21.02"/> 
+				<item id="8620" min="1" max="1" chance="21.01"/> 
+				<item id="94186" min="1" max="1" chance="17.64"/> 
+				<item id="8621" min="1" max="1" chance="11.043"/> 
+				<item id="91547" min="1" max="1" chance="11.039"/> 
+				<item id="91549" min="1" max="1" chance="11.029"/> 
+				<item id="91548" min="1" max="1" chance="11.024"/> 
+				<item id="90899" min="1" max="1" chance="3.286"/> 
+				<item id="91520" min="1" max="1" chance="1"/> 
+				<item id="91519" min="1" max="1" chance="1"/> 
+				<item id="91512" min="1" max="1" chance="1"/> 
+				<item id="91518" min="1" max="1" chance="1"/> 
+				<item id="91521" min="1" max="1" chance="1"/> 
+				<item id="91523" min="1" max="1" chance="1"/> 
+				<item id="91524" min="1" max="1" chance="1"/> 
+				<item id="91525" min="1" max="1" chance="1"/> 
+				<item id="91499" min="1" max="1" chance="1"/> 
+				<item id="91517" min="1" max="1" chance="1"/> 
+				<item id="91516" min="1" max="1" chance="1"/> 
+				<item id="91500" min="1" max="1" chance="1"/> 
+				<item id="91501" min="1" max="1" chance="1"/> 
+				<item id="91502" min="1" max="1" chance="1"/> 
+				<item id="91503" min="1" max="1" chance="1"/> 
+				<item id="91505" min="1" max="1" chance="1"/> 
+				<item id="91506" min="1" max="1" chance="1"/> 
+				<item id="91507" min="1" max="1" chance="1"/> 
+				<item id="91508" min="1" max="1" chance="1"/> 
+				<item id="91509" min="1" max="1" chance="1"/> 
+				<item id="91515" min="1" max="1" chance="1"/> 
+				<item id="91514" min="1" max="1" chance="1"/> 
+				<item id="91513" min="1" max="1" chance="1"/> 
+				<item id="91522" min="1" max="1" chance="1"/> 
+				<item id="91511" min="1" max="1" chance="1"/> 
+				<item id="91510" min="1" max="1" chance="1"/> 
+				<item id="91504" min="1" max="1" chance="1"/> 
+				<item id="91401" min="1" max="1" chance="0.5"/> 
+				<item id="91400" min="1" max="1" chance="0.5"/> 
+				<item id="91405" min="1" max="1" chance="0.5"/> 
+				<item id="91404" min="1" max="1" chance="0.5"/> 
+				<item id="91403" min="1" max="1" chance="0.5"/> 
+				<item id="91402" min="1" max="1" chance="0.5"/> 
+            </drop>
+        </dropLists>
+    </npc>
+</list>

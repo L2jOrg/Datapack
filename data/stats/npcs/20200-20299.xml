@@ -795,14 +795,13 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <!-- not used <skill name="SummonMagic" id="4161" level="1"/> -->
             <!-- not used <skill name="PhysicalSpecial" id="4073" level="4"/> -->
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
         <acquire exp="16152" sp="484"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="396.5591" hpRegen="4.5" mp="521.265" mpRegen="1.8"/>
+            <vitals hp="1019.59695680077" hpRegen="4.5" mp="478.8" mpRegen="1.8"/>
             <attack physical="160.3279727" magical="120.43155" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="172.205385" magical="114.55675"/>
             <speed>
@@ -815,7 +814,6 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <!-- <skill id="4073" level="4"/> Stun -->
-            <!-- <skill id="4161" level="1"/> Summon -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
@@ -827,7 +825,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>PORTA</clan>
             </clanList>
@@ -850,14 +848,12 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <!-- not used <skill name="Skill01_ID" id="4087" level="4"/> -->
-            <!-- not used <skill name="Skill03_ID" id="4046" level="4"/> -->
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
         <acquire exp="8316" sp="249"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="413.71869666667" hpRegen="5.5" mp="549.585" mpRegen="2.1"/>
+            <vitals hp="1063.54199060681" hpRegen="5.5" mp="504.8" mpRegen="2.1"/>
             <attack physical="170.1079818" magical="127.77787" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="176.759022" magical="117.58598"/>
             <speed>
@@ -869,8 +865,6 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <!-- <skill id="4046" level="4"/> Sleep -->
-            <!-- <skill id="4087" level="4"/> NPC Blaze -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
@@ -882,7 +876,8 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai aggroRange="300" isAggressive="false">         
+        </ai>
         <collision>
             <radius normal="11"/>
             <height normal="20"/>
@@ -956,7 +951,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai clanHelpRange="300" isAggressive="false"/>
         <collision>
             <radius normal="14"/>
             <height normal="14.5"/>
@@ -1004,7 +999,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450"/>
+        <ai aggroRange="300" isAggressive="false"/>
         <collision>
             <radius normal="21"/>
             <height normal="43"/>
@@ -1136,14 +1131,14 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4032" level="4"/>
-            <skill name="Skill02_ID" id="4073" level="4"/>
+            <!-- <skill name="Skill01_ID" id="4032" level="4"/> -->
+			<skill name="Skill02_ID" id="4073" level="4"/>
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
         <acquire exp="20193" sp="605"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="485.72332" hpRegen="5.5" mp="665.52" mpRegen="2.1"/>
+            <vitals hp="1248.74044783714" hpRegen="5.5" mp="610.8" mpRegen="2.1"/>
             <attack physical="258.388119" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="161.6249636" magical="130.09715"/>
             <speed>
@@ -1155,8 +1150,9 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4032" level="4"/> <!-- NPC Strike -->
-            <skill id="4073" level="4"/> <!-- Stun -->
+            <!-- <skill id="4032" level="4"/>  -->
+			<!-- NPC Strike -->
+			<skill id="4073" level="4"/> <!-- Stun -->
             <skill id="4416" level="11"/> <!-- Giant -->
             <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
             <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
@@ -1165,7 +1161,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="400" aggroRange="450">
+        <ai clanHelpRange="350" isAggressive="false">
             <clanList>
                 <clan>PORTA</clan>
             </clanList>
@@ -1227,7 +1223,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="400" aggroRange="450">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>TORFE</clan>
             </clanList>
@@ -1287,7 +1283,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="400" isAggressive="true">
+        <ai clanHelpRange="200" isAggressive="false">
             <clanList>
                 <clan>TORFE</clan>
             </clanList>
@@ -1340,7 +1336,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>TORFE</clan>
             </clanList>
@@ -1428,7 +1424,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>TORFE</clan>
             </clanList>
