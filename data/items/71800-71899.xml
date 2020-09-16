@@ -303,7 +303,7 @@
 		<condition add-name="true" msg-id="113">
 			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
 		</condition>
-		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1300" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -361,7 +361,7 @@
 		<condition add-name="true" msg-id="113">
 			<player races="JIN_KAMAEL ORC DWARF"/>
 		</condition>
-		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1530" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -379,12 +379,18 @@
 	<!-- Double-click to obtain 1 +10 Colichemarde (15-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="71838" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Colichemarde for 15 days -->
+		</extract>
 	</item>
 
 	<item id="71843" name="+10 Dismantler Pack" type="NONE">
 	<!-- Double-click to obtain 1 +10 Dismantler (15-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="71841" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Dismantler for 15 days -->
+		</extract>
 	</item>
 
 	<weapon id="71844" name="Don Quijote Collab Pom Poms" type="DUAL" body-part="TWO_HAND">

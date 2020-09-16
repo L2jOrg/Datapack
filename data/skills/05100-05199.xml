@@ -941,10 +941,16 @@
                 <value level="6">338</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" affect-min="8" affect-random="15"/>
         <effects>
             <magical-attack over-hit="true">
-                <power initial="228.0"/>
+                <power initial="228.0">
+                    <value level="2">230.0</value>
+                    <value level="3">232.0</value>
+                    <value level="4">234.0</value>
+                    <value level="5">236.0</value>
+                    <value level="6">240.0</value>			
+				</power>
             </magical-attack>
         </effects>
     </skill>
@@ -1006,7 +1012,13 @@
         <target type="ENEMY"/>
         <effects>
             <physical-attack critical-chance="0.0">
-                <power initial="8264.0"/>
+                <power initial="8264.0">
+                    <value level="2">8597.0</value>
+                    <value level="3">8945.0</value>
+                    <value level="4">9302.0</value>
+                    <value level="5">9674.0</value>
+                    <value level="6">10061.0</value>	
+				</power>
             </physical-attack>
         </effects>
     </skill>
@@ -1037,14 +1049,20 @@
                 <value level="6">338</value>
             </mana>
         </consume>
-        <target type="NPC_BODY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <target type="NPC_BODY" scope="RANGE" object="NOT_FRIEND" range="200"/>
         <conditions>
             <condition name="ConsumeBody"/>
         </conditions>
         <effects>
             <effect name="ConsumeBody"/>
             <magical-attack>
-                <power initial="228.0"/>
+                <power initial="228.0">
+                    <value level="2">230.0</value>
+                    <value level="3">232.0</value>
+                    <value level="4">234.0</value>
+                    <value level="5">236.0</value>
+                    <value level="6">240.0</value>			
+				</power>
             </magical-attack>
         </effects>
     </skill>
