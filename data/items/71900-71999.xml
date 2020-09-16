@@ -315,21 +315,21 @@
 		<attributes/>
 	</item>
 
-	<item id="71951" name="VIP Battle Scroll" type="POTION">
+	<item id="71951" name="VIP Battle Scroll" type="SCROLL">
 	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>		
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="59726"/>  <!--  Battle Scroll -->
+			<skill id="59726" value="-1"/>  <!-- Battle Scroll -->
 		</skill-reducer>
 	</item>
 
-	<item id="71952" name="Scroll: VIP XP/SP Boost" type="POTION">
+	<item id="71952" name="Scroll: VIP XP/SP Boost" type="SCROLL">
 	<!-- For 20 min., XP/SP gain +120%. Effect remains even after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="59727"/>  <!-- XP/SP Boost Scroll -->
+			<skill id="59727" value="-1"/> <!-- XP/SP Boost Scroll -->
 		</skill-reducer>
 	</item>
 
@@ -361,6 +361,8 @@
 		<attributes weight="10" duration="43200" />
 		<crystal />
 		<skills>
+			<skill id="13648" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 5 Brooch -->
+			<skill id="13649" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 5 Brooch -->
 			<skill id="59153" value="-1"/>  <!-- Level 5 Brooch -->
 			<skill id="59154" value="-1"/>  <!-- Level 5 Brooch Additional Effect -->
 		</skills>
@@ -419,7 +421,11 @@
 	<item id="71962" name="VIP XP Growth Amulet - 1-day" type="RUNE">
 	<!-- 1-day item. When in inventory, your XP and SP gain is increased by 50%. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes duration="1440" />
+		<crystal />
+		<skill-reducer>
+			<skill id="59157" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="71963" name="Daily Gift - VIP 8" type="NONE">
