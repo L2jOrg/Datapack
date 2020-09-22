@@ -21,7 +21,7 @@
             <restoration count="30" item="6645"/>
         </effects>
     </skill>
-    <skill id="11317" name="Summon Mass Soulshot" action="A1" type="MAGIC">
+    <skill id="11317" name="Summon Mass Soulshot" action="A2" type="MAGIC">
         <!-- With a 100%% probability summons 300 Best Soulshots. Consumes 40 Soulstones. -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes static-reuse="true" magic-critical-rate="5.0">
@@ -39,7 +39,9 @@
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="6645"/>
+            <random-restoration>
+                <item id="6645" chance="100" count="300"/>
+            </random-restoration>
         </effects>
     </skill>
     <skill id="11318" name="Summon Spiritshots" action="A1" type="MAGIC">
@@ -63,7 +65,7 @@
             <restoration count="24" item="6646"/>
         </effects>
     </skill>
-    <skill id="11319" name="Summon Mass Spiritshot" action="A1" type="MAGIC">
+    <skill id="11319" name="Summon Mass Spiritshot" action="A2" type="MAGIC">
         <!-- With a 100%% probability summons 300 Best Spiritshots. Consumes 40 Spirit Ores. -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes static-reuse="true" magic-critical-rate="5.0">
@@ -81,7 +83,9 @@
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="6646"/>
+            <random-restoration>
+                <item id="6646" chance="100" count="240"/>
+            </random-restoration>
         </effects>	
     </skill>
 </list>
