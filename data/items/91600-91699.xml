@@ -179,9 +179,11 @@
 	</item>
 
 	<item id="91625" name="S-grade Weapon Pack" type="NONE">
-	<!-- Double-click to obtain one of the S-grade weapons. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<restriction stackable="true" dropable="false" sellable="false" tradable="true"/> 
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/> 
+		<skill-reducer> 
+			<skill id="51057" value="-1"/>  <!-- Battle Box Lv. 4 -->
+		</skill-reducer> 
 	</item>
 
 	<item id="91626" name="S-grade Armor Pack" type="NONE">
