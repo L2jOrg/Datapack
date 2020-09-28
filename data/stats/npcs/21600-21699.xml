@@ -2699,7 +2699,6 @@
         </dropLists>
     </npc>
     <npc id="21638" level="42" type="Monster" name="Wandering Dead of the Dungeon">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="139"/>
             <param name="MoveAroundSocial1" value="35"/>
@@ -2709,7 +2708,6 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="PhysicalSpecial" id="4124" level="3"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -2727,7 +2725,6 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4124" level="3"/> <!-- NPC Spear Attack -->
             <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
@@ -2735,11 +2732,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>0.5</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="300">
-            <clanList>
-                <clan>LIZARDMAN</clan>
-            </clanList>
-        </ai>
+        <ai type="BALANCED" clanHelpRange="300"/>
         <collision>
             <radius normal="6"/>
             <height normal="12"/>
@@ -2793,7 +2786,6 @@
         </collision>
     </npc>
     <npc id="21640" level="42" type="Monster" name="Wandering Ghost of the Dungeon">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="75"/>
             <param name="MoveAroundSocial1" value="75"/>
@@ -2803,8 +2795,8 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="W_LongRangeDDMagic" id="4153" level="3"/>
-            <skill name="W_ShortRangeDDMagic" id="4160" level="3"/>
+            <skill name="W_LongRangeDDMagic" id="16207" level="1"/>
+            <skill name="W_ShortRangeDDMagic" id="16213" level="1"/>
         </parameters>
         <race>HUMANOID</race>
         <sex>MALE</sex>
@@ -2822,8 +2814,8 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4153" level="3"/> <!-- Decrease Speed -->
-            <skill id="4160" level="3"/> <!-- NPC Aura Burn - Magic -->
+            <skill id="16207" level="1"/> <!--  -->
+            <skill id="16213" level="1"/> <!--  -->
             <skill id="4416" level="2"/> <!-- Magical Creatures -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
@@ -2831,18 +2823,13 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>0.5</sNpcPropHpRate>
-        <ai type="BALANCED" clanHelpRange="300" aggroRange="300">
-            <clanList>
-                <clan>LIZARDMAN</clan>
-            </clanList>
-        </ai>
+        <ai type="BALANCED" clanHelpRange="300"/>        
         <collision>
             <radius normal="15"/>
             <height normal="28"/>
         </collision>
     </npc>
     <npc id="21641" level="43" type="Monster" name="Wandering Evil Thoughts of the Dungeon">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="139"/>
             <param name="MoveAroundSocial1" value="35"/>
@@ -2852,11 +2839,11 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="PhysicalSpecial" id="4124" level="3"/>
+			<skill name="W_LongRangeDDMagic" id="16207" level="1"/>
+            <skill name="W_ShortRangeDDMagic" id="16213" level="1"/>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
-        <equipment rhand="2507"/> <!-- Lizardspear -->
         <acquire exp="2589" sp="78" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1153.959" hpRegen="5.5" mp="619.458" mpRegen="2.1" />
@@ -2871,7 +2858,8 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4124" level="3"/> <!-- NPC Spear Attack -->
+			<skill id="16207" level="2"/> <!--  -->
+            <skill id="16213" level="2"/> <!--  -->
             <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
@@ -2879,11 +2867,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>0.5</sNpcPropHpRate>
-        <ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>LIZARDMAN</clan>
-            </clanList>
-        </ai>
+        <ai type="BALANCED" clanHelpRange="300"/>
         <collision>
             <radius normal="21" grown="25"/>
             <height normal="44" grown="52.5"/>
@@ -3045,9 +3029,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="W_LongRangeDDMagic" id="4157" level="4"/>
-            <skill name="W_ShortRangeDDMagic" id="4560" level="4"/>
-            <skill name="DeBuff" id="4076" level="2"/>
+            <skill name="W_LongRangeDDMagic" id="16106" level="2"/>
         </parameters>
         <race>UNDEAD</race>
         <sex>MALE</sex>
@@ -3065,9 +3047,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4076" level="2"/> <!-- Decrease Speed -->
-            <skill id="4157" level="4"/> <!-- NPC Blaze - Magic -->
-            <skill id="4560" level="4"/> <!-- NPC Fire Burn -->
+            <skill id="16106" level="2"/> <!--  -->
             <skill id="4416" level="1"/> <!-- Undead -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
@@ -3075,18 +3055,13 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>0.5</sNpcPropHpRate>
-        <ai aggroRange="300" clanHelpRange="300" isAggressive="true">
-            <clanList>
-                <clan>LIENRIK</clan>
-            </clanList>
-        </ai>
+        <ai clanHelpRange="300" isAggressive="false"/>            
         <collision>
             <radius normal="12"/>
             <height normal="31"/>
         </collision>
     </npc>
     <npc id="21646" level="46" type="Monster" name="Wandering Ghost of Abyss">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="65"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -3096,7 +3071,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="Buff" id="4575" level="2"/>
+            <skill name="W_LongRangeDDMagic" id="16207" level="2"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -3114,7 +3089,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
+            <skill id="16207" level="2"/> <!--  -->
             <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
@@ -3128,7 +3103,6 @@
         </collision>
     </npc>
     <npc id="21647" level="47" type="Monster" name="Wandering Evil Thoughts of Abyss">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
         <parameters>
             <param name="MoveAroundSocial" value="65"/>
             <param name="MoveAroundSocial1" value="65"/>
@@ -3138,9 +3112,7 @@
             <param name="SpiritShot" value="100"/>
             <param name="SpiritShotRate" value="10"/>
             <param name="LongRangeGuardRate" value="10"/>
-            <skill name="DDMagic1" id="4001" level="7"/>
-            <skill name="DDMagic2" id="4002" level="7"/>
-            <skill name="DeBuff" id="4035" level="7"/>
+            <skill name="DDMagic1" id="16207" level="2"/>
         </parameters>
         <race>DEMONIC</race>
         <sex>MALE</sex>
@@ -3158,9 +3130,7 @@
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
-            <skill id="4001" level="7"/> <!-- NPC Windstrike -->
-            <skill id="4002" level="7"/> <!-- NPC HP Drain -->
-            <skill id="4035" level="7"/> <!-- Poison -->
+            <skill id="16207" level="2"/> <!--  -->
             <skill id="4416" level="9"/> <!-- Demons -->
             <skill id="4085" level="1"/> <!-- Critical Damage -->
             <skill id="4086" level="1"/> <!-- Critical Chance -->
