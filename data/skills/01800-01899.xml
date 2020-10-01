@@ -1278,7 +1278,7 @@
             level 11: Decreases Melee Weapon Resistance of the target and nearby enemies by 54 and M. Def. by 23% for 30 seconds.
          -->
 		<icon initial="icon.skill1897"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30" auto-use="ACTIVE">
 			<magic-level initial="40">
 				<value level="2">52</value>
 				<value level="3">62</value>
@@ -1336,12 +1336,23 @@
 				<value level="11">144</value>
 			</mana>
 		</consume>
-		<target type="ENEMY_ONLY" scope="RANGE" range="150"/>
-		<abnormal type="PD_DOWN" visual="STIGMA_OF_SILEN">
-			<level initial="1"/>
-			<time initial="30"/>
-			<chance initial="80"/>
-		</abnormal>
+		<target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="15"/>
+		<abnormal type="STIGMA_OF_SILEN" visual="STIGMA_OF_SILEN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+                <value level="5">5</value>
+                <value level="6">6</value>
+                <value level="7">7</value>
+                <value level="8">8</value>
+                <value level="9">9</value>
+                <value level="10">10</value>
+                <value level="11">11</value>
+            </level>
+            <time initial="30"/>
+            <chance initial="80"/>
+        </abnormal>
 		<effects>
 			<defence-trait>
 				<trait type="DUAL">
@@ -1401,6 +1412,20 @@
 					</power>
 				</trait>
 			</defence-trait>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="-10">
+                        <value level="2">-12</value>
+                        <value level="3">-14</value>
+                        <value level="4">-16</value>
+                        <value level="5">-17</value>
+                        <value level="6">-18</value>
+                        <value level="7">-19</value>
+                        <value level="8">-20</value>
+                        <value level="9">-21</value>
+                        <value level="10">-22</value>
+                        <value level="11">-23</value>
+                    </power>
+            </stat-modify>
 		</effects>
 	</skill>
 	<skill id="1898" name="Shield Charge" max-level="9" debuff="true" action="DA2">
