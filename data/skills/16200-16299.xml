@@ -120,7 +120,7 @@
     <skill id="16207" name="Dark Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
             <cast-range initial="600">
                 <value level="3">900</value>
             </cast-range>
@@ -131,6 +131,7 @@
                 <value level="4">-115</value>
             </effect-point>
             <hit-time initial="1000"/>
+			<element type="DARK" value="20"/>
         </attributes>
         <consume>
             <mana initial="50">
@@ -138,7 +139,16 @@
                 <value level="3">1</value>
             </mana>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+		<effects>
+            <magical-attack-range>
+                <power initial="50.0">
+                    <value level="2">54.0</value>
+                    <value level="3">58.0</value>
+                    <value level="4">64.0</value>
+					 </power>
+            </magical-attack-range>
+        </effects>
     </skill>
     <skill id="16208" name="Fire Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
@@ -244,7 +254,16 @@
                 <value level="3">1</value>
             </mana>
         </consume>
-        <target/>
+        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <effects>
+            <physical-attack critical-chance="0.0">
+                <power initial="55.0">
+					<value level="2">58.0</value>
+					<value level="3">60.0</value>
+					<value level="4">65.0</value>
+				</power>
+            </physical-attack>
+        </effects>
     </skill>
     <skill id="16214" name="Fire Buster" max-level="4" action="A1" type="MAGIC">
         <!-- none -->

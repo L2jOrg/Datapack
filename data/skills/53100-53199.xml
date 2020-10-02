@@ -9,13 +9,13 @@
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="850"/>
             </vital-stat-modify>
-			<trigger-skill-by-damage skill="53101">
+			<trigger-skill-by-damage skill="53101" target="SELF">
                 <power initial="1"/>                 
                 <chance initial="60"/>                
             </trigger-skill-by-damage>
         </effects>
     </skill>
-    <skill id="53101" name="Heroic Miracle" action="A1">
+    <skill id="53101" name="Heroic Miracle" action="A2">
         <!-- Atk. Spd. +100, Casting Spd. +100, Speed +20, and continuously recovers MP. -->
         <icon initial="icon.skill0912"/>
 		<attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" triggered="true">
