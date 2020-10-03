@@ -132,14 +132,32 @@
         <target/>
     </skill>
     <skill id="51114" name="Agathion Enchant Scroll Pack" action="A1">
-        <!-- none -->
+        <!-- Packaging with items:
+		Agathion Enchant Scroll, 
+		High-grade Agathion Enchant Scroll, 
+		Solid Scroll: Enchant Agathion, 
+		Agathion's Soul, 
+		Blessed Agathion's Soul -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-            <reuse initial="1000"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
-        </attributes>
+        </attributes>	
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item chance="70.0" id="48046"/>
+                <item chance="20.0" id="48047"/>
+                <item chance="5.0" id="90963"/>
+                <item chance="3.0" id="90898"/>
+                <item chance="2.0" id="90899"/>
+            </random-restoration>
+        </effects>		
     </skill>
     <skill id="51115" name="Top-grade Jewel Box" action="A1">
         <!-- none -->
@@ -481,14 +499,26 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51148" name="Cat Transformation" action="A1">
+    <skill id="51148" name="Cat Transformation" action="A2">
         <!-- Transforms to Cat. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
         <icon initial="icon.sayha2017_cat"/>
-        <attributes property="PHYSIC">
-            <reuse initial="60000"/>
-            <effect-point initial="1"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+			<reuse initial="60000"/>
+			<effect-point initial="1"/>
         </attributes>
         <target/>
+		<abnormal type="CHANGEBODY" visual="COSTUME_KITTY">
+			<level initial="1"/>
+			<time initial="900"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="20"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="20"/>
+			</vital-stat-modify>
+		</effects>		
     </skill>
     <skill id="51149" name="Wealthy Merchant Red's Gift" action="A1">
         <!-- none -->
