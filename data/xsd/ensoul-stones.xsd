@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="fee" type="EnsoulFee" maxOccurs="unbounded" minOccurs="0"/>
+				<xs:element name="stone" type="EnsoulStone" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="EnsoulOption">
+		<xs:attribute type="xs:positiveInteger" name="id" use="required" />
+		<xs:attribute type="xs:string" name="name" use="required" />
+		<xs:attribute type="xs:string" name="desc" use="required" />
+		<xs:attribute type="xs:positiveInteger" name="skill-id" use="required" />
+		<xs:attribute type="xs:positiveInteger" name="skill-level" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="EnsoulStone">
+		<xs:sequence>
+			<xs:element name="option" type="EnsoulOption" maxOccurs="2"/>
+		</xs:sequence>
+		<xs:attribute type="xs:int" name="id" use="required" />
+		<xs:attribute type="EnsoulType" name="type" default="COMMON" />
+	</xs:complexType>
+
+	<xs:complexType name="EnsoulFee">
+		<xs:sequence>
+			<xs:element name="common" type="ItemInfo" />
+			<xs:element name="special" type="ItemInfo" />
+			<xs:element name="replace-common" type="ItemInfo" />
+			<xs:element name="replace-special" type="ItemInfo" />
+			<xs:element name="remove" maxOccurs="unbounded" type="ItemInfo" />
+		</xs:sequence>
+		<xs:attribute type="CrystalType" name="crystalType" use="required" />
+	</xs:complexType>
+
+	<xs:simpleType name="EnsoulType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="COMMON"/>
+			<xs:enumeration value="SPECIAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
