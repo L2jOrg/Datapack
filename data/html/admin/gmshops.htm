@@ -1,23 +1,55 @@
 <html><title>Shop</title><body>
 <center>
-<table>
+<table width=270>
 <tr>
-<br><br1>
-<table><tr>
-<td><button action="bypass -h admin_superhaste 1" width=30>1</button></td>
-<td><button action="bypass -h admin_superhaste 2" width=30>2</button></td>
-<td><button action="bypass -h admin_superhaste 3" width=30>3</button></td>
-<td><button action="bypass -h admin_superhaste 4" width=30>4</button></td>
-<td><button action="bypass -h admin_superhaste 0" width=30>Off</button></td>
-</tr></table><br>
-<center><multiedit var="new_announcement" width=250 height=80></center>
-<table width="160"><tr>
-<td><button action="bypass -h admin_announce $new_announcement" width=65>Announce</button></td>
-<td><button action="bypass -h admin_announce_crit $new_announcement" width=65>Critical</button></td>
-<td><button action="bypass -h admin_announce_screen $new_announcement" width=65>On-Screen</button></td>
-<td><button action="bypass -h admin_gmchat_menu $new_announcement" width=65>GM Chat</button></td>
-</tr></table><br>
+<td width=45><button action="bypass -h admin_admin" width=45>Main</button></td>
+<td width=180><center>GM Shop</center></td>
+<td width=45><button action="bypass -h admin_admin7" width=45>Back</button></td>
+</tr></table>
+</center>
 <br>
+<br>
+<center>
+<table width=260>
+<tr>
+<td align=center><button action="bypass -h admin_html gmstore/gear/weapons.htm" width=85>Weapons</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/gear/armor.htm" width=85>Armor</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/gear/jewels.htm" width=85>Jewels</button></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_html gmstore/gear/bracelets.htm" width=85>Bracelets</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/gear/belts.htm" width=85>Belts</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/style.htm" width=85>Style</button></td>
+</tr>
+</table>
+<br>
+<table width=260>
+<tr>
+<td align=center><button action="bypass -h admin_html gmstore/consumables.htm" width=85>Consumables</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/scrolls.htm" width=85>Scrolls</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/craft.htm" width=85>Craft Area</button></td>
+</tr>
+</table>
+<br>
+<table width=260>
+<tr>
+<td align=center><button action="bypass -h admin_html gmstore/pets.htm" width=85>Pets</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/fishing.htm" width=85>Fishing</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/quest.htm" width=85>Quest Items</button></td>
+</tr>
+<tr>
+<td align=center><button action="bypass -h admin_buy 9916" width=85>Currency</button></td>
+<td align=center><button action="bypass -h admin_buy 9902" width=85>Life Stones</button></td>
+<td align=center><button action="bypass -h admin_html gmstore/books.htm" width=85>Books</button></td>
+<td></td>
+</tr>
+</table>
+<br>
+<table width=260>
+<tr>
+<td>Item-ID: <edit var="itemid" width=50></td>
+<td>Amount: <edit var="itemnum" width=50></td>
+<td>&nbsp;<button action="bypass -h admin_create_item $itemid $itemnum" width=85>Create Item</button></td>
 </tr></table>
 </center>
 </body></html>
