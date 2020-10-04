@@ -102,7 +102,7 @@
     <skill id="16206" name="Holy Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="900"/>
             <cool-time initial="500"/>
             <effect-point initial="-100">
@@ -111,16 +111,26 @@
                 <value level="4">-115</value>
             </effect-point>
             <hit-time initial="1000"/>
+			<element type="HOLY" value="20"/>
         </attributes>
         <consume>
             <mana initial="1"/>
         </consume>
-        <target/>
+        <target type="ENEMY"/>
+		<effects>
+            <magical-attack>
+				<power initial="50.0">
+                    <value level="2">54.0</value>
+                    <value level="3">58.0</value>
+                    <value level="4">64.0</value>
+				</power>
+            </magical-attack>
+        </effects>
     </skill>
     <skill id="16207" name="Dark Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="600">
                 <value level="3">900</value>
             </cast-range>
@@ -141,19 +151,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
-                <power initial="50.0">
+            <magical-attack>
+				<power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
+				</power>
+            </magical-attack>
         </effects>
     </skill>
     <skill id="16208" name="Fire Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="600">
                 <value level="3">900</value>
             </cast-range>
@@ -171,19 +181,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
+            <magical-attack>
                 <power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
+				</power>
+            </magical-attack>
         </effects>
     </skill>
     <skill id="16209" name="Water Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="900"/>              
             <cool-time initial="500"/>
             <effect-point initial="-150">
@@ -199,19 +209,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
-                <power initial="50.0">
+            <magical-attack>
+				<power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
+				</power>
+            </magical-attack>
         </effects>
     </skill>
     <skill id="16210" name="Wind Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="900"/>              
             <cool-time initial="500"/>
             <effect-point initial="-150">
@@ -227,19 +237,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
-                <power initial="50.0">
+            <magical-attack>
+				<power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
+				</power>
+            </magical-attack>
         </effects>
     </skill>
     <skill id="16211" name="Earth Spike" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
             <cast-range initial="900"/>              
             <cool-time initial="500"/>
             <effect-point initial="-150">
@@ -255,19 +265,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
+            <magical-attack>
                 <power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
+				</power>
+            </magical-attack>
         </effects>
     </skill>
     <skill id="16212" name="Holy Buster" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-		<attributes magic-critical-rate="5.0">
+		<attributes magic-critical-rate="-5.0" hit-cancel-time="2.0">
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
@@ -279,19 +289,19 @@
         </consume>
         <target type="ENEMY"/>
 		<effects>
-            <magical-attack-range>
+            <magical-attack>
                 <power initial="50.0">
                     <value level="2">54.0</value>
                     <value level="3">58.0</value>
                     <value level="4">64.0</value>
-					 </power>
-            </magical-attack-range>
-        </effects>
+				</power>
+            </magical-attack>
+        </effects>        
     </skill>
     <skill id="16213" name="Dark Buster" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="2.0">
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-300">
@@ -320,7 +330,7 @@
     <skill id="16214" name="Fire Buster" max-level="4" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="-5.0" hit-cancel-time="2.0">
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-700"/>
