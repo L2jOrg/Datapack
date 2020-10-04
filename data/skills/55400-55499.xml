@@ -120,29 +120,155 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55412" name="Transformation Scroll: Pirate" action="A1">
+    <skill id="55412" name="Transformation Scroll: Pirate" action="A2">
         <!-- Transformation to Pirate. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="3.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55413" name="Transformation Scroll: Dark Assassin" action="A1">
+    <skill id="55413" name="Transformation Scroll: Dark Assassin" action="A2">
         <!-- Transformation to Dark Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="4.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55414" name="White Assassin Transformation Scroll" action="A1">
+    <skill id="55414" name="White Assassin Transformation Scroll" action="A2">
         <!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="5.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
     </skill>
     <skill id="55415" name="Scroll: Enchant Armor (A-grade)" action="A1">
         <!-- none -->

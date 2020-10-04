@@ -1245,9 +1245,14 @@
     <skill id="51399" name="Red Arc - 1st Place" action="A1">
         <!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <icon initial="icon.etc_holy_grail_i00"/>
-        <attributes>
-            <reuse initial="500"/>
-        </attributes>
-        <target/>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+			<reuse initial="500"/>
+		</attributes>
+		
+		<target/>
+		<effects>
+			<acquire-xp-sp xp="100000000" sp="2700000"/>
+		</effects>
     </skill>
 </list>

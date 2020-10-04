@@ -60,7 +60,7 @@
 		</attributes>
 		<target/>
 		<effects>
-			<acquire-xp-sp sp="1110000" xp="37000000"/>
+			<acquire-xp-sp xp="37000000" sp="1110000"/>
 		</effects>
 	</skill>
 	<skill id="39205" name="Dark Assassin Transformation" action="A2">
@@ -1051,7 +1051,7 @@
 			<effect-point initial="1"/>
 		</attributes>
 		<target/>
-		<abnormal>
+		<abnormal type="EXP_SP_K">
 			<level initial="2">
 				<value level="2">3</value>
 			</level>
@@ -1186,7 +1186,7 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="39273" name="Golden Fruit Buff" action="A1">
+	<skill id="39273" name="Golden Fruit Buff" action="A2">
 		<!-- For 20 minutes, XP/SP Gain +10%%, P. Atk./M. Atk. +12%%, P. Critical/M. Critical Rate +10, P. Critical Damage/M. Critical Damage +5%%, P. Def./M. Def. +15%%, HP/MP/CP +25%%, HP Recovery Bonus/MP Recovery Bonus +30%%, and has a chance to absorb 5%% of damage dealt to enemies as HP.\nDeath protection. You can delete it on your own. -->
 		<icon initial="icon.bm_dragon_fruit"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
@@ -1195,7 +1195,8 @@
 			<effect-point initial="1"/>
 		</attributes>
 		<target/>
-		<abnormal type="DRAGON_FRUIT">
+		<!-- <abnormal type="DRAGON_FRUIT"> -->
+		<abnormal type="EXP_SP_K">
 			<level initial="1"/>
 			<time initial="1200"/>
 		</abnormal>

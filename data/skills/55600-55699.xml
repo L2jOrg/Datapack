@@ -956,7 +956,7 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_K">
             <level initial="1"/>
             <time initial="1200"/>
         </abnormal>
@@ -1017,12 +1017,28 @@
         <icon initial="etc_whiteday_candy_i05"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="25.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="25.0"/>
+            </stat-modify>           
+        </effects>
     </skill>
     <skill id="55685" name="Blue Candy of the Royal Family">
         <!-- XP/SP +25%%. Can be once stacked with the Red Candy of the Royal Family. -->
         <icon initial="etc_whiteday_candy_i06"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="25.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="25.0"/>
+            </stat-modify>           
+        </effects>
     </skill>
     <skill id="55686" name="The Royal Confectionary Box" action="A1">
         <icon initial="icon.skill0000"/>
@@ -1054,85 +1070,290 @@
         <icon initial="icon.npoint_talisman_stat"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+				<power initial="18.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGICAL_DEFENCE">
+				<power initial="9.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+				<power initial="50.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP">
+				<power initial="50.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_CP">
+				<power initial="50.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="6.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="6.0"/>
+			</stat-modify>
+			<speed>
+				<power initial="4.0"/>
+			</speed>
+		</effects>
     </skill>
-    <skill id="55690" name="Transformation Scroll: Pirate" action="A1">
+    <skill id="55690" name="Transformation Scroll: Pirate" action="A2">
         <!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="3.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="3.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55691" name="Transformation Scroll: Dark Assassin" action="A1">
+    <skill id="55691" name="Transformation Scroll: Dark Assassin" action="A2">
         <!-- Transformation into a Dark Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="4.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55692" name="Transformation Scroll: White Assassin" action="A1">
+    <skill id="55692" name="Transformation Scroll: White Assassin" action="A2">
         <!-- Transformation into a White Assassin. Fighting characteristics are improved. Remains even after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
-        <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
-            <level initial="1"/>
-            <time initial="3600"/>
-        </abnormal>
-        <effects>
-            <vital-stat-modify mode="PER" stat="MAX_HP">
-                <power initial="7.0"/>
-            </vital-stat-modify>
-            <vital-stat-modify mode="PER" stat="MAX_MP">
-                <power initial="7.0"/>
-            </vital-stat-modify>
-            <speed>
-                <power initial="5.0"/>
-            </speed>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-                <power initial="5.0"/>
-            </stat-modify>
-            <stat-modify stat="ACCURACY">
-                <power initial="2.0"/>
-            </stat-modify>
-            <stat-modify stat="ACCURACY_MAGIC">
-                <power initial="2.0"/>
-            </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power initial="20.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="3.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="3.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="3.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power initial="3.0"/>
-            </stat-modify>
-        </effects>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="5.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55693" name="Blue Dynasty Transformation Scroll" action="A1">
+    <skill id="55693" name="Blue Dynasty Transformation Scroll" action="A2">
         <!-- Makes you armor look like Blue Dynasty one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i01"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<!-- <abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT"> -->
+		<abnormal type="CHANGEBODY" visual="UNK_191">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="5.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="55694" name="Red Zubei Transformation Scroll" action="A1">
+    <skill id="55694" name="Red Zubei Transformation Scroll" action="A2">
         <!-- Makes you armor look like Red Zubei one. Fighting characteristics are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i04"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-            <effect-point initial="1"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="600000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<!-- <abnormal type="CHANGEBODY" visual="RED_ZYBEI_SUIT"> -->
+		<abnormal type="CHANGEBODY" visual="UNK_192">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="4.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
     <skill id="55695" name="Transformation Support Cube" action="A1">
         <!-- none -->
