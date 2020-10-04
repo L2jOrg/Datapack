@@ -507,15 +507,29 @@
         <icon initial="BranchSys2.icon2.pi_silverchaperon"/>
         <attributes property="MAGIC"/>
         <target/>
+        <effects>
+            <base-stat type="STR">
+                <power initial="1.0"/>
+            </base-stat>
+            <base-stat type="INT">
+                <power initial="1.0"/>
+            </base-stat>
+        </effects>
     </skill>
     <skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
         <!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
+        <icon initial="icon.skill0000"/>        
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="39137" name="Chapeau Box" action="A1">
         <!-- none -->
@@ -526,53 +540,155 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="39138" name="Blue Dynasty Transformation" action="A1">
+    <skill id="39138" name="Blue Dynasty Transformation" action="A2">
         <!-- Armor Appearance changes to "Blue Dynasty" for 1 h. -->
         <icon initial="icon.general_stone_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="60000"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="60000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<!-- <abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT"> -->
+		<abnormal type="CHANGEBODY" visual="UNK_191">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="7.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="5.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="20.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="3.0"/>
+			</stat-modify>
+		</effects>
     </skill>
-    <skill id="39139" name="Transformation into Red Zubei" action="A1">
+    <skill id="39139" name="Transformation into Red Zubei" action="A2">
         <!-- Armor Appearance changes to "Red Zubei" for 1 h. -->
         <icon initial="icon.general_stone_i00"/>
-        <attributes property="PHYSIC">
-            <reuse initial="60000"/>
-        </attributes>
-        <target/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<reuse initial="60000"/>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+			<hit-time initial="3050"/>
+		</attributes>		
+		<target/>
+		<!-- <abnormal type="CHANGEBODY" visual="RED_ZYBEI_SUIT"> -->
+		<abnormal type="CHANGEBODY" visual="UNK_192">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify mode="PER" stat="MAX_MP">
+				<power initial="5.0"/>
+			</vital-stat-modify>
+			<speed>
+				<power initial="4.0"/>
+			</speed>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="3.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="ACCURACY_MAGIC">
+				<power initial="1.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+				<power initial="2.0"/>
+			</stat-modify>
+		</effects>
     </skill>
     <skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
         <!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
         <icon initial="icon.etc_holy_potion_i00"/>
-        <attributes>
-            <reuse initial="500"/>
-        </attributes>
-        <target/>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+			<reuse initial="500"/>
+		</attributes>
+		<target/>
+		<effects>
+			<acquire-xp-sp xp="1200000" sp="40000"/>
+		</effects>
     </skill>
     <skill id="39141" name="Magical Potion of Leaping - Lv. 2" action="A1">
         <!-- Can obtain 7,800,000 XP/240,000 SP. Available for characters Lv. 30 and above. -->
         <icon initial="icon.etc_wind_potion_i00"/>
-        <attributes>
-            <reuse initial="500"/>
-        </attributes>
-        <target/>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+			<reuse initial="500"/>
+		</attributes>
+		<target/>
+		<effects>
+			<acquire-xp-sp xp="7800000" sp="240000"/>
+		</effects>
     </skill>
     <skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
         <!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
         <icon initial="icon.etc_water_potion_i00"/>
-        <attributes>
-            <reuse initial="500"/>
-        </attributes>
-        <target/>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+			<reuse initial="500"/>
+		</attributes>
+		<target/>
+		<effects>
+			<acquire-xp-sp xp="34200000" sp="1040000"/>
+		</effects>
     </skill>
     <skill id="39143" name="Gift from a Returned Friend" action="A1">
         <!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
         <icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
-        <attributes>
-            <reuse initial="500"/>
-        </attributes>
-        <target/>
+        <attributes magic-critical-rate="5.0">
+			<magic-level initial="1"/>
+			<reuse initial="500"/>
+		</attributes>
+		<target/>
+		<effects>
+			<acquire-xp-sp xp="37000000" sp="1110000"/>
+		</effects>		
     </skill>
     <skill id="39144" name="Special Fruit Buff" action="A2">
         <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP.\nDeath protection. You can delete it on your own. -->
