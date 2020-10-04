@@ -84,7 +84,7 @@
     <skill id="51108" name="Dandy's Golden Ball" action="A1">
         <!-- Sayha's Grace recovers all, for 1 hour XP/SP +100%%. Armor changes to NC Dinos Uniform. -->
         <icon initial="BranchIcon.icon.g_ev_goldenball"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -677,10 +677,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51166" name="Transformation - Song of Earth" action="A1" type="DANCE">
+    <skill id="51166" name="Transformation - Song of Earth" action="A2" type="DANCE">
         <!-- Increases P. Def. of all party members by 25%% for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
         <icon initial="icon.skill0264"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -688,12 +688,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="SONG_OF_EARTH">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="25.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51167" name="Transformation - Song of Wind" action="A1" type="DANCE">
+    <skill id="51167" name="Transformation - Song of Wind" action="A2" type="DANCE">
         <!-- Increases Speed of all party members by 20 for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
         <icon initial="icon.skill0268"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="438"/>
             <hit-time initial="2500"/>
@@ -701,12 +710,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="SONG_OF_WIND">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20.0"/>
+            </speed>
+        </effects>
     </skill>
-    <skill id="51168" name="Transformation - Hunter's Song" action="A1" type="DANCE">
+    <skill id="51168" name="Transformation - Hunter's Song" action="A2" type="DANCE">
         <!-- Increases P. Critical Rate of all party members +100%% for 5 minutes. Also increases MP Consumption when singing while song/dance is in effect. -->
         <icon initial="icon.skill0269"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="467"/>
             <hit-time initial="2500"/>
@@ -714,12 +732,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="SONG_OF_HUNTER">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="100.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51169" name="Transformation - Song of Vitality" action="A1" type="DANCE">
+    <skill id="51169" name="Transformation - Song of Vitality" action="A2" type="DANCE">
         <!-- Increases Max HP of all party members by 30%% for 5 minutes. Additionally increases MP Consumption when singing while sing/dance is in effect. -->
         <icon initial="icon.skill0304"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="611"/>
             <hit-time initial="2500"/>
@@ -727,12 +754,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+		<abnormal type="SONG_OF_VITALITY">
+			<level initial="1"/>
+			<time initial="300"/>
+		</abnormal>
+		<effects>
+			<vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
+				<power initial="30.0"/>
+			</vital-stat-modify>
+		</effects>
     </skill>
-    <skill id="51170" name="Transformation - Dance of the Warrior" action="A1" type="DANCE">
+    <skill id="51170" name="Transformation - Dance of the Warrior" action="A2" type="DANCE">
         <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0271"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -740,12 +776,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_WARRIOR">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>        
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="12.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51171" name="Transformation - Dance of Fire" action="A1" type="DANCE">
+    <skill id="51171" name="Transformation - Dance of Fire" action="A2" type="DANCE">
         <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <hit-time initial="2500"/>
@@ -753,12 +798,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_FIRE">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>       
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="35.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51172" name="Transformation - Dance of Fury" action="A1" type="DANCE">
+    <skill id="51172" name="Transformation - Dance of Fury" action="A2" type="DANCE">
         <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0275"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <hit-time initial="2500"/>
@@ -766,12 +820,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_FURY">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>       
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51173" name="Transformation - Dance of Concentration" action="A1" type="DANCE">
+    <skill id="51173" name="Transformation - Dance of Concentration" action="A2" type="DANCE">
         <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0276"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <hit-time initial="2500"/>
@@ -779,7 +842,19 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_CONCENTRATION">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>        
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="ATTACK_CANCEL">
+                <power initial="-40.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="51174" name="Transform Swordsinger" action="A1">
         <!-- Transforms into Swordsinger. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
@@ -809,19 +884,29 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51177" name="Transform Song Dance" action="A1">
+    <skill id="51177" name="Transform Song Dance" action="A2">
         <!-- Transforms into Song Dance. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
         <icon initial="icon.etc_roll_of_paper_black_i00"/>
-        <attributes property="PHYSIC">
-            <reuse initial="600000"/>
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+			<reuse initial="60000"/>
             <effect-point initial="1"/>
-        </attributes>
-        <target/>
+		</attributes>
+		<target/>
+		<abnormal type="TRANSFORM">
+			<level initial="1"/>
+			<time initial="1800"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="170"/>
+		</effects>
     </skill>
-    <skill id="51178" name="Transformation - Dance of the Warrior" action="A1" type="DANCE">
+    <skill id="51178" name="Transformation - Dance of the Warrior" action="A2" type="DANCE">
         <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0271"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -829,12 +914,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_WARRIOR">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>        
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="12.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51179" name="Transformation - Dance of Fire" action="A1" type="DANCE">
+    <skill id="51179" name="Transformation - Dance of Fire" action="A2" type="DANCE">
         <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <hit-time initial="2500"/>
@@ -842,12 +936,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_FIRE">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>       
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="35.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51180" name="Transformation - Dance of Fury" action="A1" type="DANCE">
+    <skill id="51180" name="Transformation - Dance of Fury" action="A2" type="DANCE">
         <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0275"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <hit-time initial="2500"/>
@@ -855,12 +958,21 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_FURY">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>       
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51181" name="Transformation - Dance of Concentration" action="A1" type="DANCE">
+    <skill id="51181" name="Transformation - Dance of Concentration" action="A2" type="DANCE">
         <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
         <icon initial="icon.skill0276"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <hit-time initial="2500"/>
@@ -868,12 +980,24 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <abnormal type="DANCE_OF_CONCENTRATION">
+            <level initial="1"/>
+            <time initial="300"/>
+        </abnormal>        
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="ATTACK_CANCEL">
+                <power initial="-40.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="51182" name="Transformation - Dance of Shadows" action="A1" type="DANCE">
+    <skill id="51182" name="Transformation - Dance of Shadows" action="A2" type="DANCE">
         <!-- For 5 minutes, decreases all party members' Speed by 50%% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
         <icon initial="icon.skill0366"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <reuse initial="3000"/>
             <effect-point initial="666"/>
             <hit-time initial="2500"/>
@@ -881,15 +1005,70 @@
         <consume>
             <mana initial="73"/>
         </consume>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+		<abnormal type="DANCE_OF_SHADOW" visual="STEALTH">
+			<level initial="1"/>
+			<time initial="300"/>
+		</abnormal>		
+		<effects>
+			<effect name="SilentMove"/>
+			<trigger-skill-by-magic skill="7097" target="MY_PARTY">
+				<power initial="1.0"/>
+				<chance initial="100.0"/>
+				<types>PHYSIC MAGIC STATIC DANCE</types>
+			</trigger-skill-by-magic>
+			<trigger-skill-by-attack skill="7097" target="MY_PARTY">
+				<power initial="1.0"/>
+				<chance initial="100.0"/>
+				<min-damage initial="1.0"/>
+				<weapons>SWORD BLUNT</weapons>
+			</trigger-skill-by-attack>
+			<speed mode="PER">
+				<power initial="-50.0"/>
+			</speed>
+		</effects>
     </skill>
     <skill id="51183" name="Dragon Berserker" action="A1">
         <!-- Transforms into Dragon Berserker. For 20 minutes, XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical/M. Critical Damage +10%%. Cooldown is 2 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or using skills transformed as Dragon Berserker, there's a chance to cast Berserker Soul buff on self that increases P./M. Atk. +50%%, Atk. Spd./Casting Spd. +50%%, Reflects 15%% of received damage to the enemy. -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <reuse initial="7200000"/>
         </attributes>
+        <!-- <consume> -->
+            <!-- <item initial="71684"/> -->
+            <!-- <item-count initial="0"/> -->
+        <!-- </consume> -->
         <target/>
+        <abnormal type="TRANSFORM" visual="COSTUME_DRAGON_LV2">
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="15"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="10"/>
+            </stat-modify>           
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="10"/>
+            </stat-modify>           
+            <trigger-skill-by-attack skill="59313">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <min-damage initial="10"/>
+            </trigger-skill-by-attack>
+            <trigger-skill-by-magic skill="59313" target="SELF">
+                <power initial="1"/>
+                <chance initial="40"/>
+                <types>MAGIC PHYSIC</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
     <skill id="51184" name="Ninja Assassin" action="A1">
         <!-- Transforms into Ninja Assassin. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Ninja Assassin there's a 100%% chance to cancel enemy's target. -->

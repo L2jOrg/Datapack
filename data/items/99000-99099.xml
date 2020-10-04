@@ -86,10 +86,13 @@
 		<attributes auto-use="HEALING"/>
 	</item>
 
-	<item id="99015" name="Chapa Transformation Scroll - Song Dance - Event" type="POTION">
+	<item id="99015" name="Chapa Transformation Scroll - Song Dance - Event" type="SCROLL">
 	<!-- Transforms you into Song Dance for 30 min. Effect remains after death. Cannot be used during Transformation. Cooldown 10 min.\nChapa - Song Dance: Can use Song of Earth, Song of Wind, Hunter's Song, Song of Vitality, Dance of the Warrior, Dance of Fire, Dance of Fury, Dance of Concentration, Dance of Shadows. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes reuse-delay="600000" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="51177" value="-1"/>  <!-- Transformation - Song Dance -->
+		</skill-reducer>
 	</item>
 
 	<item id="99016" name="Special Dragon's Fruit Lv. 2 - Event" type="SCROLL">

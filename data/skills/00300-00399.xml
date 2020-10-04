@@ -67,7 +67,7 @@
             level 2: For 5 minutes, Max HP + 35%% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
          -->
 		<icon initial="icon.skill0304"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="66">
 				<value level="2">2</value>
 			</magic-level>
@@ -100,7 +100,7 @@
 	<skill id="305" name="Song of Vengeance" action="A2" type="DANCE">
 		<!-- For 5 minutes, gives a party member the ability to transfer 20%% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0305"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -112,7 +112,7 @@
 		<target scope="PARTY" object="FRIEND" range="1000"/>
 		<abnormal type="SONG_OF_VENGEANCE">
 			<level initial="1"/>
-			<time initial="3600"/>
+			<time initial="300"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="REFLECT_DAMAGE_PERCENT" stat-add="REFLECT_DAMAGE_PERCENT">
@@ -123,7 +123,7 @@
 	<skill id="310" name="Dance of the Vampire" action="A2" type="DANCE">
 		<!-- For 5 minutes, grants the chance to recover physical damage inflicted on the enemy as 8%% HP to all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0310"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -154,7 +154,7 @@
             level 2: For 5 minutes, Damage Reflect Resistance +20%% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires dual swords.
          -->
 		<icon initial="icon.skill0311"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="44">
 				<value level="2">66</value>
 			</magic-level>
@@ -350,7 +350,7 @@
 				<value level="8">8</value>
 				<value level="9">9</value>
 			</level>
-			<time initial="120"/>
+			<time initial="1200"/>
 		</abnormal>
 		<conditions>
 			<weapon>

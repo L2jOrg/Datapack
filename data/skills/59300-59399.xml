@@ -610,14 +610,14 @@
             level 2: The armor's power makes the wearer go berserk. During Berserk state, the wearer's P. Atk. +70% M. Atk. +70% Atk. Spd. +70%, Casting Spd. +70%. Reflects 20% of received damage to the enemy.
          -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" triggered="true">
             <reuse initial="290000">
                 <value level="2">190000</value>
             </reuse>
             <effect-point initial="20"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="TRANSFORM_EFFECT" visual="BIG_BODY">
             <time initial="10"/>
         </abnormal>
         <effects>
