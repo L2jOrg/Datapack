@@ -56,7 +56,7 @@
 		<target/>
 	</skill>
 	<skill id="15506" name="Wondrous Herb of Power" action="A2">
-		<!-- For 1 hr. 30 sec., P. Atk. + 100%%. -->
+		<!-- For 1 min. 30 sec., P. Atk. + 100%%. -->
 		<icon initial="icon.etc_warrior_set_i00"/>
 		<attributes property="PHYSIC">
 			<cast-range initial="2000"/>
@@ -65,9 +65,18 @@
 			<hit-time initial="100"/>
 		</attributes>
 		<target/>
+		<abnormal>
+            <level initial="1"/>
+            <time initial="90"/>
+        </abnormal>
+		<effects>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="100.0"/>
+            </stat-modify>
+		</effects>
 	</skill>
 	<skill id="15507" name="Wondrous Herb of Magic" action="A2">
-		<!-- For 1 hr. 30 sec., M. Atk. + 400%%. -->
+		<!-- For 1 min. 30 sec., M. Atk. + 400%%. -->
 		<icon initial="icon.etc_magic_set_i00"/>
 		<attributes property="PHYSIC">
 			<cast-range initial="2000"/>
@@ -76,6 +85,15 @@
 			<hit-time initial="100"/>
 		</attributes>
 		<target/>
+		<abnormal>
+            <level initial="1"/>
+            <time initial="90"/>
+        </abnormal>
+		<effects>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="400.0"/>
+            </stat-modify>
+		</effects>
 	</skill>
 	<skill id="15508" name="Special Armor" max-level="4">
 		<!-- Special armor reduces damage received from servitors. -->

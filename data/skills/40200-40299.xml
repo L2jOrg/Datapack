@@ -21,14 +21,14 @@
 		HP/MP/CP +30%%, HP Recovery Bonus/MP Recovery Bonus +40%%, 
 		and has a chance to absorb 7%% of physical damage dealt to enemies as HP.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.bm_dragon_fruit"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
 			<magic-level initial="1"/>
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 		</attributes>
         <target/>
-		<abnormal type="DRAGON_FRUIT" visual="U_DIVINITY">
-			<level initial="1"/>
+		<abnormal type="EXP_SP_K">
+			<level initial="3"/>
 			<time initial="1200"/>
 		</abnormal>
 		<effects>
@@ -85,16 +85,89 @@
     <skill id="40203" name="Dragon's Special Elixir Lv. 2 - Event">
         <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.bm_dragon_posion"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+			<magic-level initial="1"/>
+			<reuse initial="60000"/>
+			<effect-point initial="1"/>
+		</attributes>
         <target/>
+		<abnormal type="DRAGON_FRUIT">
+			<level initial="2"/>
+			<time initial="1200"/>
+		</abnormal>
+		<effects>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+				<power initial="50.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="BONUS_SP">
+				<power initial="50.0"/>
+			</stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK">
+				<power initial="300.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_ATTACK">
+				<power initial="450.0"/>
+			</stat-modify>
+            <stat-modify stat="MAGICAL_DEFENCE">
+                <power initial="550.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="400.0"/>
+            </stat-modify>
+			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="70.0"/>
+            </stat-modify>
+			<stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="70.0"/>
+            </stat-modify>
+			<stat-modify stat="CRITICAL_RATE">
+				<power initial="40.0"/>
+			</stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="40.0"/>
+            </stat-modify>		
+           <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="12.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="12.0"/>
+            </stat-modify>
+			<vital-stat-modify stat="MAX_HP">
+				<power initial="3000.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_MP">
+				<power initial="2000.0"/>
+			</vital-stat-modify>
+			<vital-stat-modify stat="MAX_CP">
+				<power initial="3000.0"/>
+			</vital-stat-modify>
+			<stat-modify stat="REGENERATE_HP_RATE">
+				<power initial="12.0"/>
+			</stat-modify>
+			<stat-modify stat="REGENERATE_MP_RATE">
+				<power initial="12.0"/>
+			</stat-modify>
+			<vampiric-attack chance="80">
+				<power initial="7.0"/>
+			</vampiric-attack>
+		</effects>	
     </skill>
-    <skill id="40204" name="Scroll: Fire Dragon's Blessing - Event">
+    <skill id="40204" name="Scroll: Fire Dragon's Blessing - Event" action="A2" type="MAGIC">
         <!-- For 20 min., you feel the Fire Dragon's Blessing. Cannot be dropped.\n\nFire Dragon's Blessing: The targets buff/debuff remains after death. The Fire Dragon's Blessing disappears. -->
         <icon initial="icon.bm_blessing_dragon"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
+            <hit-time initial="500"/>
+        </attributes>		
         <target/>
+        <abnormal type="PRESERVE_ABNORMAL">
+            <level initial="2"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <effect name="NoblesseBless"/>
+        </effects>
     </skill>
     <skill id="40205" name="16th Anniversary Special Buff" max-level="8">
         <!--

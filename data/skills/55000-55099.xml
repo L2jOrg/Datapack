@@ -729,13 +729,13 @@
     <skill id="55041" name="XP/SP Boost" action="A2">
         <!-- For 60 minutes, XP/SP Gain from hunting +20%%. Does not disappear when dying. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
             <reuse initial="1800000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_I">
             <level initial="1"/>
             <time initial="3600"/>
         </abnormal>
