@@ -40,6 +40,9 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
+			<stat-modify stat="PHYSICAL_DEFENCE">
+                <power initial="15.0"/>
+            </stat-modify>
             <stat-modify stat="WEIGHT_LIMIT">
                 <power initial="2000.0"/>
             </stat-modify>
@@ -74,15 +77,63 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A1">
+    <skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A2">
         <!-- For 20 minutes,  Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-        <icon initial="icon.etc_trophy_i00"/>
-        <attributes property="PHYSIC">
-            <cast-range initial="400"/>
+        <icon initial="icon.etc_trophy_i00"/>       
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <magic-level initial="1"/>
             <reuse initial="1000"/>
             <hit-time initial="200"/>
         </attributes>
         <target/>
+        <!-- <abnormal type="MULTI_BUFF"> -->
+            <!-- <level initial="2"/> -->
+            <!-- <time initial="1200"/> -->
+        <!-- </abnormal> -->
+        <effects>
+            <call-skill skill="1040">
+                <power initial="3"/>
+            </call-skill>
+            <call-skill skill="1068">
+                <power initial="3"/>
+            </call-skill>
+            <call-skill skill="1085">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1204">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="4359">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1044">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1240">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1242">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1036">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1045">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1048">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1086">
+                <power initial="1"/>
+            </call-skill>
+            <call-skill skill="1087">
+                <power initial="2"/>
+            </call-skill>
+            <call-skill skill="1059">
+                <power initial="2"/>
+            </call-skill>
+        </effects>
     </skill>
     <skill id="55408" name="Expertise Rune (A-grade)">
         <!-- When possessed, you get Expertise A skill -->
@@ -981,7 +1032,6 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-        <!-- <abnormal type="EXP_SP_U"/> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1112,23 +1162,47 @@
                     <value level="10">7</value>
                 </power>
             </speed>
-            <defence-trait start-level="10">
-                <trait type="BOW">
+            <defence-trait start-level="10">               				
+				<trait type="SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="MAGIC_SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="TWO_HAND_SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="ANCIENT_SWORD">
+                    <power initial="10"/>
+                </trait>
+				 <trait type="RAPIER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL">
                     <power initial="10"/>
                 </trait>
-                <trait type="SWORD">
+                 <trait type="DUAL_BLUNT">
                     <power initial="10"/>
                 </trait>
-                <trait type="DAGGER">
+                <trait type="FIST">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUALFIST">
                     <power initial="10"/>
                 </trait>
                 <trait type="BLUNT">
+                    <power initial="10"/>
+                </trait>
+				<trait type="HAMMER">
+                    <power initial="10"/>
+                </trait>
+				<trait type="STAFF">
+                    <power initial="10"/>
+                </trait>				
+				<trait type="ROD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="DAGGER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL_DAGGER">
@@ -1172,7 +1246,7 @@
                     <value level="10">400</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="DEFENCE_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" start-level="4" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -1182,7 +1256,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_CRITICAL_RATE">
+            <stat-modify mode="PER" start-level="10" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power initial="10"/>
             </stat-modify>
         </effects>
@@ -1219,7 +1293,7 @@
                     <value level="10">250</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" start-level="4" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" stat-add="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -1229,12 +1303,12 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_MAGIC_CRITICAL_RATE">
+            <stat-modify mode="PER" start-level="10" stat="DEFENCE_MAGIC_CRITICAL_RATE" stat-add="DEFENCE_MAGIC_CRITICAL_RATE_ADD">
                 <power initial="10"/>
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55477" name="Ruby" max-level="10" action="A1">
+    <skill id="55477" name="Ruby" max-level="10">
         <!--
             level 1: Damage received from Soulshots +2%.
             level 2: Damage received from Soulshots +3%.
@@ -1267,7 +1341,7 @@
             </stat-modify>           
 		</effects>
     </skill>
-    <skill id="55478" name="Ruby" max-level="10" action="A1">
+    <skill id="55478" name="Ruby" max-level="10">
         <!--
             level 1: Damage received from Blessed Soulshots +2%.
             level 2: Damage received from Blessed Soulshots +3%.
@@ -1300,7 +1374,7 @@
             </stat-modify>           
 		</effects>
     </skill>
-    <skill id="55479" name="Ruby" max-level="10" action="A1">
+    <skill id="55479" name="Ruby" max-level="10">
         <!--
             level 1: Damage from Beast Soulshot +2%.
             level 2: Damage from Beast Soulshot +3%.
@@ -1315,11 +1389,24 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes>
-        </attributes>
+        <attributes property="MAGIC"/>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">5</value>
+                    <value level="4">8</value>
+                    <value level="5">16</value>
+                    <value level="6">17</value>
+                    <value level="7">18</value>
+                    <value level="8">19</value>
+                    <value level="9">20</value>
+                </power>
+            </stat-modify>           
+		</effects>
     </skill>
-    <skill id="55481" name="Sapphire" max-level="10" action="A1">
+    <skill id="55481" name="Sapphire" max-level="10">
         <!--
             level 1: Damage received from Spiritshots +2%.
             level 2: Damage received from Spiritshots +3%.
@@ -1347,12 +1434,11 @@
                     <value level="7">18</value>
                     <value level="8">19</value>
                     <value level="9">20</value>
-                    <value level="10">20</value>
                 </power>
             </stat-modify>
 		</effects>
     </skill>
-    <skill id="55482" name="Sapphire" max-level="10" action="A1">
+    <skill id="55482" name="Sapphire" max-level="10">
         <!--
             level 1: Damage received from Blessed Spiritshots +2%.
             level 2: Damage received from Blessed Spiritshots +3%.
@@ -1385,7 +1471,7 @@
             </stat-modify>
 		</effects>
     </skill>
-    <skill id="55483" name="Sapphire" max-level="10" action="A1">
+    <skill id="55483" name="Sapphire" max-level="10">
         <!--
             level 1: Damage from Beast Spiritshot +2%.
             level 2: Damage from Beast Spiritshot +3%.
@@ -1503,7 +1589,7 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A1">
+    <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A2" type="MAGIC">
         <!--
             level 1: Becomes invincible from debuffs for 5 seconds.
             level 2: Becomes invincible from debuffs for 15 seconds.
@@ -1516,11 +1602,26 @@
         <icon initial="icon.etc_bm_jewel_garnet">
             <value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="300000"/>
             <effect-point initial="1"/>
+			<hit-time initial="500"/>
         </attributes>
         <target/>
+		<abnormal type="ABNORMAL_INVINCIBILITY">
+            <level initial="4"/>
+            <time initial="5">
+                <value level="2">15</value>
+                <value level="3">16</value>
+                <value level="4">17</value>
+                <value level="5">18</value>
+                <value level="6">20</value>
+                <value level="7">25</value>
+            </time>
+        </abnormal>        
+        <effects>
+            <effect name="DebuffBlock"/>
+        </effects>
     </skill>
     <skill id="55495" name="Fortune Brooch" action="A1">
         <!-- none -->

@@ -35,6 +35,24 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
+			<reuse start-level="18" skill-type="PHYSIC">
+				<power initial="-7.0"/>
+			</reuse>
+			<reuse start-level="18" skill-type="MAGIC">
+                <power initial="-7.0"/>
+            </reuse>
+			<stat-modify start-level="12" stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power initial="2.0">
+                    <value level="18">4.0</value>
+                    <value level="24">8.0</value>
+                </power>
+            </stat-modify>
+			<vampiric-attack start-level="12" chance="70">
+                <power initial="4.0">
+                    <value level="18">8.0</value>
+                    <value level="24">16.0</value>
+                </power>
+            </vampiric-attack>
             <base-stat type="CON">
                 <power initial="1">
                     <value level="7">2</value>

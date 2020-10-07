@@ -1236,7 +1236,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54022" name="Shunaiman's Power" max-level="2" action="A1">
+    <skill id="54022" name="Shunaiman's Power" max-level="2">
         <!--
             level 1: By Shunaiman's Power Stun/MEN Attack Rate +5%% and Damage Reflective Res +10%%.
             level 2: By Shunaiman's Power Stun/MEN Attack Rate +15%% and Damage Reflective Res +30%%.
@@ -1425,6 +1425,33 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
+        <effects>
+			<reuse start-level="3" skill-type="PHYSIC">
+				<power initial="-7.0"/>
+			</reuse>
+			<reuse start-level="3" skill-type="MAGIC">
+                <power initial="-7.0"/>
+            </reuse>
+			<stat-modify start-level="2" stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power initial="2.0">
+                    <value level="3">4.0</value>
+                    <value level="4">8.0</value>
+                </power>
+            </stat-modify>
+			<vampiric-attack start-level="2" chance="70">
+                <power initial="4.0">
+                    <value level="3">8.0</value>
+                    <value level="4">16.0</value>
+                </power>
+            </vampiric-attack>            
+			<base-stats  types="CON MEN DEX WIT STR INT">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">3</value>
+                    <value level="4">4</value>
+                </power>
+            </base-stats>          
+		</effects>
     </skill>
     <skill id="54030" name="Ignis Necklace" max-level="11">
         <!--
@@ -1444,7 +1471,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify stat="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1453,7 +1480,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1484,7 +1511,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify stat="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1493,7 +1520,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1524,7 +1551,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify stat="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1533,7 +1560,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1564,7 +1591,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+            <vital-stat-modify stat="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1573,7 +1600,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -2012,6 +2039,9 @@
         </abnormal>
         <effects>
             <reuse skill-type="PHYSIC">
+                <power initial="100.0"/>
+            </reuse>
+			<reuse skill-type="MAGIC">
                 <power initial="100.0"/>
             </reuse>
         </effects>

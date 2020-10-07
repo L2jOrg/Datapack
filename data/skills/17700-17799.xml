@@ -25,17 +25,23 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="17702" name="Greater Topaz - Special Ability" action="A1">
+    <skill id="17702" name="Greater Topaz - Special Ability" action="A1" type="MAGIC">
         <!-- Removes up to 3 buffs on the enemy. -->
         <icon initial="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
             <cast-range initial="600"/>
             <reuse initial="300000"/>
             <cool-time initial="500"/>
             <effect-point initial="-1000"/>
+			<effect-range initial="1100"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY_ONLY"/>
+        <effects>
+            <dispel-by-category category="BUFF" max="3">
+                <power initial="60.0"/>
+            </dispel-by-category>
+        </effects>
     </skill>
     <skill id="17706" name="Vital Stone" max-level="10">
         <!--
@@ -143,23 +149,47 @@
             <stat-modify mode="PER" start-level="10" stat="PHYSICAL_DEFENCE">
                 <power initial="10"/>
             </stat-modify>
-            <defence-trait start-level="10">
-                <trait type="BOW">
+			<defence-trait start-level="10">               				
+				<trait type="SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="MAGIC_SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="TWO_HAND_SWORD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="ANCIENT_SWORD">
+                    <power initial="10"/>
+                </trait>
+				 <trait type="RAPIER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL">
                     <power initial="10"/>
                 </trait>
-                <trait type="SWORD">
+                 <trait type="DUAL_BLUNT">
                     <power initial="10"/>
                 </trait>
-                <trait type="DAGGER">
+                <trait type="FIST">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUALFIST">
                     <power initial="10"/>
                 </trait>
                 <trait type="BLUNT">
+                    <power initial="10"/>
+                </trait>
+				<trait type="HAMMER">
+                    <power initial="10"/>
+                </trait>
+				<trait type="STAFF">
+                    <power initial="10"/>
+                </trait>				
+				<trait type="ROD">
+                    <power initial="10"/>
+                </trait>
+				<trait type="DAGGER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL_DAGGER">
@@ -203,7 +233,7 @@
                     <value level="10">400</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="DEFENCE_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" start-level="4" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -213,7 +243,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_CRITICAL_RATE">
+            <stat-modify mode="PER" start-level="10" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power initial="10"/>
             </stat-modify>
         </effects>
@@ -250,7 +280,7 @@
                     <value level="10">250</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="4" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE">
+            <stat-modify mode="PER" start-level="4" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" stat-add="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="4">
                     <value level="5">10</value>
                     <value level="6">11</value>
@@ -260,7 +290,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" start-level="10" stat="DEFENCE_MAGIC_CRITICAL_RATE">
+            <stat-modify mode="PER" start-level="10" stat="DEFENCE_MAGIC_CRITICAL_RATE" stat-add="DEFENCE_MAGIC_CRITICAL_RATE_ADD">
                 <power initial="10"/>
             </stat-modify>
         </effects>

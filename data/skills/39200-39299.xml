@@ -205,7 +205,7 @@
 	<skill id="39211" name="Saviour's Scroll of Growth" action="A1">
 		<!-- For 2 hours, XP/SP Gain +50%% due to the energy of the savior. Cooldown is 2 hours. The Savior's Scroll of Growth remains after death. -->
 		<icon initial="icon.etc_kalie_hero_scroll"/>
-		<attributes property="PHYSIC" stay-after-death="true">
+		<attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
 			<reuse initial="7200000"/>
 			<effect-point initial="1"/>
 		</attributes>
@@ -214,7 +214,7 @@
             <item-count initial="1"/>
         </consume>
 		<target/>
-		<abnormal>
+		<abnormal type="EXP_SP_I">
 			<level initial="2"/>
 			<time initial="7200"/>
 		</abnormal>
@@ -230,11 +230,23 @@
 	<skill id="39212" name="Einhasad's Protection" action="A1">
 		<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Protection. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
 		<icon initial="icon.etc_dragons_blood_i03"/>
-		<attributes property="PHYSIC">
+		<attributes property="PHYSIC" stay-after-death="true">
 			<reuse initial="60000"/>
 			<effect-point initial="1"/>
 		</attributes>
 		<target/>
+		<abnormal>
+			<level initial="2"/>
+			<time initial="3600"/>
+		</abnormal>
+		<effects>
+			<stat-modify mode="PER" stat="BONUS_EXP">
+				<power initial="100.0"/>
+			</stat-modify>
+			<stat-modify mode="PER" stat="BONUS_SP">
+				<power initial="100.0"/>
+			</stat-modify>
+		</effects>
 	</skill>
 	<skill id="39213" name="Savior Scroll: Enchant Weapon" action="A1">
 		<!-- Can only be used on Savior's Weapon. The item is not destroyed and will retain the current enchant value even if enchantment fails. -->
@@ -1195,9 +1207,8 @@
 			<effect-point initial="1"/>
 		</attributes>
 		<target/>
-		<!-- <abnormal type="DRAGON_FRUIT"> -->
 		<abnormal type="EXP_SP_K">
-			<level initial="1"/>
+			<level initial="2"/>
 			<time initial="1200"/>
 		</abnormal>
 		<effects>
