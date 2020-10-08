@@ -3,10 +3,10 @@
     <event name="Clan Hall Auction" class="org.l2j.gameserver.instancemanager.ClanHallAuctionManager">
         <scheduler>
             <!-- Schedule of the event start, Wednesday at 19:00 -->
-            <schedule name="startAuction" event="onEventStart" minute="00" hour="18" dayOfMonth="*" month="*" dayOfWeek="3"/>
+            <schedule name="startAuction" event="onEventStart" minute="00" hour="18" dayOfMonth="9" month="10" dayOfWeek="*"/>
 
             <!-- Schedule of the event end, Wednesday at 11:00 -->
-            <schedule name="endAuction" event="onEventEnd" minute="00" hour="11" dayOfMonth="*" month="*" dayOfWeek="3"/>
+            <schedule name="endAuction" event="onEventEnd" minute="00" hour="18" dayOfMonth="12" month="10" dayOfWeek="*"/>
 
             <!-- Attach condition to re-launch start if server boots up in between start - end -->
             <conditionalSchedule>
