@@ -4289,7 +4289,7 @@
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
-            <chance initial="50"/>
+            <chance initial="60"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -4297,7 +4297,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="487.0">
                     <value level="2">518.0</value>
                     <value level="3">550.0</value>
@@ -4384,7 +4384,7 @@
 		level 30: Gathers Momentum to attack the target with 5261 Power. Damage increases with Momentum consumption. Damage +30% when the maximum 3 Momentum are consumed. Requires a Sword, Blunt Weapon, or Dualsword.
 	 -->
         <icon initial="icon.skill0261"/>
-        <attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="53">
                 <value level="2">54</value>
                 <value level="3">55</value>
@@ -4492,7 +4492,7 @@
             </weapon>
         </conditions>
         <effects>
-            <energy-attack consume-charges="3" critical-chance="15" ignore-shield="true" over-hit="true" physical-defense-mod="1.0">
+            <energy-attack consume-charges="3" physical-defense-mod="3.0">
                 <power initial="1948.0">
                     <value level="2">2042.0</value>
                     <value level="3">2138.0</value>
@@ -4678,43 +4678,46 @@
                 <value level="35">47</value>
                 <value level="36">48</value>
             </mana-init>
-            <mana initial="115">
-                <value level="2">119</value>
-                <value level="3">122</value>
-                <value level="5">127</value>
-                <value level="6">130</value>
-                <value level="7">134</value>
-                <value level="8">139</value>
-                <value level="9">143</value>
-                <value level="10">148</value>
-                <value level="11">152</value>
-                <value level="12">157</value>
-                <value level="13">159</value>
-                <value level="15">164</value>
-                <value level="16">168</value>
-                <value level="17">173</value>
-                <value level="18">177</value>
-                <value level="19">180</value>
-                <value level="20">185</value>
-                <value level="21">189</value>
-                <value level="22">193</value>
-                <value level="23">195</value>
-                <value level="25">199</value>
-                <value level="26">203</value>
-                <value level="27">207</value>
-                <value level="28">210</value>
-                <value level="29">214</value>
-                <value level="30">218</value>
-                <value level="31">222</value>
-                <value level="32">224</value>
-                <value level="33">228</value>
-                <value level="34">230</value>
-                <value level="35">233</value>
-                <value level="36">237</value>
-                <value level="37">239</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
+            <mana initial="92">
+                <value level="2">95</value>
+                <value level="3">97</value>
+                <value level="4">97</value>
+                <value level="5">101</value>
+                <value level="6">104</value>
+                <value level="7">107</value>
+                <value level="8">111</value>
+                <value level="9">114</value>
+                <value level="10">118</value>
+                <value level="11">121</value>
+                <value level="12">125</value>
+                <value level="13">127</value>
+                <value level="14">127</value>
+                <value level="15">131</value>
+                <value level="16">134</value>
+                <value level="17">138</value>
+                <value level="18">141</value>
+                <value level="19">144</value>
+                <value level="20">148</value>
+                <value level="21">151</value>
+                <value level="22">154</value>
+                <value level="23">156</value>
+                <value level="24">156</value>
+                <value level="25">159</value>
+                <value level="26">162</value>
+                <value level="27">165</value>
+                <value level="28">168</value>
+                <value level="29">171</value>
+                <value level="30">174</value>
+                <value level="31">177</value>
+                <value level="32">179</value>
+                <value level="33">182</value>
+                <value level="34">184</value>
+                <value level="35">186</value>
+                <value level="36">189</value>
+                <value level="37">191</value>
+            </mana>               
+        </consume>                
+        <target type="TARGET"/>   
         <effects>
             <effect name="Heal">
                 <power initial="236.0">
@@ -4959,43 +4962,43 @@
         </conditions>
         <effects>
             <fatal-blow chance-boost="300.0" over-hit="true">
-                <power initial="1107.0">
-                    <value level="2">1176.0</value>
-                    <value level="3">1249.0</value>
-                    <value level="4">1325.0</value>
-                    <value level="5">1405.0</value>
-                    <value level="6">1488.0</value>
-                    <value level="7">1574.0</value>
-                    <value level="8">1664.0</value>
-                    <value level="9">1757.0</value>
-                    <value level="10">1853.0</value>
-                    <value level="11">1953.0</value>
-                    <value level="12">2057.0</value>
-                    <value level="13">2164.0</value>
-                    <value level="14">2274.0</value>
-                    <value level="15">2388.0</value>
-                    <value level="16">2505.0</value>
-                    <value level="17">2625.0</value>
-                    <value level="18">2748.0</value>
-                    <value level="19">2875.0</value>
-                    <value level="20">3004.0</value>
-                    <value level="21">3136.0</value>
-                    <value level="22">3271.0</value>
-                    <value level="23">3408.0</value>
-                    <value level="24">3548.0</value>
-                    <value level="25">3690.0</value>
-                    <value level="26">3834.0</value>
-                    <value level="27">3980.0</value>
-                    <value level="28">4127.0</value>
-                    <value level="29">4275.0</value>
-                    <value level="30">4425.0</value>
-                    <value level="31">4575.0</value>
-                    <value level="32">4726.0</value>
-                    <value level="33">4878.0</value>
-                    <value level="34">5029.0</value>
-                    <value level="35">5180.0</value>
-                    <value level="36">5330.0</value>
-                    <value level="37">5479.0</value>
+                <power initial="1218.0">
+                    <value level="2">1294.0</value>
+                    <value level="3">1374.0</value>
+                    <value level="4">1458.0</value>
+                    <value level="5">1546.0</value>
+                    <value level="6">1637.0</value>
+                    <value level="7">1731.0</value>
+                    <value level="8">1830.0</value>
+                    <value level="9">1933.0</value>
+                    <value level="10">2038.0</value>
+                    <value level="11">2148.0</value>
+                    <value level="12">2263.0</value>
+                    <value level="13">2380.0</value>
+                    <value level="14">2501.0</value>
+                    <value level="15">2627.0</value>
+                    <value level="16">2756.0</value>
+                    <value level="17">2888.0</value>
+                    <value level="18">3023.0</value>
+                    <value level="19">3163.0</value>
+                    <value level="20">3304.0</value>
+                    <value level="21">3450.0</value>
+                    <value level="22">3598.0</value>
+                    <value level="23">3749.0</value>
+                    <value level="24">3903.0</value>
+                    <value level="25">4059.0</value>
+                    <value level="26">4217.0</value>
+                    <value level="27">4378.0</value>
+                    <value level="28">4540.0</value>
+                    <value level="29">4703.0</value>
+                    <value level="30">4868.0</value>
+                    <value level="31">5033.0</value>
+                    <value level="32">5199.0</value>
+                    <value level="33">5366.0</value>
+                    <value level="34">5532.0</value>
+                    <value level="35">5698.0</value>
+                    <value level="36">5863.0</value>
+                    <value level="37">6027.0</value>
                     <value level="38">6090.0</value>
                     <value level="39">6152.0</value>
                     <value level="40">6215.0</value>
