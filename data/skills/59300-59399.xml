@@ -1385,11 +1385,17 @@
     </skill>
     <skill id="59337" name="Very Strong!" action="A1">
         <!-- Activates the Collector Power that ignores CP in PvP and inflicts a fixed damage of 1350 -->
-        <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
+        <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>        
+		<attributes property="MAGIC" magic-critical-rate="5.0">
+            <cast-range initial="40"/>
             <reuse initial="6000"/>
         </attributes>
-        <target/>
+        <target type="ENEMY"/>
+        <effects>
+            <effect name="RealDamage">
+                <power initial="1350"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="59338" name="Very Quick!" action="A1">
         <!-- Activates the Collector Power that cancels nearby enemies' targets and teleports the caster to the rear -->

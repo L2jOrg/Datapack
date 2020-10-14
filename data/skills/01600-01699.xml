@@ -99,11 +99,11 @@
                 <value level="10">133</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" affect-min="6" affect-random="12"/>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="5"/>
-            <chance initial="50"/>
+            <chance initial="60"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -111,7 +111,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="20" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="801.0">
                     <value level="2">1002.0</value>
                     <value level="3">1234.0</value>
@@ -178,7 +178,7 @@
             level 45: Attacks frontal enemies with bonus 2820 Power. Requires a sword or blunt weapon. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill1607"/>
-        <attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="40">
                 <value level="4">41</value>
                 <value level="5">42</value>
@@ -1239,7 +1239,7 @@
         <consume>
             <mana initial="63"/>
         </consume>
-        <target type="ENEMY" range="150" affect-min="5" affect-random="12"/>
+        <target type="ENEMY" range="300" affect-min="6" affect-random="12"/>
         <abnormal type="ROOT_PHYSICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="10"/>
@@ -1251,7 +1251,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="30.0" ignore-shield="true" over-hit="true">
+            <physical-attack ignore-shield="true" over-hit="true">
                 <power initial="801.0"/>
             </physical-attack>
             <effect name="Root"/>
@@ -1260,7 +1260,7 @@
     <skill id="1626" name="Howl Spear" debuff="true" action="A1">
         <!-- Strikes with a spear to inflict damage on nearby enemies with bonus 2911 Power. Removes Movement Speed buffs. Requires a spear. -->
         <icon initial="icon.skill1626"/>
-        <attributes next-action="ATTACK" magic-critical-rate="5.0" level-bonus-rate="20">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
             <magic-level initial="80"/>
             <reuse initial="8000"/>
             <cool-time initial="500"/>
@@ -1270,14 +1270,14 @@
         <consume>
             <mana initial="67"/>
         </consume>
-        <target type="ENEMY_ONLY"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="6" affect-random="12"/>
         <conditions>
             <weapon>
                 <type>SPEAR</type>
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2911.0"/>
             </physical-attack>
             <dispel-probability abnormals="SPEED_UP IMPROVE_SPEED_AVOID_UP SPEED_UP_SPECIAL SONG_OF_WIND">
@@ -1299,7 +1299,7 @@
         <consume>
             <mana initial="57"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="6" affect-random="12"/>
         <abnormal type="TURN_FLEE" visual="TURN_FLEE">
             <level initial="1"/>
             <time initial="7"/>
@@ -1369,6 +1369,7 @@
         <effects>
             <stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
                 <power initial="2.0"/>
+				<weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -1400,7 +1401,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="396.0"/>
             </physical-attack>
             <effect name="SkillTurning"/>
@@ -1433,12 +1434,12 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0" over-hit="true">
+            <physical-attack over-hit="true">
                 <power initial="396.0"/>
             </physical-attack>
             <trigger-skill-by-magic skill="5684">
                 <chance initial="50"/>
-                <types>PHYSIC</types>
+                <types>PHYSIC MAGIC</types>
             </trigger-skill-by-magic>
         </effects>
     </skill>
@@ -1539,7 +1540,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="0.0" over-hit="true">
+            <physical-attack over-hit="true">
                 <power initial="2694.0">
                     <value level="2">2762.0</value>
                     <value level="3">2828.0</value>
