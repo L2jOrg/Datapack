@@ -296,6 +296,13 @@
         <attributes>
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="20">
+                    <value level="2">20</value>                    
+                </power>
+            </stat-modify>           
+		</effects>
     </skill>
     <skill id="51232" name="Gem - Greater Ruby" action="A1">
         <!-- Beast Soulshot damage +20% -->
@@ -303,6 +310,11 @@
         <attributes>
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="20"/>
+            </stat-modify>           
+		</effects>
     </skill>
     <skill id="51233" name="Gem - Greater Ruby" max-level="5">
         <!--
@@ -360,6 +372,46 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<base-stat type="CON">
+                <power initial="1">                    
+                    <value level="6">2</value>                    
+                </power>
+            </base-stat>
+			<base-stat start-level="2" type="MEN">
+                <power initial="1">                    
+                    <value level="7">2</value>                    
+                </power>
+            </base-stat>
+			<base-stat start-level="3" type="DEX">
+                <power initial="1">                    
+                    <value level="8">2</value>
+                </power>
+            </base-stat>
+			<base-stat start-level="4" type="WIT">
+                <power initial="1">                  
+                    <value level="9">2</value>
+                </power>
+            </base-stat>
+			<base-stat start-level="5" type="STR">
+                <power initial="1">                   
+                    <value level="10">2</value>
+                </power>
+            </base-stat>
+			<base-stat start-level="5" type="INT">
+                <power initial="1">                   
+                    <value level="10">2</value>
+                </power>
+            </base-stat>
+			<stat-modify mode="PER" start-level="6" stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+				<power initial="2.0">
+					<value level="7">4.0</value>
+					<value level="8">6.0</value>
+					<value level="9">10.0</value>
+					<value level="10">20.0</value>
+				</power>
+			</stat-modify>
+        </effects>
     </skill>
     <skill id="51238" name="Brilliant Jewelry Box" action="A1">
         <!-- none -->
@@ -588,18 +640,30 @@
     <skill id="51253" name="Elmoreden Scroll of Experience" action="A1">
         <!-- 500,000 XP. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="500000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="51254" name="High-grade Elmoreden Scroll of Experience" action="A1">
         <!-- 20,000,000 XP. -->
         <icon initial="icon.bm_elmoaden_exp_scrl"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
+        <effects>
+            <effect name="GiveXp">
+                <power initial="20000000.0"/>
+            </effect>
+        </effects>
     </skill>
     <skill id="51255" name="Elmoreden Treasure Chest" action="A1">
         <!-- none -->

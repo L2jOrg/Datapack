@@ -1135,7 +1135,10 @@
         </consume>
         <target/>
         <abnormal type="HEAL_POWER_UP">
-            <level initial="1"/>
+            <level initial="1">
+			    <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
             <time initial="120"/>
         </abnormal>
         <effects>
@@ -1266,16 +1269,19 @@
                 <value level="3">170</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="12"/>
         <abnormal type="NORMAL_ATTACK_BLOCK">
-            <level initial="1"/>
+            <level initial="1">
+				<value level="2">2</value>
+                <value level="3">3</value>
+            </level>
             <time initial="10"/>
-            <chance initial="80"/>
+            <chance initial="80">
+				<value level="2">90</value>
+                <value level="3">100</value>
+            </chance>
         </abnormal>
-        <effects>
-            <magical-attack>
-                <power initial="80.0"/>
-            </magical-attack>
+        <effects>            
             <effect name="PhysicalAttackMute"/>
         </effects>
     </skill>
@@ -1311,7 +1317,7 @@
             <mana-init initial="32"/>
             <mana initial="128"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="15"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="12"/>
         <abnormal type="ULTIMATE_DEBUFF">
             <level initial="1"/>
             <time initial="10"/>

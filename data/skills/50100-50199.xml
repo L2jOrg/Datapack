@@ -1260,30 +1260,31 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify stat="CRITICAL_RATE">
-                <power>
-                    <value level="3">10.0</value>
+			<stat-modify mode="PER" start-level="4" stat="MAGIC_SUCCESS_RES">
+				<power initial="2.0">
+					<value level="5">5.0</value>
+				</power>
+			</stat-modify>
+            <stat-modify start-level="3" stat="CRITICAL_RATE">
+                <power initial="10.0">
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power>
-                    <value level="3">10.0</value>
+            <stat-modify start-level="3" stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0">
                     <value level="4">20.0</value>
                     <value level="5">30.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-                <power>
-                    <value level="2">1.0</value>
+            <stat-modify mode="PER" start-level="2" stat="PHYSICAL_SKILL_POWER">
+                <power initial="1.0">
                     <value level="4">2.0</value>
                     <value level="5">3.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-                <power>
-                    <value level="2">1.0</value>
+            <stat-modify mode="PER" start-level="2" stat="MAGICAL_SKILL_POWER">
+                <power initial="1.0">
                     <value level="4">2.0</value>
                     <value level="5">3.0</value>
                 </power>
@@ -1356,6 +1357,62 @@
         <icon initial="icon.etc_bm_jewel_opal_i00"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">28</value>
+                        <value level="10">30</value>
+                    </power>
+                </trait>
+				<trait type="PULL">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">28</value>
+                        <value level="10">30</value>
+                    </power>
+                </trait>
+				<trait type="DERANGEMENT">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">28</value>
+                        <value level="10">30</value>
+                    </power>
+                </trait>
+				<trait type="PARALYZE">
+                    <power initial="3">
+                        <value level="2">5</value>
+                        <value level="3">8</value>
+                        <value level="4">11</value>
+                        <value level="5">20</value>
+                        <value level="6">22</value>
+                        <value level="7">24</value>
+                        <value level="8">26</value>
+                        <value level="9">28</value>
+                        <value level="10">30</value>
+                    </power>
+                </trait>
+            </defence-trait>			
+		</effects>	
     </skill>
     <skill id="50196" name="Opal - Special Ability" max-level="10" action="A1">
         <!--
@@ -1371,11 +1428,33 @@
             level 10: Becomes invincible to debuff attacks for 25 seconds.
          -->
         <icon initial="icon.etc_bm_jewel_opal_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
+			<magic-level initial="1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
+		<abnormal type="ABNORMAL_INVINCIBILITY">
+            <level initial="1">
+			    <value level="4">2</value>
+                <value level="8">5</value>
+                <value level="10">7</value>
+            </level>
+            <time initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">5</value>
+                <value level="5">15</value>
+                <value level="6">16</value>
+                <value level="7">17</value>
+                <value level="8">18</value>
+                <value level="9">20</value>
+                <value level="10">25</value>
+            </time>              
+        </abnormal>        
+        <effects>
+            <effect name="DebuffBlock"/>
+        </effects>
     </skill>
     <skill id="50197" name="Coral" max-level="10">
         <!--
@@ -1393,6 +1472,42 @@
         <icon initial="icon.etc_bm_jewel_coral_i00"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">4</value>
+                    <value level="4">7</value>
+                    <value level="5">14</value>
+                    <value level="6">15</value>
+                    <value level="7">16</value>
+                    <value level="8">17</value>
+                    <value level="9">18</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="1">
+                    <value level="2">2</value>
+                    <value level="3">4</value>
+                    <value level="4">7</value>
+                    <value level="5">14</value>
+                    <value level="6">15</value>
+                    <value level="7">16</value>
+                    <value level="8">17</value>
+                    <value level="9">18</value>
+                    <value level="10">20</value>
+                </power>
+            </stat-modify>
+            <speed mode="PER" start-level="6">
+                <power initial="1">
+                    <value level="7">2</value>
+                    <value level="8">3</value>
+                    <value level="9">5</value>
+                    <value level="10">7</value>
+                </power>
+            </speed>            
+        </effects>
     </skill>
     <skill id="50198" name="Onyx" max-level="10" action="A1">
         <!--
@@ -1411,6 +1526,21 @@
         <attributes>
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">5</value>
+                    <value level="4">8</value>
+                    <value level="5">16</value>
+                    <value level="6">17</value>
+                    <value level="7">18</value>
+                    <value level="8">19</value>
+                    <value level="9">20</value>
+                    <value level="10">21</value>
+                </power>
+            </stat-modify>           
+		</effects>
     </skill>
     <skill id="50199" name="Onyx" max-level="10" action="A1">
         <!--
@@ -1429,5 +1559,20 @@
         <attributes>
         </attributes>
         <target/>
+		<effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="2">
+                    <value level="2">3</value>
+                    <value level="3">5</value>
+                    <value level="4">8</value>
+                    <value level="5">16</value>
+                    <value level="6">17</value>
+                    <value level="7">18</value>
+                    <value level="8">19</value>
+                    <value level="9">20</value>
+                    <value level="10">21</value>
+                </power>
+            </stat-modify>           
+		</effects>
     </skill>
 </list>
