@@ -2137,6 +2137,12 @@
             <stat-modify mode="PER" stat="CRITICAL_RATE">
                 <power initial="1.0"/>
             </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="1.0"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55099" name="Lv. 5 Fire Dragon's Pendant Enchant Effect" max-level="10">
@@ -2150,15 +2156,54 @@
             level 7: P. Atk. +46, P. Critical Damage +307, P. Critical Rate +8%%, P. Atk. +4.5%% and P. Critical Damage +9%%.
             level 8: P. Atk. +59, P. Critical Damage +391, P. Critical Rate +10%%, P. Atk. +5%% and P. Critical Damage +11%%.
             level 9: P. Atk. +63, P. Critical Damage +421, P. Critical Rate +12%%, P. Atk. +6%% and P. Critical Damage +13%%.
-            level 10: P. Atk. +75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%% and P. Critical Damage +15%%.
+            level 10: P. Atk.+75, P. Critical Damage +498, P. Critical Rate +15%%, P. Atk. +8%% and P. Critical Damage +15%%.
          -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve"/>
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-        <effects>
+        <effects>			
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="6.0">
+                    <value level="2">8.0</value>
+                    <value level="3">12.5</value>
+                    <value level="4">19.0</value>
+                    <value level="5">28.5</value>
+                    <value level="6">35.0</value>
+                    <value level="7">46.5</value>
+                    <value level="8">59.0</value>
+                    <value level="9">63.0</value>
+                    <value level="10">75.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="38.0">
+                    <value level="2">56.0</value>
+                    <value level="3">78.0</value>
+                    <value level="4">124.0</value>
+                    <value level="5">185.0</value>
+                    <value level="6">250.0</value>
+                    <value level="7">307.0</value>
+                    <value level="8">391.0</value>
+                    <value level="9">421.0</value>
+                    <value level="10">498.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="2.0">
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">5.0</value>
+                    <value level="5">6.0</value>
+                    <value level="6">7.0</value>
+                    <value level="7">8.0</value>
+                    <value level="8">10.0</value>
+                    <value level="9">12.0</value>
+                    <value level="10">15.0</value>
+                </power>
+            </stat-modify>
+			<stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="1.5">
                     <value level="2">2.0</value>
                     <value level="3">2.5</value>
                     <value level="4">3.0</value>
@@ -2170,38 +2215,16 @@
                     <value level="10">8.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="38.0">
-                    <value level="2">56.0</value>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="2.0">
                     <value level="2">3.0</value>
-                    <value level="3">78.0</value>
                     <value level="3">4.0</value>
-                    <value level="4">124.0</value>
                     <value level="4">5.0</value>
-                    <value level="5">185.0</value>
                     <value level="5">6.0</value>
-                    <value level="6">250.0</value>
                     <value level="6">7.0</value>
-                    <value level="7">307.0</value>
                     <value level="7">9.0</value>
-                    <value level="8">391.0</value>
                     <value level="8">11.0</value>
-                    <value level="9">421.0</value>
                     <value level="9">13.0</value>
-                    <value level="10">498.0</value>
-                    <value level="10">15.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify mode="PER" stat="CRITICAL_RATE">
-                <power initial="1.0">
-                    <value level="2">3.0</value>
-                    <value level="3">4.0</value>
-                    <value level="4">5.0</value>
-                    <value level="5">6.0</value>
-                    <value level="6">7.0</value>
-                    <value level="7">8.0</value>
-                    <value level="8">10.0</value>
-                    <value level="9">12.0</value>
                     <value level="10">15.0</value>
                 </power>
             </stat-modify>

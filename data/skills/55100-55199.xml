@@ -199,6 +199,9 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
                 <power initial="1.0"/>
             </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="1.0"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55107" name="Lv. 4 Water Dragon's Pendant Enchant Effect" max-level="10">
@@ -218,18 +221,18 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-        <effects>
+        <effects>			
             <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
-                    <value level="2">2.0</value>
-                    <value level="3">2.5</value>
-                    <value level="4">3.0</value>
-                    <value level="5">3.5</value>
-                    <value level="6">4.0</value>
-                    <value level="7">5.0</value>
-                    <value level="8">6.0</value>
-                    <value level="9">8.0</value>
-                    <value level="10">10.0</value>
+                    <value level="2">20.0</value>
+                    <value level="3">31.5</value>
+                    <value level="4">46.0</value>
+                    <value level="5">64.5</value>
+                    <value level="6">84.0</value>
+                    <value level="7">107.0</value>
+                    <value level="8">149.0</value>
+                    <value level="9">160.0</value>
+                    <value level="10">202.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
@@ -258,6 +261,19 @@
                     <value level="10">12.0</value>
                 </power>
             </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="1.5">
+                    <value level="2">2.0</value>
+                    <value level="3">2.5</value>
+                    <value level="4">3.0</value>
+                    <value level="5">3.5</value>
+                    <value level="6">4.0</value>
+                    <value level="7">5.0</value>
+                    <value level="8">6.0</value>
+                    <value level="9">8.0</value>
+                    <value level="10">10.0</value>
+                </power>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="55108" name="Lv. 5 Water Dragon's Pendant Basic Effect">
@@ -274,6 +290,12 @@
                 <power initial="62.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="1.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="1.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="1.0"/>
             </stat-modify>
         </effects>
@@ -298,37 +320,28 @@
         <effects>
             <stat-modify stat="MAGIC_ATTACK">
                 <power initial="13.0">
-                    <value level="2">2.0</value>
-                    <value level="3">2.5</value>
-                    <value level="4">3.0</value>
-                    <value level="5">3.5</value>
-                    <value level="6">4.0</value>
-                    <value level="7">5.0</value>
-                    <value level="8">6.0</value>
-                    <value level="9">8.0</value>
-                    <value level="10">10.0</value>
+                    <value level="2">20.0</value>
+                    <value level="3">31.5</value>
+                    <value level="4">46.0</value>
+                    <value level="5">64.5</value>
+                    <value level="6">84.0</value>
+                    <value level="7">107.0</value>
+                    <value level="8">149.0</value>
+                    <value level="9">160.0</value>
+                    <value level="10">202.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="89.0">
                     <value level="2">134.0</value>
-                    <value level="2">3.0</value>
                     <value level="3">210.0</value>
-                    <value level="3">4.0</value>
                     <value level="4">307.0</value>
-                    <value level="4">5.0</value>
                     <value level="5">429.0</value>
-                    <value level="5">6.0</value>
                     <value level="6">565.0</value>
-                    <value level="6">7.0</value>
                     <value level="7">717.0</value>
-                    <value level="7">9.0</value>
                     <value level="8">992.0</value>
-                    <value level="8">11.0</value>
                     <value level="9">1065.0</value>
-                    <value level="9">13.0</value>
                     <value level="10">1344.0</value>
-                    <value level="10">15.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="CRITICAL_RATE">
@@ -590,7 +603,7 @@
             <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="0.5"/>
             </stat-modify>
-            <trigger-skill-by-magic skill="55153" target="SELF">
+            <trigger-skill-by-magic skill="55120" target="SELF">
                 <power initial="1"/>
                 <chance initial="1"/>
                 <types>PHYSIC MAGIC</types>
@@ -667,7 +680,7 @@
                     <value level="10">2.8</value>
                 </power>
             </stat-modify>
-            <trigger-skill-by-magic skill="55153" target="SELF">
+            <trigger-skill-by-magic skill="55120" target="SELF">
                 <power initial="1"/>
                 <chance initial="2">
                     <value level="2">4</value>
@@ -706,7 +719,7 @@
             <magic-cost>
                 <power initial="-3.0"/>
             </magic-cost>
-            <trigger-skill-by-magic skill="55153" target="SELF">
+            <trigger-skill-by-magic skill="55120" target="SELF">
                 <power initial="1"/>
                 <chance initial="1"/>
                 <types>PHYSIC MAGIC</types>
@@ -796,7 +809,7 @@
                     <value level="10">-40.0</value>
                 </power>
             </magic-cost>
-            <trigger-skill-by-magic skill="55153" target="SELF">
+            <trigger-skill-by-magic skill="55120" target="SELF">
                 <power initial="1"/>
                 <chance initial="2">
                     <value level="2">4</value>
@@ -814,11 +827,17 @@
         </effects>
     </skill>
     <skill id="55120" name="Wind Dragon's Pendant MP Increase" action="A1">
-        <!-- none -->
+        <!-- Recover 12 MP -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
-        <attributes>
+        <attributes static-reuse="true">
+            <reuse initial="100"/>
         </attributes>
         <target/>
+		<effects>
+            <effect name="ManaHeal">
+                <power initial="12.0"/>                   
+            </effect>
+        </effects>
     </skill>
     <skill id="55121" name="Lv. 1 Earth Dragon's Pendant Basic Effect">
         <!-- Increases M. Def. +6. -->

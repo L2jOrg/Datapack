@@ -521,7 +521,14 @@
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="NONE">
 	<!-- Double-click for a chance to receive one of the following items: Agathion Enchant Scroll, High-grade Agathion Enchant Scroll, Solid Scroll: Enchant Agathion, Agathion's Soul, or a Blessed Agathion's Soul. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="90899" min-count="1" max-count="1" chance="5"/>
+			<item id="90898" min-count="1" max-count="1" chance="5"/>
+			<item id="90963" min-count="1" max-count="1" chance="11"/>
+			<item id="48046" min-count="2" max-count="2" chance="60"/>
+			<item id="48047" min-count="1" max-count="1" chance="19"/>
+		</extract>
 	</item>
 
 	<armor id="91161" name="Agathion Bracelet Lv. 5" type="NONE" body-part="LEFT_BRACELET">
