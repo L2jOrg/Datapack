@@ -357,7 +357,7 @@
 	<armor id="70432" name="Lv. 5 Jade" type="NONE" body-part="BROOCH_JEWEL">
 	<!-- Lv. 5 Jade. 3-day. Atk. Spd./Casting Spd. +14%, when equipped. Effect does not stack with additional jewels of the same type.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<attributes weight="5" duration="180" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="17707" level="5"/>  <!-- Jade -->
@@ -367,7 +367,7 @@
 	<armor id="70433" name="Lv. 5 Vital Stone" type="NONE" body-part="BROOCH_JEWEL">
 	<!-- Lv. 5 Vital Stone. 3-day. XP/SP Gain +17%. Effect does not stack with additional jewels of the same type.  -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<attributes weight="5" duration="180" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="17706" level="5"/>  <!-- Vital Stone -->
@@ -403,6 +403,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17701"/>  <!-- Topaz -->
+		</skills>
 	</armor>
 
 	<armor id="70437" name="Topaz Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
@@ -410,6 +413,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17701" level="2"/>  <!-- Topaz -->
+		</skills>
 	</armor>
 
 	<armor id="70438" name="Topaz Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
@@ -417,6 +423,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17701" level="3"/>  <!-- Topaz -->
+		</skills>
 	</armor>
 
 	<armor id="70439" name="Topaz Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
@@ -424,6 +433,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17701" level="4"/>  <!-- Topaz -->
+		</skills>
 	</armor>
 
 	<armor id="70440" name="Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
@@ -431,6 +443,9 @@
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
+		<skills>
+			<skill id="17701" level="5"/>  <!-- Topaz -->
+		</skills>
 	</armor>
 
 	<armor id="70441" name="Garnet Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
@@ -821,10 +836,14 @@
 	<item id="70481" name="Ruby Treasure Chest of Good Fortune" type="NONE">
 	<!-- Double-click to obtain Lv. 1-5 Ruby. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
-			<extract>
-				<item id="70451" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
-			</extract>	
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="70451" min-count="1" max-count="1" chance="70"/>  <!-- Ruby -->
+			<item id="70452" min-count="1" max-count="1" chance="40"/>  <!-- Ruby -->
+			<item id="70453" min-count="1" max-count="1" chance="20"/>  <!-- Ruby -->
+			<item id="70454" min-count="1" max-count="1" chance="10"/>  <!-- Ruby -->
+			<item id="70455" min-count="1" max-count="1" chance="5"/>  <!-- Ruby -->
+		</extract>	
 	</item>
 
 	<item id="70482" name="Sapphire Treasure Chest of Good Fortune" type="NONE">
@@ -860,7 +879,7 @@
 	<item id="70487" name="Topaz Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Topaz.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70436" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -869,7 +888,7 @@
 	<item id="70488" name="Garnet Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Garnet.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70441" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -878,7 +897,7 @@
 	<item id="70489" name="Jade Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Jade.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70446" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -887,7 +906,7 @@
 	<item id="70490" name="Ruby Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Ruby.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70451" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -896,7 +915,7 @@
 	<item id="70491" name="Sapphire Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Sapphire.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70456" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -905,7 +924,7 @@
 	<item id="70492" name="Diamond Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Diamond.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70461" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -914,7 +933,7 @@
 	<item id="70493" name="Pearl Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Pearl.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70466" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
@@ -923,7 +942,7 @@
 	<item id="70494" name="Vital Stone Chest" type="NONE">
 	<!-- Double-click to obtain Lv. 1 Vital Stone.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
 			<extract>
 				<item id="70471" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
 			</extract>	
