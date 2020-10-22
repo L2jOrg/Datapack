@@ -1143,32 +1143,116 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="59141" name="Lingering Halloween" action="A1">
+    <skill id="59141" name="Lingering Halloween" action="A2">
         <!-- Lingering Halloween. XP/SP Gain when hunting +10%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
+      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
+			<level initial="1"/>
+			<time initial="1200"/>            
+		</abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="10.0"/>                 
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="10.0"/>                   
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+			     <power initial="5.0"/>                      
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="5.0"/>                 
+			</stat-modify>
+				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>		
+            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>
+        </effects>
     </skill>
-    <skill id="59142" name="Lingering Halloween" action="A1">
+    <skill id="59142" name="Lingering Halloween" action="A2">
         <!-- Lingering Halloween. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
+      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
+			<level initial="2"/>
+			<time initial="1200"/>            
+		</abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20.0"/>                 
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="20.0"/>                   
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+			     <power initial="5.0"/>                      
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="5.0"/>                 
+			</stat-modify>
+				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>		
+            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>
+        </effects>
     </skill>
-    <skill id="59143" name="Lingering Halloween" action="A1">
+    <skill id="59143" name="Lingering Halloween" action="A2">
         <!-- Lingering Halloween. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+            <magic-level initial="1"/>
+            <reuse initial="0"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
+      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
+			<level initial="3"/>
+			<time initial="1200"/>            
+		</abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="30.0"/>                 
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="30.0"/>                   
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+			     <power initial="5.0"/>                      
+			</stat-modify>
+			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+				<power initial="5.0"/>                 
+			</stat-modify>
+				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>		
+            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+				<power initial="5.0"/>                 
+			</stat-modify>
+        </effects>
     </skill>
     <skill id="59144" name="Magic Trumpet">
         <!-- World Chat +20. Resets every day at 7:00 am. -->
         <icon initial="icon.skill18578"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+			<stat-modify stat="WORLD_CHAT_POINTS">
+                <power initial="20"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="59145" name="Magic Warehouse Summoning SCroll" action="A1">
         <!-- Summons the Magic Warehouse. -->
@@ -1184,16 +1268,21 @@
         <attributes property="MAGIC"/>
         <target/>
     </skill>
-    <skill id="59147" name="Party Member Scroll of Escape" action="A1">
+    <skill id="59147" name="Party Member Scroll of Escape" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-            <cast-range initial="-2"/>
+        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="1800000"/>
             <effect-point initial="100"/>
             <hit-time initial="5500"/>
         </attributes>
-        <target/>
+        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <escape location="TOWN"/>
+        </effects>
     </skill>
     <skill id="59148" name="Antharas' Cute Tricks" action="A1">
         <!-- See the summoned spirit perform cute tricks. -->
