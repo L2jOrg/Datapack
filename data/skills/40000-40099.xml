@@ -1167,14 +1167,26 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="40058" name="Seal of Giran" action="A1">
+    <skill id="40058" name="Seal of Giran" action="A2">
         <!-- For 20 minutes, Acquired XP and SP +20%. Cooldown is 1 min. The Seal of Giran effect remains even after death.\n\nNote: It cannot be stacked with Einhasad's Protection. -->
         <icon initial="icon.etc_royal_seal_of_lord_i04"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_I">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="40059" name="Sayha's Benefaction">
         <!-- For 20 minutes, Sayha's Grace Consumption -10%.\nDeath protection. You can delete it yourself. -->

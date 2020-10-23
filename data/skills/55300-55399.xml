@@ -1504,7 +1504,7 @@
     </skill>
     <skill id="55394" name="Enhanced Olympiad Warrior's Potion - CON" max-level="2" action="A1">
         <!--
-            level 1: For 20 minutes, CON +7.
+            level 1: For 20 minutes, WIT +4.
             level 2: For 20 minutes, WIT +7.
          -->
         <icon initial="icon.etc_lesser_potion_purple_i00">
@@ -1524,6 +1524,18 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
+		<abnormal type="EXP_SP_I">
+            <level initial="2"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="50.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="50.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55396" name="Olympiad Warrior's Special Fruit" action="A1">
         <!-- For 20 minutes, obtained XP/ SP +10%%, P./ M. Atk. +10%%, P./ M. Def. +5%%, Max. HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvE damage +10%%. With a certain chance, converts 3%% of damage dealt into HP. -->
@@ -1537,7 +1549,7 @@
             <item-count initial="1"/>
         </consume>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_K">
             <level initial="2"/>
             <time initial="1200"/>
         </abnormal>

@@ -8,6 +8,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
 		</stats>
+		<skills>
+			<skill id="50252"/>			
+		</skills>
 	</armor>
 
 	<armor id="92301" name="Tallum Helmet" type="NONE" body-part="HEAD">
@@ -18,6 +21,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50218"/>			
+		</skills>
 	</armor>
 
 	<armor id="92302" name="Tallum Helmet" type="NONE" body-part="HEAD">
@@ -28,6 +34,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50220"/>			
+		</skills>
 	</armor>
 
 	<armor id="92303" name="Tallum Helmet" type="NONE" body-part="HEAD">
@@ -38,6 +47,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50219"/>			
+		</skills>
 	</armor>
 
 	<armor id="92304" name="Dark Crystal Helmet" type="NONE" body-part="HEAD">
@@ -48,6 +60,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50209"/>			
+		</skills>
 	</armor>
 
 	<armor id="92305" name="Dark Crystal Helmet" type="NONE" body-part="HEAD">
@@ -58,6 +73,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50211"/>			
+		</skills>
 	</armor>
 
 	<armor id="92306" name="Dark Crystal Helmet" type="NONE" body-part="HEAD">
@@ -68,6 +86,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="69.0"/>
 		</stats>
+		<skills>
+			<skill id="50210"/>			
+		</skills>
 	</armor>
 
 	<armor id="92307" name="Helm of Nightmare" type="NONE" body-part="HEAD">
@@ -78,6 +99,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50215"/>			
+		</skills>
 	</armor>
 
 	<armor id="92308" name="Helm of Nightmare" type="NONE" body-part="HEAD">
@@ -88,6 +112,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50217"/>			
+		</skills>
 	</armor>
 
 	<armor id="92309" name="Helm of Nightmare" type="NONE" body-part="HEAD">
@@ -98,6 +125,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50216"/>			
+		</skills>
 	</armor>
 
 	<armor id="92310" name="Majestic Circlet" type="NONE" body-part="HEAD">
@@ -108,6 +138,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50212"/>			
+		</skills>
 	</armor>
 
 	<armor id="92311" name="Majestic Circlet" type="NONE" body-part="HEAD">
@@ -118,6 +151,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50214"/>			
+		</skills>
 	</armor>
 
 	<armor id="92312" name="Majestic Circlet" type="NONE" body-part="HEAD">
@@ -128,6 +164,9 @@
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="73.0"/>
 		</stats>
+		<skills>
+			<skill id="50213"/>			
+		</skills>
 	</armor>
 
 	<item id="92313" name="Giran’s Treasure Chest" type="NONE">
@@ -136,16 +175,24 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="92314" name="Seal of Giran" type="NONE">
+	<item id="92314" name="Seal of Giran" type="SCROLL">
 	<!-- Increases XP/SP by 20% for 20 min on use and can be exchanged for other Items through the Store Manager. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="40058" value="-1"/>  <!-- Seal of Giran -->
+		</skill-reducer>
 	</item>
 
 	<item id="92315" name="Luxury Augmentation Box" type="NONE">
 	<!-- Double-click to obtain one of the rare items at random, such as Lilith Rune Lv. 10, Anakim Rune Lv. 10, or +10 Dragon’s Belt.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91182" chance="100"/>  <!-- Lilith Rune Lv. 10 -->
+			<item id="91172" chance="100"/>  <!-- Anakim Rune Lv. 10 -->
+			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Dragon’s Belt -->
+		</extract>
 	</item>
 
 	<item id="92316" name="+10 Dragon’s Belt Box" type="NONE">
@@ -153,7 +200,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Dragon's Belt +10 -->
+			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Dragon’s Belt -->
 		</extract>
 	</item>
 
@@ -215,6 +262,9 @@
 			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
+		<skills>
+			<skill id="3562" value="-1"/>  <!-- Queen Ant's Ring -->
+		</skills>
 	</armor>
 
 	<armor id="92328" name="Orfen's Earring Lv. 1" type="NONE" body-part="EAR">
@@ -226,6 +276,9 @@
 			<stat type="MAGICAL_DEFENCE" value="71.0"/>
 			<stat type="MAX_MP" value="19.0"/>
 		</stats>
+		<skills>
+			<skill id="3560" value="-1"/>  <!-- Orfen's Earring -->
+		</skills>
 	</armor>
 
 	<armor id="92329" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER">
@@ -237,6 +290,9 @@
 			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
+		<skills>
+			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
+		</skills>
 	</armor>
 
 	<weapon id="92330" name="Samurai Long Sword" type="SWORD" body-part="RIGHT_HAND">
