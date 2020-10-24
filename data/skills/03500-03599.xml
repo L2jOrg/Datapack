@@ -42,7 +42,7 @@
             </vital-stat-modify>
             <defence-trait start-level="2">
                 <trait type="POISON">
-                    <power initial="30"/>
+                    <power initial="20"/>
                 </trait>
             </defence-trait>
         </effects>
@@ -129,10 +129,10 @@
         </attributes>
         <target/>
         <effects>
-            <speed>
-                <power initial="7.0"/>
-            </speed>
-            <base-stat start-level="2" type="WIT">
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+				<power initial="5.24"/>
+			</stat-modify>
+            <base-stat start-level="2" type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -233,6 +233,9 @@
             <base-stat start-level="2" type="STR">
                 <power initial="4.0"/>
             </base-stat>
+			<base-stat start-level="2" type="CON">
+                <power initial="-1.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3512" name="Set Effect - Compound Heavy Armor, 2-piece">
@@ -248,10 +251,7 @@
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="5.0"/>
             </stat-modify>
-            <defence-trait>
-                <trait type="HOLD">
-                    <power initial="10"/>
-                </trait>
+            <defence-trait>               
                 <trait type="PARALYZE">
                     <power initial="10"/>
                 </trait>
@@ -276,6 +276,9 @@
             <base-stat start-level="2" type="INT">
                 <power initial="4.0"/>
             </base-stat>
+			<base-stat start-level="2" type="WIT">
+                <power initial="-1.0"/>
+            </base-stat>
             <vital-stat-modify start-level="2" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="-270.0"/>
             </vital-stat-modify>
@@ -293,7 +296,7 @@
         <effects>
             <defence-trait>
                 <trait type="PARALYZE">
-                    <power initial="10.0"/>
+                    <power initial="10"/>
                 </trait>
             </defence-trait>
             <stat-modify mode="PER" start-level="2" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -312,8 +315,8 @@
                 <power initial="5.0"/>
             </stat-modify>
             <defence-trait>
-                <trait type="PARALYZE">
-                    <power initial="10.0"/>
+                <trait type="SHOCK">
+                    <power initial="10"/>
                 </trait>
             </defence-trait>
         </effects>
@@ -332,8 +335,8 @@
                 <power initial="5.0"/>
             </stat-modify>
             <defence-trait>
-                <trait type="PARALYZE">
-                    <power initial="10.0"/>
+                <trait type="SHOCK">
+                    <power initial="10"/>
                 </trait>
             </defence-trait>
         </effects>
@@ -350,7 +353,7 @@
         <effects>
             <defence-trait>
                 <trait type="PARALYZE">
-                    <power initial="10.0"/>
+                    <power initial="10"/>
                 </trait>
             </defence-trait>
             <base-stat start-level="2" type="WIT">
@@ -463,17 +466,17 @@
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
-                <power initial="5795.0"/>
+                <power initial="5759.0"/>
             </stat-modify>
             <stat-modify start-level="2" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="30.0"/>
             </stat-modify>
             <defence-trait start-level="3">
                 <trait type="BLEED">
-                    <power initial="30"/>
+                    <power initial="60"/>
                 </trait>
                 <trait type="POISON">
-                    <power initial="30"/>
+                    <power initial="60"/>
                 </trait>
             </defence-trait>
             <stat-modify mode="PER" start-level="3" stat="MAGICAL_DEFENCE">
@@ -562,6 +565,12 @@
             <base-stat start-level="4" type="STR">
                 <power initial="3.0"/>
             </base-stat>
+			<base-stat start-level="4" type="CON">
+                <power initial="-1.0"/>
+            </base-stat>
+			<base-stat start-level="4" type="DEX">
+                <power initial="-2.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3525" name="Set Effect - Doom Heavy Armor, 2-piece" max-level="3">
@@ -589,6 +598,9 @@
             <base-stat start-level="3" type="STR">
                 <power initial="-3.0"/>
             </base-stat>
+			<base-stat start-level="3" type="CON">
+                <power initial="3.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3526" name="Set Effect - Blue Wolf Light Armor, 2-piece" max-level="3">
@@ -606,10 +618,13 @@
                 <power initial="5.26"/>
             </stat-modify>
             <base-stat start-level="2" type="MEN">
-                <power initial="3.0">
-                    <value level="3">-1.0</value>
-                    <value level="3">-2.0</value>
-                </power>
+                <power initial="3.0"/>                  
+            </base-stat>
+			<base-stat start-level="2" type="INT">
+                <power initial="-2.0"/>                  
+            </base-stat>
+			<base-stat start-level="2" type="WIT">
+                <power initial="-1.0"/>                  
             </base-stat>
             <stat-modify mode="PER" start-level="2" stat="PHYSICAL_DEFENCE">
                 <power initial="5.26"/>
@@ -680,6 +695,12 @@
             <base-stat start-level="4" type="INT">
                 <power initial="-2.0"/>
             </base-stat>
+			<base-stat start-level="4" type="MEN">
+                <power initial="-1.0"/>
+            </base-stat>
+			<base-stat start-level="4" type="WIT">
+                <power initial="3.0"/>
+            </base-stat>
         </effects>
     </skill>
     <skill id="3529" name="Set Effect - Doom Robe, 2-piece" max-level="4">
@@ -707,12 +728,15 @@
                 <trait type="SLEEP">
                     <power initial="50"/>
                 </trait>
-            </defence-trait>
-            <stat-modify start-level="3" stat="BREATH">
-                <power initial="200.0"/>
-            </stat-modify>
+            </defence-trait>            
             <base-stat start-level="4" type="INT">
                 <power initial="2.0"/>
+            </base-stat>
+			<base-stat start-level="4" type="MEN">
+                <power initial="1.0"/>
+            </base-stat>
+			<base-stat start-level="4" type="WIT">
+                <power initial="-3.0"/>
             </base-stat>
             <stat-modify start-level="4" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="30.0"/>
@@ -734,7 +758,7 @@
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
                 <power initial="5.24"/>
             </stat-modify>
-            <stat-modify start-level="2" stat="HEAL_RECEIVE">
+            <stat-modify mode="PER" start-level="2" stat="HEAL_RECEIVE">
                 <power initial="4.0"/>
             </stat-modify>
             <defence-trait start-level="3">
@@ -765,7 +789,7 @@
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
-                <power initial="5795.0"/>
+                <power initial="5759.0"/>
             </stat-modify>
             <defence-trait start-level="2">
                 <trait type="BLEED">
@@ -815,6 +839,9 @@
             </stat-modify>
             <stat-modify start-level="2" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="30.0"/>
+            </stat-modify>
+			<stat-modify mode="PER" start-level="3" stat="PHYSICAL_ATTACK">
+                <power initial="4.0"/>
             </stat-modify>
             <stat-modify mode="PER" start-level="3" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="4.0"/>
@@ -1055,7 +1082,7 @@
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_PENALTY" stat-add="WEIGHT_PENALTY">
-                <power initial="5795.0"/>
+                <power initial="5759.0"/>
             </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="3.0"/>
@@ -1352,6 +1379,9 @@
             </base-stat>
             <base-stat start-level="3" type="DEX">
                 <power initial="2.0"/>
+            </base-stat>
+			<base-stat start-level="3" type="CON">
+                <power initial="-1.0"/>
             </base-stat>
         </effects>
     </skill>

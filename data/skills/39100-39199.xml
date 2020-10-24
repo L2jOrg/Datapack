@@ -170,6 +170,36 @@
         <icon initial="icon.accessory_ring_of_queen_ant_i03"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <attack-trait>
+                <trait type="POISON">
+                    <power initial="20"/>                    
+                </trait>
+            </attack-trait>
+            <defence-trait>
+                <trait type="POISON">
+                    <power initial="20"/>                    
+                </trait>
+            </defence-trait>
+            <stat-modify stat="ACCURACY">
+                <power initial="3.0"/>                  
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="3.0"/>                  
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="7.0"/>                 
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="7.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39115" name="Refined Orfen's Earring" max-level="3">
         <!--
@@ -179,6 +209,39 @@
         <icon initial="icon.accessory_earring_of_orfen_i03"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <attack-trait>
+				<trait type="HOLD">
+                    <power initial="20"/>                    
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="15"/>
+                </trait>
+            </attack-trait>
+            <defence-trait>
+				<trait type="HOLD">
+                    <power initial="20"/>                    
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="15"/>
+                </trait>                
+            </defence-trait>
+			<stat-modify mode="PER" stat="HEAL_RECEIVE">
+                <power initial="6.0"/>
+            </stat-modify>
+			<magic-cost>
+                <power initial="-5.0"/>                
+            </magic-cost>
+			<magic-cost type="PHYSIC">
+                <power initial="-5.0"/>                
+            </magic-cost>
+			<magic-cost type="DANCE">
+                <power initial="-5.0"/>                
+            </magic-cost>
+            <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39116" name="Refined Rings of Core" max-level="3">
         <!--
@@ -188,6 +251,42 @@
         <icon initial="icon.accessory_ring_of_core_i03"/>
         <attributes property="MAGIC"/>
         <target/>
+		<effects>
+            <attack-trait>
+                <trait type="DERANGEMENT">
+                    <power initial="20"/>
+                </trait>
+            </attack-trait>
+            <defence-trait>
+                <trait type="DERANGEMENT">
+                    <power initial="20"/>
+                </trait>                
+            </defence-trait>
+            <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_EVASION_RATE" stat-add="MAGIC_EVASION_RATE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
+                <power initial="6.0"/>                   
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_PHYSICAL_SKILL_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+                <power initial="6.0"/>
+            </stat-modify>
+		</effects>
     </skill>
     <skill id="39117" name="Whale" action="A1">
         <!-- none -->

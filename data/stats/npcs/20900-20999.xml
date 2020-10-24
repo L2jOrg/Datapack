@@ -2553,7 +2553,6 @@
             <param name="MoveAroundSocial" value="167"/>
             <param name="MoveAroundSocial1" value="167"/>
             <param name="MoveAroundSocial2" value="167"/>
-			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -2627,7 +2626,6 @@
             <param name="MoveAroundSocial" value="0"/>
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
-			<param name="Party_Type" value="1"/>
             <param name="SoulShot" value="100"/>
             <param name="SoulShotRate" value="10"/>
             <param name="SpiritShot" value="100"/>
@@ -2702,7 +2700,6 @@
             <param name="MoveAroundSocial" value="215"/>
             <param name="MoveAroundSocial1" value="215"/>
             <param name="MoveAroundSocial2" value="215"/>
-			<param name="Party_Type" value="2"/>
             <minions name="Privates">
                 <npc id="20954" count="2" respawnTime="0" weightPoint="1"/>
                 <npc id="20955" count="2" respawnTime="0" weightPoint="1"/>
@@ -4058,7 +4055,6 @@
         <dropLists>
             <drop>
                 <item id="284" min="1" max="1" chance="0.075"/> <!-- Dark Elven Longbow -->
-         
                 <item id="57" min="10313" max="24054" chance="70"/> <!-- Adena -->
                 <item id="1887" min="1" max="1" chance="22.14"/> <!-- Varnish of Purity -->
                 <item id="4112" min="1" max="1" chance="18.12"/> <!-- Dark Elven Longbow Shaft -->
@@ -4147,7 +4143,7 @@
         <acquire exp="129511" sp="3886"  attribute_exp="23"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="1151.4376725" hpRegen="7.5" mp="1329.27" mpRegen="2.7"/>
-            <attack physical="918.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="242.7678909" magical="195.41171" shield="138"/>
             <speed>
                 <walk ground="22"/>
@@ -5156,7 +5152,7 @@
             <param name="MoveAroundSocial1" value="0"/>
             <param name="MoveAroundSocial2" value="0"/>
             <minions name="Privates">
-                <npc id="20995" count="4" respawnTime="0" weightPoint="1"/>
+                <npc id="20995" count="2" respawnTime="0" weightPoint="1"/>
             </minions>
             <param name="SetHateGroup" value="attacker_group"/>
             <param name="SetHateGroupRatio" value="35"/>
@@ -5171,7 +5167,7 @@
         <sex>MALE</sex>
         <acquire exp="187075" sp="5612" attribute_exp="1230"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3"/>
+            <vitals hp="3736.528" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="976.51936" magical="887.65356521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="600" magical="500"/>
             <speed>
@@ -5185,11 +5181,12 @@
         <skillList>
             <skill id="4073" level="5"/> <!-- Stun -->
             <skill id="4416" level="7"/> <!-- Spirits -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
             <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
             <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
             <skill id="4412" level="14"/> <!-- Strong P. Def. -->
             <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+			<skill id="48045" level="1"/> <!-- Water Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -5203,6 +5200,11 @@
             <radius normal="15.6"/>
             <height normal="34.05"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="91035" min="1" max="1" chance="0.223"/> <!-- Water Spirit Rough Jewel -->
+            </drop>
+        </dropLists>		
     </npc>
     <npc id="20995" level="81" type="Monster" name="Garden Guard" element="WATER">
         <parameters>
@@ -5218,10 +5220,10 @@
         </parameters>
         <race>ELEMENTAL</race>
         <sex>MALE</sex>
-        <acquire exp="100658" sp="3019" attribute_exp="1134"/>
+        <acquire exp="100659" sp="3020" attribute_exp="1134"/>
         <equipment rhand="94"/> <!-- Bec de Corbin -->
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="3029.1819575" hpRegen="8.5" mp="3104.58" mpRegen="3"/>
+            <vitals hp="3692.28" hpRegen="8.5" mp="2563.2" mpRegen="3"/>
             <attack physical="1004.88515" magical="914.34815217391" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="600" magical="500"/>
             <speed>
@@ -5234,7 +5236,8 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4067" level="4"/> <!-- NPC Mortal Blow -->
-            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+			<skill id="48045" level="1"/> <!-- Water Monster -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -5244,6 +5247,11 @@
             <radius normal="9"/>
             <height normal="32"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="91035" min="1" max="1" chance="0.223"/> <!-- Water Spirit Rough Jewel -->
+            </drop>
+        </dropLists>	
     </npc>
     <npc id="20996" level="50" type="Monster" name="Spiteful Ghost of Ruins" element="FIRE">
         <!-- L2wiki: https://l2wiki.com/classic/Spiteful_Ghost_of_Ruins -->
