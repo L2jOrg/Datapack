@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="npcs" type="intList" minOccurs="0"/>
+                <xs:element name="item" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ingredient" type="Ingredient" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="production" type="Product" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="apply-taxes" type="xs:boolean" default="false"/>
+            <xs:attribute name="gm-only" type="xs:boolean" default="false"/>
+            <xs:attribute name="chance-based" type="xs:boolean" default="false"/>
+            <xs:attribute name="maintain-enchantment" type="xs:boolean" default="false"/>
+            <xs:attribute name="ingredient-multiplier" type="xs:double" default="1"/>
+            <xs:attribute name="product-multiplier" type="xs:double" default="1"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Ingredient">
+        <xs:complexContent>
+            <xs:extension base="EnchantedItem">
+                <xs:attribute name="consume" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Product">
+        <xs:complexContent>
+            <xs:extension base="EnchantedItem">
+                <xs:attribute name="chance" type="xs:double" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>
