@@ -1828,7 +1828,7 @@
             level 6: For 60 seconds, P. Def. +150% and Debuff Resistance +75%. Available when HP is 90% or lower.
          -->
 		<icon initial="icon.skill0139"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="36">
 				<value level="2">43</value>
 				<value level="3">52</value>
@@ -2606,7 +2606,7 @@
             level 6: For 60 seconds, P. Atk. +15%, Atk. Spd. +22%, P. Critical Rate +15, P. Critical Damage +15%, and Movement Speed +15. Additional P. Accuracy +8 and P. Atk. +10% when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is at 90% or below.
          -->
 		<icon initial="icon.skill0176"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
 			<magic-level initial="32">
 				<value level="2">46</value>
 				<value level="3">55</value>
@@ -2692,22 +2692,14 @@
 					<value level="5">14.0</value>
 					<value level="6">15.0</value>
 				</power>
-			</speed>
-			<two-hand-sword-bonus mode="PER">
-				<power initial="10.0"/>
-				<accuracy initial="8.0"/>
-			</two-hand-sword-bonus>
-			<two-hand-blunt-bonus mode="PER">
-				<power initial="10.0"/>
-				<accuracy initial="8.0"/>
-			</two-hand-blunt-bonus>
+			</speed>			
 			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
 				<power initial="10"/>
-				<weapon-type>SPEAR</weapon-type>
+				<weapon-type>TWO_HAND_SWORD SWORD HAMMER BLUNT SPEAR</weapon-type>
 			</stat-modify>
 			<stat-modify stat="ACCURACY">
 				<power initial="8.0"/>
-				<weapon-type>SPEAR</weapon-type>
+				<weapon-type>TWO_HAND_SWORD SWORD HAMMER BLUNT SPEAR</weapon-type>
 			</stat-modify>
 		</effects>
 	</skill>

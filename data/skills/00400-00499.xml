@@ -967,7 +967,7 @@
             level 3: Channels the power of your guardian deity for 1 minute. Debuff Resistance +80%, Buff-canceling Attack Resistance +40%, and Movement Speed +30. P. Accuracy +6, Atk. Spd. +30% when using a sword, blunt weapon, spear, or fist weapon. P. Critical Rate +100 when using a sword or spear. P. Critical Damage +100%, P. Skill MP consumption -50%, and Heal Received -1 minute0 when using a sword, blunt weapon, or fist weapon. Available when HP is at 1 minute1 or below.
          -->
         <icon initial="icon.skill0420"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="58">
                 <value level="2">66</value>
                 <value level="3">74</value>
@@ -997,6 +997,12 @@
             <remain-status amount="30" stat="HP"/>
         </conditions>
         <effects>
+			<resist-abnormal-by-category category="DEBUFF">
+                <power initial="80.0"/>
+            </resist-abnormal-by-category>
+			<resist-dispel-by-category category="BUFF">
+                <power initial="40.0"/>
+            </resist-dispel-by-category>
             <speed>
                 <power initial="10.0">
                     <value level="2">20.0</value>
@@ -1005,7 +1011,7 @@
             </speed>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
                 <power initial="6.0"/>
-                <weapon-type>SWORD BLUNT SPEAR FIST TWO_HAND_SWORD HAMMER </weapon-type>
+                <weapon-type>SWORD BLUNT SPEAR FIST TWO_HAND_SWORD HAMMER</weapon-type>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="10.0">
@@ -1014,32 +1020,26 @@
                 </power>
                 <weapon-type>SWORD BLUNT SPEAR FIST TWO_HAND_SWORD HAMMER</weapon-type>
             </stat-modify>
-            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="33.0">
-                    <value level="2">66.0</value>
-                    <value level="3">100.0</value>
-                </power>
-                <weapon-type>BLUNT FIST SWORD TWO_HAND_SWORD HAMMER</weapon-type>
-            </stat-modify>
-            <stat-modify stat="HEAL_RECEIVE">
-                <power initial="-50.0"/>
-            </stat-modify>
-            <resist-dispel-by-category category="BUFF">
-                <power initial="40.0"/>
-            </resist-dispel-by-category>
-            <resist-abnormal-by-category category="DEBUFF">
-                <power initial="80.0"/>
-            </resist-abnormal-by-category>
-            <stat-modify stat="CRITICAL_RATE">
+			<stat-modify stat="CRITICAL_RATE">
                 <power initial="33.0">
                     <value level="2">66.0</value>
                     <value level="3">100.0</value>
                 </power>
                 <weapon-type>SWORD SPEAR TWO_HAND_SWORD</weapon-type>
             </stat-modify>
-            <magic-cost type="PHYSIC">
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="33.0">
+                    <value level="2">66.0</value>
+                    <value level="3">100.0</value>
+                </power>
+                <weapon-type>SWORD BLUNT FIST TWO_HAND_SWORD HAMMER</weapon-type>
+            </stat-modify>
+			<magic-cost type="PHYSIC">
                 <power initial="-50.0"/>
             </magic-cost>
+            <stat-modify mode="PER" stat="HEAL_RECEIVE">
+                <power initial="-50.0"/>
+            </stat-modify>            
         </effects>
     </skill>
     <skill id="421" name="Fell Swoop" max-level="5" action="A2">
@@ -1173,7 +1173,6 @@
             </stat-modify>
             <stat-modify mode="PER" stat="SHIELD_DEFENCE">
                 <power initial="10.0"/>
-                <armor-type>HEAVY</armor-type>
             </stat-modify>
             <defence-trait>
                 <trait type="BOW">
@@ -1211,6 +1210,15 @@
                 </power>
             </vital-stat-modify>
 			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
+                <power>
+                    <value level="2">5.0</value>
+                    <value level="3">10.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
+                </power>
+                <armor-type>HEAVY</armor-type>
+            </stat-modify>
+			<stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" stat-add="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="2">5.0</value>
                     <value level="3">10.0</value>
