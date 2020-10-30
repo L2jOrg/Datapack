@@ -406,31 +406,38 @@
 	<item id="93267" name="1000 L2 Coin Box" type="NONE">
 	<!-- Double-click to obtain 1000 L2 Coins. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="1000" max-count="1000" chance="100"/>  <!-- L2 Coin -->
+		</extract>
 	</item>
 
 	<item id="93268" name="Blessed Scroll: Enchant Weapon (A-grade)" type="POLY_ENCHANT_WEAPON">
 	<!-- When enchanted, P. Atk. +7 for A-grade one-handed swords/blunts, daggers, spears, and other weapons. P. Atk. +8 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +14 for bows. M. Atk. +5 for all weapons.\nStarting at +4, P. Atk. +21 for one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +26 for two-handed swords/blunts, dualswords, and two-handed fist weapons. P. Atk. +42 for bows. M. Atk. +16 for all weapons.\nWeapons below +5 will be randomly enchanted +1 - +2, and weapons above +6 will be enchanted +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93269" name="Blessed Scroll: Enchant Armor (A-grade)" type="POLY_ENCHANT_ARMOR">
 	<!-- Increases P. Def. by +4 for A-grade armor, and M. Def. by +3 for accessories. Starting from +4, increases P. Def. by 9 and M. Def. by 7. It can safely be enchanted up to +4, and for armor HP gradually increases with each enchant level starting from +4. Armor below +5 will be randomly enchanted +1 - +2, and armor above +6 will be enchanted +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93270" name="Cursed Scroll: Enchant Weapon (A-grade)" type="CURSED_ENCHANT_WEAPON">
 	<!-- When used, the enchant level of an A-grade Weapon is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93271" name="Cursed Scroll: Enchant Armor (A-grade)" type="CURSED_ENCHANT_ARMOR">
 	<!-- When used, the enchant level of an A-grade Armor is reduced by 1. Can only be used on items enchanted +1 or more. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="93272" name="Ancient Tome Box" type="NONE">
