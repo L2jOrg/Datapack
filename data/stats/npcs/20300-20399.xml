@@ -3837,9 +3837,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="12"/> <!-- rhand: Knife -->
-        <acquire exp="182" sp="5"/>
+        <acquire exp="691" sp="21"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="-44.3358" hpRegen="2" mp="92.04" mpRegen="0.9"/>
+            <vitals hp="172.242688443633" hpRegen="2" mp="108.4" mpRegen="0.9"/>
             <attack physical="19.33758" magical="13.20506" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="61.82527" magical="45.24105"/>
             <speed>
@@ -3851,11 +3851,7 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="9"/> <!-- 1 / 2 HP -->
-            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="9"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="9"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
         </skillList>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3865,8 +3861,62 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="10"/>
-            <height normal="21.4"/>
+            <radius normal="10" grown="10"/>
+            <height normal="21.4" grown="21.4"/>			
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="99" min="1" max="1" chance="2.475"/> <!-- Apprentice's Spellbook -->
+                <item id="57" min="72" max="169" chance="70"/> <!-- Adena -->
+                <item id="1864" min="1" max="1" chance="12.682"/> <!-- Stem -->
+                <item id="1868" min="1" max="1" chance="11.828"/> <!-- Thread -->
+                <item id="1867" min="1" max="1" chance="7.809"/> <!-- Animal Skin -->
+                <item id="1871" min="1" max="1" chance="6.394"/> <!-- Charcoal -->
+                <item id="1869" min="1" max="1" chance="6.415"/> <!-- Iron Ore -->
+            </drop>
+            <spoil>
+                <item id="429" min="1" max="1" chance="3.477"/> <!-- Leather Tunic -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="20377" level="7" type="Monster" name="Varika's Bandit">
+        <parameters>
+            <param name="MoveAroundSocial" value="42"/>
+            <param name="MoveAroundSocial1" value="42"/>
+            <param name="MoveAroundSocial2" value="42"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+		<acquire exp="183" sp="6"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="114.369768558596" hpRegen="2" mp="84.88" mpRegen="0.9" />
+            <attack physical="17.9195676" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="45.88342149" magical="40.62635"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="110"/>
+            </speed>
+            <hitTime>320</hitTime>
+        </stats>
+        <status undying="false" canBeSown="true"/>
+        <skillList>
+            <skill id="4408" level="9"/> <!-- HP Increase (1/2) -->
+			<skill id="4416" level="6"/> <!-- Magical Creatures -->
+			<skill id="4410" level="13"/> <!-- Extremely Weak P. Atk. -->
+            <skill id="4411" level="13"/> <!-- Slightly Weak M. Atk. -->
+            <skill id="4412" level="9"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="9"/> <!-- Extremely Strong M. Def. -->
+        </skillList>
+        <exCrtEffect>false</exCrtEffect>
+        <sNpcPropHpRate>0.5</sNpcPropHpRate>
+        <ai aggroRange="500" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>GOBLIN</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="10" grown="10"/>
+            <height normal="16.5" grown="16.5"/>
         </collision>
         <dropLists>
             <drop>
@@ -3884,38 +3934,7 @@
                 <item id="1814" min="1" max="1" chance="7.377"/> <!-- Recipe: Leather -->
                 <item id="1790" min="1" max="1" chance="2.589"/> <!-- Recipe: Dirk -->
             </spoil>
-        </dropLists>
-    </npc>
-    <npc id="20377" level="7" type="Monster" name="Varika's Bandit">
-        <parameters>
-            <param name="MoveAroundSocial" value="42"/>
-            <param name="MoveAroundSocial1" value="42"/>
-            <param name="MoveAroundSocial2" value="42"/>
-        </parameters>
-        <race>HUMANOID</race>
-        <sex>MALE</sex>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="113.94" hpRegen="2" mp="93.912" mpRegen="0.9" />
-            <attack physical="17.9195676" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="45.88342149" magical="40.62635"/>
-            <speed>
-                <walk ground="40"/>
-                <run ground="110"/>
-            </speed>
-            <hitTime>320</hitTime>
-        </stats>
-        <status undying="false" canBeSown="true"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>0.5</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>GOBLIN</clan>
-            </clanList>
-        </ai>
-        <collision>
-            <radius normal="10"/>
-            <height normal="16.5"/>
-        </collision>
+        </dropLists>		
     </npc>
     <npc id="20378" level="13" type="Monster" name="Stone Giant">
         <parameters>

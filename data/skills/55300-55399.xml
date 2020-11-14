@@ -1004,21 +1004,22 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55356" name="XP/SP Hourglass - 1 Hour" action="A1">
-        <!-- XP/SP gain +50%% for the duration of the effect -->
+    <skill id="55356" name="XP/SP Hourglass - 1 Hour" action="A2">
+        <!-- XP/SP gain +100% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
+        </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="EXP_SP_E">
             <level initial="1"/>
             <time initial="3600"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="50.0"/>
+                <power initial="100.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="50.0"/>
+                <power initial="100.0"/>
             </stat-modify>
         </effects>
     </skill>

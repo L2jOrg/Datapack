@@ -270,12 +270,12 @@
 		<crystal />
 	</armor>
 
-	<item id="90143" name="XP/SP Hourglass (100%) - 1 Hour" type="SCROLL">
+	<item id="90143" name="XP/SP Hourglass (100%) - 1 Hour" type="POTION">
 	<!-- Increases XP/SP gain by 100% for 1 hour. Cooldown: 1 hour. The effect persists through death. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes reuse-delay="3600000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
-			<skill id="55360" value="-1"/>  <!-- XP/SP Rune - 100% -->
+			<skill id="55356" value="-1"/>  <!-- XP/SP Hourglass - 1 Hour -->
 		</skill-reducer>
 	</item>
 

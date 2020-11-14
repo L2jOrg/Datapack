@@ -318,6 +318,7 @@
         </dropLists>
     </npc>
     <npc id="20746" level="33" type="Monster" name="Young Gigantiops">
+	<!-- https://l2wiki.com/classic/Young_Gigantiops -->
         <parameters>
             <param name="MoveAroundSocial" value="120"/>
             <param name="MoveAroundSocial1" value="120"/>
@@ -331,7 +332,9 @@
         </parameters>
         <race>BUG</race>
         <sex>MALE</sex>
+		<acquire exp="3217" sp="97"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="740.722181648393" hpRegen="4.5" mp="372.96" mpRegen="1.8"/>
             <attack physical="109.141846" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="110.8983545" magical="89.26566"/>
             <speed>
@@ -344,6 +347,9 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4032" level="3"/> <!-- NPC Strike -->
+			<skill id="4416" level="12"/> <!-- ANT -->
+			<skill id="4408" level="7"/> <!-- HP Increase (1x) -->
+			<skill id="4410" level="13"/> <!-- Extremely Weak P. Atk. -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -353,9 +359,30 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="26"/>
-            <height normal="15"/>
+			<radius normal="26" grown="26"/>
+            <height normal="15" grown="15"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="433" min="1" max="1" chance="0.03"/> <!-- Elven Tunic -->
+                <item id="434" min="1" max="1" chance="0.03"/> <!-- White Tunic -->
+                <item id="435" min="1" max="1" chance="0.03"/> <!-- Wizard Tunic -->
+                <item id="466" min="1" max="1" chance="0.03"/> <!-- Elven Stockings -->
+                <item id="467" min="1" max="1" chance="0.03"/> <!-- Dark Stockings -->
+                <item id="468" min="1" max="1" chance="0.03"/> <!-- Wizard Stockings -->
+                <item id="57" min="204" max="477" chance="70"/> <!-- Adena -->
+                <item id="1868" min="1" max="1" chance="17.77"/> <!-- Thread -->
+                <item id="1866" min="1" max="1" chance="5.926"/> <!-- Suede -->
+                <item id="1884" min="1" max="1" chance="5.565"/> <!-- Cord -->
+                <item id="1933" min="1" max="1" chance="1.584"/> <!-- Dark Stocking Fabric -->
+                <item id="2153" min="1" max="1" chance="1.354"/> <!-- Recipe: Tiger's Eye -->
+                <item id="1936" min="1" max="1" chance="1.081"/> <!-- White Tunic Pattern -->
+            </drop>
+            <spoil>
+                <item id="2250" min="1" max="1" chance="30.49"/> <!-- Recipe: Bone Arrow -->
+                <item id="1900" min="1" max="1" chance="13.26"/> <!-- Magic Necklace Chain -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="20747" level="32" type="Monster" name="Roxide">
         <parameters>
@@ -429,6 +456,7 @@
         </dropLists>
     </npc>
     <npc id="20748" level="29" type="Monster" name="Roxide's Follower">
+	<!-- https://l2wiki.com/classic/Roxide%27s_Follower -->
         <parameters>
             <param name="MoveAroundSocial" value="110"/>
             <param name="MoveAroundSocial1" value="110"/>
@@ -444,7 +472,9 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="73"/> <!-- Shamshir -->
+		<acquire exp="3784" sp="114"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="604.883087573501" hpRegen="3.5" mp="315.12" mpRegen="1.5"/>
             <attack physical="78.56365455" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="126.506578" magical="84.15638"/>
             <speed>
@@ -458,6 +488,13 @@
         <skillList>
             <skill id="4035" level="2"/> <!-- Poison -->
             <skill id="4065" level="2"/> <!-- NPC Heal -->
+			<skill id="4416" level="1"/> <!-- Undead -->
+			<skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+			<skill id="4411" level="10"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="12"/> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="12"/> <!-- Extremely Weak M. Def. -->
+			<skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1"/> <!-- Dark Attack -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -468,9 +505,27 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="11" grown="13"/>
-            <height normal="27" grown="34"/>
+			<radius normal="11" grown="13"/>
+            <height normal="27" grown="34"/>			
         </collision>
+        <dropLists>
+            <drop>
+                <item id="69" min="1" max="1" chance="0.0075"/> <!-- Bastard Sword -->
+                <item id="125" min="1" max="1" chance="0.0075"/> <!-- Spinebone Sword -->
+                <item id="126" min="1" max="1" chance="0.0075"/> <!-- Artisan's Sword -->
+                <item id="128" min="1" max="1" chance="0.0075"/> <!-- Knight's Sword -->
+                <item id="57" min="145" max="340" chance="70"/> <!-- Adena -->
+                <item id="1869" min="1" max="1" chance="9.951"/> <!-- Iron Ore -->
+                <item id="1865" min="1" max="1" chance="9.866"/> <!-- Varnish -->
+                <item id="1876" min="1" max="1" chance="2.032"/> <!-- Mithril Ore -->
+                <item id="2183" min="1" max="1" chance="0.75"/> <!-- Recipe: Mithril Banded Mail -->
+                <item id="2021" min="1" max="1" chance="0.3"/> <!-- Spinebone Sword Blade -->
+            </drop>
+            <spoil>
+                <item id="2153" min="1" max="1" chance="21.95"/> <!-- Recipe: Tiger's Eye -->
+                <item id="1933" min="1" max="1" chance="16.59"/> <!-- Dark Stocking Fabric -->
+            </spoil>
+        </dropLists>	
     </npc>
     <npc id="20749" level="32" type="Monster" name="Death Fire">
         <parameters>
@@ -1069,6 +1124,7 @@
         </dropLists>
     </npc>
     <npc id="20757" level="31" type="Monster" name="Talakin Raider">
+	<!-- https://l2wiki.com/classic/Talakin_Raider -->
         <parameters>
             <param name="MoveAroundSocial" value="130"/>
             <param name="MoveAroundSocial1" value="130"/>
@@ -1083,7 +1139,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="3"/> <!-- Broadsword -->
+		<acquire exp="3895" sp="117" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<vitals hp="670.637516093159" hpRegen="5.5" mp="343.8" mpRegen="2.1" />
             <attack physical="82.490331" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="98.44333636" magical="79.24022"/>
             <speed>
@@ -1096,6 +1154,12 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4096" level="2"/> <!-- NPC Hawkeye -->
+			<skill id="4416" level="6"/> <!-- Undead -->
+			<skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12"/> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="12"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="10"/> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="10"/> <!-- Extremely Weak M. Def. -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -1105,9 +1169,22 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="13.5"/>
-            <height normal="25"/>
+            <radius normal="13.5" grown="13.5"/>
+            <height normal="25" grown="25"/>
         </collision>
+        <dropLists>
+            <drop>
+				<item id="274" min="1" max="1" chance="0.1" /> <!-- Reinforced Bow-->
+				<item id="57" min="239" max="556" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="18.56" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="12.46" /> <!-- Animal Skin -->
+				<item id="1867" min="1" max="1" chance="6.215" /> <!-- Suede -->
+				<item id="2262" min="1" max="1" chance="0.3" /> <!-- Recipe: Elven Bow -->
+            </drop>
+            <spoil>
+				<item id="1868" min="1" max="7" chance="67.85" /> <!-- Thread -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="20758" level="49" type="Monster" name="Dragon Bearer Captain">
         <parameters>
