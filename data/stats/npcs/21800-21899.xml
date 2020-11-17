@@ -4074,9 +4074,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="80" lhand="6919"/> <!-- rhand: Tallum Blade lhand: Monster Only (Shield of Ketra Orc) -->
-        <acquire exp="218796" sp="5907"/>
+        <acquire exp="350975" sp="10530"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2394.5437166667" hpRegen="8.5" mp="4898.475" mpRegen="3"/>
+            <vitals hp="6153.8" hpRegen="8.5" mp="2563.2" mpRegen="3"/>
             <attack physical="938.20801458" magical="656.66638089" random="10" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120"/>
             <defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20"/>
             <attribute>
@@ -4094,9 +4094,12 @@
             <skill id="4572" level="9"/> <!-- NPC Triple Sonic Slash -->
             <skill id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4412" level="10"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="9"/> <!-- Slightly Weak M. Def. -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+			<skill id="4410" level="13"/> <!-- Extremely Weak P. Atk. -->
+            <skill id="4412" level="12"/> <!-- Slightly Weak P. Def. -->
+            <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
+			<skill id="4085" level="1"/> <!-- Critical Damage -->
+			<skill id="4086" level="1"/> <!-- Critical Chance -->
             <skill id="4458" level="1"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="50" spiritChance="50"/>
@@ -4112,17 +4115,27 @@
             <height normal="36"/>
         </collision>
         <dropLists>
-            <drop>
-                <item id="57" min="4452" max="10389" chance="70"/> <!-- Adena -->
-                <item id="1874" min="1" max="1" chance="26.53"/> <!-- Oriharukon Ore -->
-                <item id="1870" min="12" max="36" chance="15.98"/> <!-- Coal -->
-                <item id="90045" min="1" max="1" chance="1.775"/> <!-- Magical Tablet -->
-                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+             <drop>
+                <item id="57" min="4393" max="10250" chance="70"/> <!-- Adena -->
+                <item id="1875" min="1" max="1" chance="16.05"/> <!-- Stone of Purity -->
+                <item id="1877" min="1" max="1" chance="9.43"/> <!-- Adamantite Nugget -->
+                <item id="1876" min="3" max="9" chance="7.705"/> <!-- Mithril Ore -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8720" min="1" max="1" chance="0.3"/> <!-- Themis' Tongue Piece -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge -->
+                <item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft -->
+                <item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge -->
+                <item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece -->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece -->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade -->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge -->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment -->
             </drop>
             <spoil>
-                <item id="1870" min="1" max="1" chance="88.87"/> <!-- Coal -->
-                <item id="1875" min="1" max="1" chance="71.83"/> <!-- Stone of Purity -->
-                <item id="1874" min="1" max="1" chance="69.9"/> <!-- Oriharukon Ore -->
+                <item id="8706" min="1" max="1" chance="0.3"/> <!-- Recipe: Themis' Tongue (60%) -->
+                <item id="8708" min="1" max="1" chance="0.3"/> <!-- Recipe: Cabrio's Hand (60%) -->
+                <item id="8710" min="1" max="1" chance="0.3"/> <!-- Recipe: Daimon Crystal (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4146,7 +4159,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="80"/> <!-- rhand: Tallum Blade -->
+		<acquire exp="218797" sp="6564"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6153.8" hpRegen="8.5" mp="2563.2" mpRegen="3"/>
             <attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="348.2025" magical="231.837152158566" evasion="2"/>
             <attribute>
@@ -4161,6 +4176,11 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4573" level="9"/> <!-- NPC Sonic Blaster -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+			<skill id="4412" level="10"/> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="9"/> <!-- Extremely Weak M. Def. -->
+			<skill id="4458" level="1"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -4171,15 +4191,22 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="12"/>
-            <height normal="24"/>
+			<radius normal="12" grown="12"/>
+            <height normal="24" grown="24"/>
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="4527" max="10563" chance="70"/> <!-- Adena -->
-                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
-                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+                <item id="57" min="2766" max="6455" chance="70"/> <!-- Adena -->
+                <item id="1874" min="1" max="1" chance="14.77"/> <!-- Oriharukon Ore -->
+				<item id="1870" min="12" max="36" chance="9.03"/> <!-- Coal -->
+                <item id="49756" min="1" max="1" chance="0.3"/> <!-- Cloth Piece -->
+				<item id="90045" min="1" max="1" chance="0.5"/> <!-- Magical Tablet -->
             </drop>
+            <spoil>
+				<item id="1870" min="1" max="27" chance="84.34"/> <!-- Coal -->
+				<item id="1875" min="1" max="1" chance="78.04"/> <!-- Stone of Purity -->
+                <item id="1874" min="1" max="1" chance="74.32"/> <!-- Oriharukon Ore -->
+            </spoil>
         </dropLists>
     </npc>
     <npc id="21864" level="82" type="Monster" name="Ketra's Head Shaman">
@@ -4207,9 +4234,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="210"/> <!-- rhand: Staff of Evil Spirits -->
-        <acquire exp="227903" sp="6153"/>
+        <acquire exp="295352" sp="8861"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2423.3619866667" hpRegen="8.5" mp="4995.825" mpRegen="3"/>
+            <vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="1033.1240034" magical="740.577283506" random="50" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="380.23713" magical="268.304676" evasion="7"/>
             <attribute>
@@ -4225,8 +4252,10 @@
         <skillList>
             <skill id="4100" level="9"/> <!-- NPC Prominence -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="15"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="9"/> <!-- Extremely Weak P. Def. -->
             <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
             <skill id="4458" level="1"/> <!-- Spear Vulnerability -->
         </skillList>
@@ -4244,19 +4273,28 @@
             <height normal="23"/>
         </collision>
         <dropLists>
-            <drop>
-                <item id="57" min="4527" max="10563" chance="70"/> <!-- Adena -->
-                <item id="1874" min="1" max="1" chance="26.01"/> <!-- Oriharukon Ore -->
-                <item id="1870" min="12" max="36" chance="16.9"/> <!-- Coal -->
-                <item id="90012" min="1" max="1" chance="1.332"/> <!-- Common Life Stone -->
-                <item id="90013" min="1" max="1" chance="0.3"/> <!-- Mid-grade Life Stone -->
-                <item id="1419" min="1" max="1" chance="6"/> <!-- Proof of blood -->
+             <drop>
+                <item id="57" min="3645" max="8505" chance="70"/> <!-- Adena -->
+				<item id="1876" min="1" max="3" chance="20.13"/> <!-- Mithril Ore -->
+                <item id="1875" min="1" max="1" chance="12.87"/> <!-- Stone of Purity -->
+                <item id="1877" min="1" max="1" chance="7.708"/> <!-- Adamantite Nugget -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8720" min="1" max="1" chance="0.3"/> <!-- Themis' Tongue Piece -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge -->
+                <item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft -->
+                <item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge -->
+                <item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece -->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece -->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade -->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge -->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment -->
             </drop>
             <spoil>
-                <item id="1872" min="1" max="1" chance="93.57"/> <!-- Animal Bone -->
-                <item id="1867" min="1" max="1" chance="92.16"/> <!-- Animal Skin -->
-                <item id="1881" min="1" max="1" chance="71.99"/> <!-- Coarse Bone Powder -->
-                <item id="4043" min="1" max="1" chance="54.93"/> <!-- Asofe -->
+				<item id="8698" min="1" max="1" chance="0.3"/> <!-- Recipe: Naga Storm (60%) -->
+                <item id="8700" min="1" max="1" chance="0.3"/> <!-- Recipe: Tiphon's Spear (60%) -->
+                <item id="8702" min="1" max="1" chance="0.3"/> <!-- Recipe: Shyeed's Bow (60%) -->
+                <item id="8704" min="1" max="1" chance="0.3"/> <!-- Recipe: Sobekk's Hurricane (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4287,7 +4325,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6719"/> <!-- rhand: Branch of the Mother Tree -->
+		<acquire exp="227904" sp="6838"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3.5"/>
             <attack physical="1033.1240034" magical="740.577283506" random="50" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="380.23713" magical="268.304676" evasion="7"/>
             <attribute>
@@ -4303,6 +4343,11 @@
         <skillList>
             <skill id="4031" level="3"/> <!-- NPC Clan Aegis -->
             <skill id="4035" level="9"/> <!-- Poison -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12"/> <!-- Extremely Weak P. Atk. -->
+			<skill id="4413" level="10"/> <!-- Extremely Weak M. Def. -->
+			<skill id="4458" level="1"/> <!-- Spear Vulnerability -->
             <skill id="4158" level="9"/> <!-- NPC Prominence - Magic -->
             <skill id="4561" level="9"/> <!-- NPC Fire Burn - Magic -->
             <skill id="4571" level="9"/> <!-- NPC Blazing Circle -->
@@ -4318,9 +4363,24 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="11"/>
-            <height normal="38.5"/>
+			<radius normal="11" grown="16"/>
+            <height normal="38.5" grown="46.2"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="2831" max="6606" chance="70"/> <!-- Adena -->
+				<item id="1874" min="1" max="1" chance="14.56"/> <!-- Oriharukon Ore -->
+                <item id="1870" min="12" max="36" chance="10.11"/> <!-- Coal -->
+				<item id="900012" min="1" max="1" chance="0.842"/> <!-- Low-grade Life Stone -->
+                <item id="900013" min="1" max="1" chance="0.3"/> <!-- Mid-grade Life Stone -->              
+            </drop>
+            <spoil>
+				<item id="1872" min="1" max="29" chance="79.91"/> <!-- Animal Bone -->               
+                <item id="1867" min="1" max="29" chance="77.20"/> <!-- Animal Skin -->               
+                <item id="1881" min="1" max="3" chance="63.63"/> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="29.11"/> <!-- Asofe -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="21866" level="82" type="Monster" name="Ketra's Prophet">
         <!-- Classic Seven Sings -->
@@ -4351,9 +4411,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="213"/> <!-- rhand: Branch of the Mother Tree -->
-        <acquire exp="227903" sp="6153"/>
+        <acquire exp="358565" sp="10757"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2423.3619866667" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
+            <vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="1076.9313816" magical="781.2613576908" random="50" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="410.87895" magical="295.9938" evasion="9"/>
             <attribute>
@@ -4373,8 +4433,10 @@
             <skill id="4561" level="9"/> <!-- NPC Fire Burn - Magic -->
             <skill id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
             <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="15"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="9"/> <!-- Extremely Weak P. Def. -->
             <skill id="4413" level="10"/> <!-- Slightly Weak M. Def. -->
             <skill id="4458" level="1"/> <!-- Spear Vulnerability -->
         </skillList>
@@ -4392,23 +4454,28 @@
             <height normal="23"/>
         </collision>
         <dropLists>
-            <drop>
-                <item id="57" min="4527" max="10563" chance="70"/> <!-- Adena -->
-                <item id="1878" min="2" max="6" chance="16.33"/> <!-- Durable Braid -->
-                <item id="1865" min="9" max="27" chance="11.32"/> <!-- Varnish -->
-                <item id="1895" min="3" max="9" chance="8.029"/> <!-- Metallic Fiber -->
-                <item id="1864" min="32" max="96" chance="6.25"/> <!-- Stem -->
-                <item id="90012" min="1" max="1" chance="1.368"/> <!-- Common Life Stone -->
-                <item id="90013" min="1" max="1" chance="0.3"/> <!-- Mid-grade Life Stone -->
-                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+             <drop>
+                <item id="57" min="4373" max="10203" chance="70"/> <!-- Adena -->
+				<item id="1875" min="1" max="1" chance="16.07"/> <!-- Stone of Purity -->
+				<item id="1877" min="1" max="1" chance="9.37"/> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="7.696"/> <!-- Mithril Ore -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8720" min="1" max="1" chance="0.3"/> <!-- Themis' Tongue Piece -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge -->
+                <item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft -->
+                <item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge -->
+                <item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece -->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece -->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade -->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge -->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment -->
             </drop>
             <spoil>
-                <item id="1873" min="1" max="1" chance="88.69"/> <!-- Silver Nugget -->
-                <item id="1869" min="1" max="1" chance="88.79"/> <!-- Iron Ore -->
-                <item id="1874" min="1" max="1" chance="71.02"/> <!-- Oriharukon Ore -->
-                <item id="1880" min="1" max="1" chance="52.32"/> <!-- Steel -->
-                <item id="4039" min="1" max="1" chance="35.43"/> <!-- Mold Glue -->
-                <item id="4042" min="1" max="1" chance="18.71"/> <!-- Enria -->
+				<item id="8690" min="1" max="1" chance="0.3"/> <!-- Recipe: Sirra's Blade (60%) -->
+                <item id="8692" min="1" max="1" chance="0.3"/> <!-- Recipe: Sword of Ipos (60%) -->
+                <item id="8694" min="1" max="1" chance="0.3"/> <!-- Recipe: Barakiel's Axe (60%) -->
+                <item id="8696" min="1" max="1" chance="0.3"/> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4431,9 +4498,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6719"/> <!-- rhand: Monster Only(Ketra Orc Chieftain) -->
-        <acquire exp="227903" sp="6153"/>
+        <acquire exp="227904" sp="6838"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2423.3619866667" hpRegen="8.5" mp="4995.825" mpRegen="3"/>
+            <vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="1055.0276874" magical="760.9193205984" random="50" critical="1" accuracy="17" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="386.504775" magical="275.616036" evasion="8"/>
             <attribute>
@@ -4468,19 +4535,19 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="4527" max="10563" chance="70"/> <!-- Adena -->
-                <item id="1878" min="2" max="6" chance="15.26"/> <!-- Durable Braid -->
-                <item id="1865" min="9" max="27" chance="10.56"/> <!-- Varnish -->
-                <item id="1895" min="3" max="9" chance="8.131"/> <!-- Metallic Fiber -->
-                <item id="1864" min="32" max="96" chance="6.133"/> <!-- Stem -->
-                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
-                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+                <item id="57" min="2831" max="6606" chance="70"/> <!-- Adena -->
+                <item id="1878" min="2" max="6" chance="8.959"/> <!-- Durable Braid -->
+                <item id="1865" min="9" max="27" chance="6.130"/> <!-- Varnish -->
+                <item id="1895" min="3" max="9" chance="4.597"/> <!-- Metallic Fiber -->
+                <item id="1864" min="32" max="96" chance="3.443"/> <!-- Stem -->
+                <item id="90045" min="1" max="1" chance="0.5"/> <!-- Magical Tablet -->
+                <item id="49756" min="1" max="1" chance="0.5"/> <!-- Cloth Piece -->
             </drop>
             <spoil>
-                <item id="1864" min="1" max="1" chance="92.725"/> <!-- Stem -->
-                <item id="1865" min="1" max="1" chance="91.9"/> <!-- Varnish -->
-                <item id="1895" min="1" max="1" chance="87.51"/> <!-- Metallic Fiber -->
-                <item id="4044" min="1" max="1" chance="52.76"/> <!-- Thons -->
+                <item id="1864" min="1" max="43" chance="82.78"/> <!-- Stem -->
+                <item id="1865" min="1" max="21" chance="82.69"/> <!-- Varnish -->
+                <item id="1895" min="1" max="7" chance="67.26"/> <!-- Metallic Fiber -->
+                <item id="4044" min="1" max="1" chance="28.93"/> <!-- Thons -->
             </spoil>
         </dropLists>
     </npc>
@@ -4506,7 +4573,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="210"/> <!-- rhand: Staff of Evil Spirits -->
+		<acquire exp="227904" sp="6838"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="1055.0276874" magical="760.9193205984" random="50" critical="1" accuracy="17" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="386.504775" magical="275.616036" evasion="8"/>
             <attribute>
@@ -4522,6 +4591,11 @@
         <skillList>
             <skill id="4035" level="9"/> <!-- Poison -->
             <skill id="4100" level="9"/> <!-- NPC Prominence -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+			<skill id="4410" level="12"/> <!-- Extremely Weak P. Atk. -->
+			<skill id="4413" level="10"/> <!-- Extremely Weak M. Def. -->
+			<skill id="4458" level="1"/> <!-- Spear Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -4533,9 +4607,28 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="10"/>
-            <height normal="23"/>
+			<radius normal="10" grown="10"/>
+            <height normal="23" grown="23"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="2831" max="6606" chance="70"/> <!-- Adena -->
+				<item id="1878" min="2" max="6" chance="8.849"/> <!-- Durable Braid -->
+                <item id="1865" min="9" max="27" chance="6.207"/> <!-- Varnish -->
+                <item id="1895" min="3" max="9" chance="4.487"/> <!-- Metallic Fiber -->
+                <item id="1864" min="32" max="96" chance="3.547"/> <!-- Stem -->
+				<item id="900012" min="1" max="1" chance="0.849"/> <!-- Low-grade Life Stone -->
+                <item id="900013" min="1" max="1" chance="0.241"/> <!-- Mid-grade Life Stone -->              
+            </drop>
+            <spoil>
+				<item id="1873" min="1" max="5" chance="76.09"/> <!-- Silver Nugget -->               
+                <item id="1869" min="1" max="15" chance="72.78"/> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="64.83"/> <!-- Steel -->              
+                <item id="1874" min="1" max="1" chance="43.26"/> <!-- Oriharukon Ore -->
+				<item id="4039" min="1" max="1" chance="20.34"/> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="9.55"/> <!-- Enria -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="21869" level="80" type="Monster" name="Varka Silenos Altar Escort" title="Guardian of the Altar">
         <!-- Classic Seven Sings -->
@@ -5916,9 +6009,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500"/> <!-- rhand: Dark Legion's Edge -->
-        <acquire exp="381240" sp="10293"/>
+        <acquire exp="412930" sp="12388"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2873.45246" hpRegen="8.5" mp="4898.475" mpRegen="3"/>
+            <vitals hp="6153.8" hpRegen="8.5" mp="2563.2" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587"/>
             <attribute>
@@ -5936,11 +6029,13 @@
             <skill id="4573" level="9"/> <!-- NPC Sonic Blaster -->
             <skill id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
+            <skill id="4408" level="16"/> <!-- HP Increase (8x) -->
+            <skill id="4410" level="18"/> <!-- Very Strong P. Atk. -->
             <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4412" level="16"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+			<skill id="4085" level="1"/> <!-- Critical Damage -->
+			<skill id="4086" level="1"/> <!-- Critical Chance -->
             <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
         </skillList>
         <shots shotChance="50" spiritChance="50"/>
@@ -5956,17 +6051,27 @@
             <height normal="51"/>
         </collision>
         <dropLists>
-            <drop>
-                <item id="57" min="7582" max="17691" chance="70"/> <!-- Adena -->
-                <item id="1870" min="12" max="36" chance="27.46"/> <!-- Coal -->
-                <item id="1874" min="2" max="6" chance="8.779"/> <!-- Oriharukon Ore -->
-                <item id="90045" min="1" max="1" chance="3.033"/> <!-- Magical Tablet -->
-                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+             <drop>
+                <item id="57" min="5218" max="12174" chance="70"/> <!-- Adena -->
+                <item id="1875" min="1" max="1" chance="18.71"/> <!-- Stone of Purity -->
+                <item id="1877" min="1" max="1" chance="10.57"/> <!-- Adamantite Nugget -->
+                <item id="1876" min="3" max="9" chance="9.38"/> <!-- Mithril Ore -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8720" min="1" max="1" chance="0.3"/> <!-- Themis' Tongue Piece -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge -->
+                <item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft -->
+                <item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge -->
+                <item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece -->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece -->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade -->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge -->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment -->
             </drop>
             <spoil>
-                <item id="1870" min="1" max="1" chance="92.085"/> <!-- Coal -->
-                <item id="1874" min="1" max="1" chance="81.44"/> <!-- Oriharukon Ore -->
-                <item id="1875" min="1" max="1" chance="79.41"/> <!-- Stone of Purity -->
+                <item id="8706" min="1" max="1" chance="0.3"/> <!-- Recipe: Themis' Tongue (60%) -->
+                <item id="8708" min="1" max="1" chance="0.3"/> <!-- Recipe: Cabrio's Hand (60%) -->
+                <item id="8710" min="1" max="1" chance="0.3"/> <!-- Recipe: Daimon Crystal (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -5989,7 +6094,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500" lhand="6918"/> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
+		<acquire exp="381241" sp="11438"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6153.8" hpRegen="7.5" mp="2563.2" mpRegen="2.7"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587"/>
             <attribute>
@@ -6004,6 +6111,13 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4572" level="9"/> <!-- NPC Triple Sonic Slash -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4410" level="17"/> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="14"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="14"/> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="12"/> <!-- Extremely Weak M. Def. -->
+			<skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -6014,21 +6128,23 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="16"/>
-            <height normal="41"/>
+			<radius normal="16" grown="16"/>
+            <height normal="41" grown="41"/>
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="7200" max="16801" chance="70"/> <!-- Adena -->
-                <item id="1874" min="1" max="1" chance="25.00"/> <!-- Oriharukon Ore -->
-                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
-                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+                <item id="57" min="4806" max="11213" chance="70"/> <!-- Adena -->
+                <item id="1874" min="1" max="1" chance="24.45"/> <!-- Oriharukon Ore -->
+				<item id="1870" min="12" max="36" chance="15.42"/> <!-- Coal -->
+                <item id="49756" min="1" max="1" chance="0.5"/> <!-- Cloth Piece -->
+				<item id="90045" min="1" max="1" chance="0.5"/> <!-- Magical Tablet -->
             </drop>
             <spoil>
-                <item id="1874" min="1" max="1" chance="75.00"/> <!-- Oriharukon Ore -->
+				<item id="1870" min="1" max="47" chance="83.92"/> <!-- Coal -->
+				<item id="1875" min="1" max="3" chance="73.48"/> <!-- Stone of Purity -->
+                <item id="1874" min="1" max="3" chance="71.39"/> <!-- Oriharukon Ore -->
             </spoil>
         </dropLists>
-
     </npc>
     <npc id="21890" level="82" type="Monster" name="Varka's Chief Magus">
         <!-- Classic Seven Sings -->
@@ -6053,7 +6169,7 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6716"/> <!-- rhand: Monster Only(Silenos Shaman) -->
-        <acquire exp="390711" sp="10549"/>
+        <acquire exp="400596" sp="12018"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="2908.034384" hpRegen="8.5" mp="4995.825" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
@@ -6071,11 +6187,12 @@
         <skillList>
             <skill id="4562" level="9"/> <!-- NPC Solar Flare -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4408" level="16"/> <!-- HP Increase (8x) -->
+            <skill id="4410" level="13"/> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="17"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3"/> <!-- Heavy Armor Type -->
             <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
         </skillList>
         <shots shotChance="50" spiritChance="50"/>
@@ -6093,18 +6210,26 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="7582" max="17691" chance="70"/> <!-- Adena -->
-                <item id="1870" min="12" max="36" chance="27.99"/> <!-- Coal -->
-                <item id="1874" min="2" max="6" chance="8.901"/> <!-- Oriharukon Ore -->
-                <item id="90012" min="1" max="1" chance="2.258"/> <!-- Common Life Stone -->
-                <item id="90013" min="1" max="1" chance="0.75"/> <!-- Mid-grade Life Stone -->
-                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+                <item id="57" min="4819" max="11244" chance="70"/> <!-- Adena -->
+                <item id="1875" min="1" max="1" chance="16.79"/> <!-- Stone of Purity -->
+                <item id="1877" min="1" max="1" chance="10.05"/> <!-- Adamantite Nugget -->
+                <item id="1876" min="3" max="9" chance="8.440"/> <!-- Mithril Ore -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge-->
+				<item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft-->
+				<item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge-->
+				<item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece-->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece-->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece-->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade-->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge-->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment-->
             </drop>
             <spoil>
-                <item id="1872" min="1" max="1" chance="90.97"/> <!-- Animal Bone -->
-                <item id="1867" min="1" max="1" chance="90.375"/> <!-- Animal Skin -->
-                <item id="4043" min="1" max="1" chance="88.9"/> <!-- Asofe -->
-                <item id="1881" min="1" max="1" chance="87.43"/> <!-- Coarse Bone Powder -->
+                <item id="8698" min="1" max="1" chance="0.3"/> <!-- Recipe: Naga Storm (60%) -->
+                <item id="8700" min="1" max="1" chance="0.3"/> <!-- Recipe: Tiphon's Spear (60%) -->
+                <item id="8702" min="1" max="1" chance="0.3"/> <!-- Recipe: Shyeed's Bow (60%) -->
+                <item id="8704" min="1" max="1" chance="0.3"/> <!-- Recipe: Sobekk's Hurricane (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -6127,7 +6252,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500" lhand="6918"/> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
+		<acquire exp="390712" sp="11722"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6227.54" hpRegen="7.5" mp="2614.5" mpRegen="2.7"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587" shield="179" shieldRate="20"/>
             <attribute>
@@ -6142,6 +6269,13 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4573" level="9"/> <!-- NPC Sonic Blaster -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4410" level="17"/> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="14"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="14"/> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="12"/> <!-- Extremely Weak M. Def. -->
+			<skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
@@ -6151,9 +6285,25 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="16"/>
-            <height normal="38"/>
+			<radius normal="16" grown="16"/>
+            <height normal="38" grown="38"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="4806" max="11213" chance="70"/> <!-- Adena -->
+                <item id="1870" min="12" max="36" chance="16.47"/> <!-- Coal -->
+                <item id="1874" min="1" max="1" chance="25.05"/> <!-- Oriharukon Ore -->
+                <item id="90012" min="1" max="1" chance="2.258"/> <!-- Common Life Stone -->
+                <item id="90013" min="1" max="1" chance="0.75"/> <!-- Mid-grade Life Stone -->
+                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+            </drop>
+            <spoil>
+                <item id="1872" min="1" max="7" chance="81.07"/> <!-- Animal Bone -->
+                <item id="1867" min="1" max="47" chance="88.25"/> <!-- Animal Skin -->
+                <item id="4043" min="1" max="1" chance="53.18"/> <!-- Asofe -->
+                <item id="1881" min="1" max="5" chance="72.28"/> <!-- Coarse Bone Powder -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="21892" level="82" type="Monster" name="Varka's Prophet">
         <!-- Classic Seven Sings -->
@@ -6182,9 +6332,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6716"/> <!-- rhand: Monster Only(Silenos Shaman) -->
-        <acquire exp="371978" sp="10043"/>
+        <acquire exp="412975" sp="12390"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2908.034384" hpRegen="8.5" mp="2850.585" mpRegen="3"/>
+            <vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587"/>
             <attribute>
@@ -6203,8 +6353,10 @@
             <skill id="4563" level="9"/> <!-- NPC Solar Flare - Magic -->
             <skill id="4575" level="2"/> <!-- NPC Clan Buff - Haste -->
             <skill id="4416" level="6"/> <!-- Humanoid -->
-            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
-            <skill id="4411" level="16"/> <!-- Very Strong M. Atk. -->
+			<skill id="4410" level="13"/> <!-- Extremely Weak P. Atk. -->
+            <skill id="4408" level="16"/> <!-- HP Increase (8x) -->
+            <skill id="4411" level="18"/> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="14"/> <!-- Extremely Weak P. Def. -->
             <skill id="4413" level="14"/> <!-- Strong M. Def. -->
             <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
         </skillList>
@@ -6223,24 +6375,27 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="7200" max="16801" chance="70"/> <!-- Adena -->
-                <item id="1865" min="9" max="27" chance="17.17"/> <!-- Varnish -->
-                <item id="1895" min="3" max="9" chance="13.32"/> <!-- Metallic Fiber -->
-                <item id="1864" min="32" max="96" chance="9.825"/> <!-- Stem -->
-                <item id="1878" min="22" max="66" chance="2.788"/> <!-- Durable Braid -->
-                <item id="90012" min="1" max="1" chance="2.186"/> <!-- Common Life Stone -->
-                <item id="90013" min="1" max="1" chance="0.75"/> <!-- Mid-grade Life Stone -->
-                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
-                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
-                <item id="1419" min="1" max="1" chance="5"/> <!-- Proof of blood -->
+                <item id="57" min="5037" max="11754" chance="70"/> <!-- Adena -->
+                <item id="1875" min="1" max="1" chance="17.22"/> <!-- Stone of Purity -->
+                <item id="1877" min="1" max="1" chance="10.63"/> <!-- Adamantite Nugget -->
+                <item id="1876" min="3" max="9" chance="8.802"/> <!-- Mithril Ore -->
+                <item id="8721" min="1" max="1" chance="0.3"/> <!-- Cabrio's Hand Head -->
+                <item id="8720" min="1" max="1" chance="0.3"/> <!-- Themis' Tongue Piece -->
+                <item id="8719" min="1" max="1" chance="0.3"/> <!-- Sobekk's Hurricane Edge -->
+                <item id="8718" min="1" max="1" chance="0.3"/> <!-- Shyeed's Bow Shaft -->
+                <item id="8717" min="1" max="1" chance="0.3"/> <!-- Tiphon's Spear Edge -->
+                <item id="8716" min="1" max="1" chance="0.3"/> <!-- Naga Storm Piece -->
+				<item id="8715" min="1" max="1" chance="0.3"/> <!-- Behemoth' Tuning Fork Piece -->
+				<item id="8714" min="1" max="1" chance="0.3"/> <!-- Barakiel's Axe Piece -->
+				<item id="8713" min="1" max="1" chance="0.3"/> <!-- Sword of Ipos Blade -->
+				<item id="8712" min="1" max="1" chance="0.3"/> <!-- Sirra's Blade Edge -->
+				<item id="8722" min="1" max="1" chance="0.3"/> <!-- Daimon Crystal Fragment -->
             </drop>
             <spoil>
-                <item id="1869" min="1" max="1" chance="92.76"/> <!-- Iron Ore -->
-                <item id="1880" min="1" max="1" chance="89.95"/> <!-- Steel -->
-                <item id="1873" min="1" max="1" chance="88.45"/> <!-- Silver Nugget -->
-                <item id="1874" min="1" max="1" chance="57.17"/> <!-- Oriharukon Ore -->
-                <item id="4039" min="1" max="1" chance="57.1"/> <!-- Mold Glue -->
-                <item id="4042" min="1" max="1" chance="27.03"/> <!-- Enria -->
+                <item id="8690" min="1" max="1" chance="0.3"/> <!-- Recipe: Sirra's Blade (60%) -->
+                <item id="8692" min="1" max="1" chance="0.3"/> <!-- Recipe: Sword of Ipos (60%) -->
+                <item id="8694" min="1" max="1" chance="0.3"/> <!-- Recipe: Barakiel's Axe (60%) -->
+                <item id="8696" min="1" max="1" chance="0.3"/> <!-- Recipe: Behemoth' Tuning Fork (60%) -->
             </spoil>
         </dropLists>
     </npc>
@@ -6263,9 +6418,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2500" lhand="6918"/> <!-- rhand: Dark Legion's Edge lhand: Monster Only (Shield of Silenos) -->
-        <acquire exp="395229" sp="10671"/>
+        <acquire exp="395230" sp="11857"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-            <vitals hp="2908.034384" hpRegen="8.5" mp="4995.825" mpRegen="3"/>
+            <vitals hp="6227.54" hpRegen="8.5" mp="2614.5" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587" shield="183" shieldRate="20"/>
             <attribute>
@@ -6301,18 +6456,19 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="7674" max="17905" chance="70"/> <!-- Adena -->
-                <item id="1865" min="9" max="27" chance="19.14"/> <!-- Varnish -->
-                <item id="1895" min="3" max="9" chance="13.14"/> <!-- Metallic Fiber -->
-                <item id="1864" min="32" max="96" chance="10.79"/> <!-- Stem -->
-                <item id="90045" min="1" max="1" chance="3.163"/> <!-- Magical Tablet -->
-                <item id="1878" min="22" max="66" chance="2.972"/> <!-- Durable Braid -->
+                <item id="57" min="4885" max="11399" chance="70"/> <!-- Adena -->
+				<item id="1878" min="2" max="6" chance="15.50"/> <!-- Durable Braid -->
+                <item id="1865" min="9" max="27" chance="10.71"/> <!-- Varnish -->
+                <item id="1895" min="3" max="9" chance="7.807"/> <!-- Metallic Fiber -->
+                <item id="1864" min="32" max="96" chance="6.077"/> <!-- Stem -->
+				<item id="49756" min="1" max="1" chance="0.75"/> <!-- Cloth Piece -->
+                <item id="90045" min="1" max="1" chance="0.75"/> <!-- Magical Tablet -->   
             </drop>
             <spoil>
-                <item id="4044" min="22" max="66" chance="92.195"/> <!-- Thons -->
-                <item id="1865" min="22" max="66" chance="90.38"/> <!-- Varnish -->
-                <item id="1864" min="22" max="66" chance="90.13"/> <!-- Stem -->
-                <item id="1895" min="22" max="66" chance="89.25"/> <!-- Metallic Fiber -->
+				<item id="1864" min="1" max="73" chance="82.65"/> <!-- Stem -->               
+                <item id="1865" min="1" max="11" chance="80.07"/> <!-- Varnish -->               
+                <item id="1895" min="1" max="11" chance="74.74"/> <!-- Metallic Fiber -->
+				<item id="4044" min="1" max="1" chance="54.14"/> <!-- Thons -->
             </spoil>
         </dropLists>
     </npc>
@@ -6336,7 +6492,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="6716"/> <!-- rhand: Monster Only(Silenos Shaman) -->
+		<acquire exp="371979" sp="11160"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="6227.54" hpRegen="8.3" mp="2614.5" mpRegen="3"/>
             <attack physical="890.50085998804" magical="608.096657928153" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="332.70061" magical="243.45587"/>
             <attribute>
@@ -6351,6 +6509,11 @@
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4066" level="9"/> <!-- NPC Twister -->
+			<skill id="4416" level="6"/> <!-- Humanoid -->
+			<skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+			<skill id="4411" level="16"/> <!-- Extremely Weak M. Atk. -->
+			<skill id="4413" level="14"/> <!-- Extremely Weak M. Def. -->
+			<skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
             <skill id="4098" level="9"/> <!-- Silence -->
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
@@ -6361,9 +6524,28 @@
             </clanList>
         </ai>
         <collision>
-            <radius normal="9"/>
-            <height normal="41.5"/>
+			<radius normal="9" grown="9"/>
+            <height normal="41.5" grown="41.5"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="4475" max="10442" chance="70"/> <!-- Adena -->
+				<item id="1878" min="2" max="6" chance="13.39"/> <!-- Durable Braid -->
+                <item id="1865" min="9" max="27" chance="10.11"/> <!-- Varnish -->
+                <item id="1895" min="3" max="9" chance="7.197"/> <!-- Metallic Fiber -->
+                <item id="1864" min="32" max="96" chance="5.533"/> <!-- Stem -->
+				<item id="900012" min="1" max="1" chance="1.212"/> <!-- Low-grade Life Stone -->
+                <item id="900013" min="1" max="1" chance="0.3"/> <!-- Mid-grade Life Stone -->              
+            </drop>
+            <spoil>
+				<item id="1873" min="1" max="9" chance="80.41"/> <!-- Silver Nugget -->               
+                <item id="1869" min="1" max="23" chance="76.72"/> <!-- Iron Ore -->               
+                <item id="1874" min="1" max="1" chance="66.70"/> <!-- Oriharukon Ore -->
+				<item id="1880" min="1" max="3" chance="49.42"/> <!-- Steel -->
+				<item id="4039" min="1" max="1" chance="31.02"/> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="16.24"/> <!-- Enria -->
+            </spoil>
+        </dropLists>		
     </npc>
     <npc id="21895" level="76" type="Monster" name="Mausoleum Prophet">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->

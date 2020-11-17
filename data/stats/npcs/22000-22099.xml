@@ -1955,6 +1955,7 @@
 	<npc element="EARTH" id="22077" level="83" name="Maluk Succubus" type="Monster">
 		<acquire attribute_exp="1328" exp="1472524" sp="44176"/>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="43455.234" hpRegen="7.5" mp="2666.1" mpRegen="2.7"/>
 			<attack physical="1099.423617" magical="750.7638096"  random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<speed>
@@ -1962,7 +1963,7 @@
 				<run ground="110"/>
 			</speed>
 		</stats>
-		<status undying="false" canBeSown="true"/>
+		<status attackable="true"/>
 		<parameters>
 			<param name="MoveAroundSocial" value="110"/>
 			<param name="MoveAroundSocial1" value="110"/>
@@ -1976,6 +1977,13 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<skillList>
+			<skill id="4416" level="9"/>	<!-- Demonic -->
+			<skill id="4410" level="15"/>	<!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="13"/>	<!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="13"/>	<!-- Extremely Weak P. Def. -->
+			<skill id="48047" level="1"/>	<!-- Earth Monster Fire Attacks inflict additional damage on the monster. -->
+		</skillList>	
 		<shots shotChance="30" spiritChance="30"/>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450">
@@ -1984,8 +1992,8 @@
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="10"/>
-			<height normal="36"/>
+			<radius normal="10" grown="10"/>
+            <height normal="36" grown="36"/>
 		</collision>
 		<!--Maluk Succubus-->
 		<dropLists>
@@ -2008,13 +2016,6 @@
 				<item chance="0.3" id="8698" max="1" min="1"/>
 			</spoil>
 		</dropLists>
-		<skillList><!--Демоны: Раса Тьмы, противостоящая ангелам. Существа, изменяемые темными проклятиями, также становятся демонами.-->
-			<skill id="4416" level="9"/><!--Сильная Физ. Атк.:-->
-			<skill id="4410" level="15"/><!--Усиленная Маг. Атк.:-->
-			<skill id="4411" level="13"/><!--Усиленная Физ. Защ.:-->
-			<skill id="4412" level="13"/><!--Монстры Стихии Земли: Атаки огнем наносят дополнительный урон.-->
-			<skill id="48047" level="1"/>
-		</skillList>
 	</npc>
 	<npc element="EARTH" id="22078" level="83" name="Maluk Succubus Turen" type="Monster">
 		<acquire attribute_exp="1328" exp="1374149" sp="41225"/>
