@@ -16,15 +16,27 @@
 			<condition name="CanTransform"/>
 		</conditions>
 		<effects>
-			<transformation id="206"/>
+			<transformation id="205"/>
 		</effects>
 	</skill>
-	<skill id="54201" name="Mount White Wing">
+	<skill id="54201" name="Mount White Wing" action="A2">
 		<!-- Ride White Wings. -->
 		<icon initial="icon.skill8605"/>
-		<attributes property="PHYSIC">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+			<effect-point initial="1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<target/>
+		<abnormal type="TRANSFORM">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="206"/>
+		</effects>
 	</skill>
 	<skill id="54202" name="Mount Silver Saint" action="A2">
 		<!-- Mounts Silver Saint. -->
@@ -160,11 +172,23 @@
 			</stat-modify>
 		</effects>
 	</skill>
-	<skill id="54213" name="Mount Air Bike">
+	<skill id="54213" name="Mount Air Bike" action="A2">
 		<!-- Ride the Air Bike. -->
 		<icon initial="icon.etc_dwarf_craft_vehicle"/>
-		<attributes property="PHYSIC">
+		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+			<effect-point initial="1"/>
+			<hit-time initial="1000"/>
 		</attributes>
 		<target/>
+		<abnormal type="TRANSFORM">
+			<level initial="1"/>
+			<time initial="3600"/>
+		</abnormal>
+		<conditions>
+			<condition name="CanTransform"/>
+		</conditions>
+		<effects>
+			<transformation id="209"/>
+		</effects>
 	</skill>
 </list>
