@@ -13,6 +13,9 @@
     <xs:complexType name="OlympiadConfiguration">
         <xs:complexContent>
             <xs:extension base="Configuration">
+                <xs:sequence>
+                    <xs:element name="rewards" type="OlympiadRewards"/>
+                </xs:sequence>
                 <xs:attribute name="start-date" type="xs:date"/>
                 <xs:attribute name="force-start-date" type="xs:boolean" default="false"/>
                 <xs:attribute name="min-participant" type="xs:int" use="required"/>
@@ -31,4 +34,7 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="OlympiadRewards">
+        <xs:attribute name="hero-reputation" type="xs:int" default="1000"/>
+    </xs:complexType>
 </xs:schema>
