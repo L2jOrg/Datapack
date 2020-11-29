@@ -22,14 +22,21 @@
                 <xs:attribute name="available-arena-instances" type="intList" use="required"/>
                 <xs:attribute name="match-duration" type="xs:short" default="6"/>
                 <xs:attribute name="initial-points" type="xs:short" default="1000"/>
-                <xs:attribute name="min-points" type="xs:short" default="10"/>
-                <xs:attribute name="max-points" type="xs:short" default="20"/>
                 <xs:attribute name="max-battles-per-day" type="xs:short" default="5"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="OlympiadRewards">
+        <xs:sequence>
+            <xs:element name="winner" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="loser" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="tie" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hero" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hero-skills" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
         <xs:attribute name="hero-reputation" type="xs:int" default="1000"/>
+        <xs:attribute name="min-olympiad-points" type="xs:short" default="10"/>
+        <xs:attribute name="max-olympiad-points" type="xs:short" default="20"/>
     </xs:complexType>
 </xs:schema>
