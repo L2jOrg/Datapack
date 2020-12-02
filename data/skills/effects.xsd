@@ -240,12 +240,15 @@
             <xs:extension base="Effect">
                 <xs:sequence>
                     <xs:element name="chance" type="MappedLevelValue"/>
-                    <xs:element name="min-damage" type="MappedLevelValue"/>
+                    <xs:element name="min-damage" type="MappedLevelValue" minOccurs="0"/>
                     <xs:element name="weapons" type="WeaponTypeList" minOccurs="0"/>
                 </xs:sequence>
                 <xs:attribute name="skill" type="xs:int" use="required"/>
                 <xs:attribute name="target" type="TargetType" default="SELF"/>
-                <xs:attribute name="critical" type="xs:boolean" default="false"/>
+                <xs:attribute name="critical-only" type="xs:boolean" default="false"/>
+                <xs:attribute name="trigger-by-normal-attack" type="xs:boolean" default="true"/>
+                <xs:attribute name="trigger-by-skill" type="xs:boolean" default="true"/>
+                <xs:attribute name="allow-reflect" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
