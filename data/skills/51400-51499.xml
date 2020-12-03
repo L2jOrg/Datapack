@@ -552,10 +552,31 @@
     <skill id="51457" name="Adventurer's High Priest Transformation Scroll" action="A2">
         <!-- Transforms into High Priest with the power of the scroll. For 20 minutes min., XP/SP Gain +5%, P. Atk. +63, M. Atk. +70. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 300and MP by 80. -->
         <icon initial="icon.bm2018_healer_i01"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <reuse initial="60000"/>
         </attributes>
         <target/>
+        <abnormal type="TRANSFORM" visual="CHANGEBODY_HIGH_PRIEST">
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="BONUS_EXP" mode="PER">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="BONUS_SP" mode="PER">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="63"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="70"/>
+            </stat-modify>
+            <trigger-skill-by-attack skill="51460" target="MY_PARTY" >
+                <power initial="1"/>
+                <chance initial="40"/>
+            </trigger-skill-by-attack>
+        </effects>
     </skill>
     <skill id="51458" name="Adventurer's Valkyrie Transformation Scroll" action="A2">
         <!-- Transforms into Valkyrie with the power of the scroll. For 20 minutes, P. Atk. +63, M. Atk. +70, P./M. Critical Rate +20, Atk. Spd./Casting Spd. +50, Speed +10, Sayha's Grace Consumption Speed -5%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as Valkyrie for a chance to inflict additional physical damage. When using malevolent magic skills, has a chance to inflict additional magic damage. -->
@@ -580,7 +601,15 @@
             <reuse initial="60000"/>
             <effect-point initial="20"/>
         </attributes>
-        <target/>
+        <target type="MY_PARTY"/>
+        <effects>
+            <hp>
+                <power initial="300"/>
+            </hp>
+            <mp>
+                <power initial="80"/>
+            </mp>
+        </effects>
     </skill>
     <skill id="51461" name="Valkyrie - Paralyze" debuff="true" action="A1">
         <!-- A temporary paralysis that prevents movement. -->

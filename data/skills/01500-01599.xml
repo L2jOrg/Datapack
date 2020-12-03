@@ -120,7 +120,9 @@
                 </trait>
             </defence-trait>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power initial="100"/>
+                <power initial="50">
+					<value level="2">100</value>
+				</power>
             </stat-modify>
         </effects>
     </skill>
@@ -226,7 +228,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
                 <power initial="100">
                     <value level="2">150</value>
                     <value level="3">220</value>
@@ -557,7 +559,7 @@
                         <value level="10">-22</value>
                         <value level="11">-23</value>
                     </power>
-            </stat-modify>
+            </stat-modify>			
         </effects>
     </skill>
     <skill id="1540" name="Turn to Stone" action="A2" type="MAGIC">
@@ -691,6 +693,7 @@
                 <value level="2">2</value>
                 <value level="3">3</value>
                 <value level="4">4</value>
+				<value level="5">5</value>
             </level>
             <time initial="1200"/>
         </abnormal>
@@ -931,7 +934,7 @@
             level 5: Extends the summoner's abilities to the Servitor. Using the summoner's abilities as the basis, 70% of P. Atk./P. Def./M. Atk./M. Def., 60% Atk. Spd./Casting Spd., 50% of Max HP/Max MP is transferred to the Servitor.
          -->
         <icon initial="icon.skill1557"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" irreplacable="true" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="76">
                 <value level="2">79</value>
                 <value level="3">82</value>
@@ -942,6 +945,8 @@
             <effect-point initial="379">
                 <value level="2">382</value>
                 <value level="3">385</value>
+				<value level="4">388</value>
+				<value level="5">391</value>
             </effect-point>
             <hit-time initial="1000"/>
         </attributes>
@@ -949,10 +954,12 @@
             <mana-init initial="21">
                 <value level="2">23</value>
                 <value level="3">25</value>
+				<value level="4">27</value>
+				<value level="5">29</value>
             </mana-init>
-            <mana initial="84">
-                <value level="2">86</value>
-                <value level="3">88</value>
+            <mana initial="105">
+                <value level="2">109</value>
+                <value level="3">113</value>
             </mana>
         </consume>
         <target/>
@@ -967,75 +974,75 @@
         </abnormal>
         <conditions>
             <condition name="OpHaveSummon"/>
-        </conditions>
+        </conditions>			
         <effects>
-            <servitor-share>
-				<stat type="PHYSICAL_ATTACK_SPEED">
-                    <power initial="35">
-						<value level="2">40</value>
-						<value level="3">45</value>
-						<value level="4">50</value>
-						<value level="5">60</value>
-					</power>
-                </stat>
-                <stat type="MAGIC_ATTACK_SPEED">
-                    <power initial="35">
-						<value level="2">40</value>
-						<value level="3">45</value>
-						<value level="4">50</value>
-						<value level="5">60</value>
-					</power>
-                </stat>
-				<stat type="MAGIC_ATTACK">
-                    <power initial="50">
-						<value level="2">55</value>
-						<value level="3">60</value>
-						<value level="4">65</value>
-						<value level="5">70</value>
-					</power>
+		<servitor-share>	
+                <stat type="PHYSICAL_ATTACK">
+                <power initial="50.0">
+                    <value level="2">55.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">65.0</value>
+                    <value level="5">70.0</value>				
+                </power>
+                </stat>		
+               <stat type="PHYSICAL_DEFENCE">
+                <power initial="50.0">
+                    <value level="2">55.0</value>
+                    <value level="3">60.0</value>
+                    <value level="4">65.0</value>
+                    <value level="5">70.0</value>				
+                </power>	
+                </stat>		
+                <stat type="MAGIC_ATTACK">
+                 <power initial="50.0">
+					<value level="2">55.0</value>
+					<value level="3">60.0</value>
+					<value level="4">65.0</value>
+					<value level="5">70.0</value>
+				</power>		
                 </stat>
                 <stat type="MAGICAL_DEFENCE">
-                    <power initial="50">
-						<value level="2">55</value>
-						<value level="3">60</value>
-						<value level="4">65</value>
-						<value level="5">70</value>
-					</power>
+                 <power initial="50.0">
+					<value level="2">55.0</value>
+					<value level="3">60.0</value>
+					<value level="4">65.0</value>
+					<value level="5">70.0</value>
+				</power>	 
+                </stat>			
+                <stat type="MAGIC_ATTACK_SPEED">
+                <power initial="35.0">
+					<value level="2">40.0</value>
+					<value level="3">45.0</value>
+					<value level="4">50.0</value>
+					<value level="5">60.0</value>
+				</power>
                 </stat>
-                <stat type="PHYSICAL_ATTACK">
-                    <power initial="50">
-						<value level="2">55</value>
-						<value level="3">60</value>
-						<value level="4">65</value>
-						<value level="5">70</value>
-					</power>
-                </stat>               
-                <stat type="PHYSICAL_DEFENCE">
-                    <power initial="50">
-						<value level="2">55</value>
-						<value level="3">60</value>
-						<value level="4">65</value>
-						<value level="5">70</value>
-					</power>
-                </stat>
-				<stat type="MAX_HP">
-                    <power initial="30">
-						<value level="2">35</value>
-						<value level="3">40</value>
-						<value level="4">45</value>
-						<value level="5">50</value>
-					</power>
-                </stat>
+                <stat type="PHYSICAL_ATTACK_SPEED">
+                <power initial="35.0">
+					<value level="2">40.0</value>
+					<value level="3">45.0</value>
+					<value level="4">50.0</value>
+					<value level="5">60.0</value>
+				</power>
+                </stat>			
                 <stat type="MAX_MP">
-                    <power initial="30">
-						<value level="2">35</value>
-						<value level="3">40</value>
-						<value level="4">45</value>
-						<value level="5">50</value>
-					</power>
-                </stat>                                
-            </servitor-share>
-        </effects>
+                <power initial="30.0">
+					<value level="2">35.0</value>
+					<value level="3">40.0</value>
+					<value level="4">45.0</value>
+					<value level="5">50.0</value>
+				</power>
+                </stat>
+                <stat type="MAX_HP">
+                <power initial="30.0">
+					<value level="2">35.0</value>
+					<value level="3">40.0</value>
+					<value level="4">45.0</value>
+					<value level="5">50.0</value>
+				</power>
+                </stat>
+		</servitor-share>				
+        </effects>	
     </skill>
     <skill id="1565" name="Mana Pump" max-level="5">
         <!--
