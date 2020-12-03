@@ -3413,7 +3413,7 @@
 			</effect>
 		</effects>
     </skill>
-    <skill id="45178" name="Shine Mastery" max-level="2">
+   <skill id="45178" name="Shine Mastery" max-level="2">
         <!--
             level 1: Can absorb the power of light.\n\nGather 100 Shine Souls to transform into Shine Side.\n\n<Shine Side>\nReceive MP Absorption, Defense, and Acceleration Stage 1 abilities.
             level 2: Can absorb the power of light.\n\nGather 100 Shine Souls to transform into Shine Side.\n\n<Shine Side>\nReceive MP Absorption, Defense, Recovery, and Acceleration Stage 2 abilities.
@@ -3423,20 +3423,20 @@
         <target/>
         <effects>
             <trigger-skill-by-attacking chance="30" skill="45180">
-                <power initial="1"/>
+                 <power initial="1">
+					<value level="2">2</value>
+				</power>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic skill="45180" target="SELF">
-                <power initial="2"/>
-                <chance initial="30.0"/>
-                <types>PHYSIC MAGIC</types>
-            </trigger-skill-by-magic>
-            <trigger-skill-by-attack skill="45180">
-                <power initial="3"/>
+            <trigger-skill-by-attack skill="45180" target="SELF">
+                <power initial="1">
+					<value level="2">2</value>
+				</power>
                 <chance initial="30"/>
-                <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-change-exp skill="45180">
-                <power initial="4"/>
+                 <power initial="1">
+					<value level="2">2</value>
+				</power>
             </trigger-skill-by-change-exp>
         </effects>
     </skill>
@@ -3450,20 +3450,20 @@
         <target/>
         <effects>
             <trigger-skill-by-attacking chance="10" skill="45181">
-                <power initial="1"/>
+                 <power initial="2">
+					<value level="2">3</value>
+				</power>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-magic skill="45181" target="SELF">
-                <power initial="2"/>
-                <chance initial="15"/>
-                <types>PHYSIC MAGIC</types>
-            </trigger-skill-by-magic>
-            <trigger-skill-by-attack skill="45181">
-                <power initial="3"/>
+            <trigger-skill-by-attack skill="45181" target="SELF">
+                 <power initial="2">
+					<value level="2">3</value>
+				</power>
                 <chance initial="10"/>
-                <min-damage initial="10"/>
             </trigger-skill-by-attack>
             <trigger-skill-by-avoid chance="20" skill="45181" target="SELF">
-                <power initial="4"/>
+                 <power initial="2">
+					<value level="2">3</value>
+				</power>
             </trigger-skill-by-avoid>
         </effects>
     </skill>
