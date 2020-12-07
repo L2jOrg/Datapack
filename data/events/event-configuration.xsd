@@ -40,9 +40,14 @@
             <xs:element name="tie" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="hero" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="hero-skills" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="mark-of-battle-by-ranking" type="IntervalValue" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="hero-reputation" type="xs:int" default="1000"/>
         <xs:attribute name="min-olympiad-points" type="xs:short" default="10"/>
         <xs:attribute name="max-olympiad-points" type="xs:short" default="20"/>
+        <xs:attribute name="mark-of-battle" type="xs:int" default="45584"/>
+        <xs:attribute name="mark-of-battle-per-point" type="xs:int" default="20"/>
+        <xs:attribute name="mark-of-battle-if-hero" type="xs:int" default="300"/>
+        <xs:attribute name="mark-of-battle-if-win" type="xs:int" default="10"/>
     </xs:complexType>
 </xs:schema>
