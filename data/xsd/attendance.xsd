@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="item" type="AttendanceItem" minOccurs="0" maxOccurs="28"/>
+				<xs:element name="vip-item" type="AttendanceVipItem" minOccurs="0" maxOccurs="4"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="AttendanceItem">
+		<xs:complexContent>
+			<xs:extension base="ItemInfo">
+				<xs:attribute name="highlight" type="xs:boolean" default="false"/>
+				<xs:attribute name="cafe-points" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="AttendanceVipItem">
+		<xs:complexContent>
+			<xs:extension base="AttendanceItem">
+				<xs:attribute name="vip-level" type="xs:byte" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
