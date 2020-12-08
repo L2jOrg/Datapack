@@ -411,7 +411,7 @@
         <attributes property="MAGIC"/>
         <target/>
     </skill>
-    <skill id="55992" name="Power of Shunaiman" max-level="2" action="A1">
+    <skill id="55992" name="Power of Shunaiman" max-level="2" action="A2">
         <!--
             level 1: By the power of Shunaiman Stun/ Mental attack +5%%, damage reflection resistance +10%%.
             level 2: By the power of Shunaiman Stun/ Mental attack +15%%, damage reflection resistance +30%%.
@@ -419,10 +419,36 @@
         <icon initial="icon.sayhas_talisman_pvp_Lv1">
             <value level="2">icon.sayhas_talisman_pvp_Lv2</value>
         </icon>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
             <reuse initial="300000"/>
+            <effect-point initial="673"/>
         </attributes>
         <target/>
+        <abnormal>
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="120"/>
+        </abnormal>
+        <effects>
+            <attack-trait>
+                <trait type="SHOCK">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5">
+                        <value level="2">15</value>
+                    </power>
+                </trait>
+            </attack-trait>
+            <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
+                <power initial="10">
+                    <value level="2">30</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55993" name="Summon Big Wedding Cake" action="A1">
         <!-- none -->
