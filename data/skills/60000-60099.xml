@@ -58,24 +58,9 @@
 			<time initial="-1"/>
 		</abnormal>
 		<effects>
-			<base-stat type="CON">
+			<base-stats types="CON DEX INT MEN STR WIT">
 				<power initial="1"/>
-			</base-stat>
-			<base-stat type="DEX">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="INT">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="STR">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="WIT">
-				<power initial="1"/>
-			</base-stat>
+			</base-stats>
 			<stat-modify stat="ADDITIONAL_POTION_HP">
 				<power initial="50"/>
 			</stat-modify>
@@ -98,18 +83,9 @@
 			<time initial="-1"/>
 		</abnormal>
 		<effects>
-			<base-stat type="CON">
+			<base-stats types="CON MEN DEX WIT">
 				<power initial="1"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="DEX">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="WIT">
-				<power initial="1"/>
-			</base-stat>
+			</base-stats>
 			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="10000"/>
 			</stat-modify>
@@ -126,12 +102,9 @@
 			<time initial="-1"/>
 		</abnormal>
 		<effects>
-			<base-stat type="CON">
+			<base-stats types="CON MEN">
 				<power initial="1"/>
-			</base-stat>
-			<base-stat type="MEN">
-				<power initial="1"/>
-			</base-stat>
+			</base-stats>
 			<stat-modify stat="WEIGHT_LIMIT">
 				<power initial="5000"/>
 			</stat-modify>
@@ -260,20 +233,6 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stat type="CON">
-				<power initial="1"/>
-			</base-stat>			
-			<base-stat type="MEN">
-				<power initial="1"/>
-			</base-stat>			
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="5000"/>
-			</stat-modify>			
-		</effects>
 	</skill>
 	<skill id="60013" name="Server Ranking Benefit 2">
 		<!-- DEX+ 1\nWIT +1\nWeight Limit +5000. -->
@@ -281,20 +240,6 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stat type="CON">
-				<power initial="1"/>
-			</base-stat>			
-			<base-stat type="MEN">
-				<power initial="1"/>
-			</base-stat>			
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="5000"/>
-			</stat-modify>			
-		</effects>
 	</skill>
 	<skill id="60014" name="Server Ranking Benefit 3">
 		<!-- STR + 1\nINT +1\nWeight Limit +90000\nP. Evasion +20\nHP Potion Effect +50 -->
@@ -302,26 +247,6 @@
 		<attributes property="MAGIC">
 		</attributes>
 		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stat type="STR">
-				<power initial="1"/>
-			</base-stat>
-			<base-stat type="INT">
-				<power initial="1"/>
-			</base-stat>						
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="90000"/>
-			</stat-modify>
-			<stat-modify stat="EVASION_RATE">
-				<power initial="20"/>
-			</stat-modify>
-			<stat-modify stat="ADDITIONAL_POTION_HP">
-				<power initial="20"/>
-			</stat-modify>
-		</effects>
 	</skill>
 	<skill id="60015" name="Race Ranking Benefit">
 		<!-- Benefits for Race Ranking 1st.\n\nHumans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion.\n\nBenefits for Race Ranking 1st-3rd.\n\nRanker Transformation Skill -->
