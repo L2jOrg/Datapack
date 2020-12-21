@@ -1,0 +1,51 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="event-configuration.xsd"/>
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="olympiad-config" type="OlympiadConfiguration" substitutionGroup="configuration"/>
+
+    <xs:complexType name="OlympiadConfiguration">
+        <xs:complexContent>
+            <xs:extension base="Configuration">
+                <xs:sequence>
+                    <xs:element name="rewards" type="OlympiadRewards"/>
+                </xs:sequence>
+                <xs:attribute name="start-date" type="xs:date"/>
+                <xs:attribute name="force-start-date" type="xs:boolean" default="false"/>
+                <xs:attribute name="min-participant" type="xs:int" use="required"/>
+                <xs:attribute name="available-arena-instances" type="intList" use="required"/>
+                <xs:attribute name="match-duration" type="xs:short" default="6"/>
+                <xs:attribute name="initial-points" type="xs:short" default="1000"/>
+                <xs:attribute name="max-battles-per-day" type="xs:short" default="5"/>
+                <xs:attribute name="min-level" type="xs:short" default="70"/>
+                <xs:attribute name="min-class-level" type="xs:byte" default="2"/>
+                <xs:attribute name="hero-min-battles-won" type="xs:byte" default="10"/>
+                <xs:attribute name="previous-info-min-battles" type="xs:byte" default="10"/>
+                <xs:attribute name="enable-legend" type="xs:boolean" default="false"/>
+                <xs:attribute name="keep-dance" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="OlympiadRewards">
+        <xs:sequence>
+            <xs:element name="winner" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="loser" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="tie" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hero" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="hero-skills" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="mark-of-battle-by-ranking" type="IntervalValue" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="hero-reputation" type="xs:int" default="1000"/>
+        <xs:attribute name="min-olympiad-points" type="xs:short" default="10"/>
+        <xs:attribute name="max-olympiad-points" type="xs:short" default="20"/>
+        <xs:attribute name="mark-of-battle" type="xs:int" default="45584"/>
+        <xs:attribute name="mark-of-battle-per-point" type="xs:int" default="20"/>
+        <xs:attribute name="mark-of-battle-if-hero" type="xs:int" default="300"/>
+        <xs:attribute name="mark-of-battle-if-win" type="xs:int" default="10"/>
+    </xs:complexType>
+</xs:schema>
