@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://l2j.org"
+      xsi:schemaLocation="http://l2j.org events.xsd" >
+
+    <event name="Siege" class="org.l2j.gameserver.engine.siege.SiegeEngine">
+
+        <scheduler>
+            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="6" minute="00" repeat="true"/>
+            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="22" minute="00" repeat="true"/>
+            <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="23" minute="00" repeat="true"/>
+
+            <conditionalSchedule>
+                <run name="start-preparation" if="BETWEEN">
+                    <schedule>start-preparation</schedule>
+                    <schedule>start-siege</schedule>
+                </run>
+                <run name="start-siege" if="BETWEEN">
+                    <schedule>start-siege</schedule>
+                    <schedule>stop-siege</schedule>
+                </run>
+            </conditionalSchedule>
+            
+        </scheduler>
+        
+        <config>
+            <siege-config>
+                <castle id="3">
+                    <scheduled-day day="SUNDAY" hour="20"/>
+                    <scheduled-day day="MONDAY" hour="20"/>
+                    <scheduled-day day="TUESDAY" hour="20"/>
+                    <scheduled-day day="WEDNESDAY" hour="20"/>
+                    <scheduled-day day="THURSDAY" hour="20"/>
+                    <scheduled-day day="FRIDAY" hour="20"/>
+                    <scheduled-day day="SATURDAY" hour="20"/>
+                </castle>
+            </siege-config>
+        </config>
+
+    </event>
+</list>

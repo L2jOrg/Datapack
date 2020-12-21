@@ -32,6 +32,18 @@
         <xs:list itemType="BodyPart"/>
     </xs:simpleType>
 
+    <xs:simpleType name="DayOfWeek">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="MONDAY"/>
+            <xs:enumeration value="TUESDAY"/>
+            <xs:enumeration value="WEDNESDAY"/>
+            <xs:enumeration value="THURSDAY"/>
+            <xs:enumeration value="FRIDAY"/>
+            <xs:enumeration value="SATURDAY"/>
+            <xs:enumeration value="SUNDAY"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:complexType name="ItemInfo">
         <xs:attribute type="xs:positiveInteger" name="id" use="required"/>
         <xs:attribute type="xs:long" name="count" default="1"/>

@@ -1,0 +1,34 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="event-configuration.xsd"/>
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="siege-config" type="SiegeConfiguration" substitutionGroup="configuration"/>
+
+    <xs:complexType name="SiegeConfiguration">
+        <xs:complexContent>
+            <xs:extension base="Configuration">
+                <xs:sequence>
+                    <xs:element name="castle" type="CastleSiege" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CastleSiege">
+        <xs:sequence>
+            <xs:element name="scheduled-day" type="SiegeSchedule" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <xs:attribute name="start-date" type="xs:date"/>
+        <xs:attribute name="force-start-date" type="xs:boolean" default="false"/>
+    </xs:complexType>
+
+    <xs:complexType name="SiegeSchedule">
+        <xs:attribute name="day" type="DayOfWeek" use="required"/>
+        <xs:attribute name="hour" type="xs:int" use="required"/>
+    </xs:complexType>
+</xs:schema>
