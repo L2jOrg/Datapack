@@ -4,6 +4,7 @@
         <!-- Teleport to the Hunter's Village. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+            <magic-level initial="-1"/>
             <reuse initial="60000"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -52,7 +53,8 @@
     </skill>
     <skill id="39103" name="Hero HP Potion" action="A1">
         <icon initial="icon.etc_reagent_white_i00"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39104" name="Warrior's Cube (7-day)" action="A1">
@@ -199,7 +201,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>
-        </effects>
+        </effects>		
     </skill>
     <skill id="39115" name="Refined Orfen's Earring" max-level="3">
         <!--
@@ -241,7 +243,7 @@
             <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
                 <power initial="3.0"/>
             </stat-modify>
-        </effects>
+        </effects>		
     </skill>
     <skill id="39116" name="Refined Rings of Core" max-level="3">
         <!--
@@ -286,7 +288,7 @@
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
                 <power initial="6.0"/>
             </stat-modify>
-		</effects>
+		</effects>	
     </skill>
     <skill id="39117" name="Whale" action="A1">
         <!-- none -->
@@ -302,10 +304,6 @@
         <attributes>
             <reuse initial="500"/>
         </attributes>
-       <consume>
-            <item initial="49595"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <effects>
             <effect name="GiveSp">
@@ -319,10 +317,6 @@
         <attributes>
             <reuse initial="500"/>
         </attributes>
-        <consume>
-            <item initial="49596"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <effects>
             <effect name="GiveSp">
@@ -333,20 +327,40 @@
     <skill id="39120" name="Teleport: Giral Harbor" action="A1">
         <!-- Teleport to Giran Harbor. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <reuse initial="60000"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>	
+        <effects>
+            <teleport>
+                <location x="48088" y="186622" z="-3487"/>
+            </teleport>
+        </effects>	
     </skill>
     <skill id="39121" name="Teleport: Gludin Harbor" action="A1">
         <!-- Teleport to Gludin Harbor. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <reuse initial="60000"/>
-            <hit-time initial="3000"/>
-        </attributes>
+            <hit-time initial="5000"/>
+        </attributes>	
         <target/>
+        <conditions>
+            <condition name="NonChaotic"/>
+            <condition name="OpCanEscape"/>
+        </conditions>	
+        <effects>
+            <teleport>
+                <location x="-91216" y="150483" z="-3628"/>
+            </teleport>
+        </effects>		
     </skill>
     <skill id="39122" name="Golden Boots_Tester" action="A1">
         <!-- none -->
@@ -359,7 +373,8 @@
     </skill>
     <skill id="39123" name="Special HP Potion" action="A1">
         <icon initial="icon.etc_bm_hero_red_potion"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39124" name="Weapon Supply Box (C-grade)" action="A1">
@@ -583,9 +598,8 @@
     <skill id="39134" name="XP Boost Scroll" action="A2">
         <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <reuse initial="60000"/>
         </attributes>
         <target/>
         <abnormal type="EXP_SP_H">
@@ -617,8 +631,8 @@
     </skill>
     <skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
         <!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-        <icon initial="icon.skill0000"/>        
-		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -628,7 +642,7 @@
         </conditions>
         <effects>
             <escape location="TOWN"/>
-        </effects>
+        </effects>	
     </skill>
     <skill id="39137" name="Chapeau Box" action="A1">
         <!-- none -->
@@ -742,7 +756,7 @@
     <skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
         <!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
         <icon initial="icon.etc_holy_potion_i00"/>
-        <attributes magic-critical-rate="5.0">
+       <attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<reuse initial="500"/>
 		</attributes>
@@ -766,7 +780,7 @@
     <skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
         <!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
         <icon initial="icon.etc_water_potion_i00"/>
-        <attributes magic-critical-rate="5.0">
+         <attributes magic-critical-rate="5.0">
 			<magic-level initial="1"/>
 			<reuse initial="500"/>
 		</attributes>
@@ -785,7 +799,7 @@
 		<target/>
 		<effects>
 			<acquire-xp-sp xp="37000000" sp="1110000"/>
-		</effects>		
+		</effects>
     </skill>
     <skill id="39144" name="Special Fruit Buff" action="A2">
         <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP.\nDeath protection. You can delete it on your own. -->
@@ -932,7 +946,8 @@
     <skill id="39150" name="Enhanced Sayha's Holy Water" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39151" name="A-grade Armor Supply Box" action="A1">
@@ -1156,11 +1171,19 @@
     <skill id="39157" name="Unidentified Rock" action="A1">
         <!-- none -->
         <icon initial="icon.etc_magical_stone_i00"/>
-        <attributes>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
-        </attributes>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+        </attributes>	
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item chance="55.0" id="49759"/>
+                <item chance="45.0" id="49767"/>
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="39158" name="Secret Scroll Box: Emperor Baium's Enchant" action="A1">
         <!-- none -->
@@ -1174,7 +1197,8 @@
     <skill id="39159" name="Enhanced Sayha's Energy" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39160" name="Emperor Baium's Secret Treasures" action="A1">
@@ -1201,7 +1225,7 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_K">
+        <abnormal type="VOTE">
             <level initial="1"/>
             <time initial="1200"/>
         </abnormal>
@@ -1256,7 +1280,7 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal type="EXP_SP_K">
+        <abnormal type="VOTE">
             <level initial="1"/>
             <time initial="1200"/>
         </abnormal>
@@ -1708,7 +1732,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1722,7 +1745,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1736,7 +1758,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1750,7 +1771,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1764,7 +1784,6 @@
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1838,19 +1857,22 @@
     <skill id="39191" name="Enhanced Sayha's Blessing - Exchangeable" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39192" name="Enhanced Sayha's Silver Light Blessing" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39193" name="Enhanced Sayha's Golden Blessing" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+        </attributes>
         <target/>
     </skill>
     <skill id="39194" name="Sayha's Storm Lv. 1" action="A1">
