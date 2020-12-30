@@ -14,6 +14,10 @@
                 <xs:sequence>
                     <xs:element name="castle" type="CastleSiege" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
+                <xs:attribute name="max-in-day" type="xs:int" default="1"/>
+                <xs:attribute name="min-clan-level" type="xs:int" default="3"/>
+                <xs:attribute name="max-attackers" type="xs:int" default="500"/>
+                <xs:attribute name="max-defenders" type="xs:int" default="500"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
