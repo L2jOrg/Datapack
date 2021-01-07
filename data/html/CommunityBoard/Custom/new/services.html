@@ -13,73 +13,105 @@
 							<br>
 						</td>
 						<td>
-							<table width="510" height="490" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
+							<table width="570" height="490" background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg">
 								<tr><td height=4></td></tr>
 								<tr>
 									<td>
-										<!--- buffer title --->
-										<center>
-											<table width="510">
-												<tr><td height=20></td></tr>
-												<tr>
-													<td align=center>
-														<font name="hs16">Account Services</font>
-													</td>
-												</tr>
-											</table>
-										</center>
-										<!--- buffer title --->
-										<br>
-										<!--- buffer - content --->
 										<center>
 											<table width=510><tr>
 												<td align=center>
-													<table width=600 height=375 border=0 cellpadding=0 cellspacing=0>
+													<table width=510 height=375 border=0 cellpadding=0 cellspacing=0>
 														<tr>
 															<td valign="top" align="center">
 																<!-- Grand Olympiad Emblem -->
 																<table border=0 cellpadding=0 cellspacing=0>
-																	<tr><td width=256 height=185 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+																	<tr><td width=256 height=175 background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
 																</table>
-																<table width=690 border=0>
+																<table width=510 border=0>
 																	<tr>
 																		<td align=center>
-																			Service automatically use potions.<br1>Select the percentage at which the <font color="FF1500"></font>/<font color="386DFF">MP</font>/<font color="FFA62B"></font> potion will be used <br1>and click the "Enable" button.<br>
+																			AUTOMATIC USE OF <font color="ff0a0a">HP</font>/<font color="386DFF">MP</font>/<font color="ff9500">CP</font> POTIONS.<br1>Select the percentage at which the potions should be used <br1>and click their respective "Enable" buttons.<br>
 																		</td>
 																	</tr>
 																</table>
-																<table width=690 border=0>
+																<table width=510>
 																	<tr>
-																		<td align=center>
-																			<font color="386DFF">[</font>MP<font color="386DFF">]</font><br1>
-																			<table border=0>
-																				<tr>
-																					<td align=center><edit var = "mp" width=90 height=20 length="16"></td>
-																					<td align=center valign=top><button value="Enable" action="bypass _bbsautohpmpcp automp $mp" width=105 height=30 back="L2UI_CT1.Button_DF_Msn_down" fore="L2UI_CT1.Button_DF_Msn"></td>
-																				</tr>
-																			</table>
-																			<button value="Disable" action="bypass _bbsautohpmpcp automp" width=200 height=30 back="L2UI_CT1.Button_DF_Msn_down" fore="L2UI_CT1.Button_DF_Msn">
+																		<td>
+																			<center>
+																				<table background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg" width=150 height=59>
+																					<tr><td height=2></td></tr>
+																					<tr>
+																						<td align=center>
+																							<font color="ff9500">[</font>CP<font color="ff9500">]</font><br1>
+																							<table border=0>
+																								<tr>
+																									<td align=center><edit var = "cp" width=65 height=20 length="16"></td>
+																									<td align=center valign=top><button value="Enable" action="bypass _bbsautohpmpcp autocp $cp" width=85 height=26 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button"></td>
+																								</tr>
+																							</table>
+																							<button value="Disable" action="bypass _bbsautohpmpcp autocp" width=160 height=30 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button">
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height=2></td>
+																					</tr>
+																				</table>
+																			</center>
 																		</td>
-																		
+																		<td>
+																			<center>
+																				<table background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg" width=150 height=59>
+																					<tr><td height=2></td></tr>
+																					<tr>
+																						<td align=center>
+																							<font color="ff0a0a">[</font>HP<font color="ff0a0a">]</font><br1>
+																							<table border=0>
+																								<tr>
+																									<td align=center><edit var = "hp" width=65 height=20 length="16"></td>
+																									<td align=center valign=top><button value="Enable" action="bypass _bbsautohpmpcp autohp $hp" width=85 height=26 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button"></td>
+																								</tr>
+																							</table>
+																							<button value="Disable" action="bypass _bbsautohpmpcp autohp" width=160 height=30 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button">
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height=2></td>
+																					</tr>
+																				</table>
+																			</center>
+																		</td>
+																		<td>
+																			<center>
+																				<table background="l2ui_ct1.ComboBox_DF_Dropmenu_Bg" width=150 height=59>
+																					<tr><td height=2></td></tr>
+																					<tr>
+																						<td align=center>
+																							<font color="386DFF">[</font>MP<font color="386DFF">]</font><br1>
+																							<table border=0>
+																								<tr>
+																									<td align=center><edit var = "mp" width=65 height=20 length="16"></td>
+																									<td align=center valign=top><button value="Enable" action="bypass _bbsautohpmpcp automp $mp" width=85 height=26 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button"></td>
+																								</tr>
+																							</table>
+																							<button value="Disable" action="bypass _bbsautohpmpcp automp" width=160 height=30 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button">
+																						</td>
+																					</tr>
+																					<tr>
+																						<td height=2></td>
+																					</tr>
+																				</table>
+																			</center>
+																		</td>
 																	</tr>
+																	<tr><td height=8></td></tr>
 																</table>
 																<br>
-																<button value="Back" action="bypass _cbbsservices_cabinet" width=100 height=25 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+																<button value="Back" action="bypass _cbbsservices_cabinet" width=100 height=25 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button">
 															</td>
 														</tr>
 													</table>
 												</td>
 											</tr>
-											</table>
-
-											<table width="510">
-												<tr><td height=30></td></tr>
-												<tr>
-													<td align=center>
-														<button value="Back" action="bypass _bbshome" width=90 height=25 back="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button" fore="L2UI_CT1.LCoinShopWnd.LCoinShopWnd_DF_Button">
-													</td>
-												</tr>
-												<tr><td height=10></td></tr>
 											</table>
 										</center>
 										<!--- buffer - content  --->
