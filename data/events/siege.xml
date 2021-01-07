@@ -6,9 +6,9 @@
     <event name="Siege" class="org.l2j.gameserver.engine.siege.SiegeEngine">
 
         <scheduler>
-            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="6" minute="00" repeat="true"/>
-            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="22" minute="00" repeat="true"/>
-            <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="23" minute="00" repeat="true"/>
+            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="0" minute="00" repeat="true"/>
+            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="21" minute="00" repeat="true"/>
+            <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="22" minute="00" repeat="true"/>
 
             <conditionalSchedule>
                 <run name="start-preparation" if="BETWEEN">
