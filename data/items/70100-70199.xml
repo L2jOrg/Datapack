@@ -152,15 +152,15 @@
 			<skill id="21233" value="-1"/>  <!-- Release Agathion - Uthanka -->
 			<skill id="23234" value="-1"/>  <!-- Singer & Dancer Agathion Cute Trick -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
-			<skill id="39016" value="-1"/>  <!-- Dance of Fury -->
-			<skill id="39017" value="-1"/>  <!-- Dance of Concentration -->
-			<skill id="39018" value="-1"/>  <!-- Song of Wind -->
+			<skill id="55270" value="-1"/>  <!-- Agathion - Dance of Fury -->
+			<skill id="55271" value="-1"/>  <!-- Agathion - Dance of Concentration -->
+			<skill id="55272" value="-1"/>  <!-- Agathion - Song of Wind -->
 		</skills>
 	</armor>
 
 	<item id="70115" name="Fishing Coin" type="NONE">
 	<!-- The coin you found in the whale caught using Golden Bait. Can be exchanged for various items in the Fishermen's Guild. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction stackable="true" sellable="false" tradable="false" private-sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -178,12 +178,17 @@
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
+		<skills>
+			<skill id="55143" value="-1"/>  <!-- Elite Fishing Rod of Golden Mermaid -->
+			<skill id="39120" value="-1"/>  <!-- Teleport: Giral Harbor -->
+			<skill id="39121" value="-1"/>  <!-- Teleport: Gludin Harbor -->
+		</skills>		
 	</weapon>
 
 	<weapon id="70117" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
 	<!-- A 3-day item.  Bobber usage: 1\n\nWhen used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Cooldown: 1 min. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<attributes weight="1000" commission-type="OTHER_ITEM" duration="4320" enchant-enabled="false"/>
 		<crystal />
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -194,6 +199,11 @@
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
+		<skills>
+			<skill id="55143" value="-1"/>  <!-- Elite Fishing Rod of Golden Mermaid -->
+			<skill id="39120" value="-1"/>  <!-- Teleport: Giral Harbor -->
+			<skill id="39121" value="-1"/>  <!-- Teleport: Gludin Harbor -->
+		</skills>
 	</weapon>
 
 	<weapon id="70118" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
@@ -210,6 +220,11 @@
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
+		<skills>
+			<skill id="55143" value="-1"/>  <!-- Elite Fishing Rod of Golden Mermaid -->
+			<skill id="39120" value="-1"/>  <!-- Teleport: Giral Harbor -->
+			<skill id="39121" value="-1"/>  <!-- Teleport: Gludin Harbor -->
+		</skills>
 	</weapon>
 
 	<weapon id="70119" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
@@ -226,6 +241,11 @@
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
+		<skills>
+			<skill id="55143" value="-1"/>  <!-- Elite Fishing Rod of Golden Mermaid -->
+			<skill id="39120" value="-1"/>  <!-- Teleport: Giral Harbor -->
+			<skill id="39121" value="-1"/>  <!-- Teleport: Gludin Harbor -->
+		</skills>
 	</weapon>
 
 	<weapon id="70120" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
@@ -242,6 +262,11 @@
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
+		<skills>
+			<skill id="55143" value="-1"/>  <!-- Elite Fishing Rod of Golden Mermaid -->
+			<skill id="39120" value="-1"/>  <!-- Teleport: Giral Harbor -->
+			<skill id="39121" value="-1"/>  <!-- Teleport: Gludin Harbor -->
+		</skills>
 	</weapon>
 
 	<item id="70121" name="Full Plate Armor Crafting Pack" type="NONE">
@@ -475,9 +500,9 @@
 	<item id="70159" name="Mana Recovery Potion" type="POTION">
 	<!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full.  -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
+		<attributes weight="5" price="10000" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS" reuse-delay="2000" />
 		<skill-reducer>
-			<skill id="54118" value="-1"/>  <!-- Mana Potion -->
+			<skill id="26030" value="-1"/>  <!-- Mana Potion -->
 		</skill-reducer>
 	</item>
 

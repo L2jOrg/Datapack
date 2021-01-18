@@ -126,12 +126,6 @@
 	<!-- Instantly recovers HP. Provides HP +1000 and uses the remaining points to recover CP. -->
 		<restriction stackable="true" sellable="false"/>
 		<attributes weight="2" action="SKILL_REDUCE"/>
-			<skill-reducer>	
-			<skill id="54118" value="-1"/>  <!-- Einhasad's Salvation -->
-				<skill id="54117" value="-1"/>  <!-- Einhasad's Salvation -->
-			
-			</skill-reducer>
-
 	</item>
 
 	<item id="70621" name="Einhasad's Protection" type="SCROLL">
@@ -204,12 +198,18 @@
 	<!-- Double-click to acquire Fishing XP Growth Amulet (1-day). -->
 		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="70629" min-count="1" max-count="1" chance="100"/>  
+		</extract>		
 	</item>
 
 	<item id="70632" name="High-grade Fishing XP Growth Amulet Pack (1-day)" type="NONE">
 	<!-- Double-click to acquire High-grade Fishing XP Growth Amulet (1-day).\n -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="70630" min-count="1" max-count="1" chance="100"/>  
+		</extract>		
 	</item>
 
 	<item id="70633" name="Blue Dynasty Transformation Scroll" type="POTION">
