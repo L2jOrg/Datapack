@@ -1,0 +1,23 @@
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="greater_lamp_mode">
+                    <xs:complexType>
+                        <xs:attribute name="item" type="xs:unsignedInt" use="required" />
+                        <xs:attribute name="count" type="xs:unsignedInt" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="lamp">
+                    <xs:complexType>
+                        <xs:attribute name="mode" type="xs:string" use="required" />
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                        <xs:attribute name="exp" type="xs:unsignedInt" use="required" />
+                        <xs:attribute name="sp" type="xs:unsignedInt" use="required" />
+                        <xs:attribute name="chance" type="xs:decimal" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
