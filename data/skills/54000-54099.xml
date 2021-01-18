@@ -790,7 +790,7 @@
                     <value level="22">40.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
@@ -852,7 +852,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13557"/>
         </effects>
     </skill>
@@ -874,9 +874,9 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13560"/>
-        </effects>	
+        </effects>
     </skill>
     <skill id="54012" name="Agathion - Sagittarius" action="A1">
         <!-- Releases the Agathion's seal. -->
@@ -885,9 +885,9 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13563"/>
-        </effects>	
+        </effects>
     </skill>
     <skill id="54013" name="Agathion - Virgo" action="A1">
         <!-- Releases the Agathion's seal. -->
@@ -896,7 +896,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13553"/>
         </effects>
     </skill>
@@ -907,6 +907,9 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
+        <effects>
+            <summon-agathion id="13561"/>
+        </effects>
     </skill>
     <skill id="54015" name="Agathion - Capricorn" action="A1">
         <!-- Releases the Agathion's seal. -->
@@ -915,7 +918,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13554"/>
         </effects>
     </skill>
@@ -926,9 +929,9 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13555"/>
-        </effects>	
+        </effects>
     </skill>
     <skill id="54017" name="Agathion - Gemini" action="A1">
         <!-- Releases the Agathion's seal. -->
@@ -937,14 +940,14 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <summon-agathion id="13559"/>
-        </effects>	
+        </effects>
     </skill>
     <skill id="54018" name="Seal Agathion" action="A1">
         <!-- Dismiss a summoned Agathion. -->
         <icon initial="icon.etc_unsummon_aga_agit_i01"/>
-		<attributes magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -1426,32 +1429,32 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-			<reuse skill-type="PHYSIC" start-level="3">
-				<power initial="-7.0"/>
-			</reuse>
-			<reuse skill-type="MAGIC" start-level="3">
+            <reuse skill-type="PHYSIC" start-level="3">
                 <power initial="-7.0"/>
             </reuse>
-			<stat-modify start-level="2" stat="ABSORB_MANA_DAMAGE_PERCENT">
+            <reuse skill-type="MAGIC" start-level="3">
+                <power initial="-7.0"/>
+            </reuse>
+            <stat-modify start-level="2" stat="ABSORB_MANA_DAMAGE_PERCENT">
                 <power initial="2.0">
                     <value level="3">4.0</value>
                     <value level="4">8.0</value>
                 </power>
             </stat-modify>
-			<vampiric-attack start-level="2" chance="70">
+            <vampiric-attack start-level="2" chance="70">
                 <power initial="4.0">
                     <value level="3">8.0</value>
                     <value level="4">16.0</value>
                 </power>
-            </vampiric-attack>            
-			<base-stats  types="CON MEN DEX WIT STR INT">
+            </vampiric-attack>
+            <base-stats  types="CON MEN DEX WIT STR INT">
                 <power initial="1">
                     <value level="2">2</value>
                     <value level="3">3</value>
                     <value level="4">4</value>
                 </power>
-            </base-stats>          
-		</effects>
+            </base-stats>
+        </effects>
     </skill>
     <skill id="54030" name="Ignis Necklace" max-level="11">
         <!--
@@ -1818,7 +1821,7 @@
                     <value level="10">30.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power>
                     <value level="2">3.0</value>
                     <value level="3">5.0</value>
@@ -1889,44 +1892,44 @@
         <!--
             level 1: Cancel Target, Teleport back to previous location.
             level 2: Triggers the Cancel Target effect and teleports to the rear.
-         -->           
-		<icon initial="icon.sayha2017_blink"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
-			<magic-level initial="1"/>				
-			<reuse initial="120000">
+         -->
+        <icon initial="icon.sayha2017_blink"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+            <magic-level initial="1"/>
+            <reuse initial="120000">
                 <value level="2">60000</value>
             </reuse>
-			<effect-point initial="-1"/>
-			<hit-time initial="100"/>
-		</attributes>		
-		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12"/>
-		<abnormal type="STUN" visual="STUN">
-			<level initial="1"/>			
-			<time initial="1"/>
-			<chance initial="100"/>
-		</abnormal>
-		<!-- <conditions> -->
-			<!-- <blink direction="BACK" range="600"/> -->
-			<!-- <condition name="blink" position="BACK" range="600"/> -->
-			<!-- <blink> -->
-				<!-- <direction>BACK</direction> -->
-				<!-- <range>600</range> -->
-			<!-- </blink> -->
-		<!-- </conditions> -->
-		<effects>
-			<effect name="TargetCancel">
-				<power initial="100.0"/>
-			</effect>
-			<effect name="DeleteHateOfMe">
-				<power initial="100.0"/>
-			</effect>			
-			<effect name="BlockControl">
-				<power initial="100.0"/>
-			</effect>
-			<block-all-actions>
-				<allowed-skills>35016 35045</allowed-skills>
-			</block-all-actions>
-		</effects>
+            <effect-point initial="-1"/>
+            <hit-time initial="100"/>
+        </attributes>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12"/>
+        <abnormal type="STUN" visual="STUN">
+            <level initial="1"/>
+            <time initial="1"/>
+            <chance initial="100"/>
+        </abnormal>
+        <!-- <conditions> -->
+        <!-- <blink direction="BACK" range="600"/> -->
+        <!-- <condition name="blink" position="BACK" range="600"/> -->
+        <!-- <blink> -->
+        <!-- <direction>BACK</direction> -->
+        <!-- <range>600</range> -->
+        <!-- </blink> -->
+        <!-- </conditions> -->
+        <effects>
+            <effect name="TargetCancel">
+                <power initial="100.0"/>
+            </effect>
+            <effect name="DeleteHateOfMe">
+                <power initial="100.0"/>
+            </effect>
+            <effect name="BlockControl">
+                <power initial="100.0"/>
+            </effect>
+            <block-all-actions>
+                <allowed-skills>35016 35045</allowed-skills>
+            </block-all-actions>
+        </effects>
     </skill>
     <skill id="54041" name="Frintezza's Necklace" max-level="4">
         <!--
@@ -1942,33 +1945,33 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-		<effects>			
+        <effects>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
                 <power>
-					<value level="3">5.0</value>
-					<value level="4">10.0</value>
-                </power>
-            </stat-modify>            
-            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_RATE" stat-add="DEFENCE_MAGIC_CRITICAL_RATE_ADD">
-                <power>
-					<value level="3">2.0</value>
-					<value level="4">5.0</value>
+                    <value level="3">5.0</value>
+                    <value level="4">10.0</value>
                 </power>
             </stat-modify>
-			<defence-trait>               
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_RATE" stat-add="DEFENCE_MAGIC_CRITICAL_RATE_ADD">
+                <power>
+                    <value level="3">2.0</value>
+                    <value level="4">5.0</value>
+                </power>
+            </stat-modify>
+            <defence-trait>
                 <trait type="SLEEP">
                     <power initial="10.0">
-						<value level="2">15.0</value>
-						<value level="3">20.0</value>
-						<value level="4">30.0</value>						
-					</power>
+                        <value level="2">15.0</value>
+                        <value level="3">20.0</value>
+                        <value level="4">30.0</value>
+                    </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5.0">
-						<value level="2">10.0</value>
-						<value level="3">15.0</value>
-						<value level="4">20.0</value>						
-					</power>
+                        <value level="2">10.0</value>
+                        <value level="3">15.0</value>
+                        <value level="4">20.0</value>
+                    </power>
                 </trait>
                 <trait type="POISON">
                     <power initial="25"/>
@@ -1977,53 +1980,53 @@
             <attack-trait>
                 <trait type="SLEEP">
                     <power initial="10.0">
-						<value level="2">15.0</value>
-						<value level="3">20.0</value>
-						<value level="4">30.0</value>						
-					</power>
+                        <value level="2">15.0</value>
+                        <value level="3">20.0</value>
+                        <value level="4">30.0</value>
+                    </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5.0">
-						<value level="2">10.0</value>
-						<value level="3">15.0</value>
-						<value level="4">20.0</value>						
-					</power>
-                </trait>                
-            </attack-trait>        
+                        <value level="2">10.0</value>
+                        <value level="3">15.0</value>
+                        <value level="4">20.0</value>
+                    </power>
+                </trait>
+            </attack-trait>
             <stat-modify stat="REFLECT_DAMAGE_PERCENT_DEFENSE">
                 <power initial="2.0">
-					<value level="2">3.0</value>
-					<value level="3">4.0</value>
-					<value level="4">10.0</value>						
-				</power>
-            </stat-modify>   
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="5.0">
-					<value level="2">10.0</value>
-					<value level="3">15.0</value>
-					<value level="4">20.0</value>
-				</power>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="5.0">
-					<value level="2">10.0</value>
-					<value level="3">15.0</value>
-					<value level="4">20.0</value>
-				</power>
-			</stat-modify>
+                    <value level="2">3.0</value>
+                    <value level="3">4.0</value>
+                    <value level="4">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="5.0">
+                    <value level="2">10.0</value>
+                    <value level="3">15.0</value>
+                    <value level="4">20.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="5.0">
+                    <value level="2">10.0</value>
+                    <value level="3">15.0</value>
+                    <value level="4">20.0</value>
+                </power>
+            </stat-modify>
             <reuse skill-type="PHYSIC">
                 <power initial="-2">
-					<value level="2">-3</value>
-					<value level="3">-5</value>
-					<value level="4">-10</value>						
-				</power>
+                    <value level="2">-3</value>
+                    <value level="3">-5</value>
+                    <value level="4">-10</value>
+                </power>
             </reuse>
-			<reuse skill-type="MAGIC">
+            <reuse skill-type="MAGIC">
                 <power initial="-2">
-					<value level="2">-3</value>
-					<value level="3">-5</value>
-					<value level="4">-10</value>						
-				</power>
+                    <value level="2">-3</value>
+                    <value level="3">-5</value>
+                    <value level="4">-10</value>
+                </power>
             </reuse>
         </effects>
     </skill>
@@ -2045,7 +2048,7 @@
             <reuse skill-type="PHYSIC">
                 <power initial="100.0"/>
             </reuse>
-			<reuse skill-type="MAGIC">
+            <reuse skill-type="MAGIC">
                 <power initial="100.0"/>
             </reuse>
         </effects>
@@ -2088,8 +2091,8 @@
             </vital-stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
-            </stat-modify>            
-			<stat-modify mode="PER" stat="BONUS_SP">
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
@@ -2239,7 +2242,7 @@
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="30.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
@@ -2296,24 +2299,19 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54046" name="Aden Talisman">
-        <!-- Talisman for Aden Warriors -->
-        <icon initial="icon.bm_aden_talisman"/>
-        <attributes property="MAGIC"/>
-        <target/>
-    </skill>
-    <skill id="54047" name="Aden Talisman" max-level="10">
+    <skill id="54047" name="Aden Talisman" max-level="11">
         <!--
-            level 1: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
-            level 2: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
-            level 3: A talisman for Aden warriors. P. Def. +15, M. Def. +20, Atk. Spd. +15, Casting Spd. +15, Max HP +150, Max MP +70
-            level 4: A talisman for Aden warriors. P. Def. +20, M. Def. +30, Atk. Spd. +20, Casting Spd. +20, Max HP +180, Max MP +100, XP/SP Gain +10%
-            level 5: A talisman for Aden warriors. P. Atk. +50, M. Atk. +100, P. Def. +30, M. Def. +40, Atk. Spd. +25, Casting Spd. +25, Max HP +220, Max MP +130, XP/SP Gain +15%
-            level 6: A talisman for Aden warriors. P. Atk. +80, M. Atk. +150, P. Def. +40, M. Def. +60, Atk. Spd. +40, Casting Spd. +45, Max HP +260, Max MP +160, XP/SP Gain +20%
-            level 7: A talisman for Aden warriors. P. Atk. +135, M. Atk. +250, P. Def. +60, M. Def. +80, Atk. Spd. +70, Casting Spd. +75, Max HP +520, Max MP +320, XP/SP Gain +50%
-            level 8: A talisman for Aden warriors. P. Atk. +180, M. Atk. +360, P. Def. +80, M. Def. +120, Atk. Spd. +80, Casting Spd. +95, Max HP +640, Max MP +360, XP/SP Gain +50%
-            level 9: A talisman for Aden warriors. P. Atk. +225, M. Atk. +420, P. Def. +120, M. Def. +160, Atk. Spd. +90, Casting Spd. +110, Max HP +910, Max MP +430, XP/SP Gain +50%
-            level 10: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
+            level 1: A talisman for Aden warriors.
+            level 2: A talisman for Aden warriors. P. Def. +5, M. Def. +5, Atk. Spd. +10, Casting Spd. +10, Max HP +100, Max MP +30
+            level 3: A talisman for Aden warriors. P. Def. +10, M. Def. +10, Atk. Spd. +12, Casting Spd. +12, Max HP +120, Max MP +50
+            level 4: A talisman for Aden warriors. P. Def. +15, M. Def. +20, Atk. Spd. +15, Casting Spd. +15, Max HP +150, Max MP +70
+            level 5: A talisman for Aden warriors. P. Def. +20, M. Def. +30, Atk. Spd. +20, Casting Spd. +20, Max HP +180, Max MP +100, XP/SP Gain +10%
+            level 6: A talisman for Aden warriors. P. Atk. +50, M. Atk. +100, P. Def. +30, M. Def. +40, Atk. Spd. +25, Casting Spd. +25, Max HP +220, Max MP +130, XP/SP Gain +15%
+            level 7: A talisman for Aden warriors. P. Atk. +80, M. Atk. +150, P. Def. +40, M. Def. +60, Atk. Spd. +40, Casting Spd. +45, Max HP +260, Max MP +160, XP/SP Gain +20%
+            level 8: A talisman for Aden warriors. P. Atk. +135, M. Atk. +250, P. Def. +60, M. Def. +80, Atk. Spd. +70, Casting Spd. +75, Max HP +520, Max MP +320, XP/SP Gain +50%
+            level 9: A talisman for Aden warriors. P. Atk. +180, M. Atk. +360, P. Def. +80, M. Def. +120, Atk. Spd. +80, Casting Spd. +95, Max HP +640, Max MP +360, XP/SP Gain +50%
+            level 10: A talisman for Aden warriors. P. Atk. +225, M. Atk. +420, P. Def. +120, M. Def. +160, Atk. Spd. +90, Casting Spd. +110, Max HP +910, Max MP +430, XP/SP Gain +50%
+            level 11: A talisman for Aden warriors. P. Atk. +270, M. Atk. +490, P. Def. +160, M. Def. +200, Atk. Spd. +100, Casting Spd. +125, Max HP +1120, Max MP +530, XP/SP Gain +50%
          -->
         <icon initial="icon.bm_aden_talisman"/>
         <attributes property="MAGIC"/>
@@ -2321,122 +2319,128 @@
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power>
-                    <value level="5">50.0</value>
-                    <value level="6">80.0</value>
-                    <value level="7">135.0</value>
-                    <value level="8">180.0</value>
-                    <value level="9">225.0</value>
-                    <value level="10">270.0</value>
+                    <value level="6">50.0</value>
+                    <value level="7">80.0</value>
+                    <value level="8">135.0</value>
+                    <value level="9">180.0</value>
+                    <value level="10">225.0</value>
+                    <value level="11">270.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK">
                 <power>
-                    <value level="5">100.0</value>
-                    <value level="6">150.0</value>
-                    <value level="7">250.0</value>
-                    <value level="8">360.0</value>
-                    <value level="9">420.0</value>
-                    <value level="10">490.0</value>
+                    <value level="6">100.0</value>
+                    <value level="7">150.0</value>
+                    <value level="8">250.0</value>
+                    <value level="9">360.0</value>
+                    <value level="10">420.0</value>
+                    <value level="11">490.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="PHYSICAL_DEFENCE">
-                <power initial="5.0">
-                    <value level="2">10.0</value>
-                    <value level="3">15.0</value>
-                    <value level="4">20.0</value>
-                    <value level="5">50.0</value>
-                    <value level="6">80.0</value>
-                    <value level="7">135.0</value>
-                    <value level="8">180.0</value>
-                    <value level="9">225.0</value>
-                    <value level="10">270.0</value>
+                <power>
+                    <value level="2">5.0</value>
+                    <value level="3">10.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
+                    <value level="6">50.0</value>
+                    <value level="7">80.0</value>
+                    <value level="8">135.0</value>
+                    <value level="9">180.0</value>
+                    <value level="10">225.0</value>
+                    <value level="11">270.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGICAL_DEFENCE">
-                <power initial="5.0">
-                    <value level="2">10.0</value>
-                    <value level="3">20.0</value>
-                    <value level="4">30.0</value>
-                    <value level="5">100.0</value>
-                    <value level="6">150.0</value>
-                    <value level="7">250.0</value>
-                    <value level="8">360.0</value>
-                    <value level="9">420.0</value>
-                    <value level="10">490.0</value>
+                <power>
+                    <value level="2">5.0</value>
+                    <value level="3">10.0</value>
+                    <value level="4">20.0</value>
+                    <value level="5">30.0</value>
+                    <value level="6">100.0</value>
+                    <value level="7">150.0</value>
+                    <value level="8">250.0</value>
+                    <value level="9">360.0</value>
+                    <value level="10">420.0</value>
+                    <value level="11">490.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="10.0">
-                    <value level="2">12.0</value>
-                    <value level="3">15.0</value>
-                    <value level="4">20.0</value>
-                    <value level="5">25.0</value>
-                    <value level="6">40.0</value>
-                    <value level="7">70.0</value>
-                    <value level="8">80.0</value>
-                    <value level="9">90.0</value>
-                    <value level="10">100.0</value>
+                <power>
+                    <value level="2">10.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
+                    <value level="6">25.0</value>
+                    <value level="7">40.0</value>
+                    <value level="8">70.0</value>
+                    <value level="9">80.0</value>
+                    <value level="10">90.0</value>
+                    <value level="11">100.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK_SPEED">
-                <power initial="10.0">
-                    <value level="2">12.0</value>
-                    <value level="3">15.0</value>
-                    <value level="4">20.0</value>
-                    <value level="5">25.0</value>
-                    <value level="6">45.0</value>
-                    <value level="7">75.0</value>
-                    <value level="8">95.0</value>
-                    <value level="9">110.0</value>
-                    <value level="10">125.0</value>
+                <power>
+                    <value level="2">10.0</value>
+                    <value level="3">12.0</value>
+                    <value level="4">15.0</value>
+                    <value level="5">20.0</value>
+                    <value level="6">25.0</value>
+                    <value level="7">45.0</value>
+                    <value level="8">75.0</value>
+                    <value level="9">95.0</value>
+                    <value level="10">110.0</value>
+                    <value level="11">125.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAX_HP">
-                <power initial="100.0">
-                    <value level="2">120.0</value>
-                    <value level="3">150.0</value>
-                    <value level="4">180.0</value>
-                    <value level="5">220.0</value>
-                    <value level="6">260.0</value>
-                    <value level="7">520.0</value>
-                    <value level="8">640.0</value>
-                    <value level="9">910.0</value>
-                    <value level="10">1120.0</value>
+                <power>
+                    <value level="2">100.0</value>
+                    <value level="3">120.0</value>
+                    <value level="4">150.0</value>
+                    <value level="5">180.0</value>
+                    <value level="6">220.0</value>
+                    <value level="7">260.0</value>
+                    <value level="8">520.0</value>
+                    <value level="9">640.0</value>
+                    <value level="10">910.0</value>
+                    <value level="11">1120.0</value>
                 </power>
             </stat-modify>
             <stat-modify stat="MAX_MP">
-                <power initial="30.0">
-                    <value level="2">50.0</value>
-                    <value level="3">70.0</value>
-                    <value level="4">100.0</value>
-                    <value level="5">130.0</value>
-                    <value level="6">160.0</value>
-                    <value level="7">320.0</value>
-                    <value level="8">360.0</value>
-                    <value level="9">430.0</value>
-                    <value level="10">530.0</value>
+                <power>
+                    <value level="2">30.0</value>
+                    <value level="3">50.0</value>
+                    <value level="4">70.0</value>
+                    <value level="5">100.0</value>
+                    <value level="6">130.0</value>
+                    <value level="7">160.0</value>
+                    <value level="8">320.0</value>
+                    <value level="9">360.0</value>
+                    <value level="10">430.0</value>
+                    <value level="11">530.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power>
-                    <value level="4">10.0</value>
-                    <value level="5">15.0</value>
-                    <value level="6">20.0</value>
-                    <value level="7">50.0</value>
+                    <value level="5">10.0</value>
+                    <value level="6">15.0</value>
+                    <value level="7">20.0</value>
                     <value level="8">50.0</value>
                     <value level="9">50.0</value>
                     <value level="10">50.0</value>
+                    <value level="11">50.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
+            <stat-modify mode="PER" stat="BONUS_SP">
                 <power>
-                    <value level="4">10</value>
-                    <value level="5">15</value>
-                    <value level="6">20</value>
-                    <value level="7">50</value>
+                    <value level="5">10</value>
+                    <value level="6">15</value>
+                    <value level="7">20</value>
                     <value level="8">50</value>
                     <value level="9">50</value>
                     <value level="10">50</value>
+                    <value level="11">50</value>
                 </power>
             </stat-modify>
         </effects>
@@ -2662,8 +2666,8 @@
         </attributes>
         <target/>
         <!-- <abnormal type="BATTLE_SCROLL"> -->
-            <!-- <level initial="1"/> -->
-            <!-- <time initial="-1"/> -->
+        <!-- <level initial="1"/> -->
+        <!-- <time initial="-1"/> -->
         <!-- </abnormal> -->
         <effects>
             <call-skill scope="SELF" skill="54100">
