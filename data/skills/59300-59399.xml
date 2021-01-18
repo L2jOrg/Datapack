@@ -1235,11 +1235,27 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
+            <reuse initial="100"/>
+            <cool-time initial="50"/>
+            <hit-time initial="50"/>
         </attributes>
         <target/>
+        <effects>
+            <random-restoration>
+                <item id="70487" chance="8.33" count="1"/> <!-- Topaz Chest -->
+                <item id="70488" chance="8.33" count="1"/> <!-- Garnet Chest -->
+                <item id="70489" chance="8.33" count="1"/> <!-- Jade Chest -->
+                <item id="70490" chance="8.33" count="1"/> <!-- Ruby Chest -->
+                <item id="70491" chance="8.33" count="1"/> <!-- Sapphire Chest -->
+                <item id="70492" chance="8.33" count="1"/> <!-- Diamond Chest -->
+                <item id="70493" chance="8.33" count="1"/> <!-- Pearl Chest -->
+                <item id="70494" chance="8.33" count="1"/> <!-- Vital Stone Chest -->
+                <item id="70821" chance="8.33" count="1"/> <!-- Red Cat's Eye Chest -->
+                <item id="70825" chance="8.33" count="1"/> <!-- Blue Cat's Eye Chest -->
+                <item id="71435" chance="8.33" count="1"/> <!-- Emerald Chest -->
+                <item id="70525" chance="8.37" count="1"/> <!-- Aquamarine Chest -->
+            </random-restoration>
+        </effects>
     </skill>
     <skill id="59327" name="Shining Jewel Box" action="A1">
         <!-- none -->
@@ -1279,11 +1295,11 @@
         <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
         <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
-		<effects>
+        <effects>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="80"/>
             </vital-stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59330" name="Special Season" action="A1">
         <!-- Max HP +80 -->
@@ -1291,11 +1307,11 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="80"/>
             </vital-stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59331" name="Striking Elegance" action="A1">
         <!-- P. Atk./M. Atk. +10 -->
@@ -1303,14 +1319,14 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power initial="10"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59332" name="Wow! It's Summer!" action="A1">
         <!-- Increases Max HP/CP/MP +200 -->
@@ -1318,17 +1334,17 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="200"/>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
+            <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="200"/>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="200"/>
             </vital-stat-modify>
-			</effects>
+        </effects>
     </skill>
     <skill id="59333" name="Uncontrollable Power" action="A1">
         <!-- P. Atk. +50 -->
@@ -1336,11 +1352,11 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="50"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59334" name="Overflowing Magic" action="A1">
         <!-- M. Atk. +50 -->
@@ -1348,11 +1364,11 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power initial="50"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59335" name="Rarity Collector" action="A1">
         <!-- P. Atk./M. Atk. +100 -->
@@ -1360,14 +1376,14 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="100"/>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power initial="100"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59336" name="Highly Durable!" action="A1">
         <!-- Activates the Collector Power that creates a barrier which absorbs up to 1500 damage for 10 seconds -->
@@ -1385,8 +1401,8 @@
     </skill>
     <skill id="59337" name="Very Strong!" action="A1">
         <!-- Activates the Collector Power that ignores CP in PvP and inflicts a fixed damage of 1350 -->
-        <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>        
-		<attributes property="MAGIC" magic-critical-rate="5.0">
+        <icon initial="BranchIcon.Icon.s_g_bm_collection_passive"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0">
             <cast-range initial="40"/>
             <reuse initial="6000"/>
         </attributes>
@@ -1411,23 +1427,23 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="200"/>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
+            <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="200"/>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="200"/>
             </vital-stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="200"/>
             </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power initial="200"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="59340" name="No Pain, No Gain" action="A1">
         <!-- Activates the Collector Power that fully recovers HP/CP/MP and makes you invincible for 10 seconds -->
@@ -1492,10 +1508,10 @@
             <effect name="HealPercent">
                 <power initial="100"/>
             </effect>
-			<effect name="ManaHealPercent">
+            <effect name="ManaHealPercent">
                 <power initial="100.0"/>
             </effect>
-			<effect name="CpHealPercent">
+            <effect name="CpHealPercent">
                 <power initial="100"/>
             </effect>
         </effects>
