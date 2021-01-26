@@ -193,10 +193,10 @@
 		<attributes weight="5" price="4000" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="POTION">
+	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="SCROLL">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
