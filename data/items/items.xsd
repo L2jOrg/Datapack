@@ -19,6 +19,7 @@
             <xs:extension base="AbstractItem">
                 <xs:sequence>
                     <xs:element name="attributes" type="WeaponAttributes"/>
+                    <xs:element name="random_craft" minOccurs="0" type="RandomCraft"/>
                     <xs:element name="crystal" type="ItemCrystal"/>
                     <xs:element name="damage" type="WeaponDamage" minOccurs="0"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
@@ -28,6 +29,7 @@
                 <xs:attribute name="body-part" type="WeaponBodyPart"/>
                 <xs:attribute name="magic" type="xs:boolean" default="false"/>
                 <xs:attribute name="mana-consume" type="xs:int" default="0"/>
+                <xs:attribute name="enchant_bless" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -55,12 +57,14 @@
             <xs:extension base="AbstractItem">
                 <xs:sequence>
                     <xs:element name="attributes" type="ArmorAttributes"/>
+                    <xs:element name="random_craft" minOccurs="0" type="RandomCraft"/>
                     <xs:element name="crystal" type="ItemCrystal"/>
                     <xs:element name="stats" minOccurs="0" type="ItemStats"/>
                     <xs:element name="skills" minOccurs="0" type="ItemSkillsType"/>
                 </xs:sequence>
                 <xs:attribute name="type" type="ArmorType" use="required"/>
                 <xs:attribute name="body-part" type="ArmorBodyPart" use="required"/>
+                <xs:attribute name="enchant_bless" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -80,6 +84,7 @@
             <xs:extension base="AbstractItem">
                 <xs:sequence>
                     <xs:element name="attributes" type="ItemAttributes"/>
+                    <xs:element name="random_craft" minOccurs="0" type="RandomCraft"/>
                     <xs:element name="crystal" type="ItemCrystal" minOccurs="0"/>
                     <xs:choice minOccurs="0">
                         <xs:element name="action" type="ItemAction"/>
@@ -89,6 +94,7 @@
                     </xs:choice>
                 </xs:sequence>
                 <xs:attribute name="type" type="EtcItemType" use="required"/>
+                <xs:attribute name="enchant_bless" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -151,6 +157,14 @@
         <xs:attribute name="for-npc" type="xs:boolean" default="false"/>
     </xs:complexType>
 
+    <xs:complexType name="RandomCraft">
+        <xs:attribute name="craft" type="xs:long" default="0"/>
+        <xs:attribute name="enchant" type="xs:byte" default="0"/>
+        <xs:attribute name="exp" type="xs:long" default="0"/>
+        <xs:attribute name="commission" type="xs:long" default="0"/>
+        <xs:attribute name="locked" type="xs:boolean" default="false"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemCrystal">
         <xs:attribute name="type" type="CrystalType" default="NONE"/>
         <xs:attribute name="count" type="xs:int" default="0"/>
@@ -204,6 +218,7 @@
                     <xs:enumeration value="SpiritShot"/>
                     <xs:enumeration value="SummonItems"/>
                     <xs:enumeration value="BlessedScroll"/>
+                    <xs:enumeration value="TransformationBook"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>

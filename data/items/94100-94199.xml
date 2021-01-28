@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="94142" name="Rice Cake Soup" type="NONE">
-	<!-- For 20 min., P. Atk./M. Atk. +150, P. Def./M. Def. +100, Max HP/MP +150, All Critical Rate +10%. -->
+	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Atk. +150\nM. Atk. +150\nP. Def. +100\nM. Def. +100\nMax HP +150\nMax MP +150\nAll Critical Rate +10%\n\n- Duration: 20 minutes -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes auto-use="SUPPLY"/>
 	</item>
@@ -66,9 +66,84 @@
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
-	<item id="94184" name="Blessed scroll" type="BLESSED_SCROLL">
-		<restriction olympiad-restricted="true" stackable="true"/>
-		<attributes/>
+
+	<item id="94184" name="Blessing Scroll" type="BLESSED_SCROLL">
+	<!-- Bestows a blessing into a weapon. -->
+		<restriction olympiad-restricted="true" stackable="true" sellable="false"/>
+		<attributes price="7000000"/>
 		<action handler="BlessedScroll"/>
 	</item>
+
+	<item id="94185" name="Life Stone Lv. 1 - Weapon" type="NONE">
+	<!-- Can augment weapon when used\n\nAugmentation Fee: Adena -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="2000000"/>
+	</item>
+
+	<item id="94186" name="Life Stone Lv. 2 - Weapon" type="NONE">
+	<!-- Can augment weapon when used\n\nAugmentation Fee: Adena -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="6000000"/>
+	</item>
+
+	<item id="94187" name="Life Stone Lv. 1 - Armor" type="NONE">
+	<!-- Can augment armor when used\n\nAugmentation Fee: Adena -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="900000"/>
+	</item>
+
+	<item id="94188" name="Life Stone Lv. 2 - Armor" type="NONE">
+	<!-- Can augment armor when used\n\nAugmentation Fee: Adena -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="1800000"/>
+	</item>
+
+	<item id="94189" name="Life Stone Lv. 1 - Hair Accessory" type="NONE">
+	<!-- Not in use -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="2000000"/>
+	</item>
+
+	<item id="94190" name="Life Stone Lv. 2 - Hair Accessory" type="NONE">
+	<!-- Not in use -->
+		<restriction stackable="true" sellable="false"/>
+		<attributes weight="2" price="6000000"/>
+	</item>
+
+	<item id="94191" name="New Year’s fortune - Small Luck" type="NONE">
+	<!-- \n\nYear of the Rat New Year’s fortune - Small Luck\nDouble-click to obtain XP/SP Gain +50% for 20 minutes.\nCollect 5 New Year’s fortune - Small Luck and exchange for 1 New Year’s fortune - Medium Luck through Fortune Teller Mouse. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="94192" name="New Year’s fortune - Medium Luck" type="NONE">
+	<!-- \n\nYear of the Rat New Year’s fortune - Medium Luck\nDouble-click to obtain STR, DEX, INT, CON, MEN, WIT +1, HP +500 for 20 minutes.\nCollect 5 New Year’s fortune - Medium Luck and exchange for 1 New Year’s fortune - Great Luck through Fortune Teller Mouse. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="94193" name="New Year’s fortune - Great Luck" type="NONE">
+	<!-- \n\nYear of the Rat New Year’s fortune - Great Luck\nDouble-click to obtain STR, DEX, INT, CON, MEN, WIT +3, MP +300, P. Def., M. Def. +200, Critical Damage -5%, P. Atk., M. Atk. +200 for 20 minutes. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes auto-use="SUPPLY"/>
+	</item>
+
+	<item id="94194" name="Small Little Bell" type="MATERIAL">
+	<!-- \n\nLittle bell obtained from catching brown mice. Exchange for rewards through Fortune Teller Mouse. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="94195" name="Big Little Bell" type="MATERIAL">
+	<!-- \n\nBig little bell obtained from catching pink mice. Exchange for rewards through Fortune Teller Mouse. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="94196" name="Lucky Pouch of the Year of the Rat" type="NONE">
+	<!-- \n\nFortune Teller Mouse’s treasure pouch. Double-click to obtain one of the following: S-grade weapon, S-grade armor, Advanced Stable Scroll: Enchant Weapon (S-grade), Advanced Stable Scroll: Enchant Armor (S-grade), Queen Ant's Ring Lv. 1, Baium's Ring Lv. 1, or a rare item. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
 </list>
