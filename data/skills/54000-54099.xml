@@ -1236,7 +1236,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54022" name="Shunaiman's Power" max-level="2">
+    <skill id="54022" name="Shunaiman's Power" max-level="2" action="A1">
         <!--
             level 1: By Shunaiman's Power Stun/MEN Attack Rate +5%% and Damage Reflective Res +10%%.
             level 2: By Shunaiman's Power Stun/MEN Attack Rate +15%% and Damage Reflective Res +30%%.
@@ -1471,7 +1471,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP">
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1480,7 +1480,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1511,7 +1511,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP">
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1520,7 +1520,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1551,7 +1551,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP">
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1560,7 +1560,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1591,7 +1591,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-            <vital-stat-modify stat="MAX_HP">
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="50.0">
                     <value level="3">100.0</value>
                     <value level="5">150.0</value>
@@ -1600,7 +1600,7 @@
                     <value level="11">500.0</value>
                 </power>
             </vital-stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
                 <power>
                     <value level="2">1.0</value>
                     <value level="4">2.0</value>
@@ -1893,18 +1893,18 @@
 		<icon initial="icon.sayha2017_blink"/>
 		<attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
 			<magic-level initial="1"/>				
+			<cast-range initial="40"/>
 			<reuse initial="120000">
                 <value level="2">60000</value>
             </reuse>
 			<effect-point initial="-1"/>
+			<effect-range initial="400"/>
 			<hit-time initial="100"/>
 		</attributes>		
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12"/>
 		<abnormal type="STUN" visual="STUN">
-			<level initial="1"/>			
+			<level initial="1"/>
 			<time initial="1"/>
-			<chance initial="100"/>
-		</abnormal>
 		<!-- <conditions> -->
 			<!-- <blink direction="BACK" range="600"/> -->
 			<!-- <condition name="blink" position="BACK" range="600"/> -->
@@ -1913,6 +1913,10 @@
 				<!-- <range>600</range> -->
 			<!-- </blink> -->
 		<!-- </conditions> -->
+			<chance initial="80">
+				<value level="2">100</value>
+			</chance>
+		</abnormal>		
 		<effects>
 			<effect name="TargetCancel">
 				<power initial="100.0"/>
@@ -2045,9 +2049,9 @@
             <reuse skill-type="PHYSIC">
                 <power initial="100.0"/>
             </reuse>
-			<reuse skill-type="MAGIC">
+            <reuse skill-type="MAGIC">
                 <power initial="100.0"/>
-            </reuse>
+            </reuse>		
         </effects>
     </skill>
     <skill id="54043" name="Rapid Wind" action="A1">
@@ -2658,13 +2662,13 @@
         <icon initial="icon.etc_ssq_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
-            <reuse initial="60000"/>
+            <effect-point initial="1"/>			
         </attributes>
         <target/>
-        <!-- <abnormal type="BATTLE_SCROLL"> -->
-            <!-- <level initial="1"/> -->
-            <!-- <time initial="-1"/> -->
-        <!-- </abnormal> -->
+        <abnormal>
+           <level initial="1"/>
+           <time initial="1200"/>
+        </abnormal>
         <effects>
             <call-skill scope="SELF" skill="54100">
                 <power initial="1.0"/>
@@ -2724,7 +2728,6 @@
         <icon initial="icon.ev_charge_scroll"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
-            <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
