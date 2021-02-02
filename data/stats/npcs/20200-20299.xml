@@ -781,689 +781,538 @@
             <height normal="27" grown="32"/>
         </collision>
     </npc>
-    <npc id="20213" level="40" type="Monster" name="Porta">
-        <parameters>
-            <param name="MoveAroundSocial" value="116"/>
-            <param name="MoveAroundSocial1" value="116"/>
-            <param name="MoveAroundSocial2" value="116"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <!-- not used <skill name="PhysicalSpecial" id="4073" level="4"/> -->
-        </parameters>
-        <race>CONSTRUCT</race>
-        <sex>MALE</sex>
-        <acquire exp="16152" sp="484"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1019.59695680077" hpRegen="4.5" mp="478.8" mpRegen="1.8"/>
-            <attack physical="160.3279727" magical="120.43155" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="172.205385" magical="114.55675"/>
+    <npc id="20213" level="65" type="Monster" name="Porta" element="FIRE">
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="7170" sp="212" attribute_exp="22" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="5620.23121387283" hpRegen="10.5" mp="1285.80858085809" mpRegen="3.6" />
             <speed>
-                <walk ground="23"/>
-                <run ground="23"/>
+                <walk ground="23" />
+                <run ground="23" />
             </speed>
-            <hitTime>410</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="367.275422872161" magical="80.8169973141629" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="163.636363636364" magical="87.008700870087" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <!-- <skill id="4073" level="4"/> Stun -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="10"/> <!-- Slightly Weak M. Atk. -->
-            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4274" level="1"/> <!-- Blunt Weapon Vulnerability -->
+            <skill id="4071" level="2" /> <!-- Bow Resistance -->
+            <skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="20"/>
-            <height normal="31"/>
-        </collision>
-    </npc>
-    <npc id="20214" level="41" type="Monster" name="Excuro">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="Skill03_Probablity" value="2000"/>
-            <param name="Skill03_Type" value="2"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-        </parameters>
-        <race>CONSTRUCT</race>
-        <sex>MALE</sex>
-        <acquire exp="8316" sp="249"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1063.54199060681" hpRegen="5.5" mp="504.8" mpRegen="2.1"/>
-            <attack physical="170.1079818" magical="127.77787" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="176.759022" magical="117.58598"/>
-            <speed>
-                <walk ground="90"/>
-                <run ground="174"/>
-            </speed>
-            <hitTime>390</hitTime>
-            <abnormalResist physical="10" magical="10"/>
-        </stats>
-        <status undying="false" canBeSown="true"/>
-        <skillList>
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="10"/> <!-- Slightly Weak M. Atk. -->
-            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4093" level="1"/> <!-- Evasion -->
-        </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="300" isAggressive="false">         
-        </ai>
-        <collision>
-            <radius normal="11"/>
-            <height normal="20"/>
+            <radius normal="20" />
+            <height normal="31" />
         </collision>
         <dropLists>
             <drop>
-                <item id="2377" min="1" max="1" chance="0.075"/> <!-- Mithril Scale Gaiters -->
-                <item id="2378" min="1" max="1" chance="0.075"/> <!-- Brigandine Gaiters -->
-                <item id="352" min="1" max="1" chance="0.03"/> <!-- Brigandine -->
-                <item id="437" min="1" max="1" chance="0.03"/> <!-- Mithril Tunic -->
-                <item id="57" min="740" max="1726" chance="70"/> <!-- Adena -->
-                <item id="1865" min="1" max="1" chance="17.85"/> <!-- Varnish -->
-                <item id="1866" min="1" max="1" chance="12.01"/> <!-- Suede -->
-                <item id="1878" min="1" max="1" chance="7.36"/> <!-- Durable Braid -->
-                <item id="1864" min="3" max="9" chance="6.15"/> <!-- Stem -->
-                <item id="2918" min="1" max="1" chance="2.781"/> <!-- Mithril Scale Gaiter Material -->
-                <item id="2919" min="1" max="1" chance="2.758"/> <!-- Brigandine Gaiter Material -->
-                <item id="1944" min="1" max="1" chance="2.361"/> <!-- Mithril Tunic Fabric -->
-                <item id="1941" min="1" max="1" chance="1.906"/> <!-- Brigandine Temper -->
-                <item id="2160" min="1" max="1" chance="1.181"/> <!-- Recipe: Moonstone Earring -->
-                <item id="2291" min="1" max="1" chance="0.3"/> <!-- Recipe: Scallop Jamadhr -->
-                <item id="955" min="1" max="1" chance="0.075"/> <!-- Scroll: Enchant Weapon (D-grade) -->
+                <item id="57" min="281" max="657" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="6.747" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="6.734" /> <!-- Old Resources -->
+                <item id="92909" min="1" max="1" chance="1.348" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.337" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92690" min="1" max="1" chance="0.003" /> <!-- Demon's Staff Head -->
+                <item id="92689" min="1" max="1" chance="0.003" /> <!-- Ghoul's Staff Head -->
+                <item id="92688" min="1" max="1" chance="0.003" /> <!-- Deadman's Staff Head -->
+                <item id="92687" min="1" max="1" chance="0.003" /> <!-- Samurai Long Sword Blade -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
             </drop>
             <spoil>
-                <item id="2997" min="1" max="1" chance="16"/> <!-- Recipe: Karmian Gloves -->
-                <item id="2147" min="1" max="1" chance="15.8"/> <!-- Recipe: Blacksmith' frame -->
-                <item id="5473" min="1" max="1" chance="14.51"/> <!-- Recipe: Reinforced Metal Plate -->
-                <item id="1877" min="1" max="1" chance="8.387"/> <!-- Adamantite Nugget -->
-                <item id="2292" min="1" max="1" chance="1.122"/> <!-- Recipe: Light Crossbow -->
+                <item id="92996" min="1" max="1" chance="86.31" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="17.35" /> <!-- Unknown Resources -->
+                <item id="92999" min="1" max="1" chance="1.648" /> <!-- High-grade Resources -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20215" level="42" type="Monster" name="Mordeo">
-        <parameters>
-            <param name="MoveAroundSocial" value="90"/>
-            <param name="MoveAroundSocial1" value="90"/>
-            <param name="MoveAroundSocial2" value="90"/>
-            <param name="IsAggressive" value="1"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4077" level="4"/>
-        </parameters>
+    <npc id="20214" level="66" type="Monster" name="Excuro" element="FIRE">
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="7306" sp="218" attribute_exp="23" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="5752.02312138728" hpRegen="10.5" mp="1319.47194719472" mpRegen="3.6" />
+            <speed>
+                <walk ground="90" />
+                <run ground="174" />
+            </speed>
+            <attack physical="398.38350988785" magical="88.2228587418453" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="162.58064516129" magical="92.835089960609" />
+        </stats>
+        <status attackable="false" />
+        <skillList>
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+        </skillList>
+        <collision>
+            <radius normal="11" />
+            <height normal="20" />
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="2380" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Gaiters -->
+                <item id="2381" min="1" max="1" chance="0.0009" /> <!-- Doom Plate Armor -->
+                <item id="2392" min="1" max="1" chance="0.0009" /> <!-- Doom Leather Armor -->
+                <item id="57" min="289" max="673" chance="70" /> <!-- Adena -->
+                <item id="92996" min="1" max="1" chance="6.856" /> <!-- Old Resources -->
+                <item id="92908" min="1" max="1" chance="6.826" /> <!-- Material: Lump of Wood -->
+                <item id="92997" min="1" max="1" chance="1.354" /> <!-- Unknown Resources -->
+                <item id="92909" min="1" max="1" chance="1.309" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92769" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiter Material -->
+                <item id="92772" min="1" max="1" chance="0.0075" /> <!-- Doom Leather Armor Design -->
+                <item id="92770" min="1" max="1" chance="0.003" /> <!-- Doom Plate Armor Temper -->
+                <item id="92988" min="1" max="1" chance="0.0009" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+            </drop>
+            <spoil>
+                <item id="92996" min="1" max="1" chance="81.47" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="17.45" /> <!-- Unknown Resources -->
+                <item id="92999" min="1" max="1" chance="1.636" /> <!-- High-grade Resources -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="20215" level="67" type="Monster" name="Mordeo" element="FIRE">
         <race>BEAST</race>
-        <sex>MALE</sex>
-        <acquire exp="17482" sp="524"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="431.20670666667" hpRegen="5.5" mp="578.79" mpRegen="2.1"/>
-            <attack physical="218.180501" magical="135.44454" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="149.8955727" magical="120.65578"/>
+        <sex>FEMALE</sex>
+        <acquire exp="7656" sp="225" attribute_exp="25" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="5881.50289017341" hpRegen="10.5" mp="1352.47524752475" mpRegen="3.6" />
             <speed>
-                <walk ground="30"/>
-                <run ground="174"/>
+                <walk ground="30" />
+                <run ground="174" />
             </speed>
-            <hitTime>240</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="407.709414381023" magical="89.8639684292209" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="164.102564102564" magical="93.5093509350935" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <skill id="4077" level="4"/> <!-- NPC Aura Burn -->
-            <skill id="4416" level="3"/> <!-- Beasts -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="10"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="3" /> <!-- Beasts -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" isAggressive="false"/>
         <collision>
-            <radius normal="14"/>
-            <height normal="14.5"/>
-        </collision>
-    </npc>
-    <npc id="20216" level="43" type="Monster" name="Ricenseo">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="AttackRange" value="2"/>
-            <param name="Skill01_MainAttack" value="1"/>
-            <param name="Skill03_Type" value="2"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill03_ID" id="4047" level="4"/>
-        </parameters>
-        <race>CONSTRUCT</race>
-        <sex>MALE</sex>
-        <acquire exp="9119" sp="273"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="449.10523333333" hpRegen="5.5" mp="607.11" mpRegen="2.1"/>
-            <attack physical="210.04832" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="169.13417" magical="123.76505"/>
-            <speed>
-                <walk ground="90"/>
-                <run ground="174"/>
-            </speed>
-            <hitTime>300</hitTime>
-            <abnormalResist physical="10" magical="10"/>
-        </stats>
-        <status undying="false" canBeSown="true"/>
-        <skillList>
-            <skill id="4047" level="4"/> <!-- Hold -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4281" level="1"/> <!-- Wind Attack Vulnerability -->
-            <skill id="4276" level="1"/> <!-- Bow Vulnerability -->
-        </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="300" isAggressive="false"/>
-        <collision>
-            <radius normal="21"/>
-            <height normal="43"/>
+            <radius normal="14" />
+            <height normal="14.5" />
         </collision>
         <dropLists>
             <drop>
-                <item id="61" min="1" max="1" chance="0.075"/> <!-- Mithril Gloves -->
-                <item id="607" min="1" max="1" chance="0.075"/> <!-- Ogre Power Gauntlets -->
-                <item id="1125" min="1" max="1" chance="0.075"/> <!-- Assault Boots -->
-                <item id="2427" min="1" max="1" chance="0.075"/> <!-- Salamander Skin Boots -->
-                <item id="2428" min="1" max="1" chance="0.075"/> <!-- Plate Boots -->
-                <item id="2451" min="1" max="1" chance="0.075"/> <!-- Sage's Worn Gloves -->
-                <item id="57" min="685" max="1602" chance="70"/> <!-- Adena -->
-                <item id="1865" min="1" max="1" chance="19.55"/> <!-- Varnish -->
-                <item id="1866" min="1" max="1" chance="13.8"/> <!-- Suede -->
-                <item id="1878" min="1" max="1" chance="8.021"/> <!-- Durable Braid -->
-                <item id="1864" min="3" max="9" chance="6.716"/> <!-- Stem -->
-                <item id="2932" min="1" max="1" chance="3.314"/> <!-- Plate Boot Design -->
-                <item id="2933" min="1" max="1" chance="3.287"/> <!-- Sage's Worn Glove Lining -->
-                <item id="1949" min="1" max="1" chance="3.239"/> <!-- Mithril Glove Design -->
-                <item id="1963" min="1" max="1" chance="3.22"/> <!-- Ogre Power Gauntlet Fragment -->
-                <item id="1957" min="1" max="1" chance="3.191"/> <!-- Assault Boot Fragment -->
-                <item id="2931" min="1" max="1" chance="3.187"/> <!-- Salamander Skin Boot Lining -->
-                <item id="2205" min="1" max="1" chance="0.75"/> <!-- Recipe: Chain Gaiters -->
-                <item id="2211" min="1" max="1" chance="0.3"/> <!-- Recipe: Plated Leather Armor -->
+                <item id="57" min="304" max="711" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="6.773" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="6.707" /> <!-- Old Resources -->
+                <item id="3031" min="1" max="1" chance="1.717" /> <!-- Spirit Ore -->
+                <item id="92909" min="1" max="1" chance="1.394" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.319" /> <!-- Unknown Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
             </drop>
             <spoil>
-                <item id="2933" min="1" max="1" chance="53.78"/> <!-- Sage's Worn Glove Lining -->
-                <item id="2297" min="1" max="1" chance="2.165"/> <!-- Recipe: Flamberge -->
+                <item id="92996" min="1" max="1" chance="90.35" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="17.48" /> <!-- Unknown Resources -->
+                <item id="92999" min="1" max="1" chance="1.746" /> <!-- High-grade Resources -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20217" level="44" type="Monster" name="Krator">
-        <parameters>
-            <param name="MoveAroundSocial" value="116"/>
-            <param name="MoveAroundSocial1" value="116"/>
-            <param name="MoveAroundSocial2" value="116"/>
-            <param name="AttackRange" value="2"/>
-            <param name="Skill02_Check_Dist" value="1"/>
-            <param name="Skill02_Dist_Min" value="700"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill02_ID" id="4247" level="4"/>
-        </parameters>
-        <race>CONSTRUCT</race>
-        <sex>MALE</sex>
-        <acquire exp="12958" sp="388"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1201.08570061422" hpRegen="5.5" mp="584.0" mpRegen="2.1"/>
-            <attack physical="202.0282909" magical="151.75505" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="190.779072" magical="126.91259"/>
+    <npc id="20216" level="68" type="Monster" name="Ricenseo" element="FIRE">
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="7580" sp="232" attribute_exp="26" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6011.56069364162" hpRegen="10.5" mp="1386.79867986799" mpRegen="3.6" />
             <speed>
-                <walk ground="23"/>
-                <run ground="23"/>
+                <walk ground="90" />
+                <run ground="174" />
             </speed>
-            <hitTime>410</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="375.838672666235" magical="93.1998192042514" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="179.617834394904" magical="88.7095078934645" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <skill id="4247" level="4"/> <!-- NPC Windstrike - Slow -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
-            <skill id="4411" level="10"/> <!-- Slightly Weak M. Atk. -->
-            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4284" level="5"/> <!-- Bleed Resistance -->
-            <skill id="4274" level="1"/> <!-- Blunt Weapon Vulnerability -->
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="20"/>
-            <height normal="31"/>
+            <radius normal="21" />
+            <height normal="43" />
         </collision>
         <dropLists>
             <drop>
-                <item id="2429" min="1" max="1" chance="0.075"/> <!-- Chain Boots -->
-                <item id="2430" min="1" max="1" chance="0.075"/> <!-- Karmian Boots -->
-                <item id="2431" min="1" max="1" chance="0.075"/> <!-- Plated Leather Boots -->
-                <item id="2432" min="1" max="1" chance="0.075"/> <!-- Dwarven Chain Boots -->
-                <item id="2452" min="1" max="1" chance="0.075"/> <!-- Reinforced Mithril Gloves -->
-                <item id="2453" min="1" max="1" chance="0.075"/> <!-- Chain Gloves -->
-                <item id="2454" min="1" max="1" chance="0.075"/> <!-- Karmian Gloves -->
-                <item id="57" min="1066" max="2495" chance="70"/> <!-- Adena -->
-                <item id="1873" min="1" max="1" chance="9.376"/> <!-- Silver Nugget -->
-                <item id="1869" min="1" max="3" chance="7.78"/> <!-- Iron Ore -->
-                <item id="1865" min="2" max="6" chance="5.783"/> <!-- Varnish -->
-                <item id="1342" min="100" max="300" chance="4.693"/> <!-- Steel Arrow -->
-                <item id="2944" min="1" max="1" chance="3.647"/> <!-- Karmian Glove Fabric -->
-                <item id="2942" min="1" max="1" chance="3.624"/> <!-- Reinforced Mithril Glove Design -->
-                <item id="2940" min="1" max="1" chance="3.623"/> <!-- Dwarven Chain Boot Fragment -->
-                <item id="2943" min="1" max="1" chance="3.545"/> <!-- Chain Glove Design -->
-                <item id="1880" min="1" max="1" chance="2.372"/> <!-- Steel -->
-                <item id="2937" min="1" max="3" chance="1.749"/> <!-- Chain Boot Fragment -->
-                <item id="1874" min="1" max="1" chance="1.573"/> <!-- Oriharukon Ore -->
-                <item id="2938" min="1" max="3" chance="1.148"/> <!-- Karmian Boot Fabric -->
-                <item id="2939" min="2" max="6" chance="0.75"/> <!-- Plated Leather Boot Lining -->
-                <item id="2199" min="1" max="1" chance="0.75"/> <!-- Recipe: Karmian Stockings -->
-                <item id="3021" min="1" max="1" chance="0.075"/> <!-- Recipe: Dwarven War Hammer -->
-                <item id="1419" min="1" max="1" chance="15"/> <!-- Proof of blood -->
+                <item id="57" min="304" max="711" chance="70" /> <!-- Adena -->
+                <item id="92996" min="1" max="1" chance="7.237" /> <!-- Old Resources -->
+                <item id="92908" min="1" max="1" chance="7.211" /> <!-- Material: Lump of Wood -->
+                <item id="92909" min="1" max="1" chance="1.442" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.398" /> <!-- Unknown Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
             </drop>
             <spoil>
-                <item id="1873" min="1" max="1" chance="75.88"/> <!-- Silver Nugget -->
-                <item id="2075" min="1" max="1" chance="5.941"/> <!-- Orcish Glaive Blade -->
+                <item id="92996" min="1" max="1" chance="91.955" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="18.44" /> <!-- Unknown Resources -->
+                <item id="92999" min="1" max="1" chance="1.804" /> <!-- High-grade Resources -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20218" level="45" type="Monster" name="Premo">
-        <parameters>
-            <param name="MoveAroundSocial" value="135"/>
-            <param name="MoveAroundSocial1" value="135"/>
-            <param name="MoveAroundSocial2" value="135"/>
-            <param name="Skill02_Probablity" value="1000"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <!-- <skill name="Skill01_ID" id="4032" level="4"/> -->
-			<skill name="Skill02_ID" id="4073" level="4"/>
-        </parameters>
+    <npc id="20217" level="69" type="Monster" name="Krator" element="FIRE">
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="7708" sp="239" attribute_exp="28" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6137.57225433526" hpRegen="10.5" mp="1421.12211221122" mpRegen="3.6" />
+            <speed>
+                <walk ground="23" />
+                <run ground="23" />
+            </speed>
+            <attack physical="343.433016486661" magical="92.7657621073254" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="170.886075949367" magical="93.9967414462965" />
+        </stats>
+        <status attackable="false" />
+        <skillList>
+            <skill id="4071" level="2" /> <!-- Bow Resistance -->
+            <skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+        </skillList>
+        <collision>
+            <radius normal="20" />
+            <height normal="31" />
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="310" max="724" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="7.431" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="7.376" /> <!-- Old Resources -->
+                <item id="92909" min="1" max="1" chance="1.52" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.443" /> <!-- Unknown Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+            </drop>
+            <spoil>
+                <item id="92996" min="1" max="1" chance="88.56" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="17.45" /> <!-- Unknown Resources -->
+                <item id="92999" min="1" max="1" chance="1.873" /> <!-- High-grade Resources -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="20218" level="71" type="Monster" name="Premo" element="FIRE">
         <race>GIANT</race>
-        <sex>MALE</sex>
-        <acquire exp="20193" sp="605"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1248.74044783714" hpRegen="5.5" mp="610.8" mpRegen="2.1"/>
-            <attack physical="258.388119" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="161.6249636" magical="130.09715"/>
+        <sex>FEMALE</sex>
+        <acquire exp="8963" sp="505" attribute_exp="32" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6387.8612716763" hpRegen="10.5" mp="1489.76897689769" mpRegen="3.6" />
             <speed>
-                <walk ground="55"/>
-                <run ground="174"/>
+                <walk ground="55" />
+                <run ground="174" />
             </speed>
-            <hitTime>610</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="402.149740548555" magical="95.8909801792651" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="185" magical="91.5841584158416" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <!-- <skill id="4032" level="4"/>  -->
-			<!-- NPC Strike -->
-			<skill id="4073" level="4"/> <!-- Stun -->
-            <skill id="4416" level="11"/> <!-- Giant -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
-            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="11" /> <!-- Giants -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="350" isAggressive="false">
-            <clanList>
-                <clan>PORTA</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="21" grown="25"/>
-            <height normal="35" grown="43"/>
+            <radius normal="21" />
+            <height normal="35" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="422" max="985" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="7.535" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="7.519" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="1.567" /> <!-- Unknown Resources -->
+                <item id="92909" min="1" max="1" chance="1.454" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92792" min="1" max="1" chance="0.003" /> <!-- Keshanberk Blade -->
+                <item id="92791" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff Head -->
+                <item id="92790" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe Head -->
+                <item id="92789" min="1" max="1" chance="0.003" /> <!-- Great Sword Blade -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+            </drop>
+            <spoil>
+                <item id="92996" min="1" max="1" chance="69.34" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="13.73" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="7.001" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="1.354" /> <!-- High-grade Resources -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="20219" level="46" type="Monster" name="Validus">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="AttackRange" value="2"/>
-            <param name="Skill03_Probablity" value="2000"/>
-            <param name="Skill03_Type" value="2"/>
-            <param name="Skill03_HPTarget" value="0"/>
-            <param name="Skill03_LowHP" value="50"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4032" level="4"/>
-            <skill name="Skill02_ID" id="4077" level="4"/>
-            <skill name="Skill03_ID" id="4046" level="4"/>
-        </parameters>
+    <npc id="20219" level="72" type="Monster" name="Validus" element="FIRE">
         <race>BEAST</race>
-        <sex>MALE</sex>
-        <acquire exp="21316" sp="639"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1297.24344275991" hpRegen="5.5" mp="637.8" mpRegen="2.1"/>
-            <attack physical="225.5023636" magical="169.38777" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="250.406976" magical="183.31739"/>
+        <sex>FEMALE</sex>
+        <acquire exp="9129" sp="519" attribute_exp="34" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6508.09248554913" hpRegen="10.5" mp="1524.75247524752" mpRegen="3.6" />
             <speed>
-                <walk ground="70"/>
-                <run ground="174"/>
+                <walk ground="70" />
+                <run ground="174" />
             </speed>
-            <hitTime>300</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="424.97548218372" magical="97.8926873074313" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="183.229813664596" magical="95.115101572269" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <skill id="4032" level="4"/> <!-- NPC Strike -->
-            <skill id="4046" level="4"/> <!-- Sleep -->
-            <skill id="4077" level="4"/> <!-- NPC Aura Burn -->
-            <skill id="4416" level="3"/> <!-- Beasts -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4444" level="2"/> <!-- Greater Bow Resistance -->
-            <skill id="4273" level="3"/> <!-- Dagger Resistance -->
-            <skill id="4274" level="1"/> <!-- Blunt Weapon Vulnerability -->
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="3" /> <!-- Beasts -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>TORFE</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="15"/>
-            <height normal="29"/>
+            <radius normal="15" />
+            <height normal="29" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="358" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Breastplate -->
+                <item id="2391" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Leather Armor -->
+                <item id="57" min="430" max="1005" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="7.793" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="7.715" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="1.583" /> <!-- Unknown Resources -->
+                <item id="92909" min="1" max="1" chance="1.537" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92768" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Breastplate Part -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92771" min="1" max="1" chance="0.0075" /> <!-- Blue Wolf Leather Armor Texture -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+            </drop>
+            <spoil>
+                <item id="92996" min="1" max="1" chance="70.98" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="14.42" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="7.114" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="1.411" /> <!-- High-grade Resources -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="20220" level="47" type="Monster" name="Dicor">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="IsAggressive" value="1"/>
-            <param name="AttackRange" value="2"/>
-            <param name="Skill01_MainAttack" value="1"/>
-            <param name="Skill03_Type" value="2"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4155" level="4"/>
-            <skill name="Skill02_ID" id="4160" level="4"/>
-            <skill name="Skill03_ID" id="4098" level="4"/>
-        </parameters>
+    <npc id="20220" level="73" type="Monster" name="Dicor" element="FIRE">
         <race>PLANT</race>
         <sex>FEMALE</sex>
-        <acquire exp="22216" sp="666"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1346.55725878612" hpRegen="5.5" mp="665.0" mpRegen="2.1"/>
-            <attack physical="287.865039" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="219.6688091" magical="186.5719"/>
+        <acquire exp="9294" sp="533" attribute_exp="36" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6626.58959537572" hpRegen="10.5" mp="1559.73597359736" mpRegen="3.6" />
             <speed>
-                <walk ground="80"/>
-                <run ground="174"/>
+                <walk ground="80" />
+                <run ground="174" />
             </speed>
-            <hitTime>130</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="377.508717019466" magical="95.7472890089901" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="178.395061728395" magical="97.7875565334311" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <skill id="4098" level="4"/> <!-- Silence -->
-            <skill id="4155" level="4"/> <!-- NPC Twister - Magic -->
-            <skill id="4160" level="4"/> <!-- NPC Aura Burn - Magic -->
-            <skill id="4416" level="5"/> <!-- Plants -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="10"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
-            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="5" /> <!-- Plants -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="200" isAggressive="false">
-            <clanList>
-                <clan>TORFE</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="12"/>
-            <height normal="25.5"/>
-        </collision>
-    </npc>
-    <npc id="20221" level="48" type="Monster" name="Perum">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="SummonMagic" id="4161" level="1"/>
-            <skill name="PhysicalSpecial" id="4073" level="4"/>
-        </parameters>
-        <race>CONSTRUCT</race>
-        <sex>MALE</sex>
-        <acquire exp="16035" sp="481"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1396.64158795631" hpRegen="5.5" mp="692.4" mpRegen="2.1"/>
-            <attack physical="250.7518636" magical="188.35412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="260.240833" magical="189.8592"/>
-            <speed>
-                <walk ground="20"/>
-                <run ground="20"/>
-            </speed>
-            <hitTime>410</hitTime>
-            <abnormalResist physical="10" magical="10"/>
-        </stats>
-        <status undying="false" canBeSown="true"/>
-        <skillList>
-            <skill id="4073" level="4"/> <!-- Stun -->
-            <skill id="4161" level="1"/> <!-- Summon -->
-            <skill id="4416" level="2"/> <!-- Magical Creatures -->
-            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
-            <skill id="4412" level="16"/> <!-- Very Strong P. Def. -->
-            <skill id="4413" level="12"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4274" level="1"/> <!-- Blunt Weapon Vulnerability -->
-        </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>TORFE</clan>
-            </clanList>
-        </ai>
-        <collision>
-            <radius normal="18"/>
-            <height normal="34"/>
+            <radius normal="12" />
+            <height normal="25.5" />
         </collision>
         <dropLists>
             <drop>
-                <item id="1126" min="1" max="1" chance="0.075"/> <!-- Crimson Boots -->
-                <item id="2434" min="1" max="1" chance="0.075"/> <!-- Rind Leather Boots -->
-                <item id="2455" min="1" max="1" chance="0.075"/> <!-- Plated Leather Gloves -->
-                <item id="2457" min="1" max="1" chance="0.075"/> <!-- Gloves of Seal -->
-                <item id="2458" min="1" max="1" chance="0.075"/> <!-- Rind Leather Gloves -->
-                <item id="57" min="1447" max="3374" chance="70"/> <!-- Adena -->
-                <item id="1873" min="1" max="1" chance="12.29"/> <!-- Silver Nugget -->
-                <item id="1865" min="1" max="3" chance="10.97"/> <!-- Varnish -->
-                <item id="2508" min="2" max="6" chance="6.613"/> <!-- Cursed Bone -->
-                <item id="1965" min="1" max="1" chance="4.274"/> <!-- Metal Plate Helmet Material -->
-                <item id="2946" min="1" max="1" chance="3.552"/> <!-- Plated Leather Glove Design -->
-                <item id="1869" min="5" max="15" chance="3.194"/> <!-- Iron Ore -->
-                <item id="1880" min="1" max="1" chance="3.114"/> <!-- Steel -->
-                <item id="1974" min="1" max="3" chance="2.671"/> <!-- Crimson Boot Fabric -->
-                <item id="1874" min="1" max="1" chance="2.092"/> <!-- Oriharukon Ore -->
-                <item id="2948" min="1" max="3" chance="1.823"/> <!-- Rind Leather Boot Lining -->
-                <item id="2950" min="2" max="6" chance="1.281"/> <!-- Gloves of Seal Pattern -->
-                <item id="2951" min="2" max="6" chance="1.105"/> <!-- Rind Leather Glove Design -->
-                <item id="1973" min="3" max="9" chance="0.75"/> <!-- Pa'agrio Hand Design -->
-                <item id="2344" min="1" max="1" chance="0.075"/> <!-- Recipe: Grace Dagger -->
-                <item id="951" min="1" max="1" chance="0.075"/> <!-- Scroll: Enchant Weapon (C-grade) -->
+                <item id="57" min="426" max="997" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="7.146" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="7.066" /> <!-- Old Resources -->
+                <item id="3031" min="1" max="1" chance="1.821" /> <!-- Spirit Ore -->
+                <item id="92909" min="1" max="1" chance="1.478" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.463" /> <!-- Unknown Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
             </drop>
             <spoil>
-                <item id="2073" min="1" max="1" chance="7.957"/> <!-- Chakram Edge -->
-                <item id="2352" min="1" max="1" chance="2.185"/> <!-- Recipe: Widow Maker -->
+                <item id="92996" min="1" max="1" chance="71.04" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="14.2" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="7.15" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="1.48" /> <!-- High-grade Resources -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20222" level="49" type="Monster" name="Torfe">
-        <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
-            <param name="AttackRange" value="2"/>
-            <param name="Skill03_Type" value="2"/>
-            <param name="Attack_DecayRatio" value="30"/>
-            <param name="SoulShot" value="100"/>
-            <param name="SoulShotRate" value="10"/>
-            <param name="SpiritShot" value="100"/>
-            <param name="SpiritShotRate" value="5"/>
-            <param name="LongRangeGuardRate" value="5"/>
-            <skill name="Skill01_ID" id="4032" level="4"/>
-            <skill name="Skill02_ID" id="4002" level="4"/>
-            <skill name="Skill03_ID" id="4047" level="4"/>
-        </parameters>
-        <race>BEAST</race>
-        <sex>MALE</sex>
-        <acquire exp="19580" sp="587"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1447.45325347694" hpRegen="5.5" mp="720.0" mpRegen="2.1"/>
-            <attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="227.8754727" magical="193.17771"/>
+    <npc id="20221" level="74" type="Monster" name="Perum" element="FIRE">
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="9422" sp="548" attribute_exp="38" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6743.93063583815" hpRegen="10.5" mp="1594.71947194719" mpRegen="3.6" />
             <speed>
-                <walk ground="70"/>
-                <run ground="174"/>
+                <walk ground="20" />
+                <run ground="20" />
             </speed>
-            <hitTime>300</hitTime>
-            <abnormalResist physical="10" magical="10"/>
+            <attack physical="412.48459435983" magical="96.0667463911656" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="179.141104294479" magical="96.7826844034097" />
         </stats>
-        <status undying="false" canBeSown="true"/>
+        <status attackable="false" />
         <skillList>
-            <skill id="4002" level="4"/> <!-- NPC HP Drain -->
-            <skill id="4032" level="4"/> <!-- NPC Strike -->
-            <skill id="4047" level="4"/> <!-- Hold -->
-            <skill id="4416" level="3"/> <!-- Beasts -->
-            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
-            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
-            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
-            <skill id="4412" level="10"/> <!-- Slightly Weak P. Def. -->
-            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
-            <skill id="4444" level="2"/> <!-- Greater Bow Resistance -->
-            <skill id="4273" level="3"/> <!-- Dagger Resistance -->
-            <skill id="4274" level="1"/> <!-- Blunt Weapon Vulnerability -->
+            <skill id="4071" level="2" /> <!-- Bow Resistance -->
+            <skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="2" /> <!-- Magical Creatures -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
         </skillList>
-        <shots shotChance="30" spiritChance="30"/>
-        <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>TORFE</clan>
-            </clanList>
-        </ai>
         <collision>
-            <radius normal="15"/>
-            <height normal="29"/>
+            <radius normal="18" />
+            <height normal="34" />
         </collision>
         <dropLists>
             <drop>
-                <item id="2496" min="1" max="1" chance="0.075"/> <!-- Dwarven Chain Shield -->
-                <item id="354" min="1" max="1" chance="0.03"/> <!-- Chain Mail Shirt -->
-                <item id="500" min="1" max="1" chance="0.03"/> <!-- Great Helmet -->
-                <item id="232" min="1" max="1" chance="0.003"/> <!-- Dark Elven Dagger -->
-                <item id="281" min="1" max="1" chance="0.003"/> <!-- Crystallized Ice Bow -->
-                <item id="57" min="887" max="2072" chance="70"/> <!-- Adena -->
-                <item id="1868" min="1" max="3" chance="11.65"/> <!-- Thread -->
-                <item id="2508" min="1" max="2" chance="9.198"/> <!-- Cursed Bone -->
-                <item id="1866" min="1" max="1" chance="7.43"/> <!-- Suede -->
-                <item id="1867" min="1" max="3" chance="4.912"/> <!-- Animal Skin -->
-                <item id="2947" min="1" max="1" chance="3.031"/> <!-- Dwarven Chain Shield Fragment -->
-                <item id="1971" min="1" max="1" chance="2.543"/> <!-- Great Helmet Material -->
-                <item id="1882" min="1" max="1" chance="2.475"/> <!-- Leather -->
-                <item id="1975" min="1" max="1" chance="1.363"/> <!-- Rind Leather Armor Design -->
-                <item id="1959" min="1" max="1" chance="1.098"/> <!-- Chain Mail Shirt Material -->
-                <item id="1885" min="1" max="1" chance="0.75"/> <!-- High-grade Suede -->
-                <item id="2074" min="1" max="1" chance="0.3"/> <!-- Crystallized Ice Bow Shaft -->
-                <item id="2072" min="1" max="1" chance="0.3"/> <!-- Dark Elven Dagger Edge -->
-                <item id="2319" min="1" max="1" chance="0.03"/> <!-- Recipe: Raid Sword -->
-                <item id="2334" min="1" max="1" chance="0.03"/> <!-- Recipe: Sword of Whispering Death -->
-                <item id="951" min="1" max="1" chance="0.03"/> <!-- Scroll: Enchant Weapon (C-grade) -->
-                <item id="4553" min="1" max="1" chance="0.03"/> <!-- Greater Dye of STR <STR +1 CON -1> - 2nd Class Transfer -->
-                <item id="4554" min="1" max="1" chance="0.03"/> <!-- Greater Dye of STR <STR +1 DEX -1> - 2nd Class Transfer -->
-                <item id="4557" min="1" max="1" chance="0.03"/> <!-- Greater Dye of DEX <Dex +1 Str -1> - 2nd Class Transfer -->
-                <item id="4558" min="1" max="1" chance="0.03"/> <!-- Greater Dye of DEX <Dex +1 CON -1> - 2nd Class Transfer -->
-                <item id="1419" min="1" max="1" chance="27"/>
+                <item id="57" min="423" max="988" chance="70" /> <!-- Adena -->
+                <item id="92908" min="1" max="1" chance="7.642" /> <!-- Material: Lump of Wood -->
+                <item id="92996" min="1" max="1" chance="7.547" /> <!-- Old Resources -->
+                <item id="92909" min="1" max="1" chance="1.505" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92997" min="1" max="1" chance="1.456" /> <!-- Unknown Resources -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
             </drop>
             <spoil>
-                <item id="1876" min="1" max="1" chance="61.62"/> <!-- Mithril Ore -->
-                <item id="2168" min="1" max="1" chance="8.057"/> <!-- Recipe: Necklace of Mermaid -->
-                <item id="2060" min="1" max="1" chance="2.56"/> <!-- Stormbringer Blade -->
-                <item id="2067" min="1" max="1" chance="2.227"/> <!-- Crystal Staff Head -->
+                <item id="92996" min="1" max="1" chance="69.83" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="14.64" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="6.98" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="1.337" /> <!-- High-grade Resources -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="20222" level="75" type="Monster" name="Torfe" element="FIRE">
+        <race>BEAST</race>
+        <sex>FEMALE</sex>
+        <acquire exp="9599" sp="563" attribute_exp="41" />
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="6858.95953757225" hpRegen="10.5" mp="1631.02310231023" mpRegen="3.6" />
+            <speed>
+                <walk ground="70" />
+                <run ground="174" />
+            </speed>
+            <attack physical="343.072556003544" magical="92.9903099408827" critical="4.75" attackSpeed="253" range="40" />
+            <defence physical="190.243902439024" magical="91.7652740883845" />
+        </stats>
+        <status attackable="false" />
+        <skillList>
+            <skill id="4071" level="1" /> <!-- Bow Resistance -->
+            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
+            <skill id="4416" level="3" /> <!-- Beasts -->
+            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
+            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+        </skillList>
+        <collision>
+            <radius normal="15" />
+            <height normal="29" />
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="421" max="984" chance="70" /> <!-- Adena -->
+                <item id="92996" min="1" max="1" chance="7.527" /> <!-- Old Resources -->
+                <item id="92908" min="1" max="1" chance="7.519" /> <!-- Material: Lump of Wood -->
+                <item id="92997" min="1" max="1" chance="1.521" /> <!-- Unknown Resources -->
+                <item id="92909" min="1" max="1" chance="1.517" /> <!-- Material: Pack of Knickknacks -->
+                <item id="92910" min="1" max="1" chance="0.75" /> <!-- Material: Rags -->
+                <item id="92998" min="1" max="1" chance="0.75" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
+                <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
+                <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
+                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
+                <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
+                <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
+                <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
+                <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+            </drop>
+            <spoil>
+                <item id="92996" min="1" max="1" chance="71.47" /> <!-- Old Resources -->
+                <item id="92997" min="1" max="1" chance="13.39" /> <!-- Unknown Resources -->
+                <item id="92998" min="1" max="1" chance="6.928" /> <!-- Shining Resources -->
+                <item id="92999" min="1" max="1" chance="1.425" /> <!-- High-grade Resources -->
             </spoil>
         </dropLists>
     </npc>
