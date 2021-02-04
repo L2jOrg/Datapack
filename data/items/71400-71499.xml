@@ -7,7 +7,7 @@
 		<crystal />
 		<skills>
 			<skill id="55705" level="8"/>  <!-- Greater Red Cat's Eye -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71401" name="Greater Red Cat's Eye Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
@@ -17,7 +17,7 @@
 		<crystal />
 		<skills>
 			<skill id="55705" level="9"/>  <!-- Greater Red Cat's Eye -->
-		</skills>
+		</skills>		
 	</armor>
 
 	<armor id="71402" name="Greater Red Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
@@ -27,7 +27,7 @@
 		<crystal />
 		<skills>
 			<skill id="55705" level="10"/>  <!-- Greater Red Cat's Eye -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71403" name="Greater Blue Cat's Eye Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
@@ -37,7 +37,7 @@
 		<crystal />
 		<skills>
 			<skill id="55706" level="6"/>  <!-- Greater Blue Cat's Eye -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71404" name="Greater Blue Cat's Eye Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
@@ -47,7 +47,7 @@
 		<crystal />
 		<skills>
 			<skill id="55706" level="7"/>  <!-- Greater Blue Cat's Eye -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71405" name="Greater Blue Cat's Eye Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
@@ -57,7 +57,7 @@
 		<crystal />
 		<skills>
 			<skill id="55706" level="8"/>  <!-- Greater Blue Cat's Eye -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71406" name="Greater Blue Cat's Eye Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
@@ -67,7 +67,7 @@
 		<crystal />
 		<skills>
 			<skill id="55706" level="9"/>  <!-- Greater Blue Cat's Eye -->
-		</skills>
+		</skills>		
 	</armor>
 
 	<armor id="71407" name="Greater Blue Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
@@ -77,7 +77,7 @@
 		<crystal />
 		<skills>
 			<skill id="55706" level="10"/>  <!-- Greater Blue Cat's Eye -->
-		</skills>
+		</skills>		
 	</armor>
 
 	<armor id="71408" name="Greater Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
@@ -87,7 +87,7 @@
 		<crystal />
 		<skills>
 			<skill id="59152" level="6"/>  <!-- Greater Emerald -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71409" name="Greater Emerald Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
@@ -97,7 +97,7 @@
 		<crystal />
 		<skills>
 			<skill id="59152" level="7"/>  <!-- Greater Emerald -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71410" name="Greater Emerald Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
@@ -107,7 +107,7 @@
 		<crystal />
 		<skills>
 			<skill id="59152" level="8"/>  <!-- Greater Emerald -->
-		</skills>
+		</skills>		
 	</armor>
 
 	<armor id="71411" name="Greater Emerald Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
@@ -117,7 +117,7 @@
 		<crystal />
 		<skills>
 			<skill id="59152" level="9"/>  <!-- Greater Emerald -->
-		</skills>
+		</skills>	
 	</armor>
 
 	<armor id="71412" name="Greater Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
@@ -127,7 +127,7 @@
 		<crystal />
 		<skills>
 			<skill id="59152" level="10"/>  <!-- Greater Emerald -->
-		</skills>
+		</skills>		
 	</armor>
 
 	<armor id="71413" name="Brooch Lv. 5" type="NONE" body-part="BROOCH">
@@ -145,13 +145,13 @@
 
 	<item id="71414" name="Gem Energy" type="NONE">
 	<!-- Combine with a Greater Gem to obtain a higher level gem.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="true"/>
 		<attributes/>
 	</item>
 
 	<item id="71415" name="Gem Energy Fragment" type="NONE">
 	<!-- Take it to the Store Manager to exchange for Gem Energy. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="true"/>
 		<attributes/>
 	</item>
 
@@ -291,23 +291,26 @@
 
 	<item id="71435" name="Emerald Box" type="NONE">
 	<!-- Double-click to obtain 1 Emerald Lv. 1.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" tradable="true" dropable="true" sellable="true"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-			<extract>
-				<item id="71348" min-count="1" max-count="1" chance="100"/>  <!-- L2 Coin -->
-			</extract>	
+		<extract>
+			<item id="71348" min-count="1" max-count="1" chance="100"/>
+		</extract>		
 	</item>
 
 	<item id="71436" name="Brilliant Jewelry Box" type="NONE">
 	<!-- Double-click to select 1 of the following: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/Blue Cat's Eye, Emerald Box (Lv. 1).  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<restriction stackable="true" tradable="true" dropable="false" sellable="true"/>
+		<attributes weight="30" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="59102" value="-1"/>  <!-- Brilliant Jewelry Box -->
+		</skill-reducer>
 	</item>
 
 	<item id="71437" name="Shining Jewel Box" type="NONE">
 	<!-- Double-click to get 1 of the following: Garnet, Jade, Ruby, Sapphire, Diamond, Pearl, Vital Stone.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes reuse-delay="1000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer>
 			<skill id="59327" value="-1"/> <!-- Shining Jewel Box -->
 		</skill-reducer>
