@@ -1245,20 +1245,19 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
         <effects>
             <random-restoration>
-                <item id="70461" chance="14.2857143" count="1"/>
-                <item id="70441" chance="14.2857143" count="1"/>
-                <item id="70446" chance="14.2857143" count="1"/>
-                <item id="70466" chance="14.2857143" count="1"/>
-                <item id="70451" chance="14.2857143" count="1"/>
-                <item id="70456" chance="14.2857143" count="1"/>
-                <item id="70471" chance="14.2857143" count="1"/>
+                <item id="70461" chance="14.285714285714" count="1"/>
+                <item id="70441" chance="14.285714285714" count="1"/>
+                <item id="70446" chance="14.285714285714" count="1"/>
+                <item id="70466" chance="14.285714285714" count="1"/>
+                <item id="70451" chance="14.285714285714" count="1"/>
+                <item id="70456" chance="14.285714285714" count="1"/>
+                <item id="70471" chance="14.285714285714" count="1"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1273,6 +1272,20 @@
         <attributes property="MAGIC">
         </attributes>
         <target/>
+        <effects>	
+            <reduce-drop-penalty>
+                <experience initial="-50">
+                    <value level="2">-70</value>
+                    <value level="3">-80</value>
+                    <value level="4">-100</value>			
+				</experience>
+                <death-penalty initial="-50">
+                    <value level="2">-70</value>
+                    <value level="3">-80</value>
+                    <value level="4">-100</value>
+				</death-penalty>
+            </reduce-drop-penalty>
+        </effects>	
     </skill>
     <skill id="59329" name="Cute Animal Friends" action="A1">
         <!-- Max CP +80 -->
