@@ -15,7 +15,10 @@
 	<item id="94314" name="Elixir" type="NONE">
 	<!-- A potion containing a mysterious power\n\n<Effect>\nPoints Ability +1\nFor characters level 76 or higher\nCan use up to 5 -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="40225" value="-1"/>
+		</skill-reducer>
 	</item>
 
 	<item id="94328" name="Elixir Powder" type="NONE">
