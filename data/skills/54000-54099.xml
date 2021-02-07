@@ -2660,12 +2660,13 @@
     <skill id="54070" name="Sayha's Buff Scroll - Event" action="A2">
         <!-- A mysterious scroll that triggers various buffs -->
         <icon initial="icon.etc_ssq_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
-            <effect-point initial="1"/>			
+            <reuse initial="120000"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal>
+        <abnormal type="MULTI_BUFF">
            <level initial="1"/>
            <time initial="1200"/>
         </abnormal>
