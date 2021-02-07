@@ -6,7 +6,7 @@
 * You can donate
 
 ##Bugs fixs
-* You can post issues here: https://github.com/JoeAlisson/L2jOrg/issues
+* You can post issues here: https://github.com/L2jOrg/Datapack/issues
 
 ## Releases
 
