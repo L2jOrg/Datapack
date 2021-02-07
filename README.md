@@ -1,9 +1,9 @@
-# L2jOrg
+# L2jOrg Open Source Project
 
 ##How to contribute
-* You can contribute on this free open source repo https://github.com/L2jOrg/Datapack
-* You can help the team with some code
-* You can donate
+Please read the full WIKI PAGE: 
+https://github.com/L2jOrg/Datapack/wiki
+
 
 ##Bugs fixs
 * You can post issues here: https://github.com/L2jOrg/Datapack/issues
