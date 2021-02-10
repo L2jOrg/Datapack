@@ -6,9 +6,9 @@
     <event name="Siege" class="org.l2j.gameserver.engine.siege.SiegeEngine">
 
         <scheduler>
-            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="0" minute="00" repeat="true"/>
-            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="21" minute="00" repeat="true"/>
-            <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="22" minute="00" repeat="true"/>
+            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="0" minute="01" repeat="true"/>
+            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="0" minute="50" repeat="true"/>
+            <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="23" minute="50" repeat="true"/>
 
             <conditionalSchedule>
                 <run name="start-preparation" if="BETWEEN">
@@ -26,13 +26,7 @@
         <config>
             <siege-config>
                 <castle id="3">
-                    <scheduled-day day="SUNDAY" hour="20"/>
-                    <scheduled-day day="MONDAY" hour="20"/>
-                    <scheduled-day day="TUESDAY" hour="20"/>
-                    <scheduled-day day="WEDNESDAY" hour="20"/>
-                    <scheduled-day day="THURSDAY" hour="20"/>
-                    <scheduled-day day="FRIDAY" hour="20"/>
-                    <scheduled-day day="SATURDAY" hour="20"/>
+                    <scheduled-days>SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY</scheduled-days>
                 </castle>
             </siege-config>
         </config>
