@@ -781,7 +781,7 @@
             <height normal="27" grown="32"/>
         </collision>
     </npc>
-    <npc id="20213" level="65" type="Monster" name="Porta" element="FIRE">
+    <npc id="20213" level="50" type="Monster" name="Porta">
         <race>ETC</race>
         <sex>FEMALE</sex>
         <acquire exp="7170" sp="212" attribute_exp="22" />
@@ -795,12 +795,20 @@
             <defence physical="163.636363636364" magical="87.008700870087" />
         </stats>
         <status attackable="false" />
+        <ai clanHelpRange="300" aggroRange="450">
+            <clanList>
+                <clan>ALL</clan>
+            </clanList>
+        </ai>
         <skillList>
-            <skill id="4071" level="2" /> <!-- Bow Resistance -->
-            <skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
+            <skill id="4073" level="4" /> <!-- Stun -->
             <skill id="4416" level="2" /> <!-- Magical Creatures -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="12" /> <!-- Slightly Strong P.atk -->
+            <skill id="4411" level="10" /> <!-- slightly Weak M.atk -->
+            <skill id="4412" level="16" /> <!-- very Strong P.def -->
+            <skill id="4413" level="12" /> <!-- Slightly Strong M.def -->
+            <skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
         </skillList>
         <collision>
             <radius normal="20" />
@@ -808,7 +816,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="281" max="657" chance="70" /> <!-- Adena -->
+                <item id="57" min="3985" max="9354" chance="70" /> <!-- Adena -->
                 <item id="92908" min="1" max="1" chance="6.747" /> <!-- Material: Lump of Wood -->
                 <item id="92996" min="1" max="1" chance="6.734" /> <!-- Old Resources -->
                 <item id="92909" min="1" max="1" chance="1.348" /> <!-- Material: Pack of Knickknacks -->
@@ -823,20 +831,29 @@
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
                 <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
-                <item id="92690" min="1" max="1" chance="0.003" /> <!-- Demon's Staff Head -->
-                <item id="92689" min="1" max="1" chance="0.003" /> <!-- Ghoul's Staff Head -->
-                <item id="92688" min="1" max="1" chance="0.003" /> <!-- Deadman's Staff Head -->
-                <item id="92687" min="1" max="1" chance="0.003" /> <!-- Samurai Long Sword Blade -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="356" min="1" max="1" chance="0.00929" /> <!-- Full Plate Armor -->
+                <item id="1986" min="1" max="1" chance="1.02182" /> <!-- Full Plate Armor Temper -->
+                <item id="2414" min="1" max="1" chance="0.03619" /> <!-- Full Plate Helmet -->
+                <item id="2959" min="1" max="1" chance="3.32146" /> <!-- Full plate Helmet Design -->
+                <item id="2497" min="1" max="1" chance="0.05172" /> <!-- Full Plate Shield -->
+                <item id="2966" min="1" max="1" chance="5.22344" /> <!-- Full Plate Shield Fragment -->
+                <item id="1872" min="1" max="1" chance="37.71237" /> <!-- Animal Bone Fragment -->
+                <item id="1877" min="1" max="1" chance="1.28886" /> <!-- Adamantite Nugget -->
+                <item id="1875" min="1" max="1" chance="2.14247" /> <!-- Stone of Purity -->
+                <item id="1881" min="1" max="1" chance="4.25724" /> <!-- Coarse Bone Powder -->
+                <item id="5436" min="1" max="1" chance="0.02114" /> <!-- Recipe: Berserker Blade -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="86.31" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="17.35" /> <!-- Unknown Resources -->
                 <item id="92999" min="1" max="1" chance="1.648" /> <!-- High-grade Resources -->
+                <item id="2969" min="1" max="1" chance="3.74408" /> <!-- Yaksa Mace Head -->
+                <item id="2117" min="1" max="1" chance="3.66832" /> <!-- Ghoul's Staff Head -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20214" level="66" type="Monster" name="Excuro" element="FIRE">
+    <npc id="20214" level="51" type="Monster" name="Excuro">
         <race>ETC</race>
         <sex>FEMALE</sex>
         <acquire exp="7306" sp="218" attribute_exp="23" />
@@ -851,11 +868,13 @@
         </stats>
         <status attackable="false" />
         <skillList>
-            <skill id="4071" level="1" /> <!-- Bow Resistance -->
-            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
             <skill id="4416" level="2" /> <!-- Magical Creatures -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="12" /> <!-- Slightly Strong P.atk -->
+            <skill id="4411" level="10" /> <!-- slightly Weak M.atk -->
+            <skill id="4412" level="12" /> <!-- very Strong P.def -->
+            <skill id="4413" level="12" /> <!-- Slightly Strong M.def -->
+            <skill id="4093" level="1" /> <!-- Evasion -->
         </skillList>
         <collision>
             <radius normal="11" />
@@ -863,10 +882,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="2380" min="1" max="1" chance="0.0009" /> <!-- Blue Wolf Gaiters -->
-                <item id="2381" min="1" max="1" chance="0.0009" /> <!-- Doom Plate Armor -->
-                <item id="2392" min="1" max="1" chance="0.0009" /> <!-- Doom Leather Armor -->
-                <item id="57" min="289" max="673" chance="70" /> <!-- Adena -->
+                <item id="57" min="3341" max="7768" chance="70" /> <!-- Adena -->
                 <item id="92996" min="1" max="1" chance="6.856" /> <!-- Old Resources -->
                 <item id="92908" min="1" max="1" chance="6.826" /> <!-- Material: Lump of Wood -->
                 <item id="92997" min="1" max="1" chance="1.354" /> <!-- Unknown Resources -->
@@ -880,20 +896,36 @@
                 <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
-                <item id="92769" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Gaiter Material -->
-                <item id="92772" min="1" max="1" chance="0.0075" /> <!-- Doom Leather Armor Design -->
-                <item id="92770" min="1" max="1" chance="0.003" /> <!-- Doom Plate Armor Temper -->
                 <item id="92988" min="1" max="1" chance="0.0009" /> <!-- Orcish Treasure -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="103" min="1" max="1" chance="0.04689" /> <!-- Tower Shield -->
+                <item id="1978" min="1" max="1" chance="3.83255" /> <!-- Tower Shield Fragment-->
+                <item id="107" min="1" max="1" chance="0.04689" /> <!-- Compound Shield -->
+                <item id="4055" min="1" max="1" chance="3.83255" /> <!-- Compoung Shield Fragment -->
+                <item id="517" min="1" max="1" chance="0.03287" /> <!-- Compound Helmet -->
+                <item id="2957" min="1" max="1" chance="2.63198" /> <!-- Compound Helmet Design -->
+                <item id="60" min="1" max="1" chance="0.00841" /> <!-- Compound Armor -->
+                <item id="1977" min="1" max="1" chance="0.89239" /> <!-- Compound Armor Temper -->
+                <item id="1872" min="1" max="1" chance="26.26001" /> <!-- Animal Bone Fragment -->
+                <item id="1877" min="1" max="1" chance="0.85815" /> <!-- Adamantite Nugget -->
+                <item id="2170" min="1" max="1" chance="0.20292" /> <!-- Recipe: Nassen's Earring -->
+                <item id="3017" min="1" max="1" chance="0.24032" /> <!-- Recipe: Divine Gloves -->
+                <item id="3006" min="1" max="1" chance="0.35117" /> <!-- Recipe: Demon's Gloves -->
+                <item id="2356" min="1" max="1" chance="0.01403" /> <!-- Recipe: Demon's Staff -->
+                <item id="4601" min="1" max="1" chance="0.04781" /> <!-- Greater Dye of Str <STR +3 CON -3> -->
+                <item id="4603" min="1" max="1" chance="0.04775" /> <!-- Greater Dye of Con <Con +3 STR -3> -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="81.47" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="17.45" /> <!-- Unknown Resources -->
                 <item id="92999" min="1" max="1" chance="1.636" /> <!-- High-grade Resources -->
+                <item id="1915" min="1" max="1" chance="34.1658" /> <!-- Ring of Ages Gemstone -->
+                <item id="1869" min="1" max="1" chance="100.00" /> <!-- Iron Ore -->
+                <item id="3017" min="1" max="1" chance="2.4409" /> <!-- Recipe: Divine Gloves -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20215" level="67" type="Monster" name="Mordeo" element="FIRE">
+    <npc id="20215" level="52" type="Monster" name="Mordeo">
         <race>BEAST</race>
         <sex>FEMALE</sex>
         <acquire exp="7656" sp="225" attribute_exp="25" />
@@ -908,11 +940,12 @@
         </stats>
         <status attackable="false" />
         <skillList>
-            <skill id="4071" level="1" /> <!-- Bow Resistance -->
-            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
-            <skill id="4416" level="3" /> <!-- Beasts -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4416" level="3" /> <!-- Beast -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="14" /> <!-- Strong P.atk -->
+            <skill id="4411" level="12" /> <!-- Slightly Strong M.atk -->
+            <skill id="4412" level="10" /> <!-- Slightly Weak P.def -->
+            <skill id="4413" level="13" /> <!-- Slightly Strong M.def -->
         </skillList>
         <collision>
             <radius normal="14" />
@@ -920,7 +953,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="304" max="711" chance="70" /> <!-- Adena -->
+                <item id="57" min="3284" max="7712" chance="70" /> <!-- Adena -->
                 <item id="92908" min="1" max="1" chance="6.773" /> <!-- Material: Lump of Wood -->
                 <item id="92996" min="1" max="1" chance="6.707" /> <!-- Old Resources -->
                 <item id="3031" min="1" max="1" chance="1.717" /> <!-- Spirit Ore -->
@@ -931,21 +964,32 @@
                 <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
                 <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
                 <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
                 <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
                 <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="64" min="1" max="1" chance="0.07824" /> <!-- Compound Boots -->
+                <item id="2956" min="1" max="1" chance="5.54381" /> <!-- Compound Boot Fragment-->
+                <item id="608" min="1" max="1" chance="0.07824" /> <!-- Mithril Gauntlets -->
+                <item id="1981" min="1" max="1" chance="5.54381" /> <!-- Mithril Gauntlet Design -->
+                <item id="2119" min="1" max="1" chance="0.43623" /> <!-- Crystal Dagger Blade -->
+                <item id="49428" min="1" max="1" chance="0.07098" /> <!-- Spellbook: Aegis -->
+                <item id="6398" min="1" max="1" chance="0.07107" /> <!-- Spellbook: Body of Avatar -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="90.35" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="17.48" /> <!-- Unknown Resources -->
                 <item id="92999" min="1" max="1" chance="1.746" /> <!-- High-grade Resources -->
+                <item id="4122" min="1" max="1" chance="2.3077" /> <!-- Recipe: Maestro Holder -->
+                <item id="2233" min="1" max="1" chance="0.4853" /> <!-- Recipe: Divine Tunic -->
+                <item id="2223" min="1" max="1" chance="2.0126" /> <!-- Recipe: Tower Shield -->
+                <item id="2336" min="1" max="1" chance="0.1208" /> <!-- Recipe: Nirvana Axe -->
+                <item id="2235" min="1" max="1" chance="0.9687" /> <!-- Recipe: Mithril Helmet -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20216" level="68" type="Monster" name="Ricenseo" element="FIRE">
+    <npc id="20216" level="53" type="Monster" name="Ricenseo">
         <race>ETC</race>
         <sex>FEMALE</sex>
         <acquire exp="7580" sp="232" attribute_exp="26" />
@@ -960,11 +1004,11 @@
         </stats>
         <status attackable="false" />
         <skillList>
-            <skill id="4071" level="1" /> <!-- Bow Resistance -->
-            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
             <skill id="4416" level="2" /> <!-- Magical Creatures -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="13" /> <!-- Slightly Strong P.atk -->
+            <skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+            <skill id="4276" level="1" /> <!-- Bow Attack Vulnerability -->
         </skillList>
         <collision>
             <radius normal="21" />
@@ -972,7 +1016,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="304" max="711" chance="70" /> <!-- Adena -->
+                <item id="57" min="3421" max="7978" chance="70" /> <!-- Adena -->
                 <item id="92996" min="1" max="1" chance="7.237" /> <!-- Old Resources -->
                 <item id="92908" min="1" max="1" chance="7.211" /> <!-- Material: Lump of Wood -->
                 <item id="92909" min="1" max="1" chance="1.442" /> <!-- Material: Pack of Knickknacks -->
@@ -982,21 +1026,38 @@
                 <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
                 <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
                 <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
                 <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="75" min="1" max="1" chance="0.00178" /> <!-- Caliburs -->
+                <item id="2089" min="1" max="1" chance="0.20806" /> <!-- Caliburs Edge -->
+                <item id="76" min="1" max="1" chance="0.00178" /> <!-- Sword of Delusion -->
+                <item id="2090" min="1" max="1" chance="0.20806" /> <!-- Delusional Blade -->
+                <item id="77" min="1" max="1" chance="0.00178" /> <!-- Tsurugi -->
+                <item id="2091" min="1" max="1" chance="0.20806" /> <!-- Tsurgui Blade -->
+                <item id="84" min="1" max="1" chance="0.00178" /> <!-- Homunkulus' Sword -->
+                <item id="2092" min="1" max="1" chance="0.20806" /> <!-- Homunkulus' Sword Blade -->
+                <item id="134" min="1" max="1" chance="0.00178" /> <!-- Sword of Nightmare -->
+                <item id="2095" min="1" max="1" chance="0.20806" /> <!-- Sword of Nightmare Blade -->
+                <item id="145" min="1" max="1" chance="0.00178" /> <!-- Sword of Whispering Death -->
+                <item id="2096" min="1" max="1" chance="0.20806" /> <!-- Sword of Whispering Death Blade -->
+                <item id="3013" min="1" max="1" chance="0.42686" /> <!-- Recipe: Drake Leather Boots -->
+                <item id="3118" min="1" max="1" chance="0.07358" /> <!-- Amulet: Chant of Rage -->
+                <item id="8397" min="1" max="1" chance="0.07368" /> <!-- Spellbook: Clarity -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="91.955" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="18.44" /> <!-- Unknown Resources -->
                 <item id="92999" min="1" max="1" chance="1.804" /> <!-- High-grade Resources -->
+                <item id="4123" min="1" max="1" chance="3.9872" /> <!-- Recipe: Maestro Anvil Lock -->
+                <item id="2970" min="1" max="1" chance="3.1812" /> <!-- Recipe: Ring of Seal -->
+                <item id="2169" min="1" max="1" chance="1.5878" /> <!-- Recipe: Necklace of Seal -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20217" level="69" type="Monster" name="Krator" element="FIRE">
+    <npc id="20217" level="54" type="Monster" name="Krator">
         <race>ETC</race>
         <sex>FEMALE</sex>
         <acquire exp="7708" sp="239" attribute_exp="28" />
@@ -1010,12 +1071,20 @@
             <defence physical="170.886075949367" magical="93.9967414462965" />
         </stats>
         <status attackable="false" />
+        <ai clanHelpRange="300" aggroRange="450">
+            <clanList>
+                <clan>ALL</clan>
+            </clanList>
+        </ai>
         <skillList>
-            <skill id="4071" level="2" /> <!-- Bow Resistance -->
-            <skill id="4116" level="3" /> <!-- Magic Damage Resistance -->
             <skill id="4416" level="2" /> <!-- Magical Creatures -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="12" /> <!-- Slightly Strong P.atk -->
+            <skill id="4411" level="10" /> <!-- slightly Weak M.atk -->
+            <skill id="4412" level="16" /> <!-- very Strong P.def -->
+            <skill id="4413" level="12" /> <!-- Slightly Strong M.def -->
+            <skill id="4284" level="5" /> <!-- Bleed Resistant -->
+            <skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
         </skillList>
         <collision>
             <radius normal="20" />
@@ -1023,7 +1092,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="310" max="724" chance="70" /> <!-- Adena -->
+                <item id="57" min="5852" max="13669" chance="70" /> <!-- Adena -->
                 <item id="92908" min="1" max="1" chance="7.431" /> <!-- Material: Lump of Wood -->
                 <item id="92996" min="1" max="1" chance="7.376" /> <!-- Old Resources -->
                 <item id="92909" min="1" max="1" chance="1.52" /> <!-- Material: Pack of Knickknacks -->
@@ -1033,21 +1102,39 @@
                 <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
                 <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
                 <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
                 <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="356" min="1" max="1" chance="0.02065" /> <!-- Theca Leather Armor -->
+                <item id="1986" min="1" max="1" chance="1.81569" /> <!-- Theca Leather Armor Pattern -->
+                <item id="2414" min="1" max="1" chance="0.03301" /> <!-- Theca Leather Gaiters -->
+                <item id="2959" min="1" max="1" chance="2.911" /> <!-- Theca Leather Gaiter Pattern -->
+                <item id="2497" min="1" max="1" chance="0.01085" /> <!-- Drake Leather Armor -->
+                <item id="2966" min="1" max="1" chance="1.29432" /> <!-- Drake Leather Armor Texture -->
+                <item id="1872" min="1" max="1" chance="0.01592" /> <!-- Divine Tunic -->
+                <item id="1877" min="1" max="1" chance="1.6284" /> <!-- Divine Tunic Fabric -->
+                <item id="1875" min="1" max="1" chance="0.02539" /> <!-- Divine Stockings -->
+                <item id="1881" min="1" max="1" chance="2.54713" /> <!-- Divine Stocking Pattern -->
+                <item id="1867" min="1" max="1" chance="15.28394" /> <!-- Animal Skin -->
+                <item id="1864" min="1" max="1" chance="15.28394" /> <!-- Stem -->
+                <item id="1882" min="1" max="1" chance="10.18614" /> <!-- Leather -->
+                <item id="1878" min="1" max="1" chance="15.28394" /> <!-- Durable Braid -->
+                <item id="952" min="1" max="1" chance="0.62944" /> <!-- Scroll: Enchant Armor (C-Grade) - Exchangeable -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="88.56" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="17.45" /> <!-- Unknown Resources -->
                 <item id="92999" min="1" max="1" chance="1.873" /> <!-- High-grade Resources -->
+                <item id="1985" min="1" max="1" chance="18.71597" /> <!-- Theca Leather Gaiter Pattern -->
+                <item id="4039" min="1" max="1" chance="18.12966" /> <!-- Mold Glue -->
+                <item id="4040" min="1" max="1" chance="11.13845" /> <!-- Mold Lubricant -->
+                <item id="2114" min="1" max="1" chance="2.76964" /> <!-- Widowmaker Head -->
             </spoil>
         </dropLists>
     </npc>
-    <npc id="20218" level="71" type="Monster" name="Premo" element="FIRE">
+    <npc id="20218" level="55" type="Monster" name="Premo">
         <race>GIANT</race>
         <sex>FEMALE</sex>
         <acquire exp="8963" sp="505" attribute_exp="32" />
@@ -1061,12 +1148,16 @@
             <defence physical="185" magical="91.5841584158416" />
         </stats>
         <status attackable="false" />
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>ALL</clan>
+            </clanList>
+        </ai>
         <skillList>
-            <skill id="4071" level="1" /> <!-- Bow Resistance -->
-            <skill id="4116" level="2" /> <!-- Magic Damage Resistance -->
             <skill id="4416" level="11" /> <!-- Giants -->
-            <skill id="5620" level="3" /> <!-- Melee Attack Vulnerability -->
-            <skill id="48044" level="1" /> <!-- Monster of Fire Element -->
+            <skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+            <skill id="4410" level="14" /> <!-- Strong P.atk -->
+            <skill id="4412" level="13" /> <!-- Slightly Strong P.def -->
         </skillList>
         <collision>
             <radius normal="21" />
@@ -1074,7 +1165,7 @@
         </collision>
         <dropLists>
             <drop>
-                <item id="57" min="422" max="985" chance="70" /> <!-- Adena -->
+                <item id="57" min="3913" max="9184" chance="70" /> <!-- Adena -->
                 <item id="92908" min="1" max="1" chance="7.535" /> <!-- Material: Lump of Wood -->
                 <item id="92996" min="1" max="1" chance="7.519" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="1.567" /> <!-- Unknown Resources -->
@@ -1084,22 +1175,29 @@
                 <item id="92999" min="1" max="1" chance="0.3" /> <!-- High-grade Resources -->
                 <item id="92912" min="1" max="1" chance="0.3" /> <!-- Material: Plain Fabric -->
                 <item id="92911" min="1" max="1" chance="0.3" /> <!-- Material: Leather Scraps -->
-                <item id="92995" min="1" max="1" chance="0.075" /> <!-- Thons -->
                 <item id="92913" min="1" max="1" chance="0.075" /> <!-- Material: Unknown Metal -->
                 <item id="92915" min="1" max="1" chance="0.03" /> <!-- Material: Bag of Low-grade Stuff -->
                 <item id="92914" min="1" max="1" chance="0.03" /> <!-- Material: Sack Shreds -->
                 <item id="92988" min="1" max="1" chance="0.003" /> <!-- Orcish Treasure -->
-                <item id="92792" min="1" max="1" chance="0.003" /> <!-- Keshanberk Blade -->
-                <item id="92791" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff Head -->
-                <item id="92790" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe Head -->
-                <item id="92789" min="1" max="1" chance="0.003" /> <!-- Great Sword Blade -->
-                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Orc King's Treasure -->
+                <item id="92989" min="1" max="1" chance="0.0009" /> <!-- Spirit's Treasure -->
+                <item id="355" min="1" max="1" chance="0.0326" /> <!-- Dwarven Chain Mail Shirt -->
+                <item id="1968" min="1" max="1" chance="2.51396" /> <!-- Dwarven Chain Mail Shirt Material -->
+                <item id="382" min="1" max="1" chance="0.0521" /> <!-- Dwarven Chain Gaiters -->
+                <item id="1969" min="1" max="1" chance="3.9725" /> <!-- Dwarven Chain Gaiter Material -->
+                <item id="2331" min="1" max="1" chance="0.12208" /> <!-- Recipe: Poleaxe -->
+                <item id="1867" min="1" max="1" chance="20.40371" /> <!-- Animal Skin -->
+                <item id="1864" min="1" max="1" chance="20.40371" /> <!-- Stem -->
+                <item id="1882" min="1" max="1" chance="6.94524" /> <!-- Leather -->
+                <item id="1878" min="1" max="1" chance="12.32153" /> <!-- Durable Braid -->
             </drop>
             <spoil>
                 <item id="92996" min="1" max="1" chance="69.34" /> <!-- Old Resources -->
                 <item id="92997" min="1" max="1" chance="13.73" /> <!-- Unknown Resources -->
                 <item id="92998" min="1" max="1" chance="7.001" /> <!-- Shining Resources -->
                 <item id="92999" min="1" max="1" chance="1.354" /> <!-- High-grade Resources -->
+                <item id="92999" min="1" max="1" chance="4.3084" /> <!-- Recipe: Theca Leather Gloves -->
+                <item id="92999" min="1" max="1" chance="4.8959" /> <!-- Recipe: Great Helmet -->
+                <item id="92999" min="1" max="1" chance="4.0163" /> <!-- Recipe: Earring of Seal -->
             </spoil>
         </dropLists>
     </npc>
