@@ -18,21 +18,57 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item chance="8.33333333333" id="70487"/>
+                <item chance="8.33333333333" id="70488"/>
+                <item chance="8.33333333333" id="70489"/>
+                <item chance="8.33333333333" id="70490"/>
+                <item chance="8.33333333333" id="70491"/>
+                <item chance="8.33333333333" id="70492"/>
+                <item chance="8.33333333333" id="70493"/>
+                <item chance="8.33333333333" id="70494"/>
+                <item chance="8.33333333333" id="70525"/>
+                <item chance="8.33333333333" id="71435"/>
+                <item chance="8.33333333333" id="70821"/>
+                <item chance="8.33333333333" id="70825"/>	
+            </random-restoration>
+        </effects>		
     </skill>
     <skill id="59103" name="Brilliant Jewelry Box" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item chance="8.33333333333" id="70487"/>
+                <item chance="8.33333333333" id="70488"/>
+                <item chance="8.33333333333" id="70489"/>
+                <item chance="8.33333333333" id="70490"/>
+                <item chance="8.33333333333" id="70491"/>
+                <item chance="8.33333333333" id="70492"/>
+                <item chance="8.33333333333" id="70493"/>
+                <item chance="8.33333333333" id="70494"/>
+                <item chance="8.33333333333" id="70525"/>
+                <item chance="8.33333333333" id="71435"/>
+                <item chance="8.33333333333" id="70821"/>
+                <item chance="8.33333333333" id="70825"/>	
+            </random-restoration>
+        </effects>			
     </skill>
     <skill id="59104" name="Fortune Jewelry Box" action="A1">
         <!-- none -->
@@ -994,7 +1030,7 @@
             <reuse initial="1000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="VipPoint">
                 <power initial="800"/>
             </effect>
@@ -1007,7 +1043,7 @@
             <reuse initial="1000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="VipPoint">
                 <power initial="2400"/>
             </effect>
@@ -1020,7 +1056,7 @@
             <reuse initial="1000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="VipPoint">
                 <power initial="80"/>
             </effect>
@@ -1033,7 +1069,7 @@
             <reuse initial="1000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="VipPoint">
                 <power initial="240"/>
             </effect>
@@ -1148,100 +1184,102 @@
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
+            <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
-			<level initial="1"/>
-			<time initial="1200"/>            
-		</abnormal>
+        <abnormal visual="COSTUME_HALLOWEEN">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>	
         <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="10.0"/>                 
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="10.0"/>                   
+                <power initial="10.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-			     <power initial="5.0"/>                      
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="5.0"/>                 
-			</stat-modify>
-				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>		
-            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>
-        </effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>			
+        </effects>		
     </skill>
     <skill id="59142" name="Lingering Halloween" action="A2">
         <!-- Lingering Halloween. XP/SP Gain when hunting +20%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
+            <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
-			<level initial="2"/>
-			<time initial="1200"/>            
-		</abnormal>
+        <abnormal visual="COSTUME_HALLOWEEN_LV2">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>	
         <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20.0"/>                 
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="20.0"/>                   
+                <power initial="20.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-			     <power initial="5.0"/>                      
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="5.0"/>                 
-			</stat-modify>
-				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>		
-            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>
-        </effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>			
+        </effects>		
     </skill>
     <skill id="59143" name="Lingering Halloween" action="A2">
         <!-- Lingering Halloween. XP/SP Gain when hunting +30%, P./M. Atk. +5%, Atk. Spd./Casting Spd. +5%. Cannot use this item when having Pumpkinface's Halloween Curse, and these buff effects disappear when obtaining Pumpkinface's buff. -->
         <icon initial="icon.event_halloween_pumpkin_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
-            <reuse initial="0"/>
+            <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-      	<abnormal type="CHANGEBODY" visual="HALLOWEEN_SUIT">
-			<level initial="3"/>
-			<time initial="1200"/>            
-		</abnormal>
+        <abnormal visual="COSTUME_HALLOWEEN_LV3">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
         <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="5.0"/>
+            </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="30.0"/>                 
+                <power initial="30.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="30.0"/>                   
+                <power initial="30.0"/>
             </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-			     <power initial="5.0"/>                      
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="5.0"/>                 
-			</stat-modify>
-				<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>		
-            	<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
-				<power initial="5.0"/>                 
-			</stat-modify>
-        </effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>			
+        </effects>	
     </skill>
     <skill id="59144" name="Magic Trumpet">
         <!-- World Chat +20. Resets every day at 7:00 am. -->
@@ -1252,7 +1290,7 @@
 			<stat-modify stat="WORLD_CHAT_POINTS">
                 <power initial="20"/>
             </stat-modify>
-        </effects>
+        </effects>	
     </skill>
     <skill id="59145" name="Magic Warehouse Summoning SCroll" action="A1">
         <!-- Summons the Magic Warehouse. -->
@@ -1271,7 +1309,7 @@
     <skill id="59147" name="Party Member Scroll of Escape" action="A1" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+		<attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <reuse initial="1800000"/>
             <effect-point initial="100"/>
             <hit-time initial="5500"/>
@@ -1538,7 +1576,7 @@
 					<value level="10">20.0</value>
 				</power>
 			</stat-modify>
-        </effects>
+        </effects>	
     </skill>
     <skill id="59153" name="Level 5 Brooch">
         <!-- Can equip 6 gems. -->

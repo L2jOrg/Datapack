@@ -244,13 +244,16 @@
 	<item id="90034" name="Spellbook Box - 3rd Class Transfer" type="NONE">
 	<!-- Double-click to receive one of the Spellbooks for 3rd Class Transfer. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="39202" value="-1"/>  <!-- Spellbook Box -->
+		</skill-reducer>	
 	</item>
 
 	<item id="90035" name="Life Stone Pack" type="NONE">
 	<!-- Double-click to receive one of the following items: High/Medium/Average Quality Life Stone. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes immediate-effect="true" action="CAPSULE"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="39203" value="-1"/>  <!-- Life Stone Pack -->
 		</skill-reducer>

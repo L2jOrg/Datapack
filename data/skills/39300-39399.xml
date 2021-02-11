@@ -143,21 +143,106 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39305" name="Dark Knights Transformation" max-level="3" action="A1">
+    <skill id="39305" name="Dark Knights Transformation" max-level="3" action="A2">
         <!--
-            level 1: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +5%%, PvP P. Def. +5%%, and Stun/Paralysis/MEN Resistance +5%%. Effect remains even after death.
-            level 2: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +7%%, PvP P. Def. +7%%, and Stun/Paralysis/MEN Resistance +7%%. Effect remains even after death.
-            level 3: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +10%%, PvP P. Def. +10%%, and Stun/Paralysis/MEN Resistance +10%%. Effect remains even after death.
+			< 1 >
+            level 1: Transforms into a Dark Knight. 
+			For 20 minutes, 
+			Max HP/Max MP +10%, 
+			PvP P. Atk. +5%, 
+			PvP P. Def. +5%, 
+			and Stun/Paralysis/MEN Resistance +5%. 
+			Effect remains even after death.
+			< 2 >
+            level 2: Transforms into a Dark Knight. 
+			For 20 minutes, 
+			Max HP/Max MP +10%, 
+			PvP P. Atk. +7%, 
+			PvP P. Def. +7%, 
+			and Stun/Paralysis/MEN Resistance +7%. 
+			Effect remains even after death.
+			< 3 >
+            level 3: Transforms into a Dark Knight. 
+			For 20 minutes, 
+			Max HP/Max MP +10%, 
+			PvP P. Atk. +10%, 
+			PvP P. Def. +10%, 
+			and Stun/Paralysis/MEN Resistance +10%. 
+			Effect remains even after death.
          -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-        <attributes property="PHYSIC">
+       <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
+        <abnormal type="CHANGEBODY" visual="COSTUME_DARK_KNIGHT">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>	
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="10.0"/>
+            </vital-stat-modify>
+			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+				<power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+				</power>		
+			</stat-modify>
+			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+				<power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+				</power>		
+			</stat-modify>
+			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+				<power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+				</power>		
+			</stat-modify>
+			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+				<power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+				</power>		
+			</stat-modify>		
+            <defence-trait>
+                <trait type="SHOCK">
+                    <power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+					</power>
+                </trait>
+                <trait type="DERANGEMENT">
+                    <power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+					</power>
+                </trait>
+                <trait type="PARALYZE">
+                    <power initial="5">
+						<value level="2">7</value>
+						<value level="3">10</value>
+					</power>
+                </trait>
+            </defence-trait>			
+		</effects>
     </skill>
-    <skill id="39306" name="White Assassin Transformation" action="A1">
-        <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
+    <skill id="39306" name="White Assassin Transformation" action="A2">
+        <!-- Transformed into a White Assassin. For 20 minutes, 
+		Max HP/Max MP +7%, 
+		P. Accuracy/M. Accuracy +2, 
+		P. Atk./M. Atk. +3%, 
+		P. Def./M. Def. +3%,
+		Atk. Spd. +5%, 
+		M. Critical Rate +20, 
+		and Movement Speed +5. 
+		Effect remains even after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
             <reuse initial="60000"/>
@@ -218,17 +303,13 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39308" name="Life Control Tower's Scroll of Blessing" action="A1">
+    <skill id="39308" name="Life Control Tower's Scroll of Blessing" action="A2">
         <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
         <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
         <attributes property="PHYSIC">
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
-        <consume>
-            <item initial="90835"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <abnormal type="EXP_SP_G">
             <level initial="2"/>
@@ -1214,5 +1295,11 @@
         <icon initial="icon.bm_freya_rune"/>
         <attributes property="MAGIC"/>
         <target/>
+        <effects>		
+            <reduce-drop-penalty>
+                <experience initial="-20"/>
+                <death-penalty initial="-20"/>
+            </reduce-drop-penalty>
+        </effects>	
     </skill>
 </list>

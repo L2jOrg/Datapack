@@ -15,7 +15,7 @@
         <attributes property="PHYSIC">
             <effect-point initial="1"/>
         </attributes>
-        <target/>
+        <target/>	
     </skill>
     <skill id="55302" name="Shabby Box Acquisition Effect" action="A1">
         <icon initial="BranchIcon.Icon.skill_g_field_special_buff_i02"/>
@@ -88,6 +88,34 @@
         <icon initial="icon.event_classic_ring"/>
         <attributes property="MAGIC"/>
         <target/>
+        <effects>
+           <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">7.0</value>
+                    <value level="8">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="10">10.0</value>
+                </power>
+            </stat-modify>	
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power initial="1.0">
+                    <value level="2">2.0</value>
+                    <value level="3">3.0</value>
+                    <value level="4">4.0</value>
+                    <value level="5">5.0</value>
+                    <value level="6">6.0</value>
+                    <value level="7">7.0</value>
+                    <value level="8">8.0</value>
+                    <value level="9">9.0</value>
+                    <value level="10">10.0</value>
+                </power>
+            </vital-stat-modify>			
+        </effects>		
     </skill>
     <skill id="55310" name="Holiday Hat" action="A1">
         <!-- Resurrects a dead target and restores 100%% XP. Consumes 1 Spirit Ore. Skill Cooldown: 600 minutes. -->
@@ -246,8 +274,7 @@
     <skill id="55318" name="Refined Rare Accessory Pack" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55319" name="Lineage II Chest" action="A1">
@@ -453,8 +480,7 @@
     <skill id="55326" name="Elixir of Mind" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55327" name="Sweet Chocolate Energy" action="A1">
@@ -622,11 +648,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55335" name="XP/SP Hourglass - 1 Hour" action="A1">
+    <skill id="55335" name="XP/SP Hourglass - 1 Hour" action="A2">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
         <target/>
         <abnormal>
             <level initial="1"/>
@@ -644,8 +669,7 @@
     <skill id="55336" name="XP/SP Hourglass - 2 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
         <target/>
         <abnormal>
             <level initial="1"/>
@@ -663,8 +687,7 @@
     <skill id="55337" name="XP/SP Hourglass - 3 Hours" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
         <target/>
         <abnormal>
             <level initial="1"/>
@@ -682,8 +705,7 @@
     <skill id="55338" name="XP/SP Hourglass - 1 Hour" action="A1">
         <!-- XP/SP gain +50%% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
         <target/>
         <abnormal>
             <level initial="1"/>
@@ -1007,8 +1029,7 @@
     <skill id="55356" name="XP/SP Hourglass - 1 Hour" action="A2">
         <!-- XP/SP gain +100% for the duration of the effect -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF">
-        </attributes>
+        <attributes property="PHYSIC" stay-after-death="true" auto-use="BUFF"/>
         <target/>
         <abnormal type="EXP_SP_E">
             <level initial="1"/>
@@ -1103,7 +1124,9 @@
     <skill id="55361" name="Superspeed Potion" action="A2">
         <!-- Greatly increases Speed for a short period of time. -->
         <icon initial="icon.etc_potion_red_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <magic-level initial="-1"/>
+        </attributes>
         <target/>
         <abnormal type="SPEED_UP">
             <level initial="2"/>
@@ -1118,15 +1141,11 @@
     <skill id="55362" name="Clan Reputation Score - 10" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <reuse initial="3000"/>
             <hit-time initial="200"/>
         </attributes>
-		<consume>			
-			<item initial="70280"/>
-			<item-count initial="1"/>				
-		</consume>
         <target/>
         <effects>
             <effect name="GiveClanReputation">
@@ -1137,15 +1156,11 @@
     <skill id="55363" name="Clan Reputation Score - 50" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <reuse initial="3000"/>
             <hit-time initial="200"/>
         </attributes>
-		<consume>			
-			<item initial="70281"/>
-			<item-count initial="1"/>				
-		</consume>
         <target/>
         <effects>
             <effect name="GiveClanReputation">
@@ -1156,19 +1171,15 @@
     <skill id="55364" name="Clan Reputation Score - 150" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <reuse initial="3000"/>
             <hit-time initial="200"/>
         </attributes>
-		<consume>			
-			<item initial="70282"/>
-			<item-count initial="1"/>				
-		</consume>
         <target/>
         <effects>
             <effect name="GiveClanReputation">
-                <power initial="150000.0"/>
+                <power initial="150.0"/>
             </effect>
         </effects>
     </skill>
@@ -1291,8 +1302,7 @@
     <skill id="55377" name="Enchant Scroll of Forbidden Limit" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55378" name="Effect of the Talisman of Fate Lv. 1" max-level="20">
@@ -1433,10 +1443,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="55389" name="Olympiad Warrior's Potion - STR" max-level="2" action="A1">
+    <skill id="55389" name="Olympiad Warrior's Potion - STR" max-level="2" action="A2">
         <!--
             level 1: For 20 minutes, STR +4.
-            level 2: For 20 minutes, DEX +4.
+            level 2: For 20 minutes, STR +7.
          -->
         <icon initial="icon.etc_lesser_potion_red_i00">
             <value level="2">icon.etc_fruit_juice_glass_bottle_i10</value>
@@ -1446,11 +1456,22 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="STR">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>	
     </skill>
-    <skill id="55390" name="Enhanced Olympiad Warrior's Potion - STR" max-level="2" action="A1">
+    <skill id="55390" name="Enhanced Olympiad Warrior's Potion - INT" max-level="2" action="A2">
         <!--
-            level 1: For 20 minutes, STR +7.
-            level 2: For 20 minutes, DEX +7.
+            level 1: For 20 minutes, INT +4.
+            level 2: For 20 minutes, INT +7.
          -->
         <icon initial="icon.etc_lesser_potion_scarlet_i00">
             <value level="2">icon.etc_fruit_juice_glass_bottle_i11</value>
@@ -1460,11 +1481,22 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="INT">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>	
     </skill>
-    <skill id="55391" name="Olympiad Warrior's Potion - INT" max-level="2" action="A1">
+    <skill id="55391" name="Olympiad Warrior's Potion - CON" max-level="2" action="A2">
         <!--
-            level 1: For 20 minutes, INT +4.
-            level 2: For 20 minutes, MEN +4.
+            level 1: For 20 minutes, CON +4.
+            level 2: For 20 minutes, CON +7.
          -->
         <icon initial="icon.etc_lesser_potion_yellow_i00">
             <value level="2">icon.etc_fruit_juice_glass_bottle_i07</value>
@@ -1474,11 +1506,22 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="CON">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>	
     </skill>
-    <skill id="55392" name="Enhanced Olympiad Warrior's Potion - INT" max-level="2" action="A1">
+    <skill id="55392" name="Enhanced Olympiad Warrior's Potion - DEX" max-level="2" action="A2">
         <!--
-            level 1: For 20 minutes, INT +7.
-            level 2: For 20 minutes, MEN +7.
+            level 1: For 20 minutes, DEX +4.
+            level 2: For 20 minutes, DEX +7.
          -->
         <icon initial="icon.etc_lesser_potion_green_i00">
             <value level="2">icon.etc_fruit_juice_glass_bottle_i03</value>
@@ -1488,11 +1531,22 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="DEX">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>	
     </skill>
-    <skill id="55393" name="Olympiad Warrior's Potion - CON" max-level="2" action="A1">
+    <skill id="55393" name="Olympiad Warrior's Potion - MEN" max-level="2" action="A2">
         <!--
-            level 1: For 20 minutes, CON +4.
-            level 2: For 20 minutes, WIT +4.
+            level 1: For 20 minutes, MEN +4.
+            level 2: For 20 minutes, MEN +7.
          -->
         <icon initial="icon.etc_lesser_potion_blue_i00">
             <value level="2">icon.etc_fruit_juice_glass_bottle_i05</value>
@@ -1502,8 +1556,19 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="MEN">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>		
     </skill>
-    <skill id="55394" name="Enhanced Olympiad Warrior's Potion - CON" max-level="2" action="A1">
+    <skill id="55394" name="Enhanced Olympiad Warrior's Potion - WIT" max-level="2" action="A2">
         <!--
             level 1: For 20 minutes, WIT +4.
             level 2: For 20 minutes, WIT +7.
@@ -1516,6 +1581,17 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <abnormal type="G_EV_BUFF1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <base-stats types="WIT">
+                <power initial="4.0">
+                    <value level="2">7.0</value>
+                </power>				
+            </base-stats>
+        </effects>		
     </skill>
     <skill id="55395" name="Commemorative Olympiad XP/SP Scroll" action="A1">
         <!-- For 20 minutes, obtained XP/ SP +50%%. -->
@@ -1536,19 +1612,14 @@
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="50.0"/>
             </stat-modify>
-        </effects>
+        </effects>		
     </skill>
-    <skill id="55396" name="Olympiad Warrior's Special Fruit" action="A1">
+    <skill id="55396" name="Olympiad Warrior's Special Fruit" action="A2">
         <!-- For 20 minutes, obtained XP/ SP +10%%, P./ M. Atk. +10%%, P./ M. Def. +5%%, Max. HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvE damage +10%%. With a certain chance, converts 3%% of damage dealt into HP. -->
         <icon initial="icon.etc_cobol_i04"/>
         <attributes property="PHYSIC" stay-after-death="true">
-            <reuse initial="20000"/>
             <effect-point initial="1"/>
         </attributes>
-		<consume>
-            <item initial="70326"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <abnormal type="EXP_SP_K">
             <level initial="2"/>
