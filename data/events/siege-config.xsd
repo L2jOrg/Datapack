@@ -27,10 +27,17 @@
     <xs:complexType name="CastleSiege">
         <xs:sequence>
             <xs:element name="scheduled-days" type="DayOfWeekList"/>
+            <xs:element name="control-tower" type="ControlTower"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:int" use="required"/>
         <xs:attribute name="start-date" type="xs:date"/>
         <xs:attribute name="force-start-date" type="xs:boolean" default="false"/>
     </xs:complexType>
 
+    <xs:complexType name="ControlTower">
+        <xs:sequence>
+            <xs:element name="location" type="Location" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
 </xs:schema>
