@@ -6,8 +6,8 @@
     <event name="Siege" class="org.l2j.gameserver.engine.siege.SiegeEngine">
 
         <scheduler>
-            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="19" minute="30" repeat="true"/>
-            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="19" minute="40" repeat="true"/>
+            <schedule name="start-preparation" event="onPreparationStart" dayOfWeek="0-6" hour="9" minute="50" repeat="true"/>
+            <schedule name="start-siege" event="onSiegeStart" dayOfWeek="0-6" hour="10" minute="5" repeat="true"/>
             <schedule name="stop-siege" event="onSiegeStop" dayOfWeek="0-6" hour="23" minute="50" repeat="true"/>
 
             <conditionalSchedule>
@@ -27,11 +27,15 @@
             <siege-config>
                 <castle id="3">
                     <scheduled-days>SUNDAY MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY</scheduled-days>
-                    <control-tower id="13002">
-                        <location x="113115" y="144829" z="-2446"/>
-                        <location x="118828" y="145106" z="-2447"/>
-                        <location x="117329" y="145041" z="-2412"/>
-                    </control-tower>
+                    <control-tower id="13002" x="113115" y="144829" z="-2446"/>
+                    <control-tower id="13002" x="118828" y="145106" z="-2447"/>
+                    <control-tower id="13002" x="117329" y="145041" z="-2412"/>
+                    <flame-tower id="13004" x="118331" y="145055" z="-2627">
+                        <zones>70026 70028</zones>
+                    </flame-tower>
+                    <flame-tower id="13004" x="117768" y="143880" z="-2451">
+                        <zones>70026 70028</zones>
+                    </flame-tower>
                 </castle>
             </siege-config>
         </config>
