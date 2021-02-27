@@ -27,7 +27,8 @@
     <xs:complexType name="CastleSiege">
         <xs:sequence>
             <xs:element name="scheduled-days" type="DayOfWeekList"/>
-            <xs:element name="control-tower" type="ControlTower"/>
+            <xs:element name="control-tower" type="ControlTower" maxOccurs="unbounded"/>
+            <xs:element name="flame-tower" type="FlameTower" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:int" use="required"/>
         <xs:attribute name="start-date" type="xs:date"/>
@@ -35,9 +36,20 @@
     </xs:complexType>
 
     <xs:complexType name="ControlTower">
-        <xs:sequence>
-            <xs:element name="location" type="Location" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        <xs:complexContent>
+            <xs:extension base="Location">
+                <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="FlameTower">
+        <xs:complexContent>
+            <xs:extension base="ControlTower">
+                <xs:sequence>
+                    <xs:element name="zones" type="intList"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 </xs:schema>
