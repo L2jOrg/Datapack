@@ -1,13 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="19009" name="Clan Advent" action="A2">
-        <!-- When the clan leader logs in, clan members' P./M. Atk. + 2%%. -->
-        <icon initial="icon.skill19009"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true">
+    <skill id="19009" name="Clan Advent" max-level="10" action="A2">
+        <!-- 
+			level 1: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +5 M. Atk. +5
+			level 2: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +10 M. Atk. +10
+			level 3: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +15 M. Atk. +15
+			level 4: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +25 M. Atk. +25
+			level 5: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +50 M. Atk. +50
+			level 6: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +100 M. Atk. +100
+			level 7: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +200 M. Atk. +200
+			level 8: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +200 M. Atk. +200 P. Def. +50 M. Def. +50
+			level 9: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +200 M. Atk. +200 P. Def. +100 M. Def. +100
+			level 10: When a clan leader is online, the following effects are applied for clan members.  P. Atk. +200 M. Atk. +200 P. Def. +200 M. Def. +200
+		-->
+        <icon initial="icon.skill19009_1">
+            <value level="2">icon.skill19009_2</value>
+            <value level="3">icon.skill19009_3</value>
+            <value level="4">icon.skill19009_4</value>
+            <value level="5">icon.skill19009_5</value>
+            <value level="6">icon.skill19009_6</value>
+            <value level="7">icon.skill19009_7</value>
+            <value level="8">icon.skill19009_8</value>
+            <value level="9">icon.skill19009_9</value>
+            <value level="10">icon.skill19009_10</value>
+        </icon>
+        <attributes dispellable="false" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
-        <target scope="PLEDGE" object="FRIEND" range="1000" affect-min="50" affect-random="50"/>
+        <target affect-min="50" affect-random="50" object="FRIEND" range="1000" scope="PLEDGE"/>
         <abnormal type="CLAN_ADVENT">
             <level initial="1"/>
             <time initial="-1"/>
@@ -22,10 +44,9 @@
         </effects>
     </skill>
     <skill id="19032" name="Ability of Light">
-        <!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
+        <!-- Imbued with the Ability of Light. Max CP +2000. Effects do not apply when in Chaotic state. -->
         <icon initial="icon.skill19008"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <conditions>
             <condition name="NonChaotic" scope="PASSIVE"/>
@@ -33,23 +54,22 @@
         <effects>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="2000.0"/>
-            </vital-stat-modify>            
+            </vital-stat-modify>
         </effects>
     </skill>
     <skill id="19033" name="Ability of Darkness">
-        <!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
+        <!-- Imbued with the Ability of Darkness. Max CP +1000. -->
         <icon initial="icon.skill19008"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="1000.0"/>
-            </vital-stat-modify>         
+            </vital-stat-modify>
         </effects>
     </skill>
     <skill id="19034" name="Seal of Ruler" action="A1">
-        <!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+        <!-- Puts a seal imbued with the power of ancient ruler defending the castle. -->
         <icon initial="icon.skill0246"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
@@ -95,8 +115,9 @@
     <skill id="19036" name="Blessing of Light" action="A2">
         <!-- Acquires 3%% additional XP and SP through the blessing of the Guardian of Light. -->
         <icon initial="icon.etc_pi_gift_box_i04"/>
-        <attributes property="PHYSIC" static-reuse="true" stay-after-death="true" irreplacable="true">
+        <attributes irreplacable="true" static-reuse="true" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="EXP_SP_N" visual="VP_KEEP">
@@ -113,10 +134,9 @@
         </effects>
     </skill>
     <skill id="19039" name="Cloak of Light">
-        <!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. Not available in a chaotic state. -->
+        <!-- Max HP/ MP/ CP +5%%, P. Def. +3%%, M. Def. +5%%, Resistance to All Weapons +3%%, P. Critical Rate/ M. Skill Critical Rate +10, Damage Reflection +3%%. Not available in a chaotic state. -->
         <icon initial="icon.amor_goodness_cloak"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <conditions>
             <condition name="NonChaotic" scope="PASSIVE"/>
@@ -175,10 +195,9 @@
         </effects>
     </skill>
     <skill id="19040" name="Cloak of Darkness">
-        <!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. -->
+        <!-- Max HP/ MP/ CP +5%%, P. Def. +3%%, M. Def. +5%%, Resistance to All Weapons +3%%, P. Critical Rate/ M. Skill Critical Rate +10, Damage Reflection +3%%. -->
         <icon initial="icon.amor_evilness_cloak"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -238,6 +257,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <hit-time initial="20000"/>
         </attributes>
@@ -254,6 +274,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <hit-time initial="200"/>
         </attributes>

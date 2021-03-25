@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="3100" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Upon using magic, momentarily inflicts Sleep on the target. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
+    <skill id="3100" name="Item Skill: Sleep" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Sleep on the target when using magic. Additional chance to be put into Sleep greatly decreases while the effect is active. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="SLEEP">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -35,10 +35,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="3101" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
-        <!-- Skill Effect: Petrifies an enemy for 15 seconds upon using magic. When fully petrified, becomes paralyzed for 10 seconds. -->
+    <skill id="3101" name="Item Skill: Paralysis" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Magic attacks slow the enemy down for 15 sec., after that the enemy is fully paralysed for 10 sec. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="PARALYZE">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -76,10 +76,10 @@
             </call-skill>
         </effects>
     </skill>
-    <skill id="3102" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
-        <!-- Chance: Momentarily petrifies the target during magic use. -->
+    <skill id="3102" name="Item Skill: Medusa" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily petrifies the target when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -95,7 +95,6 @@
             <reuse initial="30000"/>
             <effect-point initial="-100"/>
             <effect-range initial="1500"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -108,10 +107,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="3103" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
-        <!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during magic use. -->
+    <skill id="3103" name="Item Skill: Fear" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Fear on the target when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -139,10 +138,10 @@
             <effect name="Fear"/>
         </effects>
     </skill>
-    <skill id="3104" name="Item Skill: Poison (Magic)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: Upon using magic, momentarily inflicts Poison on the target. -->
+    <skill id="3104" name="Item Skill: Poison" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily poisons the target when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" trait="POISON">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -165,7 +164,7 @@
             <effect-range initial="1500"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -187,10 +186,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3105" name="Item Skill: Bleed (Magic)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: Upon using magic, momentarily inflicts Bleed on the target. -->
+    <skill id="3105" name="Item Skill: Bleed" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Bleed on the target when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" next-action="ATTACK" trait="BLEED">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -213,7 +212,7 @@
             <effect-range initial="1500"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -234,10 +233,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3106" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
-        <!-- Chance: Momentarily blocks the target's magic skill during magic use. -->
+    <skill id="3106" name="Item Skill: Silence" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily blocks the target's M. skills when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -264,10 +263,10 @@
             <effect name="Mute"/>
         </effects>
     </skill>
-    <skill id="3107" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Upon using magic, momentarily blocks all of the target's P. Skills/M. Skills. -->
+    <skill id="3107" name="Item Skill: Doom" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily blocks the target's P./ M. skills when using magic. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -296,18 +295,18 @@
         </effects>
     </skill>
     <skill id="3108" name="Item Skill: Aggression Up" max-level="15" action="A1">
-        <!--
-		level 1: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 438..
-		level 2: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 467..
-		level 3: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 495..
-		level 4: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 523..
-		level 5: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 549..
-		level 6: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 574..
-		level 7: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 597..
-		level 8: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 617..
-		level 9: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 635..
-		level 10: Effect: Increases the target's urge to attack upon a P. Critical attack. Power: 659..
-	 -->
+        <!-- 
+			level 1: When triggered: Increases the target's aggression after a physical critical attack. Power 438.
+			level 2: When triggered: Increases the target's aggression after a physical critical attack. Power 467.
+			level 3: When triggered: Increases the target's aggression after a physical critical attack. Power 495.
+			level 4: When triggered: Increases the target's aggression after a physical critical attack. Power 523.
+			level 5: When triggered: Increases the target's aggression after a physical critical attack. Power 549.
+			level 6: When triggered: Increases the target's aggression after a physical critical attack. Power 574.
+			level 7: When triggered: Increases the target's aggression after a physical critical attack. Power 597.
+			level 8: When triggered: Increases the target's aggression after a physical critical attack. Power 617.
+			level 9: When triggered: Increases the target's aggression after a physical critical attack. Power 635.
+			level 10: When triggered: Increases the target's aggression after a physical critical attack. Power 659.
+		-->
         <icon initial="icon.skill3080"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -339,23 +338,23 @@
         </effects>
     </skill>
     <skill id="3109" name="Item Skill: Aggression Down" max-level="15" action="A1">
-        <!--
-		level 1: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 219..
-		level 2: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 234..
-		level 3: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 248..
-		level 4: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 262..
-		level 5: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 275..
-		level 6: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 287..
-		level 7: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 299..
-		level 8: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 309..
-		level 9: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 318..
-		level 10: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 330..
-		level 11: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 342..
-		level 12: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 354..
-		level 13: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 366..
-		level 14: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 378..
-		level 15: Effect: Decreases the target's urge to attack upon P. Critical damage. Power: 390..
-	 -->
+        <!-- 
+			level 1: When triggered: Decreases the target's aggression after a physical critical attack. Power 219.
+			level 2: When triggered: Decreases the target's aggression after a physical critical attack. Power 234.
+			level 3: When triggered: Decreases the target's aggression after a physical critical attack. Power 248.
+			level 4: When triggered: Decreases the target's aggression after a physical critical attack. Power 262.
+			level 5: When triggered: Decreases the target's aggression after a physical critical attack. Power 275.
+			level 6: When triggered: Decreases the target's aggression after a physical critical attack. Power 287.
+			level 7: When triggered: Decreases the target's aggression after a physical critical attack. Power 299.
+			level 8: When triggered: Decreases the target's aggression after a physical critical attack. Power 309.
+			level 9: When triggered: Decreases the target's aggression after a physical critical attack. Power 318.
+			level 10: When triggered: Decreases the target's aggression after a physical critical attack. Power 330.
+			level 11: When triggered: Decreases the target's aggression after a physical critical attack. Power 342.
+			level 12: When triggered: Decreases the target's aggression after a physical critical attack. Power 354.
+			level 13: When triggered: Decreases the target's aggression after a physical critical attack. Power 366.
+			level 14: When triggered: Decreases the target's aggression after a physical critical attack. Power 378.
+			level 15: When triggered: Decreases the target's aggression after a physical critical attack. Power 390.
+		-->
         <icon initial="icon.skill3080"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
@@ -401,18 +400,18 @@
         </effects>
     </skill>
     <skill id="3110" name="Item Skill: Mana Burn" max-level="10" action="A1">
-        <!--
-		level 1: Effect: Burns the target's MP upon P. Critical damage. Power: 49..
-		level 2: Effect: Burns the target's MP upon P. Critical damage. Power: 53..
-		level 3: Effect: Burns the target's MP upon P. Critical damage. Power: 57..
-		level 4: Effect: Burns the target's MP upon P. Critical damage. Power: 61..
-		level 5: Effect: Burns the target's MP upon P. Critical damage. Power: 66..
-		level 6: Effect: Burns the target's MP upon P. Critical damage. Power: 70..
-		level 7: Effect: Burns the target's MP upon P. Critical damage. Power: 74..
-		level 8: Effect: Burns the target's MP upon P. Critical damage. Power: 78..
-		level 9: Effect: Burns the target's MP upon P. Critical damage. Power: 82..
-		level 10: Effect: Burns the target's MP upon P. Critical damage. Power: 88..
-	 -->
+        <!-- 
+			level 1: When triggered: Burns up the target's MP after a physical critical attack. Power 49.
+			level 2: When triggered: Burns up the target's MP after a physical critical attack. Power 53.
+			level 3: When triggered: Burns up the target's MP after a physical critical attack. Power 57.
+			level 4: When triggered: Burns up the target's MP after a physical critical attack. Power 61.
+			level 5: When triggered: Burns up the target's MP after a physical critical attack. Power 66.
+			level 6: When triggered: Burns up the target's MP after a physical critical attack. Power 70.
+			level 7: When triggered: Burns up the target's MP after a physical critical attack. Power 74.
+			level 8: When triggered: Burns up the target's MP after a physical critical attack. Power 78.
+			level 9: When triggered: Burns up the target's MP after a physical critical attack. Power 82.
+			level 10: When triggered: Burns up the target's MP after a physical critical attack. Power 88.
+		-->
         <icon initial="icon.skill3080"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -447,10 +446,10 @@
             </magical-attack-mp>
         </effects>
     </skill>
-    <skill id="3111" name="Item Skill: Slow (Critical)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: The target's Movement Speed -30%% upon P. Critical damage. -->
+    <skill id="3111" name="Item Skill: Slow" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily target's Speed -30%% after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -483,10 +482,10 @@
             </speed>
         </effects>
     </skill>
-    <skill id="3112" name="Item Skill: Winter (Critical)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: The target's Atk. Spd. -23%% upon P. Critical damage. -->
+    <skill id="3112" name="Item Skill: Winter" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily target's Atk. Spd. -23%% after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -505,6 +504,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -519,10 +519,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3113" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily stuns the target upon P. Critical damage. -->
+    <skill id="3113" name="Item Skill: Stun" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily stuns the target after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="SHOCK">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -536,6 +536,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -548,10 +549,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="3114" name="Item Skill: Hold" max-level="15" debuff="true" action="A2">
-        <!-- Effect: Momentarily inflicts hold on the target upon P. Critical damage. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+    <skill id="3114" name="Item Skill: Hold" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Hold on the target after a physical critical attack. The target cannot be affected by any Hold attacks while the effect is active. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -570,6 +571,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -587,10 +589,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="3115" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily inflicts Sleep on the target upon P. Critical damage. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
+    <skill id="3115" name="Item Skill: Sleep" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Sleep on the target after a physical critical attack. Additional chance to be put into Sleep greatly decreases while the effect is active. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="SLEEP">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -604,6 +606,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -621,10 +624,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="3116" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Petrifies an enemy for 15 seconds upon P. Critical. When fully petrified, becomes paralyzed for 10 seconds. -->
+    <skill id="3116" name="Item Skill: Paralysis" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Physical critical attacks slow the enemy down for 15 sec., after that the enemy is fully paralysed for 10 sec. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="PARALYZE">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -638,6 +641,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -661,10 +665,10 @@
             </call-skill>
         </effects>
     </skill>
-    <skill id="3117" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily inflicts Sleep on the target upon P. Critical damage. -->
+    <skill id="3117" name="Item Skill: Medusa" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily petrifies the target after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -679,7 +683,6 @@
             <cast-range initial="40"/>
             <reuse initial="30000"/>
             <effect-range initial="400"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -692,10 +695,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="3118" name="Item Skill: Fear" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily causes your enemy to flee in fear upon P. Critical damage. -->
+    <skill id="3118" name="Item Skill: Fear" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Fear on the target forcing them to flee after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -722,10 +725,10 @@
             <effect name="Fear"/>
         </effects>
     </skill>
-    <skill id="3119" name="Item Skill: Poison (Critical)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: Momentarily poisons the target upon P. Critical damage. -->
+    <skill id="3119" name="Item Skill: Poison" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily poisons the target after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" trait="POISON">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -744,10 +747,11 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -769,10 +773,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3120" name="Item Skill: Bleed (Critical)" max-level="15" debuff="true" action="A2">
-        <!-- Effect: Momentarily causes the target to bleed upon P. Critical damage. -->
+    <skill id="3120" name="Item Skill: Bleed" max-level="15" action="A2" debuff="true">
+        <!-- When triggered: Momentarily inflicts Bleed on the target after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" next-action="ATTACK" trait="BLEED">
             <magic-level initial="44">
                 <value level="3">54</value>
                 <value level="6">62</value>
@@ -782,10 +786,11 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -804,10 +809,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3121" name="Item Skill: Silence" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily blocks the target's M. Skills upon P. Critical damage. -->
+    <skill id="3121" name="Item Skill: Silence" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily blocks the target's M. skills after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -821,6 +826,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -833,10 +839,10 @@
             <effect name="Mute"/>
         </effects>
     </skill>
-    <skill id="3122" name="Item Skill: Doom" max-level="10" debuff="true" action="A2">
-        <!-- Effect: Momentarily blocks the target's entire P. Skills/M. Skills upon P. Critical damage. -->
+    <skill id="3122" name="Item Skill: Doom" max-level="10" action="A2" debuff="true">
+        <!-- When triggered: Momentarily blocks the target's P./ M. skills after a physical critical attack. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -850,6 +856,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
@@ -864,20 +871,20 @@
         </effects>
     </skill>
     <skill id="3123" name="Item Skill: Heal" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Instantly recovers your HP. Power 308.
-		level 2: Active: Instantly recovers your HP. Power 337.
-		level 3: Active: Instantly recovers your HP. Power 365.
-		level 4: Active: Instantly recovers your HP. Power 393.
-		level 5: Active: Instantly recovers your HP. Power 421.
-		level 6: Active: Instantly recovers your HP. Power 448.
-		level 7: Active: Instantly recovers your HP. Power 474.
-		level 8: Active: Instantly recovers your HP. Power 498.
-		level 9: Active: Instantly recovers your HP. Power 520.
-		level 10: Active: Instantly recovers your HP. Power 552.
-	 -->
+        <!-- 
+			level 1: Active skill: Momentarily recovers HP. Power 308.
+			level 2: Active skill: Momentarily recovers HP. Power 337.
+			level 3: Active skill: Momentarily recovers HP. Power 365.
+			level 4: Active skill: Momentarily recovers HP. Power 393.
+			level 5: Active skill: Momentarily recovers HP. Power 421.
+			level 6: Active skill: Momentarily recovers HP. Power 448.
+			level 7: Active skill: Momentarily recovers HP. Power 474.
+			level 8: Active skill: Momentarily recovers HP. Power 498.
+			level 9: Active skill: Momentarily recovers HP. Power 520.
+			level 10: Active skill: Momentarily recovers HP. Power 552.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -889,6 +896,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -943,20 +951,20 @@
         </effects>
     </skill>
     <skill id="3124" name="Item Skill: Blessed Body" max-level="10" action="A2">
-        <!--
-		level 1: Active Skill: Max HP +30 for a set time.
-		level 2: Active Skill: Max HP +60 for a set time.
-		level 3: Active Skill: Max HP +90 for a set time.
-		level 4: Active Skill: Max HP +120 for a set time.
-		level 5: Active Skill: Max HP +150 for a set time.
-		level 6: Active Skill: Max HP +180 for a set time.
-		level 7: Active Skill: Max HP +210 for a set time.
-		level 8: Active Skill: Max HP +240 for a set time.
-		level 9: Active Skill: Max HP +270 for a set time.
-		level 10: Active Skill: Max HP +300 for a set time.
-	 -->
+        <!-- 
+			level 1: Active skill: Temporarily Max HP +30.
+			level 2: Active skill: Temporarily Max HP +60.
+			level 3: Active skill: Temporarily Max HP +90.
+			level 4: Active skill: Temporarily Max HP +120.
+			level 5: Active skill: Temporarily Max HP +150.
+			level 6: Active skill: Temporarily Max HP +180.
+			level 7: Active skill: Temporarily Max HP +210.
+			level 8: Active skill: Temporarily Max HP +240.
+			level 9: Active skill: Temporarily Max HP +270.
+			level 10: Active skill: Temporarily Max HP +300.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -968,6 +976,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1026,9 +1035,9 @@
         </effects>
     </skill>
     <skill id="3125" name="Item Skill: Battle Roar" max-level="10" action="A2">
-        <!-- Active Skill: Increases Max HP for a set time and restores HP by the increased amount. -->
+        <!-- Active skill: Temporarily increases Max HP and recovers it for the increased amount. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1040,6 +1049,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1088,9 +1098,9 @@
         </effects>
     </skill>
     <skill id="3126" name="Item Skill: Prayer" max-level="10" action="A2">
-        <!-- Active Skill: Increases Heal Received for a set time. -->
+        <!-- Active skill: Temporarily increases Received Healing. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1102,6 +1112,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1154,18 +1165,18 @@
         </effects>
     </skill>
     <skill id="3127" name="Item Skill: Recharge" max-level="10" action="A1">
-        <!--
-		level 1: Active: Regenerates MP. Power 41.
-		level 2: Active: Regenerates MP. Power 44.
-		level 3: Active: Regenerates MP. Power 47.
-		level 4: Active: Regenerates MP. Power 50.
-		level 5: Active: Regenerates MP. Power 53.
-		level 6: Active: Regenerates MP. Power 57.
-		level 7: Active: Regenerates MP. Power 59.
-		level 8: Active: Regenerates MP. Power 62.
-		level 9: Active: Regenerates MP. Power 65.
-		level 10: Active: Regenerates MP. Power 69.
-	 -->
+        <!-- 
+			level 1: Active skill: Recovers MP. Power 41.
+			level 2: Active skill: Recovers MP. Power 44.
+			level 3: Active skill: Recovers MP. Power 47.
+			level 4: Active skill: Recovers MP. Power 50.
+			level 5: Active skill: Recovers MP. Power 53.
+			level 6: Active skill: Recovers MP. Power 57.
+			level 7: Active skill: Recovers MP. Power 59.
+			level 8: Active skill: Recovers MP. Power 62.
+			level 9: Active skill: Recovers MP. Power 65.
+			level 10: Active skill: Recovers MP. Power 69.
+		-->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -1235,20 +1246,20 @@
         </effects>
     </skill>
     <skill id="3128" name="Item Skill: Blessed Soul" max-level="10" action="A2">
-        <!--
-		level 1: Active Skill: Max MP +20 for a set time.
-		level 2: Active Skill: Max MP +40 for a set time.
-		level 3: Active Skill: Max MP +60 for a set time.
-		level 4: Active Skill: Max MP +80 for a set time.
-		level 5: Active Skill: Max MP +100 for a set time.
-		level 6: Active Skill: Max MP +120 for a set time.
-		level 7: Active Skill: Max MP +140 for a set time.
-		level 8: Active Skill: Max MP +160 for a set time.
-		level 9: Active Skill: Max MP +180 for a set time.
-		level 10: Active Skill: Max MP +200 for a set time.
-	 -->
+        <!-- 
+			level 1: Active skill: Temporarily Max MP +20.
+			level 2: Active skill: Temporarily Max MP +40.
+			level 3: Active skill: Temporarily Max MP +60.
+			level 4: Active skill: Temporarily Max MP +80.
+			level 5: Active skill: Temporarily Max MP +100.
+			level 6: Active skill: Temporarily Max MP +120.
+			level 7: Active skill: Temporarily Max MP +140.
+			level 8: Active skill: Temporarily Max MP +160.
+			level 9: Active skill: Temporarily Max MP +180.
+			level 10: Active skill: Temporarily Max MP +200.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1260,6 +1271,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1318,9 +1330,9 @@
         </effects>
     </skill>
     <skill id="3129" name="Item Skill: Mana Gain" max-level="15" action="A2">
-        <!-- Active Skill: Increases recovery bonus during MP Recovery through recharge. -->
+        <!-- Active skill: Increases MP Recovery Rate, when using the Recharge skill. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1337,6 +1349,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1400,18 +1413,18 @@
         </effects>
     </skill>
     <skill id="3130" name="Item Skill: Ritual" max-level="10" action="A1">
-        <!--
-		level 1: Active: Regenerates CP. Power 264.
-		level 2: Active: Regenerates CP. Power 289.
-		level 3: Active: Regenerates CP. Power 313.
-		level 4: Active: Regenerates CP. Power 337.
-		level 5: Active: Regenerates CP. Power 361.
-		level 6: Active: Regenerates CP. Power 384.
-		level 7: Active: Regenerates CP. Power 406.
-		level 8: Active: Regenerates CP. Power 427.
-		level 9: Active: Regenerates CP. Power 446.
-		level 10: Active: Regenerates CP. Power 473.
-	 -->
+        <!-- 
+			level 1: Active skill: Recovers CP. Power 264.
+			level 2: Active skill: Recovers CP. Power 289.
+			level 3: Active skill: Recovers CP. Power 313.
+			level 4: Active skill: Recovers CP. Power 337.
+			level 5: Active skill: Recovers CP. Power 361.
+			level 6: Active skill: Recovers CP. Power 384.
+			level 7: Active skill: Recovers CP. Power 406.
+			level 8: Active skill: Recovers CP. Power 427.
+			level 9: Active skill: Recovers CP. Power 446.
+			level 10: Active skill: Recovers CP. Power 473.
+		-->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -1425,6 +1438,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1479,20 +1493,20 @@
         </effects>
     </skill>
     <skill id="3131" name="Item Skill: Cheer" max-level="10" action="A2">
-        <!--
-		level 1: Active Skill: Max CP +30 for a set time.
-		level 2: Active Skill: Max CP +60 for a set time.
-		level 3: Active Skill: Max CP +90 for a set time.
-		level 4: Active Skill: Max CP +120 for a set time.
-		level 5: Active Skill: Max CP +150 for a set time.
-		level 6: Active Skill: Max CP +180 for a set time.
-		level 7: Active Skill: Max CP +210 for a set time.
-		level 8: Active Skill: Max CP +240 for a set time.
-		level 9: Active Skill: Max CP +270 for a set time.
-		level 10: Active Skill: Max CP +300 for a set time.
-	 -->
+        <!-- 
+			level 1: Active skill: Temporarily Max CP +30.
+			level 2: Active skill: Temporarily Max CP +60.
+			level 3: Active skill: Temporarily Max CP +90.
+			level 4: Active skill: Temporarily Max CP +120.
+			level 5: Active skill: Temporarily Max CP +150.
+			level 6: Active skill: Temporarily Max CP +180.
+			level 7: Active skill: Temporarily Max CP +210.
+			level 8: Active skill: Temporarily Max CP +240.
+			level 9: Active skill: Temporarily Max CP +270.
+			level 10: Active skill: Temporarily Max CP +300.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1504,6 +1518,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1562,9 +1577,9 @@
         </effects>
     </skill>
     <skill id="3132" name="Item Skill: Might" max-level="15" action="A2">
-        <!-- Active Skill: Increases P. Atk. for a set time. -->
+        <!-- Active skill: Temporarily increases P. Atk. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1581,6 +1596,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1644,9 +1660,9 @@
         </effects>
     </skill>
     <skill id="3133" name="Item Skill: Empower" max-level="15" action="A2">
-        <!-- Active Skill: Increases M. Atk. for a set time. -->
+        <!-- Active skill: Temporarily increases M. Atk. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1663,6 +1679,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1726,9 +1743,9 @@
         </effects>
     </skill>
     <skill id="3134" name="Item Skill: Might in Duel - PvP" max-level="10" action="A2">
-        <!-- Active Skill: Increases your P. Atk. in PvP for a set time. -->
+        <!-- Active skill: Temporarily increases P. Atk. in PvP. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1740,6 +1757,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1791,9 +1809,9 @@
         </effects>
     </skill>
     <skill id="3135" name="Item Skill: Shield" max-level="15" action="A2">
-        <!-- Active Skill: Increases P. Def. for a set time. -->
+        <!-- Active skill: Temporarily increases P. Def. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1810,6 +1828,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1873,9 +1892,9 @@
         </effects>
     </skill>
     <skill id="3136" name="Item Skill: Magic Barrier" max-level="15" action="A2">
-        <!-- Active Skill: Increases M. Def. for a set time. -->
+        <!-- Active skill: Temporarily increases M. Def. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -1892,6 +1911,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1954,10 +1974,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3137" name="Item Skill: Weakness in Duel" max-level="10" debuff="true" action="A2">
-        <!-- Active Skill: Decreases enemy's P. Atk. in PvP for a set time. -->
+    <skill id="3137" name="Item Skill: Weakness in Duel" max-level="10" action="A2" debuff="true">
+        <!-- Active skill: Temporarily decreases the enemy's P. Atk. in PvP. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2023,9 +2043,9 @@
         </effects>
     </skill>
     <skill id="3138" name="Item Skill: Heal Empower" max-level="10" action="A2">
-        <!-- Active Skill: Increases the amount of Heal given for a set time. -->
+        <!-- Active skill: Temporarily increases Healing Power. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2037,6 +2057,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2095,9 +2116,9 @@
         </effects>
     </skill>
     <skill id="3139" name="Item Skill: Agility" max-level="15" action="A2">
-        <!-- Active Skill: Increases P. Evasion for a set time. -->
+        <!-- Active skill: Temporarily increases P. Evasion. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2114,6 +2135,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2167,9 +2189,9 @@
         </effects>
     </skill>
     <skill id="3140" name="Item Skill: Guidance" max-level="15" action="A2">
-        <!-- Active Skill: Increases P. Accuracy for a set time. -->
+        <!-- Active skill: Temporarily increases P. Accuracy. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2186,6 +2208,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2239,9 +2262,9 @@
         </effects>
     </skill>
     <skill id="3141" name="Item Skill: Focus" max-level="10" action="A2">
-        <!-- Active Skill: Increases P. Critical Rate for a set time. -->
+        <!-- Active skill: Temporarily increases P. Critical Rate. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2253,6 +2276,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2305,9 +2329,9 @@
         </effects>
     </skill>
     <skill id="3142" name="Item Skill: Wild Magic" max-level="10" action="A2">
-        <!-- Active Skill: Increases M. Critical Rate for a set time. -->
+        <!-- Active skill: Temporarily increases M. Skill Critical Rate. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2319,6 +2343,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2371,9 +2396,9 @@
         </effects>
     </skill>
     <skill id="3143" name="Item Skill: Eva's Kiss" max-level="10" action="A2">
-        <!-- Active Skill: Increases Lung Capacity for a set time. -->
+        <!-- Active skill: Temporarily increases Breath Gauge. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2385,6 +2410,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2433,9 +2459,9 @@
         </effects>
     </skill>
     <skill id="3144" name="Item Skill: Acrobatics" max-level="10" action="A2">
-        <!-- Active Skill: Increases the height from which you can jump without sustaining damage for a set time. -->
+        <!-- Active skill: Temporarily increases safe fall height. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2447,6 +2473,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2495,9 +2522,9 @@
         </effects>
     </skill>
     <skill id="3145" name="Item Skill: Iron Body" max-level="15" action="A2">
-        <!-- Active: Increases Resistance to damage from falling. -->
+        <!-- Active skill: Increases Fall Damage Resistance. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2514,6 +2541,7 @@
                 <value level="14">95</value>
                 <value level="15">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2567,10 +2595,11 @@
         </effects>
     </skill>
     <skill id="3146" name="Item Skill: Return" action="A1">
-        <!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
+        <!-- Active skill: Teleports to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
         <icon initial="icon.skill3123"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <hit-time initial="20000"/>
         </attributes>
@@ -2587,10 +2616,11 @@
         </effects>
     </skill>
     <skill id="3147" name="Item Skill: Quick Return" action="A1">
-        <!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
+        <!-- Active skill: Teleports to the nearest village. Cannot be used in special places such as the GM Consultation Service. -->
         <icon initial="icon.skill3123"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="56"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <hit-time initial="1500"/>
         </attributes>
@@ -2607,9 +2637,9 @@
         </effects>
     </skill>
     <skill id="3148" name="Item Skill: Vampiric Rage" max-level="10" action="A2">
-        <!-- Active Skill: Has a chance to absorb some of the damage inflicted on the enemy as HP for a set time. -->
+        <!-- Active skill: Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2621,6 +2651,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -2673,18 +2704,18 @@
         </effects>
     </skill>
     <skill id="3149" name="Item Skill: Aggression" max-level="15" action="A1">
-        <!--
-		level 1: Active: Increases the target's urge to attack. Power 438.
-		level 2: Active: Increases the target's urge to attack. Power 467.
-		level 3: Active: Increases the target's urge to attack. Power 495.
-		level 4: Active: Increases the target's urge to attack. Power 523.
-		level 5: Active: Increases the target's urge to attack. Power 549.
-		level 6: Active: Increases the target's urge to attack. Power 574.
-		level 7: Active: Increases the target's urge to attack. Power 597.
-		level 8: Active: Increases the target's urge to attack. Power 617.
-		level 9: Active: Increases the target's urge to attack. Power 635.
-		level 10: Active: Increases the target's urge to attack. Power 659.
-	 -->
+        <!-- 
+			level 1: Active skill: Increases the target's aggression. Power 438.
+			level 2: Active skill: Increases the target's aggression. Power 467.
+			level 3: Active skill: Increases the target's aggression. Power 495.
+			level 4: Active skill: Increases the target's aggression. Power 523.
+			level 5: Active skill: Increases the target's aggression. Power 549.
+			level 6: Active skill: Increases the target's aggression. Power 574.
+			level 7: Active skill: Increases the target's aggression. Power 597.
+			level 8: Active skill: Increases the target's aggression. Power 617.
+			level 9: Active skill: Increases the target's aggression. Power 635.
+			level 10: Active skill: Increases the target's aggression. Power 659.
+		-->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -2740,24 +2771,24 @@
             </effect>
         </effects>
     </skill>
-    <skill id="3150" name="Item Skill: Charm (Active)" max-level="15" action="A1">
-        <!--
-		level 1: Active: Decreases the target's urge to attack. Power 219.
-		level 2: Active: Decreases the target's urge to attack. Power 234.
-		level 3: Active: Decreases the target's urge to attack. Power 248.
-		level 4: Active: Decreases the target's urge to attack. Power 262.
-		level 5: Active: Decreases the target's urge to attack. Power 275.
-		level 6: Active: Decreases the target's urge to attack. Power 287.
-		level 7: Active: Decreases the target's urge to attack. Power 299.
-		level 8: Active: Decreases the target's urge to attack. Power 309.
-		level 9: Active: Decreases the target's urge to attack. Power 318.
-		level 10: Active: Decreases the target's urge to attack. Power 330.
-		level 11: Active: Decreases the target's urge to attack. Power 342.
-		level 12: Active: Decreases the target's urge to attack. Power 354.
-		level 13: Active: Decreases the target's urge to attack. Power 366.
-		level 14: Active: Decreases the target's urge to attack. Power 378.
-		level 15: Active: Decreases the target's urge to attack. Power 390.
-	 -->
+    <skill id="3150" name="Item Skill: Charm" max-level="15" action="A1">
+        <!-- 
+			level 1: Active skill: Decreases the target's agression. Power 219.
+			level 2: Active skill: Decreases the target's agression. Power 234.
+			level 3: Active skill: Decreases the target's agression. Power 248.
+			level 4: Active skill: Decreases the target's agression. Power 262.
+			level 5: Active skill: Decreases the target's agression. Power 275.
+			level 6: Active skill: Decreases the target's agression. Power 287.
+			level 7: Active skill: Decreases the target's agression. Power 299.
+			level 8: Active skill: Decreases the target's agression. Power 309.
+			level 9: Active skill: Decreases the target's agression. Power 318.
+			level 10: Active skill: Decreases the target's agression. Power 330.
+			level 11: Active skill: Decreases the target's agression. Power 342.
+			level 12: Active skill: Decreases the target's agression. Power 354.
+			level 13: Active skill: Decreases the target's agression. Power 366.
+			level 14: Active skill: Decreases the target's agression. Power 378.
+			level 15: Active skill: Decreases the target's agression. Power 390.
+		-->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
@@ -2826,7 +2857,7 @@
         </effects>
     </skill>
     <skill id="3151" name="Item Skill: Peace" max-level="15" action="A1">
-        <!-- Active: Puts the opponent's mind at peace and erases the desire to attack. -->
+        <!-- Active skill: Puts the opponent's mind at peace and decreases their aggression. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
@@ -2880,7 +2911,7 @@
         </effects>
     </skill>
     <skill id="3152" name="Item Skill: Trick" max-level="10" action="A1">
-        <!-- Active: Cancels the target's status. -->
+        <!-- Active skill: Cancels the target's status. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="46">
@@ -2920,20 +2951,20 @@
         </effects>
     </skill>
     <skill id="3153" name="Item Skill: Vampiric Touch" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Absorbs HP. Power 49.
-		level 2: Active: Absorbs HP. Power 53.
-		level 3: Active: Absorbs HP. Power 57.
-		level 4: Active: Absorbs HP. Power 61.
-		level 5: Active: Absorbs HP. Power 66.
-		level 6: Active: Absorbs HP. Power 70.
-		level 7: Active: Absorbs HP. Power 74.
-		level 8: Active: Absorbs HP. Power 78.
-		level 9: Active: Absorbs HP. Power 82.
-		level 10: Active: Absorbs HP. Power 88.
-	 -->
+        <!-- 
+			level 1: Active skill: Absorbs HP. Power 49.
+			level 2: Active skill: Absorbs HP. Power 53.
+			level 3: Active skill: Absorbs HP. Power 57.
+			level 4: Active skill: Absorbs HP. Power 61.
+			level 5: Active skill: Absorbs HP. Power 66.
+			level 6: Active skill: Absorbs HP. Power 70.
+			level 7: Active skill: Absorbs HP. Power 74.
+			level 8: Active skill: Absorbs HP. Power 78.
+			level 9: Active skill: Absorbs HP. Power 82.
+			level 10: Active skill: Absorbs HP. Power 88.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -2960,7 +2991,6 @@
             </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -3005,20 +3035,20 @@
         </effects>
     </skill>
     <skill id="3154" name="Item Skill: Mana Burn" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Burns up the enemy's MP. Power 68.
-		level 2: Active: Burns up the enemy's MP. Power 73.
-		level 3: Active: Burns up the enemy's MP. Power 79.
-		level 4: Active: Burns up the enemy's MP. Power 84.
-		level 5: Active: Burns up the enemy's MP. Power 90.
-		level 6: Active: Burns up the enemy's MP. Power 96.
-		level 7: Active: Burns up the enemy's MP. Power 101.
-		level 8: Active: Burns up the enemy's MP. Power 107.
-		level 9: Active: Burns up the enemy's MP. Power 112.
-		level 10: Active: Burns up the enemy's MP. Power 120.
-	 -->
+        <!-- 
+			level 1: Active skill: Burns up the enemy's MP. Power 68.
+			level 2: Active skill: Burns up the enemy's MP. Power 73.
+			level 3: Active skill: Burns up the enemy's MP. Power 79.
+			level 4: Active skill: Burns up the enemy's MP. Power 84.
+			level 5: Active skill: Burns up the enemy's MP. Power 90.
+			level 6: Active skill: Burns up the enemy's MP. Power 96.
+			level 7: Active skill: Burns up the enemy's MP. Power 101.
+			level 8: Active skill: Burns up the enemy's MP. Power 107.
+			level 9: Active skill: Burns up the enemy's MP. Power 112.
+			level 10: Active skill: Burns up the enemy's MP. Power 120.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3087,18 +3117,18 @@
         </effects>
     </skill>
     <skill id="3155" name="Item Skill: Unlock" max-level="10" action="A1">
-        <!--
-		level 1: Active: Opens doors Lv. 1 with 100% chance, doors Lv. 2 with 30% chance, and chests Lv. 36 or below with 90% chance. Requires 4 Keys of a Thief.
-		level 2: Active: Opens doors Lv. 1 with 100% chance, doors Lv. 2 with 75% chance, and chests Lv. 40 or below with 90% chance. Requires 5 Keys of a Thief.
-		level 3: Active: Opens doors Lv. 2 or below with 100% chance, doors Lv. 3 with 5% chance, and chests Lv. 44 or below with 90% chance. Requires 6 Keys of a Thief.
-		level 4: Active: Opens doors Lv. 2 or below with 100% chance, doors Lv. 3 with 30% chance, and chests Lv. 48 or below with 90% chance. Requires 7 Keys of a Thief.
-		level 5: Active: Opens doors Lv. 2 or below with 100% chance, doors Lv. 3 with 75% chance, and chests Lv. 52 or below with 90% chance. Requires 8 Keys of a Thief.
-		level 6: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 56 or below with 90% chance. Requires 10 Keys of a Thief.
-		level 7: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 60 or below with 90% chance. Requires 11 Keys of a Thief.
-		level 8: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 64 or below with 90% chance. Requires 13 Keys of a Thief.
-		level 9: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 68 or below with 90% chance. Requires 15 Keys of a Thief.
-		level 10: Active: Opens doors Lv. 3 or below with 100% chance and chests Lv. 72 or below with 90% chance. Requires 17 Keys of a Thief.
-	 -->
+        <!-- 
+			level 1: Active skill: Opens doors Lv. 1 with a 100% chance, doors Lv. 2 with a 30% chance, and chests Lv. 36 or below with a 90% chance. Requires 4 Thief Keys.
+			level 2: Active skill: Opens doors Lv. 1 with a 100% chance, doors Lv. 2 with a 75% chance, and chests Lv. 40 or below with a 90% chance. Requires 5 Thief Keys.
+			level 3: Active skill: Opens doors Lv. 2 or lower with a 100% chance, doors Lv. 3 with a 5% chance, and chests Lv. 44 or below with a 90% chance. Requires 6 Thief Keys.
+			level 4: Active skill: Opens doors Lv. 2 or lower with a 100% chance, doors Lv. 3 with a 30% chance, and chests Lv. 48 or below with a 90% chance. Requires 7 Thief Keys.
+			level 5: Active skill: Opens doors Lv. 2 or lower with a 100% chance, doors Lv. 3 with a 75% chance, and chests Lv. 52 or below with a 90% chance. Requires 8 Thief Keys.
+			level 6: Active skill: Opens doors Lv. 3 with a 100% chance, and chests Lv. 56 or below with a 90% chance. Requires 10 Thief Keys.
+			level 7: Active skill: Opens doors Lv. 3 with a 100% chance, and chests Lv. 60 or below with a 90% chance. Requires 11 Thief Keys.
+			level 8: Active skill: Opens doors Lv. 3 with a 100% chance, and chests Lv. 64 or below with a 90% chance. Requires 13 Thief Keys.
+			level 9: Active skill: Opens doors Lv. 3 with a 100% chance, and chests Lv. 68 or below with a 90% chance. Requires 15 Thief Keys.
+			level 10: Active skill: Opens doors Lv. 3 with a 100% chance, and chests Lv. 72 or below with a 90% chance. Requires 17 Thief Keys.
+		-->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="46">
@@ -3140,18 +3170,6 @@
                 <value level="9">33</value>
                 <value level="10">35</value>
             </mana>
-            <item initial="1661"/>
-            <item-count initial="4">
-                <value level="2">5</value>
-                <value level="3">6</value>
-                <value level="4">7</value>
-                <value level="5">8</value>
-                <value level="6">10</value>
-                <value level="7">11</value>
-                <value level="8">13</value>
-                <value level="9">15</value>
-                <value level="10">17</value>
-            </item-count>
         </consume>
         <target type="DOOR_TREASURE"/>
         <conditions>
@@ -3165,10 +3183,11 @@
         </effects>
     </skill>
     <skill id="3156" name="Item Skill: Firecracker" action="A1">
-        <!-- Active: Ignites a Firecracker. -->
+        <!-- Active skill: Ignites a firecracker. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
         </attributes>
         <consume>
@@ -3177,10 +3196,11 @@
         <target/>
     </skill>
     <skill id="3157" name="Item Skill: Large Firecracker" action="A1">
-        <!-- Active: Ignites a Large Firecracker. -->
+        <!-- Active skill: Ignites a large firecracker. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="75"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
         </attributes>
         <consume>
@@ -3189,10 +3209,11 @@
         <target/>
     </skill>
     <skill id="3158" name="Item Skill: Celestial Shield" action="A2">
-        <!-- Active: Instantly becomes invincible. -->
+        <!-- Active skill: Grants invincibility temporarily. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" remove-on-action="true">
+        <attributes magic-critical-rate="5.0" remove-on-action="true">
             <magic-level initial="75"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
             <effect-point initial="659"/>
             <hit-time initial="1000"/>
@@ -3207,17 +3228,18 @@
             <time initial="7"/>
         </abnormal>
         <effects>
-            <damage-block block-hp="true"/>
+            <damage-block block-hp="true" block-mp="false"/>
         </effects>
     </skill>
     <skill id="3159" name="Item Skill: Stealth" max-level="3" action="A2">
-        <!-- Active: Temporarily blocks a monster's pre-emptive attack. Fighting ability significantly decreases while in effect. -->
+        <!-- Active skill: Temporarily monsters don't attack first. Fighting abilities are significantly decreased, while the effect is active. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="58">
                 <value level="2">67</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="549">
                 <value level="2">617</value>
@@ -3265,19 +3287,19 @@
         </effects>
     </skill>
     <skill id="3160" name="Item Skill: Resurrection" max-level="9" action="A1">
-        <!--
-		level 1: Active: Resurrects a corpse.
-		level 2: Active Skill: Resurrects a corpse. Also restores about 20% of XP.
-		level 3: Active Skill: Resurrects a corpse. Also restores about 30% of XP.
-		level 4: Active Skill: Resurrects a corpse. Also restores about 40% of XP.
-		level 5: Active Skill: Resurrects a corpse. Also restores about 50% of XP.
-		level 6: Active Skill: Resurrects a corpse. Also restores about 55% of XP.
-		level 7: Active Skill: Resurrects a corpse. Also restores about 60% of XP.
-		level 8: Active Skill: Resurrects a corpse. Also restores about 65% of XP.
-		level 9: Active Skill: Resurrects a corpse. Also restores about 70% of XP.
-	 -->
+        <!-- 
+			level 1: Active skill: Resurrects a dead party member.
+			level 2: Active skill: Resurrects a dead party member, restoring them 20% of the lost XP.
+			level 3: Active skill: Resurrects a dead party member, restoring them 30% of the lost XP.
+			level 4: Active skill: Resurrects a dead party member, restoring them 40% of the lost XP.
+			level 5: Active skill: Resurrects a dead party member, restoring them 50% of the lost XP.
+			level 6: Active skill: Resurrects a dead party member, restoring them 55% of the lost XP.
+			level 7: Active skill: Resurrects a dead party member, restoring them 60% of the lost XP.
+			level 8: Active skill: Resurrects a dead party member, restoring them 65% of the lost XP.
+			level 9: Active skill: Resurrects a dead party member, restoring them 70% of the lost XP.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3343,9 +3365,9 @@
         </effects>
     </skill>
     <skill id="3161" name="Item Skill: Skill Clarity" max-level="8" action="A2">
-        <!-- Active Skill: Decreases P. Skill MP Consumption for a set time. -->
+        <!-- Active skill: Temporarily decreases P. Skill MP Consumption. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">64</value>
                 <value level="3">75</value>
@@ -3355,6 +3377,7 @@
                 <value level="7">95</value>
                 <value level="8">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -3390,9 +3413,9 @@
         </effects>
     </skill>
     <skill id="3162" name="Item Skill: Spell Clarity" max-level="8" action="A2">
-        <!-- Active Skill: Decreases M. Skill MP Consumption for a set time. -->
+        <!-- Active skill: Temporarily decreases M. Skill MP Consumption. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">64</value>
                 <value level="3">75</value>
@@ -3402,6 +3425,7 @@
                 <value level="7">95</value>
                 <value level="8">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -3434,13 +3458,14 @@
         </effects>
     </skill>
     <skill id="3163" name="Item Skill: Music Clarity" max-level="3" action="A2">
-        <!-- Active: Temporarily decreases MP Consumption for song/dance skills. -->
+        <!-- Active skill: Temporarily decreases Song/ Dance MP Consumption. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -3473,13 +3498,14 @@
         </effects>
     </skill>
     <skill id="3164" name="Item Skill: Clarity" max-level="3" action="A2">
-        <!-- Active Skill: Decreases MP Consumptions of all skills for a set time. -->
+        <!-- Active skill: Temporarily decreases M. Skill MP Consumption. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="549">
                 <value level="2">611</value>
@@ -3511,20 +3537,20 @@
         </effects>
     </skill>
     <skill id="3165" name="Item Skill: Prominence" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Detonates a fireball by compressing the air around the caster. Power 61.
-		level 2: Active: Detonates a fireball by compressing the air around the caster. Power 66.
-		level 3: Active: Detonates a fireball by compressing the air around the caster. Power 72.
-		level 4: Active: Detonates a fireball by compressing the air around the caster. Power 77.
-		level 5: Active: Detonates a fireball by compressing the air around the caster. Power 82.
-		level 6: Active: Detonates a fireball by compressing the air around the caster. Power 87.
-		level 7: Active: Detonates a fireball by compressing the air around the caster. Power 92.
-		level 8: Active: Detonates a fireball by compressing the air around the caster. Power 97.
-		level 9: Active: Detonates a fireball by compressing the air around the caster. Power 102.
-		level 10: Active: Detonates a fireball by compressing the air around the caster. Power 110.
-	 -->
+        <!-- 
+			level 1: Active skill: Detonates a fireball by compressing the air around the caster. Power 61.
+			level 2: Active skill: Detonates a fireball by compressing the air around the caster. Power 66.
+			level 3: Active skill: Detonates a fireball by compressing the air around the caster. Power 72.
+			level 4: Active skill: Detonates a fireball by compressing the air around the caster. Power 77.
+			level 5: Active skill: Detonates a fireball by compressing the air around the caster. Power 82.
+			level 6: Active skill: Detonates a fireball by compressing the air around the caster. Power 87.
+			level 7: Active skill: Detonates a fireball by compressing the air around the caster. Power 92.
+			level 8: Active skill: Detonates a fireball by compressing the air around the caster. Power 97.
+			level 9: Active skill: Detonates a fireball by compressing the air around the caster. Power 102.
+			level 10: Active skill: Detonates a fireball by compressing the air around the caster. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3551,7 +3577,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -3592,20 +3617,20 @@
         </effects>
     </skill>
     <skill id="3167" name="Item Skill: Hydro Blast" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Unleashes a spray of highly pressurized water. Power 61.
-		level 2: Active: Unleashes a spray of highly pressurized water. Power 66.
-		level 3: Active: Unleashes a spray of highly pressurized water. Power 72.
-		level 4: Active: Unleashes a spray of highly pressurized water. Power 77.
-		level 5: Active: Unleashes a spray of highly pressurized water. Power 82.
-		level 6: Active: Unleashes a spray of highly pressurized water. Power 87.
-		level 7: Active: Unleashes a spray of highly pressurized water. Power 92.
-		level 8: Active: Unleashes a spray of highly pressurized water. Power 97.
-		level 9: Active: Unleashes a spray of highly pressurized water. Power 102.
-		level 10: Active: Unleashes a spray of highly pressurized water. Power 110.
-	 -->
+        <!-- 
+			level 1: Active skill: Unleashes a spray of highly pressurized water. Power 61.
+			level 2: Active skill: Unleashes a spray of highly pressurized water. Power 66.
+			level 3: Active skill: Unleashes a spray of highly pressurized water. Power 72.
+			level 4: Active skill: Unleashes a spray of highly pressurized water. Power 77.
+			level 5: Active skill: Unleashes a spray of highly pressurized water. Power 82.
+			level 6: Active skill: Unleashes a spray of highly pressurized water. Power 87.
+			level 7: Active skill: Unleashes a spray of highly pressurized water. Power 92.
+			level 8: Active skill: Unleashes a spray of highly pressurized water. Power 97.
+			level 9: Active skill: Unleashes a spray of highly pressurized water. Power 102.
+			level 10: Active skill: Unleashes a spray of highly pressurized water. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3632,7 +3657,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
@@ -3673,20 +3697,20 @@
         </effects>
     </skill>
     <skill id="3168" name="Item Skill: Hurricane" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active: Creates a whirlwind of destruction. Power 61.
-		level 2: Active: Creates a whirlwind of destruction. Power 66.
-		level 3: Active: Creates a whirlwind of destruction. Power 72.
-		level 4: Active: Creates a whirlwind of destruction. Power 77.
-		level 5: Active: Creates a whirlwind of destruction. Power 82.
-		level 6: Active: Creates a whirlwind of destruction. Power 87.
-		level 7: Active: Creates a whirlwind of destruction. Power 92.
-		level 8: Active: Creates a whirlwind of destruction. Power 97.
-		level 9: Active: Creates a whirlwind of destruction. Power 102.
-		level 10: Active: Creates a whirlwind of destruction. Power 110.
-	 -->
+        <!-- 
+			level 1: Active skill: Creates a whirlwind of destruction. Power 61.
+			level 2: Active skill: Creates a whirlwind of destruction. Power 66.
+			level 3: Active skill: Creates a whirlwind of destruction. Power 72.
+			level 4: Active skill: Creates a whirlwind of destruction. Power 77.
+			level 5: Active skill: Creates a whirlwind of destruction. Power 82.
+			level 6: Active skill: Creates a whirlwind of destruction. Power 87.
+			level 7: Active skill: Creates a whirlwind of destruction. Power 92.
+			level 8: Active skill: Creates a whirlwind of destruction. Power 97.
+			level 9: Active skill: Creates a whirlwind of destruction. Power 102.
+			level 10: Active skill: Creates a whirlwind of destruction. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3713,7 +3737,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="WIND" value="20"/>
         </attributes>
         <consume>
@@ -3754,20 +3777,20 @@
         </effects>
     </skill>
     <skill id="3169" name="Item Skill: Stone" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Attacks the target with a stone boulder. Power: 61..
-		level 2: Active Skill: Attacks the target with a stone boulder. Power: 66..
-		level 3: Active Skill: Attacks the target with a stone boulder. Power: 72..
-		level 4: Active Skill: Attacks the target with a stone boulder. Power: 77..
-		level 5: Active Skill: Attacks the target with a stone boulder. Power: 82..
-		level 6: Active Skill: Attacks the target with a stone boulder. Power: 87..
-		level 7: Active Skill: Attacks the target with a stone boulder. Power: 92..
-		level 8: Active Skill: Attacks the target with a stone boulder. Power: 97..
-		level 9: Active Skill: Attacks the target with a stone boulder. Power: 102..
-		level 10: Active Skill: Attacks the target with a stone boulder. Power: 110..
-	 -->
+        <!-- 
+			level 1: Active skill: Attacks the target with a boulder. Power 61.
+			level 2: Active skill: Attacks the target with a boulder. Power 66.
+			level 3: Active skill: Attacks the target with a boulder. Power 72.
+			level 4: Active skill: Attacks the target with a boulder. Power 77.
+			level 5: Active skill: Attacks the target with a boulder. Power 82.
+			level 6: Active skill: Attacks the target with a boulder. Power 87.
+			level 7: Active skill: Attacks the target with a boulder. Power 92.
+			level 8: Active skill: Attacks the target with a boulder. Power 97.
+			level 9: Active skill: Attacks the target with a boulder. Power 102.
+			level 10: Active skill: Attacks the target with a boulder. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3794,7 +3817,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <consume>
@@ -3835,20 +3857,20 @@
         </effects>
     </skill>
     <skill id="3170" name="Item Skill: Solar Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Holy Attack. Power: 61..
-		level 2: Active Skill: Unleashes a Holy Attack. Power: 66..
-		level 3: Active Skill: Unleashes a Holy Attack. Power: 72..
-		level 4: Active Skill: Unleashes a Holy Attack. Power: 77..
-		level 5: Active Skill: Unleashes a Holy Attack. Power: 82..
-		level 6: Active Skill: Unleashes a Holy Attack. Power: 87..
-		level 7: Active Skill: Unleashes a Holy Attack. Power: 92..
-		level 8: Active Skill: Unleashes a Holy Attack. Power: 97..
-		level 9: Active Skill: Unleashes a Holy Attack. Power: 102..
-		level 10: Active Skill: Unleashes a Holy Attack. Power: 110..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals holy magic damage to the target. Power 61.
+			level 2: Active skill: Deals holy magic damage to the target. Power 66.
+			level 3: Active skill: Deals holy magic damage to the target. Power 72.
+			level 4: Active skill: Deals holy magic damage to the target. Power 77.
+			level 5: Active skill: Deals holy magic damage to the target. Power 82.
+			level 6: Active skill: Deals holy magic damage to the target. Power 87.
+			level 7: Active skill: Deals holy magic damage to the target. Power 92.
+			level 8: Active skill: Deals holy magic damage to the target. Power 97.
+			level 9: Active skill: Deals holy magic damage to the target. Power 102.
+			level 10: Active skill: Deals holy magic damage to the target. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3875,7 +3897,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -3916,20 +3937,20 @@
         </effects>
     </skill>
     <skill id="3171" name="Item Skill: Shadow Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Dark Attack. Power: 61..
-		level 2: Active Skill: Unleashes a Dark Attack. Power: 66..
-		level 3: Active Skill: Unleashes a Dark Attack. Power: 72..
-		level 4: Active Skill: Unleashes a Dark Attack. Power: 77..
-		level 5: Active Skill: Unleashes a Dark Attack. Power: 82..
-		level 6: Active Skill: Unleashes a Dark Attack. Power: 87..
-		level 7: Active Skill: Unleashes a Dark Attack. Power: 92..
-		level 8: Active Skill: Unleashes a Dark Attack. Power: 97..
-		level 9: Active Skill: Unleashes a Dark Attack. Power: 102..
-		level 10: Active Skill: Unleashes a Dark Attack. Power: 110..
-	 -->
+        <!-- 
+			level 1: Active skill: Unleashes a dark attack on the target. Power 61.
+			level 2: Active skill: Unleashes a dark attack on the target. Power 66.
+			level 3: Active skill: Unleashes a dark attack on the target. Power 72.
+			level 4: Active skill: Unleashes a dark attack on the target. Power 77.
+			level 5: Active skill: Unleashes a dark attack on the target. Power 82.
+			level 6: Active skill: Unleashes a dark attack on the target. Power 87.
+			level 7: Active skill: Unleashes a dark attack on the target. Power 92.
+			level 8: Active skill: Unleashes a dark attack on the target. Power 97.
+			level 9: Active skill: Unleashes a dark attack on the target. Power 102.
+			level 10: Active skill: Unleashes a dark attack on the target. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -3956,7 +3977,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="4000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -3997,20 +4017,20 @@
         </effects>
     </skill>
     <skill id="3172" name="Item Skill: Aura Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Attacks the target with magic. Power: 61..
-		level 2: Active Skill: Attacks the target with magic. Power: 66..
-		level 3: Active Skill: Attacks the target with magic. Power: 72..
-		level 4: Active Skill: Attacks the target with magic. Power: 77..
-		level 5: Active Skill: Attacks the target with magic. Power: 82..
-		level 6: Active Skill: Attacks the target with magic. Power: 87..
-		level 7: Active Skill: Attacks the target with magic. Power: 92..
-		level 8: Active Skill: Attacks the target with magic. Power: 97..
-		level 9: Active Skill: Attacks the target with magic. Power: 102..
-		level 10: Active Skill: Attacks the target with magic. Power: 110..
-	 -->
+        <!-- 
+			level 1: Active skill: Unleashes a non-attribute attack on the target. Power 61.
+			level 2: Active skill: Unleashes a non-attribute attack on the target. Power 66.
+			level 3: Active skill: Unleashes a non-attribute attack on the target. Power 72.
+			level 4: Active skill: Unleashes a non-attribute attack on the target. Power 77.
+			level 5: Active skill: Unleashes a non-attribute attack on the target. Power 82.
+			level 6: Active skill: Unleashes a non-attribute attack on the target. Power 87.
+			level 7: Active skill: Unleashes a non-attribute attack on the target. Power 92.
+			level 8: Active skill: Unleashes a non-attribute attack on the target. Power 97.
+			level 9: Active skill: Unleashes a non-attribute attack on the target. Power 102.
+			level 10: Active skill: Unleashes a non-attribute attack on the target. Power 110.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4076,20 +4096,20 @@
         </effects>
     </skill>
     <skill id="3173" name="Item Skill: Prominence" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 31..
-		level 2: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 33..
-		level 3: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 36..
-		level 4: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 39..
-		level 5: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 41..
-		level 6: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 44..
-		level 7: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 46..
-		level 8: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 49..
-		level 9: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 51..
-		level 10: Active Skill: Unleashes a Fire Attack against enemies near the target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals fire magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals fire magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals fire magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals fire magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals fire magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals fire magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals fire magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals fire magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals fire magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals fire magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4116,7 +4136,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -4139,7 +4158,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4157,20 +4176,20 @@
         </effects>
     </skill>
     <skill id="3174" name="Item Skill: Hydro Blast" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 31..
-		level 2: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 33..
-		level 3: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 36..
-		level 4: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 39..
-		level 5: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 41..
-		level 6: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 44..
-		level 7: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 46..
-		level 8: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 49..
-		level 9: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 51..
-		level 10: Active Skill: Unleashes a Water Attack against the enemies near a target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals water magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals water magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals water magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals water magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals water magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals water magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals water magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals water magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals water magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals water magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4197,7 +4216,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
@@ -4220,7 +4238,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4238,20 +4256,20 @@
         </effects>
     </skill>
     <skill id="3175" name="Item Skill: Hurricane" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 31..
-		level 2: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 33..
-		level 3: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 36..
-		level 4: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 39..
-		level 5: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 41..
-		level 6: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 44..
-		level 7: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 46..
-		level 8: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 49..
-		level 9: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 51..
-		level 10: Active Skill: Unleashes a Wind Attack against enemies near the target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals wind magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals wind magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals wind magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals wind magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals wind magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals wind magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals wind magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals wind magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals wind magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals wind magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4278,7 +4296,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="WIND" value="20"/>
         </attributes>
         <consume>
@@ -4301,7 +4318,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4319,20 +4336,20 @@
         </effects>
     </skill>
     <skill id="3176" name="Item Skill: Stone" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 31..
-		level 2: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 33..
-		level 3: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 36..
-		level 4: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 39..
-		level 5: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 41..
-		level 6: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 44..
-		level 7: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 46..
-		level 8: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 49..
-		level 9: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 51..
-		level 10: Active Skill: Attacks the enemies near a target with a stone boulder. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals earth magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals earth magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals earth magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals earth magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals earth magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals earth magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals earth magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals earth magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals earth magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals earth magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4359,7 +4376,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <consume>
@@ -4382,7 +4398,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4400,20 +4416,20 @@
         </effects>
     </skill>
     <skill id="3177" name="Item Skill: Solar Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 31..
-		level 2: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 33..
-		level 3: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 36..
-		level 4: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 39..
-		level 5: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 41..
-		level 6: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 44..
-		level 7: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 46..
-		level 8: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 49..
-		level 9: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 51..
-		level 10: Active Skill: Unleashes a Holy Attack against the enemies near a target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals holy magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals holy magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals holy magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals holy magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals holy magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals holy magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals holy magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals holy magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals holy magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals holy magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4440,7 +4456,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -4463,7 +4478,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4481,20 +4496,20 @@
         </effects>
     </skill>
     <skill id="3178" name="Item Skill: Shadow Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 31..
-		level 2: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 33..
-		level 3: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 36..
-		level 4: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 39..
-		level 5: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 41..
-		level 6: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 44..
-		level 7: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 46..
-		level 8: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 49..
-		level 9: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 51..
-		level 10: Active Skill: Unleashes a Dark Attack against the enemies near a target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals dark magic damage to the target and nearby enemies. Power 31.
+			level 2: Active skill: Deals dark magic damage to the target and nearby enemies. Power 33.
+			level 3: Active skill: Deals dark magic damage to the target and nearby enemies. Power 36.
+			level 4: Active skill: Deals dark magic damage to the target and nearby enemies. Power 39.
+			level 5: Active skill: Deals dark magic damage to the target and nearby enemies. Power 41.
+			level 6: Active skill: Deals dark magic damage to the target and nearby enemies. Power 44.
+			level 7: Active skill: Deals dark magic damage to the target and nearby enemies. Power 46.
+			level 8: Active skill: Deals dark magic damage to the target and nearby enemies. Power 49.
+			level 9: Active skill: Deals dark magic damage to the target and nearby enemies. Power 51.
+			level 10: Active skill: Deals dark magic damage to the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4521,7 +4536,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -4544,7 +4558,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4562,20 +4576,20 @@
         </effects>
     </skill>
     <skill id="3179" name="Item Skill: Aura Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Attacks the enemies near a target. Power: 31..
-		level 2: Active Skill: Attacks the enemies near a target. Power: 33..
-		level 3: Active Skill: Attacks the enemies near a target. Power: 36..
-		level 4: Active Skill: Attacks the enemies near a target. Power: 39..
-		level 5: Active Skill: Attacks the enemies near a target. Power: 41..
-		level 6: Active Skill: Attacks the enemies near a target. Power: 44..
-		level 7: Active Skill: Attacks the enemies near a target. Power: 46..
-		level 8: Active Skill: Attacks the enemies near a target. Power: 49..
-		level 9: Active Skill: Attacks the enemies near a target. Power: 51..
-		level 10: Active Skill: Attacks the enemies near a target. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Attacks the target and nearby enemies. Power 31.
+			level 2: Active skill: Attacks the target and nearby enemies. Power 33.
+			level 3: Active skill: Attacks the target and nearby enemies. Power 36.
+			level 4: Active skill: Attacks the target and nearby enemies. Power 39.
+			level 5: Active skill: Attacks the target and nearby enemies. Power 41.
+			level 6: Active skill: Attacks the target and nearby enemies. Power 44.
+			level 7: Active skill: Attacks the target and nearby enemies. Power 46.
+			level 8: Active skill: Attacks the target and nearby enemies. Power 49.
+			level 9: Active skill: Attacks the target and nearby enemies. Power 51.
+			level 10: Active skill: Attacks the target and nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4623,7 +4637,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4641,20 +4655,20 @@
         </effects>
     </skill>
     <skill id="3180" name="Item Skill: Prominence" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Fire Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals fire magic damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals fire magic damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals fire magic damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals fire magic damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals fire magic damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals fire magic damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals fire magic damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals fire magic damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals fire magic damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals fire magic damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4666,6 +4680,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -4679,7 +4694,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -4702,7 +4716,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4720,20 +4734,20 @@
         </effects>
     </skill>
     <skill id="3181" name="Item Skill: Hydro Blast" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Water Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals water magic damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals water magic damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals water magic damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals water magic damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals water magic damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals water magic damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals water magic damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals water magic damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals water magic damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals water magic damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4745,6 +4759,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -4758,7 +4773,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="WATER" value="20"/>
         </attributes>
         <consume>
@@ -4781,7 +4795,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4799,20 +4813,20 @@
         </effects>
     </skill>
     <skill id="3182" name="Item Skill: Hurricane" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Wind Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals wind magic damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals wind magic damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals wind magic damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals wind magic damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals wind magic damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals wind magic damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals wind magic damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals wind magic damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals wind magic damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals wind magic damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4824,6 +4838,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -4837,7 +4852,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="WIND" value="20"/>
         </attributes>
         <consume>
@@ -4860,7 +4874,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4878,20 +4892,20 @@
         </effects>
     </skill>
     <skill id="3183" name="Item Skill: Stone" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Earth Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals earth magic damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals earth magic damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals earth magic damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals earth magic damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals earth magic damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals earth magic damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals earth magic damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals earth magic damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals earth magic damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals earth magic damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4903,6 +4917,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -4916,7 +4931,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <consume>
@@ -4939,7 +4953,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -4957,20 +4971,20 @@
         </effects>
     </skill>
     <skill id="3184" name="Item Skill: Solar Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Holy Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals holy magic damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals holy magic damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals holy magic damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals holy magic damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals holy magic damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals holy magic damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals holy magic damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals holy magic damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals holy magic damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals holy magic damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -4982,6 +4996,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -4995,7 +5010,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -5018,7 +5032,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -5036,20 +5050,20 @@
         </effects>
     </skill>
     <skill id="3185" name="Item Skill: Shadow Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 31..
-		level 2: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 33..
-		level 3: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 36..
-		level 4: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 39..
-		level 5: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 41..
-		level 6: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 44..
-		level 7: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 46..
-		level 8: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 49..
-		level 9: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 51..
-		level 10: Active Skill: Unleashes a Dark Attack against nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Deals dark damage to nearby enemies. Power 31.
+			level 2: Active skill: Deals dark damage to nearby enemies. Power 33.
+			level 3: Active skill: Deals dark damage to nearby enemies. Power 36.
+			level 4: Active skill: Deals dark damage to nearby enemies. Power 39.
+			level 5: Active skill: Deals dark damage to nearby enemies. Power 41.
+			level 6: Active skill: Deals dark damage to nearby enemies. Power 44.
+			level 7: Active skill: Deals dark damage to nearby enemies. Power 46.
+			level 8: Active skill: Deals dark damage to nearby enemies. Power 49.
+			level 9: Active skill: Deals dark damage to nearby enemies. Power 51.
+			level 10: Active skill: Deals dark damage to nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5061,6 +5075,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -5074,7 +5089,6 @@
                 <value level="10">-657</value>
             </effect-point>
             <hit-time initial="5000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -5097,7 +5111,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -5115,20 +5129,20 @@
         </effects>
     </skill>
     <skill id="3186" name="Item Skill: Aura Flare" max-level="10" action="A1" type="MAGIC">
-        <!--
-		level 1: Active Skill: Attacks nearby enemies. Power: 31..
-		level 2: Active Skill: Attacks nearby enemies. Power: 33..
-		level 3: Active Skill: Attacks nearby enemies. Power: 36..
-		level 4: Active Skill: Attacks nearby enemies. Power: 39..
-		level 5: Active Skill: Attacks nearby enemies. Power: 41..
-		level 6: Active Skill: Attacks nearby enemies. Power: 44..
-		level 7: Active Skill: Attacks nearby enemies. Power: 46..
-		level 8: Active Skill: Attacks nearby enemies. Power: 49..
-		level 9: Active Skill: Attacks nearby enemies. Power: 51..
-		level 10: Active Skill: Attacks nearby enemies. Power: 55..
-	 -->
+        <!-- 
+			level 1: Active skill: Attacks nearby enemies. Power 31.
+			level 2: Active skill: Attacks nearby enemies. Power 33.
+			level 3: Active skill: Attacks nearby enemies. Power 36.
+			level 4: Active skill: Attacks nearby enemies. Power 39.
+			level 5: Active skill: Attacks nearby enemies. Power 41.
+			level 6: Active skill: Attacks nearby enemies. Power 44.
+			level 7: Active skill: Attacks nearby enemies. Power 46.
+			level 8: Active skill: Attacks nearby enemies. Power 49.
+			level 9: Active skill: Attacks nearby enemies. Power 51.
+			level 10: Active skill: Attacks nearby enemies. Power 55.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5140,6 +5154,7 @@
                 <value level="9">70</value>
                 <value level="10">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="15000"/>
             <effect-point initial="-436">
                 <value level="2">-465</value>
@@ -5174,7 +5189,7 @@
                 <value level="10">69</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
             <magical-attack>
                 <power initial="31.0">
@@ -5191,10 +5206,10 @@
             </magical-attack>
         </effects>
     </skill>
-    <skill id="3187" name="Item Skill: Slow" max-level="15" debuff="true" action="A2" type="MAGIC">
-        <!-- Active: Momentarily decreases the target's Speed. -->
+    <skill id="3187" name="Item Skill: Slow" max-level="15" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily decreases the target's Speed. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5259,10 +5274,10 @@
             </speed>
         </effects>
     </skill>
-    <skill id="3188" name="Item Skill: Winter" max-level="15" debuff="true" action="A2" type="MAGIC">
-        <!-- Active Skill: Momentarily decreases the target's Atk. Spd. -->
+    <skill id="3188" name="Item Skill: Winter" max-level="15" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily decreases the target's Atk. Spd. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5281,17 +5296,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5327,10 +5332,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3189" name="Item Skill: Stun" max-level="10" debuff="true" action="A2">
-        <!-- Active Skill: Momentarily stuns the target. -->
+    <skill id="3189" name="Item Skill: Stun" max-level="10" action="A2" debuff="true">
+        <!-- Active skill: Temporarily stuns the target. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SHOCK" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" trait="SHOCK">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5344,17 +5349,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
             <hit-time initial="4000">
                 <value level="2">1500</value>
@@ -5390,10 +5385,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="3190" name="Item Skill: Hold" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active: Momentarily inflicts Hold on the target. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+    <skill id="3190" name="Item Skill: Hold" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily inflicts Hold on the target. The target cannot be affected by any additional Hold attacks while the effect is active. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true" trait="HOLD">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5407,17 +5402,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5456,10 +5441,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="3191" name="Item Skill: Sleep" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active Skill: Momentarily puts a target into sleep. Greatly decreases the chance to inflict additional Sleep state while effects last. -->
+    <skill id="3191" name="Item Skill: Sleep" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Momentarily inflicts Sleep on the target. The target cannot be affected by any Sleep attacks while the effect is active. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="10" remove-on-damage="true">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" remove-on-damage="true" static-reuse="true" trait="SLEEP">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5473,17 +5458,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5522,10 +5497,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="3192" name="Item Skill: Paralyze" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Skill Used: Petrifies an enemy for 15 seconds. When fully petrified, becomes paralyzed for 10 seconds. -->
+    <skill id="3192" name="Item Skill: Paralysis" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Slows the enemy down for 15 sec., after that the enemy is fully paralysed for 10 sec. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true" trait="PARALYZE">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5539,17 +5514,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5594,10 +5559,10 @@
             </call-skill>
         </effects>
     </skill>
-    <skill id="3193" name="Item Skill: Medusa" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active: Momentarily petrifies the target. -->
+    <skill id="3193" name="Item Skill: Medusa" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily petrifies the target. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5624,7 +5589,6 @@
             </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <consume>
@@ -5657,10 +5621,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="3194" name="Item Skill: Fear" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active: Momentarily inflicts Fear on the target and causes him to flee. -->
+    <skill id="3194" name="Item Skill: Fear" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Momentarily inflicts Fear on the target forcing them to flee. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5719,10 +5683,10 @@
             <effect name="Fear"/>
         </effects>
     </skill>
-    <skill id="3195" name="Item Skill: Poison" max-level="15" debuff="true" action="A2" type="MAGIC">
-        <!-- Active Skill: Momentarily poisons a target. -->
+    <skill id="3195" name="Item Skill: Poison" max-level="15" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily poisons the target. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="POISON" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" static-reuse="true" trait="POISON">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5741,17 +5705,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5782,7 +5736,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -5801,10 +5755,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3196" name="Item Skill: Bleed" max-level="15" debuff="true" action="A2">
-        <!-- Active Skill: Momentarily causes a target to bleed. -->
+    <skill id="3196" name="Item Skill: Bleed" max-level="15" action="A2" debuff="true">
+        <!-- Active skill: Temporarily inflicts severe Bleed on the target. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="5.0" next-action="ATTACK" trait="BLEED">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5823,17 +5777,7 @@
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="400"/>
             <hit-time initial="1500"/>
         </attributes>
@@ -5864,7 +5808,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="5">
                 <value level="3">6</value>
                 <value level="6">7</value>
@@ -5883,10 +5827,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="3197" name="Item Skill: Silence" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active: Momentarily blocks the target's magic skills. -->
+    <skill id="3197" name="Item Skill: Silence" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily blocks the target's M. skills. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5900,17 +5844,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -5944,10 +5878,10 @@
             <effect name="Mute"/>
         </effects>
     </skill>
-    <skill id="3198" name="Item Skill: Doom" max-level="10" debuff="true" action="A2" type="MAGIC">
-        <!-- Active Skill: Momentarily blocks all of the target's P. Skills/M. Skills. -->
+    <skill id="3198" name="Item Skill: Doom" max-level="10" action="A2" debuff="true" type="MAGIC">
+        <!-- Active skill: Temporarily blocks the target's P./ M. skills. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="10">
+        <attributes level-bonus-rate="10" magic-critical-rate="5.0" static-reuse="true" trait="DERANGEMENT">
             <magic-level initial="46">
                 <value level="2">49</value>
                 <value level="3">52</value>
@@ -5961,17 +5895,7 @@
             </magic-level>
             <cast-range initial="600"/>
             <reuse initial="30000"/>
-            <effect-point initial="-436">
-                <value level="2">-465</value>
-                <value level="3">-493</value>
-                <value level="4">-521</value>
-                <value level="5">-547</value>
-                <value level="6">-572</value>
-                <value level="7">-595</value>
-                <value level="8">-615</value>
-                <value level="9">-633</value>
-                <value level="10">-657</value>
-            </effect-point>
+            <effect-point initial="-100"/>
             <effect-range initial="1100"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -6007,13 +5931,14 @@
         </effects>
     </skill>
     <skill id="3199" name="Item Skill: Skill Refresh" max-level="3" action="A2">
-        <!-- Active Skill: Temporarily decreases the P. Skill Cooldown. -->
+        <!-- Active skill: Temporarily decreases P. Skill Cooldown. -->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">64</value>
                 <value level="3">75</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="549">
                 <value level="2">611</value>

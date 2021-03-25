@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="3600" name="Special Ability: Anger" max-level="6">
-        <!-- Decreases Max HP and increases P. Atk. Enables the character to attack multiple opponents. -->
+        <!-- Decreases Max HP and increases P. Atk. and the number of targets hit with a spear. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -34,10 +33,9 @@
         </effects>
     </skill>
     <skill id="3601" name="Special Ability: Haste" max-level="6">
-        <!-- Increases Atk. Spd. Enables the character to attack multiple opponents. -->
+        <!-- Increases Atk. Spd. and the number of targets hit with a spear. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
@@ -58,10 +56,9 @@
         </effects>
     </skill>
     <skill id="3602" name="Special Ability: Guidance" max-level="6">
-        <!-- Increases P. Accuracy. Enables the character to attack multiple opponents. -->
+        <!-- Increases P. Accuracy. Allows to attack multiple enemies simultaneously. -->
         <icon initial="icon.skill1240"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
@@ -88,10 +85,9 @@
         </effects>
     </skill>
     <skill id="3603" name="Demonic Sword Zariche" max-level="10">
-        <!-- The Demon Bremnon is said to have used this mystical sword to slaughter enemies. The more blood the sword sheds, the more powerful it becomes. -->
+        <!-- The Demon Bremmnon used this mystical sword to slaughter his enemies. The more blood the sword sheds, the more powerful it becomes. -->
         <icon initial="icon.weapon_unique_zariche_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vampiric-attack chance="70">
@@ -292,10 +288,9 @@
         </effects>
     </skill>
     <skill id="3604" name="Frintezza's Necklace">
-        <!-- Increases Dark Attack/Poison/Bleed/Paralysis/Stun/Sleep Resistance, and Poison/Bleed/Paralysis/Stun/Sleep Atk. Rate. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
+        <!-- Increases Dark Attack/ Poison/ Bleed/ Paralyze/ Stun/ Sleep Resistance, and Poison/ Bleed/ Paralyze/ Stun/ Sleep attack bonus. Decreases skill cooldown. Reflects some of the damage received back to the enemy. -->
         <icon initial="icon.accessory_necklace_of_frintessa_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <attack-trait>
@@ -343,11 +338,10 @@
             </reuse>
         </effects>
     </skill>
-    <skill id="3605" name="Set Effect - Moonshadow Heavy Armor, 4-piece">
-        <!-- HP Recovery Bonus +3%%, Max HP +25, and P. Def. +3%%. -->
+    <skill id="3605" name="Set Effect: Moon Heavy Armor, 4-piece">
+        <!-- <Set effect>\nP. Def. +3%%\nMax HP +25\nHP Recovery Rate +3%% -->
         <icon initial="icon.armor_t1001_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
@@ -361,11 +355,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3606" name="Set Effect - Moonshadow Light Armor, 4-piece">
-        <!-- MP Recovery Bonus +3%%, Max MP +10, and P. Atk. +2%%. -->
+    <skill id="3606" name="Set Effect: Moon Light Armor, 4-piece">
+        <!-- <Set effect>\nP. Atk. +2%%\nMax MP +10\nMP Recovery Rate +3%% -->
         <icon initial="icon.armor_t1002_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
@@ -379,11 +372,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3607" name="Set Effect - Moonshadow Robe, 4-piece">
-        <!-- MP Recovery Bonus +3%%, Max MP +20, and M. Atk. +2%%. -->
+    <skill id="3607" name="Set Effect: Moon Robe, 4-piece">
+        <!-- <Set effect>\nM. Atk. +2%%\nMax MP +20\nMP Recovery Rate +3%% -->
         <icon initial="icon.armor_t1003_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
@@ -398,16 +390,15 @@
         </effects>
     </skill>
     <skill id="3608" name="Set Effect - Apella Heavy Armor" max-level="3">
-        <!--
-            level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases M. Def. and decreases the chance of receiving P. Critical Damage.
-            level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases M. Def. and P. Critical Rate and decreases the chance of receiving P. Critical Damage.
-         -->
+        <!-- 
+			level 1: Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases M. Def. and decreases received P. Critical Rate, when hit.
+			level 2: Increases Max CP/ CP Recovery Rate, and decreases Skill MP Consumption and Death XP Penalty. Increases M. Def. and P. Critical Rate, decreases received P. Critical Rate, when hit.
+		-->
         <icon initial="icon.armor_t1004_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
-            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5605">
+            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5605" target="SELF">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                 </power>
@@ -435,16 +426,15 @@
         </effects>
     </skill>
     <skill id="3609" name="Set Effect - Apella Light Armor" max-level="3">
-        <!--
-            level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases P. Evasion and decreases P. Critical Damage received.
-            level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases P. Evasion and Atk. Spd., and decreases P. Critical Damage Received.
-         -->
+        <!-- 
+			level 1: Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases P. Evasion and decreases received P. Critical Damage, when hit.
+			level 2: Increases Max CP/ CP Recovery Rate, and decreases Skill MP Consumption and Death XP Penalty. Increases P. Evasion and Atk. Spd., decreases received P. Critical Damage, when hit.
+		-->
         <icon initial="icon.armor_t1005_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
-            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5607">
+            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5607" target="SELF">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                 </power>
@@ -472,16 +462,15 @@
         </effects>
     </skill>
     <skill id="3610" name="Set Effect - Apella Robe" max-level="3">
-        <!--
-            level 1: Increases Max CP/CP Recovery Bonus, and decreases the XP penalty for player death. When attacked, increases Movement Speed and P. Def.
-            level 2: Increases Max CP/CP Recovery Bonus, and decreases Skill MP Consumption and the XP penalty for player death. When attacked, increases Movement Speed, P. Def., and M. Atk.
-         -->
+        <!-- 
+			level 1: Increases Max CP/ CP Recovery Rate, and decreases Death XP Penalty. Increases Speed and P. Def., when hit.
+			level 2: Increases Max CP/ CP Recovery Rate, decreases Skill MP Consumption and Death XP Penalty. Increases Speed, P. Def. and M. Atk., when hit.
+		-->
         <icon initial="icon.armor_t1006_ul_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
-            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5608">
+            <trigger-skill-by-damage attacker="Playable" min-damage="50" skill="5608" target="SELF">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                 </power>
@@ -508,11 +497,10 @@
             </reduce-drop-penalty>
         </effects>
     </skill>
-    <skill id="3611" name="Enchant Heavy Armor (D-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+    <skill id="3611" name="Enchant D-grade Heavy Armor">
+        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
@@ -524,11 +512,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3612" name="Enchant Light Armor (D-grade)">
-        <!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+    <skill id="3612" name="Enchant D-grade Light Armor">
+        <!-- Increases M. Def. and Evasion by enchanting set items. -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -541,11 +528,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3613" name="Enchant Robe (D-grade)">
-        <!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+    <skill id="3613" name="Enchant D-grade Robe">
+        <!-- Increases P. Def. and weight capacity by enchanting set items. -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -557,11 +543,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3614" name="Enchant Heavy Armor (C-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+    <skill id="3614" name="Enchant С-grade Heavy Armor">
+        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
@@ -573,11 +558,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3615" name="Enchant Light Armor (C-grade)">
-        <!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+    <skill id="3615" name="Enchant C-grade Light Armor">
+        <!-- Increases M. Def. and Evasion by enchanting set items. -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -590,11 +574,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3616" name="Enchant Robe (C-grade)">
-        <!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+    <skill id="3616" name="Enchant C-grade Robe">
+        <!-- Increases P. Def. and weight capacity by enchanting set items. -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -606,11 +589,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3617" name="Enchant Heavy Armor (B-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+    <skill id="3617" name="Enchant B-grade Heavy Armor">
+        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
@@ -622,11 +604,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3618" name="Enchant Light Armor (B-grade)">
-        <!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+    <skill id="3618" name="Enchant B-grade Light Armor">
+        <!-- Increases M. Def. and Evasion by enchanting set items. -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -639,11 +620,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3619" name="Enchant Robe (B-grade)">
-        <!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+    <skill id="3619" name="Enchant B-grade Robe">
+        <!-- Increases P. Def. and weight capacity by enchanting set items. -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -655,11 +635,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3620" name="Enchant Heavy Armor (A-grade)">
-        <!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+    <skill id="3620" name="Enchant D-grade Heavy Armor">
+        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
@@ -671,11 +650,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3621" name="Enchant Light Armor (A-grade)">
-        <!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+    <skill id="3621" name="Enchant D-grade Light Armor">
+        <!-- Increases M. Def. and Evasion by enchanting set items. -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -688,11 +666,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3622" name="Enchant Robe (A-grade)">
-        <!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+    <skill id="3622" name="Enchant D-grade Robe">
+        <!-- Increases P. Def. and weight capacity by enchanting set items. -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -704,11 +681,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3623" name="Enchant Heavy Armor (S-grade)" max-level="3">
-        <!-- Increases P. Def. and MP Recovery Bonus through item set enchantment. -->
+    <skill id="3623" name="Enchant S-grade Heavy Armor" max-level="3">
+        <!-- Increases P. Def. and MP Recovery Bonus by enchanting set items. -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="SITTING">
@@ -720,11 +696,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3624" name="Enchant Light Armor (S-grade)" max-level="3">
-        <!-- Increases M. Def. and P. Evasion through item set enchantment. -->
+    <skill id="3624" name="Enchant S-grade Light Armor" max-level="3">
+        <!-- Increases M. Def. and Evasion by enchanting set items. -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -737,11 +712,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="3625" name="Enchant Robe (S-grade)" max-level="3">
-        <!-- Increases P. Def. and Weight Limit through item set enchantment. -->
+    <skill id="3625" name="Enchant S-grade Robe" max-level="3">
+        <!-- Increases P. Def. and weight capacity by enchanting set items. -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -756,8 +730,7 @@
     <skill id="3629" name="Blood Sword Akamanah" max-level="10">
         <!-- A demonic twin blade forged in blood by Gran Kain, the god of chaos. The blade dies over and over again when it touches the air, and it craves blood to forge it anew. It becomes stronger every time it is supplied with blood. -->
         <icon initial="icon.weapon_dual_sword_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vampiric-attack chance="80">
@@ -925,6 +898,7 @@
         <icon initial="icon.skill3630"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="78"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="-1"/>
             <hit-time initial="2000"/>
@@ -932,9 +906,9 @@
         <consume>
             <mana initial="140"/>
         </consume>
-        <target scope="POINT_BLANK" range="150" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" range="150" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="11500.0"/>
             </physical-attack>
         </effects>
@@ -953,18 +927,19 @@
         <consume>
             <mana initial="140"/>
         </consume>
-        <target type="ENEMY" affect-min="6" affect-random="12"/>
+        <target affect-min="6" affect-random="12" type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="15000.0"/>
             </physical-attack>
         </effects>
     </skill>
     <skill id="3632" name="Clan Gate" action="A2">
-        <!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+        <!-- Active skill: Creates a gate that summons clan members. You cannot move while this skill is active. -->
         <icon initial="icon.accessory_crown_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <reuse initial="3600000"/>
             <hit-time initial="10000"/>
         </attributes>
@@ -984,13 +959,14 @@
         </effects>
     </skill>
     <skill id="3633" name="Residential Stun Immunity" max-level="2" action="A2">
-        <!--
-            level 1: Active Skill: Greatly increases Stun Resistance spontaneously.
-            level 2: Active Skill: Spontaneously becomes immune to stun.
-         -->
+        <!-- 
+			level 1: Active skill: Temporarily increases Stun Resistance.
+			level 2: Active skill: Temporarily grants immunity to Stun.
+		-->
         <icon initial="icon.accessory_pledge_cap1_i05"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
         </attributes>
         <target/>

@@ -1,28 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="39300" name="Steamed Rice Cake of Grace" action="A1">
+    <skill id="39300" name="Gracia's Rice Bread" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39301" name="My Teleport Book" action="A1">
-        <!-- Increases number of Unoccupied Teleport Devices by 1. -->
+        <!-- Number of Unoccupied Teleport Devices +1. -->
         <icon initial="icon.bookmark_book_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39302" name="Baium Doll's Spell" max-level="3">
-        <!--
-            level 1: Effect for having Baium Doll.\n\nSkill Cooldown -3%\nP. Def. ++12%\nM. Def. ++12%\nMental Attack Resistance ++40%\nParalysis Resistance ++20%\nKnock Down Resistance ++20%\nPull Resistance ++20%
-            level 2: Effect for having Baium Doll.\n\nSkill Cooldown -4%\nP. Def. ++15%\nM. Def. ++15%\nMental Attack Resistance ++45%\nParalysis Resistance ++25%\nKnock Down Resistance ++25%\nPull Resistance ++25%
-            level 3: Effect for having Baium Doll.\n\nSkill Cooldown -5%\nP. Def. ++20%\nM. Def. ++20%\nMental Attack Resistance ++50%\nParalysis Resistance ++30%\nKnock Down Resistance ++30%\nPull Resistance ++30%
-         -->
+    <skill id="39302" name="Baium Doll's Sorcery" max-level="3">
+        <!-- 
+			level 1: A doll imbued with Baium's power.  <Effect> Skill Cooldown -2% P. Def. +5% M. Def. +5% Silence Resistance +10% Fear Resistance +10% Paralysis Resistance +5% Knockback Resistance +5% Pull Resistance +5%
+			level 2: A doll imbued with Baium's power.  <Effect> Skill Cooldown -3% P. Def. +12% M. Def. +12% Silence Resistance +40% Fear Resistance +40% Paralysis Resistance +20% Knockback Resistance +20% Pull Resistance +20%
+			level 3: A doll imbued with Baium's power.  <Effect> Skill Cooldown -4% P. Def. +15% M. Def. +15% Silence Resistance +45% Fear Resistance +45% Paralysis Resistance +25% Knockback Resistance +25% Pull Resistance +25%
+		-->
         <icon initial="icon.bm_baium_doll_30d"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <reuse skill-type="PHYSIC">
@@ -83,14 +85,14 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39303" name="Queen Ant's Doll Spell" max-level="3">
-        <!--
-            level 1: Effect for having Queen Ant Doll.\n\nP. Atk. ++8%\nP. Critical Damage ++8%\nMax HP ++12%.
-            level 2: Effect for having Queen Ant Doll.\n\nP. Atk. ++12%\nP. Critical Damage ++10%\nMax HP ++15%.
-            level 3: Effect for having Queen Ant Doll.\n\nP. Atk. ++15%\nP. Critical Damage ++13%\nMax HP ++20%.
-         -->
+    <skill id="39303" name="Queen Ant Doll's Sorcery" max-level="3">
+        <!-- 
+			level 1: A doll imbued with Queen Ant's power.  <Effect> P. Atk. +2% P. Critical Damage +3% P. Skill Critical Damage +3% Max HP +4%
+			level 2: A doll imbued with Queen Ant's power.  <Effect> P. Atk. +8% P. Critical Damage +8% P. Skill Critical Damage +8% Max HP +12%
+			level 3: A doll imbued with Queen Ant's power.  <Effect> P. Atk. +12% P. Critical Damage +10% P. Skill Critical Damage +10% Max HP +15%
+		-->
         <icon initial="icon.bm_queen_ant_doll_30d"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
@@ -113,14 +115,14 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39304" name="Orfen Doll's Spell" max-level="3">
-        <!--
-            level 1: Effect for having Orfen Doll.\n\nM. Atk. ++8%\nM. Critical Damage ++8%\nMax MP ++12%.
-            level 2: Effect for having Orfen Doll.\n\nM. Atk. ++15%\nM. Critical Damage ++10%\nMax MP ++15%.
-            level 3: Effect for having Orfen Doll.\n\nM. Atk. ++20%\nM. Critical Damage ++15%\nMax MP ++20%.
-         -->
+    <skill id="39304" name="Orfen Doll's Sorcery" max-level="3">
+        <!-- 
+			level 1: A doll imbued with Orfen's power.  <Effect> M. Atk. +2% M. Skill Critical Damage +3% Max MP +4%
+			level 2: A doll imbued with Orfen's power.  <Effect> M. Atk. +8% M. Skill Critical Damage +8% Max MP +12%
+			level 3: A doll imbued with Orfen's power.  <Effect> M. Atk. +15% M. Skill Critical Damage +10% Max MP +15%
+		-->
         <icon initial="icon.bm_orfen_doll_30d"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
@@ -143,35 +145,15 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39305" name="Dark Knights Transformation" max-level="3" action="A2">
-        <!--
-			< 1 >
-            level 1: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +5%, 
-			PvP P. Def. +5%, 
-			and Stun/Paralysis/MEN Resistance +5%. 
-			Effect remains even after death.
-			< 2 >
-            level 2: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +7%, 
-			PvP P. Def. +7%, 
-			and Stun/Paralysis/MEN Resistance +7%. 
-			Effect remains even after death.
-			< 3 >
-            level 3: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +10%, 
-			PvP P. Def. +10%, 
-			and Stun/Paralysis/MEN Resistance +10%. 
-			Effect remains even after death.
-         -->
+    <skill id="39305" name="Dark Knight Transformation" max-level="3" action="A2">
+        <!-- 
+			level 1: You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%%, P. Atk. in PvP +5%%, P. Def. in PvP +5%%, Paralysis/ Silence/ Fear/ Stun Resistance +5%%. The effect remains after death.
+			level 2: You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%%, P. Atk. in PvP +7%%, P. Def. in PvP +7%%, Paralysis/ Silence/ Fear/ Stun Resistance +7%%. The effect remains after death.
+			level 3: You are transformed into Dark Knight. For 20 min., Max HP/ MP +10%%, P. Atk. in PvP +10%%, P. Def. in PvP +10%%, Paralysis/ Silence/ Fear/ Stun Resistance +10%%. The effect remains after death.
+		-->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-       <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -179,7 +161,7 @@
         <abnormal type="CHANGEBODY" visual="COSTUME_DARK_KNIGHT">
             <level initial="1"/>
             <time initial="1200"/>
-        </abnormal>	
+        </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="10.0"/>
@@ -187,64 +169,57 @@
             <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="10.0"/>
             </vital-stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>		
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
             <defence-trait>
                 <trait type="SHOCK">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
-            </defence-trait>			
-		</effects>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39306" name="White Assassin Transformation" action="A2">
-        <!-- Transformed into a White Assassin. For 20 minutes, 
-		Max HP/Max MP +7%, 
-		P. Accuracy/M. Accuracy +2, 
-		P. Atk./M. Atk. +3%, 
-		P. Def./M. Def. +3%,
-		Atk. Spd. +5%, 
-		M. Critical Rate +20, 
-		and Movement Speed +5. 
-		Effect remains even after death. -->
+        <!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%%, P./ M. Accuracy +2, P./ M. Atk. +3%%, P./ M. Def. +3%%, Atk. Spd. +5%%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -289,10 +264,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39307" name="Warrior's XP Charm">
-        <!-- XP/SP Gain +50%%. -->
+    <skill id="39307" name="Warrior Experience Amulet">
+        <!-- Acquired XP/ SP +50%%. -->
         <icon initial="icon.skill_exp_sp_up"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -304,9 +279,10 @@
         </effects>
     </skill>
     <skill id="39308" name="Life Control Tower's Scroll of Blessing" action="A2">
-        <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
+        <!-- Max HP +5%%\nMax MP +5%%\nParalysis Resistance +15%%\nSilence Resistance +15%%\nFear Resistance +15%%\nAcquired XP +30%%\nAcquired SP +30%%\nThe effect remains after death. You can cancel the effect by yourself. -->
         <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -339,9 +315,10 @@
         </effects>
     </skill>
     <skill id="39309" name="Stabilized Eva's Scroll: Enchant Hair Accessory" action="A1">
-        <!-- To Enchant Hair Accessory. -->
+        <!-- Enchants Hair Accessory. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -349,6 +326,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -359,16 +337,17 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39312" name="Hair Accessory Enchantment Effect">
+    <skill id="39312" name="Enchant Effect: Hair Accessory">
         <!-- Max HP +2%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -376,10 +355,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39313" name="Hair Accessory Enchantment Effect">
+    <skill id="39313" name="Enchant Effect: Hair Accessory">
         <!-- Max HP +4%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -387,10 +366,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39314" name="Hair Accessory Enchantment Effect">
-        <!-- Max HP +8%% and Max MP +2%%. -->
+    <skill id="39314" name="Enchant Effect: Hair Accessory">
+        <!-- Max HP +8%%, Max MP +2%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -401,10 +380,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39315" name="Hair Accessory Enchantment Effect">
-        <!-- Max HP +12%%, Max MP +6%%, and Max CP +6%%. -->
+    <skill id="39315" name="Enchant Effect: Hair Accessory">
+        <!-- Max HP +12%%, Max MP +6%%, Max CP +6%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -418,10 +397,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39316" name="Hair Accessory Enchantment Effect">
-        <!-- Max HP +16%%, Max MP +10%%, and Max CP +10%%. -->
+    <skill id="39316" name="Enchant Effect: Hair Accessory">
+        <!-- Max HP +16%%, Max MP +10%%, Max CP +10%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -435,10 +414,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="39317" name="Hair Accessory Enchantment Effect">
-        <!-- Max HP +20%%, Max MP +14%%, Max CP +14%%, and Damage Received -4%%. -->
+    <skill id="39317" name="Enchant Effect: Hair Accessory">
+        <!-- Max HP +20%%, Max MP +14%%, Max CP +14%%, P./ M. Damage Received -4%%. -->
         <icon initial="icon.etc_scroll_of_enchant_armor_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -470,14 +449,14 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39318" name="Item Skill: Mental Attack Resistance" max-level="3">
-        <!--
-            level 1: MEN Attack Resistance +5%.
-            level 2: MEN Attack Resistance +10%.
-            level 3: MEN Attack Resistance +20%.
-         -->
+    <skill id="39318" name="Item Skill: Fear Resistance" max-level="3">
+        <!-- 
+			level 1: Fear Resistance +5%
+			level 2: Fear Resistance +10%
+			level 3: Fear Resistance +20%
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -490,10 +469,14 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39319" name="Item Skill: Stun Resistance" max-level="3">
-        <!-- Increases Stun Resistance. -->
+    <skill id="39319" name="Item Skill: Shock Resistance" max-level="3">
+        <!-- 
+			level 1: Shock Resistance +5%
+			level 2: Shock Resistance +10%
+			level 3: Shock Resistance +20%
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -507,13 +490,13 @@
         </effects>
     </skill>
     <skill id="39320" name="Item Skill: Paralysis Resistance" max-level="3">
-        <!--
-            level 1: Paralysis Attack Resistance +5%.
-            level 2: Paralysis Attack Resistance +10%.
-            level 3: Paralysis Attack Resistance +20%.
-         -->
+        <!-- 
+			level 1: Paralysis Resistance +5%
+			level 2: Paralysis Resistance +10%
+			level 3: Paralysis Resistance +20%
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -526,14 +509,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39321" name="Item Skill: Bleed Resistance" max-level="3">
-        <!--
-            level 1: Bleed Resistance +5%.
-            level 2: Bleed Resistance +10%.
-            level 3: Bleed Resistance +20%.
-         -->
+    <skill id="39321" name="Item Skill: Infection Resistance" max-level="3">
+        <!-- Infection Resistance -->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -546,14 +525,14 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39322" name="Item Skill: Poison Resistance" max-level="3">
-        <!--
-            level 1: Poison Resistance +5%.
-            level 2: Poison Resistance +10%.
-            level 3: Poison Resistance +20%.
-         -->
+    <skill id="39322" name="Item Skill: Silence Resistance" max-level="3">
+        <!-- 
+			level 1: Silence Resistance +5%
+			level 2: Silence Resistance +10%
+			level 3: Silence Resistance +20%
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -567,13 +546,13 @@
         </effects>
     </skill>
     <skill id="39323" name="Item Skill: Hold Resistance" max-level="3">
-        <!--
-            level 1: Hold Resistance +5%.
-            level 2: Hold Resistance +10%.
-            level 3: Hold Resistance +20%.
-         -->
+        <!-- 
+			level 1: Hold Resistance +5%
+			level 2: Hold Resistance +10%
+			level 3: Hold Resistance +20%
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -586,14 +565,14 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39324" name="Item Skill: XP Gain" max-level="3">
-        <!--
-            level 1: Hunting XP +5%.
-            level 2: Hunting XP +10%.
-            level 3: Hunting XP +20%.
-         -->
+    <skill id="39324" name="Item Skill: Acquired XP" max-level="3">
+        <!-- 
+			level 1: When in inventory, Acquired XP +5%.
+			level 2: When in inventory, Acquired XP +10%.
+			level 3: When in inventory, Acquired XP +20%.
+		-->
         <icon initial="icon.skill11825"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -604,12 +583,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39325" name="Eva's Exhilarate" action="A1">
-        <!-- HP Recovery +5000, MP Recovery +2000, CP Recovery +3000. -->
-        <icon initial="icon.skill10106"/>
+    <skill id="39325" name="Arcane Deliverance" action="A1">
+        <!-- Recovers HP/ MP/ CP after an attack.\n(20%% of Max HP and lower) -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
         <attributes>
-            <reuse initial="900000"/>
-            <hit-time initial="500"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -624,13 +602,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39326" name="Eva's Speed" action="A1">
-        <!-- For 2 minutes, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
-            <reuse initial="900000"/>
-            <effect-point initial="100"/>
-            <hit-time initial="1000"/>
+    <skill id="39326" name="Arcane Speed" action="A1">
+        <!-- Increases Speed, Atk. Spd. and Casting Spd. after an attack. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="EVAS_BUFF">
@@ -649,13 +625,11 @@
             </speed>
         </effects>
     </skill>
-    <skill id="39327" name="Eva's Shield" action="A1">
-        <!-- For 10 sec., becomes invincible. The effect disappears when character attacks. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
-            <reuse initial="900000"/>
-            <effect-point initial="100"/>
-            <hit-time initial="500"/>
+    <skill id="39327" name="Arcane Barrier" action="A1">
+        <!-- Creates a barrier for a while when damage is taken. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="RESIST_DEATH">
@@ -666,13 +640,11 @@
             <effect name="IgnoreDeath"/>
         </effects>
     </skill>
-    <skill id="39328" name="Eva's Immunity" action="A1">
-        <!-- For 10 sec., makes you immune to all debuffs. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
-            <reuse initial="600000"/>
-            <effect-point initial="100"/>
-            <hit-time initial="500"/>
+    <skill id="39328" name="Arcane Immunity" action="A1">
+        <!-- Grants immunity to debuffs and anomaly states for a while when damage is taken. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="ABNORMAL_INVINCIBILITY">
@@ -683,13 +655,11 @@
             <effect name="DebuffBlock"/>
         </effects>
     </skill>
-    <skill id="39329" name="Eva's Ultimate Defense" action="A1">
-        <!-- For 10 seconds, P. Def. +3000 and M. Def. +2100. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
-            <reuse initial="600000"/>
-            <effect-point initial="100"/>
-            <hit-time initial="500"/>
+    <skill id="39329" name="Arcane Protection" action="A1">
+        <!-- Increases P./ M. Def for a while when damage is taken. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="EVAS_BUFF">
@@ -705,17 +675,13 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39330" name="Eva's Sleep" debuff="true" action="A1">
-        <!-- Makes the target fall asleep for 5 seconds. Can only be used against a PC. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="SLEEP" level-bonus-rate="30" remove-on-damage="true">
-            <cast-range initial="900"/>
-            <reuse initial="300000"/>
-            <cool-time initial="500"/>
-            <effect-point initial="-100"/>
-            <hit-time initial="1000"/>
+    <skill id="39330" name="Arcane Paralysis" action="A1">
+        <!-- Temporarily paralyzes the enemy after an attack. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0" remove-on-damage="true" trait="SLEEP">
+            <cast-range initial="-1"/>
         </attributes>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
+        <target object="NOT_FRIEND" scope="RANGE" type="ENEMY"/>
         <abnormal type="SLEEP" visual="SLEEP">
             <level initial="1"/>
             <time initial="5"/>
@@ -730,17 +696,13 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="39331" name="Eva's Silence" debuff="true" action="A1">
-        <!-- Interrupts P./M. skill casting for 5 seconds. Can only be used against a PC. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
-            <cast-range initial="900"/>
-            <reuse initial="300000"/>
-            <cool-time initial="500"/>
-            <effect-point initial="-100"/>
-            <hit-time initial="1000"/>
+    <skill id="39331" name="Arcane Silence" action="A1">
+        <!-- Temporarily inflicts Silence on the enemy after an attack. -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0" trait="DERANGEMENT">
+            <cast-range initial="-1"/>
         </attributes>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
+        <target object="NOT_FRIEND" scope="RANGE" type="ENEMY"/>
         <abnormal type="SILENCE" visual="SILENCE">
             <level initial="1"/>
             <time initial="5"/>
@@ -750,15 +712,12 @@
             <effect name="Mute"/>
         </effects>
     </skill>
-    <skill id="39332" name="Eva's Critical Weakness" debuff="true" action="A1">
-        <!-- Received P. Critical Damage and P. Critical Attack Receival Rate +50%% for 10 seconds when being attacked. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="30">
+    <skill id="39332" name="Arcane Critical Sense" action="A1">
+        <!-- All Critical Rate +3%%\nAll Critical Damage +150 -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cast-range initial="900"/>
-            <reuse initial="300000"/>
-            <effect-point initial="-671"/>
-            <hit-time initial="1000"/>
+            <cast-range initial="-1"/>
         </attributes>
         <consume>
             <mana initial="43"/>
@@ -778,13 +737,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39333" name="Blood of Eva" action="A1">
-        <!-- For 5 minutes, PvE Damage +10%%. -->
-        <icon initial="icon.skill10106"/>
-        <attributes property="PHYSIC">
-            <reuse initial="600000"/>
-            <effect-point initial="100"/>
-            <hit-time initial="500"/>
+    <skill id="39333" name="Arcane Power" action="A1">
+        <!-- P. Atk. +350\nM. Atk. +500 -->
+        <icon initial="icon.etc_wit_symbol_i01"/>
+        <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="EVAS_BUFF">
@@ -803,20 +760,22 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39334" name="Blessing of Luck" action="A1">
-        <!-- For 5 minutes, a party member's HP Recovery Bonus/MP Recovery Bonus +20%%, P. Accuracy +4, P. Evasion +4, P. Atk./M. Atk. +15%%, Atk. Spd./Casting Spd. +10%%, P. Critical/M. Critical Rate +15%%, and P. Critical Damage/M. Critical Damage +15%%. -->
+    <skill id="39334" name="Lucky Fortune" action="A1">
+        <!-- For 5 min., a party member’s HP/ MP Recovery Rate +20%%, P. Accuracy +4, P. Evasion +4, P./ M. Atk. +15%%, Atk./ Casting Spd. +10%%, P. Critical Rate/ M. Skill Critical Rate +15%%, P. Critical Damage/ M. Skill Critical Damage +15%%. -->
         <icon initial="icon.Accessary_middle_ages_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="669"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39335" name="Blessing of Luck" max-level="2" action="A1" type="MAGIC">
-        <!-- Restores 20%% HP of all party members. Max HP +20%%, M. Critical Rate +2, P. Critical Damage +20%%, P. Atk. +10%%, P. Def. +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def. +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, P. Accuracy +4, and Movement Speed -20%% for 5 minutes with the help of a great spirit. -->
+    <skill id="39335" name="Lucky Fortune" max-level="2" action="A1" type="MAGIC">
+        <!-- For 5 min., a great spirit grants party members: HP Recovery +20%%, Max MP +20%%, M. Skill Critical Rate +2, P. Critical Damage +20%%, P. Atk. +10%%, P. Def. +20%%, Atk. Spd. +20%%, M. Atk. +20%%, M. Def. +20%%, Casting Spd. +20%%, Debuff Resistance +10%%, P. Accuracy +4, Speed -20%%. -->
         <icon initial="icon.Accessary_middle_ages_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="669"/>
             <hit-time initial="2500"/>
@@ -824,9 +783,9 @@
         <target/>
     </skill>
     <skill id="39336" name="Focus - Event" action="A1">
-        <!-- For 1 hour, P. Critical Rate +30%%. -->
+        <!-- For 1 h., P. Critical Rate +30%%. -->
         <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -837,9 +796,9 @@
         <target/>
     </skill>
     <skill id="39337" name="Death Whisper - Event" action="A1">
-        <!-- For 1 hour, P. Critical Damage +35%%. -->
+        <!-- For 1 h., P. Critical Damage +35%%. -->
         <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -851,9 +810,9 @@
         <target/>
     </skill>
     <skill id="39338" name="Haste - Event" action="A1">
-        <!-- For 1 hour, Atk. Spd. +33%%. -->
+        <!-- For 1 h., Atk. Spd. +33%%. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -865,9 +824,9 @@
         <target/>
     </skill>
     <skill id="39339" name="Guidance - Event" action="A1">
-        <!-- For 1 hour, P. Accuracy +4. -->
+        <!-- For 1 h., P. Accuracy +4. -->
         <icon initial="icon.skill1240"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -879,9 +838,9 @@
         <target/>
     </skill>
     <skill id="39340" name="Noble Blessed Body - Event" action="A1">
-        <!-- For 1 hour, Max. HP +35%%. -->
+        <!-- Max HP +35%% for 1 h. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -893,9 +852,9 @@
         <target/>
     </skill>
     <skill id="39341" name="Noble Blessed Soul - Event" action="A1">
-        <!-- For 1 hour, Max. MP +35%%. -->
+        <!-- Max MP +35%% for 1 h. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -907,9 +866,9 @@
         <target/>
     </skill>
     <skill id="39342" name="Agility - Event" action="A1">
-        <!-- For 1 hour, P. Evasion +4. -->
+        <!-- For 1 h., P. Evasion +4. -->
         <icon initial="icon.skill1087"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -921,9 +880,9 @@
         <target/>
     </skill>
     <skill id="39343" name="Acumen - Event" action="A1">
-        <!-- For 1 hour, Casting Spd. +30%%. -->
+        <!-- Casting Spd. +30%% for 1 h. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -935,9 +894,9 @@
         <target/>
     </skill>
     <skill id="39344" name="Decrease Weight - Event" action="A1">
-        <!-- For 1 hour, Weight Penalty Segment +9000. -->
+        <!-- For 1 h., overweight limit +9000. -->
         <icon initial="icon.skill1257"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -949,9 +908,9 @@
         <target/>
     </skill>
     <skill id="39345" name="Might - Event" action="A1">
-        <!-- For 1 hour, P. Atk. +15%%. -->
+        <!-- For 1 h., P. Atk. +230. -->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -963,9 +922,9 @@
         <target/>
     </skill>
     <skill id="39346" name="Shield - Event" action="A1">
-        <!-- For 1 hour, P. Def. +15%%. -->
+        <!-- For 1 h., P. Def. +300. -->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -977,9 +936,9 @@
         <target/>
     </skill>
     <skill id="39347" name="Magic Barrier - Event" action="A1">
-        <!-- For 1 hour, M. Def. +30%%. -->
+        <!-- For 1 h., M. Def. +350. -->
         <icon initial="icon.skill1036"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -991,9 +950,9 @@
         <target/>
     </skill>
     <skill id="39348" name="Vampiric Rage - Event" action="A1">
-        <!-- For 1 hour with a certain probability recovers as HP 9%% of the P. melee damage inflicted. -->
+        <!-- With a certain chance, absorbs 9%% of the inflicted damage as HP. Duration: 1 h. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1005,9 +964,9 @@
         <target/>
     </skill>
     <skill id="39349" name="Empower - Event" action="A1">
-        <!-- For 1 hour, M. Atk. +75%%. -->
+        <!-- For 1 h., M. Atk. +75%%. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1019,9 +978,9 @@
         <target/>
     </skill>
     <skill id="39350" name="Wind Walk - Event" action="A1">
-        <!-- For 1 hour, Speed +33. -->
+        <!-- Speed +33 for 1 h. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1033,9 +992,9 @@
         <target/>
     </skill>
     <skill id="39351" name="Berserker Spirit - Event" action="A1">
-        <!-- For 1 hour, P. Def. -8%%, M. Def. -16%%, P. Evasion -4, P. Atk. +8%%, M. Atk. +16%%, Atk. Spd. +8%%, Casting Spd. +8%%, and Movement Speed +8. -->
+        <!-- For 1 h., Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1046,10 +1005,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="39352" name="Greater Might - 13th Anniversary Event" action="A1">
-        <!-- For 1 hour, P. Atk. +10%%. -->
+    <skill id="39352" name="Greater Might - Anniversary" action="A1">
+        <!-- For 1 h., P. Atk. +10%%. -->
         <icon initial="icon.skill1388"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1060,10 +1019,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="39353" name="Greater Shield - 13th Anniversary Event" action="A1">
-        <!-- For 1 hour, P. Def. +15%%. -->
+    <skill id="39353" name="Greater Shield - Anniversary" action="A1">
+        <!-- P. Def. +15%% for 1 h. -->
         <icon initial="icon.skill1389"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1075,9 +1034,9 @@
         <target/>
     </skill>
     <skill id="39354" name="Wild Magic - Event" action="A1">
-        <!-- For 1 hour, M. Critical Rate +20. -->
+        <!-- M. Skill Critical Rate +20 for 1 h. -->
         <icon initial="icon.skill1303"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1089,9 +1048,9 @@
         <target/>
     </skill>
     <skill id="39355" name="Clarity - Event" action="A1">
-        <!-- For 1 hour, P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, and song/dance skill MP Consumption -20%%. -->
+        <!-- For 1 h., P. Skill/ Song/ Dance MP Consumption -20%%, M. Skill MP Consumption -10%%. -->
         <icon initial="icon.skill1397"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1102,10 +1061,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="39356" name="Prophecy of Water - 13th Anniversary Event" action="A1">
-        <!-- MP Recovery bonus +10%%, M. Atk. +10%%, M. Def +10%%, Casting Spd. +5%%, Debuff Resistance +10%%, and Skill MP Consumption -3%% for 1 hour with the help of a great spirit. -->
+    <skill id="39356" name="Prophecy of Water - Anniversary" action="A1">
+        <!-- For 1 h., for a party member MP +10%%, M. Atk. +10%%, M. Def. +10%%, Casting Spd. +5%%, Debuff Resistance +10%%. Skill MP Consumption -3%%. -->
         <icon initial="icon.skill1355"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1116,10 +1075,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="39357" name="Prophecy of Fire - 13th Anniversary Event" action="A1">
-        <!-- Max HP +10%%, HP Recovery Bonus +10%%, P. Atk. +10%%, P. Def +10%%, Atk. Spd. +5%%, and Debuff Resistance +10%% for 1 hour with the help of a great spirit. -->
+    <skill id="39357" name="Prophecy of Fire - Anniversary" action="A1">
+        <!-- For 1 h., for a party member Max HP +10%%, HP Recovery bonus +10%%, P. Atk. +10%%, P. Def. +10%%, Atk. Spd. +5%%, Debuff Resistance +10%%. -->
         <icon initial="icon.skill1356"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1130,10 +1089,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="39358" name="Prophecy of Wind - 13th Anniversary Event" action="A1">
-        <!-- P./M. Accuracy +3, P./M. Evasion +3, P./M. Critical Rate +10%%, P./M. Critical Damage +15%%, Movement Speed +10%%, Debuff Resistance +10%%, and P. Atk. against Raid Boss +15%% for party members for 1 hour with the help of a great spirit. -->
+    <skill id="39358" name="Prophecy of Wind - Anniversary" action="A1">
+        <!-- For 1 h., party member's. P./ M. Accuracy +3, P./ M. Evasion +3, P. Critical Rate/ M. Skill Critical Rate +10%%, P. Critical Damage/ M. Skill Critical Damage +15%%, Speed +10%%, Debuff Resistance +10%%, damage to Raid Bosses +15%%. -->
         <icon initial="icon.skill1357"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900"/>
             <reuse initial="1000"/>
             <effect-point initial="1"/>
@@ -1148,6 +1107,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1158,20 +1118,22 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39361" name="Angler's Blessing" max-level="3" action="A1">
-        <!--
-            level 1: For 2 hours, Fishing XP/SP Gain +100%%. Effect remains even after death.
-            level 2: For 4 hours, Fishing XP/SP Gain +100%%. Effect remains even after death.
-            level 3: For 8 hours, Fishing XP/SP Gain +100%%. Effect remains even after death.
-         -->
+    <skill id="39361" name="Master Fisherman's Blessing" max-level="3" action="A1">
+        <!-- 
+			level 1: For 2 h., Acquired XP/ SP during fishing +100%%. Effect remains after death.
+			level 2: For 4 h., Acquired XP/ SP during fishing +100%%. Effect remains after death.
+			level 3: For 8 h., Acquired XP/ SP during fishing +100%%. Effect remains after death.
+		-->
         <icon initial="icon.fishing_zone_ticket"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -1181,6 +1143,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1191,16 +1154,18 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39364" name="Angler's Gold Box" action="A1">
+    <skill id="39364" name="Angler's Golden Box" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1208,9 +1173,10 @@
         <target/>
     </skill>
     <skill id="39365" name="Scroll: Enchant Fishing Weapon" action="A1">
-        <!-- Can only be used on fishing weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails. -->
+        <!-- Can only be used together with fishing weapons. Does not disappear after an unsuccessful Enchant. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1218,23 +1184,26 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39367" name="Teddy Bear Transformation" action="A1">
-        <!-- Transformed into a Teddy Bear. Max HP/Max MP +20%% and Hunting XP/SP Gain +20%% during Sayha's Grace. Effect remains even after death. -->
+    <skill id="39367" name="Transformation into Teddy Bear" action="A1">
+        <!-- Teddy Bear transformation. Max HP/ MP +20%%, Acquired XP/ SP +20%% while Sayha's Grace is active. The effect remains after death. -->
         <icon initial="icon.gomdori_chest_change"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39368" name="Weapon Supply Box +15 (A-grade)" action="A1">
+    <skill id="39368" name="+15 A-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1245,61 +1214,62 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="3.0" id="235"/>
-                <item chance="3.0" id="236"/>
-                <item chance="3.0" id="8682"/>
-                <item chance="3.0" id="80"/>
-                <item chance="3.0" id="2500"/>
-                <item chance="3.0" id="8678"/>
-                <item chance="3.0" id="7884"/>
-                <item chance="3.0" id="81"/>
-                <item chance="3.0" id="8679"/>
-                <item chance="3.0" id="288"/>
-                <item chance="3.0" id="289"/>
-                <item chance="3.0" id="8684"/>
-                <item chance="3.0" id="2504"/>
-                <item chance="3.0" id="164"/>
-                <item chance="3.0" id="8680"/>
-                <item chance="3.0" id="7899"/>
-                <item chance="3.0" id="7902"/>
-                <item chance="3.0" id="8681"/>
-                <item chance="3.0" id="98"/>
-                <item chance="3.0" id="305"/>
-                <item chance="3.0" id="8683"/>
-                <item chance="3.0" id="269"/>
-                <item chance="3.0" id="270"/>
-                <item chance="3.0" id="8685"/>
-                <item chance="3.0" id="150"/>
-                <item chance="3.0" id="151"/>
-                <item chance="3.0" id="8686"/>
-                <item chance="3.0" id="212"/>
-                <item chance="3.0" id="213"/>
-                <item chance="3.0" id="8688"/>
-                <item chance="3.0" id="7894"/>
-                <item chance="3.0" id="7895"/>
-                <item chance="3.0" id="8687"/>
+                <item chance="3.0" count="1" id="235"/>
+                <item chance="3.0" count="1" id="236"/>
+                <item chance="3.0" count="1" id="8682"/>
+                <item chance="3.0" count="1" id="80"/>
+                <item chance="3.0" count="1" id="2500"/>
+                <item chance="3.0" count="1" id="8678"/>
+                <item chance="3.0" count="1" id="7884"/>
+                <item chance="3.0" count="1" id="81"/>
+                <item chance="3.0" count="1" id="8679"/>
+                <item chance="3.0" count="1" id="288"/>
+                <item chance="3.0" count="1" id="289"/>
+                <item chance="3.0" count="1" id="8684"/>
+                <item chance="3.0" count="1" id="2504"/>
+                <item chance="3.0" count="1" id="164"/>
+                <item chance="3.0" count="1" id="8680"/>
+                <item chance="3.0" count="1" id="7899"/>
+                <item chance="3.0" count="1" id="7902"/>
+                <item chance="3.0" count="1" id="8681"/>
+                <item chance="3.0" count="1" id="98"/>
+                <item chance="3.0" count="1" id="305"/>
+                <item chance="3.0" count="1" id="8683"/>
+                <item chance="3.0" count="1" id="269"/>
+                <item chance="3.0" count="1" id="270"/>
+                <item chance="3.0" count="1" id="8685"/>
+                <item chance="3.0" count="1" id="150"/>
+                <item chance="3.0" count="1" id="151"/>
+                <item chance="3.0" count="1" id="8686"/>
+                <item chance="3.0" count="1" id="212"/>
+                <item chance="3.0" count="1" id="213"/>
+                <item chance="3.0" count="1" id="8688"/>
+                <item chance="3.0" count="1" id="7894"/>
+                <item chance="3.0" count="1" id="7895"/>
+                <item chance="3.0" count="1" id="8687"/>
             </random-restoration>
         </effects>
     </skill>
     <skill id="39369" name="White Knight Transformation" action="A1">
-        <!-- Transformed into a White Knight. For 15 minutes, Max HP/Max MP +10%%, Stun/Paralysis/MEN Resistance +5%%, PvE P. Atk. +5%%, and Received Damage -5%%. Does not disappear at death. -->
+        <!-- You are transformed into White Knight. For 20 min., Max HP/ MP +10%%, Paralysis/ Silence/ Fear/ Stun Resistance +5%%, PvE damage +5%%, received damage -5%%. The effect remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39370" name="Lucky Charm">
-        <!-- XP/Item Drop Rate -20%% upon death. Cannot be used by chaotic characters. -->
+        <!-- Death XP Penalty -20%%. Cannot be used by chaotic characters. -->
         <icon initial="icon.bm_freya_rune"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-        <effects>		
-            <reduce-drop-penalty>
+        <effects>
+            <reduce-drop-penalty type="ANY">
                 <experience initial="-20"/>
                 <death-penalty initial="-20"/>
             </reduce-drop-penalty>
-        </effects>	
+        </effects>
     </skill>
 </list>

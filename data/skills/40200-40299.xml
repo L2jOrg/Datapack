@@ -1,234 +1,745 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="40200" name="Maliss's High-grade HP Potion - Event">
-        <icon initial="icon.etc_bm_hero_red_potion"/>
-        <attributes auto-use="ACTIVE">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40201" name="Cadmus Transformation Scroll - Song Dance - Event">
-        <!-- Transformed into Cadmus - Song Dance. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
-        <icon initial="icon.etc_roll_of_paper_black_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40202" name="Special Dragon's Fruit Lv. 2 - Event" action="A2">
-        <!-- For 20 minutes, XP/SP Gain +15%%, 
-		P. Atk./M. Atk. +15%%, 
-		P. Critical/M. Critical Rate +20, P. Critical Damage/M. Critical Damage +7%%, 
-		P. Def./M. Def. +20%%, 
-		HP/MP/CP +30%%, HP Recovery Bonus/MP Recovery Bonus +40%%, 
-		and has a chance to absorb 7%% of physical damage dealt to enemies as HP.\nDeath protection. You can delete it yourself. -->
-        <icon initial="icon.bm_dragon_fruit"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
-			<magic-level initial="1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-        <target/>
-		<abnormal type="EXP_SP_K">
-			<level initial="3"/>
-			<time initial="1200"/>
-		</abnormal>
-		<effects>
-			<stat-modify mode="PER" stat="BONUS_EXP">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-                <power initial="20.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="20.0"/>
-            </stat-modify>		
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="20.0"/>
-			</stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power initial="20.0"/>
-            </stat-modify>		
-           <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="7.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-                <power initial="7.0"/>
-            </stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="30.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="30.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_CP">
-				<power initial="30.0"/>
-			</vital-stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_HP_RATE">
-				<power initial="40.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_MP_RATE">
-				<power initial="40.0"/>
-			</stat-modify>
-			<vampiric-attack chance="80">
-				<power initial="7.0"/>
-			</vampiric-attack>
-		</effects>		
-    </skill>
-    <skill id="40203" name="Dragon's Special Elixir Lv. 2 - Event">
-        <!-- For 20 min., XP/SP Gain +50%%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, Atk. Spd./Casting Spd. +70, P./M. Critical Rate +40, P. Critical Damage/P. Critical Damage +12%%, Max HP/CP +3000, Max MP +2000, HP Recovery Bonus/MP Recovery Bonus +12, Sayha's Grace Consumption -25%%. Has a chance to recover 7%% of damage inflicted to enemy as HP.\nDeath protection. You can delete it yourself. -->
-        <icon initial="icon.bm_dragon_posion"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
-			<magic-level initial="1"/>
-			<reuse initial="60000"/>
-			<effect-point initial="1"/>
-		</attributes>
-        <target/>
-		<abnormal type="DRAGON_FRUIT">
-			<level initial="2"/>
-			<time initial="1200"/>
-		</abnormal>
-		<effects>
-			<stat-modify mode="PER" stat="BONUS_EXP">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="BONUS_SP">
-				<power initial="50.0"/>
-			</stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="300.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="450.0"/>
-			</stat-modify>
-            <stat-modify stat="MAGICAL_DEFENCE">
-                <power initial="550.0"/>
-            </stat-modify>
-            <stat-modify stat="PHYSICAL_DEFENCE">
-                <power initial="400.0"/>
-            </stat-modify>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="70.0"/>
-            </stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED">
-                <power initial="70.0"/>
-            </stat-modify>
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="40.0"/>
-			</stat-modify>
-            <stat-modify stat="MAGIC_CRITICAL_RATE">
-                <power initial="40.0"/>
-            </stat-modify>		
-           <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="12.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-                <power initial="12.0"/>
-            </stat-modify>
-			<vital-stat-modify stat="MAX_HP">
-				<power initial="3000.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP">
-				<power initial="2000.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify stat="MAX_CP">
-				<power initial="3000.0"/>
-			</vital-stat-modify>
-			<stat-modify stat="REGENERATE_HP_RATE">
-				<power initial="12.0"/>
-			</stat-modify>
-			<stat-modify stat="REGENERATE_MP_RATE">
-				<power initial="12.0"/>
-			</stat-modify>
-			<vampiric-attack chance="80">
-				<power initial="7.0"/>
-			</vampiric-attack>
-		</effects>	
-    </skill>
-    <skill id="40204" name="Scroll: Fire Dragon's Blessing - Event" action="A2" type="MAGIC">
-        <!-- For 20 min., you feel the Fire Dragon's Blessing. Cannot be dropped.\n\nFire Dragon's Blessing: The targets buff/debuff remains after death. The Fire Dragon's Blessing disappears. -->
-        <icon initial="icon.bm_blessing_dragon"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
-            <reuse initial="60000"/>
-            <effect-point initial="1"/>
-            <hit-time initial="500"/>
-        </attributes>		
-        <target/>
-        <abnormal type="PRESERVE_ABNORMAL">
-            <level initial="2"/>
-            <time initial="1200"/>
-        </abnormal>
-        <effects>
-            <effect name="NoblesseBless"/>
-        </effects>
-    </skill>
-    <skill id="40205" name="16th Anniversary Special Buff" max-level="8">
-        <!--
-            level 1: \n\nFor 1, CON +1.
-            level 2: \n\nFor 2, CON/MEN +1.
-            level 3: \n\nFor 3, WIT/CON/MEN +1.
-            level 4: \n\nFor 4, DEX/WIT/CON/MEN +1.
-            level 5: \n\nFor 5, INT/DEX/WIT/CON/MEN +1.
-            level 6: For 6, STR/INT/DEX/WIT/CON/MEN +1.
-            level 7: For 7, STR/INT/DEX/WIT/CON/MEN +1.
-            level 8: For 8, STR/INT/DEX/WIT/CON/MEN +1.
-         -->
+    <skill id="40205" name="Aden Adventure's Buff" max-level="8">
+        <!-- 
+			level 1: CON +1 for 1 h.
+			level 2: CON/ MEN +1 for 2 h.
+			level 3: WIT/ CON/ MEN +1 for 3 h.
+			level 4: DEX/ WIT/ CON/ MEN +1 for 4 h.
+			level 5: INT/ DEX/ WIT/ CON/ MEN +1 for 5 h.
+			level 6: STR/ INT/ DEX/ WIT/ CON/ MEN +1 for 6 h.
+			level 7: STR/ INT/ DEX/ WIT/ CON/ MEN +1 for 7 h.
+			level 8: STR/ INT/ DEX/ WIT/ CON/ MEN +1 for 8 h.
+		-->
         <icon initial="icon.ev_16th"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40206" name="Remove 16th Anniversary Buff">
-        <!-- Removes the 16th Anniversary buff. -->
+    <skill id="40206" name="Cancel Aden Adventure's Buff">
+        <!-- Cancels the buff of the Aden Adventure. -->
         <icon initial="icon.skill1169"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40207" name="Spellbook: Air Bike">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40208" name="16th Anniversary Cake">
-        <!-- \n\nFor 5 min., party members’ P. Atk. +160, M. Atk. +160, XP/SP Gain +160%%, Max HP/MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. -->
+    <skill id="40208" name="Anniversary Cake">
+        <!-- For 5 min., party members' P. Atk. +160, M. Atk. +160, acquired XP/ SP +160%%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. -->
         <icon initial="BranchSys.icon.br_birthday_cake_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40209" name="Rice Cake Soup">
-        <!-- \n\nFor 20 min., P. Atk./M. Atk. +150, P. Def./M. Def. +100, All Critical Rate +10%%, Max HP/MP +150. -->
+    <skill id="40209" name="Dumpling Soup">
+        <!-- For 20 min. P./ M. Atk. +150, P./ M. Def. +100, all Critical Rate +10%%, Max HP/ MP +150. -->
         <icon initial="BranchSys.icon.br_taiwan_newyear_food_d_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40225" name="Elixir" action="A1" type="MAGIC">
-        <!-- Point Ability +1-->
+    <skill id="40210" name="Scroll: Enchant Circlet of Hero">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" static-reuse="true" magic-critical-rate="5.0" >
-            <effect-point initial="1"/>
-            <hit-time initial="1"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40211" name="New Year Horoscope - Minor Luck">
+        <!-- Acquired XP/ SP +50%. -->
+        <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40212" name="New Year Horoscope - Medium Luck">
+        <!-- STR +1\n, DEX +1\nINT +1\nCON +1\nMEN +1\nWIT +1\nHP +500 -->
+        <icon initial="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40213" name="New Year Horoscope - Great Luck">
+        <!-- STR +3\n, DEX +3\nINT +3\nCON +3\nMEN +3\nWIT +3\nP. Atk. +200\nM. Atk. +200\nP. Def. +200\nM. Def. +200\nMax MP +300\nAll received Critical Damage -5% -->
+        <icon initial="BranchSys.icon.br_xmas_scroll_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40214" name="Scroll of Blessing">
+        <!-- Turns a weapon into a blessed one. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40215" name="Random Teleport">
+        <!-- Teleports to any place in the Black Anvil Guild Camp at random.\n\nCan be used only in the Black Anvil Guild Camp. -->
+        <icon initial="icon.skill19223"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40216" name="Black Anvil Guild Camp's Time Stone">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40217" name="Scroll of Blessing">
+        <!-- Turns a weapon into a blessed one. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40218" name="Growth Potion">
+        <!-- XP +7,490,000, SP +200,000.\nRequired level: 60+.\nCannot be used by chaotic characters. -->
+        <icon initial="icon.bm_freya_potion"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40219" name="Scroll: Boost Attack">
+        <!-- P. Atk. +800\nM. Atk. +800\nMax HP +1000\nAll received Critical Damage -100\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ladies_silver_knife_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40220" name="Scroll: Boost Attack">
+        <!-- P. Atk. +800\nM. Atk. +800\nMax HP +1000\nAll received Critical Damage -100\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ladies_silver_knife_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40221" name="Scroll: Boost Defense">
+        <!-- P. Def. +500\nM. Def. +500\nMax MP +800\nSpeed +2\nAll Critical Rate +30\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ench_bracelet_lucien_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40222" name="Scroll: Boost Defense">
+        <!-- P. Def. +500\nM. Def. +500\nMax MP +800\nSpeed +2\nAll Critical Rate +30\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ench_bracelet_lucien_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40223" name="Scroll: Enchant Stats">
+        <!-- All stats +1\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.stat_up_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40224" name="Scroll: Enchant Stats">
+        <!-- All stats +1\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.stat_up_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40225" name="Elixir" action="A1">
+        <!-- Stat points +1. -->
+        <icon initial="icon.skill0000"/>
+        <attributes magic-critical-rate="5.0" static-reuse="true">
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <hit-time initial="500"/>
         </attributes>
-        <consume>
-            <item initial="94314"/>
-            <item-count initial="1"/>
-        </consume>
-        <target />
+        <target/>
         <conditions>
             <condition name="Elixir"/>
         </conditions>
         <effects>
             <effect name="Elixir"/>
         </effects>
+    </skill>
+    <skill id="40226" name="Special Buff Scroll Lv. 1" max-level="25">
+        <!-- STR/ DEX/ CON +1\nINT/ WIT/ MEN +1\n\nThe buff is leveling up every hour, and various items are granted.\n\n<Rewards>\nLv. 1-8: Sayha's Cookie (2 pcs.)\nLv. 9-15: Sayha's Storm Lv. 3 (2 pcs.)\nLv. 16-20: Soulshot Ticket (10 pcs.)\nLv. 21-23: Spirit Ore (100 pcs.)\nLv. 24: Charging Stone of Random Craft (2 pcs.)\n\nNote!\nIf the character is dead, no items are given, and the buff's level does not increase.\nThe effect remains after death. You can't cancel the effect by yourself. -->
+        <icon initial="icon.etc_training_scroll_kalie_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40227" name="Special Buff Scroll Reward Lv. 1" max-level="5">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40228" name="Forgotten Primeval Garden's Time Stone">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40229" name="Scroll: Boost Attack">
+        <!-- P. Atk. +800\nM. Atk. +800\nMax HP +1000\nAll received Critical Damage -100\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ladies_silver_knife_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40230" name="Scroll: Boost Defense">
+        <!-- P. Def. +500\nM. Def. +500\nMax MP +800\nSpeed +2\nAll Critical Rate +30\nThe effect remains after death.\nYou can cancel the effect by yourself. -->
+        <icon initial="icon.scrl_of_ench_bracelet_lucien_01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40231" name="Maliss' HP Recovery Potion (Event)">
+        <!--  -->
+        <icon initial="icon.etc_bm_hero_red_potion"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40232" name="Energy of Development">
+        <!-- STR/ DEX/ CON +1\nINT/ WIT/ MEN +1\nMP Recovery Rate +5\nAcquired XP/ SP +30%%\n\nDuration: 4 h.\nThe effect remains after death. -->
+        <icon initial="icon.s_dormant_user_display"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40233" name="Scroll: Enchant Rare Accessories (Exchangeable)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40234" name="Scroll: Enchant Rare Accessories">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40235" name="Blessed Scroll: Enchant Rare Accessories (Exchangeable)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40236" name="Blessed Scroll: Enchant Rare Accessories">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40237" name="Pet XP Crystal (Exchangeable)">
+        <!-- Pet XP +100,000,000. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40238" name="Pet XP Crystal">
+        <!-- Pet XP +100,000,000. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40239" name="Pet Buff Scroll">
+        <!-- Max HP +1000\nP. Def. +300\nM. Def. +300\nHP Recovery Rate +10 -->
+        <icon initial="icon.newyear_dog"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40240" name="Capture">
+        <!-- Allows to catch a pet. -->
+        <icon initial="icon.energy_condenser_i00"/>
+        <attributes auto-use="ACTIVE"/>
+        <target/>
+    </skill>
+    <skill id="40241" name="Improved Pet XP Crystal">
+        <!-- Pet XP +2,000,000,000. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40242" name="Sayha's Blessing Scroll">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40243" name="Sayha's Blessing Scroll - Stats">
+        <!-- All stats +1. -->
+        <icon initial="icon.bm_freya_storm_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40244" name="Sayha's Blessing Scroll - Recovery Potions' Effect">
+        <!-- HP Recovery Potion Effect +50. -->
+        <icon initial="icon.bm_freya_storm_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40245" name="Sayha's Blessing Scroll - MP Recovery">
+        <!-- MP Recovery +10. -->
+        <icon initial="icon.bm_freya_storm_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40246" name="Sayha's Blessing Scroll - Atk./ Def.">
+        <!-- P. Atk. +150\nM. Atk. +150\nP. Def. +150\nM. Def. +150 -->
+        <icon initial="icon.bm_freya_storm_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40247" name="Sayha's Blessing Scroll - Atk. Spd./ Casting Spd.">
+        <!-- Atk. Spd. +100\nCasting Spd. +100. -->
+        <icon initial="icon.bm_freya_storm_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40248" name="Primeval Garden's Time Stone">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40249" name="Primeval Isle's Time Stone">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40250" name="Low-grade Pet XP Crystal">
+        <!-- Pet XP +1,000,000. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40251" name="Pet XP Growth Scroll">
+        <!-- Pet XP +30%\n\nRemoved when your pet is dead or recalled. -->
+        <icon initial="icon.scroll_of_kukur_event"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40252" name="Scroll: Enchant Necklace of Spirits">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40253" name="Scroll: Enchant Hellbound Ring">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40254" name="Scroll of Escape: Ivory Tower">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40255" name="Scroll of Escape: Ivory Tower">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40256" name="Scroll of Escape: Ivory Tower">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40257" name="Scroll of Escape: Ivory Tower">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40258" name="Berserker's Scroll (Exchangeable)">
+        <!-- STR +1\nINT +1\nAtk. Spd. +100\nCasting Spd. +100\nSpeed +5\nP. Skill Power +5%\nM. Skill Power +5% -->
+        <icon initial="icon.bereserker_scroll_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40259" name="Berserker's Scroll">
+        <!-- STR +1\nINT +1\nAtk. Spd. +100\nCasting Spd. +100\nSpeed +5\nP. Skill Power +5%\nM. Skill Power +5% -->
+        <icon initial="icon.bereserker_scroll_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40260" name="Random Transformation Scroll">
+        <!--  -->
+        <icon initial="icon.random_transform_00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40261" name="Scroll: 1,000,000,000 SP">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40262" name="Flower Sweets">
+        <!-- P. Atk. +100\nM. Atk. +100\nP. Def. +200\nM. Def. +200\nMax HP +300\nMax MP +300\nAcquired XP/ SP +10%. -->
+        <icon initial="icon.flower_songpyeon"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40263" name="Random Transformation Scroll">
+        <!--  -->
+        <icon initial="icon.random_transform_00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40264" name="Regeneration" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1044"/>
+        <attributes/>
+        <consume>
+            <mana initial="30">
+                <value level="2">44</value>
+                <value level="3">52</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40265" name="Blessed Body" max-level="6" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1045"/>
+        <attributes/>
+        <consume>
+            <mana initial="39">
+                <value level="2">44</value>
+                <value level="3">48</value>
+                <value level="4">52</value>
+                <value level="5">60</value>
+                <value level="6">67</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40266" name="Blessed Soul" max-level="6" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1048"/>
+        <attributes/>
+        <consume>
+            <mana initial="39">
+                <value level="2">44</value>
+                <value level="3">48</value>
+                <value level="4">52</value>
+                <value level="5">58</value>
+                <value level="6">65</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40267" name="Focus" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1077"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40268" name="Focus" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1077"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40269" name="Death Whisper" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1242"/>
+        <attributes/>
+        <consume>
+            <mana initial="35">
+                <value level="2">44</value>
+                <value level="3">52</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40270" name="Haste" max-level="2" type="MAGIC">
+        <!-- 
+			level 1: For 20 min., Atk. Spd. +15%.
+			level 2: For 20 min., Atk. Spd. +33%.
+		-->
+        <icon initial="icon.skill1086"/>
+        <attributes/>
+        <consume>
+            <mana initial="39">
+                <value level="2">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40271" name="Acumen" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1085"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">30</value>
+                <value level="3">44</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40272" name="Acumen" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1085"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">30</value>
+                <value level="3">44</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40273" name="Might" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1068"/>
+        <attributes/>
+        <consume>
+            <mana initial="10">
+                <value level="2">20</value>
+                <value level="3">35</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40274" name="Might" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1068"/>
+        <attributes/>
+        <consume>
+            <mana initial="10">
+                <value level="2">20</value>
+                <value level="3">35</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40275" name="Empower" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1059"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40276" name="Empower" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1059"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40277" name="Shield" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1040"/>
+        <attributes/>
+        <consume>
+            <mana initial="10">
+                <value level="2">23</value>
+                <value level="3">39</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40278" name="Shield" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1040"/>
+        <attributes/>
+        <consume>
+            <mana initial="10">
+                <value level="2">23</value>
+                <value level="3">39</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40279" name="Magic Barrier" max-level="2" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1036"/>
+        <attributes/>
+        <consume>
+            <mana initial="39">
+                <value level="2">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40280" name="Wind Walk" max-level="2" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1204"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">27</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40281" name="Wind Walk" max-level="2" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1204"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">27</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40282" name="Concentration" max-level="6" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1078"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">27</value>
+                <value level="3">39</value>
+                <value level="4">48</value>
+                <value level="5">55</value>
+                <value level="6">64</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40283" name="Concentration" max-level="6" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1078"/>
+        <attributes/>
+        <consume>
+            <mana initial="20">
+                <value level="2">27</value>
+                <value level="3">39</value>
+                <value level="4">48</value>
+                <value level="5">55</value>
+                <value level="6">64</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40284" name="Agility" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1087"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40285" name="Agility" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1087"/>
+        <attributes/>
+        <consume>
+            <mana initial="23">
+                <value level="2">39</value>
+                <value level="3">48</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40286" name="Guidance" max-level="3" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.skill1240"/>
+        <attributes/>
+        <consume>
+            <mana initial="35">
+                <value level="2">44</value>
+                <value level="3">52</value>
+            </mana>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="40287" name="Golden Wheel's Scroll">
+        <!-- P. Atk. +100\nM. Atk. +100\nP. Def. +200\nM. Def. +200\nMax HP +300\nMax MP +300\nAcquired XP/ SP +10%. -->
+        <icon initial="icon.ev_golden_wheel_scroll_special"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40288" name="Life Control Tower's Scroll of Blessing">
+        <!-- Max HP +5%%\nMax MP +5%%\nParalysis Resistance +15%%\nSilence Resistance +15%%\nFear Resistance +15%%\nAcquired XP +30%%\nAcquired SP +30%%\nThe effect remains after death. You can cancel the effect by yourself. -->
+        <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40289" name="Potion of Wardship">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40290" name="Five-colored Sweets" max-level="25">
+        <!-- 
+			level 1: When used for +1 hour. STR +1 INT +1 DEX +1 WIT +1 CON +1 MEN +1 Water Attack +40 The buff is leveling up every hour.  <Rewards> Lv. 1-7: Honey Bean Cakes (Event) 3 pcs. Lv. 8-13: Sayha's Storm Lv. 3 (5 pcs.) Lv. 14-22: Soulshot Ticket (10 pcs.) Lv. 23: Random Transformation Scroll (3 pcs.) Lv. 24: Charging Stone of Random Craft (3 pcs.) Note! Dead characters cannot obtain the gift.
+			level 24: When used for +1 hour. STR +1 INT +1 DEX +1 WIT +1 CON +1 MEN +1 Water Attack +40 The buff is leveling up every hour. The full moon has come out.  <Rewards> Lv. 1-7: Honey Bean Cakes (Event) 3 pcs. Lv. 8-13: Sayha's Storm Lv. 3 (5 pcs.) Lv. 14-22: Soulshot Ticket (10 pcs.) Lv. 23: Random Transformation Scroll (3 pcs.) Lv. 24: Charging Stone of Random Craft (3 pcs.) Note! Dead characters cannot obtain the gift.
+			level 25: none
+		-->
+        <icon initial="icon.ev_ricecake_potion"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40291" name="Five-colored Sweets - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40292" name="Five-colored Sweets - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40293" name="Five-colored Sweets - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40294" name="Five-colored Sweets - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40295" name="Five-colored Sweets - Reward">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40296" name="Scroll of Escape: Master Kerkir">
+        <!-- Can be used to teleport to Master Kerkir in the Wind Village. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40297" name="Scroll of Escape: Grocer Evia">
+        <!-- Can be used to teleport to Grocer Evia in the Wind Village. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40298" name="Scroll of Escape: High Priest Maximilian">
+        <!-- Can be used to teleport to High Priest Maximilian in Giran. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40299" name="Scroll of Escape: Gorgon Flower Garden">
+        <!-- Can be used to teleport to the Gorgon Flower Garden. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
     </skill>
 </list>

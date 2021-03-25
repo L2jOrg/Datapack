@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="5500" name="Black Dragon Claw" debuff="true" action="A2">
-        <!-- HP has been momentarily decreased due to Bleed. -->
+    <skill id="5500" name="Black Dragon Claw" action="A2" debuff="true">
+        <!-- Causes target to bleed severely, momentarily reducing HP. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
             <effect-range initial="600"/>
             <hit-time initial="1500"/>
-
             <element type="DARK"/>
         </attributes>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="600">
-            <fan-range start-angle="0" radius="600" angle="60"/>
+        <target object="NOT_FRIEND" range="600" scope="FAN" type="ENEMY">
+            <fan-range angle="60" radius="600" start-angle="0"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="10"/>
             <time initial="20"/>
             <chance initial="90"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2616.0"/>
             </physical-attack>
             <damage-over-time ticks="5">
@@ -29,18 +28,18 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="5501" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5501" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
             <effect-range initial="200"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
-            <fan-range start-angle="0" radius="200" angle="120"/>
+        <target object="NOT_FRIEND" range="200" scope="FAN" type="ENEMY">
+            <fan-range angle="120" radius="200" start-angle="0"/>
         </target>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
@@ -54,15 +53,16 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5502" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5502" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <hit-time initial="1500"/>
         </attributes>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="600"/>
+        <target object="NOT_FRIEND" range="600" scope="POINT_BLANK"/>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="9"/>
@@ -78,8 +78,9 @@
     <skill id="5503" name="Ultimate Guard" action="A2">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="100"/>
             <hit-time initial="2000"/>
@@ -108,8 +109,7 @@
     <skill id="5504" name="Shield Defense">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SHIELD_DEFENCE_RATE" stat-add="SHIELD_DEFENCE_RATE">
@@ -117,7 +117,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5505" name="Fire Blossom" debuff="true" action="A1">
+    <skill id="5505" name="Fire Blossom" action="A1" debuff="true">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
@@ -126,20 +126,19 @@
             <effect-point initial="-1063"/>
             <effect-range initial="900"/>
             <hit-time initial="2500"/>
-
             <element type="FIRE" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2319.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5506" name="Water Blossom" debuff="true" action="A1">
+    <skill id="5506" name="Water Blossom" action="A1" debuff="true">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
@@ -148,20 +147,19 @@
             <effect-point initial="-1063"/>
             <effect-range initial="900"/>
             <hit-time initial="2500"/>
-
             <element type="WATER" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2319.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5507" name="Wind Blossom" debuff="true" action="A1">
+    <skill id="5507" name="Wind Blossom" action="A1" debuff="true">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
@@ -170,20 +168,19 @@
             <effect-point initial="-1063"/>
             <effect-range initial="900"/>
             <hit-time initial="2500"/>
-
             <element type="WIND" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2319.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5508" name="Earth Blossom" debuff="true" action="A1">
+    <skill id="5508" name="Earth Blossom" action="A1" debuff="true">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
@@ -192,33 +189,32 @@
             <effect-point initial="-1063"/>
             <effect-range initial="900"/>
             <hit-time initial="2500"/>
-
             <element type="EARTH" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="2319.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5509" name="Fire Power" debuff="true" action="A2">
+    <skill id="5509" name="Fire Power" action="A2" debuff="true">
         <!-- Fire resistance decreases. -->
         <icon initial="icon.skill1083"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="3330"/>
-
             <element type="FIRE" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="800"/>
+        <target object="NOT_FRIEND" range="800" scope="POINT_BLANK"/>
         <abnormal type="ARMOR_FIRE">
             <time initial="20"/>
             <chance initial="100"/>
@@ -229,20 +225,20 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5510" name="Water Power" debuff="true" action="A2">
+    <skill id="5510" name="Water Power" action="A2" debuff="true">
         <!-- Water resistance decreases. -->
         <icon initial="icon.skill1071"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="3330"/>
-
             <element type="WATER" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="800"/>
+        <target object="NOT_FRIEND" range="800" scope="POINT_BLANK"/>
         <abnormal type="ARMOR_WATER">
             <time initial="20"/>
             <chance initial="100"/>
@@ -253,20 +249,20 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5511" name="Wind Power" debuff="true" action="A2">
+    <skill id="5511" name="Wind Power" action="A2" debuff="true">
         <!-- Wind resistance decreases. -->
         <icon initial="icon.skill1074"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="3330"/>
-
             <element type="WIND" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="800"/>
+        <target object="NOT_FRIEND" range="800" scope="POINT_BLANK"/>
         <abnormal type="ARMOR_WIND">
             <time initial="20"/>
             <chance initial="100"/>
@@ -277,20 +273,20 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5512" name="Earth Power" debuff="true" action="A2">
+    <skill id="5512" name="Earth Power" action="A2" debuff="true">
         <!-- Earth resistance decreases. -->
         <icon initial="icon.skill1223"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="3330"/>
-
             <element type="EARTH" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="800"/>
+        <target object="NOT_FRIEND" range="800" scope="POINT_BLANK"/>
         <abnormal type="ARMOR_EARTH">
             <time initial="20"/>
             <chance initial="100"/>
@@ -306,16 +302,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="15000"/>
-
             <element type="FIRE" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250"/>
-        <channeling skill="0" mp-consume="85" initial-delay="1000000000" interval="2000000000"/>
+        <target object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
+        <channeling initial-delay="1000000000" interval="2000000000" mp-consume="85" skill="0"/>
         <effects>
             <magical-attack scope="CHANNELING">
                 <power initial="100.0"/>
@@ -327,16 +323,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="15000"/>
-
             <element type="WATER" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250"/>
-        <channeling skill="0" mp-consume="85" initial-delay="1000000000" interval="2000000000"/>
+        <target object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
+        <channeling initial-delay="1000000000" interval="2000000000" mp-consume="85" skill="0"/>
         <effects>
             <magical-attack scope="CHANNELING">
                 <power initial="30.0"/>
@@ -348,16 +344,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="15000"/>
-
             <element type="WIND" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250"/>
-        <channeling skill="0" mp-consume="85" initial-delay="1000000000" interval="2000000000"/>
+        <target object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
+        <channeling initial-delay="1000000000" interval="2000000000" mp-consume="85" skill="0"/>
         <effects>
             <magical-attack scope="CHANNELING">
                 <power initial="30.0"/>
@@ -369,16 +365,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-1063"/>
             <hit-time initial="15000"/>
-
             <element type="EARTH" value="180"/>
         </attributes>
         <consume>
             <mana initial="85"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250"/>
-        <channeling skill="0" mp-consume="85" initial-delay="1000000000" interval="2000000000"/>
+        <target object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
+        <channeling initial-delay="1000000000" interval="2000000000" mp-consume="85" skill="0"/>
         <effects>
             <magical-attack scope="CHANNELING">
                 <power initial="30.0"/>
@@ -388,8 +384,9 @@
     <skill id="5517" name="Nurture" action="A2">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <consume>
@@ -411,6 +408,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <target type="ENEMY"/>
@@ -418,7 +416,7 @@
     <skill id="5519" name="Chain Buff - Power Up" action="A2" type="MAGIC">
         <!-- Made the contract of greed with the devil. Cannot wait to take every soul. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-point initial="1"/>
             <effect-range initial="900"/>
@@ -446,7 +444,7 @@
     <skill id="5520" name="Chain Buff - Vampiric Shield" action="A2" type="MAGIC">
         <!-- Made the contract of desire with the devil. The pain feels like pleasure. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <cast-range initial="400"/>
             <effect-point initial="1"/>
             <effect-range initial="900"/>
@@ -468,7 +466,7 @@
     <skill id="5521" name="Chain Buff - Critical Sense" action="A2" type="MAGIC">
         <!-- Made the contract of wrath with the devil. Every enemy will fear your wrath. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-point initial="1"/>
             <effect-range initial="900"/>
@@ -499,26 +497,25 @@
             <effect-point initial="-1063"/>
             <effect-range initial="900"/>
             <hit-time initial="1000"/>
-
             <element type="DARK" value="80"/>
         </attributes>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="600"/>
+        <target object="NOT_FRIEND" range="600" scope="RANGE" type="ENEMY"/>
         <effects>
             <effect name="MagicalAttackByAbnormal">
                 <power initial="85.0"/>
             </effect>
         </effects>
     </skill>
-    <skill id="5523" name="Chain Magic - Unholy Castle" debuff="true" action="A2" type="MAGIC">
+    <skill id="5523" name="Chain Magic - Unholy Castle" action="A2" debuff="true" type="MAGIC">
         <!-- The devil gave you the curse of jealousy. You cannot be stronger than this. -->
         <icon initial="icon.skill1056"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-point initial="-100"/>
             <effect-range initial="600"/>
             <hit-time initial="500"/>
         </attributes>
-        <target type="TARGET" object="NOT_FRIEND"/>
+        <target object="NOT_FRIEND" type="TARGET"/>
         <abnormal type="ARMOR_UNHOLY">
             <level initial="1"/>
             <time initial="60"/>
@@ -537,7 +534,7 @@
     <skill id="5524" name="Chain Buff - Bow/Magic Resistance" action="A2" type="MAGIC">
         <!-- You have made the contract of arrogance with the devil. No one can stop you. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-point initial="1"/>
             <effect-range initial="900"/>
@@ -564,7 +561,7 @@
     <skill id="5525" name="Chain Buff - Melee Resistance" action="A2" type="MAGIC">
         <!-- You have made the contract of gluttony with the devil. Everything you eat is good for your strength. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-point initial="1"/>
             <effect-range initial="900"/>
@@ -609,7 +606,7 @@
     <skill id="5526" name="Challenger's Blessing" action="A2" type="MAGIC">
         <!-- P. Def., Shield Defense Probability and Dark Attack Resistance are greatly increased. -->
         <icon initial="icon.skill1442"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <cast-range initial="400"/>
             <effect-point initial="1"/>
@@ -647,7 +644,7 @@
         <consume>
             <mana initial="83"/>
         </consume>
-        <target type="ENEMY" scope="PARTY" object="NOT_FRIEND" range="2000"/>
+        <target object="NOT_FRIEND" range="2000" scope="PARTY" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="971.0"/>
@@ -659,16 +656,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
-
             <element type="FIRE" value="50"/>
         </attributes>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
     </skill>
-    <skill id="5529" name="Surrender to Dark" max-level="12" debuff="true" action="A2" type="MAGIC">
+    <skill id="5529" name="Surrender to Dark" max-level="12" action="A2" debuff="true" type="MAGIC">
         <!-- Dark attribute weakened momentarily. -->
         <icon initial="icon.skill1445"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -721,10 +718,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5530" name="Blood Storm" max-level="12" debuff="true" action="A2">
-        <!-- Delivers a blow and inflicts Bleed on surrounding enemies. -->
+    <skill id="5530" name="Blood Storm" max-level="12" action="A2" debuff="true">
+        <!-- Inflicts damage and bleeding wound to nearby enemies. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -738,6 +735,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -755,8 +753,8 @@
                 <value level="11">85</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -791,7 +789,6 @@
             <cast-range initial="400"/>
             <effect-range initial="900"/>
             <hit-time initial="2000"/>
-
             <element type="FIRE" value="50"/>
         </attributes>
         <target type="TARGET"/>
@@ -801,9 +798,10 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="2000"/>
         </attributes>
-        <target scope="POINT_BLANK" range="150"/>
+        <target range="150" scope="POINT_BLANK"/>
     </skill>
     <skill id="5534" name="Presentation - Beleth Transformation Skill 1" action="A1" type="MAGIC">
         <!-- none -->
@@ -816,10 +814,11 @@
         <target/>
     </skill>
     <skill id="5535" name="Little Angel Agathion Cute Trick" action="A1">
-        <!-- See the summoned spirit perform cute tricks. -->
+        <!-- See the summoned agathion perform cute tricks. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -828,10 +827,11 @@
         </conditions>
     </skill>
     <skill id="5536" name="Little Devil Agathion Cute Trick" action="A1">
-        <!-- See the summoned spirit perform cute tricks. -->
+        <!-- See the summoned agathion perform cute tricks. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -840,10 +840,11 @@
         </conditions>
     </skill>
     <skill id="5537" name="Rudolph Cuteness Trick" action="A1">
-        <!-- See the summoned spirit perform cute tricks. -->
+        <!-- See the summoned agathion perform cute tricks. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -856,6 +857,7 @@
         <icon initial="icon.skill_agathion_special"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
         </attributes>
         <target/>
@@ -863,8 +865,9 @@
     <skill id="5539" name="Little Angel Agathion Special Skill: Mysterious Power" action="A2">
         <!-- Mysterious power with no explanation. Be careful when using! -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
+        <attributes magic-critical-rate="-5.0" trait="ETC">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
         </attributes>
         <target/>
@@ -872,11 +875,12 @@
             <time initial="600"/>
         </abnormal>
     </skill>
-    <skill id="5540" name="Little Angel Agathion Special Skill: Blessed Escape" action="A1">
-        <!-- Blessed Escape is available. -->
+    <skill id="5540" name="Agathion Little Angel's Special Skill: Blessed Escape Power" action="A1">
+        <!-- Allows the use of Blessed Teleport. -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="86400000"/>
             <hit-time initial="200"/>
         </attributes>
@@ -888,10 +892,10 @@
             <escape location="TOWN"/>
         </effects>
     </skill>
-    <skill id="5541" name="Little Angel Agathion Special Skill: Blessed Resurrection" action="A1">
-        <!-- Blessed Resurrection is available. -->
+    <skill id="5541" name="Agathion Little Angel's Special Skill: Blessed Resurrection Power" action="A1">
+        <!-- Blessed Resurrection is available for a party member. -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <cast-range initial="400"/>
             <reuse initial="259200000"/>
@@ -914,15 +918,17 @@
         <icon initial="icon.skill_agathion_special"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="5543" name="Little Devil  Agathion Special Skill: Mysterious Power" action="A2">
-        <!-- Mysterious power with no explanation. Be careful when using! -->
+    <skill id="5543" name="Agathion Little Devil's Special Skill: Mysterious Power" action="A2">
+        <!-- A mysterious power that no one knows. Use with caution! -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="ETC">
+        <attributes magic-critical-rate="-5.0" trait="ETC">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="1800000"/>
         </attributes>
         <target/>
@@ -930,11 +936,12 @@
             <time initial="600"/>
         </abnormal>
     </skill>
-    <skill id="5544" name="Little Devil Agathion Special Skill: Ability of Blessed Escape" action="A1">
-        <!-- Blessed Escape is available. -->
+    <skill id="5544" name="Agathion Little Devil's Special Skill: Blessed Escape Power" action="A1">
+        <!-- Allows the use of Blessed Teleport. -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="86400000"/>
             <hit-time initial="200"/>
         </attributes>
@@ -946,10 +953,10 @@
             <escape location="TOWN"/>
         </effects>
     </skill>
-    <skill id="5545" name="Little Devil Agathion Special Skill: Blessed Resurrection" action="A1">
-        <!-- Blessed Resurrection is available. -->
+    <skill id="5545" name="Agathion Little Devil's Special Skill: Blessed Resurrection Power" action="A1">
+        <!-- Blessed Resurrection is available for a party member. -->
         <icon initial="icon.skill_agathion_special"/>
-        <attributes magic-critical-rate="-5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <cast-range initial="400"/>
             <reuse initial="259200000"/>
@@ -979,10 +986,11 @@
         <target type="ENEMY"/>
     </skill>
     <skill id="5547" name="Maximum Ability" action="A2">
-        <!-- Increases P. Atk., M. Atk., and received heal amount. -->
+        <!-- Increases P. Atk., M. Atk., and Received Healing. Greatly decreases Skill MP Consumption. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
         </attributes>
         <target object="FRIEND" range="1000"/>
@@ -1006,7 +1014,7 @@
         </effects>
     </skill>
     <skill id="5548" name="Critical Momentum Attack" max-level="4" action="A1">
-        <!-- Absorbs Soul when physical critical occurs. -->
+        <!-- Absorbs soul in case of successful P. Critical Atk. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="20">
@@ -1014,6 +1022,7 @@
                 <value level="3">58</value>
                 <value level="4">70</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
         </attributes>
         <target/>
@@ -1029,8 +1038,7 @@
     <skill id="5549" name="Melee Attack Vulnerability">
         <!-- NPC Physical weakness -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1064,11 +1072,10 @@
     <skill id="5550" name="Trigger Stun" max-level="12">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
-            <trigger-skill-by-attack skill="5551" target="TARGET">
+            <trigger-skill-by-attack allow-reflect="false" critical-only="false" skill="5551" target="TARGET" trigger-by-normal-attack="true" trigger-by-skill="true">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
@@ -1087,10 +1094,10 @@
             </trigger-skill-by-attack>
         </effects>
     </skill>
-    <skill id="5551" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5551" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -1125,8 +1132,7 @@
     <skill id="5552" name="Heal Up" max-level="12">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
@@ -1149,8 +1155,7 @@
     <skill id="5553" name="Recovery Bonus" max-level="12">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
@@ -1170,11 +1175,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5554" name="Enhanced Silence Resistance" max-level="12">
-        <!-- none -->
+    <skill id="5554" name="Silence Resistance" max-level="12">
+        <!-- Resistant to Silence. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1196,11 +1200,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5555" name="Weakened Silence Resistance" max-level="12">
-        <!-- none -->
+    <skill id="5555" name="Silence Vulnerability" max-level="12">
+        <!-- Vulnerable to Silence. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1222,11 +1225,12 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5566" name="Force of Destruction" debuff="true" action="A1">
+    <skill id="5566" name="Force of Destruction" action="A1" debuff="true">
         <!-- none -->
         <icon initial="Icon.skill1050"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="81"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <target/>
@@ -1264,15 +1268,15 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="916.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5581" name="Divine Beast Stun Attack" debuff="true" action="A1">
-        <!-- Damages and stuns the target simultaneously. Over-hit. Power 704. -->
+    <skill id="5581" name="Divine Beast Stun Attack" action="A1" debuff="true">
+        <!-- Attacks the enemy with 704 power, stunning them. Over-hit. -->
         <icon initial="icon.skill0100"/>
-        <attributes next-action="ATTACK" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" next-action="ATTACK" trait="SHOCK">
             <magic-level initial="80"/>
             <cast-range initial="40"/>
             <reuse initial="13000"/>
@@ -1286,7 +1290,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0" over-hit="true">
+            <physical-attack over-hit="true">
                 <power initial="704.0"/>
             </physical-attack>
             <block-all-actions/>
@@ -1303,26 +1307,26 @@
             <effect-point initial="-726"/>
             <effect-range initial="400"/>
             <hit-time initial="1080"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
             <mana initial="80"/>
         </consume>
-        <target type="ENEMY" scope="SQUARE" object="NOT_FRIEND" range="250" affect-min="5" affect-random="12">
-            <fan-range start-angle="0" radius="250" angle="60"/>
+        <target affect-min="5" affect-random="12" object="NOT_FRIEND" range="250" scope="SQUARE" type="ENEMY">
+            <fan-range angle="60" radius="250" start-angle="0"/>
         </target>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="875.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5583" name="Divine Beast Roar" debuff="true" action="A2">
+    <skill id="5583" name="Divine Beast Roar" action="A2" debuff="true">
         <!-- Dominate nearby enemies with a mighty roar. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-point initial="-628"/>
             <hit-time initial="1200"/>
@@ -1330,7 +1334,7 @@
         <consume>
             <mana initial="80"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
+        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <abnormal type="PA_DOWN">
             <level initial="3"/>
             <time initial="30"/>
@@ -1342,305 +1346,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5584" name="Wolf Howl" debuff="true" action="A2">
-        <!-- Dominate nearby enemies with a mighty roar. Decrease P. Atk. and M. Atk. -->
-        <icon initial="icon.action109"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-            <magic-level initial="55"/>
-            <reuse initial="8000"/>
-            <effect-point initial="-628"/>
-            <hit-time initial="1200"/>
-        </attributes>
-        <consume>
-            <mana initial="55"/>
-        </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="PA_DOWN">
-            <level initial="3"/>
-            <time initial="30"/>
-            <chance initial="40"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="-23.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK">
-                <power initial="-23.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5585" name="Strider Roar" debuff="true" action="A2">
-        <!-- Scare the enemies with a mighty roar. Decrease the attacking speed and Casting Spd. -->
-        <icon initial="icon.action109"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
-            <magic-level initial="55"/>
-            <reuse initial="8000"/>
-            <effect-point initial="-628"/>
-            <hit-time initial="1200"/>
-        </attributes>
-        <consume>
-            <mana initial="55"/>
-        </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="PA_DOWN">
-            <level initial="3"/>
-            <time initial="30"/>
-            <chance initial="40"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-                <power initial="-10.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="-23.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5586" name="Pet Might" max-level="3" action="A2" type="MAGIC">
-        <!-- Increases P. Atk. for a set time. -->
-        <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="7">
-                <value level="2">20</value>
-                <value level="3">40</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="121">
-                <value level="2">204</value>
-                <value level="3">379</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="5">
-                <value level="2">10</value>
-                <value level="3">18</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <abnormal type="PA_UP">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-            </level>
-            <time initial="120"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
-                <power initial="8.0">
-                    <value level="2">12.0</value>
-                    <value level="3">15.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5587" name="Pet Shield" max-level="3" action="A2" type="MAGIC">
-        <!-- Increases P. Def. for a set time. -->
-        <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="7">
-                <value level="2">25</value>
-                <value level="3">44</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="121">
-                <value level="2">243</value>
-                <value level="3">418</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="5">
-                <value level="2">12</value>
-                <value level="3">20</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <abnormal type="PD_UP">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-            </level>
-            <time initial="120"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
-                <power initial="8.0">
-                    <value level="2">12.0</value>
-                    <value level="3">15.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5588" name="Pet Focus" max-level="3" action="A2" type="MAGIC">
-        <!-- Temporarily increases P. Critical Rate. -->
-        <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="25">
-                <value level="2">44</value>
-                <value level="3">52</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="243">
-                <value level="2">418</value>
-                <value level="3">495</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="12">
-                <value level="2">20</value>
-                <value level="3">24</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <abnormal type="CRITICAL_PROB_UP">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-            </level>
-            <time initial="120"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
-                <power initial="20.0">
-                    <value level="2">25.0</value>
-                    <value level="3">30.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5589" name="Pet Death Whisper" max-level="3" action="A2" type="MAGIC">
-        <!-- Temporarily increases P. Critical Damage. -->
-        <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="40">
-                <value level="2">48</value>
-                <value level="3">56</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="379">
-                <value level="2">457</value>
-                <value level="3">532</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="18">
-                <value level="2">23</value>
-                <value level="3">27</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <abnormal type="CRITICAL_DMG_UP">
-            <level initial="1">
-                <value level="2">2</value>
-                <value level="3">3</value>
-            </level>
-            <time initial="120"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-                <power initial="25.0">
-                    <value level="2">30.0</value>
-                    <value level="3">35.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="5590" name="Pet Battle Heal" max-level="12" action="A1" type="MAGIC">
-        <!--
-            level 1: Quickly recovers HP. Power 91.
-            level 2: Quickly recovers HP. Power 166.
-            level 3: Quickly recovers HP. Power 269.
-            level 4: Quickly recovers HP. Power 398.
-            level 5: Quickly recovers HP. Power 544.
-            level 6: Quickly recovers HP. Power 690.
-            level 7: Quickly recovers HP. Power 817.
-            level 8: Quickly recovers HP. Power 867.
-            level 9: Quickly recovers HP. Power 909.
-            level 10: Quickly recovers HP. Power 954.
-            level 11: Quickly recovers HP. Power 985.
-            level 12: Quickly recovers HP. Power 1005.
-         -->
-        <icon initial="icon.skill1218"/>
-        <attributes magic-critical-rate="-5.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <cast-range initial="600"/>
-            <reuse initial="3000"/>
-            <effect-point initial="66">
-                <value level="2">121</value>
-                <value level="3">196</value>
-                <value level="4">290</value>
-                <value level="5">396</value>
-                <value level="6">502</value>
-                <value level="7">595</value>
-                <value level="8">631</value>
-                <value level="9">661</value>
-                <value level="10">694</value>
-                <value level="11">716</value>
-                <value level="12">731</value>
-            </effect-point>
-            <effect-range initial="1100"/>
-            <hit-time initial="2000"/>
-        </attributes>
-        <consume>
-            <mana initial="13">
-                <value level="2">23</value>
-                <value level="3">34</value>
-                <value level="4">47</value>
-                <value level="5">60</value>
-                <value level="6">74</value>
-                <value level="7">85</value>
-                <value level="8">92</value>
-                <value level="9">95</value>
-                <value level="10">98</value>
-                <value level="11">99</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <effects>
-            <effect name="Heal">
-                <power initial="91.0">
-                    <value level="2">166.0</value>
-                    <value level="3">269.0</value>
-                    <value level="4">398.0</value>
-                    <value level="5">544.0</value>
-                    <value level="6">690.0</value>
-                    <value level="7">817.0</value>
-                    <value level="8">867.0</value>
-                    <value level="9">909.0</value>
-                    <value level="10">954.0</value>
-                    <value level="11">985.0</value>
-                    <value level="12">1005.0</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="5592" name="Lightning Barrier" max-level="5" debuff="true" action="A2">
-        <!-- Momentarily paralyzes target. -->
+    <skill id="5592" name="Lightning Barrier" max-level="5" action="A2" debuff="true" type="MAGIC">
+        <!-- A lightning strike inflicts Stupor. -->
         <icon initial="icon.skill32617"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="PARALYZE" triggered="true">
             <magic-level initial="76">
                 <value level="2">78</value>
                 <value level="3">80</value>
@@ -1648,7 +1357,7 @@
                 <value level="5">84</value>
             </magic-level>
             <cast-range initial="600"/>
-            <reuse initial="5000"/>
+            <reuse initial="10000"/>
             <effect-point initial="-460">
                 <value level="2">-470</value>
                 <value level="3">-480</value>
@@ -1696,41 +1405,43 @@
             </magical-attack-mp>
         </effects>
     </skill>
-    <skill id="5594" name="Poison" debuff="true" action="A2">
-        <!-- HP has been momentarily decreased due to Poison. -->
+    <skill id="5594" name="Poison" action="A2" debuff="true">
+        <!-- Instantly decreases HP. -->
         <icon initial="icon.skill4036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="10"/>
             <time initial="5"/>
             <chance initial="11"/>
         </abnormal>
     </skill>
-    <skill id="5595" name="Bleed" debuff="true" action="A2">
-        <!-- HP has been momentarily decreased due to Bleed. -->
+    <skill id="5595" name="Bleed" action="A2" debuff="true">
+        <!-- Causes target to bleed severely, momentarily reducing HP. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="10"/>
             <time initial="5"/>
             <chance initial="11"/>
         </abnormal>
     </skill>
-    <skill id="5596" name="Flame" debuff="true" action="A2">
-        <!-- HP decreases momentarily from burning flame. -->
+    <skill id="5596" name="Flame" action="A2" debuff="true">
+        <!-- HP decreases from flame momentarily. -->
         <icon initial="icon.skill1100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
-
             <element type="FIRE" value="150"/>
         </attributes>
         <target type="TARGET"/>
@@ -1748,8 +1459,7 @@
     <skill id="5597" name="Cancel Invalid Skill">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify stat="ATTACK_CANCEL" stat-add="ATTACK_CANCEL">
@@ -1757,10 +1467,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5598" name="Petrification Resistance" max-level="12">
+    <skill id="5598" name="Imprison Resistance" max-level="12">
+        <!-- Resistant to the Seal effect. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1782,10 +1492,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5599" name="Stun Resistance" max-level="12">
+    <skill id="5599" name="Shock Resistance" max-level="12">
+        <!-- Resistant to Shock. -->
         <icon initial="icon.skill1259"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>

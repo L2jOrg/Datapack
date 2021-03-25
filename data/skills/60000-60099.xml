@@ -1,285 +1,783 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="60001" name="Spectate Castle Siege">
-		<!-- Spectating Castle Siege -->
-		<icon initial="icon.skill0922"/>
-		<attributes property="MAGIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60002" name="Einhasad's Observation" max-level="4" debuff="true" action="A2">
-		<!--
-            level 1: Being observed by Einhasad for having killed too much. P. Def./M. Def. -5%, Speed -5.
-            level 2: Being observed by Einhasad for having killed too much. P. Def./M. Def. -10%, Speed -10.
-            level 3: Being observed by Einhasad for having killed too much. P. Def./M. Def. -15%, Speed -30.
-            level 4: Being observed by Einhasad for having killed too much. P. Def./M. Def. -30%, Speed -35. Cannot use Escape skills and teleports.
-         -->
-		<icon initial="icon.karma"/>
-		<attributes property="PHYSIC" stay-after-death="true">
-			<effect-point initial="-100"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="-5">
-					<value level="2">-10</value>
-					<value level="3">-15</value>
-					<value level="4">-30</value>
-				</power>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="-5">
-					<value level="2">-10</value>
-					<value level="3">-15</value>
-					<value level="4">-30</value>
-				</power>
-			</stat-modify>
-			<speed>
-				<power initial="-5">
-					<value level="2">-10</value>
-					<value level="3">-30</value>
-					<value level="4">-35</value>
-				</power>
-			</speed>
-            <effect start-level="4" name="BlockEscape"/>
-		</effects>
-	</skill>
-	<skill id="60003" name="Server Level Ranking 1st Class" action="A2">
-		<!-- Benefits applied to Server Level Ranking 1st.\nAll Stats +1, Warrior's HP Potion, Maliss's HP Potion Effect +50, Weight Limit +100000, P. Evasion +20. -->
-		<icon initial="icon.server_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stats types="CON DEX INT MEN STR WIT">
-				<power initial="1"/>
-			</base-stats>
-			<stat-modify stat="ADDITIONAL_POTION_HP">
-				<power initial="50"/>
-			</stat-modify>
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="100000"/>
-			</stat-modify>
-			<stat-modify stat="EVASION_RATE">
-				<power initial="20"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60004" name="Server Level Ranking 2nd Class" action="A2">
-		<!-- Benefits applied to Server Level Ranking 2nd-30th.\nCON +1 MEN +1, DEX +1, WIT +1, Weight Limit +10000. -->
-		<icon initial="icon.server_ranking_2"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stats types="CON MEN DEX WIT">
-				<power initial="1"/>
-			</base-stats>
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="10000"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60005" name="Server Level Ranking 3rd Class" action="A2">
-		<!-- Benefits applied to Server Level Ranking 31st-100th.\nCON +1 MEN +1, Weight Limit +5000. -->
-		<icon initial="icon.server_ranking_3"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<base-stats types="CON MEN">
-				<power initial="1"/>
-			</base-stats>
-			<stat-modify stat="WEIGHT_LIMIT">
-				<power initial="5000"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60006" name="Human Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Human Level Ranking 1st.\nP. Critical Damage/M. Critical Damage +300. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="300"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-				<power initial="300"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60007" name="Elf Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Elf Level Ranking 1st.\nP. Atk./M. Atk. +300. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="300"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="300"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60008" name="Dark Elf Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Dark Elf Level Ranking 1st.\nAtk. Spd./Casting Spd. +200. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
-				<power initial="200"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK_SPEED">
-				<power initial="200"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60009" name="Orc Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Orc Level Ranking 1st.\nP. Critical Rate/M. Critical Rate +20. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="20"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="20"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60010" name="Dwarf Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Dwarf Level Ranking 1st.\nIncreases Enchant Success Rate. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="ENCHANT_RATE_BONUS">
-				<power initial="5"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60011" name="Jin Kamael Level Ranking 1st Class" action="A2">
-		<!-- Benefit applied to Jin Kamael Level Ranking 1st.\nP. Accuracy, M. Accuracy, P. Evasion, M. Evasion +5. -->
-		<icon initial="icon.race_ranking_1"/>
-		<attributes property="PHYSIC" stay-after-death="true" dispellable="false" irreplacable="true">
-			<effect-point initial="1"/>
-		</attributes>
-		<target/>
-		<abnormal>
-			<time initial="-1"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="ACCURACY">
-				<power initial="5"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="5"/>
-			</stat-modify>
-			<stat-modify stat="EVASION_RATE">
-				<power initial="5"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_EVASION_RATE">
-				<power initial="5"/>
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="60012" name="Server Ranking Benefit 1">
-		<!-- CON +1\nMEN +1\nWeight Limit +5000. -->
-		<icon initial="icon.UI_server_ranking_1"/>
-		<attributes property="MAGIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60013" name="Server Ranking Benefit 2">
-		<!-- DEX+ 1\nWIT +1\nWeight Limit +5000. -->
-		<icon initial="icon.UI_server_ranking_2"/>
-		<attributes property="MAGIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60014" name="Server Ranking Benefit 3">
-		<!-- STR + 1\nINT +1\nWeight Limit +90000\nP. Evasion +20\nHP Potion Effect +50 -->
-		<icon initial="icon.UI_server_ranking_3"/>
-		<attributes property="MAGIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60015" name="Race Ranking Benefit">
-		<!-- Benefits for Race Ranking 1st.\n\nHumans: Increases P. Critical Damage /M. Critical Damage\nElves: Increases P. Atk. / M. Atk.\nDark Elves: Increases Atk. Spd. / Casting Spd.\nOrcs: Increases P. Critical Rate / M. Critical Rate\nDwarves: Increases Enchant Success Rate\nJin Kamael: Increases P. Accuracy, M. Accuracy, P. Evasion, M. Evasion.\n\nBenefits for Race Ranking 1st-3rd.\n\nRanker Transformation Skill -->
-		<icon initial="icon.UI_race_ranking_1"/>
-		<attributes property="MAGIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60016" name="Holy Artifact Animation 1" action="A1" type="MAGIC">
-		<!-- Used to play the Holy Artifact Animation. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<hit-time initial="3500"/>
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="60017" name="Holy Artifact Animation 2" action="A1" type="MAGIC">
-		<!-- Used to play the Holy Artifact Animation. -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<hit-time initial="3500"/>
-		</attributes>
-		<target/>
-	</skill>
-    <skill id="60018" name="Teleport" action="A1" type="STATIC">
-		<!-- Teleport -->
-		<icon initial="icon.skill0000"/>
-		<attributes>
-			<hit-time initial="2000"/>
-		</attributes>
-		<target/>
-		<effects>
-			<teleport use-request="true"/>
-		</effects>
-	</skill>
+    <skill id="60001" name="Siege Spectator Mode">
+        <!-- Turn on Siege Spectator Mode -->
+        <icon initial="icon.skill0922"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60002" name="Einhasad Overseeing" max-level="3" action="A2" debuff="true">
+        <!-- 
+			level 1: In case of death during PvP/ PK  Increased chance to lose items. Up to 2 items can be lost.
+			level 2: In case of death during PvP/ PK  Increased chance to lose items. Up to 3 items can be lost.
+		-->
+        <icon initial="icon.karma"/>
+        <attributes stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="-100"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="3">-15</value>
+                    <value level="4">-30</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="3">-15</value>
+                    <value level="4">-30</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="-5">
+                    <value level="2">-10</value>
+                    <value level="3">-30</value>
+                    <value level="4">-35</value>
+                </power>
+            </speed>
+            <effect name="BlockEscape" start-level="4"/>
+        </effects>
+    </skill>
+    <skill id="60003" name="1st Place in the List of Ranks for Level on the Server" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level on the server.\nSTR +1\nINT +1\nCON +1\nMEN +1\nDEX +1\nWIT +1\nRecovery Potions' Effect +50\nWeight limit +100,000\nP. Evasion +20 -->
+        <icon initial="icon.server_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <base-stats types="CON DEX INT MEN STR WIT">
+                <power initial="1"/>
+            </base-stats>
+            <stat-modify stat="ADDITIONAL_POTION_HP">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify stat="WEIGHT_LIMIT">
+                <power initial="100000"/>
+            </stat-modify>
+            <stat-modify stat="EVASION_RATE">
+                <power initial="20"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60004" name="2nd Place in the List of Ranks for Level on the Server" action="A2">
+        <!-- Bonus for 2nd-30th places in the list of ranks for level on the server.\nCON +1\nMEN +1\nDEX +1\nWIT +1\nWeight limit +10,000 -->
+        <icon initial="icon.server_ranking_2"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <base-stats types="CON MEN DEX WIT">
+                <power initial="1"/>
+            </base-stats>
+            <stat-modify stat="WEIGHT_LIMIT">
+                <power initial="10000"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60005" name="3rd Place in the List of Ranks for Level on the Server" action="A2">
+        <!-- Bonus for 31-100th places in the list of ranks for level on the server.\nCON +1\nMEN +1\nWeight limit +5,000 -->
+        <icon initial="icon.server_ranking_3"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <base-stats types="CON MEN">
+                <power initial="1"/>
+            </base-stats>
+            <stat-modify stat="WEIGHT_LIMIT">
+                <power initial="5000"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60006" name="1st Place in the List of Ranks for Level Among Humans" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level among humans.\nP. Critical Damage +300\nM. Skill Critical Damage +300 -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="300"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60007" name="1st Place in the List of Ranks for Level Among Elves" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level among elves.\nP. Atk. +300\nM. Atk. +300 -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="300"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60008" name="1st Place in the List of Ranks for Level Among Dark Elves" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level among dark elves.\nAtk. Spd. +200\nCasting Spd. +200 -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="200"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+                <power initial="200"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60009" name="1st Place in the List of Ranks for Level Among Orcs" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level among orcs.\nP. Critical Rate +20\nM. Skill Critical Rate +20 -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="20"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60010" name="1st Place in the List of Ranks for Level Among Dwarves" action="A2">
+        <!-- Bonus for 1st place in the list of ranks for level among dwarves.\nEnchant success rate for weapon and armor when using scrolls +1%%. -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="ENCHANT_RATE_BONUS">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60011" name="1st Place in the List of Ranks for Level Among Kamael" action="A2">
+        <!-- Bonus for the 1st place in the list of ranks for level among Kamael.\nP. Accuracy +5\nM. Accuracy +5\nP. Evasion +5\nM. Evasion +5 -->
+        <icon initial="icon.race_ranking_1"/>
+        <attributes dispellable="false" irreplacable="true" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal>
+            <time initial="-1"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="ACCURACY">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="EVASION_RATE">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_EVASION_RATE">
+                <power initial="5"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="60012" name="Bonuses for 1st Rank on the Server">
+        <!-- CON +1.\nMEN +1.\nWeight Limit +5000. -->
+        <icon initial="icon.UI_server_ranking_1"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60013" name="Bonuses for 2nd Rank on the Server">
+        <!-- DEX +1.\nWIT +1.\nWeight Limit +5000. -->
+        <icon initial="icon.UI_server_ranking_2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60014" name="Bonuses for 3rd Rank on the Server">
+        <!-- STR +1\nINT +1\nWeight limit +90,000\nP. Evasion +20\nHP Recovery Potions' Effect +50 -->
+        <icon initial="icon.UI_server_ranking_3"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60015" name="Bonus for Rank Among Races">
+        <!-- For warriors who have taken the 1st place in rankings among their race.\n\nHumans: P. Critical Damage/ M. Skill Critical Damage increased.\nElves: P./ M. Atk. increased.\nDark Elves: Atk. Spd./ Casting Spd. increased.\nOrcs: P. Critical Rate/ M. Skill Critical Rate increased.\nDwarves: Enchant success rate increased.\nKamaels: P./ M. Accuracy, P./ M. Evasion increased.\nSylphs: Soulshot damage increased.\n\nFor those who placed 1st-3rd:\n\nAll races: Worthy Warrior Transformation with unique appearance available.\nDeath Knights: Unique cloak appearance (only for the 1st place) and Worthy Warrior Bonus available.\nSylphs: Unique transformation and appearance modification via the Elemental Spirit Lv. 5 skill. -->
+        <icon initial="icon.UI_race_ranking_1"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60016" name="Effect of Holy Relic 1" action="A1" type="MAGIC">
+        <!-- Activate the effect of Holy Relic -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <hit-time initial="3500"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="60017" name="Effect of Holy Relic 2" action="A1" type="MAGIC">
+        <!-- Activate the effect of Holy Relic -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <hit-time initial="3500"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="60018" name="Teleport" action="A1">
+        <!-- Teleport -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <hit-time initial="4000"/>
+        </attributes>
+        <target/>
+        <effects>
+            <teleport use-request="true"/>
+        </effects>
+    </skill>
+    <skill id="60019" name="Jaban's Blessing" max-level="5">
+        <!-- 
+			level 1: Jaban's Blessing.  Max HP +3000 Received PvP damage -10%
+			level 2: Jaban's Blessing.  Max HP +5000 Received PvP damage -10% All stats +1 P. Atk. +1000 M. Atk. +500
+			level 3: Jaban's Blessing.  Max HP +8000 Received PvP damage -10% All stats +2 P. Atk. +2500 M. Atk. +1200 P. Def. +2000 M. Def. +1500 A chance to paralyze target for 2 sec. upon receiving damage.
+			level 4: Jaban's Blessing.  Max HP +12000 Received PvP damage -10% All stats +4 P. Atk. +4000 M. Atk. +2000 P. Def. +3500 M. Def. +2500 Atk. Spd. +20% Casting Spd. +15%  <Upon receiving damage with a certain probability> Paralyzes target for +120000  <Upon dealing damage with a certain probability> Stuns or silences the target for +120000
+			level 5: Jaban's Blessing.  Max HP +20000 Received PvP damage -10% All stats +6 P. Atk. +8000 M. Atk. +3000 P. Def. +6000 M. Def. +4000 Atk. Spd. +30% Casting Spd. +25%  <Upon receiving damage with a certain probability> Paralyzes target for +200000 Creates a shield with separate HP. <Upon dealing damage with a certain probability> Stuns or silences the target for +200000 Deals +200001 fixed damage to the target.
+		-->
+        <icon initial="icon.skill30518"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60020" name="Soulshot Damage 5%">
+        <!-- Soulshot Damage 5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60021" name="Soulshot Damage 10%">
+        <!-- Soulshot Damage 10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60022" name="Soulshot Damage 15%">
+        <!-- Soulshot Damage 15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60023" name="Spiritshot Damage 5%">
+        <!-- Spiritshot Damage 5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60024" name="Spiritshot Damage 10%">
+        <!-- Spiritshot Damage 10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60025" name="Spiritshot Damage 15%">
+        <!-- Spiritshot Damage 15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60026" name="P. Skill Power 5%">
+        <!-- P. Skill Power 5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60027" name="P. Skill Power 10%">
+        <!-- P. Skill Power 10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60028" name="P. Skill Power 15%">
+        <!-- P. Skill Power 15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60029" name="M. Skill Power 5%">
+        <!-- M. Skill Power 5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60030" name="M. Skill Power 10%">
+        <!-- M. Skill Power 10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60031" name="M. Skill Power 15%">
+        <!-- M. Skill Power 15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60032" name="Basic PvP Damage +5%">
+        <!-- Basic PvP Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60033" name="Basic PvP Damage +10%">
+        <!-- Basic PvP Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60034" name="Basic PvP Damage +15%">
+        <!-- Basic PvP Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60035" name="PvP P. Damage +5%">
+        <!-- PvE P. Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60036" name="PvE P. Damage +10%">
+        <!-- PvE P. Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60037" name="PvE P. Damage +15%">
+        <!-- PvE P. Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60038" name="PvE M. Damage +5%">
+        <!-- PvE M. Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60039" name="PvE M. Damage +10%">
+        <!-- PvE M. Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60040" name="PvE M. Damage +15%">
+        <!-- PvE M. Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60041" name="Basic PvE Damage +5%">
+        <!-- Basic PvE Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60042" name="Basic PvE Damage +10%">
+        <!-- Basic PvE Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60043" name="Basic PvE Damage +15%">
+        <!-- Basic PvE Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60044" name="PvE P. Damage +5%">
+        <!-- PvE P. Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60045" name="PvE P. Damage +10%">
+        <!-- PvE P. Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60046" name="PvE P. Damage +15%">
+        <!-- PvE P. Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60047" name="PvE M. Damage +5%">
+        <!-- PvE M. Damage +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60048" name="PvE M. Damage +10%">
+        <!-- PvE M. Damage +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60049" name="PvE M. Damage +15%">
+        <!-- PvE M. Damage +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60050" name="Basic P. Def. in PvP +5%">
+        <!-- Basic P. Def. in PvP +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60051" name="Basic P. Def. in PvP +10%">
+        <!-- Basic P. Def. in PvP +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60052" name="Basic P. Def. in PvP +15%">
+        <!-- Basic P. Def. in PvP +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60053" name="P. P. Def. in PvP +5%">
+        <!-- P. P. Def. in PvP +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60054" name="P. P. Def. in PvP +10%">
+        <!-- P. P. Def. in PvP +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60055" name="P. P. Def. in PvP +15%">
+        <!-- P. P. Def. in PvP +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60056" name="M. P. Def. in PvP +5%">
+        <!-- M. P. Def. in PvP +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60057" name="M. P. Def. in PvP +10%">
+        <!-- M. P. Def. in PvP +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60058" name="M. P. Def. in PvP +15%">
+        <!-- M. P. Def. in PvP +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60059" name="Basic P. Def. in PvE +5%">
+        <!-- Basic P. Def. in PvE +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60060" name="Basic P. Def. in PvE +10%">
+        <!-- Basic P. Def. in PvE +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60061" name="Basic P. Def. in PvE +15%">
+        <!-- Basic P. Def. in PvE +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60062" name="P. P. Def. in PvE +5%">
+        <!-- P. P. Def. in PvE +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60063" name="P. P. Def. in PvE +10%">
+        <!-- P. P. Def. in PvE +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60064" name="P. P. Def. in PvE +15%">
+        <!-- P. P. Def. in PvE +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60065" name="M. P. Def. in PvE +5%">
+        <!-- M. P. Def. in PvE +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60066" name="M. P. Def. in PvE +10%">
+        <!-- M. P. Def. in PvE +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60067" name="M. P. Def. in PvE +15%">
+        <!-- M. P. Def. in PvE +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60068" name="Received Critical Damage from standard attacks -5%">
+        <!-- Received Critical Damage from standard attacks -5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60069" name="Received Critical Damage from standard attacks -10%">
+        <!-- Received Critical Damage from standard attacks -10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60070" name="Received Critical Damage from standard attacks -15%">
+        <!-- Received Critical Damage from standard attacks -15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60071" name="All received Critical Damage -5">
+        <!-- All received Critical Damage -5 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60072" name="All received Critical Damage -10">
+        <!-- All received Critical Damage -10 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60073" name="All received Critical Damage -15">
+        <!-- All received Critical Damage -15 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60074" name="Received P. Critical Damage -5%">
+        <!-- Received P. Critical Damage -5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60075" name="Received P. Critical Damage -10%">
+        <!-- Received P. Critical Damage -10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60076" name="Received P. Critical Damage -15%">
+        <!-- Received P. Critical Damage -15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60077" name="Received P. Critical Damage -5">
+        <!-- Received P. Critical Damage -5 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60078" name="Received P. Critical Damage -10">
+        <!-- Received P. Critical Damage -10 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60079" name="Received P. Critical Damage -15">
+        <!-- Received P. Critical Damage -15 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60080" name="Received M. Critical Damage -5%">
+        <!-- Received M. Critical Damage -5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60081" name="Received M. Critical Damage -10%">
+        <!-- Received M. Critical Damage -10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60082" name="Received M. Critical Damage -15%">
+        <!-- Received M. Critical Damage -15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60083" name="Received M. Critical Damage -5">
+        <!-- Received M. Critical Damage -5 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60084" name="Received M. Critical Damage -10">
+        <!-- Received M. Critical Damage -10 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60085" name="Received M. Critical Damage -15">
+        <!-- Received M. Critical Damage -15 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60086" name="Shield Defense +5%">
+        <!-- Shield Defense +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60087" name="Shield Defense +10%">
+        <!-- Shield Defense +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60088" name="Shield Defense +15%">
+        <!-- Shield Defense +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60089" name="Shield Defense Bonus +5">
+        <!-- Shield Defense Bonus +5 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60090" name="Shield Defense Bonus +10">
+        <!-- Shield Defense Bonus +10 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60091" name="Shield Defense Bonus +15">
+        <!-- Shield Defense Bonus +15 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60092" name="Shield Defense Rate 5%">
+        <!-- Shield Defense Rate 5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60093" name="Shield Defense Rate 10%">
+        <!-- Shield Defense Rate 10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60094" name="Shield Defense Rate 15%">
+        <!-- Shield Defense Rate 15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60095" name="M. Damage Resistance +5%">
+        <!-- M. Damage Resistance +5%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60096" name="M. Damage Resistance +10%">
+        <!-- M. Damage Resistance +10%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60097" name="M. Damage Resistance +15%">
+        <!-- M. Damage Resistance +15%% -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60098" name="M. Damage Resistance Bonus +5">
+        <!-- M. Damage Resistance Bonus +5 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="60099" name="M. Damage Resistance Bonus +10">
+        <!-- M. Damage Resistance Bonus +10 -->
+        <icon initial="iccon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
 </list>

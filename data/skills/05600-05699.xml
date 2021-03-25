@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="5600" name="Rush Impact" debuff="true" action="A1">
-        <!-- Cannot move due to Stun for 3 seconds. -->
+    <skill id="5600" name="Rush Impact" action="A1" debuff="true">
+        <!-- Stuns making unable to move. -->
         <icon initial="icon.skill0793"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true" auto-use="ACTIVE">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="81"/>
-            <cast-range initial="900"/>
+            <cast-range initial="700"/>
             <reuse initial="20000"/>
             <effect-point initial="-800"/>
             <effect-range initial="1400"/>
@@ -20,8 +20,7 @@
     <skill id="5601" name="Melee Attack Resistance" max-level="12">
         <!-- Resistant to melee attacks. -->
         <icon initial="icon.skill5601"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -148,10 +147,11 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5602" name="Transform Sacrifice" debuff="true" action="A2">
+    <skill id="5602" name="Transform Sacrifice" action="A2" debuff="true">
         <!-- Sacrifice. A state in which HP cannot be recovered. -->
         <icon initial="icon.skill4036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="TRANSFORM_SCRIFICE_P">
@@ -168,10 +168,11 @@
         </effects>
     </skill>
     <skill id="5603" name="Dagger Mastery" action="A2">
-        <!-- A state in which MP consumption of skills is greatly decreased, and the probability of a vital spot jab is increased. -->
+        <!-- Skill MP consumption is greatly decreased, and Vital Point Attack Rate is increased. -->
         <icon initial="icon.skill0209"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
         </attributes>
         <target/>
@@ -188,11 +189,12 @@
             </magic-cost>
         </effects>
     </skill>
-    <skill id="5604" name="Sword/Blunt Weapon Mastery" action="A2">
-        <!-- A state in which MP consumption of skills is greatly decreased, and the success rate of stun attack is increased. -->
+    <skill id="5604" name="Blessing of Stun" action="A2">
+        <!-- P. Skill MP Consumption -60%\nShock Atk. Rate +30% -->
         <icon initial="icon.skill0217"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="40"/>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
         </attributes>
         <target/>
@@ -212,15 +214,16 @@
         </effects>
     </skill>
     <skill id="5605" name="Power of Apella" max-level="2" action="A2">
-        <!--
-		level 1: Power of Apella. M. Def. increases and the chance of being hit by physical critical attack decreased.
-		level 2: Power of Apella. M. Def. and M. Critical Rate increased and the chance of being hit by physical critical attack decreased.
-	 -->
+        <!-- 
+			level 1: Power of Apella increases M. Def., but decreases Received P. Critical Rate.
+			level 2: Power of Apella increases M. Def. and P. Critical Rate, but decreases Received P. Critical Rate.
+		-->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
         </attributes>
         <target/>
@@ -245,12 +248,16 @@
         </effects>
     </skill>
     <skill id="5607" name="Power of Apella" max-level="2" action="A2">
-        <!-- Power of Apella. Increased P. Evasion, increased Atk. Spd., and decreased P. Critical Damage. -->
+        <!-- 
+			level 1: Power of Apella increases P. Evasion, but decreases Received P. Critical Damage.
+			level 2: Power of Apella increases P. Evasion and Atk. Spd., but decreases Received P. Critical Damage.
+		-->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
         </attributes>
         <target/>
@@ -275,15 +282,16 @@
         </effects>
     </skill>
     <skill id="5608" name="Power of Apella" max-level="2" action="A2">
-        <!--
-		level 1: Power of Apella. Increased P. Def., increased M. Atk., and decreased Speed.
-		level 2: Power of Apella. Increased P. Def., increased M. Atk., and decreased Movement Speed.
-	 -->
+        <!-- 
+			level 1: Power of Apella. Increased P. Def., increased M. Atk., and decreased Speed.
+			level 2: Power of Apella. Increased Speed and P./ M. Def.
+		-->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="64">
                 <value level="2">67</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
         </attributes>
         <target/>
@@ -311,6 +319,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -319,6 +328,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -327,6 +337,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -335,17 +346,16 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5613" name="Vampiric Rage" max-level="4" action="A2" type="MAGIC">
-        <!--
-		level 1: Has a chance to absorb some of the damage inflicted on the enemy as HP for a set time.
-		level 4: Provides the ability to recover HP temporarily by damaging the enemy with a certain probability.
-	 -->
+        <!-- Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="72"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="VAMPIRIC_ATTACK">
@@ -353,39 +363,34 @@
             <time initial="1200"/>
         </abnormal>
     </skill>
-    <skill id="5614" name="Lv. 87 Raid Boss">
+    <skill id="5614" name="Raid Boss (Lv. 87)">
         <!-- He was one of the Devil's retainers from Asmodae, and Beleth placed him among the people in order to rule Hellbound. Although he took over the power and turned Hellbound into the devil's territory after Beleth disappeared for magic experiments. Beleth does not really care about it. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="5615" name="Lv. 87 Raid Boss">
+    <skill id="5615" name="Raid Boss (Lv. 87)">
         <!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="5616" name="Lv. 87 Raid Boss">
+    <skill id="5616" name="Raid Boss (Lv. 87)">
         <!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="5617" name="Lv. 87 Raid Boss">
+    <skill id="5617" name="Raid Boss (Lv. 87)">
         <!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="5618" name="Lv. 87 Raid Boss">
+    <skill id="5618" name="Raid Boss (Lv. 87)">
         <!-- He was created when a large number of elemental spirits that were constrained in the basement of Tower of Naia were transformed after being affected by Beleth' magic and Core Naia. Although it is a monster with an unstable shape and mind, which is about to be destroyed, it is still slightly conscious as a nature spirit. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="5619" name="Presentation - Super Giant Mutated Animal Union" action="A1">
@@ -393,15 +398,15 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="76"/>
+            <cast-range initial="-1"/>
             <hit-time initial="5800"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5620" name="Melee Attack Vulnerability" max-level="12">
-        <!-- Renders target vulnerable to melee attacks. -->
+        <!-- Vulnerable to melee attack. -->
         <icon initial="icon.skill5620"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -545,6 +550,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target type="TARGET"/>
@@ -565,17 +571,16 @@
             </mp>
         </effects>
     </skill>
-    <skill id="5622" name="Double Skill Attack" max-level="7">
+    <skill id="5622" name="Double Attack" max-level="7">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="5623" name="Weakened Magic Circle" debuff="true" action="A2" type="MAGIC">
+    <skill id="5623" name="Weakened Magic Circle" action="A2" debuff="true" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0122"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="200"/>
             <effect-point initial="-100"/>
@@ -588,10 +593,10 @@
             <time initial="20"/>
         </abnormal>
     </skill>
-    <skill id="5624" name="Soul Confinement" debuff="true" action="A2" type="MAGIC">
+    <skill id="5624" name="Soul's Confinement" action="A2" debuff="true" type="MAGIC">
         <!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. -->
         <icon initial="icon.skill1201"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="51"/>
             <cast-range initial="400"/>
             <effect-point initial="-707"/>
@@ -604,10 +609,10 @@
             <time initial="3"/>
         </abnormal>
     </skill>
-    <skill id="5625" name="Soul Confinement" debuff="true" action="A2" type="MAGIC">
+    <skill id="5625" name="Soul's Confinement" action="A2" debuff="true" type="MAGIC">
         <!-- The soul is confined, making it impossible to move, but in addition, damage is not incurred. -->
         <icon initial="icon.skill1201"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
             <cast-range initial="400"/>
             <effect-point initial="-707"/>
@@ -623,14 +628,13 @@
     <skill id="5626" name="Raid Boss">
         <!-- Mutants that suddenly appeared in Aden world. They often possess great strength and special abilities, but their activity is limited, so they seem unable to directly walk around on Aden's ground. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="5627" name="Adventurer's Wind Walk" action="A2" type="MAGIC">
-        <!-- For 60 minutes, Spd. increases by 33. -->
+        <!-- Temporarily increases Speed. Effect 2. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -647,9 +651,9 @@
         </effects>
     </skill>
     <skill id="5628" name="Adventurer's Shield" action="A2" type="MAGIC">
-        <!-- For 60 minutes P. Def. increases by 15%% -->
+        <!-- P. Def. +15%% for 60 min. -->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -666,9 +670,9 @@
         </effects>
     </skill>
     <skill id="5629" name="Adventurer's Blessed Body" action="A2" type="MAGIC">
-        <!-- For 60 minutes, Max HP increases by 35%%. -->
+        <!-- Max HP +35%% for 60 min. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -685,9 +689,9 @@
         </effects>
     </skill>
     <skill id="5630" name="Adventurer's Vampiric Rage" action="A2" type="MAGIC">
-        <!-- For 60 minutes, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+        <!-- For 60 min., with a certain chance, absorbs 9%% of the inflicted damage as HP. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -704,9 +708,9 @@
         </effects>
     </skill>
     <skill id="5631" name="Adventurer's Regeneration" action="A2" type="MAGIC">
-        <!-- For 60 minutes, HP Recovery Rate increases by 20%%. -->
+        <!-- HP Recovery Rate +20%% for 60 min. -->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -723,9 +727,9 @@
         </effects>
     </skill>
     <skill id="5632" name="Adventurer's Haste" action="A2" type="MAGIC">
-        <!-- Increases Atk. Spd. by 33%% for 60 minutes. -->
+        <!-- Atk. Spd. +33%% for 60 min. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -742,9 +746,9 @@
         </effects>
     </skill>
     <skill id="5633" name="Adventurer's Blessed Soul" action="A2" type="MAGIC">
-        <!-- For 60 minutes, Max HP is increased by 35%%. -->
+        <!-- For 60 min., Max MP +35%%. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -761,9 +765,9 @@
         </effects>
     </skill>
     <skill id="5634" name="Adventurer's Acumen" action="A2" type="MAGIC">
-        <!-- Increases Casting Spd. +30%% for 60 minutes. -->
+        <!-- Casting Spd. +30%% for 60 min. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -780,9 +784,9 @@
         </effects>
     </skill>
     <skill id="5635" name="Adventurer's Concentration" action="A2" type="MAGIC">
-        <!-- For 60 minutes, decreases magic cancel rate by 18. -->
+        <!-- Buff Cancel Rate -18 for 60 min. -->
         <icon initial="icon.skill1078"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -799,9 +803,9 @@
         </effects>
     </skill>
     <skill id="5636" name="Adventurer's Empower" action="A2" type="MAGIC">
-        <!-- For 60 minutes, M. Atk. increases by 55%%. -->
+        <!-- For 60 min., M. Atk. +100. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -818,9 +822,9 @@
         </effects>
     </skill>
     <skill id="5637" name="Adventurer's Magic Barrier" action="A2" type="MAGIC">
-        <!-- Increases M. Def. by 30%% for 60 minutes. -->
+        <!-- For 20 min., M. Def. +30%%. -->
         <icon initial="icon.skill1036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -837,9 +841,9 @@
         </effects>
     </skill>
     <skill id="5638" name="Feline Queen - Blessed Body" max-level="4" action="A2" type="MAGIC">
-        <!-- Increases maximum HP for a set time. -->
+        <!-- Increases Max HP for a certain amount of time. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="52">
                 <value level="2">56</value>
                 <value level="3">64</value>
@@ -882,9 +886,9 @@
         </effects>
     </skill>
     <skill id="5639" name="Feline Queen - Blessed Soul" max-level="4" action="A2" type="MAGIC">
-        <!-- Increases maximum MP for a set time. -->
+        <!-- Increases Max MP for a certain amount of time. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="52">
                 <value level="2">56</value>
                 <value level="3">62</value>
@@ -927,9 +931,9 @@
         </effects>
     </skill>
     <skill id="5640" name="Feline Queen - Haste" max-level="2" action="A2" type="MAGIC">
-        <!-- Increases Atk. Spd. for a set time. -->
+        <!-- Increases Atk. Spd. for a certain amount of time. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="44">
                 <value level="2">52</value>
             </magic-level>
@@ -961,66 +965,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5641" name="not_used" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="44"/>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="418"/>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="39"/>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="PD_UP">
-            <level initial="3"/>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
-    <skill id="5642" name="not_used" max-level="4" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1243"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="56">
-                <value level="2">62</value>
-                <value level="3">66</value>
-                <value level="4">70</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="532">
-                <value level="2">582</value>
-                <value level="3">611</value>
-                <value level="4">635</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="52">
-                <value level="2">58</value>
-                <value level="3">62</value>
-                <value level="4">65</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="SHIELD_PROB_UP">
-            <level initial="3">
-                <value level="2">4</value>
-                <value level="3">5</value>
-                <value level="4">6</value>
-            </level>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
     <skill id="5643" name="Seraphim the Unicorn - Acumen" action="A2" type="MAGIC">
         <!-- Increases Casting Spd. for a certain amount of time. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="48"/>
             <cast-range initial="400"/>
             <reuse initial="6000"/>
@@ -1042,98 +990,17 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5644" name="not_used" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="30"/>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="285"/>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="27"/>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="SPEED_UP">
-            <level initial="2"/>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
-    <skill id="5645" name="not_used" max-level="3" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1035"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="40">
-                <value level="2">48</value>
-                <value level="3">56</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="379">
-                <value level="2">457</value>
-                <value level="3">532</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="35">
-                <value level="2">44</value>
-                <value level="3">52</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="RESIST_DERANGEMENT">
-            <level initial="2">
-                <value level="2">3</value>
-                <value level="3">4</value>
-            </level>
-            <time initial="1200"/>
-        </abnormal>
-        <effects>
-            <defence-trait>
-                <trait type="HOLD">
-                    <power initial="30">
-                        <value level="2">40</value>
-                        <value level="3">50</value>
-                    </power>
-                </trait>
-                <trait type="SLEEP">
-                    <power initial="0.30000001192092896">
-                        <value level="2">40</value>
-                        <value level="3">50</value>
-                    </power>
-                </trait>
-                <trait type="DERANGEMENT">
-                    <power initial="30">
-                        <value level="2">40</value>
-                        <value level="3">50</value>
-                    </power>
-                </trait>
-            </defence-trait>
-        </effects>
-    </skill>
-    <skill id="5646" name="Seraphim the Unicorn - Wild Magic" max-level="3" action="A2" type="MAGIC">
-        <!--
-		level 1: Increases M. Critical Rate for a set time.
-		level 3: none
-	 -->
-        <icon initial="icon.skill1303">
-            <value level="3">icon.skill1240</value>
-        </icon>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+    <skill id="5646" name="Seraphim the Unicorn - Wild Magic" max-level="2" action="A2" type="MAGIC">
+        <!-- Temporarily increases M. Skill Critical Rate. -->
+        <icon initial="icon.skill1303"/>
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="64">
                 <value level="2">72</value>
-                <value level="3">56</value>
             </magic-level>
             <cast-range initial="400"/>
             <reuse initial="6000"/>
             <effect-point initial="582">
                 <value level="2">635</value>
-                <value level="3">532</value>
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
@@ -1141,14 +1008,12 @@
         <consume>
             <mana initial="58">
                 <value level="2">65</value>
-                <value level="3">52</value>
             </mana>
         </consume>
         <target type="TARGET"/>
         <abnormal type="MAGIC_CRITICAL_UP">
             <level initial="1">
                 <value level="2">2</value>
-                <value level="3">3</value>
             </level>
             <time initial="1200"/>
         </abnormal>
@@ -1162,13 +1027,13 @@
         </effects>
     </skill>
     <skill id="5647" name="Seraphim the Unicorn - Clarity" max-level="3" action="A2" type="MAGIC">
-        <!--
-		level 1: Momentarily decreases the MP consumption of skills of the target. Consumes 1 Spirit Ore.
-		level 2: Momentarily decreases the MP consumption of skills of the target. Consumes 2 Spirit Ore.
-		level 3: Momentarily decreases the MP consumption of skills of the target. Consumes 3 Spirit Ore.
-	 -->
+        <!-- 
+			level 1: Temporarily decreases the target's Skill MP Consumption. Consumes 1 Spirit Ore.
+			level 2: Temporarily decreases the target's Skill MP Consumption. Consumes 2 Spirit Ore.
+			level 3: Temporarily decreases the target's Skill MP Consumption. Consumes 3 Spirit Ore.
+		-->
         <icon initial="icon.skill1397"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="58">
                 <value level="2">66</value>
                 <value level="3">74</value>
@@ -1187,6 +1052,11 @@
                 <value level="2">62</value>
                 <value level="3">69</value>
             </mana>
+            <item initial="3031"/>
+            <item-count initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </item-count>
         </consume>
         <target type="TARGET"/>
         <abnormal type="CHEAP_MAGIC">
@@ -1206,9 +1076,9 @@
         </effects>
     </skill>
     <skill id="5648" name="Seraphim the Unicorn - Empower" max-level="2" action="A2" type="MAGIC">
-        <!-- Temporarily increases M. Atk. +65%%. -->
+        <!-- Temporarily M. Atk. +65%%. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="44">
                 <value level="2">52</value>
             </magic-level>
@@ -1240,90 +1110,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5649" name="not_used" max-level="2" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1087"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="44">
-                <value level="2">52</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="418">
-                <value level="2">495</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="39">
-                <value level="2">48</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="AVOID_UP">
-            <level initial="2">
-                <value level="2">3</value>
-            </level>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
-    <skill id="5650" name="not_used" max-level="3" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1078"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="52">
-                <value level="2">60</value>
-                <value level="3">68</value>
-            </magic-level>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="495">
-                <value level="2">566</value>
-                <value level="3">624</value>
-            </effect-point>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="48">
-                <value level="2">55</value>
-                <value level="3">64</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="CANCEL_PROB_DOWN">
-            <level initial="4">
-                <value level="2">5</value>
-                <value level="3">6</value>
-            </level>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
-    <skill id="5651" name="not_used" action="A2" type="MAGIC">
-        <!-- none -->
-        <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="40"/>
-            <cast-range initial="400"/>
-            <reuse initial="6000"/>
-            <effect-point initial="379"/>
-            <effect-range initial="900"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="35"/>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="PA_UP">
-            <level initial="3"/>
-            <time initial="1200"/>
-        </abnormal>
-    </skill>
     <skill id="5652" name="Nightshade - Death Whisper" max-level="3" action="A2" type="MAGIC">
-        <!-- Temporarily increases P. Critical Damage +25%%. -->
+        <!-- Temporarily P. Critical Damage +25%%. -->
         <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="40">
                 <value level="2">48</value>
                 <value level="3">56</value>
@@ -1361,9 +1151,9 @@
         </effects>
     </skill>
     <skill id="5653" name="Nightshade - Focus" max-level="2" action="A2" type="MAGIC">
-        <!-- Temporarily increases P. Critical Rate +25%%. -->
+        <!-- Temporarily P. Critical Rate +25%%. -->
         <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="44">
                 <value level="2">52</value>
             </magic-level>
@@ -1396,9 +1186,9 @@
         </effects>
     </skill>
     <skill id="5654" name="Nightshade - Guidance" max-level="3" action="A2" type="MAGIC">
-        <!-- Temporarily increases P. Accuracy +2. -->
+        <!-- Temporarily P. Accuracy +2. -->
         <icon initial="icon.skill1240"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="56">
                 <value level="2">62</value>
                 <value level="3">64</value>
@@ -1436,93 +1226,93 @@
         </effects>
     </skill>
     <skill id="5657" name="Gatekeeper Prominence" max-level="85" action="A1">
-        <!--
-		level 1: Compresses air until it bursts into flames. Power 75.
-		level 2: Compresses air until it bursts into flames. Power 80.
-		level 3: Compresses air until it bursts into flames. Power 85.
-		level 4: Compresses air until it bursts into flames. Power 91.
-		level 5: Compresses air until it bursts into flames. Power 97.
-		level 6: Compresses air until it bursts into flames. Power 103.
-		level 7: Compresses air until it bursts into flames. Power 109.
-		level 8: Compresses air until it bursts into flames. Power 116.
-		level 9: Compresses air until it bursts into flames. Power 123.
-		level 10: Compresses air until it bursts into flames. Power 130.
-		level 11: Compresses air until it bursts into flames. Power 137.
-		level 12: Compresses air until it bursts into flames. Power 145.
-		level 13: Compresses air until it bursts into flames. Power 153.
-		level 14: Compresses air until it bursts into flames. Power 161.
-		level 15: Compresses air until it bursts into flames. Power 169.
-		level 16: Compresses air until it bursts into flames. Power 178.
-		level 17: Compresses air until it bursts into flames. Power 187.
-		level 18: Compresses air until it bursts into flames. Power 196.
-		level 19: Compresses air until it bursts into flames. Power 206.
-		level 20: Compresses air until it bursts into flames. Power 216.
-		level 21: Compresses air until it bursts into flames. Power 226.
-		level 22: Compresses air until it bursts into flames. Power 236.
-		level 23: Compresses air until it bursts into flames. Power 247.
-		level 24: Compresses air until it bursts into flames. Power 257.
-		level 25: Compresses air until it bursts into flames. Power 269.
-		level 26: Compresses air until it bursts into flames. Power 280.
-		level 27: Compresses air until it bursts into flames. Power 292.
-		level 28: Compresses air until it bursts into flames. Power 304.
-		level 29: Compresses air until it bursts into flames. Power 316.
-		level 30: Compresses air until it bursts into flames. Power 328.
-		level 31: Compresses air until it bursts into flames. Power 341.
-		level 32: Compresses air until it bursts into flames. Power 354.
-		level 33: Compresses air until it bursts into flames. Power 367.
-		level 34: Compresses air until it bursts into flames. Power 381.
-		level 35: Compresses air until it bursts into flames. Power 394.
-		level 36: Compresses air until it bursts into flames. Power 408.
-		level 37: Compresses air until it bursts into flames. Power 423.
-		level 38: Compresses air until it bursts into flames. Power 437.
-		level 39: Compresses air until it bursts into flames. Power 451.
-		level 40: Compresses air until it bursts into flames. Power 466.
-		level 41: Compresses air until it bursts into flames. Power 481.
-		level 42: Compresses air until it bursts into flames. Power 496.
-		level 43: Compresses air until it bursts into flames. Power 512.
-		level 44: Compresses air until it bursts into flames. Power 527.
-		level 45: Compresses air until it bursts into flames. Power 543.
-		level 46: Compresses air until it bursts into flames. Power 559.
-		level 47: Compresses air until it bursts into flames. Power 575.
-		level 48: Compresses air until it bursts into flames. Power 591.
-		level 49: Compresses air until it bursts into flames. Power 607.
-		level 50: Compresses air until it bursts into flames. Power 624.
-		level 51: Compresses air until it bursts into flames. Power 640.
-		level 52: Compresses air until it bursts into flames. Power 657.
-		level 53: Compresses air until it bursts into flames. Power 673.
-		level 54: Compresses air until it bursts into flames. Power 690.
-		level 55: Compresses air until it bursts into flames. Power 707.
-		level 56: Compresses air until it bursts into flames. Power 723.
-		level 57: Compresses air until it bursts into flames. Power 740.
-		level 58: Compresses air until it bursts into flames. Power 757.
-		level 59: Compresses air until it bursts into flames. Power 773.
-		level 60: Compresses air until it bursts into flames. Power 790.
-		level 61: Compresses air until it bursts into flames. Power 806.
-		level 62: Compresses air until it bursts into flames. Power 823.
-		level 63: Compresses air until it bursts into flames. Power 839.
-		level 64: Compresses air until it bursts into flames. Power 856.
-		level 65: Compresses air until it bursts into flames. Power 872.
-		level 66: Compresses air until it bursts into flames. Power 888.
-		level 67: Compresses air until it bursts into flames. Power 903.
-		level 68: Compresses air until it bursts into flames. Power 919.
-		level 69: Compresses air until it bursts into flames. Power 935.
-		level 70: Compresses air until it bursts into flames. Power 950.
-		level 71: Compresses air until it bursts into flames. Power 965.
-		level 72: Compresses air until it bursts into flames. Power 979.
-		level 73: Compresses air until it bursts into flames. Power 994.
-		level 74: Compresses air until it bursts into flames. Power 1008.
-		level 75: Compresses air until it bursts into flames. Power 1022.
-		level 76: Compresses air until it bursts into flames. Power 1037.
-		level 77: Compresses air until it bursts into flames. Power 1056.
-		level 78: Compresses air until it bursts into flames. Power 1077.
-		level 79: Compresses air until it bursts into flames. Power 1104.
-		level 80: Compresses air until it bursts into flames. Power 1132.
-		level 81: Compresses air until it bursts into flames. Power 1161.
-		level 82: Compresses air until it bursts into flames. Power 1190.
-		level 83: Compresses air until it bursts into flames. Power 1220.
-		level 84: Compresses air until it bursts into flames. Power 1251.
-		level 85: Compresses air until it bursts into flames. Power 1279.
-	 -->
+        <!-- 
+			level 1: Detonates a fireball by compressing the air around the caster. Power 75.
+			level 2: Detonates a fireball by compressing the air around the caster. Power 80.
+			level 3: Detonates a fireball by compressing the air around the caster. Power 85.
+			level 4: Detonates a fireball by compressing the air around the caster. Power 91.
+			level 5: Detonates a fireball by compressing the air around the caster. Power 97.
+			level 6: Detonates a fireball by compressing the air around the caster. Power 103.
+			level 7: Detonates a fireball by compressing the air around the caster. Power 109.
+			level 8: Detonates a fireball by compressing the air around the caster. Power 116.
+			level 9: Detonates a fireball by compressing the air around the caster. Power 123.
+			level 10: Detonates a fireball by compressing the air around the caster. Power 130.
+			level 11: Detonates a fireball by compressing the air around the caster. Power 137.
+			level 12: Detonates a fireball by compressing the air around the caster. Power 145.
+			level 13: Detonates a fireball by compressing the air around the caster. Power 153.
+			level 14: Detonates a fireball by compressing the air around the caster. Power 161.
+			level 15: Detonates a fireball by compressing the air around the caster. Power 169.
+			level 16: Detonates a fireball by compressing the air around the caster. Power 178.
+			level 17: Detonates a fireball by compressing the air around the caster. Power 187.
+			level 18: Detonates a fireball by compressing the air around the caster. Power 196.
+			level 19: Detonates a fireball by compressing the air around the caster. Power 206.
+			level 20: Detonates a fireball by compressing the air around the caster. Power 216.
+			level 21: Detonates a fireball by compressing the air around the caster. Power 226.
+			level 22: Detonates a fireball by compressing the air around the caster. Power 236.
+			level 23: Detonates a fireball by compressing the air around the caster. Power 247.
+			level 24: Detonates a fireball by compressing the air around the caster. Power 257.
+			level 25: Detonates a fireball by compressing the air around the caster. Power 269.
+			level 26: Detonates a fireball by compressing the air around the caster. Power 280.
+			level 27: Detonates a fireball by compressing the air around the caster. Power 292.
+			level 28: Detonates a fireball by compressing the air around the caster. Power 304.
+			level 29: Detonates a fireball by compressing the air around the caster. Power 316.
+			level 30: Detonates a fireball by compressing the air around the caster. Power 328.
+			level 31: Detonates a fireball by compressing the air around the caster. Power 341.
+			level 32: Detonates a fireball by compressing the air around the caster. Power 354.
+			level 33: Detonates a fireball by compressing the air around the caster. Power 367.
+			level 34: Detonates a fireball by compressing the air around the caster. Power 381.
+			level 35: Detonates a fireball by compressing the air around the caster. Power 394.
+			level 36: Detonates a fireball by compressing the air around the caster. Power 408.
+			level 37: Detonates a fireball by compressing the air around the caster. Power 423.
+			level 38: Detonates a fireball by compressing the air around the caster. Power 437.
+			level 39: Detonates a fireball by compressing the air around the caster. Power 451.
+			level 40: Detonates a fireball by compressing the air around the caster. Power 466.
+			level 41: Detonates a fireball by compressing the air around the caster. Power 481.
+			level 42: Detonates a fireball by compressing the air around the caster. Power 496.
+			level 43: Detonates a fireball by compressing the air around the caster. Power 512.
+			level 44: Detonates a fireball by compressing the air around the caster. Power 527.
+			level 45: Detonates a fireball by compressing the air around the caster. Power 543.
+			level 46: Detonates a fireball by compressing the air around the caster. Power 559.
+			level 47: Detonates a fireball by compressing the air around the caster. Power 575.
+			level 48: Detonates a fireball by compressing the air around the caster. Power 591.
+			level 49: Detonates a fireball by compressing the air around the caster. Power 607.
+			level 50: Detonates a fireball by compressing the air around the caster. Power 624.
+			level 51: Detonates a fireball by compressing the air around the caster. Power 640.
+			level 52: Detonates a fireball by compressing the air around the caster. Power 657.
+			level 53: Detonates a fireball by compressing the air around the caster. Power 673.
+			level 54: Detonates a fireball by compressing the air around the caster. Power 690.
+			level 55: Detonates a fireball by compressing the air around the caster. Power 707.
+			level 56: Detonates a fireball by compressing the air around the caster. Power 723.
+			level 57: Detonates a fireball by compressing the air around the caster. Power 740.
+			level 58: Detonates a fireball by compressing the air around the caster. Power 757.
+			level 59: Detonates a fireball by compressing the air around the caster. Power 773.
+			level 60: Detonates a fireball by compressing the air around the caster. Power 790.
+			level 61: Detonates a fireball by compressing the air around the caster. Power 806.
+			level 62: Detonates a fireball by compressing the air around the caster. Power 823.
+			level 63: Detonates a fireball by compressing the air around the caster. Power 839.
+			level 64: Detonates a fireball by compressing the air around the caster. Power 856.
+			level 65: Detonates a fireball by compressing the air around the caster. Power 872.
+			level 66: Detonates a fireball by compressing the air around the caster. Power 888.
+			level 67: Detonates a fireball by compressing the air around the caster. Power 903.
+			level 68: Detonates a fireball by compressing the air around the caster. Power 919.
+			level 69: Detonates a fireball by compressing the air around the caster. Power 935.
+			level 70: Detonates a fireball by compressing the air around the caster. Power 950.
+			level 71: Detonates a fireball by compressing the air around the caster. Power 965.
+			level 72: Detonates a fireball by compressing the air around the caster. Power 979.
+			level 73: Detonates a fireball by compressing the air around the caster. Power 994.
+			level 74: Detonates a fireball by compressing the air around the caster. Power 1008.
+			level 75: Detonates a fireball by compressing the air around the caster. Power 1022.
+			level 76: Detonates a fireball by compressing the air around the caster. Power 1037.
+			level 77: Detonates a fireball by compressing the air around the caster. Power 1056.
+			level 78: Detonates a fireball by compressing the air around the caster. Power 1077.
+			level 79: Detonates a fireball by compressing the air around the caster. Power 1104.
+			level 80: Detonates a fireball by compressing the air around the caster. Power 1132.
+			level 81: Detonates a fireball by compressing the air around the caster. Power 1161.
+			level 82: Detonates a fireball by compressing the air around the caster. Power 1190.
+			level 83: Detonates a fireball by compressing the air around the caster. Power 1220.
+			level 84: Detonates a fireball by compressing the air around the caster. Power 1251.
+			level 85: Detonates a fireball by compressing the air around the caster. Power 1279.
+		-->
         <icon initial="icon.skill1230"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1">
@@ -1701,7 +1491,6 @@
             </effect-point>
             <effect-range initial="1400"/>
             <hit-time initial="1500"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -1942,93 +1731,93 @@
         </effects>
     </skill>
     <skill id="5658" name="Gatekeeper Flame Strike" max-level="85" action="A1">
-        <!--
-		level 1: Hurls a destructive long-range fireball at multiple enemies. Power 38.
-		level 2: Hurls a destructive long-range fireball at multiple enemies. Power 40.
-		level 3: Hurls a destructive long-range fireball at multiple enemies. Power 43.
-		level 4: Hurls a destructive long-range fireball at multiple enemies. Power 46.
-		level 5: Hurls a destructive long-range fireball at multiple enemies. Power 49.
-		level 6: Hurls a destructive long-range fireball at multiple enemies. Power 52.
-		level 7: Hurls a destructive long-range fireball at multiple enemies. Power 55.
-		level 8: Hurls a destructive long-range fireball at multiple enemies. Power 58.
-		level 9: Hurls a destructive long-range fireball at multiple enemies. Power 62.
-		level 10: Hurls a destructive long-range fireball at multiple enemies. Power 65.
-		level 11: Hurls a destructive long-range fireball at multiple enemies. Power 69.
-		level 12: Hurls a destructive long-range fireball at multiple enemies. Power 73.
-		level 13: Hurls a destructive long-range fireball at multiple enemies. Power 77.
-		level 14: Hurls a destructive long-range fireball at multiple enemies. Power 81.
-		level 15: Hurls a destructive long-range fireball at multiple enemies. Power 85.
-		level 16: Hurls a destructive long-range fireball at multiple enemies. Power 89.
-		level 17: Hurls a destructive long-range fireball at multiple enemies. Power 94.
-		level 18: Hurls a destructive long-range fireball at multiple enemies. Power 98.
-		level 19: Hurls a destructive long-range fireball at multiple enemies. Power 103.
-		level 20: Hurls a destructive long-range fireball at multiple enemies. Power 108.
-		level 21: Hurls a destructive long-range fireball at multiple enemies. Power 113.
-		level 22: Hurls a destructive long-range fireball at multiple enemies. Power 118.
-		level 23: Hurls a destructive long-range fireball at multiple enemies. Power 124.
-		level 24: Hurls a destructive long-range fireball at multiple enemies. Power 129.
-		level 25: Hurls a destructive long-range fireball at multiple enemies. Power 135.
-		level 26: Hurls a destructive long-range fireball at multiple enemies. Power 140.
-		level 27: Hurls a destructive long-range fireball at multiple enemies. Power 146.
-		level 28: Hurls a destructive long-range fireball at multiple enemies. Power 152.
-		level 29: Hurls a destructive long-range fireball at multiple enemies. Power 158.
-		level 30: Hurls a destructive long-range fireball at multiple enemies. Power 164.
-		level 31: Hurls a destructive long-range fireball at multiple enemies. Power 171.
-		level 32: Hurls a destructive long-range fireball at multiple enemies. Power 177.
-		level 33: Hurls a destructive long-range fireball at multiple enemies. Power 184.
-		level 34: Hurls a destructive long-range fireball at multiple enemies. Power 191.
-		level 35: Hurls a destructive long-range fireball at multiple enemies. Power 197.
-		level 36: Hurls a destructive long-range fireball at multiple enemies. Power 204.
-		level 37: Hurls a destructive long-range fireball at multiple enemies. Power 212.
-		level 38: Hurls a destructive long-range fireball at multiple enemies. Power 219.
-		level 39: Hurls a destructive long-range fireball at multiple enemies. Power 226.
-		level 40: Hurls a destructive long-range fireball at multiple enemies. Power 233.
-		level 41: Hurls a destructive long-range fireball at multiple enemies. Power 241.
-		level 42: Hurls a destructive long-range fireball at multiple enemies. Power 248.
-		level 43: Hurls a destructive long-range fireball at multiple enemies. Power 256.
-		level 44: Hurls a destructive long-range fireball at multiple enemies. Power 264.
-		level 45: Hurls a destructive long-range fireball at multiple enemies. Power 272.
-		level 46: Hurls a destructive long-range fireball at multiple enemies. Power 280.
-		level 47: Hurls a destructive long-range fireball at multiple enemies. Power 288.
-		level 48: Hurls a destructive long-range fireball at multiple enemies. Power 296.
-		level 49: Hurls a destructive long-range fireball at multiple enemies. Power 304.
-		level 50: Hurls a destructive long-range fireball at multiple enemies. Power 312.
-		level 51: Hurls a destructive long-range fireball at multiple enemies. Power 320.
-		level 52: Hurls a destructive long-range fireball at multiple enemies. Power 329.
-		level 53: Hurls a destructive long-range fireball at multiple enemies. Power 337.
-		level 54: Hurls a destructive long-range fireball at multiple enemies. Power 345.
-		level 55: Hurls a destructive long-range fireball at multiple enemies. Power 354.
-		level 56: Hurls a destructive long-range fireball at multiple enemies. Power 362.
-		level 57: Hurls a destructive long-range fireball at multiple enemies. Power 370.
-		level 58: Hurls a destructive long-range fireball at multiple enemies. Power 379.
-		level 59: Hurls a destructive long-range fireball at multiple enemies. Power 387.
-		level 60: Hurls a destructive long-range fireball at multiple enemies. Power 395.
-		level 61: Hurls a destructive long-range fireball at multiple enemies. Power 403.
-		level 62: Hurls a destructive long-range fireball at multiple enemies. Power 412.
-		level 63: Hurls a destructive long-range fireball at multiple enemies. Power 420.
-		level 64: Hurls a destructive long-range fireball at multiple enemies. Power 428.
-		level 65: Hurls a destructive long-range fireball at multiple enemies. Power 436.
-		level 66: Hurls a destructive long-range fireball at multiple enemies. Power 444.
-		level 67: Hurls a destructive long-range fireball at multiple enemies. Power 452.
-		level 68: Hurls a destructive long-range fireball at multiple enemies. Power 460.
-		level 69: Hurls a destructive long-range fireball at multiple enemies. Power 468.
-		level 70: Hurls a destructive long-range fireball at multiple enemies. Power 475.
-		level 71: Hurls a destructive long-range fireball at multiple enemies. Power 483.
-		level 72: Hurls a destructive long-range fireball at multiple enemies. Power 490.
-		level 73: Hurls a destructive long-range fireball at multiple enemies. Power 497.
-		level 74: Hurls a destructive long-range fireball at multiple enemies. Power 504.
-		level 75: Hurls a destructive long-range fireball at multiple enemies. Power 511.
-		level 76: Hurls a destructive long-range fireball at multiple enemies. Power 519.
-		level 77: Hurls a destructive long-range fireball at multiple enemies. Power 528.
-		level 78: Hurls a destructive long-range fireball at multiple enemies. Power 539.
-		level 79: Hurls a destructive long-range fireball at multiple enemies. Power 552.
-		level 80: Hurls a destructive long-range fireball at multiple enemies. Power 566.
-		level 81: Hurls a destructive long-range fireball at multiple enemies. Power 581.
-		level 82: Hurls a destructive long-range fireball at multiple enemies. Power 595.
-		level 83: Hurls a destructive long-range fireball at multiple enemies. Power 610.
-		level 84: Hurls a destructive long-range fireball at multiple enemies. Power 626.
-		level 85: Hurls a destructive long-range fireball at multiple enemies. Power 640.
-	 -->
+        <!-- 
+			level 1: Sets the closest area on fire and hurls a fireball. Power 38.
+			level 2: Sets the closest area on fire and hurls a fireball. Power 40.
+			level 3: Sets the closest area on fire and hurls a fireball. Power 43.
+			level 4: Sets the closest area on fire and hurls a fireball. Power 46.
+			level 5: Sets the closest area on fire and hurls a fireball. Power 49.
+			level 6: Sets the closest area on fire and hurls a fireball. Power 52.
+			level 7: Sets the closest area on fire and hurls a fireball. Power 55.
+			level 8: Sets the closest area on fire and hurls a fireball. Power 58.
+			level 9: Sets the closest area on fire and hurls a fireball. Power 62.
+			level 10: Sets the closest area on fire and hurls a fireball. Power 65.
+			level 11: Sets the closest area on fire and hurls a fireball. Power 69.
+			level 12: Sets the closest area on fire and hurls a fireball. Power 73.
+			level 13: Sets the closest area on fire and hurls a fireball. Power 77.
+			level 14: Sets the closest area on fire and hurls a fireball. Power 81.
+			level 15: Sets the closest area on fire and hurls a fireball. Power 85.
+			level 16: Sets the closest area on fire and hurls a fireball. Power 89.
+			level 17: Sets the closest area on fire and hurls a fireball. Power 94.
+			level 18: Sets the closest area on fire and hurls a fireball. Power 98.
+			level 19: Sets the closest area on fire and hurls a fireball. Power 103.
+			level 20: Sets the closest area on fire and hurls a fireball. Power 108.
+			level 21: Sets the closest area on fire and hurls a fireball. Power 113.
+			level 22: Sets the closest area on fire and hurls a fireball. Power 118.
+			level 23: Sets the closest area on fire and hurls a fireball. Power 124.
+			level 24: Sets the closest area on fire and hurls a fireball. Power 129.
+			level 25: Sets the closest area on fire and hurls a fireball. Power 135.
+			level 26: Sets the closest area on fire and hurls a fireball. Power 140.
+			level 27: Sets the closest area on fire and hurls a fireball. Power 146.
+			level 28: Sets the closest area on fire and hurls a fireball. Power 152.
+			level 29: Sets the closest area on fire and hurls a fireball. Power 158.
+			level 30: Sets the closest area on fire and hurls a fireball. Power 164.
+			level 31: Sets the closest area on fire and hurls a fireball. Power 171.
+			level 32: Sets the closest area on fire and hurls a fireball. Power 177.
+			level 33: Sets the closest area on fire and hurls a fireball. Power 184.
+			level 34: Sets the closest area on fire and hurls a fireball. Power 191.
+			level 35: Sets the closest area on fire and hurls a fireball. Power 197.
+			level 36: Sets the closest area on fire and hurls a fireball. Power 204.
+			level 37: Sets the closest area on fire and hurls a fireball. Power 212.
+			level 38: Sets the closest area on fire and hurls a fireball. Power 219.
+			level 39: Sets the closest area on fire and hurls a fireball. Power 226.
+			level 40: Sets the closest area on fire and hurls a fireball. Power 233.
+			level 41: Sets the closest area on fire and hurls a fireball. Power 241.
+			level 42: Sets the closest area on fire and hurls a fireball. Power 248.
+			level 43: Sets the closest area on fire and hurls a fireball. Power 256.
+			level 44: Sets the closest area on fire and hurls a fireball. Power 264.
+			level 45: Sets the closest area on fire and hurls a fireball. Power 272.
+			level 46: Sets the closest area on fire and hurls a fireball. Power 280.
+			level 47: Sets the closest area on fire and hurls a fireball. Power 288.
+			level 48: Sets the closest area on fire and hurls a fireball. Power 296.
+			level 49: Sets the closest area on fire and hurls a fireball. Power 304.
+			level 50: Sets the closest area on fire and hurls a fireball. Power 312.
+			level 51: Sets the closest area on fire and hurls a fireball. Power 320.
+			level 52: Sets the closest area on fire and hurls a fireball. Power 329.
+			level 53: Sets the closest area on fire and hurls a fireball. Power 337.
+			level 54: Sets the closest area on fire and hurls a fireball. Power 345.
+			level 55: Sets the closest area on fire and hurls a fireball. Power 354.
+			level 56: Sets the closest area on fire and hurls a fireball. Power 362.
+			level 57: Sets the closest area on fire and hurls a fireball. Power 370.
+			level 58: Sets the closest area on fire and hurls a fireball. Power 379.
+			level 59: Sets the closest area on fire and hurls a fireball. Power 387.
+			level 60: Sets the closest area on fire and hurls a fireball. Power 395.
+			level 61: Sets the closest area on fire and hurls a fireball. Power 403.
+			level 62: Sets the closest area on fire and hurls a fireball. Power 412.
+			level 63: Sets the closest area on fire and hurls a fireball. Power 420.
+			level 64: Sets the closest area on fire and hurls a fireball. Power 428.
+			level 65: Sets the closest area on fire and hurls a fireball. Power 436.
+			level 66: Sets the closest area on fire and hurls a fireball. Power 444.
+			level 67: Sets the closest area on fire and hurls a fireball. Power 452.
+			level 68: Sets the closest area on fire and hurls a fireball. Power 460.
+			level 69: Sets the closest area on fire and hurls a fireball. Power 468.
+			level 70: Sets the closest area on fire and hurls a fireball. Power 475.
+			level 71: Sets the closest area on fire and hurls a fireball. Power 483.
+			level 72: Sets the closest area on fire and hurls a fireball. Power 490.
+			level 73: Sets the closest area on fire and hurls a fireball. Power 497.
+			level 74: Sets the closest area on fire and hurls a fireball. Power 504.
+			level 75: Sets the closest area on fire and hurls a fireball. Power 511.
+			level 76: Sets the closest area on fire and hurls a fireball. Power 519.
+			level 77: Sets the closest area on fire and hurls a fireball. Power 528.
+			level 78: Sets the closest area on fire and hurls a fireball. Power 539.
+			level 79: Sets the closest area on fire and hurls a fireball. Power 552.
+			level 80: Sets the closest area on fire and hurls a fireball. Power 566.
+			level 81: Sets the closest area on fire and hurls a fireball. Power 581.
+			level 82: Sets the closest area on fire and hurls a fireball. Power 595.
+			level 83: Sets the closest area on fire and hurls a fireball. Power 610.
+			level 84: Sets the closest area on fire and hurls a fireball. Power 626.
+			level 85: Sets the closest area on fire and hurls a fireball. Power 640.
+		-->
         <icon initial="icon.skill1181"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1">
@@ -2207,7 +1996,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="2500"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -2286,7 +2074,7 @@
                 <value level="85">113</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12"/>
+        <target affect-min="5" affect-random="12" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack scope="PVP">
                 <power initial="30.0">
@@ -2467,12 +2255,16 @@
         </effects>
     </skill>
     <skill id="5659" name="Gatekeeper Berserker Spirit" max-level="2" action="A2" type="MAGIC">
-        <!-- P. Def. decreases momentarily./M. Def./P. evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./Speed. -->
+        <!-- 
+			level 1: Temporarily Max HP/ MP -20%, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5.
+			level 2: Temporarily Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.
+		-->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="35">
                 <value level="2">52</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <effect-point initial="331">
                 <value level="2">486</value>
@@ -2535,11 +2327,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5660" name="Battleground Death Syndrome" max-level="5" debuff="true" action="A2">
-        <!-- Combat power is decreased after death on the battleground. Condition is removed at the end of the war. -->
+    <skill id="5660" name="Battleground Death Syndrome" max-level="5" action="A2" debuff="true">
+        <!-- Combat ability is decreased due to death. -->
         <icon initial="icon.skill5076_a"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+        <attributes irreplacable="true" magic-critical-rate="-5.0" stay-after-death="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="DEATH_PENALTY">
@@ -2597,11 +2390,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5661" name="Match Participation" debuff="true" action="A2">
+    <skill id="5661" name="Match Participation" action="A2" debuff="true">
         <!-- You have already participated in a match and cannot participate in the next match. -->
         <icon initial="icon.skill5661"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+        <attributes irreplacable="true" magic-critical-rate="-5.0" stay-after-death="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="ENTRY_FOR_GAME">
@@ -2621,10 +2415,9 @@
         <target type="TARGET"/>
     </skill>
     <skill id="5663" name="Ancient Sword Resistance" max-level="5">
-        <!-- Strong Ancient Sword resistance. -->
+        <!-- Resistance to ancient sword. -->
         <icon initial="icon.skill5663"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -2639,11 +2432,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5664" name="Ancient Sword Vulnerability" max-level="5">
-        <!-- Vulnerable to Ancient Sword attack. -->
+    <skill id="5664" name="Ancient Sword Resistance" max-level="5">
+        <!-- Vulnerable to ancient sword. -->
         <icon initial="icon.skill5664"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -2658,10 +2450,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="5665" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5665" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2677,10 +2469,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5666" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5666" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2696,10 +2488,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5667" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5667" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2715,17 +2507,17 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5668" name="Poison" debuff="true" action="A2" type="MAGIC">
-        <!-- HP has been momentarily decreased due to Poison. -->
+    <skill id="5668" name="Poison" action="A2" debuff="true" type="MAGIC">
+        <!-- Instantly decreases HP. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
             <effect-range initial="200"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="8"/>
             <time initial="30"/>
             <chance initial="70"/>
@@ -2736,10 +2528,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="5669" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5669" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2755,10 +2547,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5670" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5670" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="70"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2774,10 +2566,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5671" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5671" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="61"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2793,10 +2585,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5672" name="Stun" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="5672" name="Stun" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -2812,10 +2604,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5679" name="Oblivion Trap" max-level="3" debuff="true" action="A2">
-        <!-- Trap of forgetfulness. When attacking, the enemy has a chance to lose their target. -->
+    <skill id="5679" name="Oblivion Trap" max-level="3" action="A2" debuff="true">
+        <!-- Trap of forgetfulness. when attacking, the enemy has a chance to lose their target. -->
         <icon initial="icon.skill0836"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="64">
                 <value level="2">68</value>
                 <value level="3">72</value>
@@ -2824,14 +2616,14 @@
             <effect-point initial="-100"/>
             <effect-range initial="1100"/>
         </attributes>
-        <target type="ENEMY" range="200"/>
+        <target range="200" type="ENEMY"/>
         <abnormal type="MIRAGE_TRAP">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <trigger-skill-by-attack skill="5680">
+            <trigger-skill-by-attack allow-reflect="false" critical-only="false" skill="5680" target="SELF" trigger-by-normal-attack="true" trigger-by-skill="true">
                 <power initial="1.0"/>
                 <chance initial="60.0"/>
                 <min-damage initial="1.0"/>
@@ -2843,6 +2635,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="79"/>
+            <cast-range initial="-1"/>
             <effect-range initial="1400"/>
         </attributes>
         <target/>
@@ -2855,7 +2648,7 @@
     <skill id="5681" name="PvP Weapon - CP Drain" action="A1">
         <!-- none -->
         <icon initial="icon.skill1306"/>
-        <attributes static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <reuse initial="10000"/>
@@ -2873,7 +2666,7 @@
     <skill id="5682" name="PvP Weapon - Cancel" action="A1">
         <!-- none -->
         <icon initial="icon.skill1056"/>
-        <attributes static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <reuse initial="10000"/>
@@ -2888,10 +2681,10 @@
             </dispel-by-category>
         </effects>
     </skill>
-    <skill id="5683" name="PvP Weapon - Ignore Shield Defense" debuff="true" action="A2">
-        <!-- Shield Def. significantly decreased momentarily. -->
+    <skill id="5683" name="PvP Weapon - Ignore Shield Defense" action="A2" debuff="true">
+        <!-- Immediately greatly decreases Shield Defense. -->
         <icon initial="icon.skill1304"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <reuse initial="10000"/>
@@ -2913,7 +2706,7 @@
     <skill id="5684" name="PvP Weapon - Attack Rate" action="A1">
         <!-- none -->
         <icon initial="icon.skill0005"/>
-        <attributes static-reuse="true" next-action="ATTACK" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" next-action="ATTACK" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <reuse initial="10000"/>
@@ -2923,16 +2716,17 @@
         </attributes>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="1.0"/>
             </physical-attack>
         </effects>
     </skill>
     <skill id="5685" name="PvP Weapon - Casting" action="A2">
-        <!-- Casting Spd. decreased momentarily. -->
+        <!-- Immediately increases Casting Spd. -->
         <icon initial="icon.skill0228"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <hit-time initial="100"/>
@@ -2949,10 +2743,11 @@
         </effects>
     </skill>
     <skill id="5686" name="PvP Weapon - Rapid Fire" action="A2">
-        <!-- Bow Atk. Spd. decreased momentarily. -->
+        <!-- Immediately increases Atk. Spd. with bow. -->
         <icon initial="icon.skill0413"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <hit-time initial="100"/>
@@ -2968,10 +2763,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5687" name="PvP Weapon - Decrease Range" debuff="true" action="A2">
-        <!-- Bow Range decreased momentarily. -->
+    <skill id="5687" name="PvP Weapon - Decrease Range" action="A2" debuff="true">
+        <!-- Immediately decreases attack range with bow. -->
         <icon initial="icon.skill0486"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <reuse initial="10000"/>
@@ -2991,11 +2786,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5688" name="PvP Weapon - Decrease Resist" debuff="true" action="A2">
+    <skill id="5688" name="PvP Weapon - Decrease Resist" action="A2" debuff="true">
         <!-- Resistance against all attributes decreases momentarily. -->
         <icon initial="icon.skill0756"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="-1"/>
             <effect-range initial="1100"/>
@@ -3013,10 +2809,11 @@
         </effects>
     </skill>
     <skill id="5689" name="PvP Shield - Reflect Damage" action="A2">
-        <!-- Able to return some of the received damage back to the enemy momentarily. -->
+        <!-- Temporarily reflects some of the received damage back to the enemy. -->
         <icon initial="icon.skill0086"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" triggered="true">
+        <attributes magic-critical-rate="-5.0" static-reuse="true" triggered="true">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <hit-time initial="100"/>
@@ -3037,6 +2834,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
             <hit-time initial="100"/>
@@ -3051,11 +2849,12 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5696" name="Dizziness" debuff="true" action="A2">
+    <skill id="5696" name="Dizziness" action="A2" debuff="true">
         <!-- Speed and Atk. Spd. decreases temporarily due to the side effect of poisoning. -->
         <icon initial="icon.skill0837"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="74"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -3073,15 +2872,16 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5697" name="Seal" max-level="4" debuff="true" action="A2">
-        <!-- Unable to use physical/magic skills momentarily. -->
+    <skill id="5697" name="Seal" max-level="4" action="A2" debuff="true">
+        <!-- Immediately physical/ magic skills are blocked. -->
         <icon initial="icon.skill0835"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1" triggered="true">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="DERANGEMENT" triggered="true">
             <magic-level initial="68">
                 <value level="2">70</value>
                 <value level="3">72</value>
                 <value level="4">74</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <target/>
@@ -3098,8 +2898,9 @@
     <skill id="5699" name="Decrease P. Def." max-level="7" action="A2">
         <!-- P. Def. decreased. -->
         <icon initial="icon.skill0122"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="29"/>
+            <cast-range initial="-1"/>
             <reuse initial="6000"/>
         </attributes>
         <target/>

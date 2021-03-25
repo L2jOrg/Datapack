@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="39100" name="Agathion Teleport: Hunter's Village" action="A1">
-        <!-- Teleport to the Hunter's Village. -->
+    <skill id="39100" name="Agathion Teleport - Hunters' Village" action="A1">
+        <!-- Teleports to Hunter's Village. -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="-1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -18,10 +19,11 @@
             </teleport>
         </effects>
     </skill>
-    <skill id="39101" name="Chase Down" action="A2">
-        <!-- Movement Speed +66 for 15 seconds. -->
+    <skill id="39101" name="Evidence Chase" action="A2">
+        <!-- For 15 sec., Speed +66. -->
         <icon initial="icon.skill0998"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="438"/>
             <hit-time initial="1000"/>
@@ -36,10 +38,11 @@
             </speed>
         </effects>
     </skill>
-    <skill id="39102" name="Sneak" action="T">
-        <!-- Protected from preemptive attacks from monsters. -->
+    <skill id="39102" name="Secret Investigation" action="T">
+        <!-- Makes you invisible for monsters. -->
         <icon initial="icon.skill10518"/>
         <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <consume>
             <mana initial="1"/>
@@ -51,53 +54,60 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39103" name="Hero HP Potion" action="A1">
+    <skill id="39103" name="Hero's HP Recovery Potion" action="A1">
+        <!--  -->
         <icon initial="icon.etc_reagent_white_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39104" name="Warrior's Cube (7-day)" action="A1">
+    <skill id="39104" name="Hero's Cube - 7 d." action="A1">
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39105" name="Scroll of Escape: Dragon Valley Bridge" action="A1">
-        <!-- Return to Dragon Valley Bridge. Cooldown 60 minutes. -->
+        <!-- Teleports to Dragon Valley Bridge. Cooldown - 60 min. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39106" name="Scroll of Escape: Inside Antharas' Lair" action="A1">
-        <!-- Return to Inside Antharas' Lair. Cooldown 60 minutes. -->
+    <skill id="39106" name="Scroll of Escape: Antharas' Lair" action="A1">
+        <!-- Teleports to Antharas' Lair. Cooldown - 60 min. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39107" name="Scroll of Escape: Cruma Tower Entrance" action="A1">
-        <!-- Return to Cruma Tower Entrance. Cooldown 60 minutes. -->
+    <skill id="39107" name="Scroll of Escape: Entrance to Cruma Tower" action="A1">
+        <!-- Teleports to Entrance to Cruma Tower. Cooldown - 60 min. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39108" name="Scroll of Escape: Orc Barracks Entrance" action="A1">
-        <!-- Return to Orc Barracks Entrance. Cooldown 60 minutes. -->
+    <skill id="39108" name="Scroll of Escape: Entrance to Orc Barracks" action="A1">
+        <!-- Teleports to Entrance to Orc Barracks. Cooldown - 60 min. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39109" name="Greater Scroll of Resurrection" action="A1">
+    <skill id="39109" name="Improved Scroll of Resurrection" action="A1">
         <!-- none -->
         <icon initial="icon.etc_scroll_of_resurrection_i01"/>
         <attributes magic-critical-rate="5.0">
@@ -118,10 +128,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39110" name="Scroll of Escape: Enchanted Valley Entrance" action="A1">
-        <!-- Return to Enchanted Valley Entrance. Cooldown 60 minutes. -->
+    <skill id="39110" name="Scroll of Escape: Entrance to Enchanted Valley" action="A1">
+        <!-- Teleports to Entrance to Enchanted Valley. Cooldown - 60 min. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
@@ -130,6 +141,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -139,16 +151,18 @@
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39113" name="Golden Mermaid's Tear" action="A2">
-        <!-- Hunting XP/SP Gain +50%% for 1 hour. Buff remains after death. -->
+    <skill id="39113" name="Golden Mermaid's Tears" action="A2">
+        <!-- For 1 h., Acquired XP/ SP +50%%. Cooldown: 30 min. The effect remains after death. -->
         <icon initial="icon.general_fuel_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal>
@@ -165,32 +179,29 @@
         </effects>
     </skill>
     <skill id="39114" name="Refined Queen Ant's Ring" max-level="3">
-        <!--
-            level 1: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Atk./M. Atk. +7%%, P. Critical Damage +10%%, and M. Critical Damage +5%%.
-            level 3: Poison Resistance +20%%, Poison Atk. Rate +20%%, P. Accuracy/M. Accuracy +3, P. Critical Damage +10%%, and M. Critical Damage +5%%.
-         -->
+        <!-- Poison Resistance/ Atk. Rate +20%%, P./ M. Accuracy +3, P./ M. Atk. +7%%, P. Critical Damage +10%%, M. Skill Critical Damage +5%%. -->
         <icon initial="icon.accessory_ring_of_queen_ant_i03"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <attack-trait>
                 <trait type="POISON">
-                    <power initial="20"/>                    
+                    <power initial="20"/>
                 </trait>
             </attack-trait>
             <defence-trait>
                 <trait type="POISON">
-                    <power initial="20"/>                    
+                    <power initial="20"/>
                 </trait>
             </defence-trait>
             <stat-modify stat="ACCURACY">
-                <power initial="3.0"/>                  
+                <power initial="3.0"/>
             </stat-modify>
             <stat-modify stat="ACCURACY_MAGIC">
-                <power initial="3.0"/>                  
+                <power initial="3.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="7.0"/>                 
+                <power initial="7.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="7.0"/>
@@ -201,59 +212,53 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="5.0"/>
             </stat-modify>
-        </effects>		
+        </effects>
     </skill>
     <skill id="39115" name="Refined Orfen's Earring" max-level="3">
-        <!--
-            level 1: Hold Resistance +20%%, MEN Attack Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, Skill MP Consumption -5%%. Procs to recover HP by some of damage dealt.
-            level 3: Hold Resistance +20%%, MEN Resistance +15%%, Hold Atk. Rate +20%%, MEN Atk. Rate +15%%, Heal Received +6%%, and Skill MP Consumption -5%%. Has a chance to absorb part of the damage dealt to enemies as MP.
-         -->
+        <!-- Hold Resistance and Atk. Rate +20%%, Fear/ Silence Resistance and Atk. Rate +15%%, Received Healing +6%%, Skill MP Consumption -5%%. With a certain chance, absorbs some of the inflicted damage as MP. -->
         <icon initial="icon.accessory_earring_of_orfen_i03"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <attack-trait>
-				<trait type="HOLD">
-                    <power initial="20"/>                    
+                <trait type="HOLD">
+                    <power initial="20"/>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="15"/>
                 </trait>
             </attack-trait>
             <defence-trait>
-				<trait type="HOLD">
-                    <power initial="20"/>                    
+                <trait type="HOLD">
+                    <power initial="20"/>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="15"/>
-                </trait>                
+                </trait>
             </defence-trait>
-			<stat-modify mode="PER" stat="HEAL_RECEIVE">
+            <stat-modify mode="PER" stat="HEAL_RECEIVE">
                 <power initial="6.0"/>
             </stat-modify>
-			<magic-cost>
-                <power initial="-5.0"/>                
+            <magic-cost>
+                <power initial="-5.0"/>
             </magic-cost>
-			<magic-cost type="PHYSIC">
-                <power initial="-5.0"/>                
+            <magic-cost type="PHYSIC">
+                <power initial="-5.0"/>
             </magic-cost>
-			<magic-cost type="DANCE">
-                <power initial="-5.0"/>                
+            <magic-cost type="DANCE">
+                <power initial="-5.0"/>
             </magic-cost>
             <stat-modify stat="ABSORB_MANA_DAMAGE_PERCENT">
                 <power initial="3.0"/>
             </stat-modify>
-        </effects>		
+        </effects>
     </skill>
-    <skill id="39116" name="Refined Rings of Core" max-level="3">
-        <!--
-            level 1: MEN Attack Resistance +20%%, MEN Atk. Rate + 20%%, P. Evasion/M. Evasion +3, Damage Received -6%%.
-            level 3: MEN Resistance +20%%, MEN Atk. Rate +20%%, P. Evasion/M. Evasion +3, and Damage Received -6%%.
-         -->
+    <skill id="39116" name="Refined Ring of Core" max-level="3">
+        <!-- Fear/ Silence Resistance and Atk. Rate +20%%, P./ M. Evasion +3, received damage -6%%. -->
         <icon initial="icon.accessory_ring_of_core_i03"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <attack-trait>
                 <trait type="DERANGEMENT">
                     <power initial="20"/>
@@ -262,7 +267,7 @@
             <defence-trait>
                 <trait type="DERANGEMENT">
                     <power initial="20"/>
-                </trait>                
+                </trait>
             </defence-trait>
             <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0"/>
@@ -271,7 +276,7 @@
                 <power initial="3.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
-                <power initial="6.0"/>                   
+                <power initial="6.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
                 <power initial="6.0"/>
@@ -288,20 +293,22 @@
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
                 <power initial="6.0"/>
             </stat-modify>
-		</effects>	
+        </effects>
     </skill>
     <skill id="39117" name="Whale" action="A1">
         <!-- none -->
         <icon initial="icon.fish_huge_i15"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39118" name="2,000 SP Scroll" action="A1">
+    <skill id="39118" name="Scroll: 2000 SP" action="A1">
         <!-- none -->
         <icon initial="icon.etc_sp_scroll1_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
@@ -311,10 +318,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39119" name="10,000 SP Scroll" action="A1">
+    <skill id="39119" name="Scroll: 10,000 SP" action="A1">
         <!-- none -->
         <icon initial="icon.etc_sp_scroll2_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
@@ -325,10 +333,11 @@
         </effects>
     </skill>
     <skill id="39120" name="Teleport: Giran Harbor" action="A1">
-        <!-- Teleport to Giran Harbor. -->
+        <!-- Teleports to Giran Harbor. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <hit-time initial="3000"/>
         </attributes>
@@ -336,52 +345,57 @@
         <conditions>
             <condition name="NonChaotic"/>
             <condition name="OpCanEscape"/>
-        </conditions>	
+        </conditions>
         <effects>
             <teleport>
                 <location x="48088" y="186622" z="-3487"/>
             </teleport>
-        </effects>	
+        </effects>
     </skill>
     <skill id="39121" name="Teleport: Gludin Harbor" action="A1">
-        <!-- Teleport to Gludin Harbor. -->
+        <!-- Teleports to Gludin Harbor. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
-            <hit-time initial="5000"/>
-        </attributes>	
+            <hit-time initial="3000"/>
+        </attributes>
         <target/>
         <conditions>
             <condition name="NonChaotic"/>
             <condition name="OpCanEscape"/>
-        </conditions>	
+        </conditions>
         <effects>
             <teleport>
                 <location x="-91216" y="150483" z="-3628"/>
             </teleport>
-        </effects>		
+        </effects>
     </skill>
-    <skill id="39122" name="Golden Boots_Tester" action="A1">
+    <skill id="39122" name="Golden Boots - Test" action="A1">
         <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39123" name="Special HP Potion" action="A1">
+    <skill id="39123" name="Maliss' HP Recovery Potion" action="A1">
+        <!--  -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39124" name="Weapon Supply Box (C-grade)" action="A1">
+    <skill id="39124" name="C-grade Weapon Supply Box" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -391,26 +405,27 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="8.300000190734863" id="242"/>
-                <item chance="8.300000190734863" id="7887"/>
-                <item chance="8.300000190734863" id="72"/>
-                <item chance="8.300000190734863" id="71"/>
-                <item chance="8.300000190734863" id="281"/>
-                <item chance="8.300000190734863" id="193"/>
-                <item chance="8.300000190734863" id="160"/>
-                <item chance="8.300000190734863" id="161"/>
-                <item chance="8.300000190734863" id="192"/>
-                <item chance="8.300000190734863" id="194"/>
-                <item chance="8.300000190734863" id="302"/>
-                <item chance="8.300000190734863" id="263"/>
+                <item chance="8.300000190734863" count="1" id="242"/>
+                <item chance="8.300000190734863" count="1" id="7887"/>
+                <item chance="8.300000190734863" count="1" id="72"/>
+                <item chance="8.300000190734863" count="1" id="71"/>
+                <item chance="8.300000190734863" count="1" id="281"/>
+                <item chance="8.300000190734863" count="1" id="193"/>
+                <item chance="8.300000190734863" count="1" id="160"/>
+                <item chance="8.300000190734863" count="1" id="161"/>
+                <item chance="8.300000190734863" count="1" id="192"/>
+                <item chance="8.300000190734863" count="1" id="194"/>
+                <item chance="8.300000190734863" count="1" id="302"/>
+                <item chance="8.300000190734863" count="1" id="263"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39125" name="Weapon Supply Box (B-grade)" action="A1">
+    <skill id="39125" name="B-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i03"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -420,39 +435,40 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="4.0" id="175"/>
-                <item chance="4.0" id="267"/>
-                <item chance="4.0" id="268"/>
-                <item chance="4.0" id="287"/>
-                <item chance="4.0" id="79"/>
-                <item chance="4.0" id="284"/>
-                <item chance="4.0" id="171"/>
-                <item chance="4.0" id="234"/>
-                <item chance="4.0" id="300"/>
-                <item chance="4.0" id="78"/>
-                <item chance="4.0" id="7883"/>
-                <item chance="4.0" id="91"/>
-                <item chance="4.0" id="7900"/>
-                <item chance="4.0" id="7893"/>
-                <item chance="4.0" id="142"/>
-                <item chance="4.0" id="229"/>
-                <item chance="4.0" id="97"/>
-                <item chance="4.0" id="264"/>
-                <item chance="4.0" id="7892"/>
-                <item chance="4.0" id="92"/>
-                <item chance="4.0" id="210"/>
-                <item chance="4.0" id="7901"/>
-                <item chance="4.0" id="148"/>
-                <item chance="4.0" id="243"/>
-                <item chance="4.0" id="7889"/>
+                <item chance="4.0" count="1" id="175"/>
+                <item chance="4.0" count="1" id="267"/>
+                <item chance="4.0" count="1" id="268"/>
+                <item chance="4.0" count="1" id="287"/>
+                <item chance="4.0" count="1" id="79"/>
+                <item chance="4.0" count="1" id="284"/>
+                <item chance="4.0" count="1" id="171"/>
+                <item chance="4.0" count="1" id="234"/>
+                <item chance="4.0" count="1" id="300"/>
+                <item chance="4.0" count="1" id="78"/>
+                <item chance="4.0" count="1" id="7883"/>
+                <item chance="4.0" count="1" id="91"/>
+                <item chance="4.0" count="1" id="7900"/>
+                <item chance="4.0" count="1" id="7893"/>
+                <item chance="4.0" count="1" id="142"/>
+                <item chance="4.0" count="1" id="229"/>
+                <item chance="4.0" count="1" id="97"/>
+                <item chance="4.0" count="1" id="264"/>
+                <item chance="4.0" count="1" id="7892"/>
+                <item chance="4.0" count="1" id="92"/>
+                <item chance="4.0" count="1" id="210"/>
+                <item chance="4.0" count="1" id="7901"/>
+                <item chance="4.0" count="1" id="148"/>
+                <item chance="4.0" count="1" id="243"/>
+                <item chance="4.0" count="1" id="7889"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39126" name="C-grade Armor Supply Box" action="A1">
+    <skill id="39126" name="C-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i06"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -462,24 +478,25 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="10.0" id="2463"/>
-                <item chance="10.0" id="473"/>
-                <item chance="10.0" id="442"/>
-                <item chance="10.0" id="401"/>
-                <item chance="10.0" id="2437"/>
-                <item chance="10.0" id="2461"/>
-                <item chance="10.0" id="356"/>
-                <item chance="10.0" id="2438"/>
-                <item chance="10.0" id="2462"/>
-                <item chance="10.0" id="2414"/>
+                <item chance="10.0" count="1" id="2463"/>
+                <item chance="10.0" count="1" id="473"/>
+                <item chance="10.0" count="1" id="442"/>
+                <item chance="10.0" count="1" id="401"/>
+                <item chance="10.0" count="1" id="2437"/>
+                <item chance="10.0" count="1" id="2461"/>
+                <item chance="10.0" count="1" id="356"/>
+                <item chance="10.0" count="1" id="2438"/>
+                <item chance="10.0" count="1" id="2462"/>
+                <item chance="10.0" count="1" id="2414"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39127" name="B-grade Armor Supply Box" action="A1">
+    <skill id="39127" name="B-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -489,26 +506,27 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="8.300000190734863" id="600"/>
-                <item chance="8.300000190734863" id="2415"/>
-                <item chance="8.300000190734863" id="2464"/>
-                <item chance="8.300000190734863" id="2439"/>
-                <item chance="8.300000190734863" id="2487"/>
-                <item chance="8.300000190734863" id="2416"/>
-                <item chance="8.300000190734863" id="601"/>
-                <item chance="8.300000190734863" id="2475"/>
-                <item chance="8.300000190734863" id="2417"/>
-                <item chance="8.300000190734863" id="554"/>
-                <item chance="8.300000190734863" id="612"/>
-                <item chance="8.300000190734863" id="503"/>
+                <item chance="8.300000190734863" count="1" id="600"/>
+                <item chance="8.300000190734863" count="1" id="2415"/>
+                <item chance="8.300000190734863" count="1" id="2464"/>
+                <item chance="8.300000190734863" count="1" id="2439"/>
+                <item chance="8.300000190734863" count="1" id="2487"/>
+                <item chance="8.300000190734863" count="1" id="2416"/>
+                <item chance="8.300000190734863" count="1" id="601"/>
+                <item chance="8.300000190734863" count="1" id="2475"/>
+                <item chance="8.300000190734863" count="1" id="2417"/>
+                <item chance="8.300000190734863" count="1" id="554"/>
+                <item chance="8.300000190734863" count="1" id="612"/>
+                <item chance="8.300000190734863" count="1" id="503"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39128" name="Ornament Supply Box (C-grade)" action="A1">
+    <skill id="39128" name="C-grade Accessory Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i02"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -518,20 +536,21 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="16.600000381469727" id="854"/>
-                <item chance="16.600000381469727" id="855"/>
-                <item chance="16.600000381469727" id="917"/>
-                <item chance="16.600000381469727" id="119"/>
-                <item chance="16.600000381469727" id="885"/>
-                <item chance="16.600000381469727" id="886"/>
+                <item chance="16.600000381469727" count="1" id="854"/>
+                <item chance="16.600000381469727" count="1" id="855"/>
+                <item chance="16.600000381469727" count="1" id="917"/>
+                <item chance="16.600000381469727" count="1" id="119"/>
+                <item chance="16.600000381469727" count="1" id="885"/>
+                <item chance="16.600000381469727" count="1" id="886"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39129" name="Ornament Supply Box - B-grade" action="A1">
+    <skill id="39129" name="B-grade Accessory Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i08"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -541,37 +560,39 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="6.599999904632568" id="900"/>
-                <item chance="6.599999904632568" id="869"/>
-                <item chance="6.599999904632568" id="931"/>
-                <item chance="6.599999904632568" id="887"/>
-                <item chance="6.599999904632568" id="856"/>
-                <item chance="6.599999904632568" id="918"/>
-                <item chance="6.599999904632568" id="891"/>
-                <item chance="6.599999904632568" id="860"/>
-                <item chance="6.599999904632568" id="922"/>
-                <item chance="6.599999904632568" id="895"/>
-                <item chance="6.599999904632568" id="864"/>
-                <item chance="6.599999904632568" id="926"/>
-                <item chance="6.599999904632568" id="905"/>
-                <item chance="6.599999904632568" id="874"/>
-                <item chance="6.599999904632568" id="936"/>
+                <item chance="6.599999904632568" count="1" id="900"/>
+                <item chance="6.599999904632568" count="1" id="869"/>
+                <item chance="6.599999904632568" count="1" id="931"/>
+                <item chance="6.599999904632568" count="1" id="887"/>
+                <item chance="6.599999904632568" count="1" id="856"/>
+                <item chance="6.599999904632568" count="1" id="918"/>
+                <item chance="6.599999904632568" count="1" id="891"/>
+                <item chance="6.599999904632568" count="1" id="860"/>
+                <item chance="6.599999904632568" count="1" id="922"/>
+                <item chance="6.599999904632568" count="1" id="895"/>
+                <item chance="6.599999904632568" count="1" id="864"/>
+                <item chance="6.599999904632568" count="1" id="926"/>
+                <item chance="6.599999904632568" count="1" id="905"/>
+                <item chance="6.599999904632568" count="1" id="874"/>
+                <item chance="6.599999904632568" count="1" id="936"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39130" name="Weapons Ingredient Box (C-grade)" action="A1">
+    <skill id="39130" name="C-grade Weapons Ingredient Box" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39131" name="Weapon Ingredient Box (B-grade)" action="A1">
+    <skill id="39131" name="B-grade Weapon Ingredient Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -581,6 +602,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -590,16 +612,19 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39134" name="XP Boost Scroll" action="A2">
-        <!-- XP/SP Gain +30%% for 20 minutes. Cooldown is 1 minute.\nDeath protection. You can delete it yourself. -->
+    <skill id="39134" name="XP Growth Scroll" action="A2">
+        <!-- For 20 min., acquired XP/ SP +30%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" >
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
         </attributes>
         <target/>
         <abnormal type="EXP_SP_H">
@@ -615,10 +640,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39135" name="Chic Silver Chapeau - 30-day">
-        <!-- STR +1 and INT +1 -->
+    <skill id="39135" name="Chic Silver Chapeau - 30 d.">
+        <!-- STR +1, INT +1. -->
         <icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -629,10 +654,11 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="39136" name="Chic Silver Chapeau Teleport - 30-day" action="A1">
-        <!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
+    <skill id="39136" name="Chic Silver Chapeau Teleport - 30 d." action="A1">
+        <!-- Teleports to the nearest town. Cooldown: 2 h. -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -642,170 +668,172 @@
         </conditions>
         <effects>
             <escape location="TOWN"/>
-        </effects>	
+        </effects>
     </skill>
     <skill id="39137" name="Chapeau Box" action="A1">
         <!-- none -->
         <icon initial="icon.card_event_black_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39138" name="Blue Dynasty Transformation" action="A2">
-        <!-- Armor Appearance changes to "Blue Dynasty" for 1 h. -->
+        <!-- The armor appearance changes to "Blue Dynasty" for 1 h. -->
         <icon initial="icon.general_stone_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="5.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-		</effects>
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39139" name="Transformation into Red Zubei" action="A2">
-        <!-- Armor Appearance changes to "Red Zubei" for 1 h. -->
+        <!-- The armor appearance changes to Red Zubei for 1 h. -->
         <icon initial="icon.general_stone_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="60000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="RED_ZUBEI_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="4.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="RED_ZUBEI_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="4.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="39140" name="Magical Potion of Leaping - Lv. 1" action="A1">
-        <!-- Can obtain 1,200,000 XP/40,000 SP. Available for characters Lv. 20 and above. -->
+        <!-- Allows to receive 1,200,000 XP/ 40,000 SP. Available for characters from Lv. 20 or higher. -->
         <icon initial="icon.etc_holy_potion_i00"/>
-       <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="1200000" sp="40000"/>
-		</effects>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="40000" xp="1200000"/>
+        </effects>
     </skill>
     <skill id="39141" name="Magical Potion of Leaping - Lv. 2" action="A1">
-        <!-- Can obtain 7,800,000 XP/240,000 SP. Available for characters Lv. 30 and above. -->
+        <!-- Allows to receive 7,800,000 XP/ 240,000 SP. Available for characters from Lv. 30 or higher. -->
         <icon initial="icon.etc_wind_potion_i00"/>
         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="7800000" sp="240000"/>
-		</effects>
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="240000" xp="7800000"/>
+        </effects>
     </skill>
     <skill id="39142" name="Magical Potion of Leaping - Lv. 3" action="A1">
-        <!-- Can obtain 34,200,000 XP/1,040,000 SP. Available for characters Lv. 40 and above. -->
+        <!-- Allows to receive 34,200,000 XP/ 1,040,000 SP. Available for characters from Lv. 40 or higher. -->
         <icon initial="icon.etc_water_potion_i00"/>
-         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="34200000" sp="1040000"/>
-		</effects>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="1040000" xp="34200000"/>
+        </effects>
     </skill>
     <skill id="39143" name="Gift from a Returned Friend" action="A1">
-        <!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
+        <!-- Allows to receive 37,000,000 XP/ 1,110,000 SP. Available for characters from Lv. 45 or higher. -->
         <icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-			<reuse initial="500"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="37000000" sp="1110000"/>
-		</effects>
-    </skill>
-    <skill id="39144" name="Special Fruit Buff" action="A2">
-        <!-- For 20 minutes, Bonus XP/SP Gain +5%%, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, HP/MP/CP +15%%, HP Recovery Bonus/MP Recovery Bonus +20%%, and has a chance to absorb 3%% of damage dealt to enemies as HP.\nDeath protection. You can delete it on your own. -->
-        <icon initial="icon.etc_codran_i09"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="1110000" xp="37000000"/>
+        </effects>
+    </skill>
+    <skill id="39144" name="Special Pirate Fruit" action="A2">
+        <!-- For 20 min., P./ M. Atk. +7%%, P./ M. Def. +10%%, Max HP/ MP/ CP +15%%, HP/ MP Recovery Rate +20%%, acquired XP/ SP +5%%. With a certain chance, absorbs 3%% of the inflicted damage as HP. Cooldown: 1 min. The effect remains after death. -->
+        <icon initial="icon.etc_codran_i09"/>
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -857,15 +885,17 @@
         <!-- none -->
         <icon initial="icon.npoint_valakas_30day_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39146" name="Sealed Fate Chest" action="A1">
+    <skill id="39146" name="Sealed Border Chest" action="A1">
         <!-- none -->
         <icon initial="icon.bm_special_pendant_abradant_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -877,6 +907,7 @@
         <icon initial="icon.bm_pirate_king_box"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -887,24 +918,25 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="10.0" id="49707"/>
-                <item chance="10.0" id="49708"/>
-                <item chance="10.0" id="49709"/>
-                <item chance="10.0" id="49710"/>
-                <item chance="10.0" id="49711"/>
-                <item chance="10.0" id="49712"/>
-                <item chance="10.0" id="49713"/>
-                <item chance="10.0" id="49714"/>
-                <item chance="10.0" id="49715"/>
-                <item chance="10.0" id="49716"/>
+                <item chance="10.0" count="1" id="49707"/>
+                <item chance="10.0" count="1" id="49708"/>
+                <item chance="10.0" count="1" id="49709"/>
+                <item chance="10.0" count="1" id="49710"/>
+                <item chance="10.0" count="1" id="49711"/>
+                <item chance="10.0" count="1" id="49712"/>
+                <item chance="10.0" count="1" id="49713"/>
+                <item chance="10.0" count="1" id="49714"/>
+                <item chance="10.0" count="1" id="49715"/>
+                <item chance="10.0" count="1" id="49716"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39148" name="Sealed Blessed Talisman of Fate" action="A1">
+    <skill id="39148" name="Sealed Blessed Talisman of Border" action="A1">
         <!-- none -->
         <icon initial="icon.bm_blessed_magic_square_talisman"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -914,7 +946,7 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="100.0" id="49737"/>
+                <item chance="100.0" count="1" id="49737"/>
             </random-restoration>
         </effects>
     </skill>
@@ -923,6 +955,7 @@
         <icon initial="icon.npoint_tauti_30day_box"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -933,28 +966,30 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="9.999999747378752E-5" id="49683"/>
-                <item chance="0.009999999776482582" id="49682"/>
-                <item chance="70.0" id="49676"/>
-                <item chance="20.0" id="49677"/>
-                <item chance="5.0" id="49685"/>
-                <item chance="3.0" id="49684"/>
-                <item chance="1.98989999294281" id="49543"/>
+                <item chance="9.999999747378752E-5" count="1" id="49683"/>
+                <item chance="0.009999999776482582" count="1" id="49682"/>
+                <item chance="70.0" count="1" id="49676"/>
+                <item chance="20.0" count="1" id="49677"/>
+                <item chance="5.0" count="1" id="49685"/>
+                <item chance="3.0" count="1" id="49684"/>
+                <item chance="1.98989999294281" count="1" id="49543"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39150" name="Enhanced Sayha's Holy Water" action="A1">
+    <skill id="39150" name="Sayha's Holy Water" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39151" name="A-grade Armor Supply Box" action="A1">
+    <skill id="39151" name="A-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -964,43 +999,44 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="3.448275862068966" id="5317"/>
-                <item chance="3.448275862068966" id="5287"/>
-                <item chance="3.448275862068966" id="5329"/>
-                <item chance="3.448275862068966" id="5326"/>
-                <item chance="3.448275862068966" id="5308"/>
-                <item chance="3.448275862068966" id="5304"/>
-                <item chance="3.448275862068966" id="5288"/>
-                <item chance="3.448275862068966" id="5290"/>
-                <item chance="3.448275862068966" id="5295"/>
-                <item chance="3.448275862068966" id="5298"/>
-                <item chance="3.448275862068966" id="5318"/>
-                <item chance="3.448275862068966" id="5313"/>
-                <item chance="3.448275862068966" id="5319"/>
-                <item chance="3.448275862068966" id="5314"/>
-                <item chance="3.448275862068966" id="5291"/>
-                <item chance="3.448275862068966" id="5296"/>
-                <item chance="3.448275862068966" id="5305"/>
-                <item chance="3.448275862068966" id="5311"/>
-                <item chance="3.448275862068966" id="5323"/>
-                <item chance="3.448275862068966" id="5320"/>
-                <item chance="3.448275862068966" id="5297"/>
-                <item chance="3.448275862068966" id="5301"/>
-                <item chance="3.448275862068966" id="5316"/>
-                <item chance="3.448275862068966" id="5293"/>
-                <item chance="3.448275862068966" id="5312"/>
-                <item chance="3.448275862068966" id="5289"/>
-                <item chance="3.448275862068966" id="5284"/>
-                <item chance="3.448275862068966" id="5315"/>
-                <item chance="3.448275862068966" id="5292"/>
+                <item chance="3.448275862068966" count="1" id="5317"/>
+                <item chance="3.448275862068966" count="1" id="5287"/>
+                <item chance="3.448275862068966" count="1" id="5329"/>
+                <item chance="3.448275862068966" count="1" id="5326"/>
+                <item chance="3.448275862068966" count="1" id="5308"/>
+                <item chance="3.448275862068966" count="1" id="5304"/>
+                <item chance="3.448275862068966" count="1" id="5288"/>
+                <item chance="3.448275862068966" count="1" id="5290"/>
+                <item chance="3.448275862068966" count="1" id="5295"/>
+                <item chance="3.448275862068966" count="1" id="5298"/>
+                <item chance="3.448275862068966" count="1" id="5318"/>
+                <item chance="3.448275862068966" count="1" id="5313"/>
+                <item chance="3.448275862068966" count="1" id="5319"/>
+                <item chance="3.448275862068966" count="1" id="5314"/>
+                <item chance="3.448275862068966" count="1" id="5291"/>
+                <item chance="3.448275862068966" count="1" id="5296"/>
+                <item chance="3.448275862068966" count="1" id="5305"/>
+                <item chance="3.448275862068966" count="1" id="5311"/>
+                <item chance="3.448275862068966" count="1" id="5323"/>
+                <item chance="3.448275862068966" count="1" id="5320"/>
+                <item chance="3.448275862068966" count="1" id="5297"/>
+                <item chance="3.448275862068966" count="1" id="5301"/>
+                <item chance="3.448275862068966" count="1" id="5316"/>
+                <item chance="3.448275862068966" count="1" id="5293"/>
+                <item chance="3.448275862068966" count="1" id="5312"/>
+                <item chance="3.448275862068966" count="1" id="5289"/>
+                <item chance="3.448275862068966" count="1" id="5284"/>
+                <item chance="3.448275862068966" count="1" id="5315"/>
+                <item chance="3.448275862068966" count="1" id="5292"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39152" name="Ornament Supply Box (A-grade)" action="A1">
+    <skill id="39152" name="A-grade Accessory Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i02"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1010,12 +1046,12 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="16.600000381469727" id="6327"/>
-                <item chance="16.600000381469727" id="6326"/>
-                <item chance="16.600000381469727" id="6328"/>
-                <item chance="16.600000381469727" id="6324"/>
-                <item chance="16.600000381469727" id="6323"/>
-                <item chance="16.600000381469727" id="6325"/>
+                <item chance="16.600000381469727" count="1" id="6327"/>
+                <item chance="16.600000381469727" count="1" id="6326"/>
+                <item chance="16.600000381469727" count="1" id="6328"/>
+                <item chance="16.600000381469727" count="1" id="6324"/>
+                <item chance="16.600000381469727" count="1" id="6323"/>
+                <item chance="16.600000381469727" count="1" id="6325"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1024,6 +1060,7 @@
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1033,64 +1070,64 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="1.724137931034483" id="5420"/>
-                <item chance="1.724137931034483" id="5380"/>
-                <item chance="1.724137931034483" id="5368"/>
-                <item chance="1.724137931034483" id="5416"/>
-                <item chance="1.724137931034483" id="5424"/>
-                <item chance="1.724137931034483" id="5392"/>
-                <item chance="1.724137931034483" id="5426"/>
-                <item chance="1.724137931034483" id="5332"/>
-                <item chance="1.724137931034483" id="5340"/>
-                <item chance="1.724137931034483" id="5348"/>
-                <item chance="1.724137931034483" id="5364"/>
-                <item chance="1.724137931034483" id="5404"/>
-                <item chance="1.724137931034483" id="5430"/>
-                <item chance="1.724137931034483" id="5336"/>
-                <item chance="1.724137931034483" id="5382"/>
-                <item chance="1.724137931034483" id="5432"/>
-                <item chance="1.724137931034483" id="5406"/>
-                <item chance="1.724137931034483" id="5338"/>
-                <item chance="1.724137931034483" id="5422"/>
-                <item chance="1.724137931034483" id="5352"/>
-                <item chance="1.724137931034483" id="5350"/>
-                <item chance="1.724137931034483" id="5366"/>
-                <item chance="1.724137931034483" id="5370"/>
-                <item chance="1.724137931034483" id="5394"/>
-                <item chance="1.724137931034483" id="5428"/>
-                <item chance="1.724137931034483" id="5334"/>
-                <item chance="1.724137931034483" id="5418"/>
-                <item chance="1.724137931034483" id="5354"/>
-                <item chance="1.724137931034483" id="5346"/>
-                <item chance="1.724137931034483" id="5522"/>
-                <item chance="1.724137931034483" id="5502"/>
-                <item chance="1.724137931034483" id="5496"/>
-                <item chance="1.724137931034483" id="5520"/>
-                <item chance="1.724137931034483" id="5524"/>
-                <item chance="1.724137931034483" id="5508"/>
-                <item chance="1.724137931034483" id="5525"/>
-                <item chance="1.724137931034483" id="5478"/>
-                <item chance="1.724137931034483" id="5482"/>
-                <item chance="1.724137931034483" id="5486"/>
-                <item chance="1.724137931034483" id="5494"/>
-                <item chance="1.724137931034483" id="5514"/>
-                <item chance="1.724137931034483" id="5527"/>
-                <item chance="1.724137931034483" id="5480"/>
-                <item chance="1.724137931034483" id="5503"/>
-                <item chance="1.724137931034483" id="5528"/>
-                <item chance="1.724137931034483" id="5515"/>
-                <item chance="1.724137931034483" id="5481"/>
-                <item chance="1.724137931034483" id="5523"/>
-                <item chance="1.724137931034483" id="5488"/>
-                <item chance="1.724137931034483" id="5487"/>
-                <item chance="1.724137931034483" id="5495"/>
-                <item chance="1.724137931034483" id="5497"/>
-                <item chance="1.724137931034483" id="5509"/>
-                <item chance="1.724137931034483" id="5526"/>
-                <item chance="1.724137931034483" id="5479"/>
-                <item chance="1.724137931034483" id="5521"/>
-                <item chance="1.724137931034483" id="5489"/>
-                <item chance="1.724137931034483" id="5485"/>
+                <item chance="1.724137931034483" count="1" id="5420"/>
+                <item chance="1.724137931034483" count="1" id="5380"/>
+                <item chance="1.724137931034483" count="1" id="5368"/>
+                <item chance="1.724137931034483" count="1" id="5416"/>
+                <item chance="1.724137931034483" count="1" id="5424"/>
+                <item chance="1.724137931034483" count="1" id="5392"/>
+                <item chance="1.724137931034483" count="1" id="5426"/>
+                <item chance="1.724137931034483" count="1" id="5332"/>
+                <item chance="1.724137931034483" count="1" id="5340"/>
+                <item chance="1.724137931034483" count="1" id="5348"/>
+                <item chance="1.724137931034483" count="1" id="5364"/>
+                <item chance="1.724137931034483" count="1" id="5404"/>
+                <item chance="1.724137931034483" count="1" id="5430"/>
+                <item chance="1.724137931034483" count="1" id="5336"/>
+                <item chance="1.724137931034483" count="1" id="5382"/>
+                <item chance="1.724137931034483" count="1" id="5432"/>
+                <item chance="1.724137931034483" count="1" id="5406"/>
+                <item chance="1.724137931034483" count="1" id="5338"/>
+                <item chance="1.724137931034483" count="1" id="5422"/>
+                <item chance="1.724137931034483" count="1" id="5352"/>
+                <item chance="1.724137931034483" count="1" id="5350"/>
+                <item chance="1.724137931034483" count="1" id="5366"/>
+                <item chance="1.724137931034483" count="1" id="5370"/>
+                <item chance="1.724137931034483" count="1" id="5394"/>
+                <item chance="1.724137931034483" count="1" id="5428"/>
+                <item chance="1.724137931034483" count="1" id="5334"/>
+                <item chance="1.724137931034483" count="1" id="5418"/>
+                <item chance="1.724137931034483" count="1" id="5354"/>
+                <item chance="1.724137931034483" count="1" id="5346"/>
+                <item chance="1.724137931034483" count="1" id="5522"/>
+                <item chance="1.724137931034483" count="1" id="5502"/>
+                <item chance="1.724137931034483" count="1" id="5496"/>
+                <item chance="1.724137931034483" count="1" id="5520"/>
+                <item chance="1.724137931034483" count="1" id="5524"/>
+                <item chance="1.724137931034483" count="1" id="5508"/>
+                <item chance="1.724137931034483" count="1" id="5525"/>
+                <item chance="1.724137931034483" count="1" id="5478"/>
+                <item chance="1.724137931034483" count="1" id="5482"/>
+                <item chance="1.724137931034483" count="1" id="5486"/>
+                <item chance="1.724137931034483" count="1" id="5494"/>
+                <item chance="1.724137931034483" count="1" id="5514"/>
+                <item chance="1.724137931034483" count="1" id="5527"/>
+                <item chance="1.724137931034483" count="1" id="5480"/>
+                <item chance="1.724137931034483" count="1" id="5503"/>
+                <item chance="1.724137931034483" count="1" id="5528"/>
+                <item chance="1.724137931034483" count="1" id="5515"/>
+                <item chance="1.724137931034483" count="1" id="5481"/>
+                <item chance="1.724137931034483" count="1" id="5523"/>
+                <item chance="1.724137931034483" count="1" id="5488"/>
+                <item chance="1.724137931034483" count="1" id="5487"/>
+                <item chance="1.724137931034483" count="1" id="5495"/>
+                <item chance="1.724137931034483" count="1" id="5497"/>
+                <item chance="1.724137931034483" count="1" id="5509"/>
+                <item chance="1.724137931034483" count="1" id="5526"/>
+                <item chance="1.724137931034483" count="1" id="5479"/>
+                <item chance="1.724137931034483" count="1" id="5521"/>
+                <item chance="1.724137931034483" count="1" id="5489"/>
+                <item chance="1.724137931034483" count="1" id="5485"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1099,6 +1136,7 @@
         <icon initial="icon.etc_treasure_box_i05"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -1108,26 +1146,27 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="8.333333333333333" id="6344"/>
-                <item chance="8.333333333333333" id="6343"/>
-                <item chance="8.333333333333333" id="6337"/>
-                <item chance="8.333333333333333" id="6331"/>
-                <item chance="8.333333333333333" id="6339"/>
-                <item chance="8.333333333333333" id="6333"/>
-                <item chance="8.333333333333333" id="6335"/>
-                <item chance="8.333333333333333" id="6329"/>
-                <item chance="8.333333333333333" id="6346"/>
-                <item chance="8.333333333333333" id="6345"/>
-                <item chance="8.333333333333333" id="6342"/>
-                <item chance="8.333333333333333" id="6341"/>
+                <item chance="8.333333333333333" count="1" id="6344"/>
+                <item chance="8.333333333333333" count="1" id="6343"/>
+                <item chance="8.333333333333333" count="1" id="6337"/>
+                <item chance="8.333333333333333" count="1" id="6331"/>
+                <item chance="8.333333333333333" count="1" id="6339"/>
+                <item chance="8.333333333333333" count="1" id="6333"/>
+                <item chance="8.333333333333333" count="1" id="6335"/>
+                <item chance="8.333333333333333" count="1" id="6329"/>
+                <item chance="8.333333333333333" count="1" id="6346"/>
+                <item chance="8.333333333333333" count="1" id="6345"/>
+                <item chance="8.333333333333333" count="1" id="6342"/>
+                <item chance="8.333333333333333" count="1" id="6341"/>
             </random-restoration>
         </effects>
     </skill>
     <skill id="39155" name="Life Control Tower's Scroll of Blessing" action="A2">
-        <!-- For 60 minutes, Max HP/Max MP +5%%, Paralysis Resistance +15, MEN Attack Resistance +15, and Hunting XP/SP Gain +30%%. -->
+        <!-- Max HP +5%%\nMax MP +5%%\nParalysis Resistance +15%%\nSilence Resistance +15%%\nFear Resistance +15%%\nAcquired XP +30%%\nAcquired SP +30%%\nThe effect remains after death. You can cancel the effect by yourself. -->
         <icon initial="icon.etc_aidcharm_cancel_valbreath_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -1160,9 +1199,10 @@
         </effects>
     </skill>
     <skill id="39156" name="Scroll of Heavenly Protection" action="A1">
-        <!-- For 20 minutes, Paralysis Resistance +15 and MEN Resistance +10. -->
+        <!-- Paralysis Resistance +15%%\nSilence Resistance +10%%\nFear Resistance +10%% -->
         <icon initial="icon.scroll_of_verification_i08"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -1173,15 +1213,18 @@
         <icon initial="icon.etc_magical_stone_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-        </attributes>	
+            <cast-range initial="-1"/>
+            <cool-time initial="500"/>
+            <hit-time initial="500"/>
+        </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>
-        </conditions>	
+        </conditions>
         <effects>
             <random-restoration>
-                <item chance="55.0" id="49759"/>
-                <item chance="45.0" id="49767"/>
+                <item chance="55.0" count="1" id="49759"/>
+                <item chance="45.0" count="1" id="49767"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1189,15 +1232,17 @@
         <!-- none -->
         <icon initial="icon.npoint_valakas_30day_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39159" name="Enhanced Sayha's Energy" action="A1">
+    <skill id="39159" name="Sayha’s Energy" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -1205,22 +1250,25 @@
         <!-- none -->
         <icon initial="icon.npoint_valakas_30day_box"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39161" name="Express Bus Pass Card" action="A1">
-        <!-- Can obtain 5,000,000 XP/160,000 SP. Available for characters Lv. 20 and above. -->
+        <!-- Allows to receive 5,000,000 XP/ 160,000 SP. Available for characters from Lv. 20 or higher. -->
         <icon initial="icon.etc_holy_potion_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39162" name="Fighter Pirate Fruit - Attack" action="A2">
-        <!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of damage dealt to enemies as HP. PvP Damage +5%%. Cooldown is 1 minute Effect remains even after death. -->
+    <skill id="39162" name="Special Pirate Fruit - Attack" action="A2">
+        <!-- For 20 min., P./ M. Atk. +7%%, P./ M. Def. +10%%, Max HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvP Damage +5%%. With a certain chance, absorbs 3%% of the inflicted damage as HP. Cooldown: 1 min. The effect remains after death. -->
         <icon initial="icon.etc_codran_i09"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -1271,11 +1319,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39163" name="Fighter Pirate Fruit - Defense" action="A2">
-        <!-- For 20 minutes, P. Atk./M. Atk. +7%%, P. Def./M. Def. +10%%, Max HP/CP/MP +15%%, and HP Recovery Bonus/MP Recovery Bonus +20%%. Has a chance to absorb 3%% of damage dealt to enemies as HP. PvP Damage Received -5%%. Cooldown is 1 min. Effect remains even after death. -->
+    <skill id="39163" name="Special Pirate Fruit - Defense" action="A2">
+        <!-- For 20 min., P./ M. Atk. +7%%, P./ M. Def. +10%%, Max HP/ MP/ CP +15%%, HP/ MP Recovery Bonus +20%%, PvP Damage +5%%. With a certain chance, absorbs 3%% of the inflicted damage as HP. Cooldown: 1 min. The effect remains after death. -->
         <icon initial="icon.etc_codran_i09"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -1326,19 +1375,16 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39164" name="Moody's Melody" action="A1">
-        <!-- For 20 minutes activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, Vampiric Rage. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Scroll of Mood Melody will not be removed after death, and the Scroll of Mood Melody cannot be used while the buff remains. -->
+    <skill id="39164" name="Mood Melody" action="A1">
+        <!-- For 20 min., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Cooldown: 1 min. The effect remains after death.\n\nNote!\nScroll of Mood Melody can't be used while the buff is still active. -->
         <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
-        <!-- <abnormal type="BATTLE_SCROLL"> -->
-            <!-- <level initial="1"/> -->
-            <!-- <time initial="-1"/> -->
-            <!-- <chance initial="-1"/> -->
-        <!-- </abnormal> -->
         <effects>
             <call-skill scope="SELF" skill="40000">
                 <power initial="1.0"/>
@@ -1385,56 +1431,59 @@
         </effects>
     </skill>
     <skill id="39165" name="Transformation into a Prophet" action="A1">
-        <!-- Transformed into a Prophet. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <!-- Transformation into a Prophet. Attacking is not possible. Can be used once a day. When used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.skilltransform1"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
-            <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39166" name="Transformation into a Shillien Elder" action="A1">
-        <!-- Transformed into a Shillien Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <!-- Transformation into a Shillien Elder. Attacking is not possible. Can be used once a day. When used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.skilltransform1"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
-            <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39167" name="Transformation into an Elven Elder" action="A1">
-        <!-- Transformed into an Elder. Cannot attack while transformed. Can be used once a day. When used during a duel, the transformation is removed once the duel ends. -->
+        <!-- Transformation into an Elven Elder. Attacking is not possible. Can be used once a day. When used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.skilltransform1"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
-            <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39168" name="Gift of a Sated Cadmus" action="A1">
-        <!-- Can obtain 37,000,000 XP/1,110,000 SP. Available for characters Lv. 45 and above. -->
+    <skill id="39168" name="Gift of a Sated Spirit" action="A1">
+        <!-- Allows to receive 37,000,000 XP/ 1,110,000 SP. Available for characters from Lv. 45 or higher. -->
         <icon initial="icon.BranchSys.icon.br_lucky_bag_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39169" name="Firecracker" action="A1">
+    <skill id="39169" name="Inspiring Crackers" action="A1">
         <!-- Scatters in a shower of multicolored sparks when exploded. -->
         <icon initial="BranchSys.icon.br_firecracker_gold_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39170" name="Oriana's Lucky Draw Supply" action="A1">
+    <skill id="39170" name="Balthus Knights' Supply Box" action="A1">
         <!-- none -->
         <icon initial="icon.special_cube_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
@@ -1447,11 +1496,12 @@
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39171" name="Oriana's Disguise" action="A2">
-        <!-- For 1 hour, Hunting XP/SP Gain +30%. You’ll have a chance to obtain special supplies. Effect remains even after death. -->
+    <skill id="39171" name="Balthus Knights' Mark" action="A2">
+        <!-- P. Atk. +100\nM. Atk. +100\nP. Def. +100\nM. Def. +100\nAcquired XP +30%\nAcquired SP +30%\nA chance to obtain Special Supplies.\nThe effect remains after death. You can't cancel the effect by yourself.\n\n -->
         <icon initial="icon.ev_balthus_token"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="56"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1473,11 +1523,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="39172" name="Weapon Supply Box (A-grade)" action="A1">
+    <skill id="39172" name="A-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1488,36 +1539,37 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="4.539999961853027" id="98"/>
-                <item chance="4.539999961853027" id="213"/>
-                <item chance="4.539999961853027" id="7894"/>
-                <item chance="4.539999961853027" id="236"/>
-                <item chance="4.539999961853027" id="80"/>
-                <item chance="4.539999961853027" id="235"/>
-                <item chance="4.539999961853027" id="288"/>
-                <item chance="4.539999961853027" id="269"/>
-                <item chance="4.539999961853027" id="7902"/>
-                <item chance="4.539999961853027" id="151"/>
-                <item chance="4.539999961853027" id="7884"/>
-                <item chance="4.539999961853027" id="2504"/>
-                <item chance="4.539999961853027" id="150"/>
-                <item chance="4.539999961853027" id="7899"/>
-                <item chance="4.539999961853027" id="270"/>
-                <item chance="4.539999961853027" id="212"/>
-                <item chance="4.539999961853027" id="289"/>
-                <item chance="4.539999961853027" id="7895"/>
-                <item chance="4.539999961853027" id="2500"/>
-                <item chance="4.539999961853027" id="81"/>
-                <item chance="4.539999961853027" id="305"/>
-                <item chance="4.539999961853027" id="164"/>
+                <item chance="4.539999961853027" count="1" id="98"/>
+                <item chance="4.539999961853027" count="1" id="213"/>
+                <item chance="4.539999961853027" count="1" id="7894"/>
+                <item chance="4.539999961853027" count="1" id="236"/>
+                <item chance="4.539999961853027" count="1" id="80"/>
+                <item chance="4.539999961853027" count="1" id="235"/>
+                <item chance="4.539999961853027" count="1" id="288"/>
+                <item chance="4.539999961853027" count="1" id="269"/>
+                <item chance="4.539999961853027" count="1" id="7902"/>
+                <item chance="4.539999961853027" count="1" id="151"/>
+                <item chance="4.539999961853027" count="1" id="7884"/>
+                <item chance="4.539999961853027" count="1" id="2504"/>
+                <item chance="4.539999961853027" count="1" id="150"/>
+                <item chance="4.539999961853027" count="1" id="7899"/>
+                <item chance="4.539999961853027" count="1" id="270"/>
+                <item chance="4.539999961853027" count="1" id="212"/>
+                <item chance="4.539999961853027" count="1" id="289"/>
+                <item chance="4.539999961853027" count="1" id="7895"/>
+                <item chance="4.539999961853027" count="1" id="2500"/>
+                <item chance="4.539999961853027" count="1" id="81"/>
+                <item chance="4.539999961853027" count="1" id="305"/>
+                <item chance="4.539999961853027" count="1" id="164"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39173" name="A-grade Armor Supply Box" action="A1">
+    <skill id="39173" name="A-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1528,43 +1580,44 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="3.440000057220459" id="5287"/>
-                <item chance="3.440000057220459" id="5288"/>
-                <item chance="3.440000057220459" id="5289"/>
-                <item chance="3.440000057220459" id="5290"/>
-                <item chance="3.440000057220459" id="5291"/>
-                <item chance="3.440000057220459" id="5293"/>
-                <item chance="3.440000057220459" id="5294"/>
-                <item chance="3.440000057220459" id="5295"/>
-                <item chance="3.440000057220459" id="5296"/>
-                <item chance="3.440000057220459" id="5297"/>
-                <item chance="3.440000057220459" id="5298"/>
-                <item chance="3.440000057220459" id="5301"/>
-                <item chance="3.440000057220459" id="5304"/>
-                <item chance="3.440000057220459" id="5305"/>
-                <item chance="3.440000057220459" id="5308"/>
-                <item chance="3.440000057220459" id="5311"/>
-                <item chance="3.440000057220459" id="5312"/>
-                <item chance="3.440000057220459" id="5313"/>
-                <item chance="3.440000057220459" id="5314"/>
-                <item chance="3.440000057220459" id="5316"/>
-                <item chance="3.440000057220459" id="5317"/>
-                <item chance="3.440000057220459" id="5318"/>
-                <item chance="3.440000057220459" id="5319"/>
-                <item chance="3.440000057220459" id="5320"/>
-                <item chance="3.440000057220459" id="5323"/>
-                <item chance="3.440000057220459" id="5326"/>
-                <item chance="3.440000057220459" id="5329"/>
-                <item chance="3.440000057220459" id="5292"/>
-                <item chance="3.440000057220459" id="5315"/>
+                <item chance="3.440000057220459" count="1" id="5287"/>
+                <item chance="3.440000057220459" count="1" id="5288"/>
+                <item chance="3.440000057220459" count="1" id="5289"/>
+                <item chance="3.440000057220459" count="1" id="5290"/>
+                <item chance="3.440000057220459" count="1" id="5291"/>
+                <item chance="3.440000057220459" count="1" id="5293"/>
+                <item chance="3.440000057220459" count="1" id="5294"/>
+                <item chance="3.440000057220459" count="1" id="5295"/>
+                <item chance="3.440000057220459" count="1" id="5296"/>
+                <item chance="3.440000057220459" count="1" id="5297"/>
+                <item chance="3.440000057220459" count="1" id="5298"/>
+                <item chance="3.440000057220459" count="1" id="5301"/>
+                <item chance="3.440000057220459" count="1" id="5304"/>
+                <item chance="3.440000057220459" count="1" id="5305"/>
+                <item chance="3.440000057220459" count="1" id="5308"/>
+                <item chance="3.440000057220459" count="1" id="5311"/>
+                <item chance="3.440000057220459" count="1" id="5312"/>
+                <item chance="3.440000057220459" count="1" id="5313"/>
+                <item chance="3.440000057220459" count="1" id="5314"/>
+                <item chance="3.440000057220459" count="1" id="5316"/>
+                <item chance="3.440000057220459" count="1" id="5317"/>
+                <item chance="3.440000057220459" count="1" id="5318"/>
+                <item chance="3.440000057220459" count="1" id="5319"/>
+                <item chance="3.440000057220459" count="1" id="5320"/>
+                <item chance="3.440000057220459" count="1" id="5323"/>
+                <item chance="3.440000057220459" count="1" id="5326"/>
+                <item chance="3.440000057220459" count="1" id="5329"/>
+                <item chance="3.440000057220459" count="1" id="5292"/>
+                <item chance="3.440000057220459" count="1" id="5315"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39174" name="+8 Enchanted Weapon Supply Box (B-grade)" action="A1">
+    <skill id="39174" name="+8 B-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1575,39 +1628,40 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="4.0" id="175"/>
-                <item chance="4.0" id="267"/>
-                <item chance="4.0" id="268"/>
-                <item chance="4.0" id="287"/>
-                <item chance="4.0" id="79"/>
-                <item chance="4.0" id="284"/>
-                <item chance="4.0" id="171"/>
-                <item chance="4.0" id="234"/>
-                <item chance="4.0" id="300"/>
-                <item chance="4.0" id="78"/>
-                <item chance="4.0" id="7883"/>
-                <item chance="4.0" id="91"/>
-                <item chance="4.0" id="7900"/>
-                <item chance="4.0" id="7893"/>
-                <item chance="4.0" id="142"/>
-                <item chance="4.0" id="229"/>
-                <item chance="4.0" id="97"/>
-                <item chance="4.0" id="264"/>
-                <item chance="4.0" id="7892"/>
-                <item chance="4.0" id="92"/>
-                <item chance="4.0" id="210"/>
-                <item chance="4.0" id="7901"/>
-                <item chance="4.0" id="148"/>
-                <item chance="4.0" id="243"/>
-                <item chance="4.0" id="7889"/>
+                <item chance="4.0" count="1" id="175"/>
+                <item chance="4.0" count="1" id="267"/>
+                <item chance="4.0" count="1" id="268"/>
+                <item chance="4.0" count="1" id="287"/>
+                <item chance="4.0" count="1" id="79"/>
+                <item chance="4.0" count="1" id="284"/>
+                <item chance="4.0" count="1" id="171"/>
+                <item chance="4.0" count="1" id="234"/>
+                <item chance="4.0" count="1" id="300"/>
+                <item chance="4.0" count="1" id="78"/>
+                <item chance="4.0" count="1" id="7883"/>
+                <item chance="4.0" count="1" id="91"/>
+                <item chance="4.0" count="1" id="7900"/>
+                <item chance="4.0" count="1" id="7893"/>
+                <item chance="4.0" count="1" id="142"/>
+                <item chance="4.0" count="1" id="229"/>
+                <item chance="4.0" count="1" id="97"/>
+                <item chance="4.0" count="1" id="264"/>
+                <item chance="4.0" count="1" id="7892"/>
+                <item chance="4.0" count="1" id="92"/>
+                <item chance="4.0" count="1" id="210"/>
+                <item chance="4.0" count="1" id="7901"/>
+                <item chance="4.0" count="1" id="148"/>
+                <item chance="4.0" count="1" id="243"/>
+                <item chance="4.0" count="1" id="7889"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39175" name="+16 Enchanted Weapon Supply Box (C-grade)" action="A1">
+    <skill id="39175" name="+16 C-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1618,18 +1672,18 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="8.300000190734863" id="242"/>
-                <item chance="8.300000190734863" id="7887"/>
-                <item chance="8.300000190734863" id="72"/>
-                <item chance="8.300000190734863" id="71"/>
-                <item chance="8.300000190734863" id="281"/>
-                <item chance="8.300000190734863" id="193"/>
-                <item chance="8.300000190734863" id="160"/>
-                <item chance="8.300000190734863" id="161"/>
-                <item chance="8.300000190734863" id="192"/>
-                <item chance="8.300000190734863" id="194"/>
-                <item chance="8.300000190734863" id="302"/>
-                <item chance="8.300000190734863" id="263"/>
+                <item chance="8.300000190734863" count="1" id="242"/>
+                <item chance="8.300000190734863" count="1" id="7887"/>
+                <item chance="8.300000190734863" count="1" id="72"/>
+                <item chance="8.300000190734863" count="1" id="71"/>
+                <item chance="8.300000190734863" count="1" id="281"/>
+                <item chance="8.300000190734863" count="1" id="193"/>
+                <item chance="8.300000190734863" count="1" id="160"/>
+                <item chance="8.300000190734863" count="1" id="161"/>
+                <item chance="8.300000190734863" count="1" id="192"/>
+                <item chance="8.300000190734863" count="1" id="194"/>
+                <item chance="8.300000190734863" count="1" id="302"/>
+                <item chance="8.300000190734863" count="1" id="263"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1637,6 +1691,7 @@
         <!-- none -->
         <icon initial="icon.event_mahum_coinbox"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1647,11 +1702,11 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="18.300000190734863" id="49488"/>
-                <item chance="18.300000190734863" id="1458"/>
-                <item chance="18.300000190734863" id="49487"/>
-                <item chance="18.300000190734863" id="91226"/>
-                <item chance="18.300000190734863" id="49490"/>
+                <item chance="18.300000190734863" count="1" id="49488"/>
+                <item chance="18.300000190734863" count="1" id="1458"/>
+                <item chance="18.300000190734863" count="1" id="49487"/>
+                <item chance="18.300000190734863" count="1" id="91226"/>
+                <item chance="18.300000190734863" count="1" id="49490"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1659,6 +1714,7 @@
         <!-- none -->
         <icon initial="icon.event_mahum_coinbox"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1669,12 +1725,12 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="18.300000190734863" id="49488"/>
-                <item chance="18.300000190734863" id="49533"/>
-                <item chance="18.300000190734863" id="1459"/>
-                <item chance="18.300000190734863" id="49487"/>
-                <item chance="18.300000190734863" id="91226"/>
-                <item chance="18.300000190734863" id="49490"/>
+                <item chance="18.300000190734863" count="1" id="49488"/>
+                <item chance="18.300000190734863" count="1" id="49533"/>
+                <item chance="18.300000190734863" count="1" id="1459"/>
+                <item chance="18.300000190734863" count="1" id="49487"/>
+                <item chance="18.300000190734863" count="1" id="91226"/>
+                <item chance="18.300000190734863" count="1" id="49490"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1682,6 +1738,7 @@
         <!-- none -->
         <icon initial="icon.event_mahum_coinbox"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1692,13 +1749,13 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="18.300000190734863" id="49488"/>
-                <item chance="18.300000190734863" id="49533"/>
-                <item chance="18.300000190734863" id="1460"/>
-                <item chance="18.300000190734863" id="49487"/>
-                <item chance="18.300000190734863" id="91226"/>
-                <item chance="18.300000190734863" id="49490"/>
-                <item chance="18.300000190734863" id="49108"/>
+                <item chance="18.300000190734863" count="1" id="49488"/>
+                <item chance="18.300000190734863" count="1" id="49533"/>
+                <item chance="18.300000190734863" count="1" id="1460"/>
+                <item chance="18.300000190734863" count="1" id="49487"/>
+                <item chance="18.300000190734863" count="1" id="91226"/>
+                <item chance="18.300000190734863" count="1" id="49490"/>
+                <item chance="18.300000190734863" count="1" id="49108"/>
             </random-restoration>
         </effects>
     </skill>
@@ -1706,6 +1763,7 @@
         <!-- none -->
         <icon initial="icon.event_mahum_coinbox"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1716,22 +1774,24 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="18.300000190734863" id="49488"/>
-                <item chance="18.300000190734863" id="49533"/>
-                <item chance="18.300000190734863" id="1461"/>
-                <item chance="18.300000190734863" id="49487"/>
-                <item chance="18.300000190734863" id="91226"/>
-                <item chance="18.300000190734863" id="49490"/>
-                <item chance="18.300000190734863" id="49108"/>
-                <item chance="18.300000190734863" id="49110"/>
+                <item chance="18.300000190734863" count="1" id="49488"/>
+                <item chance="18.300000190734863" count="1" id="49533"/>
+                <item chance="18.300000190734863" count="1" id="1461"/>
+                <item chance="18.300000190734863" count="1" id="49487"/>
+                <item chance="18.300000190734863" count="1" id="91226"/>
+                <item chance="18.300000190734863" count="1" id="49490"/>
+                <item chance="18.300000190734863" count="1" id="49108"/>
+                <item chance="18.300000190734863" count="1" id="49110"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="39180" name="Low-grade Scroll: XP" action="A1">
+    <skill id="39180" name="XP Scroll: 1K" action="A1">
         <!-- 1000 XP. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1740,11 +1800,13 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39181" name="Mid-grade Scroll: XP" action="A1">
+    <skill id="39181" name="XP Scroll: 10K" action="A1">
         <!-- 10,000 XP. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1753,11 +1815,13 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39182" name="High-grade Scroll: XP" action="A1">
+    <skill id="39182" name="XP Scroll: 100K" action="A1">
         <!-- 100,000 XP. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1766,11 +1830,13 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39183" name="Top-grade Scroll: XP" action="A1">
+    <skill id="39183" name="XP Scroll: 500K" action="A1">
         <!-- 500,000 XP. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1779,11 +1845,13 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39184" name="Highest-grade Scroll: XP" action="A1">
+    <skill id="39184" name="XP Scroll: 1M" action="A1">
         <!-- 1,000,000 XP. -->
         <icon initial="icon.etc_recall_exp_scroll"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="500"/>
         </attributes>
         <target/>
         <effects>
@@ -1793,7 +1861,7 @@
         </effects>
     </skill>
     <skill id="39185" name="Support Blow" action="A1">
-        <!-- Deals a fixed amount of damage with 12 Power to the target. Can only be used against a PC. -->
+        <!-- Strikes the target with 50 power. PvP only. -->
         <icon initial="icon.ev_12th_weapon"/>
         <attributes>
             <cast-range initial="40"/>
@@ -1808,16 +1876,18 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39187" name="Ornament Supply Box (A-grade)" action="A1">
+    <skill id="39187" name="A-grade Accessory Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1828,6 +1898,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1838,6 +1909,7 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1848,37 +1920,42 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39191" name="Enhanced Sayha's Blessing - Exchangeable" action="A1">
+    <skill id="39191" name="Sayha's Blessing" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39192" name="Enhanced Sayha's Silver Light Blessing" action="A1">
+    <skill id="39192" name="Sayha's Silver Light Blessing" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39193" name="Enhanced Sayha's Golden Blessing" action="A1">
+    <skill id="39193" name="Sayha's Golden Light Blessing" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="39194" name="Sayha's Storm Lv. 1" action="A1">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +100%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
+        <!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +100%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
         <icon initial="icon.bm_sayha_storm"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -1887,6 +1964,7 @@
         <!-- none -->
         <icon initial="icon.bm_special_pendant_abradant_box"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1897,27 +1975,30 @@
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39197" name="Earth Dragon Pendant Chest +10" action="A1">
+    <skill id="39197" name="+10 Earth Dragon Pendant Pack" action="A1">
         <!-- none -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="39198" name="Maliss's MP Potion" action="A1">
+    <skill id="39198" name="Maliss' MP Recovery Potion" action="A1">
         <!-- none -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -1926,10 +2007,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="39199" name="Hero's Wondrous Cubic - 7 days" action="A1">
+    <skill id="39199" name="Hero's Wondrous Cube - 7 d." action="A1">
         <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>

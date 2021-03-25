@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="4700" name="Gift of Queen" max-level="13" action="A2" type="MAGIC">
-        <!--
-		level 1: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 2 minutes.
-		level 2: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 4 minutes.
-		level 3: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 6 minutes.
-		level 4: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 8 minutes.
-		level 5: Feline Queen's buff magic. Increases party members' P. Atk. +10% and P. Accuracy +3 for 10 minutes.
-	 -->
+        <!-- 
+			level 1: A buff used by Feline Queen. For 2 min., P. Atk. +10%, P. Accuracy +3.
+			level 2: A buff used by Feline Queen. For 4 min., P. Atk. +10%, P. Accuracy +3.
+			level 3: A buff used by Feline Queen. For 6 min., P. Atk. +10%, P. Accuracy +3.
+			level 4: A buff used by Feline Queen. For 8 min., P. Atk. +10%, P. Accuracy +3.
+			level 5: A buff used by Feline Queen. For 10 min., P. Atk. +10%, P. Accuracy +3.
+		-->
         <icon initial="icon.skill1331"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes auto-use="BUFF" magic-critical-rate="-5.0">
             <magic-level initial="77">
                 <value level="2">79</value>
                 <value level="3">81</value>
@@ -17,6 +17,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="6">8000</value>
             </reuse>
@@ -54,7 +55,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <abnormal type="QUEEN_OF_CAT_GIFT">
             <level initial="1">
                 <value level="2">2</value>
@@ -80,15 +81,14 @@
         </effects>
     </skill>
     <skill id="4701" name="Cure of Queen" max-level="13" action="A1" type="MAGIC">
-        <!--
-		level 1: Feline Queen's curse release magic. Has a 40% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 2: Feline Queen's curse release magic. Has a 50% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 3: Feline Queen's curse release magic. Has a 60% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 4: Feline Queen's curse release magic. Has a 70% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 5: Feline Queen's curse release magic. Has a 80% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 6: Feline Queen's curse release magic. Has a 90% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-		level 7: Feline Queen's curse release magic. Has a 55% chance to remove P. Accuracy, P. Atk./M. Atk., Atk. Spd./Casting Spd. and Movement Speed debuffs from party members.
-	 -->
+        <!-- 
+			level 1: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 40%)
+			level 2: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 50%)
+			level 3: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 60%)
+			level 4: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 70%)
+			level 5: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 80%)
+			level 6: A special magic of Feline Queen, it can remove curses. Removes Suppression, Accuracy Decrease State and P./ M. Atk. Decrease State from members. (Probability: 90%)
+		-->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="77">
@@ -98,6 +98,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="7">8000</value>
             </reuse>
@@ -135,7 +136,7 @@
                 <value level="13">122</value>
             </mana>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <effects>
             <dispel-probability abnormals="HIT_DOWN PA_DOWN MA_DOWN ATTACK_TIME_UP">
                 <power initial="40.0">
@@ -149,15 +150,15 @@
         </effects>
     </skill>
     <skill id="4702" name="Blessing of Seraphim" max-level="13" action="A2" type="MAGIC">
-        <!--
-		level 1: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 2 minutes.
-		level 2: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 4 minutes.
-		level 3: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 6 minutes.
-		level 4: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 8 minutes.
-		level 5: Buff magic used by the Seraphim the Unicorn. Increases Party members' MP Recovery Bonus +30% and M. Critical Rate +25% for 10 minutes.
-	 -->
+        <!-- 
+			level 1: A buff used by Seraphim. For 2 min., MP Recovery Rate +30%, M. Skill Critical Rate +25%.
+			level 2: A buff used by Seraphim. For 4 min., MP Recovery Rate +30%, M. Skill Critical Rate +25%.
+			level 3: A buff used by Seraphim. For 6 min., MP Recovery Rate +30%, M. Skill Critical Rate +25%.
+			level 4: A buff used by Seraphim. For 8 min., MP Recovery Rate +30%, M. Skill Critical Rate +25%.
+			level 5: A buff used by Seraphim. For 10 min., MP Recovery Rate +30%, M. Skill Critical Rate +25%.
+		-->
         <icon initial="icon.skill1332"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes auto-use="BUFF" magic-critical-rate="-5.0">
             <magic-level initial="77">
                 <value level="2">79</value>
                 <value level="3">81</value>
@@ -165,6 +166,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="6">8000</value>
             </reuse>
@@ -202,7 +204,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <abnormal type="UNICORN_SERAPHIM_BLESS">
             <level initial="1">
                 <value level="2">2</value>
@@ -228,15 +230,15 @@
         </effects>
     </skill>
     <skill id="4703" name="Gift of Seraphim" max-level="13" action="A2" type="MAGIC">
-        <!--
-		level 1: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 2 minutes.
-		level 2: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 4 minutes.
-		level 3: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 6 minutes.
-		level 4: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 8 minutes.
-		level 5: Buff magic used by the Seraphim the Unicorn. Increases Party members' Magic Skill Cooldown +10% and M. Atk. +30% for 10 minutes.
-	 -->
+        <!-- 
+			level 1: A buff used by Seraphim. For 2 min., pM. Skill Cooldown -10%, M. Atk. +30%.
+			level 2: A buff used by Seraphim. For 4 min., pM. Skill Cooldown -10%, M. Atk. +30%.
+			level 3: A buff used by Seraphim. For 6 min., pM. Skill Cooldown -10%, M. Atk. +30%.
+			level 4: A buff used by Seraphim. For 8 min., pM. Skill Cooldown -10%, M. Atk. +30%.
+			level 5: A buff used by Seraphim. For 10 min., pM. Skill Cooldown -10%, M. Atk. +30%.
+		-->
         <icon initial="icon.skill1332"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes auto-use="BUFF" magic-critical-rate="-5.0">
             <magic-level initial="77">
                 <value level="2">79</value>
                 <value level="3">81</value>
@@ -244,6 +246,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="6">8000</value>
             </reuse>
@@ -281,7 +284,7 @@
                 <value level="13">242</value>
             </mana>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <abnormal type="UNICORN_SERAPHIM_GIFT">
             <level initial="1">
                 <value level="2">2</value>
@@ -307,15 +310,14 @@
         </effects>
     </skill>
     <skill id="4704" name="Cure of Seraphim" max-level="13" action="A1" type="MAGIC">
-        <!--
-		level 1: Curse release magic used by Seraphim the Unicorn. Has a 40% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 2: Curse release magic used by Seraphim the Unicorn. Has a 50% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 3: Curse release magic used by Seraphim the Unicorn. Has a 60% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 4: Curse release magic used by Seraphim the Unicorn. Has a 70% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 5: Curse release magic used by Seraphim the Unicorn. Has a 80% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 6: Curse release magic used by Seraphim the Unicorn. Has a 90% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-		level 7: Curse release magic used by Seraphim the Unicorn. Has a 55% chance to remove Sleep/Hold/Stun/Paralysis/MEN debuffs from party members.
-	 -->
+        <!-- 
+			level 1: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 40%)
+			level 2: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 50%)
+			level 3: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 60%)
+			level 4: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 70%)
+			level 5: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 80%)
+			level 6: Seraphim's magic can remove curses. Removes Paralysis/ Shock/ Sleep/ Hold/ Fear/ Silence from party members. (Probability: 90%)
+		-->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="77">
@@ -325,6 +327,7 @@
                 <value level="5">84</value>
                 <value level="6">85</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="7">8000</value>
             </reuse>
@@ -362,7 +365,7 @@
                 <value level="13">122</value>
             </mana>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <effects>
             <dispel-probability abnormals="SLEEP ROOT_MAGICALLY ROOT_PHYSICALLY STUN PARALYZE DERANGEMENT">
                 <power initial="40.0">
@@ -375,17 +378,17 @@
             </dispel-probability>
         </effects>
     </skill>
-    <skill id="4705" name="Curse of Shade" max-level="13" debuff="true" action="A2" type="MAGIC">
-        <!--
-		level 1: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 4%.
-		level 2: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 5%.
-		level 3: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 6%.
-		level 4: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 8%.
-		level 5: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 10%.
-		level 6: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease its P. Def. and Magic Resistance by 3..
-	 -->
+    <skill id="4705" name="Curse of Shade" max-level="13" action="A2" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -4%
+			level 2: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -5%
+			level 3: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -6%
+			level 4: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -8%
+			level 5: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -10%
+			level 6: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse. Momentarily P./ M. Def. -3.
+		-->
         <icon initial="icon.skill1333"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="77">
                 <value level="2">79</value>
                 <value level="3">81</value>
@@ -467,16 +470,16 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4706" name="Mass Curse of Shade" max-level="13" debuff="true" action="A2" type="MAGIC">
-        <!--
-		level 1: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 4%.
-		level 2: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 5%.
-		level 3: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 6%.
-		level 4: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 8%.
-		level 5: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their defense and Magic Resistance by 10%.
-	 -->
+    <skill id="4706" name="Mass Curse of Shade" max-level="13" action="A2" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse. Momentarily their P./ M. Def. -4%
+			level 2: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse. Momentarily their P./ M. Def. -5%
+			level 3: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse. Momentarily their P./ M. Def. -6%
+			level 4: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse. Momentarily their P./ M. Def. -8%
+			level 5: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse. Momentarily their P./ M. Def. -10%
+		-->
         <icon initial="icon.skill1333"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" static-reuse="true">
             <magic-level initial="57">
                 <value level="2">66</value>
                 <value level="3">75</value>
@@ -484,6 +487,7 @@
                 <value level="5">78</value>
                 <value level="6">79</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="5000">
                 <value level="6">8000</value>
             </reuse>
@@ -518,7 +522,7 @@
                 <value level="12">113</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="10" affect-random="20"/>
+        <target affect-min="10" affect-random="20" object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
         <abnormal type="DEBUFF_NIGHTSHADE">
             <level initial="1">
                 <value level="2">2</value>
@@ -557,21 +561,21 @@
         </effects>
     </skill>
     <skill id="4707" name="Shade Sacrifice" max-level="13" action="A1" type="MAGIC">
-        <!--
-		level 1: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 775 Power.
-		level 2: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 800 Power.
-		level 3: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 825 Power.
-		level 4: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 850 Power.
-		level 5: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 875 Power.
-		level 6: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 900 Power.
-		level 7: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 826. Power.
-		level 8: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 835. Power.
-		level 9: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 844. Power.
-		level 10: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 852. Power.
-		level 11: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 860. Power.
-		level 12: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 867. Power.
-		level 13: Nightshade's HP recovery magic. Sacrifices one's own HP to recover HP of party members. 874. Power.
-	 -->
+        <!-- 
+			level 1: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 775.
+			level 2: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 800.
+			level 3: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 825.
+			level 4: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 850.
+			level 5: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 875.
+			level 6: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 900.
+			level 7: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 826..
+			level 8: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 835..
+			level 9: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 844..
+			level 10: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 852..
+			level 11: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 860..
+			level 12: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 867..
+			level 13: Recovers HP with Nightshade's magic. Sacrifices one's own HP to heal nearby allies. Power 874..
+		-->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="77">
@@ -620,7 +624,7 @@
                 <value level="13">1049</value>
             </hp>
         </consume>
-        <target type="OWNER_PET" scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY" type="OWNER_PET"/>
         <effects>
             <effect name="Heal">
                 <power initial="755.0">
@@ -640,25 +644,25 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4708" name="Cursed Strike" max-level="14" debuff="true" action="A2">
-        <!--
-		level 1: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046.
-		level 2: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1230.
-		level 3: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1425.
-		level 4: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1626.
-		level 5: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1727.
-		level 6: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1827.
-		level 7: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1925.
-		level 8: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 2020.
-		level 9: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 2067.
-		level 10: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 2112.
-		level 11: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 6459
-		level 12: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 6593.
-		level 13: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 7004.
-		level 14: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 7443.
-	 -->
+    <skill id="4708" name="Cursed Strike" max-level="14" action="A2" debuff="true">
+        <!-- 
+			level 1: Cursed Man inflicts damage and stun target simultaneously. Power 1046.
+			level 2: Cursed Man inflicts damage and stun target simultaneously. Power 1230.
+			level 3: Cursed Man inflicts damage and stun target simultaneously. Power 1425.
+			level 4: Cursed Man inflicts damage and stun target simultaneously. Power 1626.
+			level 5: Cursed Man inflicts damage and stun target simultaneously. Power 1727.
+			level 6: Cursed Man inflicts damage and stun target simultaneously. Power 1827.
+			level 7: Cursed Man inflicts damage and stun target simultaneously. Power 1925.
+			level 8: Cursed Man inflicts damage and stun target simultaneously. Power 2020.
+			level 9: Cursed Man inflicts damage and stun target simultaneously. Power 2067.
+			level 10: Cursed Man inflicts damage and stun target simultaneously. Power 2112.
+			level 11: Cursed Man inflicts damage and stun target simultaneously. Power 6459
+			level 12: Cursed Man inflicts damage and stun target simultaneously. Power 6593.
+			level 13: Cursed Man inflicts damage and stun target simultaneously. Power 7004.
+			level 14: Cursed Man inflicts damage and stun target simultaneously. Power 7443.
+		-->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="58">
                 <value level="2">62</value>
                 <value level="3">66</value>
@@ -675,20 +679,21 @@
                 <value level="14">99</value>
             </magic-level>
             <cast-range initial="40"/>
-            <reuse initial="10000">
-                <value level="8">5000</value>
-                <value level="9">10000</value>
-            </reuse>
-            <effect-point initial="-279">
-                <value level="2">-296</value>
-                <value level="3">-311</value>
-                <value level="4">-323</value>
-                <value level="5">-328</value>
-                <value level="6">-333</value>
-                <value level="7">-337</value>
-                <value level="8">-340</value>
-                <value level="9">-341</value>
-                <value level="10">-342</value>
+            <reuse initial="3000"/>
+            <effect-point initial="-580">
+                <value level="2">-620</value>
+                <value level="3">-660</value>
+                <value level="4">-700</value>
+                <value level="5">-720</value>
+                <value level="6">-740</value>
+                <value level="7">-760</value>
+                <value level="8">-780</value>
+                <value level="9">-790</value>
+                <value level="10">-800</value>
+                <value level="11">-850</value>
+                <value level="12">-900</value>
+                <value level="13">-950</value>
+                <value level="14">-990</value>
             </effect-point>
             <effect-range initial="200"/>
             <hit-time initial="2000">
@@ -716,7 +721,7 @@
             <chance initial="60"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="1046.0">
                     <value level="2">1230.0</value>
                     <value level="3">1425.0</value>
@@ -737,22 +742,22 @@
         </effects>
     </skill>
     <skill id="4709" name="Cursed Blow" max-level="14" action="A1">
-        <!--
-		level 1: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4181.
-		level 2: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4920.
-		level 3: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 5700.
-		level 4: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 6503.
-		level 5: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 6906.
-		level 6: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 7305.
-		level 7: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 7698.
-		level 8: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8079.
-		level 9: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8265.
-		level 10: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8447.
-		level 11: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8743.
-		level 12: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8918.
-		level 13: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 9101.
-		level 14: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 9283.
-	 -->
+        <!-- 
+			level 1: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4181.
+			level 2: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4920.
+			level 3: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 5700.
+			level 4: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 6503.
+			level 5: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 6906.
+			level 6: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 7305.
+			level 7: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 7698.
+			level 8: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8079.
+			level 9: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8265.
+			level 10: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8447.
+			level 11: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8743.
+			level 12: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 8918.
+			level 13: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 9101.
+			level 14: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 9283.
+		-->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="58">
@@ -775,16 +780,20 @@
                 <value level="8">5000</value>
                 <value level="9">10000</value>
             </reuse>
-            <effect-point initial="-279">
-                <value level="2">-296</value>
-                <value level="3">-311</value>
-                <value level="4">-323</value>
-                <value level="5">-328</value>
-                <value level="6">-333</value>
-                <value level="7">-337</value>
-                <value level="8">-340</value>
-                <value level="9">-341</value>
-                <value level="10">-342</value>
+            <effect-point initial="-580">
+                <value level="2">-620</value>
+                <value level="3">-660</value>
+                <value level="4">-700</value>
+                <value level="5">-720</value>
+                <value level="6">-740</value>
+                <value level="7">-760</value>
+                <value level="8">-780</value>
+                <value level="9">-790</value>
+                <value level="10">-800</value>
+                <value level="11">-850</value>
+                <value level="12">-900</value>
+                <value level="13">-950</value>
+                <value level="14">-990</value>
             </effect-point>
             <effect-range initial="200"/>
             <hit-time initial="2000">
@@ -807,7 +816,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="200.0" critical-chance="10" over-hit="false">
+            <fatal-blow chance-boost="200.0" critical-chance="10">
                 <power initial="4181.0">
                     <value level="2">4920.0</value>
                     <value level="3">5700.0</value>
@@ -824,479 +833,6 @@
                     <value level="14">9283.0</value>
                 </power>
             </fatal-blow>
-        </effects>
-    </skill>
-    <skill id="4710" name="Wild Stun" max-level="12" debuff="true" action="A2">
-        <!--
-		level 1: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16.
-		level 2: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 35.
-		level 3: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 73.
-		level 4: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 138.
-		level 5: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 238.
-		level 6: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 375.
-		level 7: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 537.
-		level 8: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 619.
-		level 9: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 697.
-		level 10: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 766.
-		level 11: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 821.
-		level 12: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 864.
-	 -->
-        <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <cast-range initial="40"/>
-            <reuse initial="12000"/>
-            <cool-time initial="400"/>
-            <effect-point initial="-49">
-                <value level="2">-73</value>
-                <value level="3">-102</value>
-                <value level="4">-135</value>
-                <value level="5">-170</value>
-                <value level="6">-202</value>
-                <value level="7">-226</value>
-                <value level="8">-235</value>
-                <value level="9">-240</value>
-                <value level="10">-243</value>
-                <value level="11">-246</value>
-                <value level="12">-248</value>
-            </effect-point>
-            <effect-range initial="200"/>
-            <hit-time initial="1100"/>
-        </attributes>
-        <consume>
-            <mana initial="3">
-                <value level="2">5</value>
-                <value level="3">7</value>
-                <value level="4">9</value>
-                <value level="5">12</value>
-                <value level="6">14</value>
-                <value level="7">17</value>
-                <value level="8">18</value>
-                <value level="10">19</value>
-                <value level="11">20</value>
-            </mana>
-        </consume>
-        <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
-            <level initial="1"/>
-            <time initial="9"/>
-            <chance initial="15"/>
-        </abnormal>
-        <effects>
-            <physical-attack critical-chance="0.0">
-                <power initial="16.0">
-                    <value level="2">35.0</value>
-                    <value level="3">73.0</value>
-                    <value level="4">138.0</value>
-                    <value level="5">238.0</value>
-                    <value level="6">375.0</value>
-                    <value level="7">537.0</value>
-                    <value level="8">619.0</value>
-                    <value level="9">697.0</value>
-                    <value level="10">766.0</value>
-                    <value level="11">821.0</value>
-                    <value level="12">864.0</value>
-                </power>
-            </physical-attack>
-            <block-all-actions/>
-        </effects>
-    </skill>
-    <skill id="4711" name="Wild Defense" max-level="12" action="A2">
-        <!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
-        <icon initial="icon.skill0110"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <reuse initial="1200000"/>
-            <cool-time initial="400"/>
-            <effect-point initial="138">
-                <value level="2">204</value>
-                <value level="3">285</value>
-                <value level="4">379</value>
-                <value level="5">477</value>
-                <value level="6">566</value>
-                <value level="7">635</value>
-                <value level="8">659</value>
-                <value level="9">676</value>
-                <value level="10">689</value>
-                <value level="11">700</value>
-                <value level="12">709</value>
-            </effect-point>
-            <hit-time initial="1100"/>
-        </attributes>
-        <consume>
-            <mana initial="46">
-                <value level="2">76</value>
-                <value level="3">104</value>
-                <value level="4">139</value>
-                <value level="5">179</value>
-                <value level="6">220</value>
-                <value level="7">258</value>
-                <value level="8">275</value>
-                <value level="9">288</value>
-                <value level="10">298</value>
-                <value level="11">305</value>
-                <value level="12">309</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <abnormal type="ULTIMATE_BUFF">
-            <level initial="1"/>
-            <time initial="30"/>
-            <chance initial="-1">
-                <value level="12">15</value>
-            </chance>
-        </abnormal>
-        <effects>
-            <effect name="BlockMove"/>
-            <speed mode="PER">
-                <power initial="-90.0"/>
-            </speed>
-            <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power initial="400.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="400.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="-70.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4712" name="Bright Burst" max-level="12" action="A1" type="MAGIC">
-        <!--
-		level 1: Star Hatchling/Strider's attack skill. Power 6.
-		level 2: Star Hatchling/Strider's attack skill. Power 9.
-		level 3: Star Hatchling/Strider's attack skill. Power 13.
-		level 4: Star Hatchling/Strider's attack skill. Power 17.
-		level 5: Star Hatchling/Strider's attack skill. Power 23.
-		level 6: Star Hatchling/Strider's attack skill. Power 28.
-		level 7: Star Hatchling/Strider's attack skill. Power 34.
-		level 8: Star Hatchling/Strider's attack skill. Power 36.
-		level 9: Star Hatchling/Strider's attack skill. Power 39.
-		level 10: Star Hatchling/Strider's attack skill. Power 41.
-		level 11: Star Hatchling/Strider's attack skill. Power 42.
-		level 12: Star Hatchling/Strider's attack skill. Power 43.
-	 -->
-        <icon initial="icon.skill4712"/>
-        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <cast-range initial="600"/>
-            <cool-time initial="500"/>
-            <effect-point initial="-138">
-                <value level="2">-204</value>
-                <value level="3">-285</value>
-                <value level="4">-379</value>
-                <value level="5">-477</value>
-                <value level="6">-566</value>
-                <value level="7">-635</value>
-                <value level="8">-659</value>
-                <value level="9">-676</value>
-                <value level="10">-689</value>
-                <value level="11">-700</value>
-                <value level="12">-709</value>
-            </effect-point>
-            <effect-range initial="1100"/>
-            <hit-time initial="1500"/>
-        </attributes>
-        <consume>
-            <mana initial="6">
-                <value level="3">7</value>
-                <value level="5">8</value>
-                <value level="7">9</value>
-                <value level="9">10</value>
-                <value level="11">11</value>
-            </mana>
-        </consume>
-        <target type="ENEMY"/>
-        <effects>
-            <magical-attack>
-                <power initial="6.0">
-                    <value level="2">9.0</value>
-                    <value level="3">13.0</value>
-                    <value level="4">17.0</value>
-                    <value level="5">23.0</value>
-                    <value level="6">28.0</value>
-                    <value level="7">34.0</value>
-                    <value level="8">36.0</value>
-                    <value level="9">39.0</value>
-                    <value level="10">41.0</value>
-                    <value level="11">42.0</value>
-                    <value level="12">43.0</value>
-                </power>
-            </magical-attack>
-        </effects>
-    </skill>
-    <skill id="4713" name="Bright Heal" max-level="12" action="A1" type="MAGIC">
-        <!--
-		level 1: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33.
-		level 2: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 61.
-		level 3: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 98.
-		level 4: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 145.
-		level 5: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 198.
-		level 6: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 251.
-		level 7: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 298.
-		level 8: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 316.
-		level 9: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 331.
-		level 10: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 347.
-		level 11: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 358.
-		level 12: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 366.
-	 -->
-        <icon initial="icon.skill4713"/>
-        <attributes magic-critical-rate="-5.0" hit-cancel-time="1.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <reuse initial="12000"/>
-            <cool-time initial="1000"/>
-            <effect-point initial="33">
-                <value level="2">61</value>
-                <value level="3">98</value>
-                <value level="4">145</value>
-                <value level="5">198</value>
-                <value level="6">251</value>
-                <value level="7">298</value>
-                <value level="8">316</value>
-                <value level="9">331</value>
-                <value level="10">347</value>
-                <value level="11">358</value>
-                <value level="12">366</value>
-            </effect-point>
-            <hit-time initial="3000"/>
-        </attributes>
-        <consume>
-            <mana initial="5">
-                <value level="2">9</value>
-                <value level="3">12</value>
-                <value level="4">15</value>
-                <value level="5">19</value>
-                <value level="6">23</value>
-                <value level="7">27</value>
-                <value level="8">28</value>
-                <value level="9">30</value>
-                <value level="11">32</value>
-            </mana>
-        </consume>
-        <target type="TARGET"/>
-        <effects>
-            <effect name="Heal">
-                <power initial="33.0">
-                    <value level="2">61.0</value>
-                    <value level="3">98.0</value>
-                    <value level="4">145.0</value>
-                    <value level="5">198.0</value>
-                    <value level="6">251.0</value>
-                    <value level="7">298.0</value>
-                    <value level="8">316.0</value>
-                    <value level="9">330.0</value>
-                    <value level="10">338.0</value>
-                    <value level="11">341.0</value>
-                    <value level="12">342.0</value>
-                </power>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="4714" name="Twilight Dragon">
-        <!-- An active dragon with fast moving feet. -->
-        <icon initial="icon.skill1373"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="4715" name="Wind Dragon">
-        <!-- A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases. -->
-        <icon initial="icon.skill1373"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="4716" name="Star Dragon">
-        <!-- A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases. -->
-        <icon initial="icon.skill1373"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="4717" name="Heal Trick" max-level="12" action="A1" type="MAGIC">
-        <!--
-		level 1: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9.
-		level 2: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 16.
-		level 3: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 25.
-		level 4: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 37.
-		level 5: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 50.
-		level 6: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 63.
-		level 7: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 75.
-		level 8: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 79.
-		level 9: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 83.
-		level 10: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 87.
-		level 11: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 90.
-		level 12: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 92.
-	 -->
-        <icon initial="icon.skill4717"/>
-        <attributes magic-critical-rate="-5.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <cast-range initial="600"/>
-            <reuse initial="8000"/>
-            <effect-point initial="9">
-                <value level="2">16</value>
-                <value level="3">25</value>
-                <value level="4">37</value>
-                <value level="5">50</value>
-                <value level="6">63</value>
-                <value level="7">75</value>
-                <value level="8">79</value>
-                <value level="9">83</value>
-                <value level="10">87</value>
-                <value level="11">90</value>
-                <value level="12">92</value>
-            </effect-point>
-            <effect-range initial="1100"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="5">
-                <value level="2">8</value>
-                <value level="3">12</value>
-                <value level="4">17</value>
-                <value level="5">20</value>
-                <value level="6">25</value>
-                <value level="7">29</value>
-                <value level="8">32</value>
-                <value level="9">33</value>
-                <value level="11">34</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <effects>
-            <effect name="Heal">
-                <power/>
-            </effect>
-        </effects>
-    </skill>
-    <skill id="4718" name="Greater Heal Trick" max-level="12" action="A1" type="MAGIC">
-        <!--
-		level 1: Recovery magic used by a pet. Regenerates its master's HP. Power 37.
-		level 2: Recovery magic used by a pet. Regenerates its master's HP. Power 64.
-		level 3: Recovery magic used by a pet. Regenerates its master's HP. Power 99.
-		level 4: Recovery magic used by a pet. Regenerates its master's HP. Power 139.
-		level 5: Recovery magic used by a pet. Regenerates its master's HP. Power 171.
-		level 6: Recovery magic used by a pet. Regenerates its master's HP. Power 205.
-		level 7: Recovery magic used by a pet. Regenerates its master's HP. Power 236.
-		level 8: Recovery magic used by a pet. Regenerates its master's HP. Power 266.
-		level 9: Recovery magic used by a pet. Regenerates its master's HP. Power 300.
-		level 10: Recovery magic used by a pet. Regenerates its master's HP. Power 332.
-		level 11: Recovery magic used by a pet. Regenerates its master's HP. Power 355.
-		level 12: Recovery magic used by a pet. Regenerates its master's HP. Power 368.
-	 -->
-        <icon initial="icon.skill4718"/>
-        <attributes magic-critical-rate="-5.0">
-            <magic-level initial="10">
-                <value level="2">20</value>
-                <value level="3">30</value>
-                <value level="4">40</value>
-                <value level="5">50</value>
-                <value level="6">60</value>
-                <value level="7">70</value>
-                <value level="8">75</value>
-                <value level="9">80</value>
-                <value level="10">85</value>
-                <value level="11">90</value>
-                <value level="12">95</value>
-            </magic-level>
-            <cast-range initial="600"/>
-            <reuse initial="8000"/>
-            <effect-point initial="62">
-                <value level="2">113</value>
-                <value level="3">184</value>
-                <value level="4">272</value>
-                <value level="5">371</value>
-                <value level="6">471</value>
-                <value level="7">558</value>
-                <value level="8">592</value>
-                <value level="9">620</value>
-                <value level="10">651</value>
-                <value level="11">672</value>
-                <value level="12">685</value>
-            </effect-point>
-            <effect-range initial="1100"/>
-            <hit-time initial="4000"/>
-        </attributes>
-        <consume>
-            <mana initial="33">
-                <value level="2">59</value>
-                <value level="3">88</value>
-                <value level="4">122</value>
-                <value level="5">159</value>
-                <value level="6">195</value>
-                <value level="7">228</value>
-                <value level="8">242</value>
-                <value level="9">252</value>
-                <value level="10">259</value>
-                <value level="11">262</value>
-            </mana>
-        </consume>
-        <target type="OWNER_PET"/>
-        <effects>
-            <effect name="Heal">
-                <power/>
-            </effect>
         </effects>
     </skill>
     <skill id="4719" name="Power Strike" max-level="12" action="A1">
@@ -1339,7 +875,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="112.0">
                     <value level="2">302.0</value>
                     <value level="3">834.0</value>
@@ -1396,7 +932,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="95.0">
                     <value level="2">255.0</value>
                     <value level="3">705.0</value>
@@ -1453,7 +989,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="51.0">
                     <value level="2">136.0</value>
                     <value level="3">375.0</value>
@@ -1510,7 +1046,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="48.0">
                     <value level="2">128.0</value>
                     <value level="3">352.0</value>
@@ -1567,7 +1103,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="45.0">
                     <value level="2">120.0</value>
                     <value level="3">330.0</value>
@@ -1584,10 +1120,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4724" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4724" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -1631,7 +1167,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="56.0">
                     <value level="2">151.0</value>
                     <value level="3">417.0</value>
@@ -1649,10 +1185,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4725" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4725" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -1696,7 +1232,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="48.0">
                     <value level="2">128.0</value>
                     <value level="3">352.0</value>
@@ -1714,10 +1250,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4726" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4726" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -1761,7 +1297,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="26.0">
                     <value level="2">68.0</value>
                     <value level="3">188.0</value>
@@ -1779,10 +1315,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4727" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4727" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -1826,7 +1362,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="24.0">
                     <value level="2">64.0</value>
                     <value level="3">176.0</value>
@@ -1844,10 +1380,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4728" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4728" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -1891,7 +1427,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="23.0">
                     <value level="2">60.0</value>
                     <value level="3">165.0</value>
@@ -1949,7 +1485,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="1150.0" over-hit="false">
+            <fatal-blow chance-boost="1150.0">
                 <power initial="168.0">
                     <value level="2">453.0</value>
                     <value level="3">1251.0</value>
@@ -2006,7 +1542,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="1150.0" over-hit="false">
+            <fatal-blow chance-boost="1150.0">
                 <power initial="142.0">
                     <value level="2">382.0</value>
                     <value level="3">1056.0</value>
@@ -2063,7 +1599,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="1150.0" over-hit="false">
+            <fatal-blow chance-boost="1150.0">
                 <power initial="76.0">
                     <value level="2">204.0</value>
                     <value level="3">563.0</value>
@@ -2120,7 +1656,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="1150.0" over-hit="false">
+            <fatal-blow chance-boost="1150.0">
                 <power initial="71.0">
                     <value level="2">191.0</value>
                     <value level="3">528.0</value>
@@ -2177,7 +1713,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="1150.0" over-hit="false">
+            <fatal-blow chance-boost="1150.0">
                 <power initial="67.0">
                     <value level="2">179.0</value>
                     <value level="3">494.0</value>
@@ -2211,6 +1747,7 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <hit-time initial="830"/>
@@ -2230,9 +1767,9 @@
                 <value level="12">87</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="56.0">
                     <value level="2">151.0</value>
                     <value level="3">417.0</value>
@@ -2266,6 +1803,7 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <hit-time initial="830"/>
@@ -2285,9 +1823,9 @@
                 <value level="12">87</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="48.0">
                     <value level="2">128.0</value>
                     <value level="3">352.0</value>
@@ -2321,6 +1859,7 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <hit-time initial="830"/>
@@ -2340,9 +1879,9 @@
                 <value level="12">87</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="26.0">
                     <value level="2">68.0</value>
                     <value level="3">188.0</value>
@@ -2376,6 +1915,7 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <hit-time initial="830"/>
@@ -2395,9 +1935,9 @@
                 <value level="12">87</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="24.0">
                     <value level="2">64.0</value>
                     <value level="3">176.0</value>
@@ -2431,6 +1971,7 @@
                 <value level="11">94</value>
                 <value level="12">99</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <cool-time initial="660"/>
             <effect-point initial="-100"/>
             <hit-time initial="830"/>
@@ -2450,9 +1991,9 @@
                 <value level="12">87</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="23.0">
                     <value level="2">60.0</value>
                     <value level="3">165.0</value>
@@ -2509,7 +2050,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="112.0">
                     <value level="2">302.0</value>
                     <value level="3">834.0</value>
@@ -2566,7 +2107,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="95.0">
                     <value level="2">255.0</value>
                     <value level="3">705.0</value>
@@ -2623,7 +2164,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="51.0">
                     <value level="2">136.0</value>
                     <value level="3">375.0</value>
@@ -2680,7 +2221,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="48.0">
                     <value level="2">128.0</value>
                     <value level="3">352.0</value>
@@ -2737,7 +2278,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="45.0">
                     <value level="2">120.0</value>
                     <value level="3">330.0</value>
@@ -2754,10 +2295,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4744" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4744" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -2801,7 +2342,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="56.0">
                     <value level="2">151.0</value>
                     <value level="3">417.0</value>
@@ -2819,10 +2360,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4745" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4745" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -2866,7 +2407,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="48.0">
                     <value level="2">128.0</value>
                     <value level="3">352.0</value>
@@ -2884,10 +2425,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4746" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4746" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -2931,7 +2472,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="26.0">
                     <value level="2">68.0</value>
                     <value level="3">188.0</value>
@@ -2949,10 +2490,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4747" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4747" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -2996,7 +2537,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="24.0">
                     <value level="2">64.0</value>
                     <value level="3">176.0</value>
@@ -3014,10 +2555,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4748" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4748" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3061,7 +2602,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="23.0">
                     <value level="2">60.0</value>
                     <value level="3">165.0</value>
@@ -3119,7 +2660,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="670.0" over-hit="false">
+            <fatal-blow chance-boost="670.0">
                 <power initial="280.0">
                     <value level="2">755.0</value>
                     <value level="3">2084.0</value>
@@ -3176,7 +2717,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="670.0" over-hit="false">
+            <fatal-blow chance-boost="670.0">
                 <power initial="236.0">
                     <value level="2">637.0</value>
                     <value level="3">1761.0</value>
@@ -3233,7 +2774,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="670.0" over-hit="false">
+            <fatal-blow chance-boost="670.0">
                 <power initial="126.0">
                     <value level="2">339.0</value>
                     <value level="3">937.0</value>
@@ -3290,7 +2831,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="670.0" over-hit="false">
+            <fatal-blow chance-boost="670.0">
                 <power initial="118.0">
                     <value level="2">319.0</value>
                     <value level="3">879.0</value>
@@ -3347,7 +2888,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <fatal-blow chance-boost="670.0" over-hit="false">
+            <fatal-blow chance-boost="670.0">
                 <power initial="111.0">
                     <value level="2">298.0</value>
                     <value level="3">824.0</value>
@@ -3403,7 +2944,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="327.0">
                     <value level="2">882.0</value>
                     <value level="3">2435.0</value>
@@ -3459,7 +3000,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="275.0">
                     <value level="2">744.0</value>
                     <value level="3">2057.0</value>
@@ -3515,7 +3056,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="147.0">
                     <value level="2">396.0</value>
                     <value level="3">1095.0</value>
@@ -3571,7 +3112,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="138.0">
                     <value level="2">372.0</value>
                     <value level="3">1027.0</value>
@@ -3627,7 +3168,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="129.0">
                     <value level="2">348.0</value>
                     <value level="3">962.0</value>
@@ -3644,10 +3185,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4759" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4759" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3690,7 +3231,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="164.0">
                     <value level="2">441.0</value>
                     <value level="3">1218.0</value>
@@ -3708,10 +3249,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4760" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4760" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3754,7 +3295,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="138.0">
                     <value level="2">372.0</value>
                     <value level="3">1029.0</value>
@@ -3772,10 +3313,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4761" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4761" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3818,7 +3359,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="74.0">
                     <value level="2">198.0</value>
                     <value level="3">548.0</value>
@@ -3836,10 +3377,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4762" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4762" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3882,7 +3423,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="69.0">
                     <value level="2">186.0</value>
                     <value level="3">514.0</value>
@@ -3900,10 +3441,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4763" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4763" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3946,7 +3487,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="65.0">
                     <value level="2">174.0</value>
                     <value level="3">481.0</value>
@@ -4003,7 +3544,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="327.0">
                     <value level="2">882.0</value>
                     <value level="3">2435.0</value>
@@ -4059,7 +3600,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="275.0">
                     <value level="2">744.0</value>
                     <value level="3">2057.0</value>
@@ -4115,7 +3656,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="147.0">
                     <value level="2">396.0</value>
                     <value level="3">1095.0</value>
@@ -4171,7 +3712,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="138.0">
                     <value level="2">372.0</value>
                     <value level="3">1027.0</value>
@@ -4227,7 +3768,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="129.0">
                     <value level="2">348.0</value>
                     <value level="3">962.0</value>
@@ -4244,10 +3785,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4769" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4769" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -4290,7 +3831,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="164.0">
                     <value level="2">441.0</value>
                     <value level="3">1218.0</value>
@@ -4308,10 +3849,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4770" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4770" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -4354,7 +3895,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="138.0">
                     <value level="2">372.0</value>
                     <value level="3">1029.0</value>
@@ -4372,10 +3913,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4771" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4771" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -4418,7 +3959,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="74.0">
                     <value level="2">198.0</value>
                     <value level="3">548.0</value>
@@ -4436,10 +3977,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4772" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4772" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -4482,7 +4023,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="69.0">
                     <value level="2">186.0</value>
                     <value level="3">514.0</value>
@@ -4500,10 +4041,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4773" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4773" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -4546,7 +4087,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="65.0">
                     <value level="2">174.0</value>
                     <value level="3">481.0</value>
@@ -4603,7 +4144,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -4659,7 +4200,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -4715,7 +4256,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -4771,7 +4312,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -4827,7 +4368,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -5127,7 +4668,7 @@
     <skill id="4784" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -5196,7 +4737,7 @@
     <skill id="4785" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -5265,7 +4806,7 @@
     <skill id="4786" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -5334,7 +4875,7 @@
     <skill id="4787" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -5403,7 +4944,7 @@
     <skill id="4788" name="Chant of Life" max-level="12" action="A2" type="MAGIC">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -5472,8 +5013,7 @@
     <skill id="4789" name="High Lv." max-level="10">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -5504,74 +5044,64 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4790" name="Lv. 23 Raid Boss">
+    <skill id="4790" name="Raid Boss (Lv. 23)">
         <!-- A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in Gludio. He waits for an opportunity to return to his country. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4791" name="Lv. 30 Raid Boss">
+    <skill id="4791" name="Raid Boss (Lv. 70)">
         <!-- The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4792" name="Lv. 42 Raid Boss">
+    <skill id="4792" name="Raid Boss (Lv. 50)">
         <!-- A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that someday it will feed on the Ants and destroy them. It quietly grows in power while sharpening its fangs for vengeance. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4793" name="Lv. 55 Raid Boss">
+    <skill id="4793" name="Raid Boss (Lv. 55)">
         <!-- A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, and the desire for revenge. Gripped by his anger, he is still at war against all humans and mystics. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4794" name="Lv. 50 Raid Boss">
+    <skill id="4794" name="Raid Boss (Lv. 80)">
         <!-- One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came back to life. But the devil's bargain turned his once noble ideals towards loathing, turning him into a monster with the power of evil magic. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4795" name="Lv. 60 Raid Boss">
+    <skill id="4795" name="Raid Boss (Lv. 60)">
         <!-- A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Eva, made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafurion's troops, or invaders threatening the garden. The dwarven master made two other golems, but this third version was the strongest and became the last one remaining. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4796" name="Lv. 25 Raid Boss">
+    <skill id="4796" name="Raid Boss (Lv. 25)">
         <!-- A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after suffering cruel attacks from both sides, but Pay Dryad still remains here waiting for the golden age of peace to return. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4797" name="Lv. 34 Raid Boss">
+    <skill id="4797" name="Raid Boss (Lv. 50)">
         <!-- An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He grows in power, and uses summoning magic learned from the Dark Elves to harness powerful servitors and minions. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4798" name="Lv. 34 Raid Boss">
+    <skill id="4798" name="Raid Boss (Lv. 34)">
         <!-- She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates and even her own children. The Queen yearns to build a kingdom for Marsh Stakatos someday. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4799" name="Lv. 49 Raid Boss">
+    <skill id="4799" name="Raid Boss (Lv. 75)">
         <!-- He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He greatly detests the Silenos as well as humans, and is a formidable enemy. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
 </list>

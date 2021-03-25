@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="16001" name="Presentation" action="A1">
         <!-- none -->
@@ -357,11 +357,12 @@
         </attributes>
         <target type="TARGET"/>
     </skill>
-    <skill id="16032" name="Gi-Sung Bae's" action="A1">
+    <skill id="16032" name="Gi-Sung Bae's Lineage II" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <reuse initial="50000"/>
         </attributes>
         <target/>
@@ -401,12 +402,12 @@
             <hit-time initial="10000"/>
         </attributes>
         <target type="OTHERS"/>
-        <channeling skill="0" initial-delay="1000000" interval="0"/>
+        <channeling initial-delay="1000000" interval="0" mp-consume="0" skill="0"/>
     </skill>
-    <skill id="16036" name="Tauti Leap Attack" debuff="true" action="A2">
+    <skill id="16036" name="Tauti Leap Attack" action="A2" debuff="true">
         <!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" hit-cancel-time="6.5">
+        <attributes hit-cancel-time="6.5" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="99"/>
             <cast-range initial="2000"/>
             <cool-time initial="500"/>
@@ -414,13 +415,13 @@
             <effect-range initial="3000"/>
             <hit-time initial="7000"/>
         </attributes>
-        <target type="TARGET" scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
+        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="POINT_BLANK" type="TARGET"/>
         <abnormal type="BLEEDING" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power/>
             </physical-attack>
             <damage-over-time ticks="5">
@@ -428,10 +429,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="16037" name="Tauti Leap Attack" debuff="true" action="A2">
+    <skill id="16037" name="Tauti Leap Attack" action="A2" debuff="true">
         <!-- Takes hold of Tauti and throws him up. Uses falling damage to inflict tremendous harm. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" hit-cancel-time="5.5">
+        <attributes hit-cancel-time="5.5" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="99"/>
             <cast-range initial="2000"/>
             <cool-time initial="500"/>
@@ -439,7 +440,7 @@
             <effect-range initial="3000"/>
             <hit-time initial="6000"/>
         </attributes>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
@@ -451,10 +452,11 @@
         </effects>
     </skill>
     <skill id="16038" name="Idle Effect" action="A2">
-        <!-- Dangerous state right before the explosion. -->
+        <!-- none -->
         <icon initial="icon.skill11062"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="692"/>
         </attributes>
         <target/>

@@ -1,376 +1,1203 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">    
-	<skill id="50400" name="Weapon Blessing Effect">        
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
+    <skill id="50400" name="Weapon Blessing Effect">
+        <!-- Atk. Spd. +30, Casting Spd. +30. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK_SPEED">
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="30.0"/>
             </stat-modify>
             <stat-modify stat="MAGIC_ATTACK_SPEED">
                 <power initial="30.0"/>
-            </stat-modify>			
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50401" name="Weapon Blessing Effect">        
+    <skill id="50401" name="Weapon Blessing Effect">
+        <!-- Arrows do not consume MP. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
-		<!-- При использовании стрел MP не расходуется -->
-        <!-- <effects> -->
-			<!-- <stat-modify stat="000"> -->
-                <!-- <power initial="0.0"/> -->
-            <!-- </stat-modify>            		 -->
-		 <!-- </effects> -->
     </skill>
-	<skill id="50402" name="Weapon Blessing Effect">        
+    <skill id="50402" name="Weapon Blessing Effect">
+        <!-- Vital Point Attack Rate +5%%. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
+            <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="5.0"/>
-            </stat-modify>            		
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50403" name="Weapon Blessing Effect">        
+    <skill id="50403" name="Weapon Blessing Effect">
+        <!-- P. Skill Critical Damage +50. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_SKILL_POWER">
+            <stat-modify stat="PHYSICAL_SKILL_POWER">
                 <power initial="50.0"/>
-            </stat-modify>            		
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50404" name="Weapon Blessing Effect">        
+    <skill id="50404" name="Weapon Blessing Effect">
+        <!-- P. Skill Critical Damage +50. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_SKILL_POWER">
+            <stat-modify stat="PHYSICAL_SKILL_POWER">
                 <power initial="50.0"/>
-            </stat-modify>            		
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50405" name="Weapon Blessing Effect">        
+    <skill id="50405" name="Weapon Blessing Effect">
+        <!-- Attack range +20, the number of targets +1. -->
         <icon initial="icon.bless_effect_base"/>
         <attributes/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK_RANGE" stat-add="PHYSICAL_ATTACK_RANGE">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
+            <stat-modify stat="PHYSICAL_ATTACK_RANGE" stat-add="PHYSICAL_ATTACK_RANGE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
                 <power initial="1.0"/>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
-	<skill id="50406" name="A-grade Weapon +5 Enchant Blessing Effect">        
+    <skill id="50406" name="+5 A-grade Weapon Blessing Effect">
+        <!-- Attribute Attack +15. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50407" name="A-grade Weapon +6 Enchant Blessing Effect">        
+    <skill id="50407" name="+6 A-grade Weapon Blessing Effect">
+        <!-- P. Atk. +90, M. Atk. +110. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="90.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="110.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="90.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="110.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50408" name="A-grade Weapon +7 Enchant Blessing Effect">        
+    <skill id="50408" name="+7 A-grade Weapon Blessing Effect">
+        <!-- All Critical Rate +4%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="CRITICAL_RATE">
-				<power initial="4.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
-				<power initial="4.0"/>
-			</stat-modify>			
-		</effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="4.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50409" name="A-grade Weapon +8 Enchant Blessing Effect">        
+    <skill id="50409" name="+8 A-grade Weapon Blessing Effect">
+        <!-- Skill Power +4%% -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="4.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="4.0"/>
-			</stat-modify>	
-		</effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="4.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="4.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50410" name="A-grade Weapon +9 Enchant Blessing Effect">        
+    <skill id="50410" name="+9 A-grade Weapon Blessing Effect">
+        <!-- All Critical Damage +80\n     Increases Max All Critical Rate. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="80.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-				<power initial="80.0"/>
-			</stat-modify>
-			<!-- TODO: Увеличение макс. шанса Крит. Атк. -->
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="80.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="80.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="80.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="80.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50411" name="A-grade Weapon +10 Enchant Blessing Effect">        
+    <skill id="50411" name="+10 A-grade Weapon Blessing Effect">
+        <!-- Soulshot/ Spiritshot damage +10%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
-				<power initial="10.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50412" name="Boss Weapon +5 Enchant Blessing Effect">        
+    <skill id="50412" name="+5 Boss' Weapon Blessing Effect">
+        <!-- Attribute Attack +20. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK">
-				<power initial="20.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="ELEMENTAL_SPIRIT_FIRE_ATTACK">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WATER_ATTACK">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_WIND_ATTACK">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="ELEMENTAL_SPIRIT_EARTH_ATTACK">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50413" name="Boss Weapon +6 Enchant Blessing Effect">        
+    <skill id="50413" name="+6 Boss' Weapon Blessing Effect">
+        <!-- P. Atk. +130, M. Atk. +170. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="130.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="170.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="130.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="170.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50414" name="Boss Weapon +7 Enchant Blessing Effect">        
+    <skill id="50414" name="+7 Boss' Weapon Blessing Effect">
+        <!-- All Critical Rate +5%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="CRITICAL_RATE">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
-				<power initial="5.0"/>
-			</stat-modify>			
-		</effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50415" name="Boss Weapon +8 Enchant Blessing Effect">        
+    <skill id="50415" name="+8 Boss' Weapon Blessing Effect">
+        <!-- Skill Power +5%% -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="5.0"/>
-			</stat-modify>	
-		</effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="5.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50416" name="Boss Weapon +9 Enchant Blessing Effect">        
+    <skill id="50416" name="+9 Boss' Weapon Blessing Effect">
+        <!-- All Critical Damage +150. Increases Max All Critical Rate. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="150.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-				<power initial="150.0"/>
-			</stat-modify>
-			<!-- TODO: Увеличение макс. шанса Крит. Атк. -->
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="150.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="150.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="150.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="150.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="150.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="150.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50417" name="Boss Weapon +10 Enchant Blessing Effect">        
+    <skill id="50417" name="+10 Boss' Weapon Blessing Effect">
+        <!-- Soulshot/ Spiritshot damage +15%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50418" name="Death Knight Fire Sword +1 Enchant Blessing Effect">        
+    <skill id="50418" name="+1 Death Knight's Flame Sword Blessing Effect">
+        <!-- Skill Power +15%% -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50419" name="Death Knight Fire Sword +2 Enchant Blessing Effect">        
+    <skill id="50419" name="+2 Death Knight's Flame Sword Blessing Effect">
+        <!-- All Critical Damage +200\n     Increases Max All Critical Rate. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="200.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-				<power initial="200.0"/>
-			</stat-modify>
-			<!-- TODO: Увеличение макс. шанса Крит. Атк. -->
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="200.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="200.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="200.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50420" name="Death Knight Fire Sword +3 Enchant Blessing Effect">        
+    <skill id="50420" name="+3 Death Knight's Flame Sword Blessing Effect">
+        <!-- Soulshot/ Spiritshot damage +20%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
-				<power initial="20.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
+                <power initial="20.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50421" name="A-grade Weapon +16 Enchant Blessing Effect">        
+    <skill id="50421" name="+16 A-grade Weapon Blessing Effect">
+        <!-- P. Atk. +200, M. Atk. +250. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="200.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="250.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="200.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="250.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50422" name="A-grade Weapon +20 Enchant Blessing Effect">        
+    <skill id="50422" name="+20 A-grade Weapon Blessing Effect">
+        <!-- All Critical Rate +10%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50423" name="A-grade Weapon +25 Enchant Blessing Effect">        
+    <skill id="50423" name="+25 A-grade Weapon Blessing Effect">
+        <!-- Skill Power +10%% -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="10.0"/>
-			</stat-modify>		
-		</effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50424" name="A-grade Weapon +16 Enchant Blessing Effect">        
+    <skill id="50424" name="+16 S-grade Weapon Blessing Effect">
+        <!-- P. Atk. +400, M. Atk. +600. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_ATTACK">
-				<power initial="400.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_ATTACK">
-				<power initial="600.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="400.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="600.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50425" name="A-grade Weapon +20 Enchant Blessing Effect">        
+    <skill id="50425" name="+20 S-grade Weapon Blessing Effect">
+        <!-- All Critical Rate +15%%. -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="CRITICAL_RATE">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
-				<power initial="15.0"/>
-			</stat-modify>
-		</effects>
+            <stat-modify mode="PER" stat="CRITICAL_RATE">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
     </skill>
-	<skill id="50426" name="A-grade Weapon +25 Enchant Blessing Effect">        
+    <skill id="50426" name="+25 S-grade Weapon Blessing Effect">
+        <!-- Skill Power +15%% -->
         <icon initial="icon.bless_effect_enchant"/>
-        <attributes/>
+        <attributes property="NONE"/>
         <target/>
         <effects>
-			<stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
-				<power initial="15.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
-				<power initial="15.0"/>
-			</stat-modify>		
-		</effects>
+            <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
+                <power initial="15.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_SKILL_POWER">
+                <power initial="15.0"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="50427" name="Frintezza's Necklace" max-level="4">
+        <!-- 
+			level 1: A necklace imbued with Frintezza's power.  <Effect> Max. MP +30 Sleep Resistance +10% Sleep Atk. Rate +10% Skill Power +5% Skill Cooldown -5% All Critical Rate +2% All Critical Damage +20
+			level 2: A necklace imbued with Frintezza's power.  <Effect> Max. MP +36 Sleep Resistance +15% Sleep Atk. Rate +15% Skill Power +10% Skill Cooldown -6% All Critical Rate +3% All Critical Damage +50
+			level 3: A necklace imbued with Frintezza's power.  <Effect> Max. MP +50 Sleep Resistance +20% Sleep Atk. Rate +20% Skill Power +15% Skill Cooldown -8% All Critical Rate +5% All Critical Damage +100 Damage Reflection +5%
+			level 4: A necklace imbued with Frintezza's power.  <Effect> Max. MP +65 Sleep Resistance +30% Sleep Atk. Rate +30% Skill Power +20% Skill Cooldown -10% All Critical Rate +10% All Critical Damage +200 Damage Reflection +10%
+		-->
+        <icon initial="icon.accessory_necklace_of_frintessa_i00">
+            <value level="2">icon.accessory_necklace_of_frintessa_i03</value>
+            <value level="3">icon.accessory_necklace_of_frintessa_i04</value>
+            <value level="4">icon.accessory_necklace_of_frintessa_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50428" name="A-grade: Stun Gauntlets">
+        <!-- Gauntlets imbued with stunning power.\nSTR +1\nINT +1\nOverweight limit +1000\nMax HP +200\nAtk. Spd. +10%%\nCasting Spd. +18%% -->
+        <icon initial="icon.armor_t96_g_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50429" name="Stun Gauntlets">
+        <!-- Gauntlets imbued with stunning power.\n\n<Swift Fist>\nA strong fist deals damage with 3% power. Stuns the enemy for 3 sec. (Probability: 1%). -->
+        <icon initial="icon.armor_t96_g_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50430" name="+1 Stun Gauntlets" max-level="10">
+        <!-- 
+			level 1: Gauntlets imbued with stunning power.  <Swift Fist> A strong fist deals damage with 5% power. Stuns the enemy for 3 sec. (Probability: 1%).
+			level 2: Gauntlets imbued with stunning power.  <Swift Fist> A strong fist deals damage with 7% power. Stuns the enemy for 3 sec. (Probability: 1%).
+			level 3: Gauntlets imbued with stunning power.  <Swift Fist> A strong fist deals damage with 9% power. Stuns the enemy for 3 sec. (Probability: 1%).
+			level 4: Gauntlets imbued with stunning power.  <Swift Fist> A strong fist deals damage with 12% power. Stuns the enemy for 3 sec. (Probability: 1%).
+			level 5: Gauntlets imbued with stunning power. Skill Critical Damage +50  <Swift Fist> A strong fist deals damage with 15% power. Stuns the enemy for 3 sec. (Probability: 2%).
+			level 6: Gauntlets imbued with stunning power. Skill Critical Damage +100  <Swift Fist> A strong fist deals damage with 20% power. Stuns the enemy for 3 sec. (Probability: 3%).
+			level 7: Gauntlets imbued with stunning power. Skill Critical Damage +200  <Swift Fist> A strong fist deals damage with 25% power. Stuns the enemy for 3 sec. (Probability: 4%).
+			level 8: Gauntlets imbued with stunning power. Skill Critical Damage +300  <Swift Fist> A strong fist deals damage with 30% power. Stuns the enemy for 3 sec. (Probability: 6%).
+			level 9: Gauntlets imbued with stunning power. Skill Critical Damage +400  <Swift Fist> A strong fist deals damage with 40% power. Stuns the enemy for 3 sec. (Probability: 8%).
+			level 10: Gauntlets imbued with stunning power. Skill Critical Damage +500  <Swift Fist> A strong fist deals damage with 50% power. Stuns the enemy for 3 sec. (Probability: 10%).
+		-->
+        <icon initial="icon.armor_t96_g_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50431" name="Swift Fist" max-level="11" debuff="true" type="MAGIC">
+        <!-- A powerful fist attack. -->
+        <icon initial="icon.armor_t96_g_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50432" name="A-grade: Sigil of Inevitability">
+        <!-- A sigil imbued with the energy of destruction.\n\nAtk. Spd. +5\nCasting Spd. +5\nAll Critical Rate +1%\nMax MP +20\n\n<Fatal Power>\nWith a 1% power, after a critical attack, Skill Power +1% for 3 sec. -->
+        <icon initial="icon.elos_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50433" name="+1 Sigil of Inevitability" max-level="10">
+        <!-- 
+			level 1: A sigil imbued with the energy of destruction.  Atk. Spd. +10 Casting Spd. +10 All Critical Rate +1% Max MP +30  <Fatal Power> With a 1% power, after a critical attack, Skill Power +1% for 3 sec.
+			level 2: A sigil imbued with the energy of destruction.  Atk. Spd. +15 Casting Spd. +15 All Critical Rate +1% Max MP +40  <Fatal Power> With a 1% power, after a critical attack, Skill Power +1% for 3 sec.
+			level 3: A sigil imbued with the energy of destruction.  Atk. Spd. +25 Casting Spd. +25 All Critical Rate +1% Max MP +50  <Fatal Power> With a 1% power, after a critical attack, Skill Power +1% for 3 sec.
+			level 4: A sigil imbued with the energy of destruction.  Atk. Spd. +30 Casting Spd. +30 All Critical Rate +2% Max MP +80  <Fatal Power> With a 1% power, after a critical attack, Skill Power +2% for 3 sec.
+			level 5: A sigil imbued with the energy of destruction.  Atk. Spd. +45 Casting Spd. +45 All Critical Rate +4% Max MP +150  <Fatal Power> With a 2% power, after a critical attack, Skill Power +3% for 3 sec.  <Fatal Impulse> With a 1% chance after an attack, All Critical Damage +50 for 3 sec. 
+			level 6: A sigil imbued with the energy of destruction.  Atk. Spd. +60 Casting Spd. +60 All Critical Rate +5% Max MP +180  <Fatal Power> With a 3% power, after a critical attack, Skill Power +4% for 3 sec.  <Fatal Impulse> With a 1% chance after an attack, All Critical Damage +100 for 3 sec. 
+			level 7: A sigil imbued with the energy of destruction.  Atk. Spd. +100 Casting Spd. +100 All Critical Rate +6% Max MP +250  <Fatal Power> With a 5% power, after a critical attack, Skill Power +5% for 3 sec.  <Fatal Impulse> With a 1% chance after an attack, All Critical Damage +200 for 3 sec. 
+			level 8: A sigil imbued with the energy of destruction.  Atk. Spd. +120 Casting Spd. +120 All Critical Rate +8% Max MP +300  <Fatal Power> With a 7% power, after a critical attack, Skill Power +8% for 3 sec.  <Fatal Impulse> With a 2% chance after an attack, All Critical Damage +300 for 3 sec. 
+			level 9: A sigil imbued with the energy of destruction.  Atk. Spd. +160 Casting Spd. +160 All Critical Rate +9% Max MP +400  <Fatal Power> With a 9% power, after a critical attack, Skill Power +9% for 3 sec.  <Fatal Impulse> With a 3% chance after an attack, All Critical Damage +400 for 3 sec. 
+			level 10: A sigil imbued with the energy of destruction.  Atk. Spd. +250 Casting Spd. +250 All Critical Rate +10% Max MP +500  <Fatal Power> With a 10% power, after a critical attack, Skill Power +10% for 3 sec.  <Fatal Impulse> With a 5% chance after an attack, All Critical Damage +500 for 3 sec. 
+		-->
+        <icon initial="icon.elos_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50434" name="Fatal Power" max-level="8">
+        <!-- 
+			level 1: Skill Power +1%
+			level 2: Skill Power +2%
+			level 3: Skill Power +3%
+			level 4: Skill Power +4%
+			level 5: Skill Power +5%
+			level 6: Skill Power +8%
+			level 7: Skill Power +9%
+			level 8: Skill Power +10%
+		-->
+        <icon initial="icon.skill10076"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50435" name="Fatal Impulse" max-level="6">
+        <!-- 
+			level 1: All Critical Damage +50.
+			level 2: All Critical Damage +100.
+			level 3: All Critical Damage +200.
+			level 4: All Critical Damage +300.
+			level 5: All Critical Damage +400.
+			level 6: All Critical Damage +500.
+		-->
+        <icon initial="icon.skill10064"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50436" name="A-grade: Shield of Vengeance">
+        <!-- A shield imbued with the power of vengeance.\nAll received Critical Rate -1%\nMax HP +20\n\n<Protective Barrier>\nWith a 1% chance, Shield Defense Rate and P./ M. Def. +5% for 5 sec. when hit.\n(Cooldown: 60 sec.) -->
+        <icon initial="icon.shield_of_revenge"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50437" name="+1 Shield of Vengeance" max-level="10">
+        <!-- 
+			level 1: A shield imbued with the power of vengeance. All received Critical Rate -2% Max HP +30 Shield Defense +20 <Protective Barrier> With a 1% chance, Shield Defense Rate and P./ M. Def. +5% for 5 sec. when hit. (Cooldown: 60 sec.)
+			level 2: A shield imbued with the power of vengeance. All received Critical Rate -3% Max HP +40 Shield Defense +30 <Protective Barrier> With a 1% chance, Shield Defense Rate and P./ M. Def. +5% for 5 sec. when hit. (Cooldown: 60 sec.)
+			level 3: A shield imbued with the power of vengeance. All received Critical Rate -4% Max HP +60 Shield Defense +60 <Protective Barrier> With a 1% chance, Shield Defense Rate and P./ M. Def. +10% for 5 sec. when hit. (Cooldown: 60 sec.)
+			level 4: A shield imbued with the power of vengeance. All received Critical Rate -5% Max HP +80 Shield Defense +100 <Protective Barrier> With a 1% chance, Shield Defense Rate and P./ M. Def. +15% for 5 sec. when hit. (Cooldown: 60 sec.)
+			level 5: A shield imbued with the power of vengeance. All received Critical Rate -8% Max HP +200 Shield Defense +200  <Protective Barrier> With a 2% chance, Shield Defense Rate and P./ M. Def. +20% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 5% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+			level 6: A shield imbued with the power of vengeance. All received Critical Rate -9% Max HP +250 Shield Defense +400  <Protective Barrier> With a 3% chance, Shield Defense Rate and P./ M. Def. +30% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 15% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+			level 7: A shield imbued with the power of vengeance. All received Critical Rate -10% Max HP +300 Shield Defense +700  <Protective Barrier> With a 6% chance, Shield Defense Rate and P./ M. Def. +40% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 30% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+			level 8: A shield imbued with the power of vengeance. All received Critical Rate -11% Max HP +400 Shield Defense +1000  <Protective Barrier> With a 8% chance, Shield Defense Rate and P./ M. Def. +60% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 60% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+			level 9: A shield imbued with the power of vengeance. All received Critical Rate -12% Max HP +450 Shield Defense +1500  <Protective Barrier> With a 9% chance, Shield Defense Rate and P./ M. Def. +80% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 100% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+			level 10: A shield imbued with the power of vengeance. All received Critical Rate -15% Max HP +800 Shield Defense +2000  <Protective Barrier> With a 10% chance, Shield Defense Rate and P./ M. Def. +100% for 5 sec. when hit. (Cooldown: 60 sec.)  <Retribution Defence> Reflects 150% of the received damage for 3 sec. when hit. (Cooldown: 60 sec.)
+		-->
+        <icon initial="icon.shield_of_revenge"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50438" name="Protective Barrier" max-level="11">
+        <!-- 
+			level 1: Shield Defense Rate +5% P. Def. +5% , M. Def. +5%
+			level 4: Shield Defense Rate +10% P. Def. +10% , M. Def. +10%
+			level 5: Shield Defense Rate +15% P. Def. +15% , M. Def. +15%
+			level 6: Shield Defense Rate +20% P. Def. +20% , M. Def. +20%
+			level 7: Shield Defense Rate +30% P. Def. +30% , M. Def. +30%
+			level 8: Shield Defense Rate +40% P. Def. +40% , M. Def. +40%
+			level 9: Shield Defense Rate +60% P. Def. +60% , M. Def. +60%
+			level 10: Shield Defense Rate +80% P. Def. +80% , M. Def. +80%
+			level 11: Shield Defense Rate +100% P. Def. +100% , M. Def. +100%
+		-->
+        <icon initial="icon.skill1515"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50439" name="Retribution Defence" max-level="6">
+        <!-- 
+			level 1: Reflects 5% of the received damage.
+			level 2: Reflects 15% of the received damage.
+			level 3: Reflects 30% of the received damage.
+			level 4: Reflects 60% of the received damage.
+			level 5: Reflects 100% of the received damage.
+			level 6: Reflects 150% of the received damage.
+		-->
+        <icon initial="icon.skill10021_2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50440" name="Chocolate Doll" max-level="15">
+        <!-- 
+			level 1: Chocolate Doll's effect  Soulshot/ Spiritshot damage +1% Acquired XP/ SP +1%
+			level 2: Chocolate Doll's effect  Soulshot/ Spiritshot damage +2% Acquired XP/ SP +2%
+			level 3: Chocolate Doll's effect  Soulshot/ Spiritshot damage +3% Acquired XP/ SP +3%
+			level 4: Chocolate Doll's effect  Soulshot/ Spiritshot damage +4% Acquired XP/ SP +5%
+			level 5: Chocolate Doll's effect  Soulshot/ Spiritshot damage +5% Acquired XP/ SP +7%
+			level 6: Chocolate Doll's effect  Soulshot/ Spiritshot damage +6% Acquired XP/ SP +10% P./ M. Atk. +10
+			level 7: Chocolate Doll's effect  Soulshot/ Spiritshot damage +7% Acquired XP/ SP +11% P./ M. Atk. +30
+			level 8: Chocolate Doll's effect  Soulshot/ Spiritshot damage +8% Acquired XP/ SP +13% P./ M. Atk. +50
+			level 9: Chocolate Doll's effect  Soulshot/ Spiritshot damage +9% Acquired XP/ SP +15% P./ M. Atk. +80
+			level 10: Chocolate Doll's effect  Soulshot/ Spiritshot damage +10% Acquired XP/ SP +17% P./ M. Atk. +120
+			level 11: Chocolate Doll's effect  Soulshot/ Spiritshot damage +11% Acquired XP/ SP +20% P./ M. Atk. +170
+			level 12: Chocolate Doll's effect  Soulshot/ Spiritshot damage +12% Acquired XP/ SP +21% P./ M. Atk. +230
+			level 13: Chocolate Doll's effect  Soulshot/ Spiritshot damage +13% Acquired XP/ SP +23% P./ M. Atk. +300
+			level 14: Chocolate Doll's effect  Soulshot/ Spiritshot damage +14% Acquired XP/ SP +25% P./ M. Atk. +380
+			level 15: Chocolate Doll's effect  Soulshot/ Spiritshot damage +15% Acquired XP/ SP +30% P./ M. Atk. +700
+		-->
+        <icon initial="icon.gomdori_chest_change"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50441" name="Antharas' Earring" max-level="4">
+        <!-- 
+			level 1: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +28 Bleed Atk. Rate +10% Stun Atk. Rate +5% Silence Atk. Rate +5% Fear Atk. Rate +5% Bleed Resistance +10% Stun Resistance +5% Silence Resistance +5% Fear Resistance +5% Received Healing +280 Skill MP Consumption +281 Absorbs +282 of the inflicted damage as HP.
+			level 2: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +34 Bleed Atk. Rate +20% Stun Atk. Rate +10% Silence Atk. Rate +10% Fear Atk. Rate +10% Bleed Resistance +20% Stun Resistance +10% Silence Resistance +10% Fear Resistance +10% Received Healing +340 Skill MP Consumption +341 Damage Reflection Resistance +342 Absorbs +343 of the inflicted damage as HP.
+			level 3: An earring imbued with the Earth Dragon's power.  <Effect> CON +1 MEN +1 Max MP +40 Bleed Atk. Rate +30% Stun Atk. Rate +20% Silence Atk. Rate +20% Fear Atk. Rate +20% Bleed Resistance +30% Stun Resistance +20% Silence Resistance +10 Fear Resistance +11 Received Healing +12 Skill MP Consumption +13 Damage Reflection Resistance +14 Absorbs +15 of the inflicted damage as HP.
+			level 4: An earring imbued with the Earth Dragon's power.  <Effect> CON +2 MEN +2 Max MP +50 Bleed Atk. Rate +40% Stun Atk. Rate +30% Silence Atk. Rate +30% Fear Atk. Rate +30% Bleed Resistance +40% Stun Resistance +30% Silence Resistance +20 Fear Resistance +21 Received Healing +22 Skill MP Consumption +23 Damage Reflection Resistance +24 Absorbs +25 of the inflicted damage as HP.
+		-->
+        <icon initial="icon.accessory_earring_of_antaras_i00">
+            <value level="2">icon.accessory_earring_of_antaras_i01</value>
+            <value level="3">icon.accessory_earring_of_antaras_i02</value>
+            <value level="4">icon.accessory_earring_of_antaras_i04</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50442" name="Zaken's Earring" max-level="4">
+        <!-- 
+			level 1: An earring imbued with Zaken's power.  <Effect> Max MP +22 Bleed Atk. Rate +10% Stun Atk. Rate +5% Silence Atk. Rate +5% Fear Atk. Rate +5% Bleed Resistance +10% Stun Resistance +5% Silence Resistance +5% Fear Resistance +5% Received Healing +220 HP Recovery Rate +221 MP Consumption +222
+			level 2: An earring imbued with Zaken's power.  <Effect> Max MP +28 Bleed Atk. Rate +15% Stun Atk. Rate +10% Silence Atk. Rate +10% Fear Atk. Rate +10% Bleed Resistance +15% Stun Resistance +10% Silence Resistance +10% Fear Resistance +10% Received Healing +280 HP Recovery Rate +281 MP Consumption +282
+			level 3: An earring imbued with Zaken's power.  <Effect> Max MP +34 Bleed Atk. Rate +20% Stun Atk. Rate +15% Silence Atk. Rate +15% Fear Atk. Rate +15% Bleed Resistance +20% Stun Resistance +15% Silence Resistance +15% Fear Resistance +15% Received Healing +340 HP Recovery Rate +341 MP Consumption +342 Absorbs 8%% of the inflicted damage as HP.
+			level 4: An earring imbued with Zaken's power.  <Effect> Max MP +45 Bleed Atk. Rate +30% Stun Atk. Rate +20% Silence Atk. Rate +20% Fear Atk. Rate +20% Bleed Resistance +30% Stun Resistance +20% Silence Resistance +20% Fear Resistance +20% Received Healing +450 HP Recovery Rate +451 MP Consumption +452 Absorbs 8%% of the inflicted damage as HP.
+		-->
+        <icon initial="icon.accessory_earring_of_zaken_i00">
+            <value level="2">icon.accessory_earring_of_zaken_i02</value>
+            <value level="3">icon.accessory_earring_of_zaken_i03</value>
+            <value level="4">icon.accessory_earring_of_zaken_i04</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50443" name="Baium's Ring" max-level="4">
+        <!-- 
+			level 1: A ring imbued with power of Baium.  <Effect> Max MP +15 Atk. Spd. +3% Casting Spd. +3% P. Accuracy +2 M. Accuracy +2 Skill Power +3% Bleed Atk. Rate +5% Stun Atk. Rate +10% Bleed Resistance +5%  Stun Resistance +150
+			level 2: A ring imbued with power of Baium.  <Effect> Max MP +21 Atk. Spd. +4% Casting Spd. +4% P. Accuracy +3 M. Accuracy +3 Skill Power +6% Bleed Atk. Rate +10% Stun Atk. Rate +15% Bleed Resistance +10%  Stun Resistance +210
+			level 3: A ring imbued with Baium's power.  <Effect> Max MP +27 Atk. Spd. +5% Casting Spd. +5% P. Accuracy +4 M. Accuracy +4 Skill Power +10% P. Critical Damage +15% M. Skill Critical Damage +10% Bleed Atk. Rate +15% Stun Atk. Rate +270 Bleed Resistance +271 Stun Resistance +272
+			level 4: A ring imbued with Baium's power.  <Effect> Max MP +35 Atk. Spd. +10% Casting Spd. +10% P. Accuracy +8 M. Accuracy +8 Skill Power +20% P. Critical Damage +20% M. Skill Critical Damage +20% Bleed Atk. Rate +20% Stun Atk. Rate +350 Bleed Resistance +351 Stun Resistance +352
+		-->
+        <icon initial="icon.accessory_ring_of_baium_i00">
+            <value level="2">icon.accessory_ring_of_baium_i02</value>
+            <value level="3">icon.accessory_ring_of_baium_i03</value>
+            <value level="4">icon.accessory_ring_of_baium_i04</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50444" name="Queen Ant's Ring" max-level="6">
+        <!-- 
+			level 1: A ring imbued with Queen Ant's power.  <Effect> Max MP +9 P. Accuracy +1 M. Accuracy +1 P. Atk. +4% M. Atk. +4% Infection Atk. Rate +10% Infection Resistance +10%
+			level 2: A ring imbued with Queen Ant's power.  <Effect> Max MP +15 P. Accuracy +2 M. Accuracy +2 P. Atk. +6% M. Atk. +6% Infection Atk. Rate +15% Infection Resistance +15%
+			level 3: A ring imbued with Queen Ant's power.  <Effect> Max MP +21 P. Accuracy +3 M. Accuracy +3 P. Atk. +7% M. Atk. +7% P. Critical Damage +10% M. Skill Critical Damage +5% Infection Atk. Rate +20% Infection Resistance +20%
+			level 4: A ring imbued with Queen Ant's power.  <Effect> Max MP +30 P. Accuracy +4 M. Accuracy +4 P. Atk. +9% M. Atk. +9% All Critical Damage+10% Infection Atk. Rate +20% Infection Resistance +20%
+			level 5: A ring imbued with Queen Ant's power.  <Effect> Max MP +40 P. Accuracy +6 M. Accuracy +6 P. Atk. +11% M. Atk. +11% All Critical Damage+15% Infection Atk. Rate +20% Infection Resistance +20%
+			level 6: A ring imbued with Queen Ant's power.  <Effect> Max MP +50 P. Accuracy +10 M. Accuracy +10 P. Atk. +15% M. Atk. +15% All Critical Damage +20% Poison Atk. Rate +20% Poison Resistance +20% Applies the Queen Ant Power buff when hit. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_ring_of_queen_ant_i03">
+            <value level="5">icon.accessory_ring_of_queen_ant_i04</value>
+            <value level="6">icon.accessory_ring_of_queen_ant_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50445" name="Ring of Core" max-level="6">
+        <!-- 
+			level 1: A ring imbued with Core's power.  <Effect> Max MP +9 P. Evasion +1 M. Evasion +1 P. Def. +2% M. Def. +2% Received damage -2% Silence Atk. Rate +10% Fear Atk. Rate +10% Silence Resistance +10%Fear Resistance +90
+			level 2: A ring imbued with Core's power.  <Effect> Max MP +15 P. Evasion +2 M. Evasion +2 P. Def. +4% M. Def. +4% Received damage -4% Silence Atk. Rate +15% Fear Atk. Rate +15% Silence Resistance +15%Fear Resistance +150
+			level 3: A ring imbued with Core's power.  <Effect> Max MP +21 P. Evasion +4 M. Evasion +4 P. Def. +6% M. Def. +6% Received damage -6% Silence Atk. Rate +20% Fear Atk. Rate +20% Silence Resistance +20%Fear Resistance +210
+			level 4: A ring imbued with Core's power.  <Effect> Max MP +30 P. Evasion +6 M. Evasion +6 P. Def. +8% M. Def. +8% Received damage -8% Silence Atk. Rate +20% Fear Atk. Rate +20% Silence Resistance +20%Fear Resistance +300
+			level 5: A ring imbued with Core's power.  <Effect> Max MP +40 P. Evasion +8 M. Evasion +8 P. Atk. +100 M. Atk. +100 P. Def. +10% M. Def. +10% Received damage -10% Silence Atk. Rate +20% Fear Atk. Rate +400 Silence Resistance +401 Fear Resistance +402
+			level 6: A ring imbued with Core's power.  <Effect> Max MP +50 P. Evasion +10 M. Evasion +10 P. Atk. +200 M. Atk. +200 P. Def. +15% M. Def. +15% Received damage -15% Silence Atk. Rate +20% Fear Atk. Rate +500 Silence Resistance +501 Fear Resistance +502 Applies the Core Power buff when hit. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_ring_of_core_i03">
+            <value level="5">icon.accessory_ring_of_core_i04</value>
+            <value level="6">icon.accessory_ring_of_core_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50446" name="Baium's Ring" max-level="6">
+        <!-- 
+			level 1: A ring imbued with power of Baium.  <Effect> Max MP +15 P. Accuracy +2 M. Accuracy +2 Atk. Spd. +3% Casting Spd. +3% Skill Power +3% Infection Atk. Rate +5% Shock Atk. Rate +10% Infection Resistance +5% Shock Resistance +150
+			level 2: A ring imbued with power of Baium.  <Effect> Max MP +21 P. Accuracy +3 M. Accuracy +3 Atk. Spd. +4% Casting Spd. +4% Skill Power +6% Infection Atk. Rate +10% Shock Atk. Rate +15% Infection Resistance +10% Shock Resistance +210
+			level 3: A ring imbued with power of Baium.  <Effect> Max MP +27 P. Accuracy +4 M. Accuracy +4 Atk. Spd. +5% Casting Spd. +5% Skill Power +10% P. Critical Damage +15% M. Skill Critical Damage +10% Infection Atk. Rate +15% Shock Atk. Rate +270 Infection Resistance +271 Shock Resistance +272
+			level 4: A ring imbued with power of Baium.  <Effect> Max MP +40 P. Accuracy +6 M. Accuracy +6 Atk. Spd. +7% Casting Spd. +7% Skill Power +12% All Critical Damage +15% Infection Atk. Rate +15% Shock Atk. Rate +20% Infection Resistance +400 Shock Resistance +401
+			level 5: A ring imbued with power of Baium.  <Effect> Max MP +55 P. Accuracy +8 M. Accuracy +8 Atk. Spd. +9% Casting Spd. +9% Skill Power +15% All Critical Damage +18% Infection Atk. Rate +15% Shock Atk. Rate +20% Infection Resistance +550 Shock Resistance +551
+			level 6: A ring imbued with power of Baium.  <Effect> Max MP +70 P. Accuracy +10 M. Accuracy +10 Atk. Spd. +12% Casting Spd. +12% Skill Power +20% All Critical Damage +23% Infection Atk. Rate +15% Shock Atk. Rate +20% Infection Resistance +700 Shock Resistance +701 The Baium Power effect is applied after an attack. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_ring_of_baium_i03">
+            <value level="5">icon.accessory_ring_of_baium_i04</value>
+            <value level="6">icon.accessory_ring_of_baium_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50447" name="Orfen's Earring" max-level="6">
+        <!-- 
+			level 1: An earring imbued with Orfen's power.  <Effect> Max MP +19 Received Healing +2% Skill MP Consumption -2% Hold Atk. Rate +10% Silence Atk. Rate +5% Fear Atk. Rate +5% Hold Resistance +10% Silence Resistance +5% Fear Resistance +5%
+			level 2: An earring imbued with Orfen's power.  <Effect> Max MP +25 Received Healing +4% Skill MP Consumption -3% Hold Atk. Rate +15% Silence Atk. Rate +10% Fear Atk. Rate +10% Hold Resistance +15% Silence Resistance +10% Fear Resistance +10%
+			level 3: An earring imbued with Orfen's power.  <Effect> Max MP +31 Received Healing +6% Skill MP Consumption -5% With a 30%% chance, recovers MP after an attack. Hold Atk. Rate +20% Silence Atk. Rate +15% Fear Atk. Rate +15% Hold Resistance +20% Silence Resistance +15% Fear Resistance +15%
+			level 4: An earring imbued with Orfen's power.  <Effect> Max MP +40 P. Atk. +50 M. Atk. +50 Received Healing +8% Skill MP Consumption -6% Absorbs 3%% of the inflicted damage as MP. MP Recovery Rate +2 Hold Atk. Rate +20% Silence Atk. Rate +15% Fear Atk. Rate +15% Hold Resistance +400 Silence Resistance +401 Fear Resistance +402
+			level 5: An earring imbued with Orfen's power.  <Effect> Max MP +50 P. Atk. +100 M. Atk. +100 Received Healing +10% Skill MP Consumption -7% Absorbs 3%% of the inflicted damage as MP. MP Recovery Rate +3 M. Damage Resistance +3% Hold Atk. Rate +20% Silence Atk. Rate +15% Fear Atk. Rate +500 Hold Resistance +501 Silence Resistance +502 Fear Resistance +503
+			level 6: An earring imbued with Orfen's power.  <Effect> Max MP +60 P. Atk. +200 M. Atk. +200 Received Healing +15% Skill MP Consumption -10% Absorbs 3%% of the inflicted damage as MP. MP Recovery Rate +5 M. Damage Resistance +5% Hold Atk. Rate +20% Silence Atk. Rate +15% Fear Atk. Rate +600 Hold Resistance +601 Silence Resistance +602 Fear Resistance +603 Applies the Orfen Power buff after an attack, recovering 10%% of MP. (Cooldown: 300 sec.) Inflicts Sleep on the target after an attack. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_earring_of_orfen_i03">
+            <value level="5">icon.accessory_earring_of_orfen_i04</value>
+            <value level="6">icon.accessory_earring_of_orfen_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50448" name="Zaken's Earring" max-level="6">
+        <!-- 
+			level 1: An earring imbued with Zaken's power.  <Effect> Max MP +22 MP Consumption -2% Received Healing +4% HP Recovery Rate +10% Infection Atk. Rate +10% Shock Atk. Rate +5% Silence Atk. Rate +5% Fear Atk. Rate +5% Infection Resistance +10% Shock Resistance +220 Silence Resistance +221 Fear Resistance +222
+			level 2: An earring imbued with Zaken's power.  <Effect> Max MP +28 MP Consumption -3% Received Healing +6% HP Recovery Rate +15% Infection Atk. Rate +15% Shock Atk. Rate +10% Silence Atk. Rate +10% Fear Atk. Rate +10% Infection Resistance +15% Shock Resistance +280 Silence Resistance +281 Fear Resistance +282
+			level 3: An earring imbued with Zaken's power.  <Effect> Max MP +34 MP Consumption -4% Received Healing +10% HP Recovery Rate +20% Absorbs 8%% of inflicted damage as HP. Infection Atk. Rate +20% Shock Atk. Rate +15% Silence Atk. Rate +15% Fear Atk. Rate +15% Infection Resistance +20% Shock Resistance +340 Silence Resistance +341 Fear Resistance +342
+			level 4: An earring imbued with Zaken's power.  <Effect> Max MP +45 MP Consumption -5% Received Healing +12% HP Recovery Rate +20% Absorbs 8%% of inflicted damage as HP. HP Recovery Potions' Effect +50 Infection Atk. Rate +20% Shock Atk. Rate +15% Silence Atk. Rate +15% Fear Atk. Rate +15% Infection Resistance +450 Shock Resistance +451 Silence Resistance +452 Fear Resistance +453
+			level 5: An earring imbued with Zaken's power.  <Effect> Max MP +60 P. Atk. +50 M. Atk. +50 MP Consumption -6% Received Healing +15% HP Recovery Rate +20% Absorbs 8%% of inflicted damage as HP. HP Recovery Potions' Effect +100 Infection Atk. Rate +20% Shock Atk. Rate +15% Silence Atk. Rate +600 Fear Atk. Rate +601 Infection Resistance +602 Shock Resistance +603 Silence Resistance +604 Fear Resistance +605
+			level 6: An earring imbued with Zaken's power.  <Effect> Max MP +90 P. Atk. +200 M. Atk. +200 MP Consumption -8% Received Healing +20% HP Recovery Rate +20% Absorbs 8%% of inflicted damage as HP. HP Recovery Potions' Effect +200 Infection Atk. Rate +20% Shock Atk. Rate +15% Silence Atk. Rate +900 Fear Atk. Rate +901 Infection Resistance +902 Shock Resistance +903 Silence Resistance +904 Fear Resistance +905  Applies the Zaken Power buff after an attack, recovering 10%% of HP. (Cooldown: 300 sec.) Inflicts Silence on the target after an attack. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_earring_of_zaken_i03">
+            <value level="5">icon.accessory_earring_of_zaken_i04</value>
+            <value level="6">icon.accessory_earring_of_zaken_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50449" name="Antharas' Earring" max-level="6">
+        <!-- 
+			level 1: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +28 Received Healing +6% Skill MP Consumption -3% Absorbs 3% of the inflicted damage as HP. Infection Atk. Rate +10% Shock Atk. Rate +5% Silence Atk. Rate +5% Fear Atk. Rate +5% Infection Resistance +10% Shock Resistance +280 Silence Resistance +281 Fear Resistance +282
+			level 2: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +34 Received Healing +10% Skill MP Consumption -5% Absorbs 4% of the inflicted damage as HP. Damage Reflection Resistance 7% Infection Atk. Rate +20% Shock Atk. Rate +10% Silence Atk. Rate +10% Fear Atk. Rate +10% Infection Resistance +340 Shock Resistance +341 Silence Resistance +342 Fear Resistance +343
+			level 3: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +40 CON +1 MEN +1 Received Healing +15% Skill MP Consumption -6% Absorbs 6% of the inflicted damage as HP. Damage Reflection Resistance 15% Infection Atk. Rate +30% Shock Atk. Rate +20% Silence Atk. Rate +400 Fear Atk. Rate +401 Infection Resistance +402 Shock Resistance +403 Silence Resistance +404 Fear Resistance +405
+			level 4: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +50 CON +1 MEN +1 P. Atk. +50 M. Atk. +50 Received Healing +17% Skill MP Consumption -7% Absorbs 7% of the inflicted damage as HP. Damage Reflection Resistance 20% Infection Atk. Rate +500 Shock Atk. Rate +501 Silence Atk. Rate +502 Fear Atk. Rate +503 Infection Resistance +504 Shock Resistance +505 Silence Resistance +506 Fear Resistance +507
+			level 5: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +70 CON +2 MEN +2 P. Atk. +150 M. Atk. +150 Received Healing +20% Skill MP Consumption -8% Absorbs 8% of the inflicted damage as HP. Damage Reflection Resistance 25% Infection Atk. Rate +700 Shock Atk. Rate +701 Silence Atk. Rate +702 Fear Atk. Rate +703 Infection Resistance +704 Shock Resistance +705 Silence Resistance +706 Fear Resistance +707
+			level 6: An earring imbued with the Earth Dragon's power.  <Effect> Max MP +100 CON +3 MEN +3 P. Atk. +300 M. Atk. +300 Received Healing +30% Skill MP Consumption -10% Absorbs 10% of the inflicted damage as HP. Damage Reflection Resistance 30% Infection Atk. Rate +1000 Shock Atk. Rate +1001 Silence Atk. Rate +1002 Fear Atk. Rate +1003 Infection Resistance +1004 Shock Resistance +1005 Silence Resistance +1006 Fear Resistance +1007 Applies the Antharas Power buff after an attack, recovering 30%% of HP/ MP. (Cooldown: 300 sec.) Shocks the target after an attack. (Cooldown: 300 sec.)
+		-->
+        <icon initial="icon.accessory_earring_of_antaras_i02">
+            <value level="5">icon.accessory_earring_of_antaras_i04</value>
+            <value level="6">icon.accessory_earring_of_antaras_i05</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50450" name="Frintezza's Necklace" max-level="6">
+        <!-- 
+			level 1: A necklace imbued with Frintezza's power.  <Effect> Max. MP +30 Skill Power +5% Skill Cooldown -5% All Critical Rate +2% All Critical Damage +20 Sleep Resistance +10% Sleep Atk. Rate +10%
+			level 2: A necklace imbued with Frintezza's power.  <Effect> Max. MP +36 Skill Power +10% Skill Cooldown -6% All Critical Rate +3% All Critical Damage +50 Sleep Resistance +15% Sleep Atk. Rate +15%
+			level 3: A necklace imbued with Frintezza's power.  <Effect> Max. MP +50 Skill Power +15% Skill Cooldown -8% All Critical Rate +5% All Critical Damage +100 Reflects 5% of damage Sleep Resistance +20% Sleep Atk. Rate +20%
+			level 4: A necklace imbued with Frintezza's power.  <Effect> Max. MP +65 Skill Power +18% Skill Cooldown -10% All Critical Rate +6% All Critical Damage +150 Reflects 6% of damage Sleep Resistance +20% Sleep Atk. Rate +20%
+			level 5: A necklace imbued with Frintezza's power.  <Effect> Max. MP +90 Skill Power +23% Skill Cooldown -12% All Critical Rate +7% All Critical Damage +200 Reflects 10% of damage Sleep Resistance +20% Sleep Atk. Rate +20%
+			level 6: A necklace imbued with Frintezza's power.  <Effect> Max. MP +120 Skill Power +25% Skill Cooldown -15% All Critical Rate +10% All Critical Damage +300 Reflects 15% of damage Sleep Resistance +20% Sleep Atk. Rate +20% Inflicts Fear on the target when hit. Applies the Frintezza Power buff. (Cooldown: 180 sec.)
+		-->
+        <icon initial="icon.accessory_necklace_of_frintessa_i04">
+            <value level="5">icon.accessory_necklace_of_frintessa_i05</value>
+            <value level="6">icon.accessory_necklace_of_frintessa_i06</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50451" name="Queen Ant Power">
+        <!-- For 30 sec., grants immunity to debuffs that decrease P./ M. Atk. -->
+        <icon initial="icon.accessory_ring_of_queen_ant_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50452" name="Core Power">
+        <!-- For 30 sec., grants immunity to debuffs that decrease P./ M. Def. -->
+        <icon initial="icon.accessory_ring_of_core_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50453" name="Baium Power">
+        <!-- Damage +10%%. for 30 sec.. -->
+        <icon initial="icon.accessory_ring_of_baium_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50454" name="Orfen Power" debuff="true" type="MAGIC">
+        <!-- Inflicts Sleep on the enemy. -->
+        <icon initial="icon.accessory_earring_of_orfen_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50455" name="Zaken Power" debuff="true" type="MAGIC">
+        <!-- Inflicts Silence on the enemy. -->
+        <icon initial="icon.accessory_earring_of_zaken_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50456" name="Antharas Power" debuff="true" type="MAGIC">
+        <!-- Stuns the target and immobilizes it. -->
+        <icon initial="icon.accessory_earring_of_antaras_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50457" name="Frintezza Power" debuff="true" type="MAGIC">
+        <!-- Inflicts Fear on the enemy. -->
+        <icon initial="icon.accessory_necklace_of_frintessa_i06"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50458" name="Pirate Earring">
+        <!-- Max. MP +34\nMP Consumption -2%\nP. Def. +500\nDamage Reflection +5%\nAbsorbs 2% of inflicted damage as HP. -->
+        <icon initial="icon.accessory_earring_of_zaken_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50459" name="Blessed Dragon Belt" max-level="11">
+        <!-- 
+			level 1: A belt imbued with dragon power.  <Effect> Weight limit +1000 Max HP +20 Max MP +10 Мax CP +20 P. Def. +10 M. Def. +10 DEX +1 WIT +1
+			level 2: Imbued with dragon power.  <Effect> Weight limit +2000 Inventory slots +2 Max HP +30 Max MP +20 Max CP +30 P. Def. +15 M. Def. +15 DEX +1 WIT +1 CON +20000 MEN +20001
+			level 3: Imbued with dragon power.  <Effect> Weight limit +3000 Inventory slots +4 Max HP +40 Max MP +25 Max CP +40 P. Def. +20 M. Def. +20 DEX +1 WIT +1 CON +30000 MEN +30001 STR +30002 INT +30003
+			level 4: Imbued with dragon power.  <Effect> Weight limit +4000 Inventory slots +6 Max HP +50 Max MP +30 Max CP +50 P. Def. +25 M. Def. +25 DEX +2 WIT +2 CON +40000 MEN +40001 STR +40002 INT +40003
+			level 5: Imbued with dragon power.  <Effect> Weight limit +5000 Inventory slots +6 Max HP +150 Max MP +100 Max CP +200 HP Recovery Potions' Effect +80 MP Recovery Potions' Effect +10 P. Def. +30 M. Def. +30 Atk. Spd. +50000 Casting Spd. +50001 DEX +50002 WIT +50003 CON +50004 MEN +50005 STR +50006 INT +50007  <Dragon's Protection> When hit, has a +50008 chance to create a barrier with +50009 HP (can be triggered up to +60 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 6: Imbued with dragon power.  <Effect> Weight limit +6000 Inventory slots +6 Max HP +200 Max MP +150 Max CP +300 HP Recovery Potions' Effect +100 MP Recovery Potions' Effect +20 P. Def. +40 M. Def. +40 Atk. Spd. +60000 Casting Spd. +60001 DEX +60002 WIT +60003 CON +60004 MEN +60005 STR +60006 INT +60007  <Dragon's Protection> When hit, has a +60008 chance to create a barrier with +60009 HP (can be triggered up to +60 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 7: Imbued with dragon power.  <Effect> Weight limit +7000 Inventory slots +6 Max HP +300 Max MP +200 Max CP +500 HP Recovery Potions' Effect +120 MP Recovery Potions' Effect +30 P. Def. +50 M. Def. +50 Atk. Spd. +70000 Casting Spd. +70001 P. Critical Rate +70002 M. Skill Critical Rate +70003 Received damage +70004 DEX +70005 WIT +70006 CON +70007 MEN +70008 STR +70009 INT +60  <Dragon's Protection> When hit, has a +61 chance to create a barrier with +62 HP (can be triggered up to +63 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 8: Imbued with dragon power.  <Effect> Weight limit +8000 Inventory slots +8 Max HP +350 Max MP +250 Max CP +600 HP Recovery Potions' Effect +135 MP Recovery Potions' Effect +40 P. Def. +65 M. Def. +65 Atk. Spd. +80000 Casting Spd. +80001 P. Critical Rate +80002 M. Skill Critical Rate +80003 Received damage +80004 DEX +80005 WIT +80006 CON +80007 MEN +80008 STR +80009 INT +80  <Dragon's Protection> When hit, has a +81 chance to create a barrier with +82 HP (can be triggered up to +83 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 9: Imbued with dragon power.  <Effect> Weight limit +9000 Inventory slots +8 Max HP +500 Max MP +300 Max CP +800 HP Recovery Potions' Effect +175 MP Recovery Potions' Effect +65 P. Def. +90 M. Def. +90 Atk. Spd. +90000 Casting Spd. +90001 P. Critical Rate +90002 M. Skill Critical Rate +90003 Received damage +90004 Received Healing +90005 DEX +90006 WIT +90007 CON +90008 MEN +90009 STR +80 INT +81  <Dragon's Protection> When hit, has a +82 chance to create a barrier with +83 HP (can be triggered up to +84 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 10: Imbued with dragon power.  <Effect> Weight limit +10000 Inventory slots +10 Max HP +800 Max MP +400 Max CP +1200 HP Recovery Potions' Effect +250 MP Recovery Potions' Effect +90 P. Def. +125 M. Def. +125 Atk. Spd. +100000 Casting Spd. +100001 P. Critical Rate +100002 M. Skill Critical Rate +100003 Received damage +100004 Received Healing +100005 DEX +100006 WIT +100007 CON +100008 MEN +100009 STR +100 INT +101  <Dragon's Protection> When hit, has a +102 chance to create a barrier with +103 HP (can be triggered up to +104 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 11: Imbued with dragon power.  <Effect> Weight limit +12000 Inventory slots +12 Max HP +1500 Max MP +800 Max CP +1500 HP Recovery Potions' Effect +400 MP Recovery Potions' Effect +120 P. Def. +300 M. Def. +300 Atk. Spd. +120000 Casting Spd. +120001 P. Critical Rate +120002 M. Skill Critical Rate +120003 Received damage +120004 Received Healing +120005 DEX +120006 WIT +120007 CON +120008 MEN +120009 STR +120 INT +121  <Dragon's Protection> When hit, has a +122 chance to create a barrier with +123 HP (can be triggered up to +124 time(s)). The barrier disappears when its HP is 0 or after all trigger attempts.
+		-->
+        <icon initial="icon.dragon_belt_2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50460" name="Dragon's Protection" max-level="7">
+        <!-- 
+			level 1: The barrier's HP: 20000 Can be activated up to 1 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 2: The barrier's HP: 30000 Can be activated up to 2 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 3: The barrier's HP: 40000 Can be activated up to 2 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 4: The barrier's HP: 50000 Can be activated up to 3 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 5: The barrier's HP: 60000 Can be activated up to 3 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 6: The barrier's HP: 80000 Can be activated up to 4 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+			level 7: The barrier's HP: 100000 Can be activated up to 5 time(s).  The barrier disappears when its HP is 0 or after all trigger attempts.
+		-->
+        <icon initial="icon.dragon_belt_grace"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50461" name="Pet Earring">
+        <!-- An earring for a per.\nP. Atk. +1000\nM. Atk. +1000 -->
+        <icon initial="BranchSys2.icon.g_accessory_event_earring"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50462" name="Pet Ring">
+        <!-- A ring for a pet.\nP. Def. +1000\nM. Def. +500\nAcquired XP +50%% -->
+        <icon initial="BranchSys2.icon.g_accessory_event_ring"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50463" name="Zaken Doll's Sorcery" max-level="3">
+        <!-- 
+			level 1: A doll imbued with Zaken' power.  <Effect> Skill Critical Rate +10 Skill Critical Damage +100 HP Recovery Potions' Effect +20 Absorbs 1% of the inflicted damage as HP.
+			level 2: A doll imbued with Zaken' power.  <Effect> Skill Critical Rate +40 Skill Critical Damage +200 HP Recovery Potions' Effect +50 Absorbs 2% of the inflicted damage as HP.
+			level 3: A doll imbued with Zaken' power.  <Effect> Skill Critical Rate +60 Skill Critical Damage +300 HP Recovery Potions' Effect +80 Absorbs 3% of the inflicted damage as HP.
+		-->
+        <icon initial="icon.bm_zaken_doll_30d"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50464" name="Core Doll's Sorcery" max-level="3">
+        <!-- 
+			level 1: A doll imbued with Core's power.  <Effect> Received Skill Critical Damage -5% Received Skill Critical Rate -2% Shock Resistance +10% Sleep Resistance +10% Knockback Resistance +5%
+			level 2: A doll imbued with Core's power.  <Effect> Received Skill Critical Damage -10% Received Skill Critical Rate -5% Shock Resistance +20% Sleep Resistance +20% Knockback Resistance +10%
+			level 3: A doll imbued with Core's power.  <Effect> Received Skill Critical Damage -15% Received Skill Critical Rate -8% Shock Resistance +30% Sleep Resistance +30% Knockback Resistance +20%
+		-->
+        <icon initial="icon.bm_core_doll_30d"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50465" name="Necklace of Spirits" max-level="11">
+        <!-- 
+			level 1: A necklace imbued with the power of spirits. P. Atk. +5 M. Atk. +5 P. Def. +5 M. Def. +5 Atk. Spd. +2 Casting Spd. +2
+			level 2: A necklace imbued with the power of spirits. P. Atk. +7 M. Atk. +7 P. Def. +7 M. Def. +7 Atk. Spd. +4 Casting Spd. +4
+			level 3: A necklace imbued with the power of spirits. P. Atk. +10 M. Atk. +10 P. Def. +10 M. Def. +10 Atk. Spd. +6 Casting Spd. +6
+			level 4: A necklace imbued with the power of spirits. P. Atk. +15 M. Atk. +15 P. Def. +15 M. Def. +15 Atk. Spd. +8 Casting Spd. +8
+			level 5: A necklace imbued with the power of spirits. P. Atk. +20 M. Atk. +20 P. Def. +20 M. Def. +20 Atk. Spd. +10 Casting Spd. +10
+			level 6: A necklace imbued with the power of spirits. P. Atk. +30 M. Atk. +30 P. Def. +25 M. Def. +25 Atk. Spd. +12 Casting Spd. +12
+			level 7: A necklace imbued with whr power of spirits. P. Atk. +50 M. Atk. +50 P. Def. +30 M. Def. +30 Atk. Spd. +15 Casting Spd. +15 All Critical Damage +10
+			level 8: A necklace imbued with whr power of spirits. P. Atk. +100 M. Atk. +100 P. Def. +50 M. Def. +50 Atk. Spd. +20 Casting Spd. +20 All Critical Damage +20
+			level 9: A necklace imbued with whr power of spirits. P. Atk. +300 M. Atk. +300 P. Def. +70 M. Def. +70 Atk. Spd. +30 Casting Spd. +30 All Critical Damage +50 STR +1 INT +1
+			level 10: A necklace imbued with whr power of spirits. P. Atk. +500 M. Atk. +500 P. Def. +100 M. Def. +100 Atk. Spd. +40 Casting Spd. +40 All Critical Damage +100 STR +2 INT +2
+			level 11: A necklace imbued with whr power of spirits. P. Atk. +800 M. Atk. +800 P. Def. +150 M. Def. +150 Atk. Spd. +50 Casting Spd. +50 All Critical Damage +300 STR +3 INT +3
+		-->
+        <icon initial="icon.necklace_of_elemental"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50466" name="Talisman of Hellbound" max-level="10">
+        <!-- 
+			level 1: A talisman imbued with the power of Hellbound. Max HP +100 P. Atk. +50 M. Atk. +50 P. Def. +100 M. Def. +100
+			level 2: A talisman imbued with the power of Hellbound. Max HP +200 P. Atk. +100 M. Atk. +100 P. Def. +200 M. Def. +200 P. Accuracy +1 M. Accuracy +1
+			level 3: A talisman imbued with the power of Hellbound. Max HP +300 P. Atk. +150 M. Atk. +150 P. Def. +300 M. Def. +300 P. Accuracy +2 M. Accuracy +2
+			level 4: A talisman imbued with the power of Hellbound. Max HP +400 P. Atk. +200 M. Atk. +200 P. Def. +400 M. Def. +400 P. Accuracy +3 M. Accuracy +3
+			level 5: A talisman imbued with the power of Hellbound. Max HP +500 P. Atk. +250 M. Atk. +250 P. Def. +500 M. Def. +500 Atk. Spd. +35 Casting Spd. +35 P. Accuracy +4 M. Accuracy +4  <When triggered> Deals 5000 additional damage when attacking.
+			level 6: A talisman imbued with the power of Hellbound. Max HP +700 P. Atk. +300 M. Atk. +300 P. Def. +600 M. Def. +600 Atk. Spd. +50 Casting Spd. +50 Speed +1 P. Accuracy +5 M. Accuracy +7000  <When triggered> Deals 7001 additional damage when attacking.
+			level 7: A talisman imbued with the power of Hellbound. Max HP +1000 P. Atk. +350 M. Atk. +350 P. Def. +700 M. Def. +700 Atk. Spd. +70 Casting Spd. +70 Speed +2 P. Accuracy +6 M. Accuracy +10000 Received PvP damage 10001  <When triggered> Deals 10002 additional damage when attacking.
+			level 8: A talisman imbued with the power of Hellbound. Max HP +2000 P. Atk. +400 M. Atk. +400 P. Def. +800 M. Def. +800 Atk. Spd. +100 Casting Spd. +100 Speed +5 P. Accuracy +7 M. Accuracy +20000 Received PvP damage 20001 Debuff Resistance 20002  <When triggered> Deals 20003 additional damage when attacking.
+			level 9: A talisman imbued with the power of Hellbound. Max HP +3000 P. Atk. +450 M. Atk. +450 P. Def. +900 M. Def. +900 Atk. Spd. +150 Casting Spd. +150 Speed +7 P. Accuracy +8 M. Accuracy +30000 Received PvP damage 30001 Debuff Resistance 30002  <When triggered> Deals 30003 additional damage when attacking.
+			level 10: A talisman imbued with the power of Hellbound. Max HP +5000 P. Atk. +500 M. Atk. +500 P. Def. +1000 M. Def. +1000 Atk. Spd. +200 Casting Spd. +200 Speed +10 P. Accuracy +10 M. Accuracy +50000 Received PvP damage 50001 Debuff Resistance 50002  <When triggered> Deals 50003 additional damage when attacking.
+		-->
+        <icon initial="icon.hellbound_talisman_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50467" name="Hell Lightning" max-level="6">
+        <!-- 
+			level 1: Deals 1000 fixed damage.
+			level 2: Deals 1500 fixed damage.
+			level 3: Deals 2000 fixed damage.
+			level 4: Deals 3000 fixed damage.
+			level 5: Deals 4000 fixed damage.
+			level 6: Deals 5000 fixed damage.
+		-->
+        <icon initial="icon.hellbound_talisman_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50468" name="Hellbound Ring" max-level="11">
+        <!-- 
+			level 1: <Effect> Paralysis Resistance +1%
+			level 2: <Effect> Paralysis Resistance +2%
+			level 3: <Effect> Paralysis Resistance +3%
+			level 4: <Effect> Paralysis Resistance +4%
+			level 5: <Effect> Paralysis Resistance +5%
+			level 6: <Effect> Paralysis Resistance +10% .Max HP +100 .P. Atk. +10 .M. Atk. +10
+			level 7: <Effect> Paralysis Resistance +12% .Max HP +150 .P. Atk. +15 .M. Atk. +15
+			level 8: <Effect> DEX +1 WIT +1 Paralysis Resistance +14% .Max HP +200 .P. Atk. +20 .M. Atk. +20
+			level 9: <Effect> DEX +1 WIT +1 Paralysis Resistance +18% .Max HP +250 .P. Atk. +30 .M. Atk. +30
+			level 10: <Effect> DEX +2 WIT +2 Paralysis Resistance +22% .Max HP +250 .P. Atk. +50 .M. Atk. +50
+			level 11: <Effect> DEX +5 WIT +5 Paralysis Resistance +30% .Max HP +1000 .P. Atk. +300 .M. Atk. +300
+		-->
+        <icon initial="icon.accessary_ring_of_anguish_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50469" name="Half Mask of Glory">
+        <!-- All Critical Damage +100. -->
+        <icon initial="icon.accessory_half_face_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50470" name="Growth Rune" max-level="15">
+        <!-- 
+			level 1: Acquired XP +1% Acquired SP +1%
+			level 2: Acquired XP +2% Acquired SP +2%
+			level 3: Acquired XP +3% Acquired SP +3%
+			level 4: Acquired XP +4% Acquired SP +4%
+			level 5: P. Def. +10 M. Def. +10 Acquired XP +5% Acquired SP +5%
+			level 6: P. Def. +20 M. Def. +20 Acquired XP +6% Acquired SP +6%
+			level 7: P. Def. +30 M. Def. +30 Acquired XP +7% Acquired SP +7%
+			level 8: P. Def. +50 M. Def. +50 Acquired XP +8% Acquired SP +8%
+			level 9: P. Def. +70 M. Def. +70 Acquired XP +9% Acquired SP +9%
+			level 10: P. Atk. +100 M. Atk. +100 P. Def. +100 M. Def. +100 Acquired XP +10% Acquired SP +10%
+			level 11: P. Atk. +120 M. Atk. +120 P. Def. +120 M. Def. +120 Acquired XP +11% Acquired SP +11%
+			level 12: P. Atk. +150 M. Atk. +150 P. Def. +150 M. Def. +150 Acquired XP +12% Acquired SP +12%
+			level 13: P. Atk. +180 M. Atk. +180 P. Def. +180 M. Def. +180 Acquired XP +13% Acquired SP +13%
+			level 14: P. Atk. +210 M. Atk. +210 P. Def. +210 M. Def. +210 Acquired XP +14% Acquired SP +14%
+			level 15: P. Atk. +300 M. Atk. +300 P. Def. +300 M. Def. +300 Acquired XP +15% Acquired SP +15%
+		-->
+        <icon initial="icon.pc_cafe_rune_01">
+            <value level="6">icon.pc_cafe_rune_02</value>
+            <value level="11">icon.pc_cafe_rune_03</value>
+        </icon>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50471" name="Orfen Power" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.accessory_earring_of_orfen_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50472" name="Zaken Power" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.accessory_earring_of_zaken_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50473" name="Antharas Power" type="MAGIC">
+        <!--  -->
+        <icon initial="icon.accessory_earring_of_antaras_i05"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50474" name="Swift Fist" debuff="true" type="MAGIC">
+        <!-- Stuns the target and immobilizes it. -->
+        <icon initial="icon.armor_t96_g_i03"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50475" name="A-grade: Breastplate of Protection">
+        <!-- CON +2\nSTR +2\nOverweight limit +1500\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t901_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50476" name="Breastplate of Protection">
+        <!-- Shield Defense +100\n\n<Counter Paralysis>\nWhen damage is taken, there is a 2% chance to paralyze the enemy for 3 sec. -->
+        <icon initial="icon.armor_t901_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50477" name="+1 Breastplate of Protection" max-level="10">
+        <!-- 
+			level 1: Shield Defense +150  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 2: Shield Defense +200  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 3: Shield Defense +250  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 4: Shield Defense +300  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 5: Shield Defense +400 Received AoE skill damage -5%  <Counter Paralysis> When damage is taken, there is a 4% chance to paralyze the enemy for 3 sec.
+			level 6: Shield Defense +500 Received AoE skill damage -6%  <Counter Paralysis> When damage is taken, there is a 6% chance to paralyze the enemy for 3 sec.
+			level 7: Shield Defense +600 Received AoE skill damage -7%  <Counter Paralysis> When damage is taken, there is a 8% chance to paralyze the enemy for 3 sec.
+			level 8: Shield Defense +700 Received AoE skill damage -8%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 3 sec.
+			level 9: Shield Defense +800 Received AoE skill damage -9%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 4 sec.
+			level 10: Shield Defense +1000 Received AoE skill damage -10%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 5 sec.
+		-->
+        <icon initial="icon.armor_t901_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50478" name="A-grade: Gaiters of Protection">
+        <!-- CON +2\nOverweight limit +1000\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t901_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50479" name="Gaiters of Protection">
+        <!-- <Damage Limit>\nWith a 2% chance, limits received damage to 5000 for 5 sec. when hit.\n(Cooldown: 10 sec.) -->
+        <icon initial="icon.armor_t901_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50480" name="+1 Gaiters of Protection" max-level="10">
+        <!-- 
+			level 1: <Damage Limit> With a 2% chance, limits received damage to 4800 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 2: <Damage Limit> With a 2% chance, limits received damage to 4600 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 3: <Damage Limit> With a 2% chance, limits received damage to 4400 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 4: <Damage Limit> With a 2% chance, limits received damage to 4200 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 5: Received AoE skill damage -5%  <Damage Limit> With a 4% chance, limits received damage to 4000 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 6: Received AoE skill damage -6%  <Damage Limit> With a 6% chance, limits received damage to 3600 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 7: Received AoE skill damage -7%  <Damage Limit> With a 8% chance, limits received damage to 3200 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 8: Received AoE skill damage -8%  <Damage Limit> With a 10% chance, limits received damage to 2800 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 9: Received AoE skill damage -9%  <Damage Limit> With a 10% chance, limits received damage to 2400 for 5 sec. when hit. (Cooldown: 10 sec.)
+			level 10: Received AoE skill damage -10%  <Damage Limit> With a 10% chance, limits received damage to 2000 for 5 sec. when hit. (Cooldown: 10 sec.)
+		-->
+        <icon initial="icon.armor_t901_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50481" name="Counter Paralysis" max-level="3" debuff="true">
+        <!-- Paralyzes the target and immobilizes it. -->
+        <icon initial="icon.skill1095"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50482" name="Damage Limit" max-level="11">
+        <!-- 
+			level 1: Received damage limit: 5000
+			level 2: Received damage limit: 4800
+			level 3: Received damage limit: 4600
+			level 4: Received damage limit: 4400
+			level 5: Received damage limit: 4200
+			level 6: Received damage limit: 4000
+			level 7: Received damage limit: 3600
+			level 8: Received damage limit: 3200
+			level 9: Received damage limit: 2800
+			level 10: Received damage limit: 2400
+			level 11: Received damage limit: 2000
+		-->
+        <icon initial="icon.skill10020_2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50483" name="A-grade: Leather Armor of Protection">
+        <!-- DEX +2\nSTR +2\nOverweight limit +1500\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t902_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50484" name="Leather Armor of Protection">
+        <!-- P. Evasion +1\nM. Evasion +1\nAll Skill Evasion +1%\n<Counter Paralysis>\nWhen damage is taken, there is a 2% chance to paralyze the enemy for 3 sec. -->
+        <icon initial="icon.armor_t902_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50485" name="+1 Leather Armor of Protection" max-level="10">
+        <!-- 
+			level 1: P. Evasion +2 M. Evasion +2 All Skill Evasion +2% <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 2: P. Evasion +3 M. Evasion +3 All Skill Evasion +3% <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 3: P. Evasion +4 M. Evasion +4 All Skill Evasion +4% <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 4: P. Evasion +5 M. Evasion +5 All Skill Evasion +5% <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 5: P. Evasion +6 M. Evasion +6 All Skill Evasion +6% Received AoE skill damage -5% <Counter Paralysis> When damage is taken, there is a 4% chance to paralyze the enemy for 3 sec.
+			level 6: P. Evasion +7 M. Evasion +7 All Skill Evasion +7% Received AoE skill damage -6% <Counter Paralysis> When damage is taken, there is a 6% chance to paralyze the enemy for 3 sec.
+			level 7: P. Evasion +9 M. Evasion +9 All Skill Evasion +9% Received AoE skill damage -7% <Counter Paralysis> When damage is taken, there is a 8% chance to paralyze the enemy for 3 sec.
+			level 8: P. Evasion +11 M. Evasion +11 All Skill Evasion +11% Received AoE skill damage -8% <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 3 sec.
+			level 9: P. Evasion +13 M. Evasion +13 All Skill Evasion +13% Received AoE skill damage -9% <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 4 sec.
+			level 10: P. Evasion +15 M. Evasion +15 All Skill Evasion +15% Received AoE skill damage -10% <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 5 sec.
+		-->
+        <icon initial="icon.armor_t902_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50486" name="A-grade: Leather Leggings of Protection">
+        <!-- DEX +2\nOverweight limit +1000\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t902_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50487" name="Leather Leggings of Protection">
+        <!-- <Critical Damage Defense>\nWhen damage is taken, with a 2% chance for 5 sec.\nAll received Critical Rate -10%\nAll received Critical Damage -10%\n(Cooldown: 10 sec.) -->
+        <icon initial="icon.armor_t902_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50488" name="+1 Leather Leggings of Protection" max-level="10">
+        <!-- 
+			level 1: <Critical Damage Defense> When damage is taken, with a 2% chance for 5 sec. All received Critical Rate -12% All received Critical Damage -12% (Cooldown: 10 sec.)
+			level 2: <Critical Damage Defense> When damage is taken, with a 2% chance for 5 sec. All received Critical Rate -14% All received Critical Damage -14% (Cooldown: 10 sec.)
+			level 3: <Critical Damage Defense> When damage is taken, with a 2% chance for 5 sec. All received Critical Rate -16% All received Critical Damage -16% (Cooldown: 10 sec.)
+			level 4: <Critical Damage Defense> When damage is taken, with a 2% chance for 5 sec. All received Critical Rate -18% All received Critical Damage -18% (Cooldown: 10 sec.)
+			level 5: Received AoE skill damage -5%  <Critical Damage Defense> When damage is taken, with a 4% chance for 5 sec. All received Critical Rate -20% All received Critical Damage -20% (Cooldown: 10 sec.)
+			level 6: Received AoE skill damage -6%  <Critical Damage Defense> When damage is taken, with a 6% chance for 5 sec. All received Critical Rate -25% All received Critical Damage -25% (Cooldown: 10 sec.)
+			level 7: Received AoE skill damage -7%  <Critical Damage Defense> When damage is taken, with a 8% chance for 5 sec. All received Critical Rate -30% All received Critical Damage -30% (Cooldown: 10 sec.)
+			level 8: Received AoE skill damage -8%  <Critical Damage Defense> When damage is taken, with a 10% chance for 5 sec. All received Critical Rate -35% All received Critical Damage -35% (Cooldown: 10 sec.)
+			level 9: Received AoE skill damage -9%  <Critical Damage Defense> When damage is taken, with a 10% chance for 5 sec. All received Critical Rate -40% All received Critical Damage -40% (Cooldown: 10 sec.)
+			level 10: Received AoE skill damage -10%  <Critical Damage Defense> When damage is taken, with a 10% chance for 5 sec. All received Critical Rate -45% All received Critical Damage -45% (Cooldown: 10 sec.)
+		-->
+        <icon initial="icon.armor_t902_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50489" name="Critical Damage Defense" max-level="11">
+        <!-- 
+			level 1: All received Critical Rate -10% All received Critical Damage -10%
+			level 2: All received Critical Rate -12% All received Critical Damage -12%
+			level 3: All received Critical Rate -14% All received Critical Damage -14%
+			level 4: All received Critical Rate -16% All received Critical Damage -16%
+			level 5: All received Critical Rate -18% All received Critical Damage -18%
+			level 6: All received Critical Rate -20% All received Critical Damage -20%
+			level 7: All received Critical Rate -25% All received Critical Damage -25%
+			level 8: All received Critical Rate -30% All received Critical Damage -30%
+			level 9: All received Critical Rate -35% All received Critical Damage -35%
+			level 10: All received Critical Rate -40% All received Critical Damage -40%
+			level 11: All received Critical Rate -45% All received Critical Damage -45%
+		-->
+        <icon initial="icon.skill10021_2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50490" name="A-grade: Tunic of Protection">
+        <!-- WIT +2\nMEN +2\nOverweight limit +1500\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t903_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50491" name="Tunic of Protection">
+        <!-- Max MP +500\n\n<Counter Paralysis>\nWhen damage is taken, there is a 2% chance to paralyze the enemy for 3 sec. -->
+        <icon initial="icon.armor_t903_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50492" name="+1 Tunic of Protection" max-level="10">
+        <!-- 
+			level 1: Max MP +600  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 2: Max MP +700  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 3: Max MP +800  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 4: Max MP +900  <Counter Paralysis> When damage is taken, there is a 2% chance to paralyze the enemy for 3 sec.
+			level 5: Max. MP +1000 Received AoE skill damage -5%  <Counter Paralysis> When damage is taken, there is a 4% chance to paralyze the enemy for 3 sec.
+			level 6: Max. MP +1400 Received AoE skill damage -6%  <Counter Paralysis> When damage is taken, there is a 6% chance to paralyze the enemy for 3 sec.
+			level 7: Max. MP +1800 Received AoE skill damage -7%  <Counter Paralysis> When damage is taken, there is a 8% chance to paralyze the enemy for 3 sec.
+			level 8: Max. MP +2200 Received AoE skill damage -8%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 3 sec.
+			level 9: Max. MP +2600 Received AoE skill damage -9%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 4 sec.
+			level 10: Max. MP +3000 Received AoE skill damage -10%  <Counter Paralysis> When damage is taken, there is a 10% chance to paralyze the enemy for 5 sec.
+		-->
+        <icon initial="icon.armor_t903_u_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50493" name="A-grade: Stockings of Protection">
+        <!-- WIT +2\nOverweight limit +1000\nParalysis Resistance +25%%\nShock Resistance +25%%\nSleep Resistance +25%%\nHold Resistance +25%%\nSilence Resistance +25%%\nFear Resistance +25%% -->
+        <icon initial="icon.armor_t903_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50494" name="Stockings of Protection">
+        <!-- <Arcane Shield Defense>\nWhen hit, for 5 sec.\nReceived damage -40%\nThe rest of the damage is blocked by consuming MP.\nThe effect is cancelled when MP is 0.\nCannot be used with Arcane Shield.\n(Activated only if Max HP < 60%%)\n(Cooldown: 60 sec.) -->
+        <icon initial="icon.armor_t903_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50495" name="+1 Stockings of Protection" max-level="10">
+        <!-- 
+			level 1: <Arcane Shield Defense> When hit, for 5 sec. Received damage -40% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 5: Received AoE skill damage -5%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -40% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 6: Received AoE skill damage -6%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -42% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 7: Received AoE skill damage -7%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -44% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 8: Received AoE skill damage -8%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -46% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 9: Received AoE skill damage -9%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -48% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+			level 10: Received AoE skill damage -10%  <Arcane Shield Defense> When hit, for 10 sec. Received damage -50% The rest of the damage is blocked by consuming MP. The effect is cancelled when MP is 0. Cannot be used with Arcane Shield. (Activated only if Max HP < 60%%) (Cooldown: 60 sec.)
+		-->
+        <icon initial="icon.armor_t903_l_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50496" name="Arcane Shield Defense" max-level="11">
+        <!-- 
+			level 1: Received damage -40% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+			level 7: Received damage -42% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+			level 8: Received damage -44% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+			level 9: Received damage -46% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+			level 10: Received damage -48% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+			level 11: Received damage -50% Blocks the rest of the damage by consuming MP. The effect is cancelled when MP drops to 0. Cannot be used with Arcane Shield.
+		-->
+        <icon initial="icon.skill10021_3"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50497" name="Weapon Blessing Effect">
+        <!-- P. Skill Critical Damage +50. -->
+        <icon initial="icon.bless_effect_base"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50498" name="Aden Pistols">
+        <!-- <Level Bonus Effect>\nP./ M. Atk. are increased depending on level.\n\n<Lv. 40-49>\nP. Atk. +33\nM. Atk. +10\n<Lv. 50-59>\nP. Atk. +63\nM. Atk. +19\n<Lv. 60-64>\nP. Atk. +96\nM. Atk. +29\n<Lv. 65-69>\nP. Atk. +129\nM. Atk. +38\n<Lv. 70-74>\nP. Atk. +159\nM. Atk. +47\n<Lv. 75+>\nP. Atk. +192\nM. Atk. +57 -->
+        <icon initial="icon.shooter_d"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="50499" name="Anakim's Divine Pistols">
+        <!-- A weapon empowered by Anakim's soul.\nEnables Anakim's power.\n\n<When triggered>\nAnakim's Holy Blast -->
+        <icon initial="icon.skill1516"/>
+        <attributes/>
+        <target/>
     </skill>
 </list>

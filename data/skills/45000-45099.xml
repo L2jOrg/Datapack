@@ -1,39 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="45000" name="Item Skill: Stun" max-level="20" debuff="true" action="A1">
-        <!-- Effect: Stuns the target during a normal physical attack. -->
+    <skill id="45000" name="Tyrr's Critical Stun" max-level="20" action="A1" debuff="true">
+        <!-- 
+			level 1: When triggered: Momentarily stuns the target after a regular physical attack.
+			level 16: Not used
+		-->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="100"/>
+            <reuse initial="30000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="45001" name="Tyrr Critical Stun" max-level="25">
-        <!--
-            level 1: Has a 9%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 2: Has a 11%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 8: Has a 13%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 9: Has a 15%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 10: Has a 17%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 11: Has a 19%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 12: Has a 21%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 13: Has a 23%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 14: Has a 25%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 15: Has a 27%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 16: Has a 29%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 17: Has a 31%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 18: Has a 33%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 19: Has a 40%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-            level 25: Has a 100%% chance to cast Stun on the target upon a physical critical attack. Requires a polearm.
-         -->
+    <skill id="45001" name="Tyrr's Critical Stun" max-level="20">
+        <!-- 
+			level 1: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 9% (Requires a polearm.)
+			level 2: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 11% (Requires a polearm.)
+			level 3: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 13% (Requires a polearm.)
+			level 4: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 15% (Requires a polearm.)
+			level 5: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 17% (Requires a polearm.)
+			level 6: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 19% (Requires a polearm.)
+			level 7: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 21% (Requires a polearm.)
+			level 8: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 23% (Requires a polearm.)
+			level 9: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 25% (Requires a polearm.)
+			level 10: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 27% (Requires a polearm.)
+			level 11: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 29% (Requires a polearm.)
+			level 12: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 31% (Requires a polearm.)
+			level 13: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 33% (Requires a polearm.)
+			level 14: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 35% (Requires a polearm.)
+			level 15: <Effect> After a P. Critical Attack There is a certain chance to stun the target for 37% (Requires a polearm.)
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_tir_lv00">
-            <value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_tir_lv01</value>
             <value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
-            <value level="14">BranchIcon.Icon.g_rune_tir_lv01</value>
-            <value level="16">BranchIcon.Icon.g_rune_tir_lv02</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <conditions>
             <weapon scope="PASSIVE">
@@ -41,31 +43,30 @@
             </weapon>
         </conditions>
     </skill>
-    <skill id="45002" name="Sigel Defense" max-level="25">
-        <!--
-            level 1: P. Def. +56
-            level 2: P. Def. +68
-            level 8: P. Def. +80
-            level 9: P. Def. +92
-            level 10: P. Def. +104
-            level 11: P. Def. +116
-            level 12: P. Def. +128
-            level 13: P. Def. +140
-            level 14: P. Def. +152
-            level 15: P. Def. +164
-            level 16: P. Def. +178
-            level 17: P. Def. +192
-            level 18: P. Def. +206
-            level 19: P. Def. +9
-         -->
+    <skill id="45002" name="Sigel's Defense" max-level="20">
+        <!-- 
+			level 1: <Effect> P. Def. +56.
+			level 2: <Effect> P. Def. +68.
+			level 3: <Effect> P. Def. +80.
+			level 4: <Effect> P. Def. +92.
+			level 5: <Effect> P. Def. +104.
+			level 6: <Effect> P. Def. +116.
+			level 7: <Effect> P. Def. +128.
+			level 8: <Effect> P. Def. +140.
+			level 9: <Effect> P. Def. +152.
+			level 10: <Effect> P. Def. +164.
+			level 11: <Effect> P. Def. +178.
+			level 12: <Effect> P. Def. +192.
+			level 13: <Effect> P. Def. +206.
+			level 14: <Effect> P. Def. +227.
+			level 15: <Effect> P. Def. +248.
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_sigel_lv00">
-            <value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_sigel_lv01</value>
             <value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
-            <value level="14">BranchIcon.Icon.g_rune_sigel_lv01</value>
-            <value level="16">BranchIcon.Icon.g_rune_sigel_lv02</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -87,37 +88,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45003" name="Sigel Health" max-level="25">
-        <!--
-            level 1: Max HP +4%
-            level 2: Max HP +5%
-            level 8: Max HP +6%
-            level 9: Max HP +7%
-            level 10: Max HP +8%
-            level 11: Max HP +9%
-            level 12: Max HP +10%
-            level 13: Max HP +12%
-            level 14: Max HP +14%
-            level 15: Max HP +16%
-            level 16: Max HP +18%
-            level 17: Max HP +20%
-            level 18: Max HP +22%
-            level 19: Max HP +17%
-            level 20: Max HP +18%
-            level 21: Max HP +19%
-            level 22: Max HP +20%
-            level 23: Max HP +21%
-            level 24: Max HP +22%
-            level 25: Max HP +23%
-         -->
+    <skill id="45003" name="Sigel's Protection" max-level="20">
+        <!-- 
+			level 1: <Effect> Max HP +4%
+			level 2: <Effect> Max HP +5%
+			level 3: <Effect> Max HP +6%
+			level 4: <Effect> Max HP +7%
+			level 5: <Effect> Max HP +8%
+			level 6: <Effect> Max HP +9%
+			level 7: <Effect> Max HP +10%
+			level 8: <Effect> Max HP +12%
+			level 9: <Effect> Max HP +14%
+			level 10: <Effect> Max HP +16%
+			level 11: <Effect> Max HP +18%
+			level 12: <Effect> Max HP +20%
+			level 13: <Effect> Max HP +22%
+			level 14: <Effect> Max HP +25%
+			level 15: <Effect> Max HP +28%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_sigel_lv00">
-            <value level="8">BranchIcon.Icon.g_rune_sigel_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_sigel_lv01</value>
             <value level="11">BranchIcon.Icon.g_rune_sigel_lv02</value>
-            <value level="14">BranchIcon.Icon.g_rune_sigel_lv01</value>
-            <value level="16">BranchIcon.Icon.g_rune_sigel_lv02</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
@@ -145,30 +139,30 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="45004" name="Tyrr Haste" max-level="25">
-        <!--
-            level 1: Atk. Spd. +3%
-            level 2: Atk. Spd. +4%
-            level 8: Atk. Spd. +5%
-            level 9: Atk. Spd. +6%
-            level 10: Atk. Spd. +6.5%
-            level 11: Atk. Spd. +7%
-            level 12: Atk. Spd. +7.5%
-            level 13: Atk. Spd. +8%
-            level 14: Atk. Spd. +8.5%
-            level 15: Atk. Spd. +9%
-            level 16: Atk. Spd. +9.3%
-            level 17: Atk. Spd. +9.6%
-            level 18: Atk. Spd. +10%
-         -->
+    <skill id="45004" name="Tyrr's Haste" max-level="20">
+        <!-- 
+			level 1: <Effect> Atk. Spd. +3%
+			level 2: <Effect> Atk. Spd. +4%
+			level 3: <Effect> Atk. Spd. +5%
+			level 4: <Effect> Atk. Spd. +6%
+			level 5: <Effect> Atk. Spd. +6.5%
+			level 6: <Effect> Atk. Spd. +7%
+			level 7: <Effect> Atk. Spd. +7.5%
+			level 8: <Effect> Atk. Spd. +8%
+			level 9: <Effect> Atk. Spd. +8.5%
+			level 10: <Effect> Atk. Spd. +9%
+			level 11: <Effect> Atk. Spd. +9.3%
+			level 12: <Effect> Atk. Spd. +9.6%
+			level 13: <Effect> Atk. Spd. +10%
+			level 14: <Effect> Atk. Spd. +10.5%
+			level 15: <Effect> Atk. Spd. +11%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_tir_lv00">
-            <value level="8">BranchIcon.Icon.g_rune_tir_lv01</value>
+            <value level="6">BranchIcon.Icon.g_rune_tir_lv01</value>
             <value level="11">BranchIcon.Icon.g_rune_tir_lv02</value>
-            <value level="14">BranchIcon.Icon.g_rune_tir_lv01</value>
-            <value level="16">BranchIcon.Icon.g_rune_tir_lv02</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
@@ -190,31 +184,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45005" name="Othell Focus" max-level="25">
-        <!--
-            level 1: P. Critical Rate. +25.
-            level 2: P. Critical Rate. +31.
-            level 3: P. Critical Rate. +3.1.
-            level 8: P. Critical Rate. +269.
-            level 9: P. Critical Rate. +297.
-            level 10: P. Critical Rate. +325.
-            level 11: P. Critical Rate. +352.
-            level 12: P. Critical Rate. +380.
-            level 13: P. Critical Rate. +407.
-            level 14: P. Critical Rate. +69.
-            level 15: P. Critical Rate. +74.
-            level 16: P. Critical Rate. +76.
-            level 17: P. Critical Rate. +78.
-            level 18: P. Critical Rate. +80.
-         -->
+    <skill id="45005" name="Othell's Focus" max-level="20">
+        <!-- 
+			level 1: <Effect> P. Critical Rate +25
+			level 2: <Effect> P. Critical Rate +31
+			level 3: <Effect> P. Critical Rate +37
+			level 4: <Effect> P. Critical Rate +43
+			level 5: <Effect> P. Critical Rate +49
+			level 6: <Effect> P. Critical Rate +54
+			level 7: <Effect> P. Critical Rate +59
+			level 8: <Effect> P. Critical Rate +64
+			level 9: <Effect> P. Critical Rate +69
+			level 10: <Effect> P. Critical Rate +74
+			level 11: <Effect> P. Critical Rate +76
+			level 12: <Effect> P. Critical Rate +78
+			level 13: <Effect> P. Critical Rate +80
+			level 14: <Effect> P. Critical Rate +82
+			level 15: <Effect> P. Critical Rate +84
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_othel_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_othel_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_othel_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_othel_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
@@ -236,30 +229,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45006" name="Othell Might Mortal" max-level="25">
-        <!--
-            level 1: Increases success rate of attacks targeting the enemy's vital parts by 14%.
-            level 2: Increases success rate of attacks targeting the enemy's vital parts by 18%.
-            level 8: Increases success rate of attacks targeting the enemy's vital parts by 22%.
-            level 9: Increases success rate of attacks targeting the enemy's vital parts by 25%.
-            level 10: Increases success rate of attacks targeting the enemy's vital parts by 28%.
-            level 11: Increases success rate of attacks targeting the enemy's vital parts by 31%.
-            level 12: Increases success rate of attacks targeting the enemy's vital parts by 34%.
-            level 13: Increases success rate of attacks targeting the enemy's vital parts by 37%.
-            level 14: Increases success rate of attacks targeting the enemy's vital parts by 40%.
-            level 15: Increases success rate of attacks targeting the enemy's vital parts by 43%.
-            level 16: Increases success rate of attacks targeting the enemy's vital parts by 45%.
-            level 17: Increases success rate of attacks targeting the enemy's vital parts by 47%.
-            level 18: Increases success rate of attacks targeting the enemy's vital parts by 49%.
-         -->
+    <skill id="45006" name="Othell's Mortal Strike" max-level="20">
+        <!-- 
+			level 1: <Effect> Vital Point Attack Rate +14%
+			level 2: <Effect> Vital Point Attack Rate +18%
+			level 3: <Effect> Vital Point Attack Rate +22%
+			level 4: <Effect> Vital Point Attack Rate +25%
+			level 5: <Effect> Vital Point Attack Rate +28%
+			level 6: <Effect> Vital Point Attack Rate +31%
+			level 7: <Effect> Vital Point Attack Rate +34%
+			level 8: <Effect> Vital Point Attack Rate +37%
+			level 9: <Effect> Vital Point Attack Rate +40%
+			level 10: <Effect> Vital Point Attack Rate +43%
+			level 11: <Effect> Vital Point Attack Rate +45%
+			level 12: <Effect> Vital Point Attack Rate +47%
+			level 13: <Effect> Vital Point Attack Rate +49%
+			level 14: <Effect> Vital Point Attack Rate +51%
+			level 15: <Effect> Vital Point Attack Rate +53%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_othel_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_othel_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_othel_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_othel_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_othel_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_othel_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
@@ -281,29 +274,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45007" name="Yul Critical Damage" max-level="22">
-        <!--
-            level 1: P. Critical Damage +92
-            level 2: P. Critical Damage +113
-            level 3: P. Critical Damage +134
-            level 4: P. Critical Damage +155
-            level 5: P. Critical Damage +176
-            level 8: P. Critical Damage +196
-            level 9: P. Critical Damage +216
-            level 10: P. Critical Damage +236
-            level 11: P. Critical Damage +256
-            level 12: P. Critical Damage +276
-            level 13: P. Critical Damage +286
-            level 14: P. Critical Damage +296
-            level 15: P. Critical Damage +306
-            level 16: P. Critical Damage +20
-         -->
+    <skill id="45007" name="Yul's Critical Damage" max-level="20">
+        <!-- 
+			level 1: <Effect> P. Critical Damage +92
+			level 2: <Effect> P. Critical Damage +113
+			level 3: <Effect> P. Critical Damage +134
+			level 4: <Effect> P. Critical Damage +155
+			level 5: <Effect> P. Critical Damage +176
+			level 6: <Effect> P. Critical Damage +196
+			level 7: <Effect> P. Critical Damage +216
+			level 8: <Effect> P. Critical Damage +236
+			level 9: <Effect> P. Critical Damage +256
+			level 10: <Effect> P. Critical Damage +276
+			level 11: <Effect> P. Critical Damage +286
+			level 12: <Effect> P. Critical Damage +296
+			level 13: <Effect> P. Critical Damage +306
+			level 14: <Effect> P. Critical Damage +316
+			level 15: <Effect> P. Critical Damage +326
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_yr_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_yr_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
-            <value level="16">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="BLOW_RATE" stat-add="BLOW_RATE">
@@ -325,29 +319,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45008" name="Yul Guidance" max-level="22">
-        <!--
-            level 1: P. Accuracy +2
-            level 2: P. Accuracy +2.4
-            level 3: P. Accuracy +2.8
-            level 4: P. Accuracy +3.2
-            level 5: P. Accuracy +3.6
-            level 8: P. Accuracy +4
-            level 9: P. Accuracy +4.4
-            level 10: P. Accuracy +4.8
-            level 11: P. Accuracy +5.2
-            level 12: P. Accuracy +5.6
-            level 13: P. Accuracy +6
-            level 14: P. Accuracy +6.4
-            level 15: P. Accuracy +6.8
-            level 16: P. Accuracy +1
-         -->
+    <skill id="45008" name="Yul's Guidance" max-level="20">
+        <!-- 
+			level 1: <Effect> P. Accuracy +2
+			level 2: <Effect> P. Accuracy +2.4
+			level 3: <Effect> P. Accuracy +2.8
+			level 4: <Effect> P. Accuracy +3.2
+			level 5: <Effect> P. Accuracy +3.6
+			level 6: <Effect> P. Accuracy +4
+			level 7: <Effect> P. Accuracy +4.4
+			level 8: <Effect> P. Accuracy +4.8
+			level 9: <Effect> P. Accuracy +5.2
+			level 10: <Effect> P. Accuracy +5.6
+			level 11: <Effect> P. Accuracy +6
+			level 12: <Effect> P. Accuracy +6.4
+			level 13: <Effect> P. Accuracy +6.8
+			level 14: <Effect> P. Accuracy +7.2
+			level 15: <Effect> P. Accuracy +7.6
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_yr_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_yr_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_yr_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_yr_lv03</value>
-            <value level="16">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
@@ -369,28 +364,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45009" name="Magic Focus" max-level="20">
-        <!--
-            level 1: M. Critical Rate +3%.
-            level 2: M. Critical Rate +4%.
-            level 3: M. Critical Rate +5%.
-            level 4: M. Critical Rate +6%.
-            level 5: M. Critical Rate +7%.
-            level 6: M. Critical Rate +8%.
-            level 7: M. Critical Rate +9%.
-            level 8: M. Critical Rate +10%.
-            level 9: M. Critical Rate +11%.
-            level 10: M. Critical Rate +12%.
-            level 11: M. Critical Rate +13%.
-            level 12: M. Critical Rate +14%.
-            level 13: M. Critical Rate +15%.
-         -->
+    <skill id="45009" name="Feoh's Magic Focus" max-level="20">
+        <!-- 
+			level 1: <Effect> M. Skill Critical Rate +3%
+			level 2: <Effect> M. Skill Critical Rate +4%
+			level 3: <Effect> M. Skill Critical Rate +5%
+			level 4: <Effect> M. Skill Critical Rate +6%
+			level 5: <Effect> M. Skill Critical Rate +7%
+			level 6: <Effect> M. Skill Critical Rate +8%
+			level 7: <Effect> M. Skill Critical Rate +9%
+			level 8: <Effect> M. Skill Critical Rate +10%
+			level 9: <Effect> M. Skill Critical Rate +11%
+			level 10: <Effect> M. Skill Critical Rate +12%
+			level 11: <Effect> M. Skill Critical Rate +13%
+			level 12: <Effect> M. Skill Critical Rate +14%
+			level 13: <Effect> M. Skill Critical Rate +15%
+			level 14: <Effect> M. Skill Critical Rate +16%
+			level 15: <Effect> M. Skill Critical Rate +17%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_feoh_lv01">
             <value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
-            <value level="14">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
@@ -413,27 +410,29 @@
         </effects>
     </skill>
     <skill id="45010" name="Feoh's Empower" max-level="20">
-        <!--
-            level 1: Increases M. Atk. by 28.
-            level 2: Increases M. Atk. by 36.
-            level 3: Increases M. Atk. by 44.
-            level 4: Increases M. Atk. by 52.
-            level 5: Increases M. Atk. by 60.
-            level 6: Increases M. Atk. by 68.
-            level 7: Increases M. Atk. by 76.
-            level 8: Increases M. Atk. by 84.
-            level 9: Increases M. Atk. by 92.
-            level 10: Increases M. Atk. by 100.
-            level 11: Increases M. Atk. by 104.
-            level 12: Increases M. Atk. by 108.
-            level 13: Increases M. Atk. by 112.
-         -->
+        <!-- 
+			level 1: <Effect> M. Atk. +28
+			level 2: <Effect> M. Atk. +36
+			level 3: <Effect> M. Atk. +44
+			level 4: <Effect> M. Atk. +52
+			level 5: <Effect> M. Atk. +60
+			level 6: <Effect> M. Atk. +68
+			level 7: <Effect> M. Atk. +76
+			level 8: <Effect> M. Atk. +84
+			level 9: <Effect> M. Atk. +92
+			level 10: <Effect> M. Atk. +100
+			level 11: <Effect> M. Atk. +104
+			level 12: <Effect> M. Atk. +108
+			level 13: <Effect> M. Atk. +112
+			level 14: <Effect> M. Atk. +116
+			level 15: <Effect> M. Atk. +120
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_feoh_lv01">
             <value level="6">BranchIcon.Icon.g_rune_feoh_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_feoh_lv03</value>
-            <value level="14">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
@@ -454,30 +453,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45011" name="Iss Acumen" max-level="25">
-        <!--
-            level 1: Casting Spd. +3%
-            level 2: Casting Spd. +4%
-            level 8: Casting Spd. +5%
-            level 9: Casting Spd. +6%
-            level 10: Casting Spd. +7%
-            level 11: Casting Spd. +8%
-            level 12: Casting Spd. +9%
-            level 13: Casting Spd. +10%
-            level 14: Casting Spd. +11%
-            level 15: Casting Spd. +12%
-            level 16: Casting Spd. +12.3%
-            level 17: Casting Spd. +12.6%
-            level 18: Casting Spd. +13%
-         -->
+    <skill id="45011" name="Iss' Acumen" max-level="20">
+        <!-- 
+			level 1: <Effect> Casting Spd. +3%
+			level 2: <Effect> Casting Spd. +4%
+			level 3: <Effect> Casting Spd. +5%
+			level 4: <Effect> Casting Spd. +6%
+			level 5: <Effect> Casting Spd. +7%
+			level 6: <Effect> Casting Spd. +8%
+			level 7: <Effect> Casting Spd. +9%
+			level 8: <Effect> Casting Spd. +10%
+			level 9: <Effect> Casting Spd. +11%
+			level 10: <Effect> Casting Spd. +12%
+			level 11: <Effect> Casting Spd. +12.3%
+			level 12: <Effect> Casting Spd. +12.6%
+			level 13: <Effect> Casting Spd. +13%
+			level 14: <Effect> Casting Spd. +13.5%
+			level 15: <Effect> Casting Spd. +14%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_is_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_is_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_is_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_is_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
@@ -500,30 +499,30 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45012" name="Iss Wind Wind Walk" max-level="25">
-        <!--
-            level 1: Speed +4.
-            level 2: Speed +4.5.
-            level 8: Speed +5.
-            level 9: Speed +5.5.
-            level 10: Speed +6.
-            level 11: Speed +6.5.
-            level 12: Speed +7.
-            level 13: Speed +7.5.
-            level 14: Speed +8.
-            level 15: Speed +8.5.
-            level 16: Speed +9.
-            level 17: Speed +9.5.
-            level 18: Speed +10.
-         -->
+    <skill id="45012" name="Iss' Wind Walk" max-level="20">
+        <!-- 
+			level 1: <Effect> Speed +4
+			level 2: <Effect> Speed +4.5
+			level 3: <Effect> Speed +5
+			level 4: <Effect> Speed +5.5
+			level 5: <Effect> Speed +6
+			level 6: <Effect> Speed +6.5
+			level 7: <Effect> Speed +7
+			level 8: <Effect> Speed +7.5
+			level 9: <Effect> Speed +8
+			level 10: <Effect> Speed +8.5
+			level 11: <Effect> Speed +9
+			level 12: <Effect> Speed +9.5
+			level 13: <Effect> Speed +10
+			level 14: <Effect> Speed +10.5
+			level 15: <Effect> Speed +11
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_is_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_is_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_is_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_is_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_is_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_is_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <speed>
@@ -545,28 +544,30 @@
             </speed>
         </effects>
     </skill>
-    <skill id="45013" name="Wynn Boost Mana" max-level="20">
-        <!--
-            level 1: Max MP +4%
-            level 2: Max MP +5%
-            level 3: Max MP +6%
-            level 4: Max MP +7%
-            level 5: Max MP +8%
-            level 6: Max MP +9%
-            level 7: Max MP +10%
-            level 8: Max MP +12%
-            level 9: Max MP +14%
-            level 10: Max MP +16%
-            level 11: Max MP +18%
-            level 12: Max MP +20%
-            level 13: Max MP +22%
-         -->
+    <skill id="45013" name="Wynn's Mana Effect Boost" max-level="20">
+        <!-- 
+			level 1: <Effect> Max MP +4%
+			level 2: <Effect> Max MP +5%
+			level 3: <Effect> Max MP +6%
+			level 4: <Effect> Max MP +7%
+			level 5: <Effect> Max MP +8%
+			level 6: <Effect> Max MP +9%
+			level 7: <Effect> Max MP +10%
+			level 8: <Effect> Max MP +12%
+			level 9: <Effect> Max MP +14%
+			level 10: <Effect> Max MP +16%
+			level 11: <Effect> Max MP +18%
+			level 12: <Effect> Max MP +20%
+			level 13: <Effect> Max MP +22%
+			level 14: <Effect> Max MP +25%
+			level 15: <Effect> Max MP +28%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_wynn_lv01">
             <value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
-            <value level="14">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
@@ -588,28 +589,30 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="45014" name="Wynn's Lightness" max-level="20">
-        <!--
-            level 1: Increases Weight limit by 1000.
-            level 2: Increases Weight limit by 1400.
-            level 3: Increases Weight limit by 1800.
-            level 4: Increases Weight limit by 2200.
-            level 5: Increases Weight limit by 2600.
-            level 6: Increases Weight limit by 3000.
-            level 7: Increases Weight limit by 3400.
-            level 8: Increases Weight limit by 4100.
-            level 9: Increases Weight limit by 4500.
-            level 10: Increases Weight limit by 4900.
-            level 11: Increases Weight limit by 5200.
-            level 12: Increases Weight limit by 5800.
-            level 13: Increases Weight limit by 6400.
-         -->
+    <skill id="45014" name="Wynn's Decrease Weight" max-level="20">
+        <!-- 
+			level 1: <Effect> Weight limit +1000
+			level 2: <Effect> Weight limit +1400
+			level 3: <Effect> Weight limit +1800
+			level 4: <Effect> Weight limit +2200
+			level 5: <Effect> Weight limit +2600
+			level 6: <Effect> Weight limit +3000
+			level 7: <Effect> Weight limit +3400
+			level 8: <Effect> Weight limit +3800
+			level 9: <Effect> Weight limit +4200
+			level 10: <Effect> Weight limit +4600
+			level 11: <Effect> Weight limit +5200
+			level 12: <Effect> Weight limit +5800
+			level 13: <Effect> Weight limit +6400
+			level 14: <Effect> Weight limit +7000
+			level 15: <Effect> Weight limit +7600
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_wynn_lv01">
             <value level="6">BranchIcon.Icon.g_rune_wynn_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_wynn_lv03</value>
-            <value level="14">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -630,36 +633,35 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45015" name="Aeore Magic Regeneration" max-level="25">
-        <!--
-            level 1: MP Recovery Bonus +6.5%.
-            level 2: MP Recovery Bonus +8%.
-            level 8: MP Recovery Bonus +9.5%.
-            level 9: MP Recovery Bonus +11%.
-            level 10: MP Recovery Bonus +12.5%.
-            level 11: MP Recovery Bonus +14%.
-            level 12: MP Recovery Bonus +15.5%.
-            level 13: MP Recovery Bonus +17%.
-            level 14: MP Recovery Bonus +18.5%.
-            level 15: MP Recovery Bonus +20%.
-            level 16: MP Recovery Bonus +21.5%.
-            level 17: MP Recovery Bonus +23%.
-            level 18: MP Recovery Bonus +24.5%.
-            level 19: MP Recovery Bonus +1.
-         -->
+    <skill id="45015" name="Aeore Magic Regeneration" max-level="20">
+        <!-- 
+			level 1: <Effect> MP Recovery Rate +6.5%
+			level 2: <Effect> MP Recovery Rate +8%
+			level 3: <Effect> MP Recovery Rate +9.5%
+			level 4: <Effect> MP Recovery Rate +11%
+			level 5: <Effect> MP Recovery Rate +12.5%
+			level 6: <Effect> MP Recovery Rate +14%
+			level 7: <Effect> MP Recovery Rate +15.5%
+			level 8: <Effect> MP Recovery Rate +17%
+			level 9: <Effect> MP Recovery Rate +18.5%
+			level 10: <Effect> MP Recovery Rate +20%
+			level 11: <Effect> MP Recovery Rate +21.5%
+			level 12: <Effect> MP Recovery Rate +23%
+			level 13: <Effect> MP Recovery Rate +24.5%
+			level 14: <Effect> MP Recovery Rate +26.8%
+			level 15: <Effect> MP Recovery Rate +29%
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_eolh_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_eolh_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_eolh_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_eolh_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="6.5">
-                    <value level="2">8.0</value>                   
+                    <value level="2">8.0</value>
                     <value level="8">9.5</value>
                     <value level="9">11.0</value>
                     <value level="10">12.5</value>
@@ -676,35 +678,35 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45016" name="Aeore Healing" max-level="25">
-        <!--
-            level 1: Power of Healing Magic +30.
-            level 2: Power of Healing Magic +38.
-            level 8: Power of Healing Magic +46.
-            level 9: Power of Healing Magic +54.
-            level 10: Power of Healing Magic +62.
-            level 11: Power of Healing Magic +70.
-            level 12: Power of Healing Magic +78.
-            level 13: Power of Healing Magic +86.
-            level 14: Power of Healing Magic +94.
-            level 15: Power of Healing Magic +102.
-            level 16: Power of Healing Magic +110.
-            level 17: Power of Healing Magic +118.
-            level 18: Power of Healing Magic +126.
-         -->
+    <skill id="45016" name="Aeore's Heal" max-level="20">
+        <!-- 
+			level 1: <Effect> Healing Power +30
+			level 2: <Effect> Healing Power +38
+			level 3: <Effect> Healing Power +46
+			level 4: <Effect> Healing Power +54
+			level 5: <Effect> Healing Power +62
+			level 6: <Effect> Healing Power +70
+			level 7: <Effect> Healing Power +78
+			level 8: <Effect> Healing Power +86
+			level 9: <Effect> Healing Power +94
+			level 10: <Effect> Healing Power +102
+			level 11: <Effect> Healing Power +110
+			level 12: <Effect> Healing Power +118
+			level 13: <Effect> Healing Power +126
+			level 14: <Effect> Healing Power +138
+			level 15: <Effect> Healing Power +150
+			level 16: Not used
+		-->
         <icon initial="BranchIcon.Icon.g_rune_eolh_lv01">
-            <value level="8">BranchIcon.Icon.g_rune_eolh_lv02</value>
+            <value level="6">BranchIcon.Icon.g_rune_eolh_lv02</value>
             <value level="11">BranchIcon.Icon.g_rune_eolh_lv03</value>
-            <value level="14">BranchIcon.Icon.g_rune_eolh_lv02</value>
-            <value level="16">BranchIcon.Icon.g_rune_eolh_lv03</value>
-            <value level="19">icon.ensoul_big_p</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="HEAL_POWER">
                 <power initial="30.0">
-                    <value level="2">38.0</value>                    
+                    <value level="2">38.0</value>
                     <value level="8">46.0</value>
                     <value level="9">54.0</value>
                     <value level="10">62.0</value>
@@ -721,15 +723,9 @@
         </effects>
     </skill>
     <skill id="45017" name="Orfen's Earring - Special Ability">
-        <!-- Enemy's MP -10% during PvP. -->
+        <!-- Target's MP -10% in PvP. -->
         <icon initial="icon.accessory_earring_of_orfen_i04"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
-			<magic-level initial="1"/>
-            <cast-range initial="600"/>
-            <reuse initial="120000"/>
-            <effect-point initial="-679"/>
-            <hit-time initial="1000"/>
-        </attributes>
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0" trait="DERANGEMENT"/>
         <target type="ENEMY_ONLY"/>
         <abnormal type="MULTI_DEBUFF">
             <level initial="1"/>
@@ -742,16 +738,16 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
-        <!-- For 30 seconds, limits enemy's CP/HP/MP Recovery up to 80% during PvP. -->
+    <skill id="45018" name="Zaken's Earring - Special Ability" action="A2" debuff="true">
+        <!-- During PvP, limits the CP, HP, and MP recovery of the target to maximum 80% for 30 sec. -->
         <icon initial="icon.accessory_earring_of_zaken_i04"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BOSS" level-bonus-rate="30">
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0" trait="BOSS">
             <cast-range initial="600"/>
             <reuse initial="120000"/>
             <effect-point initial="-679"/>
             <hit-time initial="1000"/>
         </attributes>
-		<target type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY"/>
         <abnormal type="HP_REGEN_DOWN">
             <level initial="2"/>
             <time initial="30"/>
@@ -761,24 +757,24 @@
             <stat-modify mode="PER" stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
-        <!-- Blocks all the enemy's P. Skills/M. Skills for 24 seconds. -->
+    <skill id="45019" name="Antharas' Earring - Special Abilities" action="A2" debuff="true">
+        <!-- Blocks all the enemy's physical and magical skills for 24 sec. -->
         <icon initial="icon.accessory_earring_of_antaras_i04"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
+        <attributes level-bonus-rate="30" magic-critical-rate="5.0" trait="DERANGEMENT">
             <cast-range initial="600"/>
             <reuse initial="120000"/>
             <effect-point initial="-666"/>
             <hit-time initial="1000"/>
         </attributes>
-		<target type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY"/>
         <abnormal type="SILENCE_ALL" visual="SILENCE">
             <level initial="2"/>
             <time initial="24"/>
@@ -792,289 +788,271 @@
     <skill id="45020" name="Zaken's Cloak">
         <!-- Max HP +5%%. -->
         <icon initial="BranchSys2.Icon.br_zaken_cloak_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="5.0"/>
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="45021" name="White Uniform Hat (STR +1 INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45021" name="White Uniform Hat (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45022" name="White Uniform Hat (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45022" name="White Uniform Hat (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45023" name="White Uniform Hat (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+    <skill id="45023" name="White Uniform Hat (CON+1 MEN+1)">
+        <!-- CON +1\nMEN +1 -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45024" name="Napoleon Hat (STR +1, INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45024" name="Napoleon Hat (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45025" name="Napoleon Hat (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
     <skill id="45026" name="Napoleon Hat (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+        <!-- CON +1\nMEN +1 -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45027" name="Ninja Hair Accessory (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+    <skill id="45029" name="Ninja Hair Accessory (CON+1 MEN+1)">
+        <!-- CON +1\nMEN +1 -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45030" name="Warrior's Helmet (STR +1 INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45030" name="Warrior's Helmet (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45031" name="Warrior's Helmet (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45032" name="Warrior's Helmet (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+    <skill id="45032" name="Warrior's Helmet (CON+1 MEN+1)">
+        <!-- CON +1\nMEN +1 -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45033" name="First Mate Hat (STR +1 INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45033" name="First Mate Hat (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45034" name="First Mate Hat (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45034" name="First Mate Hat (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45035" name="First Mate Hat (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+    <skill id="45035" name="First Mate Hat (CON+1 MEN+1)">
+        <!-- CON +1\nMEN +1 -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45036" name="Artisan's Goggles (STR +1 INT +1)">
-        <!-- STR +1 and INT +1 -->
+    <skill id="45036" name="Artisan's Goggles (STR+1 INT+1)">
+        <!-- STR +1\nINT +1 -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)">
-        <!-- DEX +1 and WIT +1 -->
+    <skill id="45037" name="Artisan's Goggles (DEX +1 WIT +1)">
+        <!-- DEX +1\nWIT +1. -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
-    <skill id="45038" name="Artisan's Goggles (CON +1 MEN +1)">
-        <!-- CON +1 and MEN +1. -->
+    <skill id="45038" name="Artisan's Goggles (CON+1 MEN+1)">
+        <!-- CON +1\nMEN +1 -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
     </skill>
     <skill id="45039" name="Fire Dragon Belt">
-        <!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
+        <!-- Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%%. -->
         <icon initial="icon.bm_vallakas_belt"/>
-        <attributes property="MAGIC"/>
-		<target/>
+        <attributes/>
+        <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
@@ -1117,17 +1095,17 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45040" name="Effect of Dragon Pendant Lv. 1" max-level="6">
-        <!--
-            level 1: M. Def. 14+.
-            level 2: M. Def. 15+.
-            level 3: M. Def. 16+.
-            level 4: M. Def +17 and XP/SP Gain +5%.
-            level 5: M. Def +18, XP/SP gain +5%, and received P./M. Damage -3%.
-            level 6: M. Def +19, XP/SP gain +10%, and received P./M. Damage -5%.
-         -->
+    <skill id="45040" name="Dragon Pendant Lv. 1" max-level="6">
+        <!-- 
+			level 1: M. Def. +14.
+			level 2: M. Def. +15.
+			level 3: M. Def. +16.
+			level 4: M. Def. +17, acquired XP/ SP +5%.
+			level 5: M. Def. +18, Acquired XP/ SP +5%, Received P./ M. Damage -3%.
+			level 6: M. Def. +19, Acquired XP/ SP +10%, Received P./ M. Damage -5%.
+		-->
         <icon initial="icon.bm_pendant_dragon_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -1189,20 +1167,20 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45041" name="Effect of Dragon Pendant Lv. 2" max-level="6">
-        <!--
-            level 1: M. Def +20, XP/SP gain +20%, Received P./M. Damage -10%, and Atk. Spd./Casting Spd. +2%.
-            level 2: M. Def +21, XP/SP gain +20%, Received P./M. Damage -10%, and Atk. Spd./Casting Spd. +2%.
-            level 3: M. Def +22, XP/SP gain +20%, Received P./M. Damage -10%, and Atk. Spd./Casting Spd. +2%.
-            level 4: M. Def +23, XP/SP gain +20%, Received P./M. Damage -10%, and Atk. Spd./Casting Spd. +2%.
-            level 5: M. Def +24, XP/SP gain +20%, Received P./M. Damage -10%, and Atk. Spd./Casting Spd. +3%.
-            level 6: M. Def +25, XP/SP gain +20%, Received P./M. Damage -15%, Atk. Spd./Casting Spd. +3%, and P. Critical Damage/M. Critical Damage +5%.
-         -->
+    <skill id="45041" name="Dragon Pendant Lv. 2" max-level="6">
+        <!-- 
+			level 1: M. Def. +20, Acquired XP/ SP +20%, Received P./ M. Damage -10%, Atk. Spd./ Casting Spd. +2%.
+			level 2: M. Def. +21, Acquired XP/ SP +20%, Received P./ M. Damage -10%, Atk. Spd./ Casting Spd. +2%.
+			level 3: M. Def. +22, Acquired XP/ SP +20%, Received P./ M. Damage -10%, Atk. Spd./ Casting Spd. +2%.
+			level 4: M. Def. +23, Acquired XP/ SP +20%, Received P./ M. Damage -10%, Atk. Spd./ Casting Spd. +2%.
+			level 5: M. Def. +24, Acquired XP/ SP +20%, Received P./ M. Damage -10%, Atk. Spd./ Casting Spd. +3%.
+			level 6: M. Def. +25, Acquired XP/ SP +20%, Received P./ M. Damage -15%, Atk. Spd./ Casting Spd. +3%, P. Critical Damage/ M. Skill Critical Damage +5%.
+		-->
         <icon initial="icon.bm_pendant_dragon_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="20.0">
                     <value level="2">21.0</value>
                     <value level="3">22.0</value>
@@ -1221,7 +1199,7 @@
                     <value level="5">3.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="6">5.0</value>
                 </power>
@@ -1230,9 +1208,9 @@
                 <power>
                     <value level="6">5.0</value>
                 </power>
-            </stat-modify>           
+            </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20.0"/>           
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
@@ -1269,42 +1247,43 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45042" name="Effect of Dragon Pendant Lv. 3" max-level="6">
-        <!--
-            level 1: M. Def +26, XP/SP gain +25%, Received P./M. Damage -15%, Atk. Spd./Casting Spd. +3%, and P. Critical Damage/M. Critical Damage +5%.
-            level 2: M. Def +27, XP/SP gain +25%, Received P./M. Damage -15%, Atk. Spd./Casting Spd. +3%, and P. Critical Damage/M. Critical Damage +6%.
-            level 3: M. Def +28, XP/SP gain +25%, Received P./M. Damage -15%, Atk. Spd./Casting Spd. +4%, and P. Critical Damage/M. Critical Damage +6%.
-            level 4: M. Def +29, XP/SP gain +25%, Received P./M. Damage -15%, Atk. Spd./Casting Spd. +4%, P. Critical Damage/M. Critical Damage +7%, and P. Atk./M. Atk. +5%.
-            level 5: M. Def +30, XP/SP gain +25%, Received P./M. Damage -20%, Atk. Spd./Casting Spd. +4%, P. Critical Damage/M. Critical Damage +7%, and P. Atk./M. Atk. +5%.
-            level 6: M. Def +31, XP/SP gain +25%, Received P./M. Damage -20%, Atk. Spd./Casting Spd. +4%, P. Critical Damage/M. Critical Damage +8%, and P. Atk./M. Atk. +5%.
-         -->
+    <skill id="45042" name="Dragon Pendant Lv. 3" max-level="6">
+        <!-- 
+			level 1: M. Def. +26, Acquired XP/ SP +25%, Received P./ M. Damage -15%, Atk./ Casting Spd. +3%, P. Critical Damage/ M. Skill Critical Damage +5%.
+			level 2: M. Def. +27, Acquired XP/ SP +25%, Received P./ M. Damage -15%, Atk./ Casting Spd. +3%, P. Critical Damage/ M. Skill Critical Damage +6%.
+			level 3: M. Def. +28, Acquired XP/ SP +25%, Received P./ M. Damage -15%, Atk./ Casting Spd. +4%, P. Critical Damage/ M. Skill Critical Damage +6%.
+			level 4: M. Def. +29, Acquired XP/ SP +25%, Received P./ M. Damage -15%, Atk./ Casting Spd. +4%, P. Critical Damage/ M. Skill Critical Damage +7%, P./ M. Atk. +5%.
+			level 5: M. Def. +30, Acquired XP/ SP +25%, Received P./ M. Damage -20%, Atk./ Casting Spd. +4%, P. Critical Damage/ M. Skill Critical Damage +7%, P./ M. Atk. +5%.
+			level 6: M. Def. +31, Acquired XP/ SP +25%, Received P./ M. Damage -20%, Atk./ Casting Spd. +4%, P. Critical Damage/ M. Skill Critical Damage +8%, P./ M. Atk. +5%.
+		-->
         <icon initial="icon.bm_pendant_dragon_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="45043" name="Effect of Dragon Pendant Lv. 4" max-level="6">
-        <!--
-            level 1: M. Def +33, XP/SP gain +30%, Received P./M. Damage -20%, Atk. Spd./Casting Spd. +5%, P. Critical Damage/M. Critical Damage +8%, and P. Atk./M. Atk. +10%.
-            level 2: M. Def +35, XP/SP gain +30%, Received P./M. Damage -20%, Atk. Spd./Casting Spd. +5%, P. Critical Damage/M. Critical Damage +9%, and P. Atk./M. Atk. +10%.
-            level 3: M. Def +37, XP/SP gain +30%, Received P./M. Damage -25%, Atk. Spd./Casting Spd. +5%, P. Critical Damage/M. Critical Damage +9%, and P. Atk./M. Atk. +10%.
-            level 4: M. Def +39, XP/SP Gain +30%, Received P./M. Damage -25%, Atk. Spd./Casting Spd. +5%, P. Critical Damage/M. Critical Damage +10%, P. Atk./M. Atk. +10%, and Damage Reflect Resistance +10%.
-            level 5: M. Def +41, XP/SP Gain +30%, Received P./M. Damage -25%, Atk. Spd./Casting Spd. +5%, P. Critical Damage/M. Critical Damage +10%, P. Atk./M. Atk. +15%, and Damage Reflect Resistance +12%.
-            level 6: M. Def +43, XP/SP Gain +30%, Received P./M. Damage -25%, Atk. Spd./Casting Spd. +10%, P. Critical Damage/M. Critical Damage +12%, P. Atk./M. Atk. +15%, and Damage Reflect Resistance +15%.
-         -->
+    <skill id="45043" name="Dragon Pendant Lv. 4" max-level="6">
+        <!-- 
+			level 1: M. Def. +33, Acquired XP/ SP +30%, Received P./ M. Damage -20%, Atk./ Casting Spd. +5%, P. Critical Damage/ M. Skill Critical Damage +8%, P./ M. Atk. +10%.
+			level 2: M. Def. +35, Acquired XP/ SP +30%, Received P./ M. Damage -20%, Atk./ Casting Spd. +5%, P. Critical Damage/ M. Skill Critical Damage +9%, P./ M. Atk. +10%.
+			level 3: M. Def. +37, Acquired XP/ SP +30%, Received P./ M. Damage -25%, Atk./ Casting Spd. +5%, P. Critical Damage/ M. Skill Critical Damage +9%, P./ M. Atk. +10%.
+			level 4: M. Def. +39, Acquired XP/ SP +30%, Received P./ M. Damage -25%, Atk./ Casting Spd. +5%, P. Critical Damage/ M. Skill Critical Damage +10%, P./ M. Atk. +10%, Damage Reflection Resistance +10%.
+			level 5: M. Def. +41, Acquired XP/ SP +30%, Received P./ M. Damage -25%, Atk./ Casting Spd. +5%, P. Critical Damage/ M. Skill Critical Damage +10%, P./ M. Atk. +15%, Damage Reflection Resistance +12%.
+			level 6: M. Def. +43, Acquired XP/ SP +30%, Received P./ M. Damage -25%, Atk./ Casting Spd. +10%, P. Critical Damage/ M. Skill Critical Damage +12%, P./ M. Atk. +15%, Damage Reflection Resistance +15%.
+		-->
         <icon initial="icon.bm_pendant_dragon_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
     <skill id="45044" name="Blessed Dragon Pendant">
-        <!-- M. Def +50, XP/SP Gain +30%, Received P./M. Damage -30%, Atk. Spd./Casting Spd. +10%, P. Critical Damage/M. Critical Damage +15%, P. Atk./M. Atk. +20%, and Damage Reflect Resistance +20%. -->
+        <!-- M. Def. +50, Acquired XP/ SP +30%, Received P./ M. Damage -30%, Atk./ Casting Spd. +10%, P. Critical Damage/ M. Skill Critical Damage +15%, P./ M. Atk. +20%, Damage Reflection Resistance +20%. -->
         <icon initial="icon.bm_pendant_dragon_i01"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="45045" name="Dragon Invocation" action="A1">
-        <!-- Recovers 100 HP and 50 MP per second for 15 seconds and Movement Speed +33. -->
+    <skill id="45045" name="Dragon Meditation" action="A1">
+        <!-- For 15 sec., HP Recovery Rate +100, MP Recovery Rate +50, Speed +33. -->
         <icon initial="icon.dragon_invocation"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <hit-time initial="1000"/>
@@ -1312,9 +1291,10 @@
         <target/>
     </skill>
     <skill id="45046" name="Dragon Barrier" action="A1">
-        <!-- Creates a barrier for 10 seconds. Becomes invincible against normal attacks, skills, and debuffs. -->
+        <!-- Creates a barrier that protects against regular attacks, skills and debuffs for 10 sec. -->
         <icon initial="icon.dragon_barrier"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="673"/>
             <hit-time initial="2000"/>
@@ -1322,17 +1302,18 @@
         <target/>
     </skill>
     <skill id="45047" name="Dragon Evasion" action="A1">
-        <!-- Prevents enemies from targeting you for 5 sec. -->
+        <!-- For 5 sec., prevents enemies from targeting you. -->
         <icon initial="icon.dragon_evasion"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="45048" name="Glorious Cloak">
-        <!-- Max HP/Max MP/Max CP +10%%, P. Def. +5%%, M. Def +10%%, Resistance to all weapons +5, P. Critical Rate/M. Critical Rate +20, and PvP Damage Received -10%%. Also returns 4%% of received damage to the enemy. -->
+        <!-- Max HP/ MP/ CP +10%%, P. Def. +5%%, M. Def. +10%%, Resistance to All Weapons +5%%, P. Critical Rate/ M. Skill Critical Rate +20, Received PvP damage -10%%. Damage Reflection +4%%. -->
         <icon initial="icon.vesper_cloack_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
 </list>

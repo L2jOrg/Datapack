@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="62001" name="White Assassin Transformation" action="A2">
-        <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
+        <!-- You are transformed into White Assassin. For 20 min., Max HP/ MP +7%%, P./ M. Accuracy +2, P./ M. Atk. +3%%, P./ M. Def. +3%%, Atk. Spd. +5%%, M. Skill Critical Rate +20, Speed +5. The effect remains after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -49,9 +50,10 @@
         </effects>
     </skill>
     <skill id="62002" name="Mount Griffin" action="A2">
-        <!-- Mounts a Griffin. -->
+        <!-- Allows to mount Griffin. -->
         <icon initial="icon.griffin_vehicle"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>

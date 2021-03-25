@@ -1,68 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="40100" name="Purple Arc - 2nd Place" action="A1">
+    <skill id="40100" name="Purple Lantern - 2nd Place" action="A1">
+        <!--  -->
         <icon initial="icon.etc_holy_grail_i01"/>
-       <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="30000000" sp="810000"/>
-		</effects>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="810000" xp="30000000"/>
+        </effects>
     </skill>
-    <skill id="40101" name="Blue Arc - 3rd Place" action="A1">
+    <skill id="40101" name="Blue Lantern - 3rd Place" action="A1">
+        <!--  -->
         <icon initial="icon.etc_holy_grail_i02"/>
         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="10000000" sp="270000"/>
-		</effects>
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="270000" xp="10000000"/>
+        </effects>
     </skill>
-    <skill id="40102" name="Green Arc - 4th Place" action="A1">
+    <skill id="40102" name="Green Lantern - 4th Place" action="A1">
+        <!--  -->
         <icon initial="icon.etc_holy_grail_i03"/>
         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="5000000" sp="135000"/>
-		</effects>
-    </skill>
-    <skill id="40103" name="Sweet Blessing Star Candy - Event">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40104" name="Sayha's Storm Lv. 3 - Event">
-        <!-- Sayha's Grace Consumption +100%% and XP/SP Gain +200%% when hunting monsters. The effect remains active even after death. Duration 20 minutes. Cooldown 1 minute.\nDeath protection. You can delete it yourself. -->
-        <icon initial="icon.bm_sayha_storm"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40105" name="Blue Arc - 3rd Place">
-        <icon initial="icon.etc_holy_grail_i02"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="10000000" sp="270000"/>
-		</effects>
-    </skill>
-    <skill id="40106" name="Battle Scroll - Event">
-        <!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. -->
-        <icon initial="icon.ev_charge_scroll"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
-            <reuse initial="60000"/>
-            <effect-point initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
-		<abnormal type="BATTLE_SCROLL">
+        <effects>
+            <acquire-xp-sp sp="135000" xp="5000000"/>
+        </effects>
+    </skill>
+    <skill id="40103" name="Star Candy">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40104" name="Sayha's Storm Lv. 3 (Event)">
+        <!-- For 20 min., Sayha's Grace Consumption +100%%, acquired XP/ SP +200%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
+        <icon initial="icon.bm_sayha_storm"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40105" name="Blue Lantern - 3rd Place">
+        <!--  -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes magic-critical-rate="5.0"/>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="270000" xp="10000000"/>
+        </effects>
+    </skill>
+    <skill id="40106" name="Battle Scroll (Event)">
+        <!-- For 20 min., P. Atk. +200, M. Atk. +350, P. Critical Rate/ M. Skill Critical Rate +30, Atk./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. -->
+        <icon initial="icon.ev_charge_scroll"/>
+        <attributes magic-critical-rate="5.0" stay-after-death="true"/>
+        <target/>
+        <abnormal type="BATTLE_SCROLL">
             <level initial="1"/>
             <time initial="1200"/>
         </abnormal>
@@ -102,111 +102,268 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="40113" name="Sweet Grace Cookie">
+    <skill id="40107" name="Extra Pass: Transcendent Instance Zone">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40121" name="High-grade Red Arc" action="A1">
-        <!-- <Greater Magic Lamp 1st Place Reward>\nRecharges 1,200,000,000 XP and 32,400,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Red Cube. -->
+    <skill id="40108" name="Extra Pass: Transcendent Instance Zone (Event)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40109" name="Blessed Scroll: Enchant A-grade Weapon">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40110" name="Blessed Scroll: Enchant A-grade Armor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40111" name="Cursed Scroll: Enchant A-grade Weapon">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40112" name="Cursed Scroll: Enchant A-grade Armor">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40113" name="Sayha’s Cookie">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40114" name="Scroll: Enchant Cloak of Protection">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40115" name="Scroll of Escape: Quartermaster Mathorn">
+        <!-- Teleports to Quartermaster Mathorn on the Death Knight base. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40116" name="Scroll: Enchant Talisman of Authority">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40117" name="Summon Deton">
+        <!-- Summons NPC Deton. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40118" name="Scroll of Escape: Antharas' Lair Interior">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40119" name="Scroll of Escape: Antharas' Lair Interior" max-level="7">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40120" name="Special Scroll of Escape: Orc Barracks">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40121" name="High-grade Red Lantern" action="A1">
+        <!-- <Reward for achieving the 1st place in the Large Magic Lamp event>\nXP +1,200,000,000, SP +32,400,000. Can be exchanged by the Game Assistant for the Lit Red Lantern (transferable to other characters on the account). -->
         <icon initial="icon.etc_holy_grail_i00"/>
         <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="1200000000" sp="32400000"/>
-		</effects>
-    </skill>
-    <skill id="40122" name="High-grade Purple Arc" action="A1">
-        <!-- <Greater Magic Lamp 2nd Place Reward>\nRecharges 360,000,000 XP and 9,720,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Purple Cube. -->
-        <icon initial="icon.etc_holy_grail_i01"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="360000000" sp="9720000"/>
-		</effects>
-    </skill>
-    <skill id="40123" name="High-grade Blue Arc" action="A1">
-        <!-- <Greater Magic Lamp 3rd Place Reward>\nRecharges 120,000,000 XP and 3,240,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Blue Cube. -->
-        <icon initial="icon.etc_holy_grail_i02"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="120000000" sp="3240000"/>
-		</effects>
-    </skill>
-    <skill id="40124" name="High-grade Green Arc" action="A1">
-        <!-- <Greater Magic Lamp 4th Place Reward>\nRecharges 60,000,000 XP and 1,620,000 SP. Take it to the Dimensional Merchant to exchange for an Activated Green Cube. -->
-        <icon initial="icon.etc_holy_grail_i03"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="60000000" sp="1620000"/>
-		</effects>
-    </skill>
-    <skill id="40125" name="Activated High-grade Red Arc" action="A1">
-        <!-- <Greater Magic Lamp 1st Place Reward>\nActivated Arc. Recharges 1,200,000,000 XP and 32,400,000 SP.\nCan’t be shared with characters higher than your own level. -->
-        <icon initial="icon.etc_holy_grail_i00"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="1200000000" sp="32400000"/>
-		</effects>
-    </skill>
-    <skill id="40126" name="Activated High-grade Purple Arc" action="A1">
-        <!-- <Greater Magic Lamp 2nd Place Reward>\nActivated Arc. Recharges 360,000,000 XP and 9,720,000 SP.\nCan’t be shared with characters higher than your own level. -->
-        <icon initial="icon.etc_holy_grail_i01"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="360000000" sp="9720000"/>
-		</effects>
-    </skill>
-    <skill id="40127" name="Activated High-grade Blue Arc" action="A1">
-        <!-- <Greater Magic Lamp 3rd Place Reward>\nActivated Arc. Recharges 120,000,000 XP and 3,240,000 SP.\nCan’t be shared with characters higher than your own level. -->
-        <icon initial="icon.etc_holy_grail_i02"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="12000000" sp="3240000"/>
-		</effects>
-    </skill>
-    <skill id="40128" name="Activated High-grade Green Arc" action="A1">
-        <!-- <Greater Magic Lamp 4th Place Reward>\nActivated Arc. Recharges 60,000,000 XP and 1,620,000 SP.\nCan’t be shared with characters higher than your own level. -->
-        <icon initial="icon.etc_holy_grail_i03"/>
-        <attributes magic-critical-rate="5.0">
-			<magic-level initial="1"/>
-		</attributes>		
-		<target/>
-		<effects>
-			<acquire-xp-sp xp="60000000" sp="1620000"/>
-		</effects>
-    </skill>
-    <skill id="40141" name="Battleground Scroll" action="A1">
-        <!-- For 20 minutes, Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Skill Critical Rate+20, P. Critical/M. Critical Damage +10%%\nDeath protection. You can delete it yourself. -->
-        <icon initial="icon.etc_ssq_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" auto-use="BUFF">
             <magic-level initial="1"/>
-            <reuse initial="60000"/>
-            <effect-point initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
-		<abnormal type="BATTLE_SCROLL">
+        <effects>
+            <acquire-xp-sp sp="32400000" xp="1200000000"/>
+        </effects>
+    </skill>
+    <skill id="40122" name="High-grade Purple Lantern" action="A1">
+        <!-- <Reward for achieving the 2nd place in the Large Magic Lamp event>\nXP +360,000,000, SP +9,720,000. Can be exchanged by the Game Assistant for the Lit Purple Lantern (transferable to other characters on the account). -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="9720000" xp="360000000"/>
+        </effects>
+    </skill>
+    <skill id="40123" name="High-grade Blue Lantern" action="A1">
+        <!-- <Reward for achieving the 3rd place in the Large Magic Lamp event>\nXP +120,000,000, SP +3,240,000. Can be exchanged by the Game Assistant for the Lit Blue Lantern (transferable to other characters on the account). -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="3240000" xp="120000000"/>
+        </effects>
+    </skill>
+    <skill id="40124" name="High-grade Green Lantern" action="A1">
+        <!-- <Reward for achieving the 4th place in the Large Magic Lamp event>\nXP +60,000,000, SP +1,620,000. Can be exchanged by the Game Assistant for the Lit Green Lantern (transferable to other characters on the account). -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="1620000" xp="60000000"/>
+        </effects>
+    </skill>
+    <skill id="40125" name="High-grade Lit Red Lantern" action="A1">
+        <!-- <Reward for achieving the 1st place in the Big Magic Lamp event>\nXP +1,200,000,000, SP +32,400,000.\nCannot be transferred to higher-level characters. -->
+        <icon initial="icon.etc_holy_grail_i00"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="32400000" xp="1200000000"/>
+        </effects>
+    </skill>
+    <skill id="40126" name="High-grade Lit Purple Lantern" action="A1">
+        <!-- <Reward for achieving the 2nd place in the Big Magic Lamp event>\nXP +360,000,000, SP +9,720,000.\nCannot be transferred to higher-level characters. -->
+        <icon initial="icon.etc_holy_grail_i01"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="9720000" xp="360000000"/>
+        </effects>
+    </skill>
+    <skill id="40127" name="High-grade Lit Blue Lantern" action="A1">
+        <!-- <Reward for achieving the 3rd place in the Big Magic Lamp event>\nXP +120,000,000, SP +3,240,000.\nCannot be transferred to higher-level characters. -->
+        <icon initial="icon.etc_holy_grail_i02"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="3240000" xp="12000000"/>
+        </effects>
+    </skill>
+    <skill id="40128" name="High-grade Lit Green Lantern" action="A1">
+        <!-- <Reward for achieving the 4th place in the Big Magic Lamp event>\nXP +60,000,000, SP +1,620,000.\nCannot be transferred to higher-level characters. -->
+        <icon initial="icon.etc_holy_grail_i03"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+        <effects>
+            <acquire-xp-sp sp="1620000" xp="60000000"/>
+        </effects>
+    </skill>
+    <skill id="40129" name="Lucky Enchant Stone: A-grade Weapon - Event">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40130" name="Lucky Enchant Stone: A-grade Armor - Event">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40131" name="Einhasad's Blessing Scroll - Event">
+        <!-- For 20 min., acquired XP/ SP +50%%. Cooldown: 1 min.\nThe effect remains after death. You can cancel the effect by yourself. -->
+        <icon initial="icon.exp_bottle_scroll"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40132" name="Improved Lucky Enchant Stone: A-grade Weapon - Event">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40133" name="Improved Lucky Enchant Stone: A-grade Armor - Event">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40134" name="Test - More Adena 1">
+        <!-- Adena +100%%! -->
+        <icon initial="icon.skill1551"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40135" name="Test - More Adena 2">
+        <!-- Adena +100%%! -->
+        <icon initial="icon.buff_inc_adena"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40136" name="Scroll of Escape: Fortress">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40137" name="Improved Scroll of Escape: Fortress">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40138" name="Magic Lamp Charging Potion - Event">
+        <!-- For 1 h., Magic Lamp charging rate +20%%. Cooldown: 1 min. -->
+        <icon initial="icon.etc_recall_potion2"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40139" name="Spellbook: Mount Wyvern">
+        <!-- Double-click to learn how to ride Wyvern. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40140" name="Mount Wyvern">
+        <!-- Allows to mount Wyvern.\nWhen the character is riding Wyvern, weapon/ sigil is unequipped, also all bound creatures are dismissed. -->
+        <icon initial="icon.skill0327"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40141" name="Combat Scroll" action="A1">
+        <!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%%.\nThe effect remains after death. You can cancel the effect by yourself. -->
+        <icon initial="icon.etc_ssq_i00"/>
+        <attributes magic-critical-rate="5.0" stay-after-death="true">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <reuse initial="60000"/>
+        </attributes>
+        <target/>
+        <abnormal type="BATTLE_SCROLL">
             <level initial="2"/>
             <time initial="1200"/>
         </abnormal>
@@ -220,10 +377,10 @@
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
                 <power initial="10.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10.0"/>
             </stat-modify>
-			<stat-modify stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="20.0"/>
             </stat-modify>
             <stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -255,14 +412,14 @@
     <skill id="40142" name="Whale">
         <!-- none -->
         <icon initial="icon.fish_huge_i15"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40143" name="SP Scroll" max-level="3" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="500"/>
         </attributes>
         <target/>
@@ -275,14 +432,10 @@
             </effect>
         </effects>
     </skill>
-    <skill id="40144" name="SP Scroll: 2,000">
+    <skill id="40144" name="Scroll: 2000 SP">
         <!-- none -->
         <icon initial="icon.etc_sp_scroll1_i00"/>
         <attributes/>
-        <consume>
-            <item initial="49764"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <effects>
             <effect name="GiveSp">
@@ -291,392 +444,344 @@
         </effects>
     </skill>
     <skill id="40145" name="Scroll of Escape: Gludin Harbor">
-        <!-- Teleports you to Gludin Harbor. -->
+        <!-- Teleports to Gludin Harbor. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40146" name="Fish Stew - Vampiric Rage" max-level="3">
-        <!--
-            level 1: For 20 minutes, has a chance of absorbing 6% of damage inflicted upon the enemy as HP.
-            level 2: For 20 minutes, has a chance of absorbing 7% of damage inflicted upon the enemy as HP.
-            level 3: For 20 minutes, has a chance of absorbing 8% of damage inflicted upon the enemy as HP.
-         -->
+        <!-- 
+			level 1: For 20 min., with a certain chance, absorbs 6% of the inflicted damage as HP.
+			level 2: For 20 min., with a certain chance, absorbs 7% of the inflicted damage as HP.
+			level 3: For 20 min., with a certain chance, absorbs 8% of the inflicted damage as HP.
+		-->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40147" name="Fish Stew: Empower" max-level="3">
-        <!--
-            level 1: Increases M. Atk. by 55% for 20 minutes.
-            level 2: Increases M. Atk. by 65% for 20 minutes.
-            level 3: Increases M. Atk. by 75% for 20 minutes.
-         -->
+    <skill id="40147" name="Fish Stew - Empower" max-level="3">
+        <!-- 
+			level 1: For 20 min., M. Atk. +55%.
+			level 2: For 20 min., M. Atk. +65%.
+			level 3: For 20 min., M. Atk. +75%.
+		-->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40148" name="Fish Stew - Greater Might">
-        <!-- Increases P. Atk. by 4% for 30 minutes. -->
+        <!-- For 20 min., P. Atk. +4%. -->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40149" name="Fish Stew - Greater Shield">
-        <!-- Increases P. Def. by 5% for 20 minutes. -->
+        <!-- For 20 min. P. Def. +5%. -->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40150" name="Fish Stew - Wild Magic">
-        <!-- Increases M. Critical Rate by 10 for 20 minutes. -->
+        <!-- For 20 min., M. Critical Rate +10. -->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40151" name="Fish Stew - Berserker Spirit" max-level="2">
-        <!--
-            level 1: For 20 minutes, P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
-            level 2: For 20 minutes, P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
-         -->
+        <!-- 
+			level 1: For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5.
+			level 2: For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.
+		-->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40152" name="Fish Stew - Decrease Weight" max-level="3">
-        <!--
-            level 1: For 20 minutes, Weight Penalty Section +3000.
-            level 2: For 20 minutes, Weight Penalty Section +6000.
-            level 3: For 20 minutes, Weight Penalty Section +9000.
-         -->
+        <!-- 
+			level 1: For 20 min., overweight limit +3000.
+			level 2: For 20 min., overweight limit +6000.
+			level 3: For 20 min., overweight limit +9000.
+		-->
         <icon initial="icon.fish_stew_buff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40153" name="Fish Stew- Guildsman’s Gratitude" max-level="2">
-        <!--
-            level 1: Hunting XP/SP Gain +10% for 20 minutes.
-            level 2: Hunting XP/SP Gain +30% for 20 minutes.
-         -->
+    <skill id="40153" name="Fish Stew - Guild's Gratitude" max-level="2">
+        <!-- 
+			level 1: For 20 min., Acquired XP/ SP +10%.
+			level 2: For 20 min., Acquired XP/ SP +30%.
+		-->
         <icon initial="icon.ev_invasion_buff_box"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40154" name="Full Moon’s Blessing (Event)" max-level="25">
-        <!--
-            level 1: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nAfter some time, the full moon will be up.\n<Note>\nCannot obtain the item if you are dead.
-            level 24: For 1 hour, XP/SP Gain +10%.\nThe buff is refreshed automatically every hour, and you’ll obtain a Songpyeon ingredients box each time it is refreshed.\nThe full moon is up.\n<Note>\nCannot obtain the item if you are dead.
-            level 25: none
-         -->
+    <skill id="40154" name="Full Moon Blessing (Event)" max-level="25">
+        <!-- 
+			level 1: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The time will come and the moon will rise again. Note! Cannot be obtained if your character is dead.
+			level 24: Acquired XP/ SP +10% for 1 h. Renewed every hour, lasts for 24 h. Grants a Sweet Ingredient Pack after every renewal. The moon will rise again. Note! Cannot be obtained if your character is dead.
+			level 25: none
+		-->
         <icon initial="BranchSys2.icon.g_illumination_yellow"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40155" name="Full Moon’s Blessing - Reward">
+    <skill id="40155" name="Full Moon Blessing (Reward)">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40156" name="Honey Rice Cakes - Event">
-        <!-- Recovers 200 HP instantly when used. -->
+    <skill id="40156" name="Honey Rice Cakes (Event)">
+        <!-- Instantly recovers 200 HP. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40157" name="Bean Songpyeon - Event">
-        <!-- Recharges 35,000 Sayha's Grace Points. -->
+    <skill id="40157" name="Honey Bean Cakes (Event)">
+        <!-- Sayha's Grace points +35,000. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40158" name="Sesame Songpyeon - Event">
-        <!-- For 20 minutes, Hunting XP/SP Gain + 20%.\n\n<Note>\nWhen Scroll: Einhasad's Blessing, Einhasad's Protection, Dandy's Home Run Ball/Golden Ball is used while the Sesame Songpyeon effect is applied, only the higher effect will be applied. -->
+    <skill id="40158" name="Honey Sesame Cakes (Event)">
+        <!-- Acquired XP/ SP +20% for 20 min. min.\n\nNote!\nWhen used with Einhasad's Blessing Scroll, Einhasad's Protection, Dandy's Home Run Ball, Dandy's Golden Ball, the most powerful effect is active. -->
         <icon initial="icon.ev_sesame_songpyeon_00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40159" name="Thanksgiving Thank You Letter - Event">
-        <!-- Letter to friends for Thanksgiving. Fireworks will be displayed above the character when used, and the Thanksgiving text will be displayed. -->
+    <skill id="40159" name="Letter of Congratulation (Event)">
+        <!-- Congratulations on Chuseok. When you open the letter, you will see an explosion of fireworks, also there will be writings over your character’s head. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40160" name="Scroll: Restore Equipment Appearance">
+    <skill id="40160" name="Scroll: Restore Equipment">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40161" name="Test Emerald Weapon Appearance Stone: One-handed Sword">
+    <skill id="40161" name="(Test) Emerald Weapon Appearance Stone: One-handed Sword">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40162" name="Emerald Weapon Appearance Stone">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40163" name="Appearance Stone: Dark Assassin Suit">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40164" name="Spellbook: Glory Ability Lv. 1">
+    <skill id="40164" name="Spellbook: Glorious Warrior's Ability">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40166" name="Intermediate HP Potion - Event">
+    <skill id="40165" name="Alligator Island's Time Stone">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40167" name="Shining Scroll of Mood Melody - Event">
-        <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
-        <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-            <magic-level initial="1"/>
-            <reuse initial="60000"/>
-        </attributes>
-        <target/>
-        <!-- <abnormal type="BATTLE_SCROLL"> -->
-            <!-- <level initial="1"/> -->
-            <!-- <time initial="-1"/> -->
-            <!-- <chance initial="-1"/> -->
-        <!-- </abnormal> -->
-        <effects>
-            <call-skill scope="SELF" skill="40000">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40001">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40002">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40003">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40004">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40005">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40006">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40007">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40008">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40009">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40010">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40011">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40012">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40013">
-                <power initial="1.0"/>
-            </call-skill>
-        </effects>
-    </skill>
-    <skill id="40168" name="Top-grade Stable Scroll: Enchant Weapon (S-grade)">
+    <skill id="40166" name="Mid-grade HP Recovery Potion - Event">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40169" name="Top-grade Stable Scroll: Enchant Armor (S-grade)">
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40170" name="Super Strong Giant's Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
+    <skill id="40170" name="Reanimated Corpse Mask">
+        <!-- For 20 min., acquired XP/ SP +30%%. -->
         <icon initial="BranchSys.icon.br_frankenstein_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40171" name="Shriek Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
+        <!-- For 20 min., acquired XP/ SP +30%%. -->
         <icon initial="icon.ev_scream_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40172" name="Red Devil Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
+        <!-- For 20 min., acquired XP/ SP +30%%. -->
         <icon initial="icon.ev_doccabi_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40173" name="Mummy Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
+        <!-- For 20 min., acquired XP/ SP +30%%. -->
         <icon initial="icon.ev_mummy_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40174" name="Alien Mask">
-        <!-- For 20 min., XP/SP Gain +30%%. -->
+        <!-- For 20 min., acquired XP/ SP +30%%. -->
         <icon initial="icon.ev_alien_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40175" name="Golden Jack O'Lantern Mask">
-        <!-- For 20 min., XP/SP Gain +50%%. -->
+    <skill id="40175" name="Jack O'Lantern's Golden Mask">
+        <!-- For 20 min., acquired XP/ SP +50%%. -->
         <icon initial="icon.ev_golden_jack0_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40176" name="Pumpkin Ghost’s Great Candy - Event" max-level="25">
-        <!-- For 1 hour, STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. The buff is refreshed automatically every hour, and you’ll obtain a Halloween Candy Box each time it is refreshed\n<Note>\nCannot obtain the item if you are dead. -->
+    <skill id="40176" name="Pumpkin Ghost’s Noble Candy - Event" max-level="25">
+        <!-- For 1 h., STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. Renewed every hour. Halloween Candy Box is given after every renewal.\nNote!\nCannot be obtained if your character is dead.\n -->
         <icon initial="icon.ev_jack_ghost_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40177" name="Pumpkin Ghost’s Great Candy - Reward">
+    <skill id="40177" name="Pumpkin Ghost’s Noble Candy - Reward">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40178" name="Halloween Mask">
-        <!-- Appearance has transformed to a Halloween Mask. -->
+        <!-- Changes the appearance upon use. -->
         <icon initial="icon.ev_golden_jack0_mask_i00"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40179" name="Halloween Candy - Event">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40180" name="Sweet Halloween Grace Cookie - Event">
+    <skill id="40180" name="Sayha's Cookie - Event">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40182" name="Lucky Vitality Card">
+    <skill id="40181" name="Antharas' Lair's Time Stone">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40183" name="Lucky Vitality - STR/INT +1">
-        <!-- For 20 min., STR/INT +1. -->
+    <skill id="40182" name="Lucky Energy Card">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40183" name="Lucky Energy Card - STR/INT +1">
+        <!-- For 20 min., STR/ INT +1.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40184" name="Lucky Vitality - DEX/WIT +1">
-        <!-- For 20 min., DEX/WIT +1. -->
+    <skill id="40184" name="Lucky Energy Card - DEX/WIT +1">
+        <!-- For 20 min., DEX/ WIT +1.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40185" name="Lucky Vitality - CON/MEN +1">
-        <!-- For 20 min., CON/MEN +1. -->
+    <skill id="40185" name="Lucky Energy Card - CON/MEN +1">
+        <!-- For 20 min., CON/ MEN +1.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40186" name="Lucky Vitality - XP">
-        <!-- For 20 min., XP/SP Gain +20%%. -->
+    <skill id="40186" name="Lucky Energy Card - EXP">
+        <!-- For 20 min., acquired XP/ SP +20%%.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_devil_black"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40187" name="Lucky Vitality - All Stats +1">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +1. -->
+    <skill id="40187" name="Lucky Energy Card - All Stats +1">
+        <!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +1.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_dragon_gold"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40188" name="Lucky Vitality - XP/All Stats +1">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +1, and XP/SP Gain +20%%. -->
+    <skill id="40188" name="Lucky Energy Card - EXP/All Stats +1">
+        <!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +1, acquired XP/ SP +20%%.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_hero_red"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40189" name="Lucky Vitality - XP/All Stats +2">
-        <!-- For 20 min., STR/INT/DEX/WIT/CON/MEN +2, and XP/SP Gain +30%%. -->
+    <skill id="40189" name="Lucky Energy Card - EXP/All Stats +2">
+        <!-- For 20 min., STR/ INT/ DEX/ WIT/ CON/ MEN +2, acquired XP/ SP +30%%.\n\nThe effect remains after death.\nThe effect can't be cancelled by yourself. -->
         <icon initial="icon.card_hidden"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="40197" name="Festival Participant’s Mark" max-level="5">
-        <!--
-            level 1: 1 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 2: 2 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 3: 3 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 4: 4 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-            level 5: 5 stars have been collected.\nMark for participants of the festival. Collect five to go up to the next floor.
-         -->
+    <skill id="40190" name="Antharas' Lair's Time Stone">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40191" name="Harvesting Basics" max-level="6">
+        <!-- 
+			level 1: For 1 h., P./ M. Atk. and P./ M. Def. +30, Max HP/ MP +40. Renewed every hour. After each renewal, the buff level is increased. Note! The next level of the effect cannot be reached if your character is dead. The effect remains after death. You can't cancel the effect by yourself.
+			level 2: For 1 h., P./ M. Atk. and P./ M. Def. +60, Max HP/ MP +80. Renewed every hour. After each renewal, the buff level is increased. Note! The next level of the effect cannot be reached if your character is dead. The effect remains after death. You can't cancel the effect by yourself.
+			level 3: For 1 h., P./ M. Atk. and P./ M. Def. +90, Max HP/ MP +120. Renewed every hour. After each renewal, the buff level is increased. Note! The next level of the effect cannot be reached if your character is dead. The effect remains after death. You can't cancel the effect by yourself.
+			level 4: For 1 h., P./ M. Atk. and P./ M. Def. +120, Max HP/ MP +160. Renewed every hour. After each renewal, the buff level is increased. Note! The next level of the effect cannot be reached if your character is dead. The effect remains after death. You can't cancel the effect by yourself.
+			level 5: For 1 h., P./ M. Atk. and P./ M. Def. +150, Max HP/ MP +180. Renewed every hour. After each renewal, the buff level is increased. Note! The next level of the effect cannot be reached if your character is dead. The effect remains after death. You can't cancel the effect by yourself.
+			level 6: For 1 h., P./ M. Atk. and P./ M. Def. +180, Max HP/ MP +240. The effect remains after death. You can't cancel the effect by yourself.
+		-->
+        <icon initial="icon.etc_ssq_scroll_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40192" name="Scroll: Enchant Death Knight's Flame Sword (Exchangeable)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40193" name="Scroll: Enchant Death Knight's Flame Sword (Unexchangeable)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40194" name="Extra Pass: Transcendent Instance Zone">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40195" name="Extra Pass: Transcendent Instance Zone (Event)">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40196" name="Scroll of Escape: Antharas' Lair">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="40197" name="Mark of Examinee" max-level="5">
+        <!-- 
+			level 1: Gathered stars: 1. You can get to the next level after obtaining 5 stars and getting Mark of Examinee.
+			level 2: Gathered stars: 2. You can get to the next level after obtaining 5 stars and getting Mark of Examinee.
+			level 3: Gathered stars: 3. You can get to the next level after obtaining 5 stars and getting Mark of Examinee.
+			level 4: Gathered stars: 4. You can get to the next level after obtaining 5 stars and getting Mark of Examinee.
+			level 5: You've gathered all 5 stars. You can get to the next level after obtaining 5 stars and getting Mark of Examinee.
+		-->
         <icon initial="icon.skill30530"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="40198" name="Star Energy">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="40199" name="Enchant Scroll: Talisman of Baium">
-        <!-- none -->
-        <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
 </list>

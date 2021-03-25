@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="9206" name="Fast Moving" max-level="2" action="A2">
-        <!--
-            level 1: Movement Speed +95 for 30 seconds.
-            level 2: Movement Speed +95 for 35 seconds.
-         -->
+        <!-- 
+			level 1: For 30 sec., Speed +95.
+			level 2: For 35 sec., Speed +95.
+		-->
         <icon initial="icon.skill9206"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" without-action="true">
+        <attributes magic-critical-rate="5.0" without-action="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="45000"/>
-            <cool-time initial="45000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -24,10 +24,11 @@
         </effects>
     </skill>
     <skill id="9210" name="Dismount" action="A1">
-        <!-- Dismounts from a mount. -->
+        <!-- Dismounts from a ridable mount. -->
         <icon initial="icon.skill9210"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <effect-point initial="10"/>
             <hit-time initial="2500"/>
         </attributes>
@@ -40,91 +41,102 @@
             </dispel>
         </effects>
     </skill>
-    <skill id="9244" name="Greater Scroll: Enchant Weapon (D-grade)" action="A1">
+    <skill id="9244" name="Improved Scroll: Enchant D-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9245" name="Greater Scroll: Enchant Armor (D-grade)" action="A1">
+    <skill id="9245" name="Improved Scroll: Enchant D-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9246" name="Greater Scroll: Enchant Weapon (C-grade)" action="A1">
+    <skill id="9246" name="Improved Scroll: Enchant C-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9247" name="Greater Scroll: Enchant Armor (C-grade)" action="A1">
+    <skill id="9247" name="Improved Scroll: Enchant C-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9248" name="Greater Scroll: Enchant Weapon (B-grade)" action="A1">
+    <skill id="9248" name="Improved Scroll: Enchant B-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9249" name="Greater Scroll: Enchant Armor (B-grade)" action="A1">
+    <skill id="9249" name="Improved Scroll: Enchant B-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9250" name="Improved Scroll: Enchant Weapon (A-grade)" action="A1">
+    <skill id="9250" name="Improved Scroll: Enchant A-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9251" name="Improved Scroll: Enchant Armor (A-grade)" action="A1">
+    <skill id="9251" name="Improved Scroll: Enchant A-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9257" name="Mentor's Scroll: Enchant Weapon (D-grade)" action="A1">
+    <skill id="9257" name="Mentor's Scroll: Enchant D-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9259" name="Mentor's Scroll: Enchant Weapon (C-grade)" action="A1">
+    <skill id="9259" name="Mentor's Scroll: Enchant C-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="9279" name="PC Progression Support" action="A2">
-        <!-- PC-exclusive growth support buff. XP/SP +10%. Not for Servitors. -->
+    <skill id="9279" name="PA Progression Support" action="A2">
+        <!-- PA only. Acquired XP/ SP +10%. Not for servitors. -->
         <icon initial="icon.etc_pccafe_exp_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
+        <attributes irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="-2"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -133,43 +145,48 @@
             <time initial="-1"/>
         </abnormal>
     </skill>
-    <skill id="9293" name="Mysterious Soulshot (No-grade)" action="A1">
+    <skill id="9293" name="Mysterious No-grade Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.etc_spirit_bullet_white_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="9294" name="Mysterious Soulshot (D-grade)" action="A1">
+    <skill id="9294" name="Mysterious D-grade Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.etc_spirit_bullet_blue_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="9295" name="Mysterious Soulshot (C-grade)" action="A1">
+    <skill id="9295" name="Mysterious C-grade Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.etc_spirit_bullet_green_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="9296" name="Mysterious Soulshot (B-grade)" action="A1">
+    <skill id="9296" name="Mysterious B-grade Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="9297" name="Mysterious Soulshot (A-grade)" action="A1">
+    <skill id="9297" name="Mysterious A-grade Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>

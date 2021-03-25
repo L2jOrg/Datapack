@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="2001" name="Red Potion" action="A2">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HP_RECOVER">
@@ -20,8 +21,9 @@
     <skill id="2002" name="Healing Drug" action="A2">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HP_RECOVER">
@@ -34,32 +36,34 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2003" name="Squash Seed" action="A1">
+    <skill id="2003" name="Cloned Squash Seed" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
+        <attributes hit-cancel-time="1.5" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <hit-time initial="1500"/>
         </attributes>
         <target/>
         <effects>
-            <summon-npc despawn-delay="180000">
+            <summon-npc count="1" despawn-delay="180000">
                 <npc initial="12774.0"/>
             </summon-npc>
         </effects>
     </skill>
-    <skill id="2004" name="Large Squash Seed" action="A1">
+    <skill id="2004" name="Cloned Large Squash Seed" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" hit-cancel-time="1.5">
+        <attributes hit-cancel-time="1.5" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <hit-time initial="1500"/>
         </attributes>
         <target/>
         <effects>
-            <summon-npc despawn-delay="180000">
+            <summon-npc count="1" despawn-delay="180000">
                 <npc initial="12777.0"/>
             </summon-npc>
         </effects>
@@ -83,19 +87,21 @@
             </target>
         </conditions>
     </skill>
-    <skill id="2006" name="Scroll: Enchant Weapon (A-grade)" action="A1">
+    <skill id="2006" name="Scroll: Enchant A-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2007" name="Scroll: Enchant Armor (A-grade)" action="A1">
+    <skill id="2007" name="Scroll: Enchant A-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
@@ -104,22 +110,25 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2009" name="Item - Blessed Beast Spirit Shot" action="A1">
+    <skill id="2009" name="Item - Blessed Beast Spiritshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="2010" name="Endeavor Potion" action="A2">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HIT_UP">
@@ -133,9 +142,11 @@
         </effects>
     </skill>
     <skill id="2011" name="Wind Walk Potion" action="A2">
-        <!-- Movement Speed has been increased by 20. -->
+        <!-- Speed +20. -->
         <icon initial="icon.etc_potion_green_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
         <abnormal type="SPEED_UP">
             <level initial="1"/>
@@ -148,9 +159,11 @@
         </effects>
     </skill>
     <skill id="2012" name="Haste Potion" action="A2">
-        <!-- Atk. Spd. has been increased by 15%%. -->
+        <!-- Atk. Spd. +15%%. -->
         <icon initial="icon.etc_reagent_green_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
         <abnormal type="ATTACK_TIME_DOWN">
             <level initial="1"/>
@@ -166,6 +179,7 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <hit-time initial="20000">
                 <value level="2">1000</value>
             </hit-time>
@@ -199,67 +213,75 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2015" name="Scroll: Enchant Weapon (B-grade)" action="A1">
+    <skill id="2015" name="Scroll: Enchant B-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2016" name="Scroll: Enchant Armor (B-grade)" action="A1">
+    <skill id="2016" name="Scroll: Enchant B-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2017" name="Scroll: Enchant Weapon (C-grade)" action="A1">
+    <skill id="2017" name="Scroll: Enchant C-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2018" name="Scroll: Enchant Armor (C-grade)" action="A1">
+    <skill id="2018" name="Scroll: Enchant C-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2019" name="Scroll: Enchant Weapon (D-grade)" action="A1">
+    <skill id="2019" name="Scroll: Enchant D-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2020" name="Scroll: Enchant Armor (D-grade)" action="A1">
+    <skill id="2020" name="Scroll: Enchant D-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2021" name="Scroll: Enchant Weapon (S-grade)" action="A1">
+    <skill id="2021" name="Scroll: Enchant S-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2022" name="Scroll: Enchant Armor (S-grade)" action="A1">
+    <skill id="2022" name="Scroll: Enchant S-grade Armor" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
@@ -268,6 +290,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="700"/>
         </attributes>
         <target/>
@@ -277,56 +300,63 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2025" name="Large Firecracker" action="A1">
+    <skill id="2025" name="Lightning Strike" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2027" name="Blessed Scroll: Enchant Weapon (A-grade)" action="A1">
+    <skill id="2027" name="Blessed Scroll: Enchant A-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2028" name="Blessed Scroll: Enchant Weapon (B-grade)" action="A1">
+    <skill id="2028" name="Blessed Scroll: Enchant B-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2029" name="Blessed Scroll: Enchant Weapon (C-grade)" action="A1">
+    <skill id="2029" name="Blessed Scroll: Enchant C-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2030" name="Blessed Scroll: Enchant Weapon (D-grade)" action="A1">
+    <skill id="2030" name="Blessed Scroll: Enchant D-grade Weapon" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target type="ITEM"/>
     </skill>
-    <skill id="2031" name="HP Potion" action="A2">
-        <!-- HP Recovery Bonus has been increased. -->
+    <skill id="2031" name="Healing Potion" action="A2">
+        <!-- Increases HP Recovery Rate. -->
         <icon initial="icon.etc_lesser_potion_red_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HP_RECOVER">
@@ -339,11 +369,12 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2032" name="Greater HP Potion" action="A2">
-        <!-- HP Recovery Bonus has been slightly increased. -->
+    <skill id="2032" name="Greater Healing Potion" action="A2">
+        <!-- Slightly increases HP Recovery Bonus. -->
         <icon initial="icon.etc_potion_scarlet_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HP_RECOVER">
@@ -356,19 +387,21 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2033" name="Item - Beast Soul Shot" action="A1">
+    <skill id="2033" name="Item - Beast Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="2034" name="Greater Wind Walk Potion" action="A2">
-        <!-- Movement Speed has been increased by 33. -->
+        <!-- Speed +33. -->
         <icon initial="icon.etc_lesser_potion_green_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="SPEED_UP">
@@ -382,10 +415,11 @@
         </effects>
     </skill>
     <skill id="2035" name="Greater Haste Potion" action="A2">
-        <!-- Atk. Spd. has been increased by 33%%. -->
+        <!-- Atk. Spd. +33%%. -->
         <icon initial="icon.etc_lesser_potion_purple_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="ATTACK_TIME_DOWN">
@@ -398,11 +432,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="2036" name="Blessed Scroll of Escape" max-level="2" action="A1">
+    <skill id="2036" name="Improved Scroll of Escape" max-level="2" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="200"/>
         </attributes>
         <target/>
@@ -413,11 +448,12 @@
             <escape location="TOWN"/>
         </effects>
     </skill>
-    <skill id="2037" name="Major HP Potion" action="A2">
-        <!-- HP Recovery Bonus has been greatly increased. -->
+    <skill id="2037" name="Major Healing Potion" action="A2">
+        <!-- Greatly increases HP Recovery Rate. -->
         <icon initial="icon.etc_reagent_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="HP_RECOVER">
@@ -430,10 +466,12 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2038" name="High-grade HP Potion" action="A1">
+    <skill id="2038" name="High-grade HP Recovery Potion" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -442,11 +480,12 @@
             </hp>
         </effects>
     </skill>
-    <skill id="2039" name="Soulshot (No-grade)" action="A1">
+    <skill id="2039" name="Soulshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -455,6 +494,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
@@ -470,6 +510,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="20000"/>
         </attributes>
         <target/>
@@ -485,6 +526,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -495,11 +537,12 @@
             </dispel>
         </effects>
     </skill>
-    <skill id="2043" name="Greater Antidote" action="A1">
+    <skill id="2043" name="Refined Antidote" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -515,6 +558,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -530,6 +574,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -545,7 +590,10 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <hit-time initial="5000"/>
+            <cast-range initial="-1"/>
+            <hit-time initial="1000">
+                <value level="2">5000</value>
+            </hit-time>
         </attributes>
         <target/>
         <conditions>
@@ -558,11 +606,12 @@
             <effect name="SummonPet"/>
         </effects>
     </skill>
-    <skill id="2047" name="Spiritshot (No-grade)" action="A1">
+    <skill id="2047" name="Spiritshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -571,10 +620,11 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
-            <feed normal="100" ride="100"/>
+            <feed normal="100" ride="100" wyvern="0"/>
         </effects>
     </skill>
     <skill id="2049" name="Blessed Scroll of Resurrection" action="A1">
@@ -599,9 +649,10 @@
         </effects>
     </skill>
     <skill id="2050" name="Scroll: Guidance" action="A2">
-        <!-- For 20 minutes, P. Accuracy +2. -->
+        <!-- For 20 min., P. Accuracy +2. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -616,10 +667,11 @@
         </effects>
     </skill>
     <skill id="2051" name="Scroll: Death Whisper" action="A2">
-        <!-- For 20 minutes, P. Critical Damage +25%%. -->
+        <!-- For 20 min., P. Critical Damage +25%%. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -634,10 +686,11 @@
         </effects>
     </skill>
     <skill id="2052" name="Scroll: Focus" action="A2">
-        <!-- For 20 minutes, P. Critical Rate +20%%. -->
+        <!-- For 20 min., P. Critical Rate +20%%. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -652,10 +705,11 @@
         </effects>
     </skill>
     <skill id="2053" name="Scroll: Acumen" action="A2">
-        <!-- Increases Casting Spd. Effect 3. -->
+        <!-- Casting Spd. +15%% for 20 min. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -670,10 +724,11 @@
         </effects>
     </skill>
     <skill id="2054" name="Scroll: Haste" action="A2">
-        <!-- Increases Atk. Spd. by 15%% for 20 minutes. -->
+        <!-- Atk. Spd. +15%% for 20 min. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -688,10 +743,11 @@
         </effects>
     </skill>
     <skill id="2055" name="Scroll: Agility" action="A2">
-        <!-- Increases Speed. Effect 2. -->
+        <!-- For 20 min., Speed +20. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -706,10 +762,11 @@
         </effects>
     </skill>
     <skill id="2056" name="Scroll: Empower" action="A2">
-        <!-- Increases M. Atk. by 55%% for 20 minutes. -->
+        <!-- For 20 min., M. Atk. +55%%. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -724,10 +781,11 @@
         </effects>
     </skill>
     <skill id="2057" name="Scroll: Might" action="A2">
-        <!-- Increases P. Atk. Effect 3. -->
+        <!-- For 20 min., P. Atk. +230. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -742,10 +800,11 @@
         </effects>
     </skill>
     <skill id="2058" name="Scroll: Wind Walk" action="A2">
-        <!-- Increases Speed. Effect 2. -->
+        <!-- For 20 min., Speed +20. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -760,10 +819,11 @@
         </effects>
     </skill>
     <skill id="2059" name="Scroll: Shield" action="A2">
-        <!-- Increases P. Def. Effect 3. -->
+        <!-- For 20 min., P. Def. +15%%. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -782,6 +842,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -792,11 +853,12 @@
             </dispel>
         </effects>
     </skill>
-    <skill id="2061" name="Blessed Spiritshot (No-grade)" action="A1">
+    <skill id="2061" name="Blessed Spiritshot" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -826,17 +888,19 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
-            <feed normal="150" ride="150"/>
+            <feed normal="150" ride="150" wyvern="0"/>
         </effects>
     </skill>
     <skill id="2064" name="Scroll: Mana Regeneration" action="A2">
-        <!-- MP Recovery Bonus has been increased. -->
+        <!-- Increases MP Recovery Rate. -->
         <icon initial="icon.etc_scroll_white_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="4000"/>
         </attributes>
         <target/>
@@ -882,19 +946,21 @@
             <effect name="OpenChest"/>
         </effects>
     </skill>
-    <skill id="2066" name="Item - Fight Song Crystal" action="A1">
+    <skill id="2066" name="Item - Theme Sound Crystal" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2067" name="Item - Fight Song Crystal" action="A1">
+    <skill id="2067" name="Item - Theme Sound Crystal" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -903,6 +969,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -911,6 +978,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -919,6 +987,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -927,6 +996,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -935,26 +1005,28 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2073" name="Item - Fight Song Crystal" action="A1">
+    <skill id="2073" name="Item - Theme Sound Crystal" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="2074" name="Potion of Critical Escape" debuff="true" action="A3">
+    <skill id="2074" name="Potion of Critical Escape" action="A3" debuff="true">
         <!-- Misdirects enemy attacks and decreases your Speed. -->
         <icon initial="icon.etc_potion_red_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
             <cast-range initial="600"/>
             <effect-range initial="800"/>
         </attributes>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="9" affect-random="10"/>
+        <target affect-min="9" affect-random="10" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY_ONLY"/>
         <abnormal type="SPEED_DOWN">
             <level initial="1"/>
             <time initial="10"/>
@@ -983,11 +1055,12 @@
             </effect>
         </effects>
     </skill>
-    <skill id="2076" name="Eva's Blessing" action="A2">
-        <!-- Lung capacity has been increased by 400%%. -->
+    <skill id="2076" name="Blessing of Eva" action="A2">
+        <!-- Breath gauge +40%%. -->
         <icon initial="icon.etc_bless_of_eva_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="MAX_BREATH_UP">
@@ -1001,10 +1074,11 @@
         </effects>
     </skill>
     <skill id="2077" name="Potion of Revenge" action="A2">
-        <!-- P. Def. has been decreased by 17%% and a certain amount of damage is reflected back to the enemy. -->
+        <!-- P. Def. -17%%, reflects a certain amount of damage back to the enemy -->
         <icon initial="icon.etc_potion_blue_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="DMG_SHIELD">
@@ -1020,214 +1094,229 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="2078" name="Soulshot Compressed Package (No-grade)" action="A1">
+    <skill id="2078" name="Compressed Package: No-grade Soulshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="1835"/>
+            <restoration count="300" enchant="0" item="1835"/>
         </effects>
     </skill>
-    <skill id="2079" name="Soulshot Compressed Package (D-grade)" action="A1">
+    <skill id="2079" name="Compressed Package: D-grade Soulshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="1463"/>
+            <restoration count="300" enchant="0" item="1463"/>
         </effects>
     </skill>
-    <skill id="2080" name="Soulshot Compressed Package (C-grade)" action="A1">
+    <skill id="2080" name="Compressed Package: C-grade Soulshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="1464"/>
+            <restoration count="300" enchant="0" item="1464"/>
         </effects>
     </skill>
-    <skill id="2081" name="Soulshot Compressed Package (B-grade)" action="A1">
+    <skill id="2081" name="Compressed Package: B-grade Soulshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="1465"/>
+            <restoration count="300" enchant="0" item="1465"/>
         </effects>
     </skill>
-    <skill id="2082" name="Soulshot Compressed Package (A-grade)" action="A1">
+    <skill id="2082" name="Compressed Package: A-grade Soulshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="1466"/>
+            <restoration count="300" enchant="0" item="1466"/>
         </effects>
     </skill>
-    <skill id="2084" name="Spiritshot Compressed Package (No-grade)" action="A1">
+    <skill id="2084" name="Compressed Package: No-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="2509"/>
+            <restoration count="300" enchant="0" item="2509"/>
         </effects>
     </skill>
-    <skill id="2085" name="Spiritshot Compressed Package (D-grade)" action="A1">
+    <skill id="2085" name="Compressed Package: D-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="2510"/>
+            <restoration count="300" enchant="0" item="2510"/>
         </effects>
     </skill>
-    <skill id="2086" name="Spiritshot Compressed Package (C-grade)" action="A1">
+    <skill id="2086" name="Compressed Package: C-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="2511"/>
+            <restoration count="300" enchant="0" item="2511"/>
         </effects>
     </skill>
-    <skill id="2087" name="Spiritshot Compressed Package (B-grade)" action="A1">
+    <skill id="2087" name="Compressed Package: B-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="2512"/>
+            <restoration count="300" enchant="0" item="2512"/>
         </effects>
     </skill>
-    <skill id="2088" name="Spiritshot Compressed Package (A-grade)" action="A1">
+    <skill id="2088" name="Compressed Package: A-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="2513"/>
+            <restoration count="300" enchant="0" item="2513"/>
         </effects>
     </skill>
-    <skill id="2090" name="Blessed Spiritshot Compressed Package (No-grade)" action="A1">
+    <skill id="2090" name="Compressed Package: Blessed No-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="3947"/>
+            <restoration count="300" enchant="0" item="3947"/>
         </effects>
     </skill>
-    <skill id="2091" name="Blessed Spiritshot Compressed Package (D-grade)" action="A1">
+    <skill id="2091" name="Compressed Package: Blessed D-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="3948"/>
+            <restoration count="300" enchant="0" item="3948"/>
         </effects>
     </skill>
-    <skill id="2092" name="Blessed Spiritshot Compressed Package (C-grade)" action="A1">
+    <skill id="2092" name="Compressed Package: Blessed C-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="3949"/>
+            <restoration count="300" enchant="0" item="3949"/>
         </effects>
     </skill>
-    <skill id="2093" name="Blessed Spiritshot Compressed Package (B-grade)" action="A1">
+    <skill id="2093" name="Compressed Package: Blessed B-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="3950"/>
+            <restoration count="300" enchant="0" item="3950"/>
         </effects>
     </skill>
-    <skill id="2094" name="Blessed Spiritshot Compressed Package (A-grade)" action="A1">
+    <skill id="2094" name="Compressed Package: Blessed A-grade Spiritshots" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="10"/>
         </conditions>
         <effects>
-            <restoration count="300" item="3951"/>
+            <restoration count="300" enchant="0" item="3951"/>
         </effects>
     </skill>
     <skill id="2096" name="Soul Crystal" action="A1">
@@ -1247,11 +1336,12 @@
         </consume>
         <target type="ENEMY_ONLY"/>
     </skill>
-    <skill id="2099" name="Escape (5-minute)" action="A1">
+    <skill id="2099" name="Escape (5 min.)" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <hit-time initial="300000"/>
         </attributes>
         <target/>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="35000" name="Blessing of Fire Dragon" action="A1">
-        <!-- Buff/debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+    <skill id="35000" name="Fire Dragon's Blessing" action="A1">
+        <!-- Buffs, debuffs and anomaly states remain after death.\nBut Fire Dragon's Blessing disappears. -->
         <icon initial="icon.bm_blessing_dragon"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
@@ -20,9 +20,9 @@
         </effects>
     </skill>
     <skill id="35001" name="Fire Dragon's Protection" action="A1">
-        <!-- Fully restores a dying character. Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+        <!-- Resurrects from death fully recovered.\nBuffs, debuffs and anomaly states remain after death.\nBut Fire Dragon's Blessing disappears. -->
         <icon initial="icon.bm_salvation_dragon"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <reuse initial="3600000"/>
             <effect-point initial="1"/>
@@ -40,10 +40,10 @@
             </effect>
         </effects>
     </skill>
-    <skill id="35002" name="Earth Dragon Breath" debuff="true" action="A1">
-        <!-- For 15 seconds, Atk. Spd. is decreased by 50%% and Casting Spd. is decreased by 50%%. -->
-        <icon initial="icon.bm_dragon_breath"/>
-        <attributes property="PHYSIC">
+    <skill id="35002" name="Earth Dragon's Breath" action="A1" debuff="true">
+        <!-- Decreases target's Atk. Spd.\nThe effect lasts for 15 sec.\nAtk. Spd. -30%%\nCasting Spd. -30%% -->
+        <icon initial="icon.bm_s_dragon_breath"/>
+        <attributes>
             <cast-range initial="600"/>
             <reuse initial="60000"/>
             <effect-point initial="-190"/>
@@ -51,10 +51,11 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="35003" name="Earth Dragon Defense" action="A1">
-        <!-- For 15 sec., increases P. Def. by 3600, M. Def. by 3240, and Buff-canceling Attack Resistance by 80%%, and restricts movement. -->
+    <skill id="35003" name="Earth Dragon's Defense" action="A1">
+        <!-- Increases character's protection skills.\nThe effect lasts for 15 sec.\nP. Def. +3600\nM. Def. +3240\nBuff Cancel Resistance +80%% -->
         <icon initial="icon.bm_dragon_defence"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="438"/>
             <hit-time initial="1000"/>
@@ -77,9 +78,9 @@
         </effects>
     </skill>
     <skill id="35004" name="Earth Dragon Pendant">
-        <!-- M. Def. +9. -->
+        <!-- M. Def. +9 -->
         <icon initial="icon.bm_pendant_pvp"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -87,22 +88,22 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="35005" name="Earth Dragon Pendant +1" max-level="11">
-        <!--
-            level 1: M. Def. +10.
-            level 2: M. Def. +12.
-            level 3: M. Def. +13.
-            level 4: M. Def. +14, Max HP +100, and Max MP +40.
-            level 5: M. Def. +15, Max HP +150, Max MP +50, and Damage Received -3%.
-            level 6: M. Def. +16, Max HP +200, Max CP +200, Max MP +60, and Damage Received -5%.
-            level 7: M. Def. +17, Max HP +300, Max CP +300, Max MP +90, Movement Speed +7, and Damage Received -10%.
-            level 8: M. Def. +18, Max HP +400, Max CP +400, Max MP +120, Movement Speed +7, and Damage Received -20%.
-            level 9: M. Def. +20, Max HP +500, Max CP +500, Max MP +150, Movement Speed +7, and Damage Received -20%.
-            level 10: M. Def. +21, Max HP +500, Max CP +500, Max MP +150, Movement Speed +7, and Damage Received -20%.
-            level 11: M. Def. +24, Max HP +600, Max CP +600, Max MP +300, Movement Speed +7, Damage Reflect Resistance +10%%, and Damage Received -20%%.
-         -->
+    <skill id="35005" name="+1 Earth Dragon Pendant" max-level="11">
+        <!-- 
+			level 1: M. Def. +10
+			level 2: M. Def. +12
+			level 3: M. Def. +13
+			level 4: M. Def. +14 Max HP +100 Max MP +40
+			level 5: M. Def. +15 Max HP +150 Max MP +50 received damage -3%
+			level 6: M. Def. +16 Max HP +200 Max CP +200 Max MP +60 received damage -5%
+			level 7: M. Def. +17 Max HP +300 Max CP +300 Max MP +90 Speed +7 received damage -10%
+			level 8: M. Def. +18 Max HP +400 Max CP +400 Max MP +120 Speed +7 received damage -20%
+			level 9: M. Def. +20 Max HP +500 Max CP +500 Max MP +150 Speed +7 received damage -20%
+			level 10: M. Def. +21 Max HP +500 Max CP +500 Max MP +150 Speed +7 received damage -20%
+			level 11: M. Def. +24 Max HP +600 Max CP +600 Max MP +300 Speed +7 received damage -20%%% Damage Reflection Resistance +10%
+		-->
         <icon initial="icon.bm_pendant_pvp"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="DAMAGE_TAKEN">
@@ -166,10 +167,9 @@
         </effects>
     </skill>
     <skill id="35006" name="Fire Dragon Pendant">
-        <!-- M. Def. +9. -->
+        <!-- M. Def. +9 -->
         <icon initial="icon.bm_pendant_pve"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -178,22 +178,21 @@
         </effects>
     </skill>
     <skill id="35007" name="Fire Dragon Pendant +1" max-level="11">
-        <!--
-            level 1: M. Def. +10.
-            level 2: M. Def. +12.
-            level 3: M. Def. +13.
-            level 4: M. Def. +14 and XP/SP Gain +2%.
-            level 5: M. Def. +15, XP/SP Gain +5%, and P. Atk./M. Atk. +10.
-            level 6: M. Def. +16, XP/SP Gain +10%, and P. Atk./M. Atk. +20.
-            level 7: M. Def. +17, XP/SP Gain +20%, and P. Atk./M. Atk. +30.
-            level 8: M. Def. +18, XP/SP Gain +25%, P. Atk./M. Atk. +40, and P. Critical Damage/M. Critical Damage +5%.
-            level 9: M. Def. +20, XP/SP Gain +30%, P. Atk./M. Atk. +50, and P. Critical Damage/M. Critical Damage +5%.
-            level 10: M. Def. +21, XP/SP Gain +30%, P. Atk./M. Atk. +60, and P. Critical Damage/M. Critical Damage +5%.
-            level 11: M. Def. +24, XP/SP Gain +30%, P. Atk./M. Atk. +80, P. Critical Damage/M. Critical Damage +10%, and Damage Reflect Resistance +10%.
-         -->
+        <!-- 
+			level 1: M. Def. +10
+			level 2: M. Def. +12
+			level 3: M. Def. +13
+			level 4: M. Def. +14 Acquired XP +2% Acquired SP +2%
+			level 5: M. Def. +15 Acquired XP +5% Acquired SP +5% P. Atk. +10 M. Atk. +10
+			level 6: M. Def. +16 Acquired XP +10% Acquired SP +10% P. Atk. +20 M. Atk. +20
+			level 7: M. Def. +17 Acquired XP +20% Acquired SP +20% P. Atk. +30 M. Atk. +30
+			level 8: M. Def. +18 Acquired XP +25% Acquired SP +25% P. Atk. +40 M. Atk. +40 P. Critical Damage +5% M. Skill Critical Damage +5%
+			level 9: M. Def. +20 Acquired XP +30% Acquired SP +30% P. Atk. +50 M. Atk. +50 P. Critical Damage +5% M. Skill Critical Damage +5%
+			level 10: M. Def. +21 Acquired XP +30% Acquired SP +30% P. Atk. +60 M. Atk. +60 P. Critical Damage +5% M. Skill Critical Damage +5%
+			level 11: M. Def. +24 Acquired XP +30% Acquired SP +30% P. Atk. +80 M. Atk. +80 P. Critical Damage +10% M. Skill Critical Damage +10% Damage Reflection Resistance +10%
+		-->
         <icon initial="icon.bm_pendant_pve"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -270,9 +269,10 @@
         </effects>
     </skill>
     <skill id="35008" name="Fire Dragon Resistance" action="A1" type="MAGIC">
-        <!-- Debuff Resistance +50%% for 5 seconds. -->
+        <!-- Debuff Resistance +50%%. -->
         <icon initial="icon.bm_salvation_dragon"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -288,9 +288,9 @@
         </effects>
     </skill>
     <skill id="35009" name="Black Mask Power">
-        <!-- STR +1 and INT +1 -->
+        <!-- STR +1, INT +1. -->
         <icon initial="icon.accessory_jjoro_masj_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -302,9 +302,9 @@
         </effects>
     </skill>
     <skill id="35010" name="Refined Romantic Chapeau">
-        <!-- STR +1 and INT +1 -->
+        <!-- STR +1, INT +1. -->
         <icon initial="icon.accessory_archer_hat2_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -315,11 +315,12 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="35011" name="Return of the Refined Romantic Chapeau" action="A1">
-        <!-- Teleports you to a close village. Cooldown: 2 hours -->
+    <skill id="35011" name="Refined Romantic Chapeau: Teleport" action="A1">
+        <!-- Teleports character to the nearest village. Cooldown - 2 h. -->
         <icon initial="icon.skill0000"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -332,9 +333,9 @@
         </effects>
     </skill>
     <skill id="35012" name="Pirate King Hat">
-        <!-- STR +1 and INT +1 -->
+        <!-- STR +1, INT +1. -->
         <icon initial="BranchSys2.icon.zaken_hair_accessary"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -345,10 +346,11 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="35013" name="Return of the Pirate King Hat" action="A1">
-        <!-- Teleports you to a close village. Cooldown: 2 hours -->
+    <skill id="35013" name="Pirate King Hat: Teleport" action="A1">
+        <!-- Teleports character to the nearest village. Cooldown - 2 h. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -361,9 +363,9 @@
         </effects>
     </skill>
     <skill id="35014" name="Demon's Circlet">
-        <!-- STR +1 and INT +1 -->
+        <!-- STR +1, INT +1. -->
         <icon initial="icon.Accessary_demon_circlet_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -374,10 +376,11 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="35015" name="Return of the Demon's Circlet" action="A1">
-        <!-- Teleports you to a close village. Cooldown: 2 hours -->
+    <skill id="35015" name="Demon's Circlet: Teleport" action="A1">
+        <!-- Teleports character to the nearest village. Cooldown - 2 h. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -389,10 +392,11 @@
             <escape location="TOWN"/>
         </effects>
     </skill>
-    <skill id="35016" name="Ring of Core - Special Ability" action="A1">
-        <!-- Removes all debuffs. Not available during Fear/Silence. -->
+    <skill id="35016" name="Core's Blessing" action="A1">
+        <!-- Removes debuffs and anomaly states from the target. -->
         <icon initial="icon.accessory_ring_of_core_i03"/>
         <attributes cast-disabled="true">
+            <cast-range initial="-1"/>
             <reuse initial="120000"/>
             <hit-time initial="200"/>
         </attributes>
@@ -406,21 +410,21 @@
             </dispel-by-category>
         </effects>
     </skill>
-    <skill id="35017" name="Talisman of Insolence" max-level="7">
-        <!--
-            level 1: P. Atk. +14 and M. Atk. +22. Effects from two such Talismans do not stack.
-            level 2: P. Atk. +27, M. Atk. +44, and Damage Magic Resistance +2%%. Effects from two such Talismans do not stack.
-            level 3: P. Atk. +41, M. Atk. +66, Damage Magic Resistance +4%%, P. Skill Power/M. Skill Power +1%%, and Weapon Resistance +1. Effects from two such Talismans do not stack.
-            level 4: P. Atk. +68, M. Atk. +109, Damage Magic Resistance +6%%, P. Skill Power/M. Skill Power +2%%, Weapon Resistance +2, CON +1, and MEN +1. Effects from two such Talismans do not stack.
-            level 5: P. Atk. +170, M. Atk. +235, Damage Magic Resistance +7%%, P. Skill Power/M. Skill Power +2%%, Weapon Resistance +2, CON +1, MEN +1, STR +1, INT +1, and Skill MP Consumption -2%%. Effects from two such Talismans do not stack.
-            level 6: P. Atk. +200, M. Atk. +275, Damage Magic Resistance +8%%, P. Skill Power/M. Skill Power +3%%, Weapon Resistance +3, CON +1, MEN +1, STR +1, INT +1, P. Critical Rate/M. Critical Rate +10, and Skill MP Consumption -4%%. Effects from two such Talismans do not stack.
-            level 7: P. Atk. +284, M. Atk. +392, Damage Magic Resistance +10%%, P. Skill Power/M. Skill Power +5%%, Weapon Resistance +5, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1, P. Critical Rate/M. Critical Rate +20, Skill cooldown -3% and Skill MP Consumption -5%%. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.
-         -->
+    <skill id="35017" name="Talisman of Insolence I" max-level="7">
+        <!-- 
+			level 1: <Effect> P. Atk. +14 M. Atk. +22
+			level 2: <Effect> P. Atk. +27 M. Atk. +44 M. Damage Resistance +2%%
+			level 3: <Effect> P. Atk. +41 M. Atk. +66 M. Damage Resistance +4%% P./ M. Skill Power +1%% Resistance to All Weapons +1%%
+			level 4: <Effect> P. Atk. +68 M. Atk. +109 M. Damage Resistance +6%% P./ M. Skill Power +2%% Resistance to All Weapons +2%% CON +1 MEN +1
+			level 5: <Effect> P. Atk. +170 M. Atk. +235 M. Damage Resistance +7%% P./ M. Skill Power +2%% Resistance to All Weapons +2%% CON +1 MEN +1 STR +1 INT +1 Skill MP Consumption -2%%
+			level 6: <Effect> P. Atk. +200 M. Atk. +275 M. Damage Resistance +8%% P./ M. Skill Power +3%% Resistance to All Weapons +3%% CON +1 MEN +1 STR +1 INT +1 Skill MP consumption -4%% P. Critical Rate +10 M. Skill Critical Rate +10
+			level 7: <Effect> P. Atk. +284 M. Atk. +392 M. Damage Resistance +10%% P./ M. Skill Power +5%% Resistance to All Weapons +5%% CON/ MEN/ STR/ INT/ DEX/ WIT +1 Skill MP Consumption -5%% P. Critical Rate +20 M. Skill Critical Rate +20 Skill Cooldown -3%%
+		-->
         <icon initial="icon.oman_tallisman_new_i02">
             <value level="6">icon.oman_tallisman_new_i01</value>
             <value level="7">icon.baium_talisman_new</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -635,11 +639,12 @@
             </reuse>
         </effects>
     </skill>
-    <skill id="35018" name="Equip Talisman of Insolence Lv. 6" action="A2">
-        <!-- Imbues with Talisman of Insolence VI power. -->
+    <skill id="35018" name="Talisman of Insolence" action="A2">
+        <!-- Imbues with Talisman of Insolence power VI -->
         <icon initial="icon.oman_tallisman_new_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" dispellable="false">
+        <attributes block-action-skill="true" dispellable="false" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="SEED_TALISMAN1" visual="SEED_TALISMAN5">
@@ -647,11 +652,12 @@
             <time initial="-1"/>
         </abnormal>
     </skill>
-    <skill id="35019" name="Unequip Talisman of Insolence Lv. 6" action="A1">
+    <skill id="35019" name="Remove Talisman of Insolence" action="A1">
         <!-- The effect of Talisman of Insolence VI weakens. -->
         <icon initial="icon.oman_tallisman_new_i01"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -666,8 +672,9 @@
     <skill id="35020" name="Talisman of Baium" action="A2">
         <!-- Imbues with Talisman of Baium power. -->
         <icon initial="icon.baium_talisman_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" dispellable="false">
+        <attributes block-action-skill="true" dispellable="false" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="SEED_TALISMAN1" visual="TALISMAN_BAIUM">
@@ -680,6 +687,7 @@
         <icon initial="icon.baium_talisman_new"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -692,9 +700,9 @@
         </effects>
     </skill>
     <skill id="35022" name="Chic Silver Chapeau">
-        <!-- STR +1 and INT +1 -->
+        <!-- STR +1\nINT +1 -->
         <icon initial="BranchSys2.icon2.pi_silverchaperon"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">
@@ -706,9 +714,10 @@
         </effects>
     </skill>
     <skill id="35023" name="Chic Silver Chapeau Teleport" action="A1">
-        <!-- Teleports you to the nearest village. Cooldown is 2 hours. -->
+        <!-- Teleports character to the nearest village. Cooldown - 2 h. -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="7200000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -720,36 +729,35 @@
             <escape location="TOWN"/>
         </effects>
     </skill>
-    <skill id="35024" name="Talisman of Fate" max-level="21">
-        <!--
-            level 1: Dimensional Fate triggered by the Special Power of the Talisman of Fate.\n<Defense>: P. Def./M. Def. +12.
-            level 2: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Defense>: P. Def./M. Def. +14 and P. Evasion/M. Evasion +1.
-            level 3: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +3%%.\n<Defense>: P. Def./M. Def. +17, P. Evasion/M. Evasion +1, and Max HP/Max MP/Max CP +80.\n<Speed>: Movement Speed +3.
-            level 4: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +3%%.\n<Defense>: P. Def./M. Def. +19, P. Evasion/M. Evasion +1, and Max HP/Max MP/Max CP +80.\n<Speed>: Movement Speed +3 and Atk. Spd./Casting Spd. +7.
-            level 5: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +4%%.\n<Defense>: P. Def./M. Def. +22, P. Evasion/M. Evasion +1, and Max HP/Max MP/Max CP +120.\n<Speed>: Movement Speed +5 and Atk. Spd./Casting Spd. +10.
-            level 6: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +4%%.\n<Defense>: P. Def./M. Def. +24, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +160.\n<Speed>: Movement Speed +5 and Atk. Spd./Casting Spd. +15.
-            level 7: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +29, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +160.\n<Speed>: Movement Speed +7 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 8: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +34, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +200.\n<Speed>: Movement Speed +7 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 9: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +38, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +240.\n<Speed>: Movement Speed +8 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Returns 4%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 10: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +43, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +280.\n<Speed>: Movement Speed +8 and Atk. Spd./Casting Spd. +20.\n<Destruction>: Returns 6%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 11: Dimensional Fate triggered by the special power of the Talisman of Fate.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +48, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +320.\n<Speed>: Movement Speed +8 and Atk. Spd./Casting Spd. +30.\n<Destruction>: Returns 8%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 12: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +3%%.\n<Defense>: P. Def./M. Def. +25, P. Evasion/M. Evasion +1, and Max HP/Max MP/Max CP +150.\n<Speed>: Movement Speed +5 and Atk. Spd./Casting Spd. +10.
-            level 13: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +5%%.\n<Defense>: P. Def./M. Def. +30, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +200.\n<Speed>: Movement Speed +7 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Returns 1%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 14: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +6%%.\n<Defense>: P. Def./M. Def. +35, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +250.\n<Speed>: Movement Speed +7 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Returns 2%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 15: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +7%%.\n<Defense>: P. Def./M. Def. +40, P. Evasion/M. Evasion +2, and Max HP/Max MP/Max CP +300.\n<Speed>: Movement Speed +7 and Atk. Spd./Casting Spd. +15.\n<Destruction>: Returns 4%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 16: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +8%%.\n<Defense>: P. Def./M. Def. +45, P. Evasion/M. Evasion +3, and Max HP/Max MP/Max CP +400.\n<Speed>: Movement Speed +8 and Atk. Spd./Casting Spd. +20.\n<Destruction>: Returns 6%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 17: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +10%%.\n<Defense>: P. Def./M. Def. +50, P. Evasion/M. Evasion +3, and Max HP/Max MP/Max CP +500.\n<Speed>: Movement Speed +8 and Atk. Spd./Casting Spd. +30.\n<Destruction>: Returns 8%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 18: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +12%%.\n<Defense>: P. Def./M. Def. +70, P. Evasion/M. Evasion +4, and Max HP/Max MP/Max CP +1000.\n<Speed>: Movement Speed +9, Atk. Spd. +40 and Casting Spd. +50.\n<Destruction>: Returns 9%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 19: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +15%%.\n<Defense>: P. Def./M. Def. +80, P. Evasion/M. Evasion +4, and Max HP/Max MP/Max CP +1300.\n<Speed>: Movement Speed +9, Atk. Spd. +40 and Casting Spd. +65.\n<Destruction>: Returns 9%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 20: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +20%%.\n<Defense>: P. Def./M. Def. +90, P. Evasion/M. Evasion +4, and Max HP/Max MP/Max CP +1600.\n<Speed>: Movement Speed +9, Atk. Spd. +50 and Casting Spd. +80.\n<Destruction>: Returns 9%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-            level 21: Dimensional Fate triggered by the special power of the Dimensional Talisman.\n<Growth>: XP/SP Gain +30%%.\n<Defense>: P. Def./M. Def. +100, P. Evasion/M. Evasion +5, and Max HP/Max MP/Max CP +2000.\n<Speed>: Movement Speed +10, Atk. Spd. +50 and Casting Spd. +100.\n<Destruction>: Returns 10%% of received damage to the enemy and has a chance to trigger the Dimensional Power of Fate when attacking.
-         -->
+    <skill id="35024" name="Talisman of Border" max-level="21">
+        <!-- 
+			level 1: Activates Dimensional Border Power. <Defence>: P./ M. Def. +12.
+			level 2: Activates Dimensional Border Power. <Defence>: P./ M. Def. +14, P./ M. Evasion +1.
+			level 3: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +3%%. <Defence>: P./ M. Def. +17, P./ M. Evasion +1, Max HP/ MP/ CP +80. <Speed>: Speed +3.
+			level 4: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +3%%. <Defence>: P./ M. Def. +19, P./ M. Evasion +1, Max HP/ MP/ CP +80. <Speed>: Speed +3, Atk. Spd./ Casting Spd. +7.
+			level 5: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +4%%. <Defence>: P./ M. Def. +22, P./ M. Evasion +1, Max HP/ MP/ CP +120. <Speed>: Speed +5, Atk. Spd./ Casting Spd. +10.
+			level 6: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +4%%. <Defence>: P./ M. Def. +24, P./ M. Evasion +2, Max HP/ MP/ CP +160. <Speed>: Speed +5, Atk. Spd./ Casting Spd. +15.
+			level 7: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +29, P./ M. Evasion +2, Max HP/ MP/ CP +160. <Speed>: Speed +7, Atk. Spd./ Casting Spd. +15. <Destruction>: With a certain chance activates Dimensional Border Power under normal attacks.
+			level 8: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +34, P./ M. Evasion +2, Max HP/ MP/ CP +200. <Speed>: Speed +7, Atk. Spd./ Casting Spd. +15. <Destruction>: With a certain chance activates Dimensional Border Power under normal attacks.
+			level 9: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +38, P./ M. Evasion +2, Max HP/ MP/ CP +240. <Speed>: Speed +8, Atk. Spd./ Casting Spd. +15. <Destruction>: Returns 4%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 10: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +43, P./ M. Evasion +2, Max HP/ MP/ CP +280. <Speed>: Speed +8, Atk. Spd./ Casting Spd. +20. <Destruction>: Returns 6%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 11: Activates Dimensional Border Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +48, P./ M. Evasion +2, Max HP/ MP/ CP +320. <Speed>: Speed +8, Atk. Spd./ Casting Spd. +30. <Destruction>: Returns 8%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 12: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +3%%. <Defense>: P./ M. Def. +25, P./ M. Evasion +1, Max HP/ MP/ CP +150. <Speed>: Speed +5, Atk. Spd./ Casting Spd. +10.
+			level 13: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +5%%. <Defence>: P./ M. Def. +30, P./ M. Evasion +2, Max HP/ MP/ CP +200. <Speed>: Speed +7, Atk. Spd./ Casting Spd. +15. <Destruction>: Returns 1%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 14: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +6%%. <Defence>: P./ M. Def. +35, P./ M. Evasion +2, Max HP/ MP/ CP +250. <Speed>: Speed +7, Atk. Spd./ Casting Spd. +15. <Destruction>: Returns 2%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 15: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +7%%. <Defence>: P./ M. Def. +40, P./ M. Evasion +2, Max HP/ MP/ CP +300. <Speed>: Speed +7, Atk. Spd./ Casting Spd. +15. <Destruction>: Returns 4%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 16: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +8%%. <Defence>: P./ M. Def. +45, P./ M. Evasion +3, Max HP/ MP/ CP +400. <Speed>: Speed +8, Atk. Spd./ Casting Spd. +20. <Destruction>: Returns 6%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 17: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +10%%. <Defence>: P./ M. Def. +50, P./ M. Evasion +3, Max HP/ MP/ CP +500. <Speed>: Speed +8, Atk. Spd./ Casting Spd. +30. <Destruction>: Returns 8%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 18: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +12%%. <Defence>: P./ M. Def. +70, P./ M. Evasion +4, Max HP/ MP/ CP +1000. <Speed>: Speed +9, Atk. Spd. +40, Casting Spd. +50. <Destruction>: Returns 9%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 19: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +15%%. <Defence>: P./ M. Def. +80, P./ M. Evasion +4, Max HP/ MP/ CP +1300. <Speed>: Speed +9, Atk. Spd. +40, Casting Spd. +65. <Destruction>: Returns 9%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 20: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +20%%. <Defence>: P./ M. Def. +90, P./ M. Evasion +4, Max HP/ MP/ CP +1600. <Speed>: Speed +9, Atk. Spd. +50, Casting Spd. +80. <Destruction>: Returns 9%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+			level 21: Activates Dimensional Power. <Upgrade>: Acquired XP/ SP +30%%. <Defence>: P./ M. Def. +100, P./ M. Evasion +5, Max HP/ MP/ CP +2000. <Speed>: Speed +10, Atk. Spd. +50, Casting Spd. +100. <Destruction>: Returns 10%% of damage received back to the enemy, with a certain chance activates Dimensional Border Power under normal attacks.
+		-->
         <icon initial="icon.magic_square_talisman_new">
             <value level="11">icon.bm_blessed_magic_square_talisman</value>
             <value level="12">icon.bm_dimension_tallisman</value>
         </icon>
-        <attributes property="MAGIC" check="false">
-        </attributes>
+        <attributes check="false"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -1006,7 +1014,7 @@
                     <value level="21">10.0</value>
                 </power>
             </stat-modify>
-            <trigger-skill-by-damage attacker="Playable" skill="35027">
+            <trigger-skill-by-damage attacker="Playable" skill="35027" target="SELF">
                 <power>
                     <value level="7">1.0</value>
                     <value level="8">2.0</value>
@@ -1017,14 +1025,14 @@
             </trigger-skill-by-damage>
         </effects>
     </skill>
-    <skill id="35025" name="Fate Purification" action="A1" type="MAGIC">
+    <skill id="35025" name="Border Purification" action="A1" type="MAGIC">
         <!-- Cancels paralysis and petrification and cures severe poison/ bleed condition. -->
         <icon initial="icon.skill10036"/>
         <attributes hit-cancel-time="500.0">
             <cast-range initial="600"/>
             <reuse initial="60000"/>
             <effect-point initial="100"/>
-            <hit-time initial="3"/>
+            <hit-time initial="3000"/>
         </attributes>
         <target type="TARGET"/>
         <effects>
@@ -1041,10 +1049,11 @@
             </dispel>
         </effects>
     </skill>
-    <skill id="35026" name="Blessing of Fate" action="A1" type="MAGIC">
-        <!-- Restores 50%% HP/ MP/ CP. -->
+    <skill id="35026" name="Blessing of Borders" action="A1" type="MAGIC">
+        <!-- HP/ MP/ CP +50%%. -->
         <icon initial="icon.skill10034"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
             <cool-time initial="200"/>
             <effect-point initial="100"/>
@@ -1063,21 +1072,22 @@
             </effect>
         </effects>
     </skill>
-    <skill id="35027" name="Dimensional Power of Fate" max-level="9" action="A2">
-        <!--
-            level 1: Dimensional Power of Fate triggered. P. Atk./M. Atk. +2%% and P. Critical Damage/M. Critical Damage +10%%.
-            level 2: Dimensional Power of Fate triggered. P. Atk./M. Atk. +5%% and P. Critical Damage/M. Critical Damage +30%%.
-            level 3: Dimensional Power of Fate triggered. P. Atk./M. Atk. +7%% and P. Critical Damage/M. Critical Damage +40%%.
-            level 4: Dimensional Power of Fate triggered. P. Atk./M. Atk. +10%% and P. Critical Damage/M. Critical Damage +40%%.
-            level 5: Dimensional Power of Fate triggered. P. Atk. +11%%, M. Atk. +12%%, and P. Critical Damage/M. Critical Damage +40%%.
-            level 6: Dimensional Power of Fate triggered. P. Atk. +13%%, M. Atk. +15%%, P. Critical Damage/M. Critical Damage +40%%, and P. Critical Rate/M. Critical Rate +2%%.
-            level 7: Dimensional Power of Fate triggered. P. Atk. +15%%, M. Atk. +20%%, P. Critical Damage/M. Critical Damage +40%%, and P. Critical Rate/M. Critical Rate +3%%.
-            level 8: Dimensional Power of Fate triggered. P. Atk. +17%%, M. Atk. +25%%, P. Critical Damage/M. Critical Damage +40%%, and P. Critical Rate/M. Critical Rate +5%%.
-            level 9: Dimensional Power of Fate triggered. P. Atk. +20%%, M. Atk. +30%%, P. Critical Damage/M. Critical Damage +40%%, and P. Critical Rate/M. Critical Rate +10%%.
-         -->
+    <skill id="35027" name="Dimensional Border Power" max-level="9" action="A2">
+        <!-- 
+			level 1: P./ M. Atk. +2%%, P. Critical Damage/ M. Skill Critical Damage +10%%.
+			level 2: P./ M. Atk. +5%%, P. Critical Damage/ M. Skill Critical Damage +30%%.
+			level 3: P./ M. Atk. +7%%, P. Critical Damage/ M. Skill Critical Damage +40%%.
+			level 4: P./ M. Atk. +10%%, P. Critical Damage/ M. Skill Critical Damage +40%%.
+			level 5: P. Atk. +11%%, M. Atk. +12%%, P. Critical Damage/ M. Skill Critical Damage +40%%.
+			level 6: P. Atk. +13%%, M. Atk. +15%%, P. Critical Damage/ M. Skill Critical Damage +40%%, P. Critical Rate/ M. Skill Critical Rate +2%%.
+			level 7: P. Atk. +15%%, M. Atk. +20%%, P. Critical Damage/ M. Skill Critical Damage +40%%, P. Critical Rate/ M. Skill Critical Rate +3%%.
+			level 8: P. Atk. +17%%, M. Atk. +25%%, P. Critical Damage/ M. Skill Critical Damage +40%%, P. Critical Rate/ M. Skill Critical Rate +5%%.
+			level 9: P. Atk. +20%%, M. Atk. +30%%, P. Critical Damage/ M. Skill Critical Damage +40%%, P. Critical Rate/ M. Skill Critical Rate +10%%.
+		-->
         <icon initial="icon.skill10030"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
         </attributes>
         <target/>
@@ -1149,10 +1159,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="35028" name="Bracelet of Fate">
-        <!-- HP Recovery Bonus/MP Recovery Bonus +7%%, P. Accuracy +1, M. Accuracy +1, and Weight Limit +7000. -->
+    <skill id="35028" name="Bracelet of Border">
+        <!-- HP/ MP Recovery Bonus +7%%, P./ M. Accuracy +1, Weight Limit +7000. -->
         <icon initial="icon.dimension_bracelet_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE">
@@ -1173,12 +1183,12 @@
         </effects>
     </skill>
     <skill id="35029" name="Item Skill: Might in Duel - PvE" max-level="5">
-        <!--
-            level 1: Item Skill: PvE P. Atk. +3%% when equipped.
-            level 5: Item Skill: PvE P. Atk.+6%% when equipped.
-         -->
+        <!-- 
+			level 1: Item skill: P. Atk. in PvE +3%%.
+			level 5: Item skill: P. Atk. in PvE +6%%.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
@@ -1194,12 +1204,12 @@
         </effects>
     </skill>
     <skill id="35030" name="Item Skill: Defense in Duel - PvP" max-level="5">
-        <!--
-            level 1: Item Skill: PvP P. Def. +3%% when equipped.
-            level 5: Item Skill: PvP P. Def. +6%% when equipped.
-         -->
+        <!-- 
+			level 1: Item skill: P. Def. in PvP +3%%.
+			level 5: Item skill: P. Def. in PvP +6%%.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
@@ -1215,12 +1225,12 @@
         </effects>
     </skill>
     <skill id="35031" name="Item Skill: Defense in Duel - PvE" max-level="5">
-        <!--
-            level 1: Item Skill: PvE P. Def. +3%% when equipped.
-            level 5: Item Skill: PvE P. Def. +6%% when equipped.
-         -->
+        <!-- 
+			level 1: Item skill: P. Def. in PvE +3%%.
+			level 5: Item skill: P. Def. in PvE +6%%.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DEFENCE">
@@ -1236,13 +1246,13 @@
         </effects>
     </skill>
     <skill id="35032" name="Item Skill: Enhance" max-level="5">
-        <!--
-            level 1: Item Skill: XP/SP Gain +3%% when equipped.
-            level 3: Item Skill: XP/SP Gain +5%% when equipped.
-            level 5: Item Skill: XP/SP Gain +10%% when equipped.
-         -->
+        <!-- 
+			level 1: Item skill: Acquired XP/ SP +3%%.
+			level 3: Item skill: Acquired XP/ SP +5%%.
+			level 5: Item skill: Acquired XP/ SP +10%%.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -1260,13 +1270,14 @@
         </effects>
     </skill>
     <skill id="35033" name="Item Skill: Boost Atk. Spd." max-level="3" action="A1">
-        <!--
-            level 1: Item Skill: Atk. Spd. +36 when used.
-            level 2: Item Skill: Atk. Spd. +39 when used.
-            level 3: Item Skill: Atk. Spd. +80 when used.
-         -->
+        <!-- 
+			level 1: Active skill: Atk. Spd. +36.
+			level 2: Active skill: Atk. Spd. +39.
+			level 3: Active skill: Atk. Spd. +80.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1296,13 +1307,14 @@
         </effects>
     </skill>
     <skill id="35034" name="Item Skill: Fast Spell Casting" max-level="3" action="A1">
-        <!--
-            level 1: Item Skill: Casting Spd. +21 when used.
-            level 2: Item Skill: Casting Spd. +26 when used.
-            level 3: Item Skill: Casting Spd. +60 when used.
-         -->
+        <!-- 
+			level 1: Active skill: Casting Spd. +21.
+			level 2: Active skill: Casting Spd. +26.
+			level 3: Active skill: Casting Spd. +60.
+		-->
         <icon initial="icon.skill3123"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="440">
                 <value level="2">481</value>
@@ -1332,7 +1344,7 @@
         </effects>
     </skill>
     <skill id="35035" name="Item Skill: Cleanse" action="A1">
-        <!-- Skill: Cancels debuffs. -->
+        <!-- Skill: Cancels a debuff. -->
         <icon initial="icon.skill3123"/>
         <attributes magic-critical-rate="5.0">
             <cast-range initial="600"/>
@@ -1350,11 +1362,10 @@
             </dispel-by-category>
         </effects>
     </skill>
-    <skill id="35036" name="Warrior's Talisman - Attack">
-        <!-- PvE Damage +3%%, P. Critical Damage/M. Critical Damage +20, P. Skill Power/M. Skill Power +2%%, and P. Accuracy/M. Accuracy +1. -->
+    <skill id="35036" name="Warrior’s Talisman - Attack">
+        <!-- PvE Damage +3%%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%%, M./ P. Accuracy +1. -->
         <icon initial="icon.r90_sp_talisman_dr_mp_active"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
-        </attributes>
+        <attributes irreplacable="true" magic-critical-rate="5.0" stay-after-death="true"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVE_PHYSICAL_ATTACK_DAMAGE">
@@ -1389,11 +1400,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="35037" name="Warrior's Talisman - Defense">
-        <!-- PvE Defense +3%%, Magic Attack Resistance +2%%, P. Skill Evasion +4%%, M. Skill Evasion +4%%, Debuff Resistance +3%%, and Pull Resistance +10%%. -->
+    <skill id="35037" name="Warrior’s Talisman - Defense">
+        <!-- PvE Damage +3%%, M. Damage Resistance +2%%, P./ M. Skill Evasion +4%%, Debuff Resistance +3%%, Pull Resistance +10%%. -->
         <icon initial="icon.r99_talisman_pd_up_passive"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
-        </attributes>
+        <attributes irreplacable="true" magic-critical-rate="5.0" stay-after-death="true"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
@@ -1424,11 +1434,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="35038" name="Hero's Talisman - Attack">
-        <!-- PvP Damage +3%%, P. Critical Damage/M. Critical Damage +20, P. Skill Power/M. Skill Power +2%%, and P. Accuracy/M. Accuracy +1. -->
+    <skill id="35038" name="Hero’s Talisman - Attack">
+        <!-- PvP Damage +3%%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%%, M./ P. Accuracy +1. -->
         <icon initial="icon.r90_sp_talisman_dr_hp_active"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
-        </attributes>
+        <attributes irreplacable="true" magic-critical-rate="5.0" stay-after-death="true"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
@@ -1460,11 +1469,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="35039" name="Hero's Talisman - Defense">
-        <!-- PvP Defense +3%%, Magic Attack Resistance +2%%, P. Skill Evasion +4%%, M. Skill Evasion +4%%, and Debuff Resistance. -->
+    <skill id="35039" name="Hero’s Talisman - Defense">
+        <!-- PvP Damage +3%%, M. Damage Resistance +2%%, P./ M. Skill Evasion +4%%, Debuff Resistance +3%%, Debuff Resistance +10%%. -->
         <icon initial="icon.r95_talisman_ca_down_active"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true">
-        </attributes>
+        <attributes irreplacable="true" magic-critical-rate="5.0" stay-after-death="true"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
@@ -1491,9 +1499,9 @@
         </effects>
     </skill>
     <skill id="35040" name="Belt">
-        <!-- Inventory Slot +2 and Weight Limit +1000 when equipped with a belt. Can be upgraded to a Cloth Belt using a magic pin. -->
+        <!-- Inventory Slots +2, Weight Limit +1000. Can be upgraded to Cloth Belt with a Magic Pin. -->
         <icon initial="icon.belt_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1504,10 +1512,10 @@
             </enlarge-slot>
         </effects>
     </skill>
-    <skill id="35041" name="Rag Belt">
-        <!-- Inventory Slot +2, Weight Limit +2000, HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, and CP Recovery Bonus +1.66 when equipped with a belt. Can be upgraded to a Leather Belt using a mid-grade magic pin. -->
+    <skill id="35041" name="Cloth Belt">
+        <!-- When using the belt, Inventory slot +2, Weight Limit +2000. HP Recovery Bonus +1.24, MP Recovery Bonus +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
         <icon initial="icon.belt_i01"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1528,9 +1536,9 @@
         </effects>
     </skill>
     <skill id="35042" name="Leather Belt">
-        <!-- Inventory Slot +3, Weight limit +3000, HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery Bonus +1.96, and Max HP/Max MP/Max CP +100 when equipped with a belt. Can be upgraded to an Iron Belt using a high-grade magic pin. -->
+        <!-- When using the belt, Inventory Slots +3, Weight Limit +3000, HP Recovery Bonus +1.47, MP Recovery Bonus +0.98, CP Recovery Bonus +1.96, Max HP/ MP/ CP +100. You can enhance it to Iron Belt with magic. -->
         <icon initial="icon.belt_i02"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1560,9 +1568,9 @@
         </effects>
     </skill>
     <skill id="35043" name="Iron Belt">
-        <!-- Inventory Slot +4, Weight limit +4000, HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery Bonus +2.26, and Max HP/Max MP/Max CP +150 when equipped with a belt. Can be upgraded to an Mithril Belt using a top-grade magic pin. -->
+        <!-- When using the belt, Inventory Slots +4, Weight Limit +4000, HP Recovery Bonus +1.70, MP Recovery Bonus +1.13, CP Recovery Bonus +2.26, Max HP/ MP/ CP +150. You can enhance it to Mithril Belt with magic. -->
         <icon initial="icon.belt_i03"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1592,9 +1600,9 @@
         </effects>
     </skill>
     <skill id="35044" name="Mithril Belt">
-        <!-- Inventory Slot +5, Weight limit +5000, HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery Bonus +2.56, and Max HP/Max MP/Max CP +200 when equipped with a belt. -->
+        <!-- When using the belt, Inventory Slots +5, Weight Limit +5000, HP Recovery Bonus +1.92, MP Recovery Bonus +1.28, CP Recovery Bonus +2.56, Max HP/ MP/ CP +200. -->
         <icon initial="icon.belt_i04"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -1624,9 +1632,10 @@
         </effects>
     </skill>
     <skill id="35045" name="Talisman of Battle - Liberate" action="A1">
-        <!-- Clears all abnormal states and debuffs. Cooldown: 10 min. -->
+        <!-- Removes all debuffs. Cooldown: 10 min. -->
         <icon initial="icon.etc_talisman_i03"/>
-        <attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0" static-reuse="true">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="100"/>
             <hit-time initial="1000"/>
@@ -1639,9 +1648,9 @@
         </effects>
     </skill>
     <skill id="35046" name="Earth Dragon Belt">
-        <!-- When belt is equipped. CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +15%%, Inventory Slots +6, Weight Gauge +7,000, HP Potions Effect +100, Incoming Damage -6%%. -->
+        <!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/ MP/ CP +15%%, HP Recovery Potions' Effect +100, Received Damage -6%%. -->
         <icon initial="icon.bm_antaras_belt"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <enlarge-slot type="INVENTORY_NORMAL">
@@ -1686,9 +1695,9 @@
         </effects>
     </skill>
     <skill id="35047" name="Fire Dragon Belt">
-        <!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
+        <!-- Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%%. -->
         <icon initial="icon.bm_vallakas_belt"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stat type="STR">

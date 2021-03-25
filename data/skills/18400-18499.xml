@@ -1,25 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="18448" name="Aquamarine - Mana Drain" action="A1">
-        <!-- none -->
+    <skill id="18448" name="Scroll: Summon Piero" action="A1">
+        <!-- Summon NPC Piero -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <hit-time initial="3000"/>
         </attributes>
-        <consume>
-            <item initial="46219"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <effects>
-            <summon-npc despawn-delay="180000">
+            <summon-npc count="1" despawn-delay="180000">
                 <npc initial="34084.0"/>
             </summon-npc>
         </effects>
     </skill>
-    <skill id="18449" name="Aquamarine - Mana Drain" action="A1">
-        <!-- none -->
+    <skill id="18449" name="Magic Number Cube" action="A1">
+        <!-- Group gift distribution -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="1500"/>
@@ -28,8 +25,15 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="18450" name="Aquamarine - Mana Drain" max-level="6" action="A1" type="MAGIC">
-        <!-- none -->
+    <skill id="18450" name="Confirm Number" max-level="6" action="A1" type="MAGIC">
+        <!-- 
+			level 1: Shows number 1.
+			level 2: Shows number 2.
+			level 3: Shows number 3.
+			level 4: Shows number 4.
+			level 5: Shows number 5.
+			level 6: Shows number 6.
+		-->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="900"/>
@@ -41,13 +45,13 @@
         </consume>
         <target/>
     </skill>
-    <skill id="18451" name="1st Anniversary Buff" max-level="2" action="A2">
-        <!--
-            level 1: XP/SP gain +50% when hunting. You can receive the 5th Anniversary Coin when the buff ends. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
-            level 2: When the buff effect is over you can get 11 Anniversary Coin.
-         -->
+    <skill id="18451" name="Anniversary Effect" max-level="2" action="A2">
+        <!-- 
+			level 1: Acquired XP/ SP +11%. A chance to obtain a 11th anniversary coin when the buff is cancelled.  Note! The coins can't be obtained if your character is dead or has no free space in the inventory.
+			level 2: When the buff effect is over you can get 11 Anniversary Coin.
+		-->
         <icon initial="icon.ev_buff_11th"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900">
                 <value level="2">-1</value>
             </cast-range>
@@ -71,12 +75,15 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="18475" name="11th Anniversary Coin" action="A2">
+    <skill id="18475" name="Anniversary Coin" action="A2">
+        <!--  -->
         <icon initial="icon.ev_buff_11th"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>

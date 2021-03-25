@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="55400" name="Commemorative Olympiad Bracelet">
-        <!-- Activates 2 Talisman slots, Max. HP/ MP/ CP +3%%. -->
         <icon initial="icon.dimension_bracelet_i05"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <effect name="TalismanSlot">
@@ -21,9 +20,8 @@
         </effects>
     </skill>
     <skill id="55401" name="Olympiad Warrior's Talisman">
-        <!-- P./ M. Skill Critical Damage +7%%. -->
         <icon initial="icon.npoint_talisman_stat"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
@@ -35,12 +33,11 @@
         </effects>
     </skill>
     <skill id="55402" name="Olympiad Warrior's Belt">
-        <!-- P. Def. +15, weight limit +2000. -->
         <icon initial="icon.belt_i03"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="15.0"/>
             </stat-modify>
             <stat-modify stat="WEIGHT_LIMIT">
@@ -49,47 +46,42 @@
         </effects>
     </skill>
     <skill id="55403" name="Summon Agathion - Cheerleader Mae" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55404" name="Agathion Cute Trick - Cheerleader Mae" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55405" name="Cheerleader Mae's Support">
-        <!-- P./ M. Atk. +5%%, Atk. Spd./ Casting Spd. +5%%, Skill MP Consumption -10%%, P./ M. Critical Damage +3%%. -->
         <icon initial="BranchSys.icon.br_aga_local2009_g_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55406" name="For victory in Tryout - XP/SP" action="A1">
-        <!-- Buff, given to the server, to which belongs a warrior, gained the greatest number of victories during the Tryout. XP/ SP +30%%. Cannot be stacked with Blessing of Light. -->
         <icon initial="icon.etc_trophy_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A2">
-        <!-- For 20 minutes,  Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-        <icon initial="icon.etc_trophy_i00"/>       
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <icon initial="icon.etc_trophy_i00"/>
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="400"/>
             <reuse initial="1000"/>
             <hit-time initial="200"/>
         </attributes>
         <target/>
-        <!-- <abnormal type="MULTI_BUFF"> -->
-            <!-- <level initial="2"/> -->
-            <!-- <time initial="1200"/> -->
-        <!-- </abnormal> -->
         <effects>
             <call-skill skill="1040">
                 <power initial="3"/>
@@ -136,15 +128,14 @@
         </effects>
     </skill>
     <skill id="55408" name="Expertise Rune (A-grade)">
-        <!-- When possessed, you get Expertise A skill -->
         <icon initial="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55409" name="Kusto's Support Box: Enhance Weapon (A-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -152,9 +143,9 @@
         <target/>
     </skill>
     <skill id="55410" name="Kusto's Support Box: Enhance Weapon (B-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -162,9 +153,9 @@
         <target/>
     </skill>
     <skill id="55411" name="Kusto's Support Box: Enhance Weapon (C-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -172,167 +163,158 @@
         <target/>
     </skill>
     <skill id="55412" name="Transformation Scroll: Pirate" action="A2">
-        <!-- Transformation to Pirate. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="3.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="3.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="3.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+        <attributes auto-use="BUFF" blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="3.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55413" name="Transformation Scroll: Dark Assassin" action="A2">
-        <!-- Transformation to Dark Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="4.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+        <attributes auto-use="BUFF" blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="4.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55414" name="White Assassin Transformation Scroll" action="A2">
-        <!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="5.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-		</effects>
+        <attributes auto-use="BUFF" blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55415" name="Scroll: Enchant Armor (A-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55416" name="Summon Agathion - One-eyed Bat Drove" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -341,10 +323,10 @@
         </effects>
     </skill>
     <skill id="55417" name="Summon Agathion - Zaken's Spirit Swords" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -353,10 +335,10 @@
         </effects>
     </skill>
     <skill id="55418" name="Summon Agathion - Pegasus" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -365,10 +347,10 @@
         </effects>
     </skill>
     <skill id="55419" name="Summon Agathion - Guangong" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -377,10 +359,10 @@
         </effects>
     </skill>
     <skill id="55420" name="Summon Agathion - Mr. Lucky" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -389,10 +371,10 @@
         </effects>
     </skill>
     <skill id="55421" name="Summon Agathion - Phoenix" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -401,10 +383,10 @@
         </effects>
     </skill>
     <skill id="55422" name="Summon Agathion - Saerom" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -413,10 +395,10 @@
         </effects>
     </skill>
     <skill id="55423" name="Summon Agathion - Gwanseum Nyang" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -425,10 +407,10 @@
         </effects>
     </skill>
     <skill id="55424" name="Summon Agathion - Blue Opera" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -437,10 +419,10 @@
         </effects>
     </skill>
     <skill id="55425" name="Summon Agathion - Red Opera" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -449,10 +431,10 @@
         </effects>
     </skill>
     <skill id="55426" name="Summon Agathion - Miss Chipao" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -461,10 +443,10 @@
         </effects>
     </skill>
     <skill id="55427" name="Summon Agathion - Flower Fairy Spirit" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -473,10 +455,10 @@
         </effects>
     </skill>
     <skill id="55428" name="Summon Agathion - Lancet" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -485,10 +467,10 @@
         </effects>
     </skill>
     <skill id="55429" name="Summon Agathion - Liposa" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -497,10 +479,10 @@
         </effects>
     </skill>
     <skill id="55430" name="Summon Agathion - Velarin" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -509,10 +491,10 @@
         </effects>
     </skill>
     <skill id="55431" name="Summon Agathion - Dulcinel" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -521,10 +503,10 @@
         </effects>
     </skill>
     <skill id="55432" name="Summon Agathion - Chimeros" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -533,10 +515,10 @@
         </effects>
     </skill>
     <skill id="55433" name="Summon Agathion - Niveri" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -545,10 +527,10 @@
         </effects>
     </skill>
     <skill id="55434" name="Summon Agathion - Hamell" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -557,10 +539,10 @@
         </effects>
     </skill>
     <skill id="55435" name="Summon Agathion - Joriya" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -569,10 +551,10 @@
         </effects>
     </skill>
     <skill id="55436" name="Summon Agathion - Ralmak" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -581,10 +563,10 @@
         </effects>
     </skill>
     <skill id="55437" name="Summon Agathion - Goras" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -593,10 +575,10 @@
         </effects>
     </skill>
     <skill id="55438" name="Summon Agathion - Vensar" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -605,10 +587,10 @@
         </effects>
     </skill>
     <skill id="55439" name="Summon Agathion - Kiela" action="A1">
-        <!-- Summons Agathion. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -617,10 +599,10 @@
         </effects>
     </skill>
     <skill id="55440" name="One-eyed Bat Drove Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -629,10 +611,10 @@
         </conditions>
     </skill>
     <skill id="55441" name="Zaken's Spirit Swords Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -641,10 +623,10 @@
         </conditions>
     </skill>
     <skill id="55442" name="Pegasus Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -653,10 +635,10 @@
         </conditions>
     </skill>
     <skill id="55443" name="Guangong Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -665,10 +647,10 @@
         </conditions>
     </skill>
     <skill id="55444" name="Mr. Lucky Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -677,10 +659,10 @@
         </conditions>
     </skill>
     <skill id="55445" name="Phoenix Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -689,10 +671,10 @@
         </conditions>
     </skill>
     <skill id="55446" name="Saerom Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -701,10 +683,10 @@
         </conditions>
     </skill>
     <skill id="55447" name="Gwanseum Nyang Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -713,10 +695,10 @@
         </conditions>
     </skill>
     <skill id="55448" name="Blue Opera Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -725,10 +707,10 @@
         </conditions>
     </skill>
     <skill id="55449" name="Red Opera Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -737,10 +719,10 @@
         </conditions>
     </skill>
     <skill id="55450" name="Miss Chipao Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -749,10 +731,10 @@
         </conditions>
     </skill>
     <skill id="55451" name="Flower Fairy Spirit Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -761,10 +743,10 @@
         </conditions>
     </skill>
     <skill id="55452" name="Lancet Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -773,10 +755,10 @@
         </conditions>
     </skill>
     <skill id="55453" name="Liposa Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -785,10 +767,10 @@
         </conditions>
     </skill>
     <skill id="55454" name="Velarin Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -797,10 +779,10 @@
         </conditions>
     </skill>
     <skill id="55455" name="Dulcinel Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -809,10 +791,10 @@
         </conditions>
     </skill>
     <skill id="55456" name="Chimeros Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -821,10 +803,10 @@
         </conditions>
     </skill>
     <skill id="55457" name="Niveri Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -833,10 +815,10 @@
         </conditions>
     </skill>
     <skill id="55458" name="Hamell Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -845,10 +827,10 @@
         </conditions>
     </skill>
     <skill id="55459" name="Joriya Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -857,10 +839,10 @@
         </conditions>
     </skill>
     <skill id="55460" name="Ralmak Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -869,10 +851,10 @@
         </conditions>
     </skill>
     <skill id="55461" name="Goras Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -881,10 +863,10 @@
         </conditions>
     </skill>
     <skill id="55462" name="Vensar Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -893,10 +875,10 @@
         </conditions>
     </skill>
     <skill id="55463" name="Kiela Agathion Cute Trick" action="A1">
-        <!-- See Agathion's cute trick. -->
         <icon initial="icon.skill_agathion_cute"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -905,27 +887,27 @@
         </conditions>
     </skill>
     <skill id="55464" name="Energy of Protection" action="A1">
-        <!-- For 20 min. Max HP/ MP +5%%, Paralysis Resistance +15, Mental Attack Resistance +10, XP/ SP +30%%. -->
         <icon initial="icon.general_energy_condense_i01"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55465" name="Shaft with Antharas treasures" action="A1">
-        <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="55466" name="Put on Lv. 2 Brooch" action="A1">
-        <!-- Brooch radiates bright light. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true">
+        <attributes block-action-skill="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal type="AVE_BROOCH" visual="AVE_BROOCH">
@@ -934,10 +916,10 @@
         </abnormal>
     </skill>
     <skill id="55467" name="Remove Lv. 2 Brooch" action="A1">
-        <!-- Bright light fades. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0" trait="HOLD">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -950,9 +932,8 @@
         </effects>
     </skill>
     <skill id="55468" name="Lv. 1 Brooch">
-        <!-- Activates 2 jewel slots. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="BROOCH_JEWELS">
@@ -961,9 +942,8 @@
         </effects>
     </skill>
     <skill id="55469" name="Lv. 2 Brooch">
-        <!-- Activates 3 jewel slots. -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i01"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="BROOCH_JEWELS" stat-add="BROOCH_JEWELS">
@@ -972,14 +952,10 @@
         </effects>
     </skill>
     <skill id="55470" name="Lv. 2 Brooch - Additional Effect" max-level="2">
-        <!--
-            level 1: Inventory Slot +5.
-            level 2: Inventory Slot +9.
-         -->
         <icon initial="icon.etc_bm_brooch_lavianrose_i00">
             <value level="2">icon.etc_bm_brooch_lavianrose_i01</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <enlarge-slot type="INVENTORY_NORMAL">
@@ -989,21 +965,10 @@
             </enlarge-slot>
         </effects>
     </skill>
-    <skill id="55471" name="Topaz" max-level="10" action="A1">
-        <!--
-            level 1: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 475.
-            level 2: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 633.
-            level 3: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 950.
-            level 4: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1357.
-            level 5: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2375.
-            level 6: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2500.
-            level 7: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 2800.
-            level 8: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 3400.
-            level 9: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 4300.
-            level 10: Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 6000.
-         -->
+    <skill id="55471" name="Topaz" max-level="15" action="A1">
         <icon initial="icon.etc_bm_jewel_topaz_i00">
             <value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.bm_jewel_absdmg_lv1_lavianrose_high2</value>
         </icon>
         <attributes>
             <cast-range initial="600"/>
@@ -1014,7 +979,7 @@
         </attributes>
         <target type="ENEMY"/>
         <effects>
-			<effect name="SkillTurning"/>
+            <effect name="SkillTurning"/>
             <effect name="RealDamage">
                 <power initial="475">
                     <value level="2">633</value>
@@ -1030,23 +995,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="55472" name="Vital Stone" max-level="10">
-        <!--
-            level 1: XP/ SP +3%, while hunting.
-            level 2: XP/ SP +4%, while hunting.
-            level 3: XP/ SP +6%, while hunting.
-            level 4: XP/ SP +8%, while hunting.
-            level 5: XP/ SP +17%, while hunting.
-            level 6: XP/ SP +20%, while hunting.
-            level 7: XP/ SP +23%, while hunting.
-            level 8: XP/ SP +26%, while hunting.
-            level 9: XP/ SP +30%, while hunting.
-            level 10: XP/SP Gain from hunting +35% and Attribute XP Gain +50%.
-         -->
+    <skill id="55472" name="Vital Stone" max-level="15">
         <icon initial="icon.etc_bm_jewel_vital">
             <value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -1081,16 +1034,9 @@
         </effects>
     </skill>
     <skill id="55473" name="Vital Stone - Vital Wind" max-level="6" action="A2">
-        <!--
-            level 1: For 15 seconds, XP/SP +50%, while hunting. Cooldown: 20 minutes
-            level 2: For 15 seconds, XP/SP +70%, while hunting. Cooldown: 20 minutes
-            level 3: For 15 seconds, XP/SP +100%, while hunting. Cooldown: 20 minutes
-            level 4: For 15 seconds, XP/SP +110%, while hunting. Cooldown: 20 minutes
-            level 5: For 15 seconds, XP/SP +120%, while hunting. Cooldown: 20 minutes
-            level 6: For 15 seconds, XP/SP +150%, while hunting. Cooldown: 20 minutes
-         -->
         <icon initial="icon.etc_bm_jewel_vital"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1200000"/>
         </attributes>
         <target/>
@@ -1125,23 +1071,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55474" name="Jade" max-level="10">
-        <!--
-            level 1: Atk. Spd./ Casting Spd. +1%.
-            level 2: Atk. Spd./ Casting Spd. +2%.
-            level 3: Atk. Spd./ Casting Spd. +4%.
-            level 4: Atk. Spd./ Casting Spd. +7%.
-            level 5: Atk. Spd./ Casting Spd. +14%.
-            level 6: Atk./Casting Spd. + 15%, Speed +1%.
-            level 7: Atk./Casting Spd. + 16%, Speed +2%.
-            level 8: Atk./Casting Spd. + 17%, Speed +3%.
-            level 9: Atk./Casting Spd. + 18%, Speed +5%.
-            level 10: Atk./Casting Spd. +20%, Speed +7%, Melee Weapon Attack Resistance +10%.
-         -->
+    <skill id="55474" name="Jade" max-level="15">
         <icon initial="icon.etc_bm_jewel_jade_i00">
             <value level="6">icon.bm_jewel_speedup_lv1_high</value>
+            <value level="11">icon.bm_jewel_speedup_lv1_high2</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
@@ -1178,26 +1113,26 @@
                     <value level="10">7</value>
                 </power>
             </speed>
-            <defence-trait start-level="10">               				
-				<trait type="SWORD">
+            <defence-trait start-level="10">
+                <trait type="SWORD">
                     <power initial="10"/>
                 </trait>
-				<trait type="MAGIC_SWORD">
+                <trait type="MAGIC_SWORD">
                     <power initial="10"/>
                 </trait>
-				<trait type="TWO_HAND_SWORD">
+                <trait type="TWO_HAND_SWORD">
                     <power initial="10"/>
                 </trait>
-				<trait type="ANCIENT_SWORD">
+                <trait type="ANCIENT_SWORD">
                     <power initial="10"/>
                 </trait>
-				 <trait type="RAPIER">
+                <trait type="RAPIER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL">
                     <power initial="10"/>
                 </trait>
-                 <trait type="DUAL_BLUNT">
+                <trait type="DUAL_BLUNT">
                     <power initial="10"/>
                 </trait>
                 <trait type="FIST">
@@ -1209,16 +1144,16 @@
                 <trait type="BLUNT">
                     <power initial="10"/>
                 </trait>
-				<trait type="HAMMER">
+                <trait type="HAMMER">
                     <power initial="10"/>
                 </trait>
-				<trait type="STAFF">
-                    <power initial="10"/>
-                </trait>				
-				<trait type="ROD">
+                <trait type="STAFF">
                     <power initial="10"/>
                 </trait>
-				<trait type="DAGGER">
+                <trait type="ROD">
+                    <power initial="10"/>
+                </trait>
+                <trait type="DAGGER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL_DAGGER">
@@ -1230,23 +1165,12 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="55475" name="Diamond" max-level="10">
-        <!--
-            level 1: P. Def. +11, when equipped.
-            level 2: P. Def. +25, when equipped.
-            level 3: P. Def. +50, when equipped.
-            level 4: P. Def. +81, Received P. Critical Damage -4%, when equipped.
-            level 5: P. Def. +130, Received P. Critical Damage -10%, when equipped.
-            level 6: P. Def. +150, Received P. Critical Damage -11%, when equipped.
-            level 7: P. Def. +180, Received P. Critical Damage -12%, when equipped.
-            level 8: P. Def. +220, Received P. Critical Damage -14%, when equipped.
-            level 9: P. Def. +280, Received P. Critical Damage -16%, when equipped.
-            level 10: P. Def. +400, P. Critical Attack Hit Chance -10%, Received P. Critical Damage -20%.
-         -->
+    <skill id="55475" name="Diamond" max-level="15">
         <icon initial="icon.etc_bm_jewel_diamond_i00">
             <value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+            <value level="11">icon.bm_jewel_phydef_lv1_lavianrose_high2</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -1277,23 +1201,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55476" name="Pearl" max-level="10">
-        <!--
-            level 1: M. Def. +7.
-            level 2: M. Def. +14.
-            level 3: M. Def. +28.
-            level 4: M. Def. +46, Received M. Critical Damage -4%.
-            level 5: M. Def. +74, Received M. Critical Damage -10%.
-            level 6: M. Def. +85, Received M. Critical Damage -11%.
-            level 7: M. Def. +100, Received M. Critical Damage -12%.
-            level 8: M. Def. +125, Received M. Critical Damage -14%.
-            level 9: M. Def. +160, Received M. Critical Damage -16%.
-            level 10: M. Def. +250, M. Critical Attack Hit Rate -10%, Received M. Critical Damage -20%.
-         -->
+    <skill id="55476" name="Pearl" max-level="15">
         <icon initial="icon.etc_bm_jewel_pearl_i00">
             <value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+            <value level="11">icon.bm_jewel_magdef_lv1_lavianrose_high2</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE">
@@ -1324,22 +1237,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55477" name="Ruby" max-level="10">
-        <!--
-            level 1: Damage received from Soulshots +2%.
-            level 2: Damage received from Soulshots +3%.
-            level 3: Damage received from Soulshots +5%.
-            level 4: Damage received from Soulshots +8%.
-            level 5: Damage received from Soulshots +16%.
-            level 6: Damage received from Soulshots +17%.
-            level 7: Damage received from Soulshots +18%.
-            level 8: Damage received from Soulshots +19%.
-            level 9: Damage received from Soulshots +20%.
-         -->
+    <skill id="55477" name="Ruby" max-level="15">
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1354,25 +1257,15 @@
                     <value level="9">20</value>
                     <value level="10">20</value>
                 </power>
-            </stat-modify>           
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="55478" name="Ruby" max-level="10">
-        <!--
-            level 1: Damage received from Blessed Soulshots +2%.
-            level 2: Damage received from Blessed Soulshots +3%.
-            level 3: Damage received from Blessed Soulshots +5%.
-            level 4: Damage received from Blessed Soulshots +8%.
-            level 5: Damage received from Blessed Soulshots +16%.
-            level 6: Damage received from Blessed Soulshots +17%.
-            level 7: Damage received from Blessed Soulshots +18%.
-            level 8: Damage received from Blessed Soulshots +19%.
-            level 9: Damage received from Blessed Soulshots +20%.
-         -->
+    <skill id="55478" name="Ruby" max-level="15">
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-       <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1387,25 +1280,15 @@
                     <value level="9">20</value>
                     <value level="10">20</value>
                 </power>
-            </stat-modify>           
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="55479" name="Ruby" max-level="10">
-        <!--
-            level 1: Damage from Beast Soulshot +2%.
-            level 2: Damage from Beast Soulshot +3%.
-            level 3: Damage from Beast Soulshot +5%.
-            level 4: Damage from Beast Soulshot +8%.
-            level 5: Damage from Beast Soulshot +16%.
-            level 6: Damage from Beast Soulshot +17%.
-            level 7: Damage from Beast Soulshot +18%.
-            level 8: Damage from Beast Soulshot +19%.
-            level 9: Damage from Beast Soulshot +20%.
-         -->
+    <skill id="55479" name="Ruby" max-level="15">
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1419,25 +1302,15 @@
                     <value level="8">19</value>
                     <value level="9">20</value>
                 </power>
-            </stat-modify>           
-		</effects>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="55481" name="Sapphire" max-level="10">
-        <!--
-            level 1: Damage received from Spiritshots +2%.
-            level 2: Damage received from Spiritshots +3%.
-            level 3: Damage received from Spiritshots +5%.
-            level 4: Damage received from Spiritshots +8%.
-            level 5: Damage received from Spiritshots +16%.
-            level 6: Damage received from Spiritshots +17%.
-            level 7: Damage received from Spiritshots +18%.
-            level 8: Damage received from Spiritshots +19%.
-            level 9: Damage received from Spiritshots +20%.
-         -->
+    <skill id="55481" name="Sapphire" max-level="15">
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
@@ -1452,24 +1325,14 @@
                     <value level="9">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
-    <skill id="55482" name="Sapphire" max-level="10">
-        <!--
-            level 1: Damage received from Blessed Spiritshots +2%.
-            level 2: Damage received from Blessed Spiritshots +3%.
-            level 3: Damage received from Blessed Spiritshots +5%.
-            level 4: Damage received from Blessed Spiritshots +8%.
-            level 5: Damage received from Blessed Spiritshots +16%.
-            level 6: Damage received from Blessed Spiritshots +17%.
-            level 7: Damage received from Blessed Spiritshots +18%.
-            level 8: Damage received from Blessed Spiritshots +19%.
-            level 9: Damage received from Blessed Spiritshots +20%.
-         -->
+    <skill id="55482" name="Sapphire" max-level="15">
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
@@ -1485,24 +1348,14 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
-    <skill id="55483" name="Sapphire" max-level="10">
-        <!--
-            level 1: Damage from Beast Spiritshot +2%.
-            level 2: Damage from Beast Spiritshot +3%.
-            level 3: Damage from Beast Spiritshot +5%.
-            level 4: Damage from Beast Spiritshot +8%.
-            level 5: Damage from Beast Spiritshot +16%.
-            level 6: Damage from Beast Spiritshot +17%.
-            level 7: Damage from Beast Spiritshot +18%.
-            level 8: Damage from Beast Spiritshot +19%.
-            level 9: Damage from Beast Spiritshot +20%.
-         -->
+    <skill id="55483" name="Sapphire" max-level="15">
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+            <value level="11">icon.skill0000</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
@@ -1518,25 +1371,14 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
-    <skill id="55485" name="Garnet" max-level="10">
-        <!--
-            level 1: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +3%.
-            level 2: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +5%.
-            level 3: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +8%.
-            level 4: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +11%.
-            level 5: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +20%.
-            level 6: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +22%.
-            level 7: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +24%.
-            level 8: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +26%.
-            level 9: Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +30%.
-            level 10: Stun/ Pulling/Petrification/Mental Attack Resistance +40%, Sleep/Poison Resistance +10%.
-         -->
+    <skill id="55485" name="Garnet" max-level="15">
         <icon initial="icon.etc_bm_jewel_garnet">
             <value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+            <value level="11">icon.bm_jewel_garnet_lv1_lavianrose_high2</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <defence-trait>
@@ -1605,26 +1447,17 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A2" type="MAGIC">
-        <!--
-            level 1: Becomes invincible from debuffs for 5 seconds.
-            level 2: Becomes invincible from debuffs for 15 seconds.
-            level 3: Becomes invincible from debuffs for 16 seconds.
-            level 4: Becomes invincible from debuffs for 17 seconds.
-            level 5: Becomes invincible from debuffs for 18 seconds.
-            level 6: Becomes invincible from debuffs for 20 seconds.
-            level 7: Becomes invincible from debuffs for 25 seconds.
-         -->
+    <skill id="55486" name="Garnet - Special Ability" max-level="12" action="A2">
         <icon initial="icon.etc_bm_jewel_garnet">
             <value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
-			<hit-time initial="500"/>
         </attributes>
         <target/>
-		<abnormal type="ABNORMAL_INVINCIBILITY">
+        <abnormal type="ABNORMAL_INVINCIBILITY">
             <level initial="4"/>
             <time initial="5">
                 <value level="2">15</value>
@@ -1634,15 +1467,15 @@
                 <value level="6">20</value>
                 <value level="7">25</value>
             </time>
-        </abnormal>        
+        </abnormal>
         <effects>
             <effect name="DebuffBlock"/>
         </effects>
     </skill>
     <skill id="55495" name="Fortune Brooch" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1650,9 +1483,9 @@
         <target/>
     </skill>
     <skill id="55496" name="Topaz Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1660,9 +1493,9 @@
         <target/>
     </skill>
     <skill id="55497" name="Garnet Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1670,9 +1503,9 @@
         <target/>
     </skill>
     <skill id="55498" name="Jade Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -1680,9 +1513,9 @@
         <target/>
     </skill>
     <skill id="55499" name="Ruby Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
