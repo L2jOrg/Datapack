@@ -529,7 +529,7 @@
         <attributes/>
         <target/>
     </skill>
-    <skill id="47021" name="Elemental Focus" max-level="4" type="MAGIC">
+    <skill id="47021" name="Elemental Focus" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: P. Critical Rate +20
 			level 2: P. Critical Rate +30
@@ -537,16 +537,43 @@
 			level 4: P. Critical Rate +42
 		-->
         <icon initial="icon.elemental_focus"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="25">
+                <value level="2">44</value>
+                <value level="3">52</value>
+                <value level="4">25</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
-                <value level="4">5</value>
+                <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="CRITICAL_PROB_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+                <power initial="20">
+                    <value level="2">30</value>
+                    <value level="3">40</value>
+                    <value level="4">42</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47022" name="Elemental Death Whisper" max-level="4" type="MAGIC">
+    <skill id="47022" name="Elemental Death Whisper" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: P. Critical Damage +25%
 			level 2: P. Critical Damage +30%
@@ -554,64 +581,167 @@
 			level 4: P. Critical Damage +38%
 		-->
         <icon initial="icon.elemental_death_whisper"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="40">
+                <value level="2">48</value>
+                <value level="3">56</value>
+                <value level="4">40</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
-                <value level="4">5</value>
+                <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="CRITICAL_DMG_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="25.0">
+                    <value level="2">30.0</value>
+                    <value level="3">35.0</value>
+                    <value level="4">38.0</value>
+
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47023" name="Elemental Haste" max-level="3" type="MAGIC">
+    <skill id="47023" name="Elemental Haste" max-level="3" action="A2" type="MAGIC">
         <!-- 
 			level 1: Atk. Spd. +15%
 			level 2: Atk. Spd. +33%
 			level 3: Atk. Spd. +35%
 		-->
         <icon initial="icon.elemental_haste"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="44">
+                <value level="2">52</value>
+                <value level="3">44</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="ATTACK_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="15.0">
+                    <value level="2">33.0</value>
+                    <value level="3">35.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47024" name="Elemental Wind Walk" max-level="3" type="MAGIC">
+    <skill id="47024" name="Elemental Wind Walk" max-level="3" action="A2" type="MAGIC">
         <!-- 
 			level 1: Speed +20
 			level 2: Speed +33
 			level 3: Speed +35
 		-->
         <icon initial="icon.elemental_wind_walk"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="20">
+                <value level="2">30</value>
+                <value level="3">20</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="SPEED_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <speed>
+                <power initial="20.0">
+                    <value level="2">33.0</value>
+                    <value level="3">35.0</value>
+                </power>
+            </speed>
+        </effects>
     </skill>
-    <skill id="47025" name="Elemental Magic Barrier" max-level="3" type="MAGIC">
+    <skill id="47025" name="Elemental Magic Barrier" max-level="3" action="A2" type="MAGIC">
         <!-- 
 			level 1: M. Def. +250
 			level 2: M. Def. +350
 			level 3: M. Def. +380
 		-->
         <icon initial="icon.elemental_magic_barrier"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="44">
+                <value level="2">52</value>
+                <value level="3">76</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
+            <mana-init initial="10">
+                <value level="3">0</value>
+            </mana-init>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="MD_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+                <power initial="250">
+                    <value level="2">350</value>
+                    <value level="3">380</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47026" name="Elemental Might" max-level="4" type="MAGIC">
+    <skill id="47026" name="Elemental Might" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: P. Atk. +80
 			level 2: P. Atk. +150
@@ -619,10 +749,31 @@
 			level 4: P. Atk. +250
 		-->
         <icon initial="icon.elemental_might"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <target/>
+        <abnormal type="PA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="80">
+                    <value level="2">150</value>
+                    <value level="3">230</value>
+                    <value level="4">250</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47027" name="Elemental Shield" max-level="4" type="MAGIC">
+    <skill id="47027" name="Elemental Shield" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: P. Def. +100
 			level 2: P. Def. +200
@@ -630,10 +781,31 @@
 			level 4: P. Def. +330
 		-->
         <icon initial="icon.elemental_shield"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <target/>
+        <abnormal type="PD_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>
+                    <value level="4">330</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47028" name="Elemental Acumen" max-level="4" type="MAGIC">
+    <skill id="47028" name="Elemental Acumen" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: Casting Spd. +15%
 			level 2: Casting Spd. +23%
@@ -641,16 +813,43 @@
 			level 4: Casting Spd. +33%
 		-->
         <icon initial="icon.elemental_acumen"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="20">
+                <value level="2">35</value>
+                <value level="3">48</value>
+                <value level="4">20</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="4">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="CASTING_TIME_DOWN">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+                <power initial="15.0">
+                    <value level="2">23.0</value>
+                    <value level="3">30.0</value>
+                    <value level="4">33.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47029" name="Elemental Empower" max-level="4" type="MAGIC">
+    <skill id="47029" name="Elemental Empower" max-level="4" action="A2" type="MAGIC">
         <!-- 
 			level 1: M. Atk. +100
 			level 2: M. Atk. +200
@@ -658,58 +857,197 @@
 			level 4: M. Atk. +330
 		-->
         <icon initial="icon.elemental_empower"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="25">
+                <value level="2">44</value>
+                <value level="3">52</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="4">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="MA_UP">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+                <value level="4">4</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
+                <power initial="100">
+                    <value level="2">200</value>
+                    <value level="3">300</value>
+                    <value level="4">330</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47030" name="Elemental Wild Magic" max-level="3" type="MAGIC">
+    <skill id="47030" name="Elemental Wild Magic" max-level="3" action="A2" type="MAGIC">
         <!-- 
 			level 1: M. Critical Rate +10
 			level 2: M. Critical Rate +20
 		-->
         <icon initial="icon.elemental_wild_magic"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="62">
+                <value level="2">70</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="MAGIC_CRITICAL_UP">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAGIC_CRITICAL_RATE" stat-add="MAGIC_CRITICAL_RATE">
+                <power initial="10">
+                    <value level="2">20</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47031" name="Elemental Berserker Spirit" max-level="3" type="MAGIC">
-        <!-- 
+    <skill id="47031" name="Elemental Berserker Spirit" max-level="3" action="A2" type="MAGIC">
+         <!-- 
 			level 1: Max HP -20% Max MP -20% P. Atk. +5% M. Atk. +10% Atk. Spd. +5% Casting Spd. +5% Speed +5
 			level 2: Max HP -15% Max MP -15% P. Atk. +10% M. Atk. +20% Atk. Spd. +8% Casting Spd. +8% Speed +8
 		-->
         <icon initial="icon.elemental_berserker_spirit"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="35">
+                <value level="2">52</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3">
                 <value level="3">5</value>
             </item-count>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="BERSERKER">
+            <level initial="1">
+                <value level="2">2</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <conditions>
+            <target>
+                <party/>
+            </target>
+        </conditions>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="5.0">
+                    <value level="2">10.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="10.0">
+                    <value level="2">20.0</value>
+                </power>
+            </stat-modify>
+            <speed>
+                <power initial="5.0">
+                    <value level="2">8.0</value>
+                </power>
+            </speed>
+            <stat-modify mode="PER" stat="MAX_HP">
+                <power initial="-20.0">
+                    <value level="2">-15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAX_MP">
+                <power initial="-20.0">
+                    <value level="2">-15.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="2">8.0</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
+                <power initial="5.0">
+                    <value level="2">8.0</value>
+                </power>
+            </stat-modify>
+        </effects>
     </skill>
-    <skill id="47032" name="Elemental Clarity" max-level="3" type="MAGIC">
+    <skill id="47032" name="Elemental Clarity" max-level="3" action="A2" type="MAGIC">
         <!-- 
 			level 1: Song/ Dance/ P. Skill MP Consumption -10% M. Skill MP Consumption -4%
 			level 2: Song/ Dance/ P. Skill MP Consumption -15% M. Skill MP Consumption -7%
 			level 3: Song/ Dance/ P. Skill MP Consumption -20% M. Skill MP Consumption -10%
 		-->
         <icon initial="icon.elemental_clarity"/>
-        <attributes auto-use="BUFF"/>
+        <attributes auto-use="BUFF" magic-critical-rate="5.0">
+            <magic-level initial="58">
+                <value level="2">66</value>
+                <value level="3">74</value>
+            </magic-level>
+            <cast-range initial="-1"/>
+            <reuse initial="10000"/>
+            <effect-range initial="900"/>
+            <hit-time initial="1000"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="3"/>
         </consume>
-        <target/>
+        <target type="TARGET"/>
+        <abnormal type="CHEAP_MAGIC">
+            <level initial="1">
+                <value level="2">2</value>
+                <value level="3">3</value>
+            </level>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <magic-cost type="PHYSIC">
+                <power initial="-10.0">
+                    <value level="2">-15.0</value>
+                    <value level="3">-20.0</value>
+                </power>
+            </magic-cost>
+            <magic-cost>
+                <power initial="-4.0">
+                    <value level="2">-7.0</value>
+                    <value level="3">-10.0</value>
+                </power>
+            </magic-cost>
+            <magic-cost type="DANCE">
+                <power initial="-10.0">
+                    <value level="2">-15.0</value>
+                    <value level="3">-20.0</value>
+                </power>
+            </magic-cost>
+        </effects>
     </skill>
     <skill id="47041" name="Dragon Strike">
         <!-- <Fixed cast time skill>\n\nSummons a large dragon by spirit power.\n\n<<font color="00FF00">Allies</font>>\n<Elemental Restoration>\nRestores HP/ MP for a long time\n\n<<font color="FF0000">Enemies</font>>\n<Elemental Storm>\nThe storm attacks nearby enemies.\nInflicted damage depends on character's P. Atk.\nDeals great damage to enemies affected by <font color="FF8000">Elemental Mark</font>. -->
