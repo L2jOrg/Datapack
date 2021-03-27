@@ -145,13 +145,13 @@
 
 	<item id="71414" name="Gem Energy" type="NONE">
 	<!-- Combine with a Greater Gem to obtain a higher level gem.  -->
-		<restriction stackable="true" dropable="false" sellable="true"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="71415" name="Gem Energy Fragment" type="NONE">
 	<!-- Take it to the Store Manager to exchange for Gem Energy. -->
-		<restriction stackable="true" dropable="false" sellable="true"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes/>
 	</item>
 
@@ -291,16 +291,16 @@
 
 	<item id="71435" name="Emerald Box" type="NONE">
 	<!-- Double-click to obtain 1 Emerald Lv. 1.  -->
-		<restriction stackable="true" tradable="true" dropable="true" sellable="true"/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71348" min-count="1" max-count="1" chance="100"/>
+			<item id="71348"/>
 		</extract>		
 	</item>
 
 	<item id="71436" name="Brilliant Jewelry Box" type="NONE">
 	<!-- Double-click to select 1 of the following: Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/Blue Cat's Eye, Emerald Box (Lv. 1).  -->
-		<restriction stackable="true" tradable="true" dropable="false" sellable="true"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes weight="30" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="59102" value="-1"/>  <!-- Brilliant Jewelry Box -->
