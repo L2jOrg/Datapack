@@ -24,8 +24,7 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54013" value="-1"/>
-			<skill id="54013" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Virgo -->
+			<skill id="54013" value="-1"/>  <!-- Release Agathion - Virgo -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>	
@@ -37,7 +36,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54015" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Capricorn -->
 			<skill id="54015" value="-1"/>  <!-- Release Agathion - Capricorn -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
@@ -51,7 +49,6 @@
 		<crystal />
 		<skills>
 			<skill id="54016" value="-1"/>  <!-- Release Agathion - Libra -->
-			<skill id="54016" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Libra -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
 		</skills>	
@@ -63,7 +60,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54009" value="-1" type="ON_EQUIP"/>
 			<skill id="54009" value="-1"/>  <!-- Release Agathion - Taurus -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
@@ -76,8 +72,7 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54010" value="-1" />  <!-- Release Agathion - Leo -->
-			<skill id="54010" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Leo -->
+			<skill id="54010" value="-1"/>  <!-- Release Agathion - Leo -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->	
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->			
 		</skills>
@@ -89,7 +84,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54017" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Gemini -->
 			<skill id="54017" value="-1"/>  <!-- Release Agathion - Gemini -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->		
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->
@@ -102,7 +96,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54011" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Scorpio -->
 			<skill id="54011" value="-1"/>  <!-- Release Agathion - Scorpio -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->	
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->			
@@ -115,7 +108,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54014" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Aquarius -->
 			<skill id="54014" value="-1"/>  <!-- Release Agathion - Aquarius -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->	
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->			
@@ -128,7 +120,6 @@
 		<attributes weight="5" enchant-enabled="true" />
 		<crystal />
 		<skills>
-			<skill id="54012" value="-1" type="ON_EQUIP"/>  <!-- Release Agathion - Sagittarius -->
 			<skill id="54012" value="-1"/>  <!-- Release Agathion - Sagittarius -->
 			<skill id="54018" value="-1"/>  <!-- Seal Agathion -->	
 			<skill id="3267" type="ON_UNEQUIP" value="-1"/>  <!-- Seal Agathion -->	
@@ -327,6 +318,9 @@
 	<!-- Have it in the inventory to have +20 World Chat. 30-day. Must be Level 40 or above to use. \n\nResets every day at 7:00 am. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
+		<skills>
+			<skill id="59144" value="-1"/>  <!-- Magic Trumpet -->
+		</skills>	
 	</item>
 
 	<item id="71340" name="Magic Warehouse Summoning Scroll" type="RUNE">
@@ -391,6 +385,9 @@
 	<!-- Pack containing 1 Magic Trumpet (30-day). Must be Level 40 or higher.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="71339" min-count="1" max-count="1" chance="100"/>
+		</extract>
 	</item>
 
 	<armor id="71348" name="Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
@@ -399,7 +396,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51237"/>  <!-- Emerald -->
+			<skill id="59152"/>  <!-- Emerald -->
 		</skills>
 	</armor>
 
@@ -409,7 +406,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51237" level="2"/>  <!-- Emerald -->
+			<skill id="59152" level="2"/>  <!-- Emerald lv.2 -->
 		</skills>
 	</armor>
 
@@ -419,7 +416,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51237" level="3"/>  <!-- Emerald -->
+			<skill id="59152" level="3"/>  <!-- Emerald lv.3 -->
 		</skills>
 	</armor>
 
@@ -429,7 +426,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51237" level="4"/>  <!-- Emerald -->
+			<skill id="59152" level="4"/>  <!-- Emerald lv.4 -->
 		</skills>
 	</armor>
 
@@ -439,7 +436,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51237" level="5"/>  <!-- Emerald -->
+			<skill id="59152" level="5"/>  <!-- Emerald lv.5 -->
 		</skills>
 	</armor>
 
@@ -804,7 +801,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="6"/>  <!-- Vital Stone -->
+			<skill id="17706" level="6"/>  <!-- Vital Stone Lv. 1 -->
 			<skill id="55473" level="4"/>  <!-- Vital Stone - Sp. Ab. -->
 		</skills>
 	</armor>
@@ -815,7 +812,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="7"/>  <!-- Vital Stone -->
+			<skill id="17706" level="7"/>  <!-- Vital Stone Lv. 2 -->
 			<skill id="55473" level="4"/>  <!-- Vital Stone - Sp. Ab. -->
 		</skills>
 	</armor>
@@ -826,7 +823,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="8"/>  <!-- Vital Stone -->
+			<skill id="17706" level="8"/>  <!-- Vital Stone Lv. 3 -->
 			<skill id="55473" level="5"/>  <!-- Vital Stone - Sp. Ab. -->
 		</skills>
 	</armor>
@@ -837,7 +834,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="17706" level="9"/>  <!-- Vital Stone -->
+			<skill id="17706" level="9"/>  <!-- Vital Stone Lv. 4 -->
 			<skill id="55473" level="5"/>  <!-- Vital Stone - Sp. Ab. -->
 		</skills>
 	</armor>
@@ -859,7 +856,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55507" level="6"/>  <!-- Greater Aquamarine -->
+			<skill id="55507" level="6"/>  <!-- Greater Aquamarine Lv. 1 -->
 		</skills>
 	</armor>
 
@@ -869,7 +866,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55507" level="7"/>  <!-- Greater Aquamarine -->
+			<skill id="55507" level="7"/>  <!-- Greater Aquamarine Lv. 2 -->
 		</skills>
 	</armor>
 
@@ -879,7 +876,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55507" level="8"/>  <!-- Greater Aquamarine -->
+			<skill id="55507" level="8"/>  <!-- Greater Aquamarine Lv. 3 -->
 		</skills>
 	</armor>
 
@@ -889,7 +886,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55507" level="9"/>  <!-- Greater Aquamarine -->
+			<skill id="55507" level="9"/>  <!-- Greater Aquamarine Lv. 4 -->
 		</skills>
 	</armor>
 
@@ -899,7 +896,7 @@
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="55507" level="10"/>  <!-- Greater Aquamarine -->
+			<skill id="55507" level="10"/>  <!-- Greater Aquamarine Lv. 5 -->
 			<skill id="59156"/>  <!-- Greater Aquamarine - Sp. Ab. -->
 		</skills>
 	</armor>
@@ -923,4 +920,5 @@
 			<skill id="55705" level="7"/>  <!-- Greater Red Cat's Eye -->
 		</skills>
 	</armor>
+
 </list>
