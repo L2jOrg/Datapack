@@ -593,11 +593,10 @@
 	<item id="49766" name="Unidentified Stone" type="NONE">
 	<!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
 		<restriction stackable="true"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49759" min-count="1" max-count="1" chance="45"/>  
-			<item id="49767" min-count="1" max-count="1" chance="55"/>  
-		</extract>
+		<attributes weight="30" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="39157" value="-1"/>  <!-- Unidentified Stone -->
+		</skill-reducer>
 	</item>
 
 	<item id="49767" name="Broken Celestial Shard" type="NONE">
