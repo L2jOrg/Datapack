@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="18564" name="Shiny Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item chance="9.0" id="70487"/> <!-- Topaz Chest -->
+                <item chance="9.0" id="70488"/> <!-- Garnet Chest --> 
+                <item chance="12.0" id="70489"/> <!-- Jade Chest -->
+                <item chance="9.0" id="70490"/> <!-- Ruby Chest -->
+                <item chance="9.0" id="70491"/> <!-- Sapphire Chest -->
+				<item chance="14.0" id="70492"/> <!-- Diamond Chest -->
+				<item chance="14.0" id="70493"/> <!-- Pearl Chest -->
+				<item chance="12.0" id="70494"/> <!-- Vital Stone Chest -->
+				<item chance="12.0" id="70525"/> <!-- Aquamarine Chest -->
+            </random-restoration>
+        </effects>		
     </skill>
     <skill id="18566" name="Garnet" max-level="10">
         <!--
@@ -218,6 +232,20 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
+		<effects>   
+			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="45.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+				<power initial="30.0"/>
+			</stat-modify>
+			<stat-modify stat="CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>
+			<stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="10.0"/>
+			</stat-modify>			
+        </effects>		
     </skill>
     <skill id="18577" name="Call to Battle">
         <!-- PvP Damage Received -5%%, Debuff Resistance +10%%. -->
