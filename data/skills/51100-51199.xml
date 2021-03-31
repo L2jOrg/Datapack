@@ -200,14 +200,29 @@
         <target/>
     </skill>
     <skill id="51119" name="+10 Agathion Box" action="A1">
-        <!-- none -->
+        <!-- to get 1 of +10 Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion. -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item id="48048" chance="11.0"/> <!-- Agathion - Virgo -->
+                <item id="48049" chance="11.0"/> <!-- Agathion - Capricorn -->
+                <item id="48050" chance="11.0"/> <!-- Agathion - Libra -->
+                <item id="48052" chance="11.0"/> <!-- Agathion - Taurus -->
+                <item id="48053" chance="11.0"/> <!-- Agathion - Leo -->
+                <item id="48054" chance="11.0"/> <!-- Agathion - Gemini -->
+                <item id="48055" chance="11.0"/> <!-- Agathion - Scorpio -->
+                <item id="48056" chance="11.0"/> <!-- Agathion - Aquarius -->
+                <item id="48058" chance="12.0"/> <!-- Agathion - Sagittarius -->
+            </random-restoration>
+        </effects>	
     </skill>
     <skill id="51120" name="+15 A-grade Top-grade Weapon Pack" action="A1">
         <!-- none -->
@@ -557,16 +572,30 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="51152" name="Santa Girl's Gift" max-level="2" action="A1">
+    <skill id="51152" name="Santa Girl's Gift" max-level="2" action="A2">
         <!--
             level 1: Santa Girl's gift buff. Rewards Santa Girl's gift pouch when it disappears. Decreases MP Cost of P./M./Song/Dance skills -15%% and increases Hunting XP/SP gain +20%%. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
             level 2: Gift buff that Santa Girl gives to celebrate Christmas. Rewards Santa Girl's gift pouch when it disappears. <Caution> You cannot obtain the item if you are dead or your inventory is full when you receive it.
          -->
         <icon initial="BranchSys.Icon.Br_santa_gift_click_i00"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" stay-after-death="true">
             <effect-point initial="1"/>
         </attributes>
         <target/>
+        <abnormal>
+            <time initial="7200"/>
+        </abnormal>		
+		<effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power initial="20.0"/>
+            </stat-modify>	
+			<magic-cost>
+				<power initial="-15.0"/>
+			</magic-cost>	
+		</effects>	
     </skill>
     <skill id="51153" name="Holiday Gift" action="A1">
         <!-- Skill that rewards Santa Girl's gift pouch. -->

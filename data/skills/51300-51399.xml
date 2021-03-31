@@ -38,14 +38,25 @@
         <target/>
     </skill>
     <skill id="51305" name="Special Summer Box" action="A1">
-        <!-- none -->
+        <!-- randomly obtain 1 Anakim/Lilith Rune Stage 9, Earth Dragon Belt/Fire Dragon Belt - Venir's Blessing Lv. 4, or +10 Agathion Pack. -->
         <icon initial="icon.etc_treasure_box_i04"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item id="91171" chance="20.0"/> <!-- Anakim Rune - Stage 9 -->
+                <item id="91181" chance="20.0"/> <!-- Lilith Rune - Stage 9 -->
+                <item id="91146" chance="20.0"/> <!-- Earth Dragon Belt - Venir's Blessing Lv. 4 -->
+                <item id="91147" chance="20.0"/> <!-- Fire Dragon Belt - Venir's Blessing Lv. 4 -->
+                <item id="91150" chance="20.0"/> <!-- +10 Agathion Box -->
+            </random-restoration>
+        </effects>			
     </skill>
     <skill id="51306" name="Gemstone Box" action="A1">
         <!-- none -->
@@ -186,7 +197,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		 <effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -198,7 +209,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -210,7 +221,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -222,7 +233,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -234,7 +245,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -246,7 +257,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -258,7 +269,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -270,7 +281,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -282,7 +293,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -294,7 +305,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -306,7 +317,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -318,7 +329,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -330,7 +341,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -342,7 +353,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -354,7 +365,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -366,9 +377,6 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
-            <effect name="UnsummonAgathion"/>
-        </effects>
     </skill>
     <skill id="51337" name="Unseal Agathion - Gemini (Advanced)" action="A1">
         <!-- Unseals the Agathion. -->
@@ -378,7 +386,7 @@
             <hit-time initial="3000"/>
         </attributes>
         <target/>
-        <effects>
+		<effects>
             <effect name="UnsummonAgathion"/>
         </effects>
     </skill>
@@ -402,19 +410,38 @@
     <skill id="51340" name="S-grade Weapon Pack" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-            <reuse initial="500"/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
-        </attributes>
+        </attributes>	
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>
+        <effects>
+            <random-restoration>
+                <item chance="7.5" id="6366"/>
+                <item chance="7.5" id="6370"/>
+                <item chance="7.5" id="7575"/>
+                <item chance="7.5" id="6369"/>
+                <item chance="8.0" id="6371"/>
+                <item chance="7.5" id="6372"/>
+                <item chance="8.0" id="6580"/>
+                <item chance="7.5" id="6579"/>
+                <item chance="8.0" id="6367"/>
+                <item chance="7.5" id="6364"/>
+                <item chance="8.0" id="6365"/>
+                <item chance="7.5" id="91890"/>
+                <item chance="8.0" id="91905"/>
+            </random-restoration>
+        </effects>	
     </skill>
     <skill id="51341" name="S-grade Armor Pack" action="A1">
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
@@ -424,25 +451,25 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="5.88235294118" id="6379"/>
-                <item chance="5.88235294118" id="6380"/>
-                <item chance="5.88235294118" id="6381"/>
-                <item chance="5.88235294118" id="6382"/>
-                <item chance="5.88235294118" id="6383"/>
-                <item chance="5.88235294118" id="6384"/>
-                <item chance="5.88235294118" id="6385"/>
-                <item chance="5.88235294118" id="6386"/>
-                <item chance="5.88235294118" id="6373"/>
-                <item chance="5.88235294118" id="6374"/>
-                <item chance="5.88235294118" id="6375"/>
-                <item chance="5.88235294118" id="6376"/>
-                <item chance="5.88235294118" id="6377"/>
-                <item chance="5.88235294118" id="6378"/>
-                <item chance="5.88235294118" id="889"/>
-                <item chance="5.88235294118" id="858"/>
-                <item chance="5.88235294118" id="920"/>
+                <item chance="5.5" id="6680"/>
+                <item chance="5.5" id="6681"/>
+                <item chance="5.5" id="6682"/>
+                <item chance="6.0" id="6683"/>	
+                <item chance="5.5" id="6684"/>
+                <item chance="6.5" id="6685"/>
+                <item chance="5.5" id="6686"/>
+                <item chance="6.5" id="6687"/>		
+                <item chance="5.5" id="6674"/>
+                <item chance="6.5" id="6675"/>
+                <item chance="5.5" id="6676"/>
+                <item chance="6.5" id="6677"/>
+				<item chance="5.5" id="6678"/>
+                <item chance="6.5" id="6679"/>	
+                <item chance="5.5" id="6724"/>
+				<item chance="6.5" id="6725"/>
+                <item chance="5.5" id="6726"/>
             </random-restoration>
-        </effects>
+        </effects>	
     </skill>
     <skill id="51342" name="+10 A-grade Armor Pack" action="A1">
         <!-- none -->
@@ -1039,16 +1066,25 @@
     <skill id="51393" name="Shining Moody’s Melody" action="A2">
         <!-- For 1 hour, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
         <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-            <magic-level initial="1"/>
+        <attributes property="PHYSIC">
             <reuse initial="60000"/>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51394" name="Shining Moody’s Melody" action="A2">
+        <!-- For 4 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
+        <icon initial="icon.bm_magmeld"/>
+        <attributes property="PHYSIC">
+            <reuse initial="60000"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
         <!-- <abnormal type="BATTLE_SCROLL"> -->
             <!-- <level initial="1"/> -->
             <!-- <time initial="-1"/> -->
             <!-- <chance initial="-1"/> -->
-        <!-- </abnormal> -->
+        <!-- </abnormal> -->		
         <effects>
             <call-skill scope="SELF" skill="40014">
                 <power initial="1.0"/>
@@ -1092,72 +1128,14 @@
             <call-skill scope="SELF" skill="40027">
                 <power initial="1.0"/>
             </call-skill>
-        </effects>
-    </skill>
-    <skill id="51394" name="Shining Moody’s Melody" action="A2">
-        <!-- For 4 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
-        <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-            <magic-level initial="1"/>
-            <reuse initial="60000"/>
-        </attributes>
-        <target/>
-        <!-- <abnormal type="BATTLE_SCROLL"> -->
-            <!-- <level initial="1"/> -->
-            <!-- <time initial="-1"/> -->
-            <!-- <chance initial="-1"/> -->
-        <!-- </abnormal> -->
-        <effects>
-            <call-skill scope="SELF" skill="40028">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40029">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40030">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40031">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40032">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40033">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40034">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40035">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40036">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40037">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40038">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40039">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40040">
-                <power initial="1.0"/>
-            </call-skill>
-            <call-skill scope="SELF" skill="40041">
-                <power initial="1.0"/>
-            </call-skill>
-        </effects>
+        </effects>	
     </skill>
     <skill id="51395" name="Shining Moody’s Melody" action="A2">
         <!-- For 8 hours, activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. Cooldown 1 minute.\nDeath protection. You can delete it yourself.\n\n<Note>\nThe buff from the Shining Scroll of Mood Melody will not be removed after death, and the Shining Scroll of Mood Melody cannot be used while the buff remains. -->
         <icon initial="icon.bm_magmeld"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true">
-            <magic-level initial="1"/>
+        <attributes property="PHYSIC">
             <reuse initial="60000"/>
+            <effect-point initial="1"/>
         </attributes>
         <target/>
         <!-- <abnormal type="BATTLE_SCROLL"> -->
@@ -1208,7 +1186,7 @@
             <call-skill scope="SELF" skill="40055">
                 <power initial="1.0"/>
             </call-skill>
-        </effects>
+        </effects>		
     </skill>
     <skill id="51396" name="Scroll: 10,000 SP" action="A1">
         <icon initial="icon.skill0000"/>
@@ -1249,7 +1227,6 @@
 			<magic-level initial="1"/>
 			<reuse initial="500"/>
 		</attributes>
-		
 		<target/>
 		<effects>
 			<acquire-xp-sp xp="100000000" sp="2700000"/>
