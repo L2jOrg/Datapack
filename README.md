@@ -1,5 +1,7 @@
 # L2jOrg Open Source Project
 
+Discord: https://discord.gg/RbPgE5V
+
 ## How to contribute
 Please read the full WIKI PAGE: 
 https://github.com/L2jOrg/Datapack/wiki

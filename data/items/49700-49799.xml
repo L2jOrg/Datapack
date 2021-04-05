@@ -154,7 +154,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49707" chance="100"/>  <!-- Talisman of Darkness - P. Atk. -->
+			<item id="49707"/>  <!-- Talisman of Darkness - P. Atk. -->
 		</extract>
 	</item>
 
@@ -163,7 +163,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49708" chance="100"/>  <!-- Talisman of Darkness - M. Atk. -->
+			<item id="49708"/>  <!-- Talisman of Darkness - M. Atk. -->
 		</extract>
 	</item>
 
@@ -172,7 +172,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49709" chance="100"/>  <!-- Talisman of Darkness - P. Def. -->
+			<item id="49709"/>  <!-- Talisman of Darkness - P. Def. -->
 		</extract>
 	</item>
 
@@ -181,7 +181,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49710" chance="100"/>  <!-- Talisman of Darkness - M. Def. -->
+			<item id="49710"/>  <!-- Talisman of Darkness - M. Def. -->
 		</extract>
 	</item>
 
@@ -190,7 +190,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49711" chance="100"/>  <!-- Talisman of Darkness - P. Skills Evasion -->
+			<item id="49711"/>  <!-- Talisman of Darkness - P. Skills Evasion -->
 		</extract>
 	</item>
 
@@ -199,7 +199,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49712" chance="100"/>  <!-- Talisman of Darkness - M. Skills Evasion -->
+			<item id="49712"/>  <!-- Talisman of Darkness - M. Skills Evasion -->
 		</extract>
 	</item>
 
@@ -208,7 +208,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49713" chance="100"/>  <!-- Talisman of Darkness - HP -->
+			<item id="49713"/>  <!-- Talisman of Darkness - HP -->
 		</extract>
 	</item>
 
@@ -217,7 +217,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49714" chance="100"/>  <!-- Talisman of Darkness - MP -->
+			<item id="49714"/>  <!-- Talisman of Darkness - MP -->
 		</extract>
 	</item>
 
@@ -226,7 +226,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49715" chance="100"/>  <!-- Talisman of Darkness - Healing Power -->
+			<item id="49715"/>  <!-- Talisman of Darkness - Healing Power -->
 		</extract>
 	</item>
 
@@ -235,7 +235,7 @@
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49716" chance="100"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
+			<item id="49716"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
 		</extract>
 	</item>
 
@@ -593,11 +593,10 @@
 	<item id="49766" name="Unidentified Stone" type="NONE">
 	<!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
 		<restriction stackable="true"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49759" min-count="1" max-count="1" chance="45"/>  
-			<item id="49767" min-count="1" max-count="1" chance="55"/>  
-		</extract>
+		<attributes weight="30" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer>
+			<skill id="39157" value="-1"/>  <!-- Unidentified Stone -->
+		</skill-reducer>
 	</item>
 
 	<item id="49767" name="Broken Celestial Shard" type="NONE">
