@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="6400" name="Hyena Crest" type="NONE">
-	<!-- The crest that indicates that its bearer's event collector is "hyena." Without this badge, one cannot prove one's grade . -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- The crest indicating that its bearer's event collector is "hyena." Without this badge, one cannot prove one's grade .  -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6401" name="Fox Crest" type="NONE">
-	<!-- The crest that indicates that its bearer's event collector is "fox." Without this badge, one cannot prove one's grade . -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- The crest indicating that its bearer's event collector is "fox." Without this badge, one cannot prove one's grade .  -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6402" name="Wolf Crest" type="NONE">
-	<!-- The crest that indicates that its bearer's event collector is "wolf." Without this badge, one cannot prove one's grade . -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- The crest indicating that its bearer's event collector is "wolf." Without this badge, one cannot prove one's grade .  -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6403" name="Star Shard" type="NONE">
 	<!-- Starlight Festival Event - Gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
-		<restriction olympiad-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2023" value="-1"/>  <!-- Star Shard -->
 		</skill-reducer>
 	</item>
 
-	<item id="6404" name="Gunpowder" type="NONE">
+	<item id="6404" name="Boomboom Powder" type="NONE">
 	<!-- Starlight Festival Event - Black powder. Ingredient used to make larger fireworks. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="6405" name="Magnesium" type="NONE">
 	<!-- Starlight Festival Event - Chemical compound that generates a powerful flash when ignited. It is needed to make large fireworks. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="6406" name="Firecracker" type="NONE">
-	<!-- Explosive device that brilliantly lights up the sky. -->
-		<restriction stackable="true"/>
+	<!-- An explosive device that is launched in the sky exploding in multicoloured flashes. -->
+		<restriction/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2024" value="-1"/>  <!-- Firecracker -->
 		</skill-reducer>
 	</item>
 
 	<item id="6407" name="Large Firecracker" type="NONE">
 	<!-- Large explosive device that ignites to light up the sky. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="2025" value="-1"/>  <!-- Large Firecracker -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2025" value="-1"/>  <!-- Lightning Strike -->
 		</skill-reducer>
 	</item>
 
-	<armor id="6408" name="Formal Wear" type="HEAVY" body-part="ALL_DRESS">
-	<!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
+	<armor id="6408" name="Formal Wear" type="HEAVY" body-part="HAIR">
+	<!-- A tuxedo for male characters, and a wedding dress for female characters. -->
 		<restriction freightable="false"/>
 		<attributes weight="1000" price="5000000" enchant-enabled="false" />
 		<crystal />

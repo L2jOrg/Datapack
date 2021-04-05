@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="45473" name="Blue Mackerel - Tradable" type="NONE">
-	<!-- Exchange for various items through a Fishing Guild Member. -->
-		<restriction stackable="true"/>
+	<item id="45473" name="Blue Mackerel (Tradable)" type="NONE">
+	<!-- Can be exchanged for various items through the Fishing Guildsmen. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="45481" name="Fresh Blue Mackerel - Tradable" type="NONE">
-	<!-- Exchange for various items through a Fishing Guild Member. -->
-		<restriction stackable="true"/>
+	<item id="45481" name="Fresh Blue Mackerel (Tradable)" type="NONE">
+	<!-- Can be exchanged for various items through the Fishing Guildsmen. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="45488" name="Golden Treasure Chest" type="NONE">
-	<!-- Double-click to get an item. -->
-		<restriction stackable="true"/>
+	<!-- Double-click to obtain one of various items. -->
+		<restriction/>
 		<attributes weight="10" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<weapon id="45492" name="Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
-	<!-- A Fishing Rod for one day.  Consumes 1 Fishing Shot. -->
+	<!-- Available for 1 day. Requires 1 Fishing Shot. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1000" commission-type="OTHER_ITEM" duration="1440" enchant-enabled="false"/>
 		<crystal />
@@ -34,19 +34,20 @@
 		</stats>
 	</weapon>
 
-	<item id="45493" name="Fishing Rod Chest (1-day)" type="NONE">
-	<!-- Use it to obtain a 1-day Fishing Rod.  -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="45493" name="Fishing Rod Pack (1-day)" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction sellable="false"/>
 		<attributes weight="100" price="20514" immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="45492" chance="100"/>  <!-- Fishing Rod -->
+			<item id="45492"/>  <!-- Fishing Rod -->
 		</extract>
 	</item>
 
 	<item id="45495" name="Normal Bait" type="LURE">
-	<!-- Bait for fishing. Use to catch fish.  -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Necessary for fishing. -->
+		<restriction sellable="false"/>
 		<attributes price="7" immediate-effect="true" action="EQUIP"/>
+		<random_craft exp="3" commission="1"/>
 	</item>
 
 </list>
