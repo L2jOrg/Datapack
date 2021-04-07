@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE">
-	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \n\n<Note>\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\n\n -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- For 20 min., Max HP/ MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./ Casting Spd. +15%, P./ M. Def. +15%, Acquired XP/ SP +15%, Sayha's Grace Consumption -15%.\n\nNote!\nThe Spring Energy effects don't stack, the higher-level effect takes precedence.\n\n -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91301" name="Sayha's Spring Breeze" type="NONE">
-	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \n\n<Note>\nCannot be used with Sayha's Storm or Sayha's Gust.\n\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51228" value="-1"/>  <!-- Sayha's Spring Breeze -->
+	<item id="91301" name="Sayha's Spring Wind" type="NONE">
+	<!-- Filled with new spring's fresh breeeze. For 10 min., Sayha's Grace Consumption +100%, Acquired XP/ SP +150%. Cooldown: 20 min. This effect remains after death. Available if Sayha's Grace point bar is filled by more than one unit.\n\nCannot be used with the Sayha's Storm effect. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="51228" value="-1"/>  <!-- Sayha's Spring Wind -->
 		</skill-reducer>
 	</item>
 
-	<item id="91302" name="Spring's Blessing Box" type="NONE">
-	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \n\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91302" name="Spring's Blessing Chest" type="NONE">
+	<!-- Filled with Primavera's blessing. Double-click to obtain one of the following items: Fire/ Earth Dragon Belt, Enchant Scroll Ticket for different grades or some supplies. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="BROOCH">
-	<!-- Activates 5 jewel slots when equipped. Inventory Slot +12. Can combine 2 Brooches of the same level. -->
+	<armor id="91303" name="Brooch Lv. 4" type="NONE" body-part="PENDANT">
+	<!-- Activates 5 jewel slots. Inventory Slots +12. Can be compounded with another Brooch of the same level. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13659" value="-1"/>  <!-- Brooch Lv. 4 -->
-			<skill id="13661" level="4"/>  <!-- Additional Brooch Effect -->
-			<skill id="13650" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 4 Brooch -->
-			<skill id="13651" type="ON_UNEQUIP" value="-1"/>  <!-- Unequip Lv. 4 Brooch -->
+			<skill id="13659" value="-1"/>  <!-- Lv. 4 Brooch -->
+			<skill id="13661" level="4"/>  <!-- Brooch: Additional Inventory Slots -->
+			<skill id="13650" type="ON_EQUIP" value="-1"/>  <!-- Put on Lv. 4 Brooch -->
+			<skill id="13651" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 4 Brooch -->
 		</skills>
 	</armor>
 
-	<armor id="91304" name="Brooch Lv. 5" type="NONE" body-part="BROOCH">
-	<!-- Activates 6 jewel slots when equipped. Inventory Slot +15. -->
+	<armor id="91304" name="Brooch Lv. 5" type="NONE" body-part="PENDANT">
+	<!-- Activates 6 jewel slots. Inventory Slots +15. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="10" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="13660" value="-1"/>  <!-- Brooch Lv. 5 -->
-			<skill id="13661" level="5"/>  <!-- Additional Brooch Effect -->
-			<skill id="13648" type="ON_EQUIP" value="-1"/>  <!-- Equip Lv. 5 Brooch -->
-			<skill id="13649" type="ON_UNEQUIP" value="-1"/>  <!-- Unequip Lv. 5 Brooch -->
+			<skill id="13660" value="-1"/>  <!-- Lv. 5 Brooch -->
+			<skill id="13661" level="5"/>  <!-- Brooch: Additional Inventory Slots -->
+			<skill id="13648" type="ON_EQUIP" value="-1"/>  <!-- Put on Lv. 5 Brooch -->
+			<skill id="13649" type="ON_UNEQUIP" value="-1"/>  <!-- Remove Lv. 5 Brooch -->
 		</skills>
 	</armor>
 
-	<armor id="91305" name="Greater Topaz Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 2500 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91305" name="Greater Topaz Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Disrupts the target's skill casting. Inflicts 2500 PvP damage. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91306" name="Greater Topaz Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 2800 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91306" name="Greater Topaz Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Disrupts the target's skill casting. Inflicts 2800 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91307" name="Greater Topaz Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 3400 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91307" name="Greater Topaz Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Disrupts the target's skill casting. Inflicts 3400 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91308" name="Greater Topaz Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 4300 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91308" name="Greater Topaz Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Disrupts the target's skill casting. Inflicts 4300 PvP damage. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91309" name="Greater Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- Disrupts the target's skill casting when used. Inflicts fixed damage of 6000 Power in PvP. Removes up to 3 buffs from the enemy when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91309" name="Greater Topaz Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Disrupts the target's skill casting. Inflicts 6000 PvP damage. Activates a special ability that removes up to 3 debuffs. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91310" name="Greater Garnet Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +22%. Makes you invincible to debuffs for 16 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91310" name="Greater Garnet Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +22%. Grants immunity to debuffs for 16 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -92,8 +92,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91311" name="Greater Garnet Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +24%. Makes you invincible to debuffs for 17 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91311" name="Greater Garnet Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +24%. Grants immunity to debuffs for 17 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -102,8 +102,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91312" name="Greater Garnet Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +26%. Makes you invincible to debuffs for 18 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91312" name="Greater Garnet Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +26%. Grants immunity to debuffs for 18 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -112,8 +112,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91313" name="Greater Garnet Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +30%. Makes you invincible to debuffs for 20 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91313" name="Greater Garnet Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +30%. Grants immunity to debuffs for 20 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -122,8 +122,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91314" name="Greater Garnet Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Stun/Pull/Silence/Paralysis/Fear Resistance +40%, Sleep/Poison Resistance +10%. Makes you invincible to debuffs for 25 seconds upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91314" name="Greater Garnet Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +40%, Sleep/ Poison Resistance +10%. Grants immunity to debuffs for 25 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -132,8 +132,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91315" name="Greater Jade Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +15%, Movement Speed +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<armor id="91315" name="Greater Jade Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Atk. Spd./ Casting Spd. +15%, Speed +1%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -142,8 +142,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91316" name="Greater Jade Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +16%, Movement Speed +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91316" name="Greater Jade Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Atk. Spd./ Casting Spd. +16%, Speed +2%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -152,8 +152,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91317" name="Greater Jade Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +17%, Movement Speed +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91317" name="Greater Jade Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Atk. Spd./ Casting Spd. +17%, Speed +3%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -162,8 +162,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91318" name="Greater Jade Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +18%, Movement Speed +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91318" name="Greater Jade Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Atk. Spd./ Casting Spd. +18%, Speed +5%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -172,8 +172,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91319" name="Greater Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Resistance to Melee Weapon Attack +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91319" name="Greater Jade Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Atk. Spd./ Casting Spd. +20%, Speed +7%, Melee Weapon Atk. Resistance +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -182,8 +182,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91320" name="Greater Ruby Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +17% and P. Atk. +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91320" name="Greater Ruby Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Soulshot, Blessed Soulshot and Beast Soulshot Damage +17%, P. Atk. +1%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -192,8 +192,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91321" name="Greater Ruby Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +18% and P. Atk. +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91321" name="Greater Ruby Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Soulshot, Blessed Soulshot and Beast Soulshot Damage +18%, P. Atk. +2%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -202,8 +202,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91322" name="Greater Ruby Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot Damage by 19% and P. Atk. by 3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91322" name="Greater Ruby Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Soulshot, Blessed Soulshot and Beast Soulshot Damage +19%, P. Atk. +3%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -212,8 +212,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91323" name="Greater Ruby Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Soulshot, Blessed Soulshot, and Beast Soulshot damage +20% and P. Atk. +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91323" name="Greater Ruby Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Soulshot, Blessed Soulshot and Beast Soulshot Damage +20%, P. Atk. +5%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -222,8 +222,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91324" name="Greater Ruby Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot Damage by 20%, P. Atk. by 7%, and P. Critical Rate by 5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91324" name="Greater Ruby Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Soulshot, Blessed Soulshot and Beast Soulshot Damage +20%, P. Atk. +7%, P. Critical Rate +5%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -232,8 +232,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91325" name="Greater Sapphire Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17% and M. Atk. +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91325" name="Greater Sapphire Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +17%, M. Atk. +2%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -242,8 +242,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91326" name="Greater Sapphire Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +18% and M. Atk. +4%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91326" name="Greater Sapphire Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +18%, M. Atk. +4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -252,8 +252,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91327" name="Greater Sapphire Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +19% and M. Atk. +6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91327" name="Greater Sapphire Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +19%, M. Atk. +6%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -262,8 +262,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91328" name="Greater Sapphire Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20% and M. Atk. +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91328" name="Greater Sapphire Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -272,8 +272,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91329" name="Greater Sapphire Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +14%, and M. Critical Rate +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91329" name="Greater Sapphire Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot Damage +20%, M. Atk. +14%, M. Critical Rate +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -282,8 +282,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91330" name="Greater Diamond Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +150 and P. Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91330" name="Greater Diamond Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- P. Def. +150, Received P. Critical Damage -11%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -292,8 +292,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91331" name="Greater Diamond Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +180 and P. Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91331" name="Greater Diamond Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- P. Def. +180, Received P. Critical Damage -12%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -302,8 +302,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91332" name="Greater Diamond Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +220 and P. Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91332" name="Greater Diamond Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- P. Def. +220, Received P. Critical Damage -14%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -312,8 +312,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91333" name="Greater Diamond Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +280 and P. Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91333" name="Greater Diamond Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- P. Def. +280, Received P. Critical Damage -16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -322,8 +322,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91334" name="Greater Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +400, P. Critical Damage Received -20%, and P. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91334" name="Greater Diamond Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- P. Def. +400, Received P. Critical Damage -20%, Received P. Critical Rate -10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -332,8 +332,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91335" name="Greater Pearl Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +85 and M. Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91335" name="Greater Pearl Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- M. Def. +85, Received M. Skill Critical Damage -11%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -342,8 +342,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91336" name="Greater Pearl Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +100 and M. Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91336" name="Greater Pearl Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- M. Def. +100, Received M. Skill Critical Damage -12%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -352,8 +352,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91337" name="Greater Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +125 and M. Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91337" name="Greater Pearl Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- M. Def. +125, Received M. Skill Critical Damage -14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -362,8 +362,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91338" name="Greater Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +160 and M. Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91338" name="Greater Pearl Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- M. Def. +160, Received M. Skill Critical Damage -16%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -372,8 +372,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91339" name="Greater Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +250, M. Critical Damage Received -20%, and M. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91339" name="Greater Pearl Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- M. Def. +250, Received M. Skill Critical Damage -20%, Received M. Skill Critical Rate -10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -382,8 +382,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91340" name="Greater Vital Stone Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +17% and Sayha's Grace Consumption Rate -30% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<armor id="91340" name="Greater Vital Stone Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- While Sayha's Grace is active, Acquired XP/ SP +17%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be upgraded with the Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -392,8 +392,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91341" name="Greater Vital Stone Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +19% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91341" name="Greater Vital Stone Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- While Sayha's Grace is active, Acquired XP/ SP +19%, Sayha's Grace Consumption -32%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -402,8 +402,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91342" name="Greater Vital Stone Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +21% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91342" name="Greater Vital Stone Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- While Sayha's Grace is active, Acquired XP/ SP +21%, Sayha's Grace Consumption -32%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -412,8 +412,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91343" name="Greater Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +23% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91343" name="Greater Vital Stone Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- While Sayha's Grace is active, Acquired XP/ SP +23%, Sayha's Grace Consumption -32%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -422,8 +422,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91344" name="Greater Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +30% and Attribute XP +50% for hunting attribute NPCs while hunting during Sayha's Grace effect. Sayha's Grace Consumption Rate -35%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91344" name="Greater Vital Stone Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- While Sayha's Grace is active, Acquired XP/ SP +30%, Acquired XP (elemental hunting) +50%, Sayha's Grace Consumption -35%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -432,226 +432,226 @@
 		</skills>
 	</armor>
 
-	<armor id="91345" name="Greater Aquamarine Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Max MP +2% and has a chance to recover 60 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<armor id="91345" name="Greater Aquamarine Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- Max MP +2%, with a certain chance MP +60 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91346" name="Greater Aquamarine Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Max MP +5% and has a chance to recover 80 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91346" name="Greater Aquamarine Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- Max MP +5%, with a certain chance MP +80 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91347" name="Greater Aquamarine Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Max MP +8% and has a chance to recover 100 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91347" name="Greater Aquamarine Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- Max MP +8%, with a certain chance MP +100 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91348" name="Greater Aquamarine Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Max MP +12% and has a chance to recover 130 MP upon using a skill. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91348" name="Greater Aquamarine Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- Max MP +12%, with a certain chance MP +130 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91349" name="Greater Aquamarine Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Max MP +20% and has a chance to recover 200 MP upon using a skill. Instantly recovers 10% MP when a Special Ability is used. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91349" name="Greater Aquamarine Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Max MP +20%, with a certain chance MP +200 when using skills. Recovers 10% MP when using basic skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91350" name="Greater Cat's Eye Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +16% and P./M. Skill Power +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<armor id="91350" name="Greater Cat's Eye Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- P. Critical Damage/ M. Skill Critical Damage +16%, P./ M. Skill Power +1%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91351" name="Greater Cat's Eye Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +17% and P./M. Skill Power +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91351" name="Greater Cat's Eye Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- P. Critical Damage/ M. Skill Critical Damage +17%, P./ M. Skill Power +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91352" name="Greater Cat's Eye Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +18% and P./M. Skill Power +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91352" name="Greater Cat's Eye Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- P. Critical Damage/ M. Skill Critical Damage +18%, P./ M. Skill Power +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91353" name="Greater Cat's Eye Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +19% and P./M. Skill Power +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91353" name="Greater Cat's Eye Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- P. Critical Damage/ M. Skill Critical Damage +19%, P./ M. Skill Power +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. Can be compounded with Jewel Energy. In case of failure, its enchant value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91354" name="Greater Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +20%, P./M. Skill Power +7%, and Buff-canceling Resistance +40%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91354" name="Greater Cat's Eye Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- When equipped, P. Critical Damage/ M. Skill Critical Damage +20%, P./ M. Skill Power +7%, Buff Cancel Resistance +40%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="91355" name="Brilliant Jewelry Box" type="NONE">
-	<!-- Double-click to obtain 1 Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye, or Emerald (Lv. 1) Box.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91355" name="Radiant Jewelry Box" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91356" name="Gem Energy" type="NONE">
-	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Store Manager. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91356" name="Jewel Energy" type="NONE">
+	<!-- Required for upgrading a jewel. Can be exchanged for Shining Ore through the Game Assistant. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="91357" name="Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- CON +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91357" name="Emerald Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- CON +1. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91358" name="Emerald Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- CON and MEN +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91358" name="Emerald Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN +1. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91359" name="Emerald Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- CON, MEN, DEX +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91359" name="Emerald Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX +1. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91360" name="Emerald Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- CON, MEN, DEX, WIT +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91360" name="Emerald Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX/ WIT +1. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91361" name="Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with the Gem Energy. -->
+	<armor id="91361" name="Emerald Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +1. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91362" name="Greater Emerald Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT+1. Damage Reflect Resistance +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<armor id="91362" name="Greater Emerald Lv. 1" type="NONE" body-part="AGATHION">
+	<!-- CON +2, MEN/ DEX/ WIT/ STR/ INT +1, Damage Reflection Resistance +2%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91363" name="Greater Emerald Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT+1. Damage Reflect Resistance +4%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91363" name="Greater Emerald Lv. 2" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN +2, DEX/ WIT/ STR/ INT +1, Damage Reflection Resistance +4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91364" name="Greater Emerald Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT+1. Damage Reflect Resistance +6%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91364" name="Greater Emerald Lv. 3" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX +2, WIT/ STR/ INT +1, Damage Reflection Resistance +6%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91365" name="Greater Emerald Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN, DEX, WIT+2, STR, INT+1. Damage Reflect Resistance +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<armor id="91365" name="Greater Emerald Lv. 4" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX/ WIT +2, STR/ INT +1, Damage Reflection Resistance +10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. Can be upgraded with Jewel Energy. In case of failure the jewel level value drops to 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91366" name="Greater Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2. Damage Reflect Resistance +20%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<armor id="91366" name="Greater Emerald Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +2, Damage Reflection Resistance +20%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="91367" name="Emerald Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 1.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91367" name="Emerald Chest" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91368" name="Emerald Lv. 3 Jewelry Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 3.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91368" name="Emerald Jewelry Box Lv. 3" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91369" name="Emerald Lv. 4 Jewelry Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 4.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91369" name="Emerald Jewelry Box Lv. 4" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91370" name="Emerald Lv. 5 Jewelry Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 5.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91370" name="Emerald Jewelry Box Lv. 5" type="NONE">
+	<!-- Double-click to obtain Emerald Lv. 5. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91371" name="Brilliant Brooch Fragment" type="NONE">
-	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Store Manager to exchange them for a Brooch Lv. 5. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91371" name="Radiant Brooch Fragment" type="NONE">
+	<!-- Take it along with Brooch Lv. 4 to the Game Assistant to exchange for Brooch Lv. 5. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91372" name="Bait of Grace" type="LURE">
-	<!-- Event fishing bait. Use it to obtain Blue Mackerels, Whales, or Coins of Grace.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91372" name="Good Deeds Bait" type="LURE">
+	<!-- Event fishing bait. Can be used to catch Blue Mackerel or Whale. Gives a low chance to obtain a Good Deeds Coin. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="EQUIP"/>
 	</item>
 
-	<item id="91373" name="Fishing Kit of Grace" type="NONE">
-	<!-- Double-click to obtain a box containing 85,000 Bait of Grace, 85,000 Normal Fishing Shots, and 1 Golden Mermaid's Fishing Rod (30-day) Pack.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91373" name="Good Deeds Fishing Kit" type="NONE">
+	<!-- Double-click to obtain 85,000 Good Deeds Baits and Fishing Shots, Golden Mermaid's Fishing Rod (30-day). -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91374" name="Coin of Grace" type="NONE">
-	<!-- Coins that Cavalia saved to buy a present. Gather the coins that have been dropped in the water and take them to Cavalia at the Gludin Harbor or Giran Harbor to exchange them for useful items.   -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91374" name="Good Deeds Coin" type="NONE">
+	<!-- Can be exchanged for useful items from Kavari in Gludin Harbor or Giran Harbor. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91375" name="Angler's Rune - Veteran" type="RUNE">
-	<!-- A 7-day item. Only for characters level 76 and below. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91375" name="Skilled Fisherman's Rune - Professional" type="RUNE">
+	<!-- Available for 7 days. Required level: 1-76. When in inventory, Acquired XP/ SP (fishing) +300%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
-	<item id="91376" name="Angler's Rune - Master" type="RUNE">
-	<!-- A 7-day item. Only for characters level 77 to 80. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91376" name="Skilled Fisherman's Rune - Master" type="RUNE">
+	<!-- Available for 7 days. Required level: 76-80. When in inventory, Acquired XP/ SP (fishing) +300%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
-	<item id="91377" name="Angler's Rune - Supreme" type="RUNE">
-	<!-- A 7-day item. Only for characters level 81 and above. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91377" name="Skilled Fisherman's Rune - Expert" type="RUNE">
+	<!-- Available for 7 days. Required level: 81. When in inventory, Acquired XP/ SP (fishing) +300%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<armor id="91378" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nPoison Attack and Resistance +30%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Properties>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Skill Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nInfection Atk. Rate and Resistance +30%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -665,7 +665,7 @@
 	</armor>
 
 	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- <Options>\nMP Consumption -10%\nHeal Received +12%\nChance to activate MP Drain\nMax MP +40\nMental Attack and Resistance +20%\nHold Attack and Resistance +30%\n\n<Orfen's Earring>\nWhen used in PvP, Max MP -10%.\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
+	<!-- <Properties>\nMP Consumption -10%\nReceived Healing +12%\nWith a certain chance, absorbs some of the inflicted damage as MP.\nMax MP +40\nSilence Atk. Rate and Resistance +20%\nFear Atk. Rate and Resistance +20%\nHold Atk. Rate and Resistance +30%\n\n<Orfen's Earring>\nEnemy's Max MP in PvP -10%.\n\nEffects of two identical earrings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -679,7 +679,7 @@
 	</armor>
 
 	<armor id="91380" name="Ring of Core Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nMental Attack and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Properties>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nSilence Atk. Rate and Resistance +30%\nFear Atk. Rate and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nRemoves all debuffs and anomalies when used.\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -689,12 +689,12 @@
 		</stats>
 		<skills>
 			<skill id="3563" level="4" value="-1"/>  <!-- Ring of Core -->
-			<skill id="35016" value="-1"/>  <!-- Ring of Core - Special Ability -->
+			<skill id="35016" value="-1"/>  <!-- Core's Blessing -->
 		</skills>
 	</armor>
 
 	<armor id="91381" name="Baium's Ring Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nP. Skill Power +20%\nM. Skill Power +20%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Accuracy +8\nM. Accuracy +8\nP. Critical Damage 20%\nM. Critical Damage +20%\nMax MP +35\nStun Attack and Resistance +30%\nBleed Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<!-- <Properties>\nP. Skill Power +20%\nM. Skill Power +20%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Accuracy +8\nM. Accuracy +8\nP. Critical Damage +20%\nM. Skill Critical Damage +20%\nMax MP +35\nShock Atk. Rate and Resistance +30%\nInfection Atk. Rate and Resistance +20%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -703,12 +703,12 @@
 			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="15" value="-1"/>  <!-- Baium's Ring -->
+			<skill id="3561" level="15" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
 	<armor id="91382" name="Zaken's Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- <Options>\nMP Consumption -10%\nHeal Received +15%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +45\nBleed Attack and Resistance +30%\nStun Attack and Resistance +20%\nMental Attack and Resistance +20%\n\n<Zaken’s Earring>\nLimits HP/MP/CP Recovery of enemies when used in PvP.\n\nWhen two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
+	<!-- <Properties>\nMP Consumption -10%\nReceived Healing +15%\nHP Recovery Rate +20%\nVampiric Rage effect +8%\nMax MP +45\nInfection Atk. Rate and Resistance +30%\nShock Atk. Rate and Resistance +20%\nSilence Atk. Rate and Resistance +20%\nFear Atk. Rate and Resistance +20%\n\n<Zaken's Earring>\nDecreases the enemy's HP/ MP/ CP Recovery Rate in PvP.\n\nEffects of two identical earrings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -717,12 +717,12 @@
 			<stat type="MAX_MP" value="45.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="15" value="-1"/>  <!-- Zaken's Earring -->
+			<skill id="3559" level="15" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
 	<armor id="91383" name="Antharas' Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- MP +50, CON +2, MEN +2, Bleed Attack and Resistance +40%, Stun Attack and Resistance +30%, MEN Attack and Resistance +30%, Damage Reflect Resistance +20%, Heal Received +20%, Vampiric Rage +6%, Skill MP Consumption -15%. Enables skills that prevent using physical and magic skills. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- MP +50, CON +2, MEN +2, Bleed Resistance and Atk. Rate +30%, Fear/ Silence Resistance and Atk. Rate +30%, Damage Reflection Resistance +20%, Received Healing +20%, Vampiric Rage effect +6%, Skill MP Consumption -15%. Enables a special skill that blocks the enemy's P./ M. skills. Effects of two identical earrings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -731,107 +731,107 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="15" value="-1"/>  <!-- Antharas' Earring -->
+			<skill id="3558" level="15" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
-	<item id="91384" name="Queen Ant Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Phoenix Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Queen Ant's Ring Lv. 4 through upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91384" name="Essence of Queen Ant" type="NONE">
+	<!-- Take it along with Phoenix Ring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Queen Ant's Ring Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91385" name="Orfen Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Black Ore Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Orfen's Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91385" name="Essence of Orfen" type="NONE">
+	<!-- Take it along with Black Ore Earring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Orfen's Earring Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91386" name="Core Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Black Ore Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Ring of Core Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91386" name="Essence of Core" type="NONE">
+	<!-- Take it along with Black Ore Ring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Ring of Core Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91387" name="Baium Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Majestic Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Baium's Ring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91387" name="Essence of Baium" type="NONE">
+	<!-- Take it along with Majestic Ring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Baium's Ring Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91388" name="Zaken Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Phoenix Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Zaken's Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91388" name="Essence of Zaken" type="NONE">
+	<!-- Take it along with Phoenix Earring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Zaken's Earring Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91389" name="Antharas Essence" type="NONE">
-	<!-- Take the essence and a +10 to +12 Majestic Earring to Head Blacksmith Ferris in the Town of Aden to obtain the an Antharas' Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+	<item id="91389" name="Essence of Antharas" type="NONE">
+	<!-- Take it along with Majestic Earring enchanted for +10 to +12 to Head Blacksmith Ferris in Aden to upgrade it and get Antharas' Earring Lv. 4. -->
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="91390" name="Topaz Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- A 15-day item. Disrupts the target's skill casting when used. Inflicts fixed damage of 2375 Power in PvP. If identical Gems are equipped, only the effect of the highest level Gem is applied.  -->
+	<armor id="91390" name="Topaz Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Available for 15 days. Interrupts the target's skill casting. Inflicts 2375 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="21600" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2 - Tradable" type="SCROLL">
-	<!-- XP/SP gain +30% while hunting for 20 minutes when used. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
+	<item id="91391" name="Fish Stew - Guild's Gratitude Lv. 2 (Tradable)" type="SCROLL">
+	<!-- Applies a buff when used.\n\n<Buff effect>\nAcquired XP +30%\nAcquired SP +30%\n\nDuration: 20 min. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew - Guild's Gratitude -->
 		</skill-reducer>
 	</item>
 
-	<item id="91392" name="Night Goblin Liquor" type="NONE">
-	<!-- P. Atk. +15%, M. Atk. +23%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30% for 5 minutes. -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91392" name="Night Goblin's Liquor" type="NONE">
+	<!-- For 5 min., P. Atk. +15%, M. Atk. +23%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Recovery Bonus +30%. -->
+		<restriction stackable="true" destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91393" name="Forgotten Codex - Chapter 1" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<item id="91393" name="Forgotten Manuscript - Page 1" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91394" name="Forgotten Codex - Chapter 2" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<item id="91394" name="Forgotten Manuscript - Page 2" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91395" name="Forgotten Codex - Chapter 3" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<item id="91395" name="Forgotten Manuscript - Page 3" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91396" name="Forgotten Codex - Chapter 4" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<item id="91396" name="Forgotten Manuscript - Page 4" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91397" name="Codex Piece - Chapter 1" type="NONE">
-	<!-- A piece of the codex that contains the record of a forgotten skill. Gather 100 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 1. -->
-		<restriction stackable="true"/>
+	<item id="91397" name="Manuscript Fragment - Page 1" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91398" name="Codex Piece - Chapter 2" type="NONE">
-	<!-- A piece of the codex that contains the record of a forgotten skill. Has a low chance to return the Forgotten Codex Chapter 2 when combined with the Tablet of Magic. When the combination fails, it returns 2 Codex Fragments. -->
-		<restriction stackable="true"/>
+	<item id="91398" name="Manuscript Fragment - Page 2" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="91399" name="Codex Fragment - Chapter 2" type="NONE">
-	<!-- Codex fragment. Gather 50 fragments and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 2. The exchange costs 3 million Adena. -->
-		<restriction stackable="true"/>
+	<item id="91399" name="Manuscript Part - Page 2" type="NONE">
+	<!-- The item is not available. For Dwarves only. Recipe for Arrows of Light. Outdated and no longer used. -->
+		<restriction/>
 		<attributes/>
 	</item>
 

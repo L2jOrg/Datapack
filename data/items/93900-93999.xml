@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="93900" name="Legendary Card: Anakim" type="CARD_EVENT">
-	<!-- <> -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93901" name="Legendary Card: Frintezza" type="CARD_EVENT">
-	<!-- <> -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93902" name="Hidden Card" type="CARD_EVENT">
-	<!-- <> -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93903" name="Antharas' Lair Time Recharge Stone - Exchangeable" type="POTION">
-	<!-- Adds 60 minutes to the duration of the Antharas' Lair dimensional hunting zone. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="93903" name="Antharas' Lair's Time Stone (Exchangeable)" type="POTION">
+	<!-- Prolongs your Session Zone's raid for 60 min.\n\n<Hunting Zone>\nAntharas' Lair - World Hunting Zone -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5"/>
 	</item>
 
-	<item id="93904" name="Antharas' Lair Time Recharge Stone" type="POTION">
-	<!-- Adds 60 minutes to the duration of the Antharas' Lair dimensional hunting zone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93904" name="Antharas' Lair's Time Stone" type="POTION">
+	<!-- Prolongs your Session Zone's raid for 60 min.\n\n<Hunting Zone>\nAntharas' Lair - World Hunting Zone -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
 	</item>
 
-	<weapon id="93905" name="NPC Fire Sword" type="SWORD" body-part="RIGHT_HAND">
+	<weapon id="93905" name="Flame Sword (NPC)" type="SWORD" body-part="RIGHT_HAND">
 		<restriction tradable="false" private-sellable="false"/>
 		<attributes weight="1300"/>
 		<crystal type="A"/>
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="137.0"/>
@@ -43,411 +41,555 @@
 		</stats>
 	</weapon>
 
-	<item id="93906" name="Zaken’s Crystal" type="MATERIAL">
-	<!-- Zaken’s Crystal. Use it to craft a Fire Sword Blade. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="100000000"/>
+	<item id="93906" name="Zaken's Crystal" type="MATERIAL">
+	<!-- Required for creating Flame Sword's Blade. -->
+		<restriction/>
+		<attributes price="100000000"/>
 	</item>
 
-	<item id="93907" name="Orfen’s Crystal" type="MATERIAL">
-	<!-- Orfen’s Crystal. Use it to craft a Fire Sword Blade. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="100000000"/>
+	<item id="93907" name="Orfen's Crystal" type="MATERIAL">
+	<!-- Required for creating Flame Sword's Blade. -->
+		<restriction/>
+		<attributes price="100000000"/>
 	</item>
 
-	<item id="93908" name="Core’s Crystal" type="MATERIAL">
-	<!-- Core’s Crystal. Use it to craft a Fire Sword Blade. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="100000000"/>
+	<item id="93908" name="Core's Crystal" type="MATERIAL">
+	<!-- Required for creating Flame Sword's Blade. -->
+		<restriction/>
+		<attributes price="100000000"/>
 	</item>
 
-	<item id="93909" name="Baium’s Crystal" type="MATERIAL">
-	<!-- Baium’s Crystal. Use it to craft a Fire Sword Blade. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="100000000"/>
+	<item id="93909" name="Baium's Crystal" type="MATERIAL">
+	<!-- Required for creating Flame Sword's Blade. -->
+		<restriction/>
+		<attributes price="100000000"/>
 	</item>
 
-	<item id="93910" name="Queen Ant’s Crystal" type="MATERIAL">
-	<!-- Queen Ant’s Crystal. Use it to craft a Fire Sword Blade. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="100000000"/>
+	<item id="93910" name="Queen Ant's Crystal" type="MATERIAL">
+	<!-- Required for creating Flame Sword's Blade. -->
+		<restriction/>
+		<attributes price="100000000"/>
 	</item>
 
-	<item id="93911" name="Fire Sword Blade" type="MATERIAL">
-	<!-- Main ingredient needed to make a Fire Sword. -->
-		<restriction stackable="true"/>
+	<item id="93911" name="Flame Sword's Blade" type="MATERIAL">
+	<!-- Key material for Dwarves to make Flame Sword. -->
+		<restriction/>
 		<attributes weight="60" price="3700000000"/>
 	</item>
 
-	<item id="93912" name="Recipe: Fire Sword Blade (10%)" type="RECIPE">
-	<!-- For Dwarves only. Recipe for Fire Sword. Requires Create Item - Skill Lv. 8. The success rate is 10%. -->
-		<restriction stackable="true"/>
+	<item id="93912" name="Recipe: Flame Sword's Blade (10%)" type="RECIPE">
+	<!-- For Dwarves only. A recipe for Flame Sword's Blade. Requires Create Item Lv. 8. The success rate is 10%. -->
+		<restriction/>
 		<attributes weight="30" price="200000000"/>
 	</item>
 
-	<item id="93913" name="Recipe: Death Knight Fire Sword (100%)" type="RECIPE">
-	<!-- For Dwarves only. Recipe for Fire Sword. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<restriction stackable="true"/>
+	<item id="93913" name="Recipe: Death Knight's Flame Sword (100%)" type="RECIPE">
+	<!-- For Dwarves only. A recipe for Flame Sword. Requires Create Item Lv. 8. The success rate is 100%. -->
+		<restriction/>
 		<attributes weight="30" price="1000000000"/>
 	</item>
 
 	<item id="93914" name="Dragon Blood" type="NONE">
-	<!-- Blood containing the power of dragons. Use it to craft Fire Sword Blade and Death Knight Fire Sword. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Blood imbued with dragon's powers. Required for creating Flame Sword's Blade and Death Knight's Flame Sword. -->
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93915" name="Regular Card - Aspiring Orc Ruler of Aden" type="CARD_EVENT">
-	<!-- <> -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93915" name="Common Card - Combative Orc" type="CARD_EVENT">
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93916" name="Card Pouch" type="NONE">
-	<!-- Double-click to obtain one of various cards. Collect cards and combine them to obtain a reward. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Card Collecting Event\nCollect various card decks and get rewards!\nDouble-click to obtain one of the following cards:\n- Legendary Card: Astair van Halter\n- Legendary Card: Amadeo Cadmus\n- Legendary Card: Lionel Hunter\n- Legendary Card: Sieghardt Ein\n- Legendary Card: Elcadia\n- Legendary Card: Baium\n- Legendary Card: Lilith\n- Legendary Card: Anakim\n- Legendary Card: Frintezza\n- Lucky Energy Card\n- Common Card - Combative Orc (10 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93917" name="Trakan’s Card Pouch" type="NONE">
-	<!-- Double-click to obtain one of various cards from Hidden Card, Legendary Card: Antharas, Legendary Card: Valakas. Collect cards and combine them to obtain a reward. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93917" name="Drakan's Special Card Pouch" type="NONE">
+	<!-- Card Collecting Event\nCollect various card decks and get rewards!\nDouble-click to obtain one of the following cards:\n- Hidden Card\n- Legendary Card: Antharas\n- Legendary Card: Valakas\n- Legendary Card: Astair van Halter\n- Legendary Card: Amadeo Cadmus\n- Legendary Card: Lionel Hunter\n- Legendary Card: Sieghardt Ein\n- Legendary Card: Elcadia\n- Legendary Card: Baium\n- Legendary Card: Lilith\n- Legendary Card: Anakim\n- Legendary Card: Frintezza\n- Lucky Energy Card\n- Common Card - Combative Orc (50 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93918" name="Lucky Vitality Card" type="NONE">
-	<!-- A card to test your luck. For 20 min., some from STR, INT, DEX, WIT, CON, MEN +1, or XP Gain +20%. If the user is lucky, they might obtain a stronger buff. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes auto-use="SUPPLY"/>
-	</item>
-
-	<item id="93919" name="Trakan’s Treasure Chest - Dragon" type="NONE">
-	<!-- Double-click to obtain 1 of the following: +14 S-grade Weapon Pack, Rare Accessory Lv. 3 Box. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93918" name="Lucky Energy Card" type="NONE">
+	<!-- Card Collecting Event\nDouble-click to get one of the following 20-min. buffs:\n- STR/ INT +1\n- DEX/ WIT +1\n- CON/ MEN +1\n- Acquired XP/ SP +20%\n- STR/ INT/ DEX/ WIT/ CON/ MEN +1\n- STR/ INT/ DEX/ WIT/ CON/ MEN +1, acquired XP/ SP +20%\n- STR/ INT/ DEX/ WIT/ CON/ MEN +2, acquired XP/ SP +30%\nThe effect remains after death.\nYou can't cancel the effect by yourself. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93920" name="Trakan’s Treasure Chest - Hero" type="NONE">
-	<!-- Double-click to obtain 1 of the following: Dimensional Talisman Lv. 8, Lilith Rune - Stage 7, Anakim Rune - Stage 7. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93919" name="Drakan's Reward Pack - Warrior" type="NONE">
+	<!-- Double-click to obtain one of the following items:\n- Rare Accessory Pack\n- Spellbook: Ethereal Strike\n- Spellbook: Elemental Burst\n- Orc King's Treasure\n- Orcish Treasure\n- XP Growth Scroll - Event (20 pcs.)\n- Sayha's Cookie - Event (12 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93921" name="Trakan’s Treasure Chest - Angel" type="NONE">
-	<!-- Double-click to obtain 1 of the following: Talisman of Baium, S-grade Weapon Pack. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93920" name="Drakan's Reward Pack - Hero" type="NONE">
+	<!-- Double-click to obtain one of the following items:\n- Spellbook: Amazing Thunder Storm Mastery\n- Scroll: Amazing Rising Attack Mastery\n- Scroll: Enchant A-grade Weapon (Exchangeable)\n- Scroll: Enchant A-grade Armor (Exchangeable)\n- Orcish Treasure- Hidden Card\n- A-grade Gemstone\n- Combat Scroll - Event (5 pcs.)\n- Spirit Ore (100 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93922" name="Trakan’s Treasure Chest - Demon" type="NONE">
-	<!-- Double-click to obtain 1 of the following: +8 Dragon’s Belt Box, Jewel Box Lv. 5. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93921" name="Drakan's Reward Pack - Angel" type="NONE">
+	<!-- Double-click to obtain one of the following items:\n- Spellbook: Knight's Help\n- Scroll: Amazing Soul Smash Mastery\n- Orcish Treasure\n- Magical Tablet\n- Legendary Card: Antharas\n- Soulshot Ticket (5 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93923" name="Trakan’s Treasure Chest - Orc" type="NONE">
-	<!-- Double-click to obtain 1 of the following: Einhasad's Protection, XP Boost Scroll Event. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93922" name="Drakan's Reward Pack - Demon" type="NONE">
+	<!-- Double-click to obtain one of the following items:\n- Top-grade A-grade Weapon Pack\n- Orcish Treasure\n- Primeval Garden's Time Stone\n- Primeval Isle's Time Stone\n- Legendary Card: Valakas\n- Blade Spirit\n- Spirit Ore (200 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93924" name="Dragon Dungeon Treasure Chest" type="NONE">
-	<!-- Double-click to obtain one of the following: Random Crafting 1 Time Recharge Stone, Spirits Evolution Stone, Rare Accessory. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93923" name="Drakan's Reward Pack - Orc" type="NONE">
+	<!-- Double-click to obtain one of the following items: Sayha's Cookie, Blade Spirit. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93925" name="Daily Blessing Package II" type="NONE">
-	<!-- Double-click to obtain Random Crafting 1 Time Recharge Stone x10, Sayha's Blessing x100, Battleground Scroll x50, Battle Scroll x50, Primeval Isle Time Recharge Stone x1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93924" name="Einhasad's Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the useful items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93926" name="Ring of Insolence Enchant Pack" type="NONE">
-	<!-- Use to obtain 1 Ring of Insolence and 4 Enchant Scrolls. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="93925" name="Daily Kit II: Blessing" type="NONE">
+	<!-- Double-click to obtain Charging Stone of Random Craft - 1 Charge (10 pcs.), Sayha's Blessing (100 pcs.), Combat Scroll (50 pcs.), Battle Scroll (50 pcs.), Primeval Isle's Time Stone. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93927" name="Earring of Dragon World Enchant Pack" type="NONE">
-	<!-- Use to obtain 1 Earring of Dragon World and 4 Enchant Scrolls. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="93926" name="Enchant Package: Ring of Insolence" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="93928" name="Antharas Transformation Costume" type="HEAVY" body-part="ALL_DRESS">
+	<item id="93927" name="Enchant Package: Dragon Valley's Earring" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction sellable="false"/>
+		<attributes/>
+	</item>
+
+	<armor id="93928" name="Antharas Transformation Costume" type="HEAVY" body-part="HAIR">
 	<!-- NPC only costume -->
 		<restriction tradable="false" dropable="false" private-sellable="false"/>
 		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="93929" name="Orc Race Ranker Appearance" type="HEAVY" body-part="ALL_DRESS">
-	<!-- Race Ranker's appearance. Headpieces, weapon and magic armor are not removed.  -->
+	<armor id="93929" name="Worthy Warrior Transformation (face included)" type="HEAVY" body-part="HAIR">
+	<!-- When equipped, headgear, weapons and accessories are not removed. -->
 		<restriction sellable="false"/>
 		<attributes />
 		<crystal />
 	</armor>
 
-	<item id="93930" name="Special Armor Exchange Coupon" type="MATERIAL">
-	<!-- Exchange for special armor engraved with Thunder, Freeze, or Flame. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93930" name="Special Armor Coupon" type="MATERIAL">
+	<!-- Can be exchanged for special armor of Lightning, Ice Crystal armor, or Flaming armor through the Game Assistant. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93931" name="Enchant Scroll: Death Knight Fire Sword - Exchangeable" type="ENCHANT_WEAPON">
-	<!-- <Death Knight Fire Sword Enchant Scroll>\n\nWhen enchanted, the weapon’s P. Atk. +5, M. Atk. +3.\nStarting from +4, the weapon’s P. Atk. +10, M. Atk. +6.\n<Note>\nThe Death Knight Fire Sword is destroyed when enchantment fails. -->
-		<restriction stackable="true"/>
+	<item id="93931" name="Scroll: Enchant Death Knight's Flame Sword (Exchangeable)" type="ENCHANT_WEAPON">
+	<!-- <Scroll for enchanting Death Knight's Flame Sword>\n\nWhen enchanted, P. Atk. +10, M. Atk. +18.\nNote!\nIn case of failure, Death Knight's Flame Sword is destroyed. -->
+		<restriction/>
 		<attributes price="1800000"/>
+		<random_craft exp="900000" commission="18000"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="93932" name="Enchant Scroll: Death Knight Fire Sword - Unexchangeable" type="ENCHANT_WEAPON">
-	<!-- <Death Knight Fire Sword Enchant Scroll>\n\nWhen enchanted, the weapon’s P. Atk. +5, M. Atk. +3.\nStarting from +4, the weapon’s P. Atk. +10, M. Atk. +6.\n<Note>\nThe Death Knight Fire Sword is destroyed when enchantment fails. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93932" name="Scroll: Enchant Death Knight's Flame Sword (Unexchangeable)" type="ENCHANT_WEAPON">
+	<!-- <Scroll for enchanting Death Knight's Flame Sword>\n\nWhen enchanted, P. Atk. +10, M. Atk. +18.\nNote!\nIn case of failure, Death Knight's Flame Sword is destroyed. -->
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="1800000"/>
+		<random_craft exp="900000" commission="18000"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="93933" name="Rare Accessory Lv. 1 Box" type="NONE">
-	<!-- Double-click to randomly receive one of the following items: Queen Ant's Ring Lv. 1, Ring of Core Lv. 1, Zaken's Earring Lv. 1, Orfen's Earring Lv. 1, Baium's Ring Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93934" name="Dimensional Dye Powder" type="MATERIAL">
-	<!-- Powerful ingredient to craft dyes. Collect the powder and take it to Groot/Carson to exchange for a Special Dye Box. -->
-		<restriction stackable="true" sellable="false"/>
-		<attributes weight="2" price="100000"/>
-	</item>
-
-	<item id="93935" name="Super Advanced Dye Box +3/-1" type="NONE">
-	<!-- Double-click to get one of the following: 3rd Class Transfer Super Advanced STR Dye / Super Advanced CON Dye / Super Advanced DEX Dye / Super Advanced INT Dye / Super Advanced WIT Dye / Super Advanced MEN Dye with +3/-1 increase or decrease.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93936" name="Super Advanced Dye Box +4/-2" type="NONE">
-	<!-- Double-click to get one of the following: 3rd Class Transfer Super Advanced STR Dye / Super Advanced CON Dye / Super Advanced DEX Dye / Super Advanced INT Dye / Super Advanced WIT Dye / Super Advanced MEN Dye with +4/-2 increase or decrease.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93937" name="Super Advanced Dye Box +4/-3" type="NONE">
-	<!-- Double-click to get one of the following: 3rd Class Transfer Super Advanced STR Dye / Super Advanced CON Dye / Super Advanced DEX Dye / Super Advanced INT Dye / Super Advanced WIT Dye / Super Advanced MEN Dye with +4/-3 increase or decrease.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93938" name="Model Harvesting" type="NONE">
-	<!-- Double-click to obtain an Aden Ability Test - A Request and a Basic Harvesting buff item. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93939" name="Model Harvesting" type="NONE">
-	<!-- Double-click to obtain an Aden Ability Test - B Request and a Basic Harvesting buff item. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93940" name="Model Harvesting" type="NONE">
-	<!-- Double-click to obtain an Aden Ability Test - C Request and a Basic Harvesting buff item. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93941" name="Basic Harvesting" type="NONE">
-	<!-- Double-click to obtain the Basic Harvesting buff. The buff is refreshed every hour, and can last up to 6 hours. When it’s refreshed, Max HP, Max MP, P. Atk., M. Atk., P. Def., and M. Def. are increased. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes auto-use="SUPPLY"/>
-	</item>
-
-	<item id="93942" name="Aden Ability Test - A" type="NONE">
-	<!-- Double-click to receive the Aden Ability Test - A quest that can be completed in the Plains of Glory and the War-Torn Plains. -->
+	<item id="93933" name="Rare Accessory Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="10"/>
+		<attributes/>
 	</item>
 
-	<item id="93943" name="Aden Ability Test - B" type="NONE">
-	<!-- Double-click to receive the Aden Ability Test - B quest that can be completed in the Silent Valley and the Plains of the Lizardmen. -->
+	<item id="93934" name="Dye Powder" type="MATERIAL">
+	<!-- A material for creating high-quality dyes. Can be exchanged for a special dye pack through Groot or Carson. -->
+		<restriction sellable="false"/>
+		<attributes price="100000"/>
+	</item>
+
+	<item id="93935" name="Best Dye Pack +3/-1" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="10"/>
+		<attributes/>
 	</item>
 
-	<item id="93944" name="Aden Ability Test - C" type="NONE">
-	<!-- Double-click to receive the Aden Ability Test - c quest that can be completed in the Plains of the Lizardmen and the Dragon Valley. -->
+	<item id="93936" name="Best Dye Pack +4/-2" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="10"/>
-	</item>
-
-	<item id="93945" name="Mysterious Ingredient" type="NONE">
-	<!-- Box full of crops.\nYou’ll learn where you can use it after the maintenance. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93946" name="Majestic Sigil Pack" type="NONE">
-	<!-- Double-click to obtain an exchangeable Majestic Sigil. -->
+	<item id="93937" name="Best Dye Pack +4/-3" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93938" name="Art of Harvesting" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - A and an item that grants the Harvesting Basics buff. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93939" name="Art of Harvesting" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - B and an item that grants the Harvesting Basics buff. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93940" name="Art of Harvesting" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - C and an item that grants the Harvesting Basics buff. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93941" name="Harvesting Basics" type="NONE">
+	<!-- Double-click to get the Harvesting Basics buff. The effect lasts for 6 h. and is renewed every hour. After each renewal, increases Max HP/ MP, P./ M. Atk., P./ M. Def. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93942" name="Aden's Defenders Challenge - A" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - A that can be completed in the Plains of Glory and the War-Torn Plains. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93947" name="Majestic Sigil Pack" type="NONE">
-	<!-- Double-click to obtain an unexchangeable Majestic Sigil. -->
+	<item id="93943" name="Aden's Defenders Challenge - B" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - B that can be completed in the Silent Valley and the Plains of the Lizardmen. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93948" name="Transcendence Dungeon Extra Pass" type="NONE">
-	<!-- Extra pass to a daily instanced zone. Double-click to unbind Transcendence Dungeon <Epic>. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
+	<item id="93944" name="Aden's Defenders Challenge - C" type="NONE">
+	<!-- Double-click to obtain Aden's Defenders Challenge - C that can be completed in the Plains of the Lizardmen and the Dragon Valley. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93949" name="Transcendence Dungeon Extra Pass" type="NONE">
-	<!-- Extra pass to a daily instanced zone. Double-click to unbind Transcendence Dungeon <Epic>. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93945" name="Fluffy Reinforcement Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items: Sealed Minion Necklace, Blessed Scroll: Enchant A-grade Weapon. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93950" name="Escape: Antharas' Lair" type="SCROLL">
-	<!-- A magical scroll that relocates you to the entrance to Antharas' Lair.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93946" name="Package: Majestic Sigil" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93947" name="Package: Majestic Sigil" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93948" name="Extra Pass: Transcendent Instance Zone" type="NONE">
+	<!-- Double-click to get an extra pass to a transcendent instance zone.\n\nNote!\nCan be used once a day outside of instance zones.\nCan only be used when the instance zone is on cooldown. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93949" name="Extra Pass: Transcendent Instance Zone" type="NONE">
+	<!-- Double-click to get an extra pass to a transcendent instance zone.\n\nNote!\nCan be used once a day outside of instance zones.\nCan only be used when the instance zone is on cooldown. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93950" name="Scroll of Escape: Antharas' Lair" type="SCROLL">
+	<!-- Can be used to teleport to the Antharas' Lair. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30"/>
 	</item>
 
-	<item id="93951" name="Class Change Ticket" type="NONE">
-	<!-- Ticket needed to change classes. Consumed when changing classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93951" name="Class Change Coupon" type="NONE">
+	<!-- Required for changing your class. Deleted after the class change. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93952" name="16th Anniversary Time Capsule" type="NONE">
-	<!-- Double-click to obtain 16 of the Sayha's Blessing, Battleground Scroll, and XP Boost Scroll, and 160 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93952" name="Anniversary Time Capsule Box" type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (160 pcs.).\nRequired level: 40+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93953" name="16th Anniversary Support Box - Lv. 45 " type="NONE">
-	<!-- Double-click to obtain 16 of the Sayha's Blessing, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 200 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93953" name="Anniversary Support Box Lv. 45 " type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (200 pcs.).\nRequired level: 45+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93954" name="16th Anniversary Support Box - Lv. 50 " type="NONE">
-	<!-- Double-click to obtain 1 Primeval Isle Time Recharge Stone, 16 of Sayha’s Blessing, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 250 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93954" name="Anniversary Support Box Lv. 50 " type="NONE">
+	<!-- Double-click to obtain Primeval Isle's Time Stone, Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (250 pcs.).\nRequired level: 50+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93955" name="16th Anniversary Support Box - Lv. 55" type="NONE">
-	<!-- Double-click to obtain 16 of the Sayha's Blessing, Battle Scroll, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 300 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93955" name="Anniversary Support Box Lv. 55" type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (300 pcs.).\nRequired level: 55+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93956" name="16th Anniversary Support Box - Lv. 60" type="NONE">
-	<!-- Double-click to obtain 16 of the Sayha's Blessing, Battle Scroll, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 350 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93956" name="Anniversary Support Box Lv. 60" type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (350 pcs.).\nRequired level: 60+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93957" name="16th Anniversary Support Box - Lv. 65" type="NONE">
-	<!-- Double-click to obtain 16 of the Sayha's Blessing, Battle Scroll, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 400 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93957" name="Anniversary Support Box Lv. 65" type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie, Battle Scroll, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (400 pcs.).\nRequired level: 65+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93958" name="16th Anniversary Support Box - Lv. 70" type="NONE">
-	<!-- Double-click to obtain 1 Transcendence Dungeon Extra Pass 16 of Sayha’s Blessing, Sayha's Gust, Battleground Scroll, and XP Boost Scroll, and 450 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93958" name="Anniversary Support Box Lv. 70" type="NONE">
+	<!-- Double-click to obtain Extra Pass: Transcendent Instance Zone, Sayha's Cookie, Sayha's Gust, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (450 pcs.).\nRequired level: 70+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93959" name="16th Anniversary Support Box - Lv. 75" type="NONE">
-	<!-- Double-click to obtain 1 B-grade Enchant Weapon Exchange Ticket, 16 of the Sayha's Blessing, Battleground Scroll, and XP Boost Scroll, and 500 Spirit Ores and Soulshot Tickets. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93959" name="Anniversary Support Box Lv. 75" type="NONE">
+	<!-- Double-click to obtain Enchanted B-grade Weapon Coupon, Sayha's Cookie, Combat Scroll, XP Growth Scroll (16 pcs.), Spirit Ore, Soulshot Ticket (500 pcs.).\nRequired level: 75+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93968" name="Super Advanced STR Dye (STR +3)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93960" name="Wolf Necklace" type="NONE">
+	<!-- Required for summoning Wolf.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93961" name="Buffalo Necklace" type="NONE">
+	<!-- Required for summoning Buffalo.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93962" name="Tiger Necklace" type="NONE">
+	<!-- Required for summoning Tiger.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93963" name="Kookaburra Necklace" type="NONE">
+	<!-- Required for summoning Kookaburra.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93964" name="Dragon's Necklace" type="NONE">
+	<!-- Required for summoning Dragon.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93965" name="Hawk Necklace" type="NONE">
+	<!-- Required for summoning Hawk.\n -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="890" price="2000000"/>
+	</item>
+
+	<item id="93966" name="Pet Food" type="NONE">
+	<!-- Pet's satiety +1000. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" price="2000"/>
+		<random_craft exp="1000" commission="100"/>
+	</item>
+
+	<item id="93967" name="Pet's HP Potion (Exchangeable)" type="POTION">
+	<!-- Momentarily recovers 80 HP of your pet. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="1" price="120"/>
+		<random_craft exp="60" commission="6"/>
+	</item>
+
+	<item id="93968" name="Best STR Dye (STR +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93969" name="Super Advanced CON Dye (CON +3)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93969" name="Best CON Dye (CON +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93970" name="Super Advanced DEX Dye (DEX +3)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93970" name="Best DEX Dye (DEX +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93971" name="Super Advanced INT Dye (INT +3)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93971" name="Best INT Dye (INT +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93972" name="Super Advanced MEN Dye (MEN +3)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93972" name="Best MEN Dye (MEN +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93973" name="Super Advanced WIT Dye (WIT +3)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 3rd Class Transfer classes. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93973" name="Best WIT Dye (WIT +3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="150" price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
 	</item>
 
-	<item id="93974" name="Super Advanced Dye Exchange Ticket" type="MATERIAL">
-	<!-- Take it to Dye Merchant Groot or Carson to exchange for one of the 10 3rd Class Transfer Super Advanced STR Dye / Super Advanced CON Dye / Super Advanced DEX Dye / Super Advanced INT Dye / Super Advanced WIT Dye / Super Advanced MEN Dye with +3 increase. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93974" name="Best Dye Coupon" type="MATERIAL">
+	<!-- Can be exchanged for 10 dyes with +3 stat bonus for the 3rd classes: Best STR Dye, Best CON Dye, Best DEX Dye, Best INT Dye, Best WIT Dye, Best MEN Dye. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93975" name="Selection Reward" type="NONE">
-	<!-- Reward for participating in the OX Quiz for the 16th anniversary event. Double-click to obtain Dandy's Golden Ball, Sayha's Storm Lv. 3, or other consumables. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93975" name="Quiz Reward" type="NONE">
+	<!-- A reward for participating in the Anniversary Quiz.\nDouble-click to obtain one of the specified items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93990" name="Truest Package" type="NONE">
-	<!-- Double-click to obtain Grace Cookie (Event) x500, Dragon's Special Elixir Lv. 2 x200, Special Dragon's Fruit Lv. 2 x200, and Hidden Card x10. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93976" name="Scroll: Enchant A-grade Weapon" type="ENCHANT_WEAPON">
+	<!-- <font color=bbaa88><When enchanted from +1 to +3></font>\nOne-handed sword/ blunt weapon, dagger, rapier, spear: P. Atk. +10, M. Atk. +6\nTwo-handed sword/ blunt weapon, dual swords, fist weapon, ancient sword: P. Atk. +12, M. Atk. +6\nBow, firearms: P. Atk. +16, M. Atk. +6\n\n<font color=bbaa88><When enchanted to +4 or higher></font>\nOne-handed sword/ blunt weapon, dagger, rapier, spear: P. Atk. +30, M. Atk. +18\nTwo-handed sword/ blunt weapon, dual swords, fist weapon, ancient sword: P. Atk. +36, M. Atk. +18\nBow, firearms: P. Atk. +48, M. Atk. +18\n\n<font color=eeaa22>Safe enchanting to +4</font> -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes price="1800000"/>
+		<random_craft exp="900000" commission="18000"/>
+	</item>
+
+	<item id="93977" name="Scroll: Enchant A-grade Armor" type="ENCHANT_ARMOR">
+	<!-- <font color=bbaa88><When enchanted from +1 to +3></font>\nArmor: P. Def. +4\nAccessories: M. Def. +3\n\n<font color=bbaa88><When enchanted to +4 or higher></font>\nArmor: P. Def. +9\nAccessories: M. Def. +7\n\n<font color=eeaa22>Safe enchanting to +4</font> -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes price="240000"/>
+		<random_craft exp="120000" commission="2400"/>
+	</item>
+
+	<item id="93978" name="Aden's Common Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: Magical Tablet, Enhanced Dice, Sayha's Cookie, Combat Scroll, Soulshot Ticket. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93979" name="Aden's Big Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: Blessed Scroll: Enchant A-grade Weapon, Blessed Scroll: Enchant A-grade Armor, Cursed Scroll: Enchant A-grade Weapon, Cursed Scroll: Enchant A-grade Armor. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93980" name="Aden Adventure Reward Kit - Common" type="NONE">
+	<!-- Double-click to obtain Sayha's Storm Lv. 3 and Enhanced Dice. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93981" name="Mini-game's Common Treasure Chest - Defeat" type="NONE">
+	<!-- Double-click to obtain one of the following items: B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon, Charging Stone of Random Craft - 1 charge. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93982" name="Mini-game's Common Treasure Chest - Draw" type="NONE">
+	<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93983" name="Mini-game's Common Treasure Chest - Victory" type="NONE">
+	<!-- Double-click to obtain one of the following items: Rare Accessory Pack, Shiny Jewelry Box, Package: Cloak of Protection, Dragon Belt Pack, Enchant Kit: Talisman of Eva, Enchant Kit: Talisman of Aden. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93984" name="Mini-game's Big Treasure Chest - Defeat" type="NONE">
+	<!-- Double-click to obtain one of the following items: Einhasad's Pendant Lv. 1, Enchant Kit: Talisman of Authority, Shiny Jewelry Box, Package: Cloak of Protection. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93985" name="Mini-game's Big Treasure Chest - Draw" type="NONE">
+	<!-- Double-click to obtain one of the following items: Water Spirit Evolution Stone, Fire Spirit Evolution Stone, Wind Spirit Evolution Stone, Earth Spirit Evolution Stone, B-grade Weapon Coupon, B-grade Armor Coupon, C-grade Weapon Coupon. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93986" name="Mini-game's Big Treasure Chest - Victory" type="NONE">
+	<!-- Double-click to obtain one of the following items: Antharas' Earring Lv. 1, +9 Dragon Valley's Earring, +9 Ring of Insolence, Special Armor Coupon. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93987" name="Primeval Isle's Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: Talisman of Aden, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93988" name="Alligator Island's Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: Talisman of Eva, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93989" name="Primeval Garden's Treasure Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: Talisman of Speed, Amber/ Opal/ Coral/ Onyx/ Spinel/ Zircon/ Moonstone Lv. 1. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93990" name="Truth Kit" type="NONE">
+	<!-- Double-click to obtain Sayha's Cookie (500 pcs.), Spirit Ore (5000 pcs.), Soulshot Ticket (1000 pcs.), Hidden Card (10 pcs.). -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93991" name="Tower of Insolence Treasure Chest" type="NONE">
-	<!-- Double-click to obtain 1 of the following: Baium's Ring Lv. 3, Baium Doll Lv. 2, Einhasad's Protection, Shining Scroll of Mood Melody - Event, Battle Scroll - Event, XP Boost Scroll - Event, Soulshot Ticket. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain one of the following items.\n\n<Random>\nBaium's Ring\nOrcish Treasure\nA-grade Gemstone\nEinhasad's Blessing Scroll\nScroll: Boost Attack (5 pcs.)\nSoulshot Ticket (5 pcs.)\nSpirit Ore (400 pcs.) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93992" name="Baium Treasure Chest" type="NONE">
-	<!-- Double-click to obtain 1 of the following: +16 S-grade Weapon Pack, +10 S-grade Armor Pack, Baium's Ring Lv. 4, Baium's Ring Lv. 3, Talisman of Baium, Lilith Rune - Stage 7, Anakim Rune - Stage 7, S-grade Weapon Pack, S-grade Armor Pack. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain one of the following items.\n\n<Random>\nBaium's Ring\nAdvanced Pet Training Guide\nRegular Pet Training Guide\nA-grade Weapon Coupon\nA-grade Armor Coupon -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="93993" name="16th Anniversary Gift Box" type="NONE">
-	<!-- Double-click to obtain various items such as16th Anniversary equipment, 16th Anniversary Cake, Dragon's Special Elixir Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="93993" name="Anniversary Gift Box" type="NONE">
+	<!-- Double-click to obtain Primeval Isle's Time Stone (16 pcs.), Primeval Garden's Time Stone (16 pcs.), Combat Scroll (60 pcs.), Battle Scroll (60 pcs.), XP Growth Scroll (60 pcs.), Anniversary Cheer Pompoms, Anniversary Musical Instrument, Anniversary Party Hat, Spellbook: Air Bike, Anniversary Cake. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<weapon id="93994" name="16th Anniversary Pom Poms" type="DUAL" body-part="TWO_HAND">
-	<!-- Pom poms to celebrate the 16th anniversary. Can use the Firecracker skill when equipped.\nWhen used while equipping a sigil, the character won’t perform the cheering action. -->
+	<weapon id="93994" name="Anniversary Cheer Pompoms" type="DUAL" body-part="TWO_HAND">
+	<!-- Not used. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
@@ -457,11 +599,12 @@
 		</stats>
 	</weapon>
 
-	<weapon id="93995" name="16th Anniversary Instrument" type="HAMMER" body-part="RIGHT_HAND">
-	<!-- Instrument to celebrate the 16th anniversary. Use it to play music\nWhen used while equipping a sigil, the character won’t perform the performing action. -->
+	<weapon id="93995" name="Anniversary Musical Instrument" type="HAMMER" body-part="RIGHT_HAND">
+	<!-- A souvenir in honor of the Lineage II anniversary. When equipped, you can play it. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes/>
 		<crystal />
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
@@ -472,28 +615,28 @@
 		</stats>
 	</weapon>
 
-	<armor id="93996" name="16th Anniversary Hat" type="NONE" body-part="HAIR_ALL">
-	<!-- Hair accessory to celebrate the 16th anniversary. Uses 2 hair accessory slots. -->
+	<armor id="93996" name="Anniversary Party Hat" type="NONE" body-part="RIGHT_BRACELET">
+	<!-- A hair accessory for the anniversary of Lineage II.\n\n<font color=eeaa22>Occupies the left hair accessory slot.</font> -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
 	</armor>
 
 	<item id="93997" name="Spellbook: Air Bike" type="NONE">
-	<!-- Double-click to learn Mount Air Bike. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93998" name="16th Anniversary Cake" type="NONE">
-	<!-- For 5 min., party members’ P. Atk. +160, M. Atk. +160, XP/SP Gain +160%, Max HP/MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. Cannot use this item if you’ve received the 16th Anniversary Cake buff. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
-	</item>
-
-	<item id="93999" name="Sayha's Blessing 5000-unit Cube" type="NONE">
-	<!-- Aden Item Temporary Crafting -->
+	<!-- Double-click to learn Air Bike Riding. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93998" name="Anniversary Cake" type="NONE">
+	<!-- For 5 min., party members' P. Atk. +160, M. Atk. +160, acquired XP/ SP +160%, Max HP/ MP +160, Atk. Spd. +160, Casting Spd. +160, P. Def. +160, M. Def. +160. Cannot be used after getting the Anniversary Cake buff. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
+	</item>
+
+	<item id="93999" name="Sayha's Blessing Cube (5000 pcs.)" type="ELIXIR">
+	<!-- Double-click to obtain Sayha's Blessing (100 pcs.) once a day. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 

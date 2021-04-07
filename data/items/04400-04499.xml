@@ -2,517 +2,576 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="4400" name="White Cloth" type="NONE">
 	<!-- A reward for eliminating Angels. Collect 1,000 pcs. and bring them to Magister Hanellin. -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" quest-item="true"/>
 	</item>
 
-	<item id="4404" name="Green Dimensional Stone - Shard" type="NONE">
-	<!-- Broken shard of the green Dimensional Stone. Collect these and take them to Researcher Kaplan. -->
-		<restriction stackable="true"/>
+	<item id="4404" name="Green Dimensional Stone - Shard - Not Available" type="NONE">
+	<!-- The item is not available. A shard of the broken Green Dimensional Stone. Collect all shards and take them to Researcher Kaplan. -->
+		<restriction/>
 		<attributes weight="10" price="10" immediate-effect="true"/>
 	</item>
 
-	<item id="4405" name="Blue Dimensional Stone - Shard" type="NONE">
-	<!-- Broken shard of the blue Dimensional Stone. Collect these and take them to Researcher Euclie. -->
-		<restriction stackable="true"/>
+	<item id="4405" name="Blue Dimensional Stone - Shard - Not Available" type="NONE">
+	<!-- The item is not available. A shard of the broken Blue Dimensional Stone. Collect all shards and take them to Researcher Euclie. -->
+		<restriction/>
 		<attributes weight="10" price="10" immediate-effect="true"/>
 	</item>
 
-	<item id="4406" name="Red Dimensional Stone - Shard" type="NONE">
-	<!-- Broken shard of the red Dimensional Stone. Collect these and take them to Researcher Pitagon. -->
-		<restriction stackable="true"/>
+	<item id="4406" name="Red Dimensional Stone - Shard - Not Available" type="NONE">
+	<!-- The item is not available. A shard of the broken Blue Dimensional Stone. Collect all shards and take them to Researcher Pithgon. -->
+		<restriction/>
 		<attributes weight="10" price="10" immediate-effect="true"/>
 	</item>
 
 	<item id="4408" name="Musical Score - Theme of Love" type="NONE">
 	<!-- Posthumously released musical score of Gillian. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4409" name="Musical Score - Theme of Battle" type="NONE">
 	<!-- The musical score for the Battle March of Flames. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4410" name="Musical Score - Theme of Journey" type="NONE">
 	<!-- Musical score composed by Troubadour Swan. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4411" name="Echo Crystal - Theme of Journey" type="NONE">
 	<!-- Echo crystal that plays the theme music of a journey. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2069" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4412" name="Echo Crystal - Theme of Battle" type="NONE">
 	<!-- Echo crystal that plays the theme music of a battle. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2068" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4413" name="Echo Crystal - Theme of Love" type="NONE">
 	<!-- Echo crystal that plays the theme music of love. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="24000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2070" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4414" name="Echo Crystal - Theme of Solitude" type="NONE">
 	<!-- Echo crystal that plays the theme music of solitude. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="20000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2072" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4415" name="Echo Crystal - Theme of Festival" type="NONE">
 	<!-- Echo crystal that plays the theme music of a feast. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="2071" value="-1"/>  <!-- Item - Race Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4416" name="Echo Crystal - Theme of Celebration" type="NONE">
 	<!-- Echo crystal that plays the theme music of a celebration. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="2073" value="-1"/>  <!-- Item - Fight Song Crystal -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2073" value="-1"/>  <!-- Item - Theme Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4417" name="Echo Crystal - Theme of Comedy" type="NONE">
 	<!-- Echo crystal that plays the theme music of a comedy. May only be used once. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="2067" value="-1"/>  <!-- Item - Fight Song Crystal -->
+		<skill-reducer type="ItemSkills">
+			<skill id="2067" value="-1"/>  <!-- Item - Theme Sound Crystal -->
 		</skill-reducer>
 	</item>
 
 	<item id="4418" name="Musical Score - Theme of Celebration" type="NONE">
 	<!-- Musical score containing the theme music of a celebration. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4419" name="Musical Score - Theme of Comedy" type="NONE">
 	<!-- Musical score containing the theme music of a comedy. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4420" name="Musical Score - Theme of Solitude" type="NONE">
 	<!-- Musical score composed by Musician Nanarin. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4421" name="Musical Score - Theme of Festival" type="NONE">
 	<!-- Musical score composed by Musician Barbado. If you take it to Maestro Melody, you can have an echo crystal made. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="20" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4433" name="Elemental Stone Powder" type="NONE">
 	<!-- Elemental stone powder obtained from a stone statue in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="50" immediate-effect="true"/>
 	</item>
 
-	<item id="4434" name="Elemental Stone Shards" type="NONE">
+	<item id="4434" name="Collector of Jewels" type="NONE">
 	<!-- The shards of Elemental stones obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="100" price="500" immediate-effect="true"/>
 	</item>
 
 	<item id="4435" name="Elemental Stone Lump" type="NONE">
 	<!-- The lumps of Elemental stone obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="1000" price="5000" immediate-effect="true"/>
 	</item>
 
 	<item id="4436" name="Bentley's Request" type="NONE">
 	<!-- Request to find and bring back jade crystals from creatures such as Fline, Liele, Satyr etc. that inhabit the Enchanted Valley. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4437" name="Carson's Request" type="NONE">
 	<!-- Request to recover the works of the ancient sculptor Berona from Hatar Ratmen and Vanor Silenos in the area near the Cemetery. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true"/>
 	</item>
 
 	<item id="4438" name="Knuckle Duster Edge" type="MATERIAL">
-	<!-- Essential ingredient needed by a Dwarf to make a Knuckle Duster. It can be bought from a regular store. -->
-		<restriction stackable="true"/>
+	<!-- The item is not available. Key material for Dwarves to make Knuckle Duster. No longer used. -->
+		<restriction/>
 		<attributes weight="60" price="28044" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+		<random_craft exp="2804" commission="281"/>
 	</item>
 
 	<item id="4439" name="Avadon Shield Fragment" type="MATERIAL">
-	<!-- Essential ingredient needed by a Dwarf to make an Avadon Shield. It can be bought from a regular store. -->
-		<restriction stackable="true"/>
+	<!-- The item is not available. Key material for Dwarves to make Avadon Shield. No longer used. -->
+		<restriction/>
 		<attributes weight="60" price="2900" commission-type="MAJOR_CRAFTING_INGREDIENTS" immediate-effect="true"/>
+		<random_craft exp="290" commission="29"/>
 	</item>
 
 	<item id="4440" name="Recipe: Knuckle Duster" type="RECIPE">
-	<!-- For Dwarves only. Recipe for a Knuckle Duster. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
-		<restriction stackable="true"/>
-		<attributes weight="30" price="57400" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
+	<!-- For Dwarves only. A recipe for Knuckle Duster. Requires Create Item Lv. 5. The success rate is 100%. -->
+		<restriction/>
+		<attributes weight="30" price="717500" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="35875" commission="718"/>
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="4441" name="Recipe: Avadon Shield" type="RECIPE">
-	<!-- For Dwarves only. Recipe for an Avadon Shield. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<restriction stackable="true"/>
-		<attributes weight="30" price="10900" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
+	<item id="4441" name="Recipe: Avadon Shield (100%)" type="RECIPE">
+	<!-- For Dwarves only. A recipe for Avadon Shield. Requires Create Item Lv. 6. The success rate is 100%. -->
+		<restriction/>
+		<attributes weight="30" price="136250" commission-type="RECIPE" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="6812" commission="137"/>
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="4445" name="Dye of STR (STR +1 CON -3)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4445" name="STR Dye (STR +1 CON -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4446" name="Dye of STR (STR +1 DEX -3)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4446" name="STR Dye (STR +1 DEX -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4447" name="Dye of CON (Con +1 Str -3)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4447" name="CON Dye (CON +1 STR -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4448" name="Dye of CON (Con +1 DEX -3)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4448" name="CON Dye (CON +1 DEX -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4449" name="Dye of DEX (Dex +1 Str -3)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4449" name="DEX Dye (DEX +1 STR -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4450" name="Dye of DEX (Dex +1 CON -3)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4450" name="DEX Dye (DEX +1 CON -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4451" name="Dye of INT (Int +1 Men -3)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4451" name="INT Dye (INT +1 MEN -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4452" name="Dye of INT (Int +1 Wit -3)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4452" name="INT Dye (INT +1 WIT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4453" name="Dye of MEN (Men +1 Int -3)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4453" name="MEN Dye (MEN +1 INT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4454" name="Dye of MEN (Men +1 Wit -3)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4454" name="MEN Dye (MEN +1 WIT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4455" name="Dye of WIT (Wit +1 Int -3)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4455" name="WIT Dye (WIT +1 INT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4456" name="Dye of WIT (Wit +1 Men -3)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4456" name="WIT Dye (WIT +1 MEN -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="5100" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="2550" commission="51"/>
 	</item>
 
-	<item id="4457" name="Dye of STR (STR +1 CON -2)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4457" name="STR Dye (STR +1 CON -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4458" name="Dye of STR (STR +1 DEX -2)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4458" name="STR Dye (STR +1 DEX -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4459" name="Dye of CON (Con +1 Str -2)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4459" name="CON Dye (CON +1 STR -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4460" name="Dye of CON (Con +1 DEX -2)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4460" name="CON Dye (CON +1 DEX -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4461" name="Dye of DEX (Dex +1 Str -2)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4461" name="DEX Dye (DEX +1 STR -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4462" name="Dye of DEX (Dex +1 CON -2)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4462" name="DEX Dye (DEX +1 CON -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4463" name="Dye of INT (Int +1 Men -2)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4463" name="INT Dye (INT +1 MEN -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4464" name="Dye of INT (Int +1 Wit -2)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4464" name="INT Dye (INT +1 WIT -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4465" name="Dye of MEN (Men +1 Int -2)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4465" name="MEN Dye (MEN +1 INT -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4466" name="Dye of MEN (Men +1 Wit -2)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4466" name="MEN Dye (MEN +1 WIT -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4467" name="Dye of WIT (Wit +1 Int -2)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4467" name="WIT Dye (WIT +1 INT -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4468" name="Dye of WIT (Wit +1 Men -2)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4468" name="WIT Dye (WIT +1 MEN -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4469" name="Dye of STR (STR +1 CON -1)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4469" name="STR Dye (STR +1 CON -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4470" name="Dye of STR (STR +1 DEX -1)" type="DYE">
-	<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4470" name="STR Dye (STR +1 DEX -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4471" name="Dye of CON (Con +1 Str -1)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4471" name="CON Dye (CON +1 STR -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4472" name="Dye of CON (Con +1 DEX -1)" type="DYE">
-	<!-- Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4472" name="CON Dye (CON +1 DEX -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4473" name="Dye of DEX (Dex +1 Str -1)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4473" name="DEX Dye (DEX +1 STR -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4474" name="Dye of DEX (Dex +1 CON -1)" type="DYE">
-	<!-- Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4474" name="DEX Dye (DEX +1 CON -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4475" name="Dye of INT (Int +1 Men -1)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4475" name="INT Dye (INT +1 MEN -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4476" name="Dye of INT (Int +1 Wit -1)" type="DYE">
-	<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4476" name="INT Dye (INT +1 WIT -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4477" name="Dye of MEN (Men +1 Int -1)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4477" name="MEN Dye (MEN +1 INT -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4478" name="Dye of MEN (Men +1 Wit -1)" type="DYE">
-	<!-- Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4478" name="MEN Dye (MEN +1 WIT -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4479" name="Dye of WIT (Wit +1 Int -1)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4479" name="WIT Dye (WIT +1 INT -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4480" name="Dye of WIT (Wit +1 Men -1)" type="DYE">
-	<!-- Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 1st Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4480" name="WIT Dye (WIT +1 MEN -1)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 1st class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="35000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="17500" commission="350"/>
 	</item>
 
-	<item id="4481" name="Greater Dye of STR (STR +1 CON -3)" type="DYE">
-	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4481" name="Greater STR Dye (STR +1 CON -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4482" name="Greater Dye of STR (STR +1 DEX -3)" type="DYE">
-	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4482" name="Greater STR Dye (STR +1 DEX -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4483" name="Greater Dye of CON(Con +1 Str -3)" type="DYE">
-	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4483" name="Greater CON Dye (CON +1 STR -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4484" name="Greater Dye of CON(Con +1 DEX -3)" type="DYE">
-	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4484" name="Greater CON Dye (CON +1 DEX -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4485" name="Greater Dye of DEX (Dex +1 Str -3)" type="DYE">
-	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4485" name="Greater DEX Dye (DEX +1 STR -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4486" name="Greater Dye of DEX (Dex +1 CON -3)" type="DYE">
-	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4486" name="Greater DEX Dye (DEX +1 CON -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4487" name="Greater Dye of INT (Int +1 Men -3)" type="DYE">
-	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4487" name="Greater INT Dye (INT +1 MEN -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4488" name="Greater Dye of INT (Int +1 Wit -3)" type="DYE">
-	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4488" name="Greater INT Dye (INT +1 WIT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4489" name="Greater Dye of MEN (Men +1 Int -3)" type="DYE">
-	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4489" name="Greater MEN Dye (MEN +1 INT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4490" name="Greater Dye of MEN (Men +1 Wit -3)" type="DYE">
-	<!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4490" name="Greater MEN Dye (MEN +1 WIT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4491" name="Greater Dye of WIT (Wit +1 Int -3)" type="DYE">
-	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4491" name="Greater WIT Dye (WIT +1 INT -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4492" name="Greater Dye of WIT (Wit +1 Men -3)" type="DYE">
-	<!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4492" name="Greater WIT Dye (WIT +1 MEN -3)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="12000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="6000" commission="120"/>
 	</item>
 
-	<item id="4493" name="Greater Dye of STR (STR +1 CON -2)" type="DYE">
-	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4493" name="Greater STR Dye (STR +1 CON -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4494" name="Greater Dye of STR (STR +1 DEX -2)" type="DYE">
-	<!-- Greater dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4494" name="Greater STR Dye (STR +1 DEX -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4495" name="Greater Dye of CON (Con +1 Str -2)" type="DYE">
-	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4495" name="Greater CON Dye (CON +1 STR -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4496" name="Greater Dye of CON (Con +1 DEX -2)" type="DYE">
-	<!-- Greater dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4496" name="Greater CON Dye (CON +1 DEX -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4497" name="Greater Dye of DEX (Dex +1 Str -2)" type="DYE">
-	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4497" name="Greater DEX Dye (DEX +1 STR -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4498" name="Greater Dye of DEX (Dex +1 CON -2)" type="DYE">
-	<!-- Greater dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4498" name="Greater DEX Dye (DEX +1 CON -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
-	<item id="4499" name="Greater Dye of INT (Int +1 Men -2)" type="DYE">
-	<!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. All 2nd Class Transfer classes. -->
-		<restriction stackable="true"/>
+	<item id="4499" name="Greater INT Dye (INT +1 MEN -2)" type="DYE">
+	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all classes after the 2nd class change. -->
+		<restriction sellable="false"/>
 		<attributes weight="150" price="21000" commission-type="DYES" immediate-effect="true"/>
+		<random_craft exp="10500" commission="210"/>
 	</item>
 
 </list>

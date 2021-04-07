@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="48016" name="White Knight Suit" type="HEAVY" body-part="ALL_DRESS">
-	<!-- N Shop Platinum exclusive item. A formal white knight suit. Previous armor is taken off and becomes unavailable when it's equipped. Hair accessories, weapon, and magic armor are not removed. -->
+	<armor id="48016" name="White Knight Suit" type="HEAVY" body-part="HAIR">
+	<!-- N Shop Platinum exclusive item. An evening dress. When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48017" name="High Priest Outfit" type="HEAVY" body-part="ALL_DRESS">
+	<armor id="48017" name="High Priest Costume" type="HEAVY" body-part="HAIR">
+	<!-- A healer's outfit. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -16,28 +17,20 @@
 		</stats>
 	</armor>
 
-	<armor id="48018" name="Chevalier Garment" type="HEAVY" body-part="ALL_DRESS">
+	<armor id="48018" name="Chevalier Garment" type="HEAVY" body-part="HAIR">
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48019" name="Cat the Cat Garment" type="HEAVY" body-part="ALL_DRESS">
+	<armor id="48019" name="Kat the Cat Costume" type="HEAVY" body-part="HAIR">
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48020" name="Wild Wolf Outfit" type="HEAVY" body-part="ALL_DRESS">
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<stats>
-			<stat type="PHYSICAL_DEFENCE" value="400.0"/>
-		</stats>
-	</armor>
-
-	<armor id="48021" name="Valkyrie Garment" type="HEAVY" body-part="ALL_DRESS">
+	<armor id="48020" name="Wild Wolf Costume" type="HEAVY" body-part="HAIR">
+	<!-- A wild wolf's costume. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -46,93 +39,103 @@
 		</stats>
 	</armor>
 
-	<armor id="48022" name="Teddy Bear Wear" type="HEAVY" body-part="ALL_DRESS">
-	<!-- Teddy Bear wear. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed.  -->
+	<armor id="48021" name="Valkyrie Costume" type="HEAVY" body-part="HAIR">
+	<!-- Valkyrie Costume -->
+		<restriction freightable="false" sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<stats>
+			<stat type="PHYSICAL_DEFENCE" value="400.0"/>
+		</stats>
+	</armor>
+
+	<armor id="48022" name="Teddy Bear Wear" type="HEAVY" body-part="HAIR">
+	<!-- When equipped, headgear, weapons and accessories are not removed. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="48046" name="Agathion Enchant Scroll" type="ENCHANT_AGATHION">
-	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3 and can be enchanted up to +10. Starting from +1 enchanting special abilities increases step by step. Item is destroyed upon enchant failure. -->
-		<restriction stackable="true"/>
+	<item id="48046" name="Scroll: Enchant Agathion" type="ENCHANT_AGATHION">
+	<!-- Only for Zodiac agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="48047" name="High-grade Agathion Enchant Scroll" type="MULTI_ENCHANT_AGATHION">
-	<!-- Only for Zodiac Agathion. Increases M. Def. when the Agathion enchant level increases. Can be safely enchanted up to +3. Starting from +1 enchanting special abilities increases step by step. Enchant randomly from +1 to +3 on success. Item is destroyed upon enchant failure. Cannot use for items with enchant level more than +8. -->
-		<restriction stackable="true"/>
+	<item id="48047" name="Scroll: Enchant High-grade Agathion" type="MULTI_ENCHANT_AGATHION">
+	<!-- Only for Zodiac agathions. Increases M. Def. The enchanting is safe up to +3, the maximum enchant value is +10. Starting from +1, the agathion's secondary skills are enhanced with each enchant value.\nThe enchanting is random from +1 to +3.\nCannot be used with items enchanted for more than +8. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<armor id="48048" name="Agathion - Virgo" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Virgo Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Def. increased.\nStarting at +6, bonus to MEN attacks.\n -->
+	<armor id="48048" name="Agathion Virgo" type="NONE" body-part="NONE">
+	<!-- Increases M. Def. When enchanted to +6 and higher, increases Fear/ Silence Atk. Rate.\n\nEquipping it in the main slot summons Agathion Virgo.\n\nNote!\nIf Agathion Petram is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48049" name="Agathion - Capricorn" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Capricorn Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Critical Rate increased.\nStarting at +6, cooldown of M. Skills and songs/dances decreased.\n -->
+	<armor id="48049" name="Agathion Capricorn" type="NONE" body-part="NONE">
+	<!-- Increases M. Skill Critical Rate. When enchanted to +6 and higher, decreases M. Skill/ Song/ Dance Cooldown.\n\nEquipping it in the main slot summons Agathion Capricorn.\n\nNote!\nIf Agathion Nebula is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48050" name="Agathion - Libra" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Libra Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nCasting Spd. increased.\nStarting at +6, MP Consumption for magic and songs/dance skills decreased.\n -->
+	<armor id="48050" name="Agathion Libra" type="NONE" body-part="NONE">
+	<!-- Increases Casting Spd. When enchanted to +6 and higher, decreases M. Skill/ Song/ Dance MP Consumption.\n\nEquipping it in the main slot summons Agathion Libra.\n\nNote!\nIf Agathion Procella is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48052" name="Agathion - Taurus" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Taurus Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Def. increased.\nStarting at +6, bonus to stun attacks.\n -->
+	<armor id="48052" name="Agathion Taurus" type="NONE" body-part="NONE">
+	<!-- Increases P. Def. When enchanted to +6 and higher, increases Shock Atk. Rate.\n\nEquipping it in the main slot summons Agathion Taurus.\n\nNote!\nIf Agathion Petram is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48053" name="Agathion - Leo" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Leo Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Atk. increased.\nStarting at +6, bonus to Paralysis Attacks.\n -->
+	<armor id="48053" name="Agathion Leo" type="NONE" body-part="NONE">
+	<!-- Increases P. Atk. When enchanted to +6 and higher, increases Paralysis Atk. Rate.\n\nEquipping it in the main slot summons Agathion Leo.\n\nNote!\nIf Agathion Ignis is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48054" name="Agathion - Gemini" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Gemini Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nEffect of Sayha's Grace increased.\nStarting at +6, Max HP/MP increased.\n -->
+	<armor id="48054" name="Agathion Gemini" type="NONE" body-part="NONE">
+	<!-- Increases the acquired XP/ SP bonus from Sayha's Grace. When enchanted to +6 and higher, increases Max HP/ MP.\n\nEquipping it in the main slot summons Agathion Gemini.\n\nNote!\nIf Agathion Joy is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48055" name="Agathion - Scorpio" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Scorpio Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nP. Critical Rate increased.\nStarting at +6, cooldown of P. Skills and songs/dances decreased.\n -->
+	<armor id="48055" name="Agathion Scorpio" type="NONE" body-part="NONE">
+	<!-- Increases P. Critical Rate. When enchanted to +6 and higher, decreases P. Skill/ Song/ Dance Cooldown.\n\nEquipping it in the main slot summons Agathion Scorpio.\n\nNote!\nIf Agathion Nebula is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48056" name="Agathion - Aquarius" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Aquarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nM. Atk. increased.\nStarting at +6, bonus to Hold/Sleep.\n -->
+	<armor id="48056" name="Agathion Aquarius" type="NONE" body-part="NONE">
+	<!-- Increases M. Atk. When enchanted to +6 and higher, increases Hold/ Sleep Atk. Rate.\n\nEquipping it in the main slot summons Agathion Aquarius.\n\nNote!\nIf Agathion Ignis is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="48058" name="Agathion - Sagittarius" type="NONE" body-part="AGATHION">
-	<!-- An item which can be used to obtain the power of the Sagittarius Agathion.\n\nSummons Agathion from the main slot.\nActivates Unique Ability.\n\n<Unique Ability>\nAtk. Spd. increased.\nStarting at +6, MP Consumption for P. Skills and songs/dances decreased.\n -->
+	<armor id="48058" name="Agathion Sagittarius" type="NONE" body-part="NONE">
+	<!-- Increases Atk. Spd. When enchanted to +6 and higher, decreases P. Skill/ Song/ Dance MP Consumption.\n\nEquipping it in the main slot summons Agathion Sagittarius.\n\nNote!\nIf Agathion Procella is equipped, only it will be active. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="48066" name="Zodiac Agathion Box" type="NONE">
-	<!-- Double-click to get a random Zodiac Agathion.\n -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 

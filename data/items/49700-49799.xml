@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="49700" name="Enchant Scroll Pack: Emperor Baium" type="NONE">
-	<!-- Double-click to get one of the following items: Protection Scroll: Enchant Weapon/ Improved Scroll: Enchant Weapon (D-, C-, or B-grade). -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49700" name="Scroll Pack: Emperor Baium's Enchant" type="NONE">
+	<!-- Double-click to obtain one of the following items: Improved/ Protecting Scroll: Enchant D/ C/ B-grade Weapon. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="49701" name="Steel Bracelet Fragment" type="NONE">
-	<!-- Used to create Steel Bracelet. Give this item to Baggins along with Bronze Bracelet, and you will receive Steel Bracelet. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Required to create Steel Bracelet. Take it to Baggins along with Bronze Bracelet. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49702" name="Bracelet of Fate Fragment" type="NONE">
-	<!-- Used to create Bracelet of Fate. Give this item to Baggins along with Steel Bracelet, and you will receive Bracelet of Fate.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="49702" name="Bracelet of Border Fragment" type="NONE">
+	<!-- Required to create Bracelet of Border. Take the item to Baggins along with Steel Bracelet. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="49703" name="Talisman Bracelet Lv. 4" type="NONE" body-part="RIGHT_BRACELET">
-	<!-- When equipped, opens up 4 Talisman slots.\n\n<Special Effects>\nHP/MP Recovery Bonus +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. Two Talisman Bracelets of the same level can be combined. -->
+	<armor id="49703" name="Talisman Bracelet Lv. 4" type="NONE" body-part="LEFT_BRACELET">
+	<!-- Unlocks 4 talisman slots.\n\n<Special effects>\nHP/ MP Recovery Rate +7%, P. Accuracy +1, M. Accuracy +1, weight limit +7000. Can be compounded with another Talisman Bracelet of the same level. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -28,29 +28,29 @@
 		</skills>
 	</armor>
 
-	<item id="49704" name="Talisman of Fate’s Fragment" type="NONE">
-	<!-- Used to create Talisman of Fate. Give this item to Baggins along with a low-grade Talisman of Fate, and you will receive a high-grade Talisman of Fate.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="49704" name="Talisman of Border Fragment" type="NONE">
+	<!-- Required to create and upgrade Talisman of Border and Doll of Border. Take it to Alchemist Veruti in Giran. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49705" name="Forbidden Limit Chest" type="NONE">
-	<!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Fate’s Fragment and, at a low probability, Talisman of Darkness Box.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49706" name="Talisman of Darkness Box" type="NONE">
-	<!-- Double-click to receive Talisman of Darkness for one hour.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="49706" name="Talisman of Darkness Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="39147" value="-1"/>  <!-- Talisman of Darkness Box -->
 		</skill-reducer>
 	</item>
 
-	<armor id="49707" name="Talisman of Darkness - P. Atk." type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. P. Atk. +5%. Effects from two such Talismans do not stack.  -->
+	<armor id="49707" name="Talisman of Darkness - P. Atk." type="NONE" body-part="BELT">
+	<!-- Available for 1 h. P. Atk. +5%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
@@ -59,8 +59,8 @@
 		</skills>
 	</armor>
 
-	<armor id="49708" name="Talisman of Darkness - M. Atk." type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. M. Atk. +5%. Effects from two such Talismans do not stack.  -->
+	<armor id="49708" name="Talisman of Darkness - M. Atk." type="NONE" body-part="BELT">
+	<!-- Available for 1 h. M. Atk. +5%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
@@ -69,8 +69,8 @@
 		</skills>
 	</armor>
 
-	<armor id="49709" name="Talisman of Darkness - P. Def." type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. P. Def. +6%. Effects from two such Talismans do not stack.  -->
+	<armor id="49709" name="Talisman of Darkness - P. Def." type="NONE" body-part="BELT">
+	<!-- Available for 1 h. P. Def. +6%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
@@ -79,8 +79,8 @@
 		</skills>
 	</armor>
 
-	<armor id="49710" name="Talisman of Darkness - M. Def." type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. M. Def. +6%. Effects from two such Talismans do not stack.  -->
+	<armor id="49710" name="Talisman of Darkness - M. Def." type="NONE" body-part="BELT">
+	<!-- Available for 1 h. M. Def. +6%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
@@ -89,756 +89,766 @@
 		</skills>
 	</armor>
 
-	<armor id="49711" name="Talisman of Darkness - P. Skills Evasion" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. P. Skills Evasion +18%. Effects from two such Talismans do not stack.  -->
+	<armor id="49711" name="Talisman of Darkness - P. Skill Evasion" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. P. Skill Evasion +18%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3274" level="3" value="-1"/>  <!-- Blue Talisman - Physical Skill Evasion Rate -->
+			<skill id="3274" level="3" value="-1"/>  <!-- Blue Talisman - P. Skill Evasion -->
 		</skills>
 	</armor>
 
-	<armor id="49712" name="Talisman of Darkness - M. Skills Evasion" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. M. Skills Evasion +18%. Effects from two such Talismans do not stack.  -->
+	<armor id="49712" name="Talisman of Darkness - M. Skill Evasion" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. M. Skill Evasion +18%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3278" level="3" value="-1"/>  <!-- Blue Talisman - Magic Skill Evasion Rate -->
+			<skill id="3278" level="3" value="-1"/>  <!-- Blue Talisman - M. Skill Evasion -->
 		</skills>
 	</armor>
 
-	<armor id="49713" name="Talisman of Darkness - HP" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. Max. HP +7%. Effects from two such Talismans do not stack.  -->
+	<armor id="49713" name="Talisman of Darkness - Max HP" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. Max HP +7%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3279" level="3" value="-1"/>  <!-- Blue Talisman - Max. HP -->
+			<skill id="3279" level="3" value="-1"/>  <!-- Blue Talisman - Max HP -->
 		</skills>
 	</armor>
 
-	<armor id="49714" name="Talisman of Darkness - MP" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. Max. MP +7%. Effects from two such Talismans do not stack.  -->
+	<armor id="49714" name="Talisman of Darkness - Max MP" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. Max MP +7%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3280" level="3" value="-1"/>  <!-- Blue Talisman - Max. MP -->
+			<skill id="3280" level="3" value="-1"/>  <!-- Blue Talisman - Max MP -->
 		</skills>
 	</armor>
 
-	<armor id="49715" name="Talisman of Darkness - Healing Power" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. Healing Effects +4%. Effects from two such Talismans do not stack.  -->
+	<armor id="49715" name="Talisman of Darkness - Received Healing" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. Received Healing +4%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3293" value="-1"/>  <!-- Talisman of Darkness - Healing Power -->
+			<skill id="3293" value="-1"/>  <!-- Talisman of Darkness - Received Healing -->
 		</skills>
 	</armor>
 
-	<armor id="49716" name="Talisman of Darkness - Power of Healing Magic" type="NONE" body-part="TALISMAN">
-	<!-- A 1-hour item. Power of Healing Magic +43. Effects from two such Talismans do not stack.  -->
+	<armor id="49716" name="Talisman of Darkness - Healing Power" type="NONE" body-part="BELT">
+	<!-- Available for 1 h. Healing Power +43. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="120" duration="60" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="3294" value="-1"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
+			<skill id="3294" value="-1"/>  <!-- Talisman of Darkness - Healing Power -->
 		</skills>
 	</armor>
 
 	<item id="49717" name="Talisman of Darkness Box - P. Atk." type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - P. Atk. (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Talisman of Darkness - P. Atk. for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49707" chance="100"/>  <!-- Talisman of Darkness - P. Atk. -->
+			<item id="49707"/>  <!-- Talisman of Darkness - P. Atk. -->
 		</extract>
 	</item>
 
 	<item id="49718" name="Talisman of Darkness Box - M. Atk." type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - M. Atk. (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Talisman of Darkness - M. Atk. for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49708" chance="100"/>  <!-- Talisman of Darkness - M. Atk. -->
+			<item id="49708"/>  <!-- Talisman of Darkness - M. Atk. -->
 		</extract>
 	</item>
 
 	<item id="49719" name="Talisman of Darkness Box - P. Def." type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - P. Def. (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Talisman of Darkness - P. Def. for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49709" chance="100"/>  <!-- Talisman of Darkness - P. Def. -->
+			<item id="49709"/>  <!-- Talisman of Darkness - P. Def. -->
 		</extract>
 	</item>
 
 	<item id="49720" name="Talisman of Darkness Box - M. Def." type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - M. Def. (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Talisman of Darkness - M. Def. for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49710" chance="100"/>  <!-- Talisman of Darkness - M. Def. -->
+			<item id="49710"/>  <!-- Talisman of Darkness - M. Def. -->
 		</extract>
 	</item>
 
-	<item id="49721" name="Talisman of Darkness Box - P. Skills Evasion" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - P. Skills Evasion (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="49721" name="Talisman of Darkness Pack - P. Skill Evasion" type="NONE">
+	<!-- Double-click to obtain Talisman of Darkness - P. Skill Evasion for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49711" chance="100"/>  <!-- Talisman of Darkness - P. Skills Evasion -->
+			<item id="49711"/>  <!-- Talisman of Darkness - P. Skill Evasion -->
 		</extract>
 	</item>
 
-	<item id="49722" name="Talisman of Darkness Box - M. Skills Evasion" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - M. Skills Evasion (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="49722" name="Talisman of Darkness Pack - M. Skill Evasion" type="NONE">
+	<!-- Double-click to obtain Talisman of Darkness - M. Skill Evasion for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49712" chance="100"/>  <!-- Talisman of Darkness - M. Skills Evasion -->
+			<item id="49712"/>  <!-- Talisman of Darkness - M. Skill Evasion -->
 		</extract>
 	</item>
 
 	<item id="49723" name="Talisman of Darkness Box - HP" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - HP (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Talisman of Darkness - Max HP for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49713" chance="100"/>  <!-- Talisman of Darkness - HP -->
+			<item id="49713"/>  <!-- Talisman of Darkness - Max HP -->
 		</extract>
 	</item>
 
 	<item id="49724" name="Talisman of Darkness Box - MP" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - MP (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49714" chance="100"/>  <!-- Talisman of Darkness - MP -->
-		</extract>
-	</item>
-
-	<item id="49725" name="Talisman of Darkness Box - Healing Power" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - Healing Power (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49715" chance="100"/>  <!-- Talisman of Darkness - Healing Power -->
-		</extract>
-	</item>
-
-	<item id="49726" name="Talisman of Darkness Box - Power of Healing Magic" type="NONE">
-	<!-- By double-clicking it, you will get Talisman of Darkness - Power of Healing Magic (for 1 hour). \n\n<Note>\nFor items obtained from a box, there are restrictions regarding movement. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49716" chance="100"/>  <!-- Talisman of Darkness - Power of Healing Magic -->
-		</extract>
-	</item>
-
-	<armor id="49727" name="Limited Talisman of Fate - Lv. 1" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +12\nM. Def. +12\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" value="-1"/>  <!-- Talisman of Fate -->
-		</skills>
-	</armor>
-
-	<armor id="49728" name="Talisman of Fate - Lv. 2" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +14\nM. Def. +14\nP. Evasion +1\nM. Evasion +1\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="2" value="-1"/>  <!-- Talisman of Fate -->
-		</skills>
-	</armor>
-
-	<armor id="49729" name="Talisman of Fate - Lv. 3" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +17\nM. Def. +17\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nXP/SP Gain +3%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="3" value="-1"/>  <!-- Talisman of Fate -->
-		</skills>
-	</armor>
-
-	<armor id="49730" name="Talisman of Fate - Lv. 4" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +19\nM. Def. +19\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nAtk. Spd. +7\nCasting Spd. +7\nXP/SP Gain +3%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="4" value="-1"/>  <!-- Talisman of Fate -->
-		</skills>
-	</armor>
-
-	<armor id="49731" name="Talisman of Fate - Lv. 5" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +22\nM. Def. +22\nP. Evasion +1\nM. Evasion +1\nMax HP +120\nMax MP +120\nMax CP +120\nSpeed +5\nAtk. Spd. +10\nCasting Spd. +10\nXP/SP Gain +4%\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="5" value="-1"/>  <!-- Talisman of Fate -->
-		</skills>
-	</armor>
-
-	<armor id="49732" name="Talisman of Fate - Lv. 6" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +24\nM. Def. +24\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +5\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +4%\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="6" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<armor id="49733" name="Talisman of Fate - Lv. 7" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +29\nM. Def. +29\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 1>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="7" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<armor id="49734" name="Talisman of Fate - Lv. 8" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +34\nM. Def. +34\nP. Evasion +2\nM. Evasion +2\nMax HP +200\nMax MP +200\nMax CP +200\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 2>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="8" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<armor id="49735" name="Talisman of Fate - Lv. 9" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +38\nM. Def. +38\nP. Evasion +2\nM. Evasion +2\nMax HP +240\nMax MP +240\nMax CP +240\nSpeed +8\nAtk. Spd. +15\nCasting Spd. +15\nDamage Reflect +4%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 2>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="9" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<armor id="49736" name="Talisman of Fate - Lv. 10" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +43\nM. Def. +43\nP. Evasion +2\nM. Evasion +2\nMax HP +280\nMax MP +280\nMax CP +280\nSpeed +8\nAtk. Spd. +20\nCasting Spd. +20\nDamage Reflect +6%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 3>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="10" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="35025" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<armor id="49737" name="Blessed Talisman of Fate" type="NONE" body-part="TALISMAN">
-	<!-- <Options>\nP. Def. +48\nM. Def. +48\nP. Evasion +2\nM. Evasion +2\nMax HP +320\nMax MP +320\nMax CP +320\nSpeed +8\nAtk. Spd. +30\nCasting Spd. +30\nDamage Reflect +8%\nXP/SP Gain +5%\n\n<Active: Dimensional Power of Border Lv. 4>\nAttack ability increases at a certain rate when attacking.\n\n<Border Purification>\nCancels Paralysis, Petrification, Poison, Bleed status when used.\n\n<Border Blessing>\nRecovers 50% of Max HP/MP.\n\nBlacksmith Veruti in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
-		<crystal />
-		<skills>
-			<skill id="35024" level="11" value="-1"/>  <!-- Talisman of Fate -->
-			<skill id="55379" value="-1"/>  <!-- Fate Purification -->
-		</skills>
-	</armor>
-
-	<item id="49738" name="Sealed Blessed Talisman of Fate" type="NONE">
-	<!-- Double-click to get Blessed Talisman of Fate.  -->
+	<!-- Double-click to obtain Talisman of Darkness - Max MP for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
 		<restriction dropable="false" sellable="false"/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49714"/>  <!-- Talisman of Darkness - Max MP -->
+		</extract>
+	</item>
+
+	<item id="49725" name="Talisman of Darkness Box - Received Healing" type="NONE">
+	<!-- Double-click to obtain Talisman of Darkness - Received Healing for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49715"/>  <!-- Talisman of Darkness - Received Healing -->
+		</extract>
+	</item>
+
+	<item id="49726" name="Talisman of Darkness Box - Healing Power" type="NONE">
+	<!-- Double-click to obtain Talisman of Darkness - Healing Power for 1 h.\n\nNote!\nThe obtained item cannot be exchanged, dropped, or sold. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49716"/>  <!-- Talisman of Darkness - Healing Power -->
+		</extract>
+	</item>
+
+	<armor id="49727" name="Talisman of Border Lv. 1" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +12\nM. Def. +12\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" value="-1"/>  <!-- Talisman of Border -->
+		</skills>
+	</armor>
+
+	<armor id="49728" name="Talisman of Border Lv. 2" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +14\nM. Def. +14\nP. Evasion +1\nM. Evasion +1\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="2" value="-1"/>  <!-- Talisman of Border -->
+		</skills>
+	</armor>
+
+	<armor id="49729" name="Talisman of Border Lv. 3" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +17\nM. Def. +17\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nAcquired XP/ SP +3%\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="3" value="-1"/>  <!-- Talisman of Border -->
+		</skills>
+	</armor>
+
+	<armor id="49730" name="Talisman of Border Lv. 4" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +19\nM. Def. +19\nP. Evasion +1\nM. Evasion +1\nMax HP +80\nMax MP +80\nMax CP +80\nSpeed +3\nAtk. Spd. +7\nCasting Spd. +7\nAcquired XP/ SP +3%\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="4" value="-1"/>  <!-- Talisman of Border -->
+		</skills>
+	</armor>
+
+	<armor id="49731" name="Talisman of Border Lv. 5" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +22\nM. Def. +22\nP. Evasion +1\nM. Evasion +1\nMax HP +120\nMax MP +120\nMax CP +120\nSpeed +5\nAtk. Spd. +10\nCasting Spd. +10\nAcquired XP/ SP +4%\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="5" value="-1"/>  <!-- Talisman of Border -->
+		</skills>
+	</armor>
+
+	<armor id="49732" name="Talisman of Border Lv. 6" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +24\nM. Def. +24\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +5\nAtk. Spd. +15\nCasting Spd. +15\nAcquired XP/ SP +4%\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="6" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="35025" value="-1"/>  <!-- Border Purification -->
+		</skills>
+	</armor>
+
+	<armor id="49733" name="Talisman of Border Lv. 7" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +29\nM. Def. +29\nP. Evasion +2\nM. Evasion +2\nMax HP +160\nMax MP +160\nMax CP +160\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nAcquired XP/ SP +5%\n\n<When triggered: Dimensional Border Power Lv. 1>\nWith a certain chance, increases attack power.\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="7" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="35025" value="-1"/>  <!-- Border Purification -->
+		</skills>
+	</armor>
+
+	<armor id="49734" name="Talisman of Border Lv. 8" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +34\nM. Def. +34\nP. Evasion +2\nM. Evasion +2\nMax HP +200\nMax MP +200\nMax CP +200\nSpeed +7\nAtk. Spd. +15\nCasting Spd. +15\nAcquired XP/ SP +5%\n\n<When triggered: Dimensional Border Power Lv. 2>\nWith a certain chance, increases attack power.\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="8" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="35025" value="-1"/>  <!-- Border Purification -->
+		</skills>
+	</armor>
+
+	<armor id="49735" name="Talisman of Border Lv. 9" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +38\nM. Def. +38\nP. Evasion +2\nM. Evasion +2\nMax HP +240\nMax MP +240\nMax CP +240\nSpeed +8\nAtk. Spd. +15\nCasting Spd. +15\nDamage Reflection +4%\nAcquired XP/ SP +5%\n\n<When triggered: Dimensional Border Power Lv. 2>\nWith a certain chance, increases attack power.\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="9" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="35025" value="-1"/>  <!-- Border Purification -->
+		</skills>
+	</armor>
+
+	<armor id="49736" name="Talisman of Border Lv. 10" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +43\nM. Def. +43\nP. Evasion +2\nM. Evasion +2\nMax HP +280\nMax MP +280\nMax CP +280\nSpeed +8\nAtk. Spd. +20\nCasting Spd. +20\nDamage Reflection +6%\nAcquired XP/ SP +5%\n\n<When triggered: Dimensional Border Power Lv. 3>\nWith a certain chance, increases attack power.\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="10" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="35025" value="-1"/>  <!-- Border Purification -->
+		</skills>
+	</armor>
+
+	<armor id="49737" name="Blessed Talisman of Border" type="NONE" body-part="BELT">
+	<!-- <Properties>\nP. Def. +48\nM. Def. +48\nP. Evasion +2\nM. Evasion +2\nMax HP +320\nMax MP +320\nMax CP +320\nSpeed +8\nAtk. Spd. +30\nCasting Spd. +30\nDamage Reflection +8%\nAcquired XP/ SP +5%\n\n<When triggered: Dimensional Border Power Lv. 4>\nWith a certain chance, increases attack power.\n\n<Border Purification>\nWhen used, removes Paralysis/ Petrification/ Poison/ Bleed debuffs.\n\n<Border Blessing>\nWhen used, recovers 50% HP/ MP.\n\nCan be upgraded by Alchemist Veruti in Giran. Effects of two identical talismans do not stack. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes enchant-enabled="false" />
+		<crystal />
+		<skills>
+			<skill id="35024" level="11" value="-1"/>  <!-- Talisman of Border -->
+			<skill id="55379" value="-1"/>  <!-- TODO Skill not found -->
+		</skills>
+	</armor>
+
+	<item id="49738" name="Sealed Blessed Talisman of Border" type="NONE">
+	<!-- Double-click to obtain Blessed Talisman of Border. -->
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39148" value="-1"/>  <!-- Sealed Blessed Talisman of Fate -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39148" value="-1"/>  <!-- Sealed Blessed Talisman of Border -->
 		</skill-reducer>
 	</item>
 
-	<item id="49739" name="Blessed Soulshot (No-grade)" type="NONE">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a No-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49739" name="Blessed No-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction/>
 		<attributes weight="3" price="15" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<random_craft exp="7" commission="1"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8915" value="-1"/>  <!-- Blessed Soulshot (No-grade) -->
+			<skill id="8915" value="-1"/>  <!-- Blessed No-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49740" name="Blessed Soulshot (D-grade)" type="NONE">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a D-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49740" name="Blessed D-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction/>
 		<attributes weight="2" price="25" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<random_craft exp="12" commission="1"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8916" value="-1"/>  <!-- Blessed Soulshot (D-grade) -->
+			<skill id="8916" value="-1"/>  <!-- Blessed D-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49741" name="Blessed Soulshot (C-grade)" type="NONE">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a C-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49741" name="Blessed C-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction/>
 		<attributes weight="2" price="39" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<random_craft exp="19" commission="1"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8917" value="-1"/>  <!-- Blessed Soulshot (C-grade) -->
+			<skill id="8917" value="-1"/>  <!-- Blessed C-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49742" name="Blessed Soulshot (B-grade)" type="NONE">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with a B-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49742" name="Blessed B-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction/>
 		<attributes weight="1" price="135" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<random_craft exp="67" commission="2"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8918" value="-1"/>  <!-- Blessed Soulshot (B-grade) -->
+			<skill id="8918" value="-1"/>  <!-- Blessed B-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49743" name="Blessed Soulshot (A-grade)" type="NONE">
-	<!-- The power of a spirit is bestowed upon a weapon, increasing its power of attack significantly. Deals 15% more damage than regular Soulshots. Used with an A-grade weapon. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49743" name="Blessed A-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction/>
 		<attributes weight="1" price="224" commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
+		<random_craft exp="112" commission="3"/>
 		<skill-reducer type="SoulShots">
-			<skill id="8919" value="-1"/>  <!-- Blessed Soulshot (A-grade) -->
+			<skill id="8919" value="-1"/>  <!-- Blessed A-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49744" name="Mysterious Blessed Soulshot (No-grade)" type="NONE">
-	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For No-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49744" name="Mysterious Blessed No-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with No-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8910" value="-1"/>  <!-- Mysterious Blessed Soulshot (No-grade) -->
+			<skill id="8910" value="-1"/>  <!-- Mysterious Blessed No-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49745" name="Mysterious Blessed Soulshot (D-grade)" type="NONE">
-	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49745" name="Mysterious Blessed D-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with D-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8911" value="-1"/>  <!-- Mysterious Blessed Soulshot (D-grade) -->
+			<skill id="8911" value="-1"/>  <!-- Mysterious Blessed D-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49746" name="Mysterious Blessed Soulshot (C-grade)" type="NONE">
-	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49746" name="Mysterious Blessed C-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with C-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8912" value="-1"/>  <!-- Mysterious Blessed Soulshot (C-grade) -->
+			<skill id="8912" value="-1"/>  <!-- Mysterious Blessed C-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49747" name="Mysterious Blessed Soulshot (B-grade)" type="NONE">
-	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49747" name="Mysterious Blessed B-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8913" value="-1"/>  <!-- Mysterious Blessed Soulshot (B-grade) -->
+			<skill id="8913" value="-1"/>  <!-- Mysterious Blessed B-grade Soulshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49748" name="Mysterious Blessed Soulshot (A-grade)" type="NONE">
-	<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. Exchange for a new Soulshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49748" name="Mysterious Blessed A-grade Soulshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases a weapon's physical power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Soulshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes commission-type="SOULSHOT" immediate-effect="true" action="SOULSHOT"/>
 		<skill-reducer type="BlessedSoulShots">
-			<skill id="8907" value="-1"/>  <!-- Mysterious Blessed Spiritshot (A-grade) -->
+			<skill id="8907" value="-1"/>  <!-- Mysterious Blessed A-grade Spiritshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49749" name="Mysterious Spiritshot (B-grade)" type="NONE">
-	<!-- The power of a Mysterious Spiritshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49749" name="Mysterious B-grade Spiritshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases weapons' magic power. Used with B-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="8908" value="-1"/>  <!-- Mysterious Spiritshot (B-grade) -->
+			<skill id="8908" value="-1"/>  <!-- Mysterious B-grade Spiritshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49750" name="Mysterious Spiritshot (A-grade)" type="NONE">
-	<!-- The power of a Mysterious Spiritshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. Exchange for a new Spiritshot through the Dimensional Merchant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49750" name="Mysterious A-grade Spiritshot - Not Available" type="NONE">
+	<!-- The item is not available. Increases weapons' magic power. Used with A-grade weapons. Take it to the Game Assistant to exchange for a new Spiritshot. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="SPIRITSHOT"/>
 		<skill-reducer type="SpiritShot">
-			<skill id="8909" value="-1"/>  <!-- Mysterious Spiritshot (A-grade) -->
+			<skill id="8909" value="-1"/>  <!-- Mysterious A-grade Spiritshot -->
 		</skill-reducer>
 	</item>
 
-	<item id="49751" name="Recipe: Blessed Soulshot (D)" type="MATERIAL">
-	<!-- For Dwarves only. Recipe for creating a Blessed Soulshot (D). Requires Create Item - Skill Lv. 2. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49751" name="Recipe: Blessed D-grade Soulshot - Not Available" type="MATERIAL">
+	<!-- The item is not available. For Dwarves only. Recipe for Blessed D-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
+		<restriction/>
 		<attributes weight="30" price="5000" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="2500" commission="50"/>
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="49752" name="Recipe: Blessed Soulshot (C)" type="MATERIAL">
-	<!-- For Dwarves only. Recipe for creating a Blessed Soulshot (C). Requires Create Item - Skill Lv. 4. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49752" name="Recipe: Blessed C-grade Soulshot - Not Available" type="MATERIAL">
+	<!-- The item is not available. For Dwarves only. Recipe for Blessed C-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
+		<restriction/>
 		<attributes weight="30" price="60000" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="30000" commission="600"/>
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="49753" name="Recipe: Blessed Soulshot (B)" type="MATERIAL">
-	<!-- For Dwarves only. Recipe for creating a Blessed Soulshot (B). Requires Create Item - Skill Lv. 6. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49753" name="Recipe: Blessed B-grade Soulshot - Not Available" type="MATERIAL">
+	<!-- The item is not available. For Dwarves only. Recipe for Blessed B-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
+		<restriction/>
 		<attributes weight="30" price="100000" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="50000" commission="1000"/>
 		<action handler="Recipes"/>
 	</item>
 
-	<item id="49754" name="Recipe: Blessed Soulshot (A)" type="MATERIAL">
-	<!-- For Dwarves only. Recipe for creating a Blessed Soulshot (A). Requires Create Item - Skill Lv. 7. The success rate is 100%. Exchange for Adena through the Dimensional Merchant. -->
-		<restriction stackable="true"/>
+	<item id="49754" name="Recipe: Blessed A-grade Soulshot - Not Available" type="MATERIAL">
+	<!-- The item is not available. For Dwarves only. Recipe for Blessed A-grade Soulshots. Not used. Take it to Cat Guild's trader to get some adena. -->
+		<restriction/>
 		<attributes weight="30" price="150000" immediate-effect="true" action="RECIPE"/>
+		<random_craft exp="75000" commission="1500"/>
 		<action handler="Recipes"/>
 	</item>
 
 	<item id="49755" name="Talisman of Baium Box" type="NONE">
-	<!-- Double-click to receive one of the following items: Talisman of Baium, Baium’s Soul, Secret Book of Baggins’ Enchantments - IV, Secret Book of Baggins’ Enchantments - V, Energy of Insolence, Talisman Crystal, or Elemental Stone. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="39149" value="-1"/>  <!-- Talisman of Baium Box -->
 		</skill-reducer>
 	</item>
 
 	<item id="49756" name="Cloth Piece" type="NONE">
-	<!-- An intricately embroidered fragment. Required to remove the seal from A-grade and S-grade Armor. -->
-		<restriction stackable="true"/>
+	<!-- Required to remove the seal from A-grade Armor. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
-	<item id="49757" name="Enhanced Sayha's Holy Water" type="POTION">
-	<!-- Sayha's Grace Points +80,000. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39150" value="-1"/>  <!-- Enhanced Sayha's Holy Water -->
+	<item id="49757" name="Sayha's Holy Water" type="POTION">
+	<!-- Sayha's Grace points +20,000, Magic Lamp points +50,000, craft points +3250. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="30" price="110000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<random_craft exp="55000" commission="1100"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39150" value="-1"/>  <!-- Sayha's Holy Water -->
 		</skill-reducer>
 	</item>
 
 	<item id="49758" name="Blood Crystal" type="NONE">
 	<!-- Consumed when using Clan skills. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="49759" name="Celestial Shard" type="NONE">
-	<!-- The item required to enter Heavenly Rift.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Required to enter the Heavenly Rift. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49760" name="A-grade Armor Supply Box" type="NONE">
-	<!-- Double-click to receive an A-grade Armor. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49760" name="A-grade Armor Pack" type="NONE">
+	<!-- Double-click to obtain an A-grade armor. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39151" value="-1"/>  <!-- A-grade Armor Supply Box -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39151" value="-1"/>  <!-- A-grade Armor Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49761" name="Ornament Supply Box (A-grade)" type="NONE">
-	<!-- Double-click to receive an A-grade Ornament. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49761" name="A-grade Accessory Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39152" value="-1"/>  <!-- Ornament Supply Box (A-grade) -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39152" value="-1"/>  <!-- A-grade Accessory Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49762" name="Armor Ingredient Box - A-grade" type="NONE">
-	<!-- Double-click to receive one of A-grade Armor Ingredients. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49762" name="A-grade Armor Ingredient Pack" type="NONE">
+	<!-- Double-click to obtain one of A-grade Armor Ingredients. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="39153" value="-1"/>  <!-- Armor Ingredient Box - A-grade -->
 		</skill-reducer>
 	</item>
 
-	<item id="49763" name="Ornament Ingredient Box - A-grade" type="NONE">
-	<!-- Double-click to receive one of A-grade Ornament Ingredients. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49763" name="A-grade Ornament Ingredient Pack" type="NONE">
+	<!-- Double-click to obtain one of A-grade Ornament Ingredients. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="39154" value="-1"/>  <!-- Ornament Ingredient Box - A-grade -->
 		</skill-reducer>
 	</item>
 
 	<item id="49764" name="Scroll: 20,000 SP" type="SCROLL">
 	<!-- SP +20000. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<skill-reducer type="ItemSkills">
 			<skill id="40143" level="3" value="-1"/>  <!-- SP Scroll -->
 		</skill-reducer>
 	</item>
 
-	<item id="49765" name="Life Control Tower's Scroll of Blessing - Exchangeable" type="SCROLL">
-	<!-- When used, Max HP/MP +5%, Hunting XP/SP gain +30%, and MEN Attack/Paralysis Resistance for 60 minutes. Cooldown is 1 minute. \n<Note> The effect does not stack with Angel Cat's Blessing. -->
-		<restriction stackable="true" sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<item id="49765" name="Life Control Tower's Scroll of Blessing (Exchangeable)" type="SCROLL">
+	<!-- Applies a buff when used.\n\n<Buff effect>\nMax HP +5%\nMax SP +5%\nAcquired XP +30%\nAcquired SP +30%\nSilence Resistance +15%\nFear Resistance +15%\nParalysis Resistance +15%\n\nDuration: 60 min.\nCooldown: 1 min. -->
+		<restriction sellable="false"/>
+		<attributes weight="30" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="39155" value="-1"/>  <!-- Life Control Tower's Scroll of Blessing -->
 		</skill-reducer>
 	</item>
 
-	<item id="49766" name="Unidentified Stone" type="NONE">
-	<!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
-		<restriction stackable="true"/>
+	<item id="49766" name="Unidentified Rock" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="49759" min-count="1" max-count="1" chance="45"/>  
-			<item id="49767" min-count="1" max-count="1" chance="55"/>  
+			<item id="49759" chance="45"/>  <!-- Celestial Shard -->
+			<item id="49767" chance="55"/>  <!-- Broken Celestial Shard -->
 		</extract>
 	</item>
 
 	<item id="49767" name="Broken Celestial Shard" type="NONE">
 	<!-- Broken Celestial Shard. Take it to the Dimensional Vortex at the 1st floor of the Tower of Insolence. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49768" name="Scroll of Heavenly Protection" type="SCROLL">
-	<!-- Activates Resistance to Paralysis/MEN Attacks for 20 minutes. -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Increases Fear/ Paralysis/ Silence Resistance for 20 min. -->
+		<restriction sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49769" name="Improved Scroll Box: Emperor Baium's Enchant" type="NONE">
-	<!-- Double-click to get one of the following scrolls: Solid Scroll: Enchant Weapon (C)/(B), Improved Scroll: Enchant Weapon (C)/(B), or Normal Scroll: Enchant Weapon (C)/(B). Cannot be sold in the grocery store. -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Double-click to obtain Stable Scroll: Enchant C/ B-grade Weapon, Improved Scroll: Enchant B/ C-grade Weapon, or Scroll: Enchant B/ C-grade Weapon. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="49770" name="Enhanced Sayha's Energy" type="POTION">
-	<!-- Sayha's Grace Points +140,000. -->
-		<restriction stackable="true" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39159" value="-1"/>  <!-- Enhanced Sayha's Energy -->
+	<item id="49770" name="Sayha's Energy" type="POTION">
+	<!-- Sayha's Grace points +35,000, Magic Lamp points +50,000, craft points +3250. -->
+		<restriction sellable="false"/>
+		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39159" value="-1"/>  <!-- Sayha’s Energy -->
 		</skill-reducer>
 	</item>
 
 	<item id="49771" name="Emperor Baium's Secret Treasures" type="NONE">
-	<!-- Double-click to receive 1 Emperor Baium's Enchant Scroll Pack. Also has a low chance of obtaining 5 Sayha’s Energies.  -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Double-click to obtain Scroll Box: Emperor Baium's Enchant. Also gives a small chance to get Sayha's Energy (5 pcs). -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49772" name="Scroll of Mood Melody" type="SCROLL">
-	<!-- Activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Duration: 20 minutes.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39164" value="-1"/>  <!-- Shining Moody’s Melody -->
+	<!-- For 20 min., grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage.\n\nNote!\nIf used simultaneously with Shining Scroll of Mood Melody, only the latter effect will be active. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="120" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39164" value="-1"/>  <!-- Mood Melody -->
 		</skill-reducer>
 	</item>
 
 	<item id="49773" name="Fighter Pirate Fruit - Attack" type="SCROLL">
-	<!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage dealt in PvP +5%. Duration is 20 minutes. Cooldown is 1 minute. The effect persists through death.  Can be stored in a warehouse. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39162" value="-1"/>  <!-- Fighter Pirate Fruit - Attack -->
+	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Atk. +7%\nM. Atk. +7%\nP. Def. +10%\nM. Def. +10%\nMax HP +15%\nMax MP +15%\nMax CP +15%\nHP Recovery Rate +20%\nMP Recovery Rate +20%\nPvP damage +5%\nA chance to absorb 3% of the inflicted damage as HP\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39162" value="-1"/>  <!-- Special Pirate Fruit - Attack -->
 		</skill-reducer>
 	</item>
 
 	<item id="49774" name="Fighter Pirate Fruit - Defense" type="SCROLL">
-	<!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage received in PvP -5%. Duration is +20 minutes. Cooldown is 1 minute. The effect persists through death.  Can be stored in a warehouse. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39163" value="-1"/>  <!-- Fighter Pirate Fruit - Defense -->
+	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Atk. +7%\nM. Atk. +7%\nP. Def. +10%\nM. Def. +10%\nMax HP +15%\nMax MP +15%\nMax CP +15%\nHP Recovery Rate +20%\nMP Recovery Rate +20%\nReceived PvP damage -5%\nA chance to absorb 3% of the inflicted damage as HP\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39163" value="-1"/>  <!-- Special Pirate Fruit - Defense -->
 		</skill-reducer>
 	</item>
 
 	<item id="49775" name="Red Spinel" type="NONE">
-	<!-- A reward item.\nYou can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Reward\nObtained from helping Grocer Pink. Can be exchanged for rare items. -->
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49776" name="Green Spinel" type="NONE">
-	<!-- A reward item.\nYou can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
-		<restriction stackable="true" sellable="false"/>
+	<!-- Reward\nObtained from helping Grocer Pink. Can be exchanged for rare items. -->
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49777" name="Low-grade XP Scroll" type="SCROLL">
-	<!-- XP +1,000.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39180" value="-1"/>  <!-- Low-grade Scroll: XP -->
-		</skill-reducer>
-	</item>
-
-	<item id="49778" name="Mid-grade XP Scroll" type="SCROLL">
-	<!-- XP +10,000.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39181" value="-1"/>  <!-- Mid-grade Scroll: XP -->
-		</skill-reducer>
-	</item>
-
-	<item id="49779" name="High-grade XP Scroll" type="SCROLL">
-	<!-- XP +100,000.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39182" value="-1"/>  <!-- High-grade Scroll: XP -->
-		</skill-reducer>
-	</item>
-
-	<item id="49780" name="Top-grade XP Scroll" type="SCROLL">
-	<!-- XP +500,000.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39183" value="-1"/>  <!-- Top-grade Scroll: XP -->
-		</skill-reducer>
-	</item>
-
-	<item id="49781" name="Super XP Scroll" type="SCROLL">
-	<!-- XP +1,000,000.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="39184" value="-1"/>  <!-- Highest-grade Scroll: XP -->
-		</skill-reducer>
-	</item>
-
-	<item id="49782" name="Oriana's Lucky Draw Supply Item" type="ELIXIR">
-	<!-- Double-click to receive 6 Oriana's Disguised Clothing. For characaters Lv. 60 or higher. (Can only be used once a day) -->
+	<item id="49777" name="XP Scroll: 1K" type="SCROLL">
+	<!-- Recovers 1000 XP. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="86400000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39170" value="-1"/>  <!-- Oriana's Lucky Draw Supply -->
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39180" value="-1"/>  <!-- XP Scroll: 1K -->
 		</skill-reducer>
 	</item>
 
-	<item id="49783" name="Oriana's Coin" type="NONE">
-	<!-- You can exchange this coin with Golden Girl Oriana for event items or materials. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="49778" name="XP Scroll: 10K" type="SCROLL">
+	<!-- Recovers 10,000 XP. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39181" value="-1"/>  <!-- XP Scroll: 10K -->
+		</skill-reducer>
+	</item>
+
+	<item id="49779" name="XP Scroll: 100K" type="SCROLL">
+	<!-- Recovers 100,000 XP. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39182" value="-1"/>  <!-- XP Scroll: 100K -->
+		</skill-reducer>
+	</item>
+
+	<item id="49780" name="XP Scroll: 500K" type="SCROLL">
+	<!-- Recovers 500,000 XP. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39183" value="-1"/>  <!-- XP Scroll: 500K -->
+		</skill-reducer>
+	</item>
+
+	<item id="49781" name="XP Scroll: 1M" type="SCROLL">
+	<!-- Recovers 1,000,000 XP. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39184" value="-1"/>  <!-- XP Scroll: 1M -->
+		</skill-reducer>
+	</item>
+
+	<item id="49782" name="Balthus Knights' Supply Box" type="ELIXIR">
+	<!-- Double-click to obtain 10 Balthus Knights' Marks. Required level: 76+.\n(Can be used only once a day.) -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="86400000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39170" value="-1"/>  <!-- Balthus Knights' Supply Box -->
+		</skill-reducer>
+	</item>
+
+	<item id="49783" name="Sibi’s Coin" type="NONE">
+	<!-- A coin used as a payment by the Balthus Knights. Take it to Balthus Knights' Supply Officer Sibi to obtain various items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49784" name="Oriana's Disguised Clothing" type="SCROLL">
-	<!-- Acquired XP/SP +10% for 1 hour. Intended for Lv. 40 and higher.   -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="60000" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="39171" value="-1"/>  <!-- Oriana's Disguise -->
+	<item id="49784" name="Balthus Knights' Mark" type="SCROLL">
+	<!-- Applies a buff when used.\n\n<Requirements>\nRequired level: 76+.\n\n<Buff effect>\nAcquired XP +30%\nAcquired SP +30%\nP. Atk. +100\nM. Atk. +100\nP. Def. +100\nM. Def. +100\nA chance to obtain Special Supplies\n\nDuration: 20 min. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="60000" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="39171" value="-1"/>  <!-- Balthus Knights' Mark -->
 		</skill-reducer>
 	</item>
 
-	<item id="49785" name="Weapon Supply Box (A-grade)" type="NONE">
-	<!-- Double-click to receive an A-grade Weapon. -->
-		<restriction stackable="true"/>
+	<item id="49785" name="A-grade Weapon Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39172" value="-1"/>  <!-- Weapon Supply Box (A-grade) -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39172" value="-1"/>  <!-- A-grade Weapon Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49786" name="A-grade Armor Supply Box" type="NONE">
-	<!-- Double-click to receive an A-grade Armor. -->
-		<restriction stackable="true"/>
+	<item id="49786" name="A-grade Armor Pack" type="NONE">
+	<!-- Double-click to obtain an A-grade armor. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39173" value="-1"/>  <!-- A-grade Armor Supply Box -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39173" value="-1"/>  <!-- A-grade Armor Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49787" name="Solid Scroll: Enchant (A-grade) Box" type="NONE">
-	<!-- Double-click to obtain Solid Scroll: Enchant Weapon (A-grade, 10 pcs.) and Solid Scroll: Enchant Armor (A-grade, 10 pcs.). -->
-		<restriction stackable="true"/>
+	<item id="49787" name="Stable Scroll: A-grade Enchant Box" type="NONE">
+	<!-- Double-click to obtain Stable Scroll: Enchant A-grade Weapon (10 pcs.) and Stable Scroll: Enchant A-grade Armor (10 pcs.). -->
+		<restriction/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49788" name="Solid Scroll: Enchant (A-grade) Large Box" type="NONE">
-	<!-- Double-click to obtain Improved Scroll: Enchant Weapon (A-grade, 10 pcs.) and Improved Scroll: Enchant Armor (A-grade, 10 pcs.). -->
-		<restriction stackable="true"/>
+	<item id="49788" name="Greater A-grade Enchant Scroll Pack" type="NONE">
+	<!-- Double-click to obtain Improved Scroll: Enchant A-grade Weapon (10 pcs.) and Improved Scroll: Enchant A-grade Armor (10 pcs.). -->
+		<restriction/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="49789" name="+8 Enchanted Weapon Supply Box (B-grade)" type="NONE">
-	<!-- Double-click to receive a +8 B-grade Weapon. -->
-		<restriction stackable="true"/>
+	<item id="49789" name="+8 B-grade Weapon Pack" type="NONE">
+	<!-- Double-click to obtain a B-grade weapon enchanted to +8. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39174" value="-1"/>  <!-- +8 Enchanted Weapon Supply Box (B-grade) -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39174" value="-1"/>  <!-- +8 B-grade Weapon Pack -->
 		</skill-reducer>
 	</item>
 
-	<item id="49790" name="+16 Enchanted Weapon Supply Box (C-grade)" type="NONE">
-	<!-- Double-click to receive a +16 C-grade Weapon. -->
-		<restriction stackable="true"/>
+	<item id="49790" name="+16 C-grade Weapon Pack" type="NONE">
+	<!-- Double-click to obtain a +16 C-grade Weapon. -->
+		<restriction/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer>
-			<skill id="39175" value="-1"/>  <!-- +16 Enchanted Weapon Supply Box (C-grade) -->
+		<skill-reducer type="ItemSkills">
+			<skill id="39175" value="-1"/>  <!-- +16 C-grade Weapon Pack -->
 		</skill-reducer>
 	</item>
 
-	<armor id="49791" name="Cadmus Transformation Bracelet - Prophet" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 1-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal.  -->
+	<armor id="49791" name="Spirit Transformation Bracelet - Prophet" type="NONE" body-part="TALISMAN">
+	<!-- Available for 1 day. Transforms to Prophet Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="1440" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 1-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal.  -->
+	<armor id="49792" name="Spirit Transformation Bracelet - Shillien Elder" type="NONE" body-part="TALISMAN">
+	<!-- Available for 1 day. Transforms to Shillien Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="1440" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="49793" name="Cadmus Transformation Bracelet - Elven Elder" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 1-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal.  -->
+	<armor id="49793" name="Spirit Transformation Bracelet - Elven Elder" type="NONE" body-part="TALISMAN">
+	<!-- Available for 1 day. Required to transform to Elven Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="1440" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="49794" name="Cadmus Transformation Bracelet - Prophet" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 30-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal.  -->
+	<armor id="49794" name="Spirit Transformation Bracelet - Prophet" type="NONE" body-part="TALISMAN">
+	<!-- Available for 30 days. Transforms to Prophet Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 30-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal.  -->
+	<armor id="49795" name="Spirit Transformation Bracelet - Shillien Elder" type="NONE" body-part="TALISMAN">
+	<!-- Available for 30 days. Transforms to Shillien Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="49796" name="Cadmus Transformation Bracelet - Elven Elder" type="NONE" body-part="LEFT_BRACELET">
-	<!-- A 30-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal.  -->
+	<armor id="49796" name="Spirit Transformation Bracelet - Elven Elder" type="NONE" body-part="TALISMAN">
+	<!-- Available for 30 days. Required to transform to Elven Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="49797" name="Gift of Sated Cadmus" type="SCROLL">
-	<!-- XP gain +37 million, SP gain +1.1 million (standard for Lv. 50 characters) Intended for Lv. 45 and higher.  Can be transferred between characters on the same account using Dimensional Merchant.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="49797" name="Gift of Sated Spirit" type="SCROLL">
+	<!-- XP +37,000,000, SP +1,100,000 (standard for Lv. 50 characters). Required level: 45. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<weapon id="49798" name="Pom Poms" type="DUAL" body-part="TWO_HAND">
-	<!-- Use the Firecracker skill and the Support Blow skill.\nWhen used while equipping a sigil, the character won’t perform the cheering action. -->
+	<weapon id="49798" name="Anniversary Cheer Pompoms" type="DUAL" body-part="TWO_HAND">
+	<!-- A souvenir in honor of the Lineage II anniversary. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -854,8 +864,8 @@
 	</weapon>
 
 	<item id="49799" name="Express Bus Pass Card" type="SCROLL">
-	<!-- Provides 5 million XP and 16 thousand SP. Intended for Lv. 20 and higher.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- XP +5,000,000, SP +16,000. Required level: 20+. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 

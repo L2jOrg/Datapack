@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="91100" name="Fire Dragon Belt - Venir's Blessing Lv. 3" type="LIGHT" body-part="BELT">
-	<!-- When belt is equipped: STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%, HP Potions Effect +100. (Can be applied to Maliss's High-grade HP Potion, Maliss's HP Potion, Warrior's Quick HP Potion). Venir's Blessing Lv. 3 is applied. -->
+	<armor id="91100" name="Fire Dragon Belt - Venir's Blessing Lv. 3" type="LIGHT" body-part="NONE">
+	<!-- Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%. Venir's Blessing Lv. +3 is used. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -10,106 +10,106 @@
 		</stats>
 	</armor>
 
-	<item id="91101" name="Golden Fishery Fishing Supply Items" type="NONE">
-	<!-- Double-click to obtain 60 Golden Bait. If you're lucky, you can also get 1 Gold Big Catch Box, Silver Big Catch Box or Einhasad's Protection.   -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91101" name="Golden Fishing Supply Items" type="NONE">
+	<!-- Double-click to obtain 60 Shining Golden Baits and, with a certain chance, Silver/ Golden Big Fish Chest or Einhasad's Protection. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91102" name="Gold Big Catch Box" type="NONE">
-	<!-- Double-click to randomly obtain 1 Top-grade item or material (A-grade), Sealed Rune, or Luxury Lucky Enchant Stone: Armor.   -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91102" name="Golden Big Fish Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items: an A-grade item and material, Sealed Soul Crystal, Advanced Armor Enchant Stone. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91103" name="Silver Big Catch Box" type="NONE">
-	<!-- Double-click to randomly obtain 1 Rare Accessory or Sayha's Golden Blessing.   -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91103" name="Silver Big Fish Chest" type="NONE">
+	<!-- Double-click to obtain one of the following items: a rare accessory, Sayha's Golden Light Blessing. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91104" name="Luxury Lucky Enchant Stone - A-grade - Exchangeable" type="MULTI_INC_PROB_ENCHANT_ARMOR">
-	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting A-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91104" name="Improved Lucky Enchant Stone: A-grade Armor (Exchangeable)" type="MULTI_INC_PROB_ENCHANT_ARMOR">
+	<!-- The enchant success rate +20% for A-grade armor with an advanced scroll. Only for items enchanted between +3 and +9 (between +4 and +9 for one-piece armor). -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91105" name="Luxury Lucky Enchant Stone - B-grade - Exchangeable" type="MULTI_INC_PROB_ENCHANT_ARMOR">
-	<!-- Improved Scroll: Enchant Armor chance +20% when enchanting B-grade armor. Only for items enchanted between +3 and +9. For full-body armor, enchant must be between +4 and +9. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91105" name="Advanced B-grade Armor Enchant Stone (Exchangeable)" type="MULTI_INC_PROB_ENCHANT_ARMOR">
+	<!-- The enchant success rate +20% for B-grade armor with an advanced scroll. Only for items enchanted between +3 and +9 (between +4 and +9 for one-piece armor). -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91106" name="Abundance Wind Cube" type="ELIXIR">
-	<!-- 30-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91106" name="Wind Cube of Abundance" type="ELIXIR">
+	<!-- Available for 30 days. Double-click to obtain Dandy's Home Run Ball, XP Growth Scroll (Event), Savior Scroll: Enchant Weapon. Can be used only once a day. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91107" name="Abundance Wind Cube" type="ELIXIR">
-	<!-- 90-day item. Double-click to get Dandy's Home Run Ball, XP Boost Scroll, Savior Scroll: Enchant Weapon. (Can be used 1 time in 1 day.) -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91107" name="Wind Cube of Abundance" type="ELIXIR">
+	<!-- Available for 90 days. Double-click to obtain Dandy's Home Run Ball, XP Growth Scroll (Event), Savior Scroll: Enchant Weapon. Can be used only once a day. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91108" name="Wind Amulet" type="RUNE">
-	<!-- 90-day item. With inventory, CON/MEN/DEX/WIT/STR/INT +1. Hunting XP/SP +20%, Fishing XP/SP +50%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91108" name="Amulet of Winds" type="RUNE">
+	<!-- Available for 90 days. When in inventory, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Acquired XP/ SP (hunting) +20%, Acquired XP/ SP (fishing) +50%. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="129600"/>
 	</item>
 
 	<item id="91109" name="Blue Dynasty Scroll" type="POTION">
-	<!-- Transforms you into Blue Dynasty for 15 min. Effect remains after death. \n Blue Dynasty's Power: Max HP/MP +20%. When Sayha's Grace applies, XP/ SP gain +20%. Effect remains after death. \n<Warning>\n If used when Teddy Bear/Cat the Cat/Cat/Panda Buff is applied, existing buff will be replaced. Cooldown 1 min. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="55693" value="-1"/>  <!-- Blue Dynasty Transformation Scroll -->
+	<!-- Changes the outfit appearance to that of Blue Dynasty.\n\n<Transformation effect>\nMax HP +20%\nMax MP +20%\nAcquired XP +20%\nAcquired SP +20%.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>\n<font color=eeaa22>(The effect is cancelled when transforming into Kat the Cat/ cat/ panda, or changing the armor appearance to that of a teddy bear.)</font> -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="55693" value="-1"/>  <!-- TODO Skill not found -->
 		</skill-reducer>
 	</item>
 
-	<item id="91110" name="Cat the Cat Scroll" type="POTION">
-	<!-- Transforms you into Kat the Cat for 15 minutes. Effect remains even after death. Cannot be dropped or sold at an NCP's store. \nKat the Cat's Energy: Max HP/MP +20%. XP/SP gain +20% during Sayha's Grace. Effect remains even after death. \n<Warning>\nIf used during Teddy Bear/Blue Dynasty/Cat/Panda Buff, the existing buff will be replaced. Cooldown is 1 minute. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51148" value="-1"/>  <!-- Cat Transformation -->
+	<item id="91110" name="Kat the Cat Scroll" type="POTION">
+	<!-- Changes the appearance to that of Kat the Cat.\n\n<Transformation effect>\nMax HP +20%\nMax MP +20%\nAcquired XP +20%\nAcquired SP +20%.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>\n<font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ cat/ panda, or changing the armor appearance to that of Blue Dynasty.)</font> -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="51148" value="-1"/>  <!-- Transformation into Cat -->
 		</skill-reducer>
 	</item>
 
-	<armor id="91111" name="Pisces Agathion" type="NONE" body-part="AGATHION">
-	<!-- 30-day item. When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Pisces Agathion automatically.  -->
+	<armor id="91111" name="Agathion Pisces" type="NONE" body-part="NONE">
+	<!-- Available for 30 d. Equipping it in the main slot summons Agathion Pisces and enables its primary skills. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91112" name="Cancer Agathion" type="NONE" body-part="AGATHION">
-	<!-- 30-day item. When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Cancer Agathion automatically.  -->
+	<armor id="91112" name="Agathion Cancer" type="NONE" body-part="NONE">
+	<!-- Available for 30 d. Equipping it in the main slot summons Agathion Cancer and enables its primary skills. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="50" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<item id="91113" name="Inventory Expansion Ticket - Lv. 1" type="NONE">
-	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 1 from a Fishing Guild Member. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91113" name="Old Inventory Expansion Ticket Lv. 1" type="NONE">
+	<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 1 by the Fishing Guildsmen. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91114" name="Inventory Expansion Ticket - Lv. 2" type="NONE">
-	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 2 from a Fishing Guild Member. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91114" name="Old Inventory Expansion Ticket Lv. 2" type="NONE">
+	<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 2 by the Fishing Guildsmen. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91115" name="Inventory Expansion Ticket - Lv. 3" type="NONE">
-	<!-- Old Inventory Expansion Ticket. It is too old to be used any more. Can be exchanged for a new Inventory Expansion Ticket Lv. 3 from a Fishing Guild Member. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91115" name="Old Inventory Expansion Ticket Lv. 3" type="NONE">
+	<!-- Old coupon for the inventory expansion. Expired long time ago and completely useless right now. Can be exchanged for Inventory Expansion Ticket Lv. 3 by the Fishing Guildsmen. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="91116" name="Worn Nebula Necklace" type="NONE" body-part="NECK">
-	<!-- MP +42, Water Defense +80, Attribute XP +15%. Cannot be enchanted. -->
+	<armor id="91116" name="Nebula's Old Necklace" type="NONE" body-part="NECK">
+	<!-- MP +42, Water Resistance +80, Acquired Attribute XP +15%. Cannot be enchanted. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -118,13 +118,13 @@
 			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54023" level="4" value="-1"/>  <!-- Water Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54023" level="4" value="-1"/>  <!-- Water Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91117" name="Nebula Necklace" type="NONE" body-part="NECK">
-	<!-- MP +50, Water Defense +100, Attribute XP +30%. Cannot be enchanted for additional abilities. -->
+	<armor id="91117" name="Nebula's Necklace" type="NONE" body-part="NECK">
+	<!-- MP +50, Water Resistance +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -133,13 +133,13 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54023" level="5" value="-1"/>  <!-- Water Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54023" level="5" value="-1"/>  <!-- Water Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91118" name="Worn Ignis Necklace" type="NONE" body-part="NECK">
-	<!-- MP +42, Fire Defense +80, Attribute XP +15%. Cannot be enchanted. -->
+	<armor id="91118" name="Ignis' Old Necklace" type="NONE" body-part="NECK">
+	<!-- MP +42, Fire Resistance +80, Acquired Attribute XP +15%. Cannot be enchanted. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -148,13 +148,13 @@
 			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54024" level="4" value="-1"/>  <!-- Fire Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54024" level="4" value="-1"/>  <!-- Fire Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91119" name="Ignis Necklace" type="NONE" body-part="NECK">
-	<!-- MP +50, Fire Defense +100, Attribute XP +30%. Cannot be enchanted for additional abilities. -->
+	<armor id="91119" name="Ignis' Necklace" type="NONE" body-part="NECK">
+	<!-- MP +50, Fire Resistance +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -163,13 +163,13 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54024" level="5" value="-1"/>  <!-- Fire Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54024" level="5" value="-1"/>  <!-- Fire Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91120" name="Worn Procella Necklace" type="NONE" body-part="NECK">
-	<!-- MP +42, Wind Defense +80, Attribute XP +15%. Cannot be enchanted. -->
+	<armor id="91120" name="Procella's Old Necklace" type="NONE" body-part="NECK">
+	<!-- MP +42, Wind Resistance +80, Acquired Attribute XP +15%. Cannot be enchanted. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -179,13 +179,13 @@
 			<stat type="WIND_RES" value="80.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54026" level="4" value="-1"/>  <!-- Earth Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54026" level="4" value="-1"/>  <!-- Earth Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91121" name="Procella Necklace" type="NONE" body-part="NECK">
-	<!-- MP +50, Wind Defense +100, Attribute XP +30%. Cannot be enchanted for additional abilities. -->
+	<armor id="91121" name="Procella's Necklace" type="NONE" body-part="NECK">
+	<!-- MP +50, Wind Resistance +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -194,13 +194,13 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54025" level="5" value="-1"/>  <!-- Wind Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54025" level="5" value="-1"/>  <!-- Wind Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91122" name="Worn Petram Necklace" type="NONE" body-part="NECK">
-	<!-- MP +42, Earth Defense +80, Attribute XP +15%. Cannot be enchanted. -->
+	<armor id="91122" name="Petram's Old Necklace" type="NONE" body-part="NECK">
+	<!-- MP +42, Earth Resistance +80, Acquired Attribute XP +15%. Cannot be enchanted. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -209,13 +209,13 @@
 			<stat type="MAX_MP" value="42.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="4" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54026" level="4" value="-1"/>  <!-- Earth Defense -->
+			<skill id="54027" level="4" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54026" level="4" value="-1"/>  <!-- Earth Attack Defense -->
 		</skills>
 	</armor>
 
-	<armor id="91123" name="Petram Necklace" type="NONE" body-part="NECK">
-	<!-- MP +50, Earth Defense +100, Attribute XP +30%. Cannot be enchanted for additional abilities. -->
+	<armor id="91123" name="Petram's Necklace" type="NONE" body-part="NECK">
+	<!-- MP +50, Earth Resistance +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
 		<restriction freightable="false" sellable="false"/>
 		<attributes weight="150" commission-type="NECKLACE" enchant-enabled="false" />
 		<crystal />
@@ -224,129 +224,129 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="54027" level="5" value="-1"/>  <!-- Increases Skill XP -->
-			<skill id="54026" level="5" value="-1"/>  <!-- Earth Defense -->
+			<skill id="54027" level="5" value="-1"/>  <!-- Attribute XP Increase -->
+			<skill id="54026" level="5" value="-1"/>  <!-- Earth Attack Defense -->
 		</skills>
 	</armor>
 
-	<item id="91124" name="Brilliant Spirit Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
-	<!-- Varnish that enhances Spirits accessories. Can only be used up to Enchant +9. If Enhance fails, item does not disappear and conserves existing Enchant level. By type from +1 various special options apply. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="91124" name="Radiant Spirit's Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<!-- Enhances characteristics of Spirit's accessories. Can be used on a item enchanted up to +9. If an enchantment is failed, the item doesn't disappear and keep the previous level of enchantment. Depending on the item type, activates special options from level +1 and higher. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91125" name="Breath of Ignis" type="MATERIAL">
-	<!-- Breath of Ignis can be exchanged for Ignis Agathion through Sven.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91125" name="Ignis' Breath" type="MATERIAL">
+	<!-- Can be exchanged for Agathion Ignis by Svein. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91126" name="Breath of Nebula" type="MATERIAL">
-	<!-- Breath of Nebula can be exchanged for Nebula Agathion through Sven.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91126" name="Nebula's Breath" type="MATERIAL">
+	<!-- Can be exchanged for Agathion Nebula by Svein. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91127" name="Breath of Procella" type="MATERIAL">
-	<!-- Breath of Procella can be exchanged for Procella Agathion through Sven.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91127" name="Procella's Breath" type="MATERIAL">
+	<!-- Can be exchanged for Agathion Procella by Svein. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91128" name="Breath of Petram" type="MATERIAL">
-	<!-- Breath of Petram can be exchanged for Petram Agathion through Sven.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91128" name="Petram's Breath" type="MATERIAL">
+	<!-- Can be exchanged for Agathion Petram by Svein. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<armor id="91129" name="Ignis Agathion" type="NONE" body-part="AGATHION">
-	<!-- When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Ignis Agathion automatically. Increases Fire Attack Strength +100. -->
+	<armor id="91129" name="Agathion Ignis" type="NONE" body-part="NONE">
+	<!-- Equipping it in the main slot summons Agathion Ignis and enables its primary skills. Fire Attack +100. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101"/>  <!-- Summon Ignis Agathion -->
+			<skill id="51101"/>  <!-- Summon Agathion Ignis -->
 			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51093"/>  <!-- Fire Attack Strength -->
-			<skill id="51089"/>  <!-- Teleport - Forge of the Gods -->
+			<skill id="51093"/>  <!-- Fire Attack -->
+			<skill id="51089"/>  <!-- Teleport to Forge of the Gods -->
 		</skills>
 	</armor>
 
-	<armor id="91130" name="Nebula Agathion" type="NONE" body-part="AGATHION">
-	<!-- When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Nebula Agathion automatically. Increases Water Attack Strength +100. -->
+	<armor id="91130" name="Agathion Nebula" type="NONE" body-part="NONE">
+	<!-- Equipping it in the main slot summons Agathion Nebula and enables its primary skills. Water Attack +100. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51102"/>  <!-- Summon Nebula Agathion -->
+			<skill id="51102"/>  <!-- Summon Agathion Nebula -->
 			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51094" value="-1"/>  <!-- Water Attack Strength -->
-			<skill id="51090"/>  <!-- Teleport - Garden of Eva -->
+			<skill id="51094" value="-1"/>  <!-- Water Attack -->
+			<skill id="51090"/>  <!-- Teleport to Garden of Eva -->
 		</skills>
 	</armor>
 
-	<armor id="91131" name="Procella Agathion" type="NONE" body-part="AGATHION">
-	<!-- When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Procella Agathion automatically. Increases Wind Attack Strength +100. -->
+	<armor id="91131" name="Agathion Procella" type="NONE" body-part="NONE">
+	<!-- Equipping it in the main slot summons Agathion Procella and enables its primary skills. Wind Attack +100. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51103"/>  <!-- Summon Procella Agathion -->
+			<skill id="51103"/>  <!-- Summon Agathion Procella -->
 			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51095"/>  <!-- Wind Attack Strength -->
-			<skill id="51091"/>  <!-- Teleport - Wind Plateau -->
+			<skill id="51095"/>  <!-- Wind Attack -->
+			<skill id="51091"/>  <!-- Teleport to Land of Winds -->
 		</skills>
 	</armor>
 
-	<armor id="91132" name="Petram Agathion" type="NONE" body-part="AGATHION">
-	<!-- When equipped in main slot of Agathion Bracelet allows use of Special Ability and Summons Petram Agathion automatically. Increases Earth Attack Strength +100. -->
+	<armor id="91132" name="Agathion Petram" type="NONE" body-part="NONE">
+	<!-- Equipping it in the main slot summons Agathion Petram and enables its primary skills. Earth Attack +100. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="50" enchant-enabled="false" />
 		<crystal />
 		<skills>
-			<skill id="51101"/>  <!-- Summon Ignis Agathion -->
+			<skill id="51101"/>  <!-- Summon Agathion Ignis -->
 			<skill id="3267" type="ON_UNEQUIP"/>  <!-- Seal Agathion -->
-			<skill id="51096"/>  <!-- Earth Attack Strength -->
-			<skill id="51092"/>  <!-- Teleport - Wall of Argos -->
+			<skill id="51096"/>  <!-- Earth Attack -->
+			<skill id="51092"/>  <!-- Teleport to Wall of Argos -->
 		</skills>
 	</armor>
 
-	<item id="91133" name="High-grade Angler's Blessing (2-hours)" type="MATERIAL">
-	<!-- For 2 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91133" name="Improved Master Fisherman's Blessing (2-hour)" type="MATERIAL">
+	<!-- For 2 h. Acquired XP/ SP (fishing) +200%. The effect remains after death. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91134" name="High-grade Angler's Blessing (4-hours)" type="MATERIAL">
-	<!-- For 4 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91134" name="Improved Master Fisherman's Blessing (4-hour)" type="MATERIAL">
+	<!-- For 4 h. Acquired XP/ SP (fishing) +200%. The effect remains after death. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91135" name="High-grade Angler's Blessing (8-hours)" type="MATERIAL">
-	<!-- For 8 hours increases Fishing XP/SP +200%. Effect remains after death.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91135" name="Improved Master Fisherman's Blessing (8-hour)" type="MATERIAL">
+	<!-- For 8 h. Acquired XP/ SP (fishing) +200%. The effect remains after death. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91136" name="Dandy's Golden Ball" type="SCROLL">
-	<!-- Golden Ball gifted by Dandy that crossed dimensions. Double-click to increase 1-hour XP and SP 100% and recharge Sayha's Grace max. Flanchard changes to appearance of NC Dinos Uniform. -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nAcquired XP +100%\nAcquired SP +100%\nSayha's Grace +140,000\n\nDuration: 60 min.\n<font color=eeaa22>Changes the armor appearance to that of NC Dinos Uniform.</font>\n<font color=ff6666>The effect remains after death.</font> -->
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51108" value="-1"/>  <!-- Dandy's Golden Ball -->
 		</skill-reducer>
 	</item>
 
 	<item id="91137" name="Windstorm Box" type="NONE">
-	<!-- Double-click to receive various Rewards.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain various items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<armor id="91138" name="Antharas' Earring Lv. 2" type="NONE" body-part="EAR">
-	<!-- MP +34, Bleed Attack and Resistance +20%, Stun Attack and Resistance +10%, MEN Attack and Resistance +10%, Damage Reflect Resistance +7%, Heal Received +10%, Vampiric Rage +3%, Skill MP Consumption -4%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<!-- MP +34, Bleed Resistance and Atk. Rate +20%, Stun Resistance and Atk. Rate +10%, Fear/ Silence Resistance and Atk. Rate +10%, Damage Reflection Resistance +7%, Received Healing +10%, Skill MP Consumption -4%, Vampiric Rage effect +2%. Effects of two identical earrings do not stack. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -355,12 +355,12 @@
 			<stat type="MAX_MP" value="34.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="13" value="-1"/>  <!-- Damaged Antharas' Earring -->
+			<skill id="3558" level="13" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
 	<armor id="91139" name="Antharas' Earring Lv. 3" type="NONE" body-part="EAR">
-	<!-- MP +40, CON +1, MEN +1, Bleed Attack and Resistance +30%, Stun Attack and Resistance +20%, MEN Attack and Resistance +20%, Damage Reflect Resistance +15%, Heal Received +15%, Vampiric Rage +6%, Skill MP Consumption -6%. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. Give 2 Antharas' Earrings to Beggins to obtain Antharas Essence Lv. 3. -->
+	<!-- MP +40, CON +1, MEN +1, Bleed Resistance and Atk. Rate +30%, Stun Resistance and Atk. Rate +20%, Fear/ Silence Resistance and Atk. Rate +20%, Damage Reflection Resistance +15%, Received Healing +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. Effects of two identical earrings do not stack. Cannot be enchanted. Take 2 of these earrings to Blacksmith Baggins in Giran to exchange them for Essence of Antharas. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -369,54 +369,54 @@
 			<stat type="MAX_MP" value="40.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="14" value="-1"/>  <!-- Damaged Antharas' Earring -->
+			<skill id="3558" level="14" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
-	<armor id="91140" name="Venir's Talisman Lv19" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON +4, MEN/DEX/WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91140" name="Venir's Talisman Lv. 19" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN/ DEX/ WIT/ STR/ INT +4, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91141" name="Venir's Talisman Lv20" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON/MEN +4, DEX/WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91141" name="Venir's Talisman Lv. 20" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN +4, DEX/ WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91142" name="Venir's Talisman Lv21" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON/MEN/DEX +4, WIT/STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91142" name="Venir's Talisman Lv. 21" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN/ DEX +4, WIT/ STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91143" name="Venir's Talisman Lv22" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON/MEN/DEX/WIT +4, STR/INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91143" name="Venir's Talisman Lv. 22" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN/ DEX/ WIT +4, STR/ INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91144" name="Venir's Talisman Lv23" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON/MEN/DEX/WIT/STR +4, INT +3 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 8%/MP 4%. Can upgrade to higher talisman when successfully synthesized with Venir's Talisman Piece. Obtains Venir's Talisman Lv. 18 if failed. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91144" name="Venir's Talisman Lv. 23" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN/ DEX/ WIT/ STR +4, INT +3, P./ M. Skill Cooldown -7%. With a certain chance, absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded to higher level with Venir's Talisman Fragment. In case of failure the talisman level drops to 18. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91145" name="Venir's Talisman Lv24" type="NONE" body-part="TALISMAN">
-	<!-- Increases CON/MEN/DEX/WIT/STR/INT +4 when equipped. Physical/Magic Skill Cooldown -7%. Drains damage delivered enemy to HP 16%/MP 8%. Can upgrade to higher talisman when successfully synthesized with the same talisman. Effect does not stack with additional talismans of the same type.  -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+	<armor id="91145" name="Venir's Talisman Lv. 24" type="NONE" body-part="BELT">
+	<!-- When equipped, CON/ MEN/ DEX/ WIT/ STR/ INT +4, P./ M. Skill Cooldown -7%. With a certain chance absorbs 8% of the inflicted damage as HP and 4% as MP. Can be upgraded if combined with the identical talisman. Effects of two identical talismans do not stack. -->
+		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91146" name="Earth Dragon Belt - Venir's Blessing Lv. 4" type="LIGHT" body-part="BELT">
-	<!-- When belt is equipped: CON +1, MEN +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +15%, Inventory Slots +6, Weight Gauge +7,000, HP Potions Effect +100, Incoming Damage -6%. (Can be applied to Maliss's High-grade HP Potion, Maliss's HP Potion, Warrior's Quick HP Potion). Venir's Blessing Lv. 4 is applied. -->
+	<armor id="91146" name="Earth Dragon Belt - Venir's Blessing Lv. 4" type="LIGHT" body-part="NONE">
+	<!-- Inventory Slots +6, Weight Limit +7000, CON +1, MEN +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +15%, HP Recovery Potions' Effect +100, Received Damage -6%. Activates Venir's Blessing Lv. 4. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -425,8 +425,8 @@
 		</stats>
 	</armor>
 
-	<armor id="91147" name="Fire Dragon Belt - Venir's Blessing Lv. 4" type="LIGHT" body-part="BELT">
-	<!-- When belt is equipped: STR +1, INT +1, HP Recovery Bonus +2.31, MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%, HP Potions Effect +100. (Can be applied to Maliss's High-grade HP Potion, Maliss's HP Potion, Warrior's Quick HP Potion). Venir's Blessing Lv. 4 is applied. -->
+	<armor id="91147" name="Fire Dragon Belt - Venir's Blessing Lv. 4" type="LIGHT" body-part="NONE">
+	<!-- Inventory Slots +6, Weight Limit +7000, STR/ INT +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%, HP Recovery Potions' Effect +100, P. Critical Damage/ M. Skill Critical Damage +4%. Venir's Blessing Lv. 4 is used. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes enchant-enabled="false" />
 		<crystal />
@@ -436,43 +436,43 @@
 	</armor>
 
 	<item id="91148" name="Jewel Box Lv. 5" type="NONE">
-	<!-- Double-click to obtain one Jewelry Box Lv. 5 containing a Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91149" name="+5 Agathion Box" type="NONE">
-	<!-- Double-click to get 1 of +5 Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91149" name="+5 Agathion Pack" type="NONE">
+	<!-- Double-click to obtain one of the +5 enchanted agathions: Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, or Sagittarius. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91150" name="+10 Agathion Box" type="NONE">
-	<!-- Double-click to get 1 of +10 Virgo, Capricorn, Libra, Taurus, Leo, Gemini, Scorpio, Aquarius, Sagittarius Agathion.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91150" name="+10 Agathion Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91151" name="Attribute Necklace Box" type="NONE">
-	<!-- Double-click to obtain one of Ignis, Nebula, Procella, or Petram Necklace.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91151" name="Attribute Necklace Pack" type="NONE">
+	<!-- Double-click to obtain one of the following items: Ignis'/ Nebula's/ Procella's/ Petram's Necklace. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91152" name="Blessed Pendant Box" type="NONE">
-	<!-- Double-click to get 1 Blessed Fire Dragon or Earth Dragon Pendant.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Blessed Fire Dragon Pendant or Blessed Earth Dragon Pendant. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91153" name="+15 A-grade Top-grade Weapon Pack" type="NONE">
-	<!-- Double-click to get 1 of +15 Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade, Tallum Blade*Damascus.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91153" name="+15 Top-grade A-grade Weapon Pack" type="NONE">
+	<!-- Double-click to obtain a weapon enchanted to +15: Sirra's Blade, Sword of Ipos, Barakiel's Axe, Behemoth' Tuning Fork, Naga's Storm, Tiphon's Spear, Shyeed's Bow, Sobekk's Hurricane, Themis' Tongue, Cabrio's Hand, Daimon Crystal, Tallum Blade*Damascus. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<weapon id="91154" name="Sibis' Black Samurai Long Sword" type="DUAL" body-part="TWO_HAND">
-	<!-- Sibis' Black Samurai Long Sword. Take to Sibis when enhanced with Enchant to receive various Rewards.  -->
+	<weapon id="91154" name="Sibi's Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND">
+	<!-- Enchant it to receive a reward from Sibi. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="100" commission-type="OTHER_ITEM"/>
 		<crystal />
@@ -487,64 +487,64 @@
 		</stats>
 	</weapon>
 
-	<item id="91155" name="Sibis Weapon Enchant Scroll" type="ENCHANT_WEAPON">
-	<!-- Weapon Enchant Scroll that can be used with Sibis' Black Samurai Long Sword. Up to level +3 Weapon Attack Power +5/Magic Power +3. From level +4 Attack/Magic Power +200%. Can only be used up to level +23. -->
-		<restriction stackable="true" sellable="false"/>
+	<item id="91155" name="Sibi's Weapon Enchant Scroll" type="ENCHANT_WEAPON">
+	<!-- For Sibi's Samurai Black Long Sword only. Starting from +3, P. Atk. +5, M. Atk. +3. Starting from +4, P./ M. Atk. bonus is doubled. Can be enchanted up to +23. -->
+		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91156" name="Fisher's Blessing (24-hour)" type="MATERIAL">
-	<!-- For 24-hours increases Fishing XP +50% and changes appearance to Hanbok. Cannot be used with Angler's Blessing. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91156" name="Fisherman's Blessing (24 hr.)" type="MATERIAL">
+	<!-- For 24 h., Acquired XP/ SP (fishing) +50%. Changes the armor appearance to that of Hanbok. Cannot be used simultaneously with Angler's Blessing. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91157" name="Maphr Potion" type="POTION">
-	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. \n\n<Warning>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace.  -->
-		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Increases the enchant success rate for 10 min.\n\nNote!\nCannot be used to enchant pendants, agathions, hair accessories, rare accessories, attribute necklaces. -->
+		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91158" name="Maphr Potion - Exchangeable" type="POTION">
-	<!-- Double-click to increase Enchant Chance with Maphr's Blessing for 10 seconds. Cannot be applied to partial enchantment. \n\n<Note>\n Cannot be applied to Pendant, Agathion, Hair Accessory, Damaged Rare Accessory, Attribute Necklace. -->
-		<restriction stackable="true" dropable="false"/>
+	<item id="91158" name="Maphr Potion (Exchangeable)" type="POTION">
+	<!-- Increases the enchant success rate for 10 min.\n\nNote!\nCannot be used to enchant pendants, agathions, hair accessories, rare accessories, attribute necklaces. -->
+		<restriction dropable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91159" name="Agathion Exchange Ticket" type="MATERIAL">
-	<!-- Can be exchanged for a Zodiac Agathion, Agathion Enchant Scroll Pack, or an Agathion Enchant Scroll through Pona. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91159" name="Agathion Exchange Coupon" type="MATERIAL">
+	<!-- Take it to Pona to get Zodiac Agathion, Agathion Enchant Scroll Pack and Enchant Scroll. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91160" name="Agathion Enchant Scroll Pack" type="NONE">
-	<!-- Double-click for a chance to receive one of the following items: Agathion Enchant Scroll, High-grade Agathion Enchant Scroll, Solid Scroll: Enchant Agathion, Agathion's Soul, or a Blessed Agathion's Soul. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the following items: Scroll: Enchant Agathion, Scroll: Enchant High-grade Agathion, Stable Scroll: Enchant Agathion, Agathion's Soul, Blessed Agathion's Soul. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="90899" min-count="1" max-count="1" chance="5"/>
-			<item id="90898" min-count="1" max-count="1" chance="5"/>
-			<item id="90963" min-count="1" max-count="1" chance="11"/>
-			<item id="48046" min-count="2" max-count="2" chance="60"/>
-			<item id="48047" min-count="1" max-count="1" chance="19"/>
+			<item id="90899" chance="5"/>  <!-- Blessed Agathion's Soul -->
+			<item id="90898" chance="5"/>  <!-- Agathion's Soul -->
+			<item id="90963" chance="11"/>  <!-- Stable Scroll: Enchant Agathion -->
+			<item id="48046" min-count="2" max-count="2" chance="60"/>  <!-- Scroll: Enchant Agathion -->
+			<item id="48047" chance="19"/>  <!-- Scroll: Enchant High-grade Agathion -->
 		</extract>
 	</item>
 
-	<armor id="91161" name="Agathion Bracelet Lv. 5" type="NONE" body-part="LEFT_BRACELET">
-	<!-- When equipped, opens up 5 Agathion slots, STR/INT/CON/MEN/DEX/WIT +1, MEN/Stun/Sleep/Paralysis Resistance +8%. -->
+	<armor id="91161" name="Agathion Bracelet Lv. 5" type="NONE" body-part="TALISMAN">
+	<!-- Unlocks 5 agathion slots.\nSTR/ INT/ CON/ MEN/ DEX/ WIT +1.\nParalysis/ Shock/ Sleep/ Silence/ Fear Resistance +8%. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="100" enchant-enabled="false" />
 		<crystal />
 		<skills>
 			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->
-			<skill id="55885" value="-1"/>  <!-- Agathion Bracelet Stats Increase -->
-			<skill id="55886" value="-1"/>  <!-- Agathion Bracelet Resistance Increase -->
+			<skill id="55885" value="-1"/>  <!-- TODO Skill not found -->
+			<skill id="55886" value="-1"/>  <!-- TODO Skill not found -->
 		</skills>
 	</armor>
 
-	<weapon id="91162" name="Golden Pom Poms" type="DUAL" body-part="TWO_HAND">
-	<!-- Tool to cheer you on in celebration of 15th anniversary. If you cherish dreams, one day they will come true. Can use Firework Skill when equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account using Dimensional Merchant. -->
+	<weapon id="91162" name="Golden Cheer Pompoms" type="DUAL" body-part="TWO_HAND">
+	<!-- An item commemorating the launch of Lineage II Essence in Europe. Take these in your hands, and you will start dancing! Enables the Inspiring Crackers skill. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal />
@@ -559,311 +559,311 @@
 		</stats>
 	</weapon>
 
-	<item id="91163" name="Anakim Rune - Stage 1" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034"/>  <!-- Anakim Power -->
+	<item id="91163" name="Anakim's Soul Crystal Lv. 1" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +1\n- M. Atk. +1% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91164" name="Anakim Rune - Stage 2" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="2"/>  <!-- Anakim Power -->
+	<item id="91164" name="Anakim's Soul Crystal Lv. 2" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +2\n- M. Atk. +1% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="2"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91165" name="Anakim Rune - Stage 3" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="3"/>  <!-- Anakim Power -->
+	<item id="91165" name="Anakim's Soul Crystal Lv. 3" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +3\n- M. Atk. +2% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="3"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91166" name="Anakim Rune - Stage 4" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="4"/>  <!-- Anakim Power -->
+	<item id="91166" name="Anakim's Soul Crystal Lv. 4" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +4\n- M. Atk. +2% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="4"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91167" name="Anakim Rune - Stage 5" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="5"/>  <!-- Anakim Power -->
+	<item id="91167" name="Anakim's Soul Crystal Lv. 5" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +5\n- M. Atk. +3% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="5"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91168" name="Anakim Rune - Stage 6" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="6"/>  <!-- Anakim Power -->
+	<item id="91168" name="Anakim's Soul Crystal Lv. 6" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +6\n- M. Atk. +6%\n- Recovers 75 MP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="6"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91169" name="Anakim Rune - Stage 7" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="7"/>  <!-- Anakim Power -->
+	<item id="91169" name="Anakim's Soul Crystal Lv. 7" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +7\n- M. Atk. +6%\n- Recovers 150 MP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="7"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91170" name="Anakim Rune - Stage 8" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="8"/>  <!-- Anakim Power -->
+	<item id="91170" name="Anakim's Soul Crystal Lv. 8" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +8\n- M. Atk. +7%\n- Recovers 225 MP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="8"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91171" name="Anakim Rune - Stage 9" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="9"/>  <!-- Anakim Power -->
+	<item id="91171" name="Anakim's Soul Crystal Lv. 9" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +9\n- M. Atk. +7%\n- Recovers 300 MP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="9"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91172" name="Anakim Rune - Stage 10" type="ENSOUL_STONE">
-	<!-- Stone filled with Anakim's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54034" level="10"/>  <!-- Anakim Power -->
+	<item id="91172" name="Anakim's Soul Crystal Lv. 10" type="ENSOUL_STONE">
+	<!-- A crystal containing Anakim's power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- MP Recovery Rate +10\n- M. Atk. +8%\n- Recovers 400 MP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54034" level="10"/>  <!-- Anakim's Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91173" name="Lilith Rune - Stage 1" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035"/>  <!-- Lilith Power -->
+	<item id="91173" name="Lilith' Soul Crystal Lv. 1" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +1\n- P. Atk. +1% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91174" name="Lilith Rune - Stage 2" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="2"/>  <!-- Lilith Power -->
+	<item id="91174" name="Lilith' Soul Crystal Lv. 2" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +2\n- P. Atk. +1% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="2"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91175" name="Lilith Rune - Stage 3" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="3"/>  <!-- Lilith Power -->
+	<item id="91175" name="Lilith' Soul Crystal Lv. 3" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +3\n- P. Atk. +2% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="3"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91176" name="Lilith Rune - Stage 4" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="4"/>  <!-- Lilith Power -->
+	<item id="91176" name="Lilith' Soul Crystal Lv. 4" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +4\n- P. Atk. +2% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="4"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91177" name="Lilith Rune - Stage 5" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="5"/>  <!-- Lilith Power -->
+	<item id="91177" name="Lilith' Soul Crystal Lv. 5" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +5\n- P. Atk. +3% -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="5"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91178" name="Lilith Rune - Stage 6" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="6"/>  <!-- Lilith Power -->
+	<item id="91178" name="Lilith' Soul Crystal Lv. 6" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +6\n- P. Atk. +6%\n- Recovers 100 HP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="6"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91179" name="Lilith Rune - Stage 7" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="7"/>  <!-- Lilith Power -->
+	<item id="91179" name="Lilith' Soul Crystal Lv. 7" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +7\n- P. Atk. +6%\n- Recovers 200 HP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="7"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91180" name="Lilith Rune - Stage 8" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="8"/>  <!-- Lilith Power -->
+	<item id="91180" name="Lilith' Soul Crystal Lv. 8" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +8\n- P. Atk. +7%\n- Recovers 300 HP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="8"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91181" name="Lilith Rune - Stage 9" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. Can be synthesized to upgrade to higher level Rune. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="9"/>  <!-- Lilith Power -->
+	<item id="91181" name="Lilith' Soul Crystal Lv. 9" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +9\n- P. Atk. +7%\n- Recovers 400 HP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="9"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
-	<item id="91182" name="Lilith Rune - Stage 10" type="ENSOUL_STONE">
-	<!-- Stone filled with Lilith's power. When equipped in weapon slot by a skilled Blacksmith, can enhance weapon with Rune's imbued power. -->
-		<restriction stackable="true"/>
-		<attributes weight="20"/>
-		<skill-reducer>
-			<skill id="54035" level="10"/>  <!-- Lilith Power -->
+	<item id="91182" name="Lilith' Soul Crystal Lv. 10" type="ENSOUL_STONE">
+	<!-- A crystal containing Lilith' power. Can be enhanced through compounding. Can be inserted into a weapon by any proficient blacksmith.\n\n<Soul Crystal properties>\n- HP Recovery Rate +10\n- P. Atk. +8%\n- Recovers 500 HP after standard attacks and using attacking skills. -->
+		<restriction/>
+		<attributes/>
+		<skill-reducer type="ItemSkills">
+			<skill id="54035" level="10"/>  <!-- Lilith' Power -->
 		</skill-reducer>
 	</item>
 
 	<item id="91183" name="Wind Treasure Chest" type="NONE">
-	<!-- Double-click to obtain 1 Blessing of Wind Box and Sayha's Gust. If you're lucky, you can also get 1 Wind Gold/Silver Box or Panda/Cat Transformation Scroll.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain Wind's Blessing Chest and Sayha's Storm Lv. 1. If you are lucky, you can also get Wind Silver/ Golden Chest or Transformation Scroll: Panda/ Cat. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
-	<item id="91184" name="Quick MP Recovery Potion" type="POTION">
-	<!-- Quick MP Recovery.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91184" name="MP Replenishing Potion" type="POTION">
+	<!-- Instantly recovers MP. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer>
-			<skill id="51125" value="-1"/>  <!-- Quick MP Potion -->
+		<skill-reducer type="ItemSkills">
+			<skill id="51125" value="-1"/>  <!-- MP Replenishing Potion -->
 		</skill-reducer>
 	</item>
 
-	<item id="91185" name="Intermediate Spirit's Blessing" type="NONE">
-	<!-- Activates a buff when the item is used. Attribute XP gain +30% for 20 minutes when hunting attribute monsters.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="51126" value="-1"/>  <!-- Intermediate Spirit's Blessing -->
+	<item id="91185" name="Mid-grade Spirit's Blessing" type="NONE">
+	<!-- Applies a buff when used.\n\n<Buff effect>\nWhen hunting elemental monsters, Attribute XP Bonus +30%\n\nDuration: 20 min. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="51126" value="-1"/>  <!-- Mid-grade Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
 	<item id="91186" name="High-grade Spirit's Blessing" type="NONE">
-	<!-- Activates a buff when the item is used. Attribute XP gain +50% for 20 minutes when hunting attribute monsters.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nWhen hunting elemental monsters, Attribute XP Bonus +50%\n\nDuration: 20 min. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51127" value="-1"/>  <!-- High-grade Spirit's Blessing -->
 		</skill-reducer>
 	</item>
 
-	<item id="91187" name="Spirit Varnish" type="ENCHANT_ARMOR">
-	<!-- Varnish that enhances Spirits accessory's power. By type various special options apply from level +1. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91187" name="Scroll: Enchant Spirit Accessory" type="ENCHANT_ARMOR">
+	<!-- For spirit accessories.\nWhen enchant value is higher than +1, additional special effects are applied depending on the accessory type. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="91188" name="Blessed Spirit Varnish" type="BLESSED_ENCHANT_ARMOR">
-	<!-- Varnish that enhances Spirits accessory's power. If Enchant fails or item does not crystallize base Enchant becomes 0. Applied by type of various special options from level +1.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<item id="91188" name="Blessed Scroll: Enchant Spirit Accessory" type="BLESSED_ENCHANT_ARMOR">
+	<!-- For spirit accessories.\nWhen enchant value is higher than +1, additional special effects are applied depending on the accessory type.\n\nIf the enchanting fails, the item is not crystallized but its enchant value is reset to 0. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="91189" name="Fire Attack Potion" type="POTION">
-	<!-- Increases Fire Attack +50 for 20 min.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nFire Attack +50\n\nDuration: 20 min. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51130" value="-1"/>  <!-- Fire Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91190" name="Water Attack Potion" type="POTION">
-	<!-- Increases Water Attack +50 for 20 min.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nWater Attack +50\n\nDuration: 20 min. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51131" value="-1"/>  <!-- Water Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91191" name="Wind Attack Potion" type="POTION">
-	<!-- Increases Wind Attack +50 for 20 min.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nWind Attack +50\n\nDuration: 20 min. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51132" value="-1"/>  <!-- Wind Attack Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="91192" name="Earth Attack Potion" type="POTION">
-	<!-- Increases Earth Attack +50 for 20 min.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<!-- Applies a buff when used.\n\n<Buff effect>\nEarth Attack +50\n\nDuration: 20 min. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51133" value="-1"/>  <!-- Earth Attack Potion -->
 		</skill-reducer>
 	</item>
 
-	<item id="91193" name="Wind Amulet" type="RUNE">
-	<!-- 30-day item. With inventory, CON, MEN, DEX, WIT, STR, INT +1 with Inventory. Hunting XP/SP +20% Fishing XP/SP +50%.  -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91193" name="Amulet of Winds" type="RUNE">
+	<!-- Available for 30 days. When in inventory, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Acquired XP/ SP (hunting) +20%, Acquired XP/ SP (fishing) +50%. -->
+		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200"/>
 	</item>
 
-	<armor id="91194" name="Talisman of Power Lv5" type="NONE" body-part="TALISMAN">
-	<!-- 30-day item. P. Def./M. Def. +24, HP +12%, MP +8%, P. Atk./M. Atk. +5%. Effect does not stack with additional talismans of the same type.  -->
+	<armor id="91194" name="Talisman of Authority Lv. 5" type="NONE" body-part="BELT">
+	<!-- Available for 30 days. P./ M. Def. +24, Max HP +12%, Max MP +8%, P./ M. Atk. +5%. Effects of two identical talismans do not stack. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91195" name="Talisman Bracelet Lv. 4" type="NONE" body-part="RIGHT_BRACELET">
-	<!-- A 30-day item. When equipped, opens up 4 Talisman slots.\n\n<Special Effect>\nHP/MP Recovery Bonus +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. -->
+	<armor id="91195" name="Talisman Bracelet Lv. 4" type="NONE" body-part="LEFT_BRACELET">
+	<!-- Available for 30 d. Unlocks 4 talisman slots.\n\n<Special effects>\nHP/ MP Recovery Rate +7%, P. Accuracy +1, M. Accuracy +1, weight limit +7000. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
-	<armor id="91196" name="Cat's Eye Lv 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- 30-day item. P./M. Critical Damage +15%. Effect does not stack with additional jewels of the same type. -->
+	<armor id="91196" name="Cat's Eye Lv. 5" type="NONE" body-part="AGATHION">
+	<!-- Available for 30 days. P. Critical Damage/ M. Skill Critical Damage +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
 		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" duration="43200" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91197" name="Scroll of Escape: Forge of the Gods" type="NONE">
-	<!-- Move to the Forge of the Gods with Magic Scroll.  \n\nNote: Can Move to the Forge of the Gods through Gatekeeper Tatiana in the Goddard Castle. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- A magical scroll that relocates you to the Forge of the Gods.\n\nNote!\nAnother way to get to the Forge of the Gods is by speaking with Gatekeeper Tatiana in Goddard. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91198" name="Scroll of Escape: Garden of Eva" type="NONE">
-	<!-- Move to the Garden of Eva with Magic Scroll.  \n\nNote: Can Move to the Garden of Eva through Gatekeeper Clarissa in the Town of Giran. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- A magical scroll that relocates you to the Garden of Eva.\n\nNote!\nAnother way to get to the Garden of Eva is by speaking with Gatekeeper Clarissa in Giran. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="91199" name="Escape - Wind Plateau" type="NONE">
-	<!-- Move to the Wind Plateau with Magic Scroll.  \n\nNote: Can Move to the Wind Plateau through Gatekeeper Clarissa in the Town of Giran. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="91199" name="Scroll of Escape: Land of Winds" type="NONE">
+	<!-- A magical scroll that relocates you to the Land of Winds.\n\nNote!\nAnother way to get to the Land of Winds is by speaking with Gatekeeper Clarissa in Giran. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
