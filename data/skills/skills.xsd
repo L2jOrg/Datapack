@@ -10,9 +10,10 @@
 
     <xs:element name="list">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element maxOccurs="unbounded" minOccurs="0" name="skill" type="Skill"/>
-            </xs:sequence>
+            <xs:choice>
+                <xs:element name="skill-config" type="SkillConfig"/>
+                <xs:element name="skill" type="Skill" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:choice>
         </xs:complexType>
     </xs:element>
 
@@ -278,4 +279,16 @@
             <xs:enumeration value="SPIRIT_WEAKNESS"/>           
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:complexType name="SkillConfig">
+        <xs:sequence>
+            <xs:element name="time" type="SkillIntProperty" minOccurs="0" maxOccurs="unbounded"/> <!-- skill id and duration in sec -->
+            <xs:element name="delay" type="SkillIntProperty" minOccurs="0" maxOccurs="unbounded"/> <!-- skill id and reuse in sec -->
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SkillIntProperty">
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="value" type="xs:int" use="required"/>
+    </xs:complexType>
 </xs:schema>
