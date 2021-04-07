@@ -67,7 +67,7 @@
             level 2: For 5 minutes, Max HP + 35%% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
          -->
 		<icon initial="icon.skill0304"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="66">
 				<value level="2">2</value>
 			</magic-level>
@@ -100,7 +100,7 @@
 	<skill id="305" name="Song of Vengeance" action="A2" type="DANCE">
 		<!-- For 5 minutes, gives a party member the ability to transfer 20%% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0305"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -123,7 +123,7 @@
 	<skill id="310" name="Dance of the Vampire" action="A2" type="DANCE">
 		<!-- For 5 minutes, grants the chance to recover physical damage inflicted on the enemy as 8%% HP to all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0310"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -154,7 +154,7 @@
             level 2: For 5 minutes, Damage Reflect Resistance +20%% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires dual swords.
          -->
 		<icon initial="icon.skill0311"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
 				<value level="2">66</value>
 			</magic-level>
@@ -260,7 +260,7 @@
 				<value level="19">14</value>
 			</mana>
 		</consume>
-		<target type="NONE"/>
+		<target/>
 		<effects>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="0.8"/>
@@ -287,7 +287,7 @@
 					<value level="19">576.0</value>
 					<value level="20">609.0</value>
 				</power>
-			</stat-modify>
+			</stat-modify>		
 		</effects>
 	</skill>
 	<skill id="313" name="Snipe" max-level="9" action="A2">
@@ -350,7 +350,7 @@
 				<value level="8">8</value>
 				<value level="9">9</value>
 			</level>
-			<time initial="1200"/>
+			<time initial="120"/>
 		</abnormal>
 		<conditions>
 			<weapon>
@@ -626,6 +626,9 @@
 			</mana>
 		</consume>
 		<target type="NONE"/>
+		<abnormal type="IRON_SHIELD" visual="RAISE_SHIELD">
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="0.8"/>
@@ -894,7 +897,7 @@
 				<value level="9">-528</value>
 			</effect-point>
 			<effect-range initial="1400"/>
-			<hit-time initial="2500"/>
+			<hit-time initial="2000"/>
 		</attributes>
 		<consume>
 			<mana initial="168">
@@ -915,7 +918,7 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<physical-attack critical-chance="50.0" defense-mod="0.8" over-hit="true">
+			<physical-attack critical-chance="15.0" defense-mod="0.8" over-hit="true">
 				<power initial="6503.0">
 					<value level="2">6698.0</value>
 					<value level="3">6898.0</value>
@@ -1087,10 +1090,10 @@
 			</physical-attack>
 			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
 				<power initial="-30"/>
-			</stat-modify>
+			</stat-modify>	
 			<effect name="FocusMomentum" scope="SELF">
 				<power initial="8.0"/>
-			</effect>
+			</effect>		
 		</effects>
 	</skill>
 	<skill id="347" name="Earthquake" max-level="9" action="A1">
@@ -1130,7 +1133,6 @@
 				<value level="9">-400</value>
 			</effect-point>
 			<hit-time initial="1800"/>
-
 			<element type="EARTH" value="20"/>
 		</attributes>
 		<consume>
@@ -1235,7 +1237,15 @@
 		</conditions>
 		<effects>
 			<physical-attack critical-chance="20.0" over-hit="true">
-				<power initial="5.0"/>
+				<power initial="2288.0">
+					<value level="2">2348.0</value>
+					<value level="3">2418.0</value>
+					<value level="4">2466.0</value>
+					<value level="5">2526.0</value>
+					<value level="6">2585.0</value>
+					<value level="7">2645.0</value>
+					<value level="8">2704.0</value>
+				</power>	
 			</physical-attack>
 			<effect name="Spoil"/>
 		</effects>
@@ -1280,10 +1290,10 @@
 				</power>
 			</reuse>
 			<reuse skill-type="MAGIC">
-                <power initial="-20.0">
+				<power initial="-20.0">
 					<value level="2">-25.0</value>
 				</power>
-            </reuse>
+			</reuse>		
 		</effects>
 	</skill>
 	<skill id="352" name="Shield Bash" max-level="10" debuff="true" action="A2">
@@ -1367,7 +1377,10 @@
 			</physical-attack>
 			<block-all-actions>
 				<allowed-skills>461 35016 35045</allowed-skills>
-			</block-all-actions>			
+			</block-all-actions>
+			<effect name="TargetCancel">
+				<power initial="80"/>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="353" name="Shield Slam" debuff="true" action="A2">
@@ -1388,7 +1401,7 @@
 		<abnormal type="SILENCE_PHYSICAL" visual="SILENCE">
 			<level initial="1"/>
 			<time initial="60"/>
-			<chance initial="60"/>
+			<chance initial="40"/>
 		</abnormal>
 		<conditions>
 			<condition name="EquipShield"/>
@@ -1784,7 +1797,13 @@
 			<magic-cost type="PHYSIC">
 				<power initial="-20.0"/>
 			</magic-cost>
+			<magic-cost type="DANCE">
+				<power initial="-20.0"/>
+			</magic-cost>
 			<reuse skill-type="PHYSIC">
+				<power initial="-10.0"/>
+			</reuse>
+			<reuse skill-type="DANCE">
 				<power initial="-10.0"/>
 			</reuse>
 		</effects>
@@ -1879,7 +1898,7 @@
 				<power initial="1.0"/>
 				<chance initial="100.0"/>
 				<min-damage initial="1.0"/>
-				<weapons>SWORD BLUNT</weapons>
+				<weapons>SWORD BLUNT BOW SPEAR ROD STAFF HAMMER TWO_HAND_SWORD MAGIC_SWORD DAGGER RAPIER ANCIENT_SWORD</weapons>
 			</trigger-skill-by-attack>
 			<speed mode="PER">
 				<power initial="-50.0">
@@ -1904,7 +1923,6 @@
 				<value level="3">-680</value>
 			</effect-point>
 			<hit-time initial="1500"/>
-
 			<element type="EARTH" value="20"/>
 		</attributes>
 		<consume>
@@ -1912,9 +1930,9 @@
 				<value level="2">10</value>
 				<value level="3">15</value>
 			</mana-init>
-			<mana initial="43">
-				<value level="2">50</value>
-				<value level="3">75</value>
+			<mana initial="35">
+				<value level="2">40</value>
+				<value level="3">60</value>
 			</mana>
 		</consume>
 		<target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
@@ -1965,7 +1983,7 @@
 		</conditions>
 		<effects>
 			<effect name="TargetMeProbability">
-				<power initial="40.0"/>
+				<power initial="8784.0"/>
 			</effect>
 			<stat-modify scope="SELF" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
 				<power initial="4050.0"/>
@@ -2488,8 +2506,8 @@
 	<skill id="393" name="Shine Soul Finding" action="A1">
 		<!-- Obtain 2 Shine Souls. -->
 		<icon initial="icon.skill55474"/>
-		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
-			<reuse initial="2000"/>
+		<attributes magic-critical-rate="5.0" static-reuse="true" auto-use="ACTIVE">
+			<reuse initial="3000"/>
 			<hit-time initial="500"/>
 		</attributes>
 		<consume>
@@ -2500,13 +2518,13 @@
 			<obtain-soul>
 				<power initial="2"/>
 			</obtain-soul>
-		</effects>
+		</effects>	
 	</skill>
 	<skill id="394" name="Shadow Soul Finding" action="A1">
 		<!-- Obtain 2 Shadow Souls. -->
 		<icon initial="icon.skill55475"/>
-		<attributes magic-critical-rate="5.0" auto-use="ACTIVE">
-			<reuse initial="2000"/>
+		<attributes magic-critical-rate="5.0" static-reuse="true" auto-use="ACTIVE">
+			<reuse initial="3000"/>
 			<hit-time initial="500"/>
 		</attributes>
 		<consume>
