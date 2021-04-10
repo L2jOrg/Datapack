@@ -13,6 +13,7 @@
                 <xs:element name="members-online" type="MembersOnline"/>
                 <xs:element name="hunting-bonus" type="HuntingBonus"/>
                 <xs:element name="raid-bonus" type="RaidBonus"/>
+                <xs:element name="reputation" type="ReputationBonus"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -55,6 +56,12 @@
                     <xs:attribute name="progress" type="xs:unsignedByte" use="required"/>
                 </xs:complexType>
             </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReputationBonus">
+        <xs:sequence>
+            <xs:element name="member-level" type="IntervalValue" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
