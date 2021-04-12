@@ -275,6 +275,23 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="SocialStatus">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="VAGABOND"/>
+            <xs:enumeration value="APPRENTICE"/>
+            <xs:enumeration value="KNIGHT"/>
+            <xs:enumeration value="ELITE_KNIGHT"/>
+            <xs:enumeration value="BARON"/>
+            <xs:enumeration value="COUNT"/>
+            <xs:enumeration value="DUKE"/>
+            <xs:enumeration value="KING"/>
+            <xs:enumeration value="EMPEROR"/>
+            <xs:enumeration value="DUKE_"/>  <!--client shows duke twice-->
+            <xs:enumeration value="GRAND_DUKE"/>
+            <xs:enumeration value="DISTINGUISHED_KING"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="ClassId">
         <xs:restriction base="xs:nonNegativeInteger">
             <xs:minInclusive value="0" />
