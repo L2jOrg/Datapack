@@ -79,17 +79,13 @@
     </skill>
     <skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A2">
         <!-- For 20 minutes,  Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
-        <icon initial="icon.etc_trophy_i00"/>       
+        <icon initial="icon.etc_trophy_i00"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
             <magic-level initial="1"/>
             <reuse initial="1000"/>
             <hit-time initial="200"/>
         </attributes>
         <target/>
-        <!-- <abnormal type="MULTI_BUFF"> -->
-            <!-- <level initial="2"/> -->
-            <!-- <time initial="1200"/> -->
-        <!-- </abnormal> -->
         <effects>
             <call-skill skill="1040">
                 <power initial="3"/>
@@ -274,7 +270,7 @@
     <skill id="55414" name="White Assassin Transformation Scroll" action="A2">
         <!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+       <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
 			<reuse initial="600000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
@@ -319,7 +315,7 @@
 			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
 				<power initial="3.0"/>
 			</stat-modify>
-		</effects>
+		</effects>	
     </skill>
     <skill id="55415" name="Scroll: Enchant Armor (A-grade)" action="A1">
         <!-- none -->
@@ -1048,6 +1044,7 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
+        <!-- <abnormal type="EXP_SP_U"/> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1178,29 +1175,17 @@
                     <value level="10">7</value>
                 </power>
             </speed>
-            <defence-trait start-level="10">               				
-				<trait type="SWORD">
-                    <power initial="10"/>
-                </trait>
-				<trait type="MAGIC_SWORD">
-                    <power initial="10"/>
-                </trait>
-				<trait type="TWO_HAND_SWORD">
-                    <power initial="10"/>
-                </trait>
-				<trait type="ANCIENT_SWORD">
-                    <power initial="10"/>
-                </trait>
-				 <trait type="RAPIER">
+            <defence-trait start-level="10">
+                <trait type="BOW">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUAL">
                     <power initial="10"/>
                 </trait>
-                 <trait type="DUAL_BLUNT">
+                <trait type="SWORD">
                     <power initial="10"/>
                 </trait>
-                <trait type="FIST">
+                <trait type="DAGGER">
                     <power initial="10"/>
                 </trait>
                 <trait type="DUALFIST">
@@ -1216,12 +1201,6 @@
                     <power initial="10"/>
                 </trait>				
 				<trait type="ROD">
-                    <power initial="10"/>
-                </trait>
-				<trait type="DAGGER">
-                    <power initial="10"/>
-                </trait>
-                <trait type="DUAL_DAGGER">
                     <power initial="10"/>
                 </trait>
                 <trait type="SPEAR">
@@ -1324,7 +1303,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="55477" name="Ruby" max-level="10">
+    <skill id="55477" name="Ruby" max-level="10" action="A1">
         <!--
             level 1: Damage received from Soulshots +2%.
             level 2: Damage received from Soulshots +3%.
@@ -1339,7 +1318,7 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+         <attributes property="MAGIC"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1355,9 +1334,9 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>           
-		</effects>
+		</effects>	
     </skill>
-    <skill id="55478" name="Ruby" max-level="10">
+    <skill id="55478" name="Ruby" max-level="10" action="A1">
         <!--
             level 1: Damage received from Blessed Soulshots +2%.
             level 2: Damage received from Blessed Soulshots +3%.
@@ -1372,9 +1351,9 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-       <attributes property="MAGIC"/>
+        <attributes property="MAGIC"/>
         <target/>
-        <effects>
+		<effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1388,9 +1367,9 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>           
-		</effects>
+		</effects>	
     </skill>
-    <skill id="55479" name="Ruby" max-level="10">
+    <skill id="55479" name="Ruby" max-level="10" action="A1">
         <!--
             level 1: Damage from Beast Soulshot +2%.
             level 2: Damage from Beast Soulshot +3%.
@@ -1420,9 +1399,9 @@
                     <value level="9">20</value>
                 </power>
             </stat-modify>           
-		</effects>
+		</effects>	
     </skill>
-    <skill id="55481" name="Sapphire" max-level="10">
+    <skill id="55481" name="Sapphire" max-level="10" action="A1">
         <!--
             level 1: Damage received from Spiritshots +2%.
             level 2: Damage received from Spiritshots +3%.
@@ -1439,7 +1418,7 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-        <effects>
+		<effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1450,11 +1429,12 @@
                     <value level="7">18</value>
                     <value level="8">19</value>
                     <value level="9">20</value>
+                    <value level="10">20</value>
                 </power>
             </stat-modify>
 		</effects>
     </skill>
-    <skill id="55482" name="Sapphire" max-level="10">
+    <skill id="55482" name="Sapphire" max-level="10" action="A1">
         <!--
             level 1: Damage received from Blessed Spiritshots +2%.
             level 2: Damage received from Blessed Spiritshots +3%.
@@ -1471,7 +1451,7 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-        <effects>
+		<effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1487,7 +1467,7 @@
             </stat-modify>
 		</effects>
     </skill>
-    <skill id="55483" name="Sapphire" max-level="10">
+    <skill id="55483" name="Sapphire" max-level="10" action="A1">
         <!--
             level 1: Damage from Beast Spiritshot +2%.
             level 2: Damage from Beast Spiritshot +3%.
@@ -1504,7 +1484,7 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-        <effects>
+		<effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1643,11 +1623,22 @@
         <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
+        <conditions>
+            <encumbered slots="10" weight="20"/>
+        </conditions>	
+        <effects>
+            <random-restoration>
+                <item id="70434" chance="60"/> <!-- Brooch Lv. 1  -->
+                <item id="70435" chance="20"/> <!--Brooch Lv. 2  -->
+                <item id="70526" chance="10"/> <!-- Brooch Lv. 3  -->
+                <item id="70831" chance="7"/> <!-- Brooch Lv. 4  -->
+                <item id="71413" chance="3"/> <!-- Brooch Lv. 5  -->
+            </random-restoration>
+        </effects>			
     </skill>
     <skill id="55496" name="Topaz Jewelry Box" action="A1">
         <!-- none -->

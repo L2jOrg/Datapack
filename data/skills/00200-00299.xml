@@ -67,6 +67,12 @@
         </attributes>
         <target/>
         <effects>
+			<trigger-skill-by-attack skill="5604" start-level="9">
+				<power initial="1.0"/>
+                <chance initial="50"/>
+                <min-damage initial="1.0"/>
+				<weapons>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapons>
+            </trigger-skill-by-attack>		
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="6">
                     <value level="2">9</value>
@@ -191,7 +197,7 @@
                     <value level="58">162</value>
                     <value level="59">165</value>
                 </power>
-                <weapon-type>SWORD</weapon-type>
+                <weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="3">
@@ -254,7 +260,7 @@
                     <value level="58">176</value>
                     <value level="59">180</value>
                 </power>
-                <weapon-type>BLUNT</weapon-type>
+                <weapon-type>BLUNT HAMMER ROD STAFF</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -758,7 +764,7 @@
                     <value level="3">70.0</value>
                     <value level="4">100.0</value>
                     <value level="5">140.0</value>
-                    <value level="6">152.0</value>
+                    <value level="6">150.0</value>
                     <value level="7">180.0</value>
                     <value level="8">200.0</value>
                 </power>
@@ -1046,12 +1052,12 @@
                     <value level="58">333.0</value>
                     <value level="59">340.0</value>
                 </power>
-                <weapon-type>SWORD BLUNT</weapon-type>
+                <weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapon-type>
             </stat-modify>
         </effects>
     </skill>
     <skill id="221" name="Silent Move" action="T">
-        <!-- Disables preemptive attacks from enemies. Decreases Speed by -20%% and continuously consumes MP. -->
+        <!-- Disables preemptive attacks from enemies. Decreases Speed by 20%% and continuously consumes MP. -->
         <icon initial="icon.skill0221"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="40"/>
@@ -1426,11 +1432,6 @@
                     <value level="3">6.0</value>
                 </power>
             </stat-by-move-type>
-            <defence-trait>
-                <trait type="SHOCK">
-                    <power initial="-11.0"/>
-                </trait>
-            </defence-trait>
         </effects>
     </skill>
     <skill id="226" name="Relax" action="T">
@@ -1596,6 +1597,7 @@
             <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
                 <power initial="3.0">
                     <value level="3">5.0</value>
+                    <value level="5">6.0</value>
                     <value level="61">7.0</value>
                     <value level="62">8.0</value>
                     <value level="63">9.0</value>
@@ -1684,7 +1686,7 @@
         </abnormal>
         <effects>
             <speed>
-                <power initial="22.0">
+                <power initial="20.0">
                     <value level="2">33.0</value>
                 </power>
             </speed>
@@ -1992,7 +1994,7 @@
 					<value level="2">90.0</value>
                     <value level="3">100.0</value>
 				</chance>
-            </trigger-skill-by-damage>
+            </trigger-skill-by-damage>	
         </effects>
     </skill>
     <skill id="233" name="Light Armor Mastery" max-level="61">
@@ -3272,6 +3274,11 @@
                     <value level="52">155.0</value>
                     <value level="53">158.0</value>
                     <value level="54">161.0</value>
+                    <value level="55">164.0</value>
+                    <value level="56">168.0</value>
+                    <value level="57">172.0</value>
+                    <value level="58">176.0</value>
+                    <value level="59">180.0</value>
                 </power>
                 <armor-type>MAGIC</armor-type>
             </stat-modify>
@@ -3399,6 +3406,11 @@
                     <value level="52">144.0</value>
                     <value level="53">147.0</value>
                     <value level="54">150.0</value>
+                    <value level="55">153.0</value>
+                    <value level="56">156.0</value>
+                    <value level="57">159.0</value>
+                    <value level="58">162.0</value>
+                    <value level="59">165.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
@@ -3532,7 +3544,13 @@
                     <value level="48">108.0</value>
                     <value level="49">110.0</value>
                     <value level="50">112.0</value>
-                    <value level="51">117.0</value>
+                    <value level="51">114.0</value>
+                    <value level="52">117.0</value>
+                    <value level="53">120.0</value>
+                    <value level="54">123.0</value>
+                    <value level="55">126.0</value>
+                    <value level="56">129.0</value>
+                    <value level="57">132.0</value>
                 </power>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
@@ -3863,9 +3881,9 @@
                     <value level="56">176.0</value>
                     <value level="57">180.0</value>
                     <value level="58">185.0</value>
-                    <value level="59">190.0</value>
+                    <value level="59">190.0</value>					
                 </power>
-                <weapon-type>SWORD BLUNT</weapon-type>
+                <weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -3980,7 +3998,10 @@
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="88.0"/>
+                <power initial="88.0">
+					<value level="44">89.0</value>
+                    <value level="46">90.0</value>
+				</power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
@@ -4087,6 +4108,11 @@
                     <value level="40">80.0</value>
                     <value level="41">83.0</value>
                     <value level="42">86.0</value>
+                    <value level="43">90.0</value>
+                    <value level="44">95.0</value>
+                    <value level="45">100.0</value>
+                    <value level="46">105.0</value>
+                    <value level="47">110.0</value>
                 </power>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
@@ -4095,7 +4121,10 @@
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
-                <power initial="68.0"/>
+                <power initial="68.0">
+					<value level="45">69.0</value>
+                    <value level="47">70.0</value>
+				</power>	
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
         </effects>
@@ -4299,7 +4328,7 @@
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
-            <chance initial="60"/>
+            <chance initial="50"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -4307,7 +4336,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="487.0">
                     <value level="2">518.0</value>
                     <value level="3">550.0</value>
@@ -4394,7 +4423,7 @@
 		level 30: Gathers Momentum to attack the target with 5261 Power. Damage increases with Momentum consumption. Damage +30% when the maximum 3 Momentum are consumed. Requires a Sword, Blunt Weapon, or Dualsword.
 	 -->
         <icon initial="icon.skill0261"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="53">
                 <value level="2">54</value>
                 <value level="3">55</value>
@@ -4423,7 +4452,7 @@
                 <value level="27">81</value>
                 <value level="28">82</value>
                 <value level="29">83</value>
-                <value level="30">85</value>
+                <value level="30">84</value>
             </magic-level>
             <cast-range initial="40"/>
             <reuse initial="10000"/>
@@ -4498,11 +4527,11 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF DUAL</type>
+                <type>DUAL</type>
             </weapon>
         </conditions>
         <effects>
-            <energy-attack consume-charges="3" physical-defense-mod="3.0">
+            <energy-attack consume-charges="3" critical-chance="15" ignore-shield="true" over-hit="true" physical-defense-mod="1.0">
                 <power initial="1948.0">
                     <value level="2">2042.0</value>
                     <value level="3">2138.0</value>
@@ -4688,46 +4717,43 @@
                 <value level="35">47</value>
                 <value level="36">48</value>
             </mana-init>
-            <mana initial="92">
-                <value level="2">95</value>
-                <value level="3">97</value>
-                <value level="4">97</value>
-                <value level="5">101</value>
-                <value level="6">104</value>
-                <value level="7">107</value>
-                <value level="8">111</value>
-                <value level="9">114</value>
-                <value level="10">118</value>
-                <value level="11">121</value>
-                <value level="12">125</value>
-                <value level="13">127</value>
-                <value level="14">127</value>
-                <value level="15">131</value>
-                <value level="16">134</value>
-                <value level="17">138</value>
-                <value level="18">141</value>
-                <value level="19">144</value>
-                <value level="20">148</value>
-                <value level="21">151</value>
-                <value level="22">154</value>
-                <value level="23">156</value>
-                <value level="24">156</value>
-                <value level="25">159</value>
-                <value level="26">162</value>
-                <value level="27">165</value>
-                <value level="28">168</value>
-                <value level="29">171</value>
-                <value level="30">174</value>
-                <value level="31">177</value>
-                <value level="32">179</value>
-                <value level="33">182</value>
-                <value level="34">184</value>
-                <value level="35">186</value>
-                <value level="36">189</value>
-                <value level="37">191</value>
-            </mana>               
-        </consume>                
-        <target type="TARGET"/>   
+            <mana initial="115">
+                <value level="2">119</value>
+                <value level="3">122</value>
+                <value level="5">127</value>
+                <value level="6">130</value>
+                <value level="7">134</value>
+                <value level="8">139</value>
+                <value level="9">143</value>
+                <value level="10">148</value>
+                <value level="11">152</value>
+                <value level="12">157</value>
+                <value level="13">159</value>
+                <value level="15">164</value>
+                <value level="16">168</value>
+                <value level="17">173</value>
+                <value level="18">177</value>
+                <value level="19">180</value>
+                <value level="20">185</value>
+                <value level="21">189</value>
+                <value level="22">193</value>
+                <value level="23">195</value>
+                <value level="25">199</value>
+                <value level="26">203</value>
+                <value level="27">207</value>
+                <value level="28">210</value>
+                <value level="29">214</value>
+                <value level="30">218</value>
+                <value level="31">222</value>
+                <value level="32">224</value>
+                <value level="33">228</value>
+                <value level="34">230</value>
+                <value level="35">233</value>
+                <value level="36">237</value>
+                <value level="37">239</value>
+            </mana>
+        </consume>
+        <target type="TARGET"/>
         <effects>
             <effect name="Heal">
                 <power initial="236.0">
@@ -4972,43 +4998,43 @@
         </conditions>
         <effects>
             <fatal-blow chance-boost="300.0" over-hit="true">
-                <power initial="1218.0">
-                    <value level="2">1294.0</value>
-                    <value level="3">1374.0</value>
-                    <value level="4">1458.0</value>
-                    <value level="5">1546.0</value>
-                    <value level="6">1637.0</value>
-                    <value level="7">1731.0</value>
-                    <value level="8">1830.0</value>
-                    <value level="9">1933.0</value>
-                    <value level="10">2038.0</value>
-                    <value level="11">2148.0</value>
-                    <value level="12">2263.0</value>
-                    <value level="13">2380.0</value>
-                    <value level="14">2501.0</value>
-                    <value level="15">2627.0</value>
-                    <value level="16">2756.0</value>
-                    <value level="17">2888.0</value>
-                    <value level="18">3023.0</value>
-                    <value level="19">3163.0</value>
-                    <value level="20">3304.0</value>
-                    <value level="21">3450.0</value>
-                    <value level="22">3598.0</value>
-                    <value level="23">3749.0</value>
-                    <value level="24">3903.0</value>
-                    <value level="25">4059.0</value>
-                    <value level="26">4217.0</value>
-                    <value level="27">4378.0</value>
-                    <value level="28">4540.0</value>
-                    <value level="29">4703.0</value>
-                    <value level="30">4868.0</value>
-                    <value level="31">5033.0</value>
-                    <value level="32">5199.0</value>
-                    <value level="33">5366.0</value>
-                    <value level="34">5532.0</value>
-                    <value level="35">5698.0</value>
-                    <value level="36">5863.0</value>
-                    <value level="37">6027.0</value>
+                <power initial="1107.0">
+                    <value level="2">1176.0</value>
+                    <value level="3">1249.0</value>
+                    <value level="4">1325.0</value>
+                    <value level="5">1405.0</value>
+                    <value level="6">1488.0</value>
+                    <value level="7">1574.0</value>
+                    <value level="8">1664.0</value>
+                    <value level="9">1757.0</value>
+                    <value level="10">1853.0</value>
+                    <value level="11">1953.0</value>
+                    <value level="12">2057.0</value>
+                    <value level="13">2164.0</value>
+                    <value level="14">2274.0</value>
+                    <value level="15">2388.0</value>
+                    <value level="16">2505.0</value>
+                    <value level="17">2625.0</value>
+                    <value level="18">2748.0</value>
+                    <value level="19">2875.0</value>
+                    <value level="20">3004.0</value>
+                    <value level="21">3136.0</value>
+                    <value level="22">3271.0</value>
+                    <value level="23">3408.0</value>
+                    <value level="24">3548.0</value>
+                    <value level="25">3690.0</value>
+                    <value level="26">3834.0</value>
+                    <value level="27">3980.0</value>
+                    <value level="28">4127.0</value>
+                    <value level="29">4275.0</value>
+                    <value level="30">4425.0</value>
+                    <value level="31">4575.0</value>
+                    <value level="32">4726.0</value>
+                    <value level="33">4878.0</value>
+                    <value level="34">5029.0</value>
+                    <value level="35">5180.0</value>
+                    <value level="36">5330.0</value>
+                    <value level="37">5479.0</value>
                     <value level="38">6090.0</value>
                     <value level="39">6152.0</value>
                     <value level="40">6215.0</value>
@@ -5027,7 +5053,7 @@
 		level 2: For 5 minutes, P. Def. +30% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0264"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">71</value>
             </magic-level>
@@ -5044,9 +5070,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="SONG_OF_EARTH">
-            <level initial="1">
-				<value level="2">2</value>
-			</level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <effects>
@@ -5060,7 +5084,7 @@
     <skill id="265" name="Song of Life" action="A2" type="DANCE">
         <!-- For 5 minutes, HP Recovery Bonus +20% for all party members. Also increases MP Consumption when singing while song/dance is in effect. -->
         <icon initial="icon.skill0265"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="52"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
@@ -5086,7 +5110,7 @@
 		level 2: For 5 minutes, Max MP +10% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0266"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
                 <value level="2">73</value>
             </magic-level>
@@ -5103,9 +5127,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="SONG_OF_WATER">
-            <level initial="1">
-				<value level="2">2</value>
-			</level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <effects>
@@ -5127,7 +5149,7 @@
 		level 2: For 5 minutes, M. Def +35% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0267"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="40">
                 <value level="2">61</value>
             </magic-level>
@@ -5144,9 +5166,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="SONG_OF_WARDING">
-            <level initial="1">
-				<value level="2">2</value>
-			</level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <effects>
@@ -5163,7 +5183,7 @@
 		level 2: For 5 minutes, Movement Speed +25 for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0268"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="46">
                 <value level="2">81</value>
             </magic-level>
@@ -5199,7 +5219,7 @@
 		level 2: For 5 minutes, P. Critical Rate +105% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0269"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="40">
                 <value level="2">83</value>
             </magic-level>
@@ -5235,7 +5255,7 @@
 		level 2: For 5 minutes, P. Critical/M. Critical Attack Receival Rate -10% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
 	 -->
         <icon initial="icon.skill0270"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="43">
                 <value level="2">65</value>
             </magic-level>
@@ -5252,9 +5272,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="SONG_OF_INVOCATION">
-            <level initial="1">
-				<value level="2">2</value>
-			</level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <effects>
@@ -5276,7 +5294,7 @@
 		level 2: For 5 minutes, P. Atk. +16% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword.
 	 -->
         <icon initial="icon.skill0271"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="55">
                 <value level="2">71</value>
             </magic-level>
@@ -5293,9 +5311,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="DANCE_OF_WARRIOR">
-            <level initial="1">
-                <value level="2">2</value>
-            </level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <conditions>
@@ -5314,7 +5330,7 @@
     <skill id="272" name="Dance of Inspiration" action="A2" type="DANCE">
         <!-- For 5 minutes, P. Accuracy +4 for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
         <icon initial="icon.skill0272"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="46"/>
             <reuse initial="3000"/>
             <effect-point initial="438"/>
@@ -5345,7 +5361,7 @@
 		level 2: For 5 minutes, M. Atk. +24% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword.
 	 -->
         <icon initial="icon.skill0273"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="49">
                 <value level="2">69</value>
             </magic-level>
@@ -5362,9 +5378,7 @@
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal type="DANCE_OF_MYSTIC">
-            <level initial="1">
-				<value level="2">2</value>
-			</level>
+            <level initial="1"/>
             <time initial="300"/>
         </abnormal>
         <conditions>
@@ -5386,7 +5400,7 @@
 		level 2: For 5 minutes, P. Critical Damage +38% for a party member. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword.
 	 -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="40">
                 <value level="2">61</value>
             </magic-level>
@@ -5425,7 +5439,7 @@
 		level 2: For 5 minutes, Atk. Spd. +20% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword.
 	 -->
         <icon initial="icon.skill0275"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="58">
                 <value level="2">81</value>
             </magic-level>
@@ -5466,7 +5480,7 @@
 		level 2: For 5 minutes, Magic Cancellation Damage -50 and Casting Spd. +50 for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword.
 	 -->
         <icon initial="icon.skill0276"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="52">
                 <value level="2">82</value>
             </magic-level>
@@ -5509,12 +5523,11 @@
     <skill id="277" name="Dance of Light" action="A2" type="DANCE">
         <!-- For 5 minutes, Holy Attack +20 for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
         <icon initial="icon.skill0277"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="43"/>
             <reuse initial="3000"/>
             <effect-point initial="408"/>
             <hit-time initial="2500"/>
-
             <element type="HOLY"/>
         </attributes>
         <consume>
@@ -5537,6 +5550,7 @@
         </effects>
     </skill>
     <skill id="278" name="Summon Viper Cubic" max-level="12" action="A1" type="MAGIC">
+		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Viper Cubic. Viper Cubic uses magic that poisons a targeted enemy. Consumes 2 Spirit Ore when summoned.
 		level 2: Summons a Viper Cubic. Viper Cubic uses magic that poisons a targeted enemy. Consumes 3 Spirit Ore when summoned.
@@ -5576,18 +5590,18 @@
                 <value level="11">19</value>
                 <value level="12">20</value>
             </mana-init>
-            <mana initial="44">
-                <value level="2">50</value>
-                <value level="3">55</value>
-                <value level="4">60</value>
-                <value level="5">64</value>
-                <value level="6">67</value>
-                <value level="7">70</value>
-                <value level="8">73</value>
-                <value level="9">76</value>
-                <value level="10">79</value>
-                <value level="11">82</value>
-                <value level="12">85</value>
+            <mana initial="35">
+                <value level="2">40</value>
+                <value level="3">44</value>
+                <value level="4">48</value>
+                <value level="5">51</value>
+                <value level="6">53</value>
+                <value level="7">55</value>
+                <value level="8">57</value>
+                <value level="9">59</value>
+                <value level="10">61</value>
+                <value level="11">63</value>
+                <value level="12">65</value>
             </mana>
             <item initial="3031"/>
             <item-count initial="2">
@@ -5672,7 +5686,7 @@
             <chance initial="60"/>
         </abnormal>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="2927.0">
                     <value level="2">3444.0</value>
                     <value level="3">3990.0</value>
@@ -5839,7 +5853,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1900"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -5946,7 +5959,7 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="281" name="Fist Breaker" max-level="45" debuff="true" action="A2">
+    <skill id="281" name="Crushing Fist" max-level="45" debuff="true" action="A2">
         <!--
 		level 1: Hurls an iron-fist to attack the target with bonus 487 Power, and stuns the target for 7 seconds. Requires a fist weapon. Ignores Shield Defense. Over-hit.
 		level 2: Hurls an iron-fist to attack the target with bonus 518 Power, and stuns the target for 7 seconds. Requires a fist weapon. Ignores Shield Defense. Over-hit.
@@ -6247,6 +6260,7 @@
         </effects>
     </skill>
     <skill id="283" name="Summon Dark Panther" max-level="11" action="A1" type="MAGIC">
+		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Dark Panther that attacks with agility. Requires 1 C-grade Crystals.
 		level 2: Summons a Dark Panther that attacks with agility. Requires 2 C-grade Crystals.
@@ -6286,17 +6300,17 @@
                 <value level="10">37</value>
                 <value level="11">41</value>
             </mana-init>
-            <mana initial="70">
-                <value level="2">88</value>
-                <value level="3">107</value>
-                <value level="4">115</value>
-                <value level="5">123</value>
-                <value level="6">130</value>
-                <value level="7">137</value>
-                <value level="8">151</value>
-                <value level="9">158</value>
-                <value level="10">175</value>
-                <value level="11">193</value>
+            <mana initial="56">
+                <value level="2">70</value>
+                <value level="3">85</value>
+                <value level="4">92</value>
+                <value level="5">98</value>
+                <value level="6">104</value>
+                <value level="7">109</value>
+                <value level="8">120</value>
+                <value level="9">125</value>
+                <value level="10">138</value>
+                <value level="11">152</value>
             </mana>
             <item initial="1459"/>
             <item-count initial="1">
@@ -6705,7 +6719,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>BLUNT HAMMER ROD STAFF SPEAR</type>
+                <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF SPEAR</type>
             </weapon>
         </conditions>
         <effects>
@@ -6751,6 +6765,76 @@
                         <value level="10">-19</value>
                         <value level="11">-20</value>
                     </power>
+                </trait>
+				<trait type="TWO_HAND_SWORD">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+				<trait type="MAGIC_SWORD">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+				<trait type="HAMMER">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+				<trait type="ROD">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>
+                </trait>
+				<trait type="STAFF">
+                    <power initial="-10">
+                        <value level="2">-11</value>
+                        <value level="3">-12</value>
+                        <value level="4">-13</value>
+                        <value level="5">-14</value>
+                        <value level="6">-15</value>
+                        <value level="7">-16</value>
+                        <value level="8">-17</value>
+                        <value level="9">-18</value>
+                        <value level="10">-19</value>
+                        <value level="11">-20</value>
+                    </power>				
                 </trait>
             </defence-trait>
         </effects>
@@ -6949,23 +7033,23 @@
                 <value level="14">18</value>
                 <value level="16">20</value>
             </mana-init>
-            <mana initial="47">
-                <value level="2">49</value>
-                <value level="3">54</value>
-                <value level="4">58</value>
-                <value level="5">62</value>
-                <value level="6">65</value>
-                <value level="7">69</value>
-                <value level="8">73</value>
-                <value level="9">75</value>
-                <value level="10">78</value>
-                <value level="11">80</value>
-                <value level="12">83</value>
-                <value level="13">85</value>
-                <value level="14">87</value>
-                <value level="15">89</value>
-                <value level="16">98</value>
-                <value level="17">100</value>
+            <mana initial="37">
+                <value level="2">39</value>
+                <value level="3">43</value>
+                <value level="4">46</value>
+                <value level="5">49</value>
+                <value level="6">52</value>
+                <value level="7">55</value>
+                <value level="8">58</value>
+                <value level="9">60</value>
+                <value level="10">62</value>
+                <value level="11">64</value>
+                <value level="12">66</value>
+                <value level="13">68</value>
+                <value level="14">69</value>
+                <value level="15">71</value>
+                <value level="16">78</value>
+                <value level="17">80</value>
             </mana>
         </consume>
         <target type="ENEMY"/>
@@ -7013,6 +7097,9 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
+		<conditions>
+			<remain-status amount="30" stat="HP"/>
+		</conditions>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="32.9">
@@ -7066,6 +7153,9 @@
         <attributes property="MAGIC" magic-critical-rate="5.0">
         </attributes>
         <target/>
+		<conditions>
+			<remain-status amount="30" stat="HP"/>
+		</conditions>		
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
                 <power initial="116.875">
@@ -7146,35 +7236,39 @@
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
             <stat-hp-based hp-percent="60" mode="PER" stat="PHYSICAL_ATTACK">
-                <power initial="10"/>
+                <power initial="20"/>
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
             <stat-hp-based hp-percent="60" mode="PER" stat="PHYSICAL_DEFENCE">
-                <power initial="5"/>
+                <power initial="15"/>
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
             <stat-hp-based hp-percent="60" mode="PER" stat="PHYSICAL_ATTACK_SPEED">
-                <power initial="5"/>
-                <weapon-type>FIST</weapon-type>
-            </stat-hp-based>
-            <stat-hp-based hp-percent="60" stat="CRITICAL_RATE">
-                <power initial="50"/>
-                <weapon-type>FIST</weapon-type>
-            </stat-hp-based>
-            <stat-hp-based hp-percent="30" stat="EVASION_RATE">
-                <power initial="2"/>
-                <weapon-type>FIST</weapon-type>
-            </stat-hp-based>
-            <stat-hp-based hp-percent="30" mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="10"/>
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
-            <stat-hp-based hp-percent="30" mode="PER" stat="EVASION_RATE">
-                <power initial="5"/>
+            <stat-hp-based hp-percent="60" stat="CRITICAL_RATE">
+                <power initial="100"/>
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
+            <stat-hp-based hp-percent="30" stat="EVASION_RATE">
+                <power initial="6"/>
+                <weapon-type>FIST</weapon-type>
+            </stat-hp-based>
+            <stat-hp-based hp-percent="30" mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="30"/>
+                <weapon-type>FIST</weapon-type>
+            </stat-hp-based>
+            <stat-hp-based hp-percent="30" mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="20"/>
+                <weapon-type>FIST</weapon-type>
+            </stat-hp-based>
+            <stat-hp-based hp-percent="30" mode="PER" stat="PHYSICAL_ATTACK_SPEED">
+                <power initial="10"/>
+                <weapon-type>FIST</weapon-type>
+            </stat-hp-based>			
             <stat-hp-based hp-percent="30" stat="CRITICAL_RATE">
-                <power initial="100"/>
+                <power initial="200"/>
                 <weapon-type>FIST</weapon-type>
             </stat-hp-based>
         </effects>
@@ -7257,14 +7351,14 @@
                     <value level="33">192</value>
                     <value level="34">200</value>
                 </power>
-                <weapon-type>TWO_HAND_SWORD HAMMER</weapon-type>
+                <weapon-type>TWO_HAND_SWORD HAMMER STAFF</weapon-type>
             </stat-modify>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
                 <power initial="3.0">
 					<value level="30">4.0</value>
 					<value level="33">5.0</value>
                 </power>
-                <weapon-type>TWO_HAND_SWORD HAMMER</weapon-type>
+                <weapon-type>TWO_HAND_SWORD HAMMER STAFF</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -7340,13 +7434,13 @@
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
-            <time initial="1200"/>             
+            <time initial="1200"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0">
                     <value level="2">12.0</value>
-                    <value level="3">15.0</value>
+					<value level="3">15.0</value>
                 </power>
                 <weapon-type>DUAL</weapon-type>
             </stat-modify>
@@ -7401,8 +7495,8 @@
             <hit-time initial="15000"/>
         </attributes>
         <consume>
-            <mana-init initial="530"/>
-            <mana initial="530"/>
+            <mana-init initial="150"/>
+            <mana initial="380"/>
             <item initial="1460"/>
             <item-count initial="70"/>
         </consume>

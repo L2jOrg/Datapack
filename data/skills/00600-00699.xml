@@ -306,8 +306,8 @@
     </skill>
     <skill id="622" name="Ultimate Escape" max-level="2" action="A2">
         <!--
-            level 1: For 30 seconds, P. Evasion/M. Evasion +20, P./M. Attack Skill Evasion +20%, Movement Speed +30.
-            level 2: For 30 seconds, P. Evasion +35, Movement Speed +30%, and P. Skill Evasion Rate +40.
+            level 1: For 30 sec., P./ M. Evasion +20, P./ M. Skill Evasion +20%, Speed +30.
+            level 2: For 30 sec., P./ M. Evasion +35, P./ M. Skill Evasion +30%, Speed +40.
          -->
         <icon initial="icon.skill0622"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
@@ -343,19 +343,18 @@
             </stat-modify>
             <skill-evasion type="PHYSIC">
                 <power initial="20.0">
-                    <value level="2">20.0</value>
+                    <value level="2">30.0</value>
                 </power>
             </skill-evasion>
             <skill-evasion type="MAGIC">
                 <power initial="20.0">
-                    <value level="2">20.0</value>
+                    <value level="2">30.0</value>
                 </power>
             </skill-evasion>
-            <speed stop-level="1">
-                <power initial="30"/>
-            </speed>
-            <speed mode="PER" start-level="2">
-                <power initial="30"/>
+            <speed>
+                <power initial="30">
+					<value level="2">40</value>
+				</power>
             </speed>
         </effects>
     </skill>
@@ -390,7 +389,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="627" name="Soul Panic" max-level="5" debuff="true" action="A2">
+    <skill id="627" name="Mental Panic" max-level="5" debuff="true" action="A2">
         <!-- Inflicts Fear on the enemy for 3 seconds. -->
         <icon initial="icon.skill10771"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20" auto-use="ACTIVE">
@@ -891,7 +890,6 @@
             <effect-point initial="-844"/>
             <effect-range initial="1400"/>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -914,7 +912,6 @@
             <effect-point initial="-338"/>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -966,7 +963,6 @@
             <effect-point initial="-331"/>
             <effect-range initial="1250"/>
             <hit-time initial="1500"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
