@@ -608,7 +608,6 @@
             </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="2000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -800,7 +799,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1080"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -834,7 +832,6 @@
             </effect-point>
             <effect-range initial="1200"/>
             <hit-time initial="2000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -868,7 +865,6 @@
             </effect-point>
             <effect-range initial="1200"/>
             <hit-time initial="2000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -1086,7 +1082,6 @@
             <effect-point initial="-100"/>
             <effect-range initial="1400"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1178,7 +1173,6 @@
             <reuse initial="11000"/>
             <effect-point initial="-342"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1202,7 +1196,6 @@
             <effect-point initial="-342"/>
             <effect-range initial="1400"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1414,7 +1407,6 @@
             <effect-point initial="-92"/>
             <effect-range initial="1100"/>
             <hit-time initial="1200"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1453,7 +1445,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="1800"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1487,7 +1478,6 @@
             <reuse initial="5000"/>
             <effect-point initial="-275"/>
             <hit-time initial="1800"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -2020,13 +2010,13 @@
         </abnormal>
         <effects>
             <skill-evasion type="PHYSIC">
-                <power initial="10.0"/>
+                <power initial="50.0"/>
             </skill-evasion>
             <speed>
                 <power initial="20.0"/>
             </speed>
             <stat-modify stat="EVASION_RATE" stat-add="EVASION_RATE">
-                <power initial="50.0"/>
+                <power initial="10.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
                 <power initial="20.0"/>
@@ -2133,7 +2123,7 @@
     <skill id="777" name="Demolition Impact" debuff="true" action="A2">
         <!-- Unleashes a shock of destruction to attack a frontal enemy with bonus 5980 Power. P. Def. -30%% and M. Def. -30%%. Requires a sword or blunt weapon. Critical. Over-hit. -->
         <icon initial="icon.skill0777"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0"  trait="DEATH" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DEATH" auto-use="ACTIVE">
             <magic-level initial="80"/>
             <cast-range initial="150"/>
             <reuse initial="75000"/>
@@ -2189,6 +2179,7 @@
         </effects>
     </skill>
     <skill id="791" name="Lightning Shock" max-level="5" debuff="true" action="A2" type="MAGIC">
+		<!-- Correct MP consumption -->
         <!-- Electrocutes the enemy, paralyzing them for 3 seconds. -->
         <icon initial="icon.skill0791"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PARALYZE" level-bonus-rate="20" auto-use="ACTIVE">
@@ -2216,11 +2207,11 @@
                 <value level="4">17</value>
                 <value level="5">20</value>
             </mana-init>
-            <mana initial="30">
-                <value level="2">35</value>
-                <value level="3">40</value>
-                <value level="4">45</value>
-                <value level="5">50</value>
+            <mana initial="20">
+                <value level="2">23</value>
+                <value level="3">25</value>
+                <value level="4">28</value>
+                <value level="5">30</value>
             </mana>
         </consume>
         <target type="ENEMY"/>
