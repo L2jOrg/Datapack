@@ -1701,7 +1701,6 @@
             <cast-range initial="900"/>
             <reuse initial="10000"/>
             <effect-point initial="-655"/>
-            <hit-time/>
         </attributes>
         <target type="ENEMY"/>
         <abnormal type="DEATH_MARK" visual="DEATH_MARK">
@@ -1795,7 +1794,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="500">
                     <value level="2">850</value>
                     <value level="3">1360</value>
@@ -1853,7 +1852,7 @@
             </weapon>
         </conditions>
 		<effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="650">
                     <value level="2">1105</value>
                     <value level="3">1768</value>
@@ -1915,8 +1914,8 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
-                <power initial="1000">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
+                <power initial="1800">
                     <value level="2">2520</value>
                     <value level="3">3024</value>
                     <value level="4">3477</value>
@@ -1967,7 +1966,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="2250">
                     <value level="2">3150</value>
                     <value level="3">3780</value>
@@ -2018,7 +2017,7 @@
         </abnormal>
         <conditions>
             <weapon>
-                <type>ANCIENT_SWORD SWORD BLUNT SPEAR FIST DUAL_BLUNT DUAL</type>
+                <type>ANCIENT_SWORD SWORD BLUNT SPEAR FIST DUAL_BLUNT DUAL TWO_HAND_SWORD HAMMER</type>
             </weapon>
             <check-range min="200"/>
         </conditions>
@@ -2238,7 +2237,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0" over-hit="true">
+            <physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="276">
                     <value level="2">470</value>
                     <value level="3">750</value>
@@ -2258,6 +2257,7 @@
         </effects>
     </skill>
     <skill id="45163" name="Soul Spark" max-level="8" action="A1" type="MAGIC">
+		<!-- Correct MP consumption -->
         <!--
             level 1: Attacks the enemy with bonus 80 Power added to M. Atk. Requires a Rapier.
             level 2: Attacks the enemy with bonus 90 Power added to M. Atk. Requires a Rapier.
@@ -2303,14 +2303,14 @@
                 <value level="7">12</value>
                 <value level="8">13</value>
             </mana-init>
-            <mana initial="24">
-                <value level="2">28</value>
-                <value level="3">32</value>
-                <value level="4">36</value>
-                <value level="5">40</value>
-                <value level="6">44</value>
-                <value level="7">48</value>
-                <value level="8">52</value>
+            <mana initial="18">
+                <value level="2">21</value>
+                <value level="3">24</value>
+                <value level="4">27</value>
+                <value level="5">30</value>
+                <value level="6">33</value>
+                <value level="7">36</value>
+                <value level="8">39</value>
             </mana>
         </consume>
         <target type="ENEMY"/>
@@ -2670,7 +2670,7 @@
             </weapon>
         </conditions>
         <effects>
-            <physical-attack critical-chance="15.0"  over-hit="true">
+            <physical-attack critical-chance="15.0" over-hit="true">
                 <power initial="150">
                     <value level="2">375</value>
                     <value level="3">750</value>
@@ -2783,7 +2783,7 @@
             </weapon>
         </conditions>
         <effects>
-			<physical-attack critical-chance="15.0" over-hit="true">
+			<physical-attack critical-chance="15.0" ignore-shield="true" over-hit="true">
                 <power initial="408">
                     <value level="2">652</value>
                     <value level="3">979</value>
@@ -3386,8 +3386,8 @@
 			<time initial="1200"/>
 		</abnormal>
 		<effects>
-			<effect name="HealOverTime" ticks="8">
-				<power initial="200.0"/>
+			<effect name="HealOverTime" ticks="10">
+				<power initial="45.0"/>
 			</effect>
 		</effects>
     </skill>
@@ -3408,12 +3408,12 @@
 			<time initial="1200"/>
 		</abnormal>
 		<effects>
-			<effect name="ManaHealOverTime" ticks="8">
-				<power initial="100.0"/>
+			<effect name="ManaHealOverTime" ticks="10">
+				<power initial="12.0"/>
 			</effect>
 		</effects>
     </skill>
-   <skill id="45178" name="Shine Mastery" max-level="2">
+    <skill id="45178" name="Shine Mastery" max-level="2">
         <!--
             level 1: Can absorb the power of light.\n\nGather 100 Shine Souls to transform into Shine Side.\n\n<Shine Side>\nReceive MP Absorption, Defense, and Acceleration Stage 1 abilities.
             level 2: Can absorb the power of light.\n\nGather 100 Shine Souls to transform into Shine Side.\n\n<Shine Side>\nReceive MP Absorption, Defense, Recovery, and Acceleration Stage 2 abilities.
@@ -3433,7 +3433,7 @@
 				</power>
                 <chance initial="30"/>
             </trigger-skill-by-attack>
-            <trigger-skill-by-change-exp skill="45180">
+            <trigger-skill-by-change-exp skill="45180" target="SELF">
                  <power initial="1">
 					<value level="2">2</value>
 				</power>
@@ -3454,7 +3454,7 @@
 					<value level="2">3</value>
 				</power>
             </trigger-skill-by-attacking>
-            <trigger-skill-by-attack skill="45181">
+            <trigger-skill-by-attack skill="45181" target="SELF">
                  <power initial="2">
 					<value level="2">3</value>
 				</power>
