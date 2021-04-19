@@ -196,7 +196,7 @@
 	<item id="29519" name="XP/SP Boost Scroll (Mid-grade)" type="SCROLL">
 	<!-- XP/SP Gain + 40% for 20 minutes. Effect remains even after death. -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55000" level="2" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
@@ -569,7 +569,7 @@
 	<item id="29565" name="XP/SP Boost Scroll" type="SCROLL">
 	<!-- Increases XP/SP from hunting by 20% for 60 minutes. Effect remains even after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="55041" value="-1"/>  <!-- XP/SP Boost -->
 		</skill-reducer>
