@@ -15,7 +15,7 @@
 	<item id="90302" name="New Cleaning Tool's Supply List - Not Available" type="NONE">
 	<!-- The item is not available. Priest Gerald tries to make tools for decorating the inner parts of the Temple that is currently under repairs. This is the list of materials that he needs. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
+		<attributes quest-item="true"/>
 	</item>
 
 	<item id="90303" name="Bat Bristle - Not Available" type="NONE">
@@ -36,27 +36,27 @@
 		<attributes quest-item="true"/>
 	</item>
 
-	<armor id="90306" name="Warrior's Armor" type="LIGHT" body-part="LEGS">
+	<armor id="90306" name="Warrior's Armor" type="LIGHT" body-part="CHEST">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="8970" enchant-enabled="false" />
+		<attributes weight="8970" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="45.0"/>
 		</stats>
 	</armor>
 
-	<armor id="90307" name="Warrior's Gaiters" type="LIGHT" body-part="FEET">
+	<armor id="90307" name="Warrior's Gaiters" type="LIGHT" body-part="LEGS">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="4020" enchant-enabled="false" />
+		<attributes weight="4020" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
 		</stats>
 	</armor>
 
-	<armor id="90308" name="Medium's Tunic" type="MAGIC" body-part="LEGS">
+	<armor id="90308" name="Medium's Tunic" type="MAGIC" body-part="CHEST">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="2080" enchant-enabled="false" />
+		<attributes weight="2080" />
 		<crystal />
 		<stats>
 			<stat type="MAX_MP" value="60.0"/>
@@ -64,9 +64,9 @@
 		</stats>
 	</armor>
 
-	<armor id="90309" name="Medium's Stockings" type="MAGIC" body-part="FEET">
+	<armor id="90309" name="Medium's Stockings" type="MAGIC" body-part="LEGS">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1030" enchant-enabled="false" />
+		<attributes weight="1030" />
 		<crystal />
 		<stats>
 			<stat type="MAX_MP" value="38.0"/>
@@ -74,422 +74,304 @@
 		</stats>
 	</armor>
 
-	<item id="90310" name="Newbie MP Replenishing Potion" type="POTION">
+	<item id="90310" name="Newbie MP Replenishing Potion" type="NONE">
 	<!-- Recovers MP. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39257" value="-1"/>  <!-- Newbie MP Recovery Potion -->
-		</skill-reducer>
+		<attributes weight="5"/>
 	</item>
 
 	<armor id="90311" name="Brooch Lv. 1" type="NONE" body-part="PENDANT">
 	<!-- Activates 2 jewel slots. Inventory Slots +5. Can be compounded with another Brooch of the same level. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="10" />
 		<crystal />
-		<skills>
-			<skill id="13656" value="-1"/>  <!-- Brooch Lv. 1 -->
-			<skill id="13661" value="-1"/>  <!-- Brooch: Additional Inventory Slots -->
-		</skills>
 	</armor>
 
 	<armor id="90312" name="Brooch Lv. 2" type="NONE" body-part="PENDANT">
 	<!-- Activates 3 jewel slots. Inventory Slots +9. Can be compounded with another Brooch of the same level. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="10" enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="10" />
 		<crystal />
-		<skills>
-			<skill id="55469" value="-1"/>  <!-- Lv. 2 Brooch -->
-			<skill id="55470" level="2" value="-1"/>  <!-- Lv. 2 Brooch - Additional Effect -->
-			<skill id="13654" type="ON_EQUIP" value="-1"/>  <!-- Brooch Lv. 2 On -->
-			<skill id="13655" type="ON_UNEQUIP" value="-1"/>  <!-- Brooch Lv. 2 Off -->
-		</skills>
 	</armor>
 
-	<armor id="90313" name="Topaz Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90313" name="Topaz Lv. 1" type="NONE" body-part="null">
 	<!-- Interrupts the target's skill casting. Inflicts 475 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
 	</armor>
 
-	<armor id="90314" name="Topaz Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90314" name="Topaz Lv. 2" type="NONE" body-part="null">
 	<!-- Disrupts the target's skill casting. Inflicts 633 PvP damage. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
 	</armor>
 
-	<armor id="90315" name="Topaz Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90315" name="Topaz Lv. 3" type="NONE" body-part="null">
 	<!-- Disrupts the target's skill casting. Inflicts 950 PvP damage. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
 	</armor>
 
-	<armor id="90316" name="Topaz Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90316" name="Topaz Lv. 4" type="NONE" body-part="null">
 	<!-- Interrupts the target's skill casting. Inflicts 1357 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
 	</armor>
 
-	<armor id="90317" name="Topaz Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90317" name="Topaz Lv. 5" type="NONE" body-part="null">
 	<!-- Interrupts the target's skill casting. Inflicts 2375 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
 	</armor>
 
-	<armor id="90318" name="Garnet Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90318" name="Garnet Lv. 1" type="NONE" body-part="null">
 	<!-- Fear/ Pull/ Silence/ Paralysis/ Stun Resistance +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55485"/>  <!-- Garnet -->
-		</skills>
 	</armor>
 
-	<armor id="90319" name="Garnet Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90319" name="Garnet Lv. 2" type="NONE" body-part="null">
 	<!-- Fear/ Pull/ Silence/ Paralysis/ Stun Resistance +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55485" level="2"/>  <!-- Garnet -->
-		</skills>
 	</armor>
 
-	<armor id="90320" name="Garnet Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90320" name="Garnet Lv. 3" type="NONE" body-part="null">
 	<!-- Fear/ Pull/ Silence/ Paralysis/ Stun Resistance +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55485" level="3"/>  <!-- Garnet -->
-		</skills>
 	</armor>
 
-	<armor id="90321" name="Garnet Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90321" name="Garnet Lv. 4" type="NONE" body-part="null">
 	<!-- Fear/ Pull/ Silence/ Paralysis/ Stun Resistance +11%. Enables a skill that grants immunity to debuffs for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55485" level="4"/>  <!-- Garnet -->
-		</skills>
 	</armor>
 
-	<armor id="90322" name="Garnet Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90322" name="Garnet Lv. 5" type="NONE" body-part="null">
 	<!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +20%. Grants immunity to debuffs for 15 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55485" level="5"/>  <!-- Garnet -->
-		</skills>
 	</armor>
 
-	<armor id="90323" name="Jade Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90323" name="Jade Lv. 1" type="NONE" body-part="null">
 	<!-- Atk. Spd./ Casting Spd. +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55474"/>  <!-- Jade -->
-		</skills>
 	</armor>
 
-	<armor id="90324" name="Jade Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90324" name="Jade Lv. 2" type="NONE" body-part="null">
 	<!-- Atk. Spd./ Casting Spd. +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55474" level="2"/>  <!-- Jade -->
-		</skills>
 	</armor>
 
-	<armor id="90325" name="Jade Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90325" name="Jade Lv. 3" type="NONE" body-part="null">
 	<!-- Atk. Spd./ Casting Spd. +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55474" level="3"/>  <!-- Jade -->
-		</skills>
 	</armor>
 
-	<armor id="90326" name="Jade Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90326" name="Jade Lv. 4" type="NONE" body-part="null">
 	<!-- Atk. Spd./ Casting Spd. +7%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55474" level="4"/>  <!-- Jade -->
-		</skills>
 	</armor>
 
-	<armor id="90327" name="Jade Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90327" name="Jade Lv. 5" type="NONE" body-part="null">
 	<!-- Atk. Spd./ Casting Spd. +14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55474" level="5"/>  <!-- Jade -->
-		</skills>
 	</armor>
 
-	<armor id="90328" name="Ruby Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90328" name="Ruby Lv. 1" type="NONE" body-part="null">
 	<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59150"/>  <!-- Ruby -->
-		</skills>
 	</armor>
 
-	<armor id="90329" name="Ruby Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90329" name="Ruby Lv. 2" type="NONE" body-part="null">
 	<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59150" level="2"/>  <!-- Ruby -->
-		</skills>
 	</armor>
 
-	<armor id="90330" name="Ruby Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90330" name="Ruby Lv. 3" type="NONE" body-part="null">
 	<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +5%. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59150" level="3"/>  <!-- Ruby -->
-		</skills>
 	</armor>
 
-	<armor id="90331" name="Ruby Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90331" name="Ruby Lv. 4" type="NONE" body-part="null">
 	<!-- Soulshot/ Blessed Soulshot/ Beast Soulshot damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59150" level="4"/>  <!-- Ruby -->
-		</skills>
 	</armor>
 
-	<armor id="90332" name="Ruby Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90332" name="Ruby Lv. 5" type="NONE" body-part="null">
 	<!-- Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59150" level="5"/>  <!-- Ruby -->
-		</skills>
 	</armor>
 
-	<armor id="90333" name="Sapphire Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90333" name="Sapphire Lv. 1" type="NONE" body-part="null">
 	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +2%. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59151"/>  <!-- Sapphire -->
-		</skills>
 	</armor>
 
-	<armor id="90334" name="Sapphire Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90334" name="Sapphire Lv. 2" type="NONE" body-part="null">
 	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +3%. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59151" level="2"/>  <!-- Sapphire -->
-		</skills>
 	</armor>
 
-	<armor id="90335" name="Sapphire Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90335" name="Sapphire Lv. 3" type="NONE" body-part="null">
 	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +5%. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59151" level="3"/>  <!-- Sapphire -->
-		</skills>
 	</armor>
 
-	<armor id="90336" name="Sapphire Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90336" name="Sapphire Lv. 4" type="NONE" body-part="null">
 	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59151" level="4"/>  <!-- Sapphire -->
-		</skills>
 	</armor>
 
-	<armor id="90337" name="Sapphire Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90337" name="Sapphire Lv. 5" type="NONE" body-part="null">
 	<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="59151" level="5"/>  <!-- Sapphire -->
-		</skills>
 	</armor>
 
-	<armor id="90338" name="Diamond Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90338" name="Diamond Lv. 1" type="NONE" body-part="null">
 	<!-- P. Def. +11. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55475"/>  <!-- Diamond -->
-		</skills>
 	</armor>
 
-	<armor id="90339" name="Diamond Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90339" name="Diamond Lv. 2" type="NONE" body-part="null">
 	<!-- P. Def. +25. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55475" level="2"/>  <!-- Diamond -->
-		</skills>
 	</armor>
 
-	<armor id="90340" name="Diamond Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90340" name="Diamond Lv. 3" type="NONE" body-part="null">
 	<!-- P. Def. +50. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55475" level="3"/>  <!-- Diamond -->
-		</skills>
 	</armor>
 
-	<armor id="90341" name="Diamond Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90341" name="Diamond Lv. 4" type="NONE" body-part="null">
 	<!-- P. Def. +81, received P. Critical Damage -4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55475" level="4"/>  <!-- Diamond -->
-		</skills>
 	</armor>
 
-	<armor id="90342" name="Diamond Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90342" name="Diamond Lv. 5" type="NONE" body-part="null">
 	<!-- P. Def. +130, Received P. Critical Damage -10%. The effect doesn't stack if two identical jewels are equipped. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55475" level="5"/>  <!-- Diamond -->
-		</skills>
 	</armor>
 
-	<armor id="90343" name="Pearl Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90343" name="Pearl Lv. 1" type="NONE" body-part="null">
 	<!-- M. Def. +7. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55476"/>  <!-- Pearl -->
-		</skills>
 	</armor>
 
-	<armor id="90344" name="Pearl Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90344" name="Pearl Lv. 2" type="NONE" body-part="null">
 	<!-- M. Def. +14. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55476" level="2"/>  <!-- Pearl -->
-		</skills>
 	</armor>
 
-	<armor id="90345" name="Pearl Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90345" name="Pearl Lv. 3" type="NONE" body-part="null">
 	<!-- M. Def. +28. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55476" level="3"/>  <!-- Pearl -->
-		</skills>
 	</armor>
 
-	<armor id="90346" name="Pearl Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90346" name="Pearl Lv. 4" type="NONE" body-part="null">
 	<!-- M. Def. +46, Received M. Skill Critical Damage -4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55476" level="4"/>  <!-- Pearl -->
-		</skills>
 	</armor>
 
-	<armor id="90347" name="Pearl Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90347" name="Pearl Lv. 5" type="NONE" body-part="null">
 	<!-- M. Def. +74, Received M. Skill Critical Damage -10%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55476" level="5"/>  <!-- Pearl -->
-		</skills>
 	</armor>
 
-	<armor id="90353" name="Vital Stone Lv. 1" type="NONE" body-part="AGATHION">
+	<armor id="90353" name="Vital Stone Lv. 1" type="NONE" body-part="null">
 	<!-- While Sayha's Grace is active, Acquired XP/ SP +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55472"/>  <!-- Vital Stone -->
-		</skills>
 	</armor>
 
-	<armor id="90354" name="Vital Stone Lv. 2" type="NONE" body-part="AGATHION">
+	<armor id="90354" name="Vital Stone Lv. 2" type="NONE" body-part="null">
 	<!-- While Sayha's Grace is active, Acquired XP/ SP +4%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55472" level="2"/>  <!-- Vital Stone -->
-		</skills>
 	</armor>
 
-	<armor id="90355" name="Vital Stone Lv. 3" type="NONE" body-part="AGATHION">
+	<armor id="90355" name="Vital Stone Lv. 3" type="NONE" body-part="null">
 	<!-- While Sayha's Grace is active, Acquired XP/ SP +6%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55472" level="3"/>  <!-- Vital Stone -->
-		</skills>
 	</armor>
 
-	<armor id="90356" name="Vital Stone Lv. 4" type="NONE" body-part="AGATHION">
+	<armor id="90356" name="Vital Stone Lv. 4" type="NONE" body-part="null">
 	<!-- While Sayha's Grace is active, Acquired XP/ SP +8%, Sayha's Grace Consumption -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55472" level="4"/>  <!-- Vital Stone -->
-		</skills>
 	</armor>
 
-	<armor id="90357" name="Vital Stone Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="90357" name="Vital Stone Lv. 5" type="NONE" body-part="null">
 	<!-- While Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="55472" level="5"/>  <!-- Vital Stone -->
-		</skills>
 	</armor>
 
 	<item id="90358" name="Shining Ore" type="NONE">
@@ -501,247 +383,247 @@
 	<item id="90359" name="Fortune Chest" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90360" name="Topaz Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90361" name="Garnet Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90362" name="Jade Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90363" name="Ruby Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90364" name="Sapphire Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90365" name="Diamond Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90366" name="Pearl Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90367" name="Vital Stone Fortune Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90368" name="Shiny Jewelry Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90369" name="Topaz Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90370" name="Garnet Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90371" name="Jade Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90372" name="Ruby Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90373" name="Sapphire Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90374" name="Diamond Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90375" name="Pearl Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90376" name="Vital Stone Chest" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90377" name="Topaz Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90378" name="Topaz Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90379" name="Topaz Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90380" name="Garnet Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90381" name="Garnet Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90382" name="Garnet Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90383" name="Jade Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90384" name="Jade Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90385" name="Jade Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90386" name="Ruby Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90387" name="Ruby Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90388" name="Ruby Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90389" name="Sapphire Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90390" name="Sapphire Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90391" name="Sapphire Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90392" name="Diamond Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90393" name="Diamond Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90394" name="Diamond Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90395" name="Pearl Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90396" name="Pearl Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90397" name="Pearl Jewelry Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90398" name="Vital Stone Jewelry Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90399" name="Vital Stone Jewelry Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 </list>

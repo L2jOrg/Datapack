@@ -3,34 +3,25 @@
 	<item id="49500" name="Blessed Scroll of Escape (Exchangeable)" type="SCROLL">
 	<!-- Teleports to the nearest village. Its casting time is very short. -->
 		<restriction sellable="false"/>
-		<attributes weight="120" action="SKILL_REDUCE"/>
+		<attributes weight="120"/>
 	</item>
 
 	<item id="49501" name="Fish Stew - Guild's Gratitude Ур. 1 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nAcquired XP +10%\nAcquired SP +10%\n\nDuration: 20 min. -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39076" value="-1"/>  <!-- Fish Stew - Guild's Gratitude -->
-		</skill-reducer>
+		<restriction dropable="false" sellable="false"/>
+		<attributes/>
 	</item>
 
 	<item id="49502" name="Scroll of Escape: Giran Harbor" type="NONE">
 	<!-- Magic scroll that teleports one to Giran Harbor. -->
-		<restriction olympiad-restricted="true" sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39078" value="-1"/>  <!-- Scroll of Escape: Giran Harbor -->
-		</skill-reducer>
+		<restriction sellable="false"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49503" name="Teleport: Gludin Harbor (Exchangeable)" type="NONE">
 	<!-- Magic scroll that teleports one to the Gludin Harbor. -->
-		<restriction olympiad-restricted="true" sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39077" value="-1"/>  <!-- Scroll of Escape: Gludin Harbor -->
-		</skill-reducer>
+		<restriction sellable="false"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49504" name="Report about Fish" type="NONE">
@@ -47,15 +38,14 @@
 
 	<weapon id="49506" name="Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
 	<!-- Available for 10 days. Requires 1 Fishing Shot. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1000" commission-type="OTHER_ITEM" duration="14400" enchant-enabled="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000"/>
 		<crystal />
-		<damage radius="40" angle="240"/>
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
@@ -64,30 +54,24 @@
 	<item id="49507" name="Fishing Rod Pack (10-day)" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="100" immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49506"/>  <!-- Fishing Rod -->
-		</extract>
+		<attributes weight="100"/>
 	</item>
 
-	<item id="49508" name="Normal Bait" type="LURE">
+	<item id="49508" name="Normal Bait" type="NONE">
 	<!-- Necessary for fishing. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<attributes/>
 	</item>
 
 	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nReceived P. Damage -2%\nReceived M. Damage -2%\nP. Evasion +1\nM. Evasion +1\nMax MP +9\nSilence Resistance and Atk. Rate +10%\nFear Resistance and Atk. Rate +10%\n\nAvailable for 15 d. Effects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="RING" duration="21600" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="47.0"/>
 			<stat type="MAX_MP" value="9.0"/>
 		</stats>
-		<skills>
-			<skill id="3563" value="-1"/>  <!-- Ring of Core -->
-		</skills>
 	</armor>
 
 	<item id="49510" name="Pierre's Letter" type="NONE">
@@ -99,224 +83,203 @@
 	<item id="49511" name="Sheep Gift" type="NONE">
 	<!-- Double-click to obtain one of the following items: Spellbook Chest, Rare Accessory Pack (15-day), Fishing Kit, Improved Scroll of Escape (Event), Mid-grade HP Recovery Potion, Hero's Top-grade HP Replenishing Potion. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="49512" name="Friend-or-Foe Warrior's Amulet" type="RUNE">
+	<item id="49512" name="Friend-or-Foe Warrior's Amulet" type="NONE">
 	<!-- Available for 14 d. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="20160" immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39082" value="-1"/>  <!-- Glorious Amulet -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49513" name="Shining Pendant Polish box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<armor id="49514" name="Agathion Aries - Not Available" type="NONE" body-part="TALISMAN">
+	<armor id="49514" name="Agathion Aries - Not Available" type="NONE" body-part="FEET">
 	<!-- The item is not available. Available for 60 d. A bracelet for summoning Agathion Aries.\n\n<Active skill>\n1. Agathion Teleport: Teleports to Gludio/ Dion/ Giran/ Oren. Cooldown: 30 min.\n\n<Item skill>\n1. Aries Power: STR/ INT/ CON/ MEN +1. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="86400" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49515" name="Agathion Aries - Not Available" type="NONE" body-part="TALISMAN">
+	<armor id="49515" name="Agathion Aries - Not Available" type="NONE" body-part="FEET">
 	<!-- The item is not available. A bracelet for summoning Agathion Aries.\n\n<Active skill>\n1. Agathion Teleport: Teleports to Gludio/ Dion/ Giran/ Oren. Cooldown: 30 min.\n\n<Item skill>\n1. Aries Power: STR/ INT/ CON/ MEN +1.  -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49516" name="Blessed Agathion Aries - Not Available" type="NONE" body-part="TALISMAN">
+	<armor id="49516" name="Blessed Agathion Aries - Not Available" type="NONE" body-part="FEET">
 	<!-- The item is not available. A bracelet for summoning Agathion Aries.\n\n<Active skill>\n1. Agathion Teleport: Teleports to Gludio/ Dion/ Giran/ Oren. Cooldown: 30 min.\n\n<Item skills>\n1. Aries Power: STR/ INT/ CON/ MEN +1.\n2. Aries Blessing: Fear/ Stun/ Sleep/ Paralysis/ Silence Resistance +5%. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
 	<item id="49517" name="Pirate Trophy Chest" type="NONE">
 	<!-- Double-click to obtain various items. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="49518" name="Special Pirate Fruit" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Atk. +7%\nM. Atk. +7%\nP. Def. +10%\nM. Def. +10%\nMax HP +15%\nMax MP +15%\nMax CP +15%\nHP Recovery Rate +20%\nMP Recovery Rate +20%\nA chance to absorb 3% of the inflicted damage as HP\nAcquired XP +5%\nAcquired SP +5%\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction sellable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39144" value="-1"/>  <!-- Special Pirate Fruit -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49519" name="King Pirate's Treasure Chest" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="49520" name="Agation box: Aries" type="NONE">
 	<!-- Double-click to obtain Agathion Aries.\n\nNote!\nThe obtained item cannot be transferred. -->
 		<restriction sellable="false"/>
-		<attributes duration="86400" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<armor id="49521" name="Refined Romantic Chapeau (STR+1 INT+1)" type="NONE" body-part="RIGHT_BRACELET">
+	<armor id="49521" name="Refined Romantic Chapeau (STR+1 INT+1)" type="NONE" body-part="GLOVES">
 	<!-- STR +1, INT +1 when equipped. Activates Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 h.).\n\n<font color=eeaa22>Occupies the left hair accessory slot.</font> -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49522" name="Pirate King Hat (STR+1 INT+1)" type="NONE" body-part="RIGHT_BRACELET">
+	<armor id="49522" name="Pirate King Hat (STR+1 INT+1)" type="NONE" body-part="HAIR">
 	<!-- STR +1, INT +1 when equipped. Activates Pirate King Hat Skill: Teleport (Cooldown: 2 h.).\n\n<font color=eeaa22>Occupies the left hair accessory slot.</font> -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49523" name="Demon's Circlet (STR +1, INT +1)" type="NONE" body-part="RIGHT_BRACELET">
+	<armor id="49523" name="Demon's Circlet (STR +1, INT +1)" type="NONE" body-part="GLOVES">
 	<!-- STR +1, INT +1 when equipped. Enables Demon's Circlet: Teleport (cooldown: 2 h.).\n\n<font color=eeaa22>Occupies the left hair accessory slot.</font> -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
 	<item id="49524" name="Captain Pirate Hat Box" type="NONE">
 	<!-- Double-click to obtain one of the following items: Refined Romantic Chapeau, Pirate King Hat, Demon's Circlet. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="49525" name="Rare Accessory Pack Lv. 1" type="NONE">
 	<!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1 (15-day), Ring of Core Lv. 1 (15-day). -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55089" value="-1"/>  <!-- Rare Accessory Pack -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49526" name="Improved Scroll of Resurrection (Exchangeable)" type="SCROLL">
 	<!-- Magic scroll resurrecting a dead party member and restoring 50% of XP. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="49527" name="My Teleport Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<item id="49528" name="Pirate's HP Recovery Potion" type="POTION">
+	<item id="49528" name="Pirate's HP Recovery Potion" type="NONE">
 	<!-- Restores 600 HP. The remaining points are used to restore CP. -->
 		<restriction sellable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39089" value="-1"/>  <!-- Pirate's HP Recovery Potion -->
-		</skill-reducer>
+		<attributes weight="1"/>
 	</item>
 
-	<armor id="49529" name="Blue Dynasty - Heavy Armor" type="HEAVY" body-part="HAIR">
+	<armor id="49529" name="Blue Dynasty - Heavy Armor" type="HEAVY" body-part="ALL_DRESS">
 	<!-- An item intended for L2 Assist Application. Full Heavy Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49530" name="Blue Dynasty Circlet" type="NONE" body-part="RIGHT_BRACELET">
+	<armor id="49530" name="Blue Dynasty Circlet" type="NONE" body-part="GLOVES">
 	<!-- An item intended for an L2 Assist Application. Blue Dynasty Diadem.\n\n<font color=eeaa22>Occupies the left hair accessory slot.</font> -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49531" name="Red Zubei's Heavy Armor" type="HEAVY" body-part="HAIR">
+	<armor id="49531" name="Red Zubei's Heavy Armor" type="HEAVY" body-part="ALL_DRESS">
 	<!-- An item for L2 Assist Application. Full Red Zubei's heavy armor set. Has no class restrictions, but for some races and classes heavy armor, light armor and robe sets look the same. When equipping, your current armor is taken off and becomes unavailable. Headpieces, weapons and accessories are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49532" name="White Assassin Suit - Not Available" type="HEAVY" body-part="HAIR">
+	<armor id="49532" name="White Assassin Suit - Not Available" type="HEAVY" body-part="ALL_DRESS">
 	<!-- The item is not available. For L2 Assist app. White Assassin Suit. When equipped, it is impossible to wear armor. Headgear, weapons and accessories are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<item id="49533" name="Hero's HP Recovery Potion" type="POTION">
+	<item id="49533" name="Hero's HP Recovery Potion" type="NONE">
 	<!-- Momentarily recovers 500 HP. If HP is full, CP is recovered. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39103" value="-1"/>  <!-- Hero's HP Recovery Potion -->
-		</skill-reducer>
+		<attributes weight="1"/>
 	</item>
 
-	<item id="49534" name="Hero's Cube" type="ELIXIR">
+	<item id="49534" name="Hero's Cube" type="NONE">
 	<!-- Available for 7 days. Required level: 20. Double-click to obtain Soulshot Ticket, Buff Scroll Chest, Hero's Top-grade HP Replenishing Potion, Hero's HP Recovery Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Chest of Enchant Scroll's Parts, Fishing Kit, Box of Scroll of Escape to Base, Blade Spirit, Spellbook Chest. Can be used only once a day. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="10080" action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="49535" name="Returned Hero's Fishing Kit" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="49536" name="Box of Scroll of Escape to Base" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="49537" name="Scroll of Escape: Dragon Valley Bridge (Exchangeable)" type="SCROLL">
 	<!-- Magic scroll that teleports one to the Dragon Valley Bridge. -->
 		<restriction sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49538" name="Scroll of Escape: Antharas' Lair" type="SCROLL">
 	<!-- Magic scroll that teleports one to Antharas' Lair. -->
 		<restriction sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49539" name="Teleport Stone: Entrance to Cruma Tower (Exchangeable)" type="SCROLL">
 	<!-- Magic scroll that teleports one to the Cruma Tower. -->
 		<restriction sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49540" name="Scroll of Escape: Entrance to Orc Barracks" type="SCROLL">
 	<!-- Magic scroll that teleports one to Orc Barracks. -->
 		<restriction sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="49541" name="Spellbook Chest" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39059" value="-1"/>  <!-- Spellbook Chest -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49542" name="Improved Scroll of Resurrection" type="SCROLL">
 	<!-- Magic scroll resurrecting a dead party member and restoring 50% of XP. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39109" value="-1"/>  <!-- Improved Scroll of Resurrection -->
-		</skill-reducer>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes weight="120"/>
 	</item>
 
 	<item id="49543" name="Elemental Stone" type="NONE">
@@ -326,79 +289,79 @@
 		<random_craft exp="10000" commission="200"/>
 	</item>
 
-	<armor id="49544" name="Pirate - Not Available" type="HEAVY" body-part="HAIR">
+	<armor id="49544" name="Pirate - Not Available" type="HEAVY" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in warrior's armor. Required level: 45. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49545" name="Dark Assassin - Not Available" type="HEAVY" body-part="HAIR">
+	<armor id="49545" name="Dark Assassin - Not Available" type="HEAVY" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in warrior's armor. Required level: 55. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49546" name="Warrior's Armor3 - Not Available" type="HEAVY" body-part="HAIR">
+	<armor id="49546" name="Warrior's Armor3 - Not Available" type="HEAVY" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in warrior's armor. Required level: 65. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49547" name="Mage's Armor1 - Not Available" type="MAGIC" body-part="HAIR">
+	<armor id="49547" name="Mage's Armor1 - Not Available" type="MAGIC" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in wizard's armor. Required level: 45. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49548" name="Mage's Armor2 - Not Available" type="MAGIC" body-part="HAIR">
+	<armor id="49548" name="Mage's Armor2 - Not Available" type="MAGIC" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in wizard's armor. Required level: 55. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49549" name="Mage's Armor3 - Not Available" type="MAGIC" body-part="HAIR">
+	<armor id="49549" name="Mage's Armor3 - Not Available" type="MAGIC" body-part="ALL_DRESS">
 	<!-- The item is not available. You look as if you were in wizard's armor. Required level: 65. -->
-		<restriction freightable="false" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
 	<item id="49550" name="Teleport Device - Entrance to Enchanted Valley" type="SCROLL">
 	<!-- Magic scroll that teleports one to Enchanted Valley. -->
 		<restriction sellable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
-	<armor id="49551" name="Blue Dynasty - Light Armor" type="LIGHT" body-part="HAIR">
+	<armor id="49551" name="Blue Dynasty - Light Armor" type="LIGHT" body-part="ALL_DRESS">
 	<!-- An item intended for L2 Assist Application. Full Light Armor of Blue Dynasty. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49552" name="Blue Dynasty - Robe" type="MAGIC" body-part="HAIR">
+	<armor id="49552" name="Blue Dynasty - Robe" type="MAGIC" body-part="ALL_DRESS">
 	<!-- An item intended for L2 Assist Application. Full Magic Armor of Blue Dynasty. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49553" name="Red Zubei's Light Armor" type="LIGHT" body-part="HAIR">
+	<armor id="49553" name="Red Zubei's Light Armor" type="LIGHT" body-part="ALL_DRESS">
 	<!-- An item intended for L2 Assist Application. Full Light Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="49554" name="Red Zubei's Robe" type="MAGIC" body-part="HAIR">
+	<armor id="49554" name="Red Zubei's Robe" type="MAGIC" body-part="ALL_DRESS">
 	<!-- An item for L2 Assist Application. Full Red Zubei's robe set. Has no class restrictions, but for some races and classes heavy armor, light armor and robe sets look the same. When equipping, your current armor is taken off and becomes unavailable. Headpieces, weapons and accessories are not removed. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
@@ -466,13 +429,13 @@
 	<item id="49565" name="Misfety's Gift" type="NONE">
 	<!-- Misfety's gift. Double-click to obtain Ring of Heir, Sheep Hat (14-day), and Hero's XP Rune (30-day).\n\nNote!\nThe obtained items cannot be transferred. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="49566" name="Roa's Gift" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="49567" name="Roa's Lost Item" type="NONE">
@@ -511,15 +474,14 @@
 
 	<weapon id="49573" name="Samurai Black Long Sword" type="DUAL" body-part="TWO_HAND">
 	<!-- Available for 30 days. Cannot be enchanted or endued with special characteristics. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2340"/>
 		<crystal />
-		<damage radius="40" angle="240"/>
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="70.0"/>
 			<stat type="PHYSICAL_ATTACK" value="155.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
@@ -527,171 +489,130 @@
 
 	<armor id="49574" name="Queen Ant's Ring Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nP. Atk. +6%\nM. Atk. +6%\nP. Accuracy +2\nM. Accuracy +2\nMax MP +15\nInfection Atk. Rate and Resistance +15%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="55.0"/>
 			<stat type="MAX_MP" value="15.0"/>
 		</stats>
-		<skills>
-			<skill id="3562" level="2" value="-1"/>  <!-- Queen Ant's Ring -->
-		</skills>
 	</armor>
 
 	<armor id="49575" name="Orfen's Earring Lv. 2" type="NONE" body-part="EAR">
 	<!-- <Properties>\nMP Consumption -3%\nReceived Healing +4%\nMax MP +25\nSilence Resistance and Atk. Rate +10%\nFear Resistance and Atk. Rate +10%\nHold Resistance and Atk. Rate +15%\n\nEffects of two identical earrings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="EARRING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="81.0"/>
 			<stat type="MAX_MP" value="25.0"/>
 		</stats>
-		<skills>
-			<skill id="3560" level="2" value="-1"/>  <!-- Orfen's Earring -->
-		</skills>
 	</armor>
 
 	<armor id="49576" name="Ring of Core Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nReceived P. Damage -4%\nReceived M. Damage -4%\nP. Evasion +2\nM. Evasion +2\nMax MP +15\nSilence Resistance and Atk. Rate +15%\nFear Resistance and Atk. Rate +15%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="55.0"/>
 			<stat type="MAX_MP" value="15.0"/>
 		</stats>
-		<skills>
-			<skill id="3563" level="2" value="-1"/>  <!-- Ring of Core -->
-		</skills>
 	</armor>
 
 	<armor id="49577" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Skill Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nInfection Atk. Rate and Resistance +20%\n\nEffects of two identical rings do not stack. Cannot be enchanted. Take 2 of these rings to Blacksmith Baggins in Giran to exchange them for Essence of Queen Ant. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
-		<skills>
-			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
-		</skills>
 	</armor>
 
 	<armor id="49578" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR">
 	<!-- <Properties>\nMP Consumption -5%\nReceived Healing +6%\nWith a certain chance, absorbs some of the inflicted damage as MP.\nMax MP +31\nSilence Atk. Rate and Resistance +15%\nFear Atk. Rate and Resistance +15%\nHold Atk. Rate and Resistance +20%\n\nEffects of two identical earrings do not stack. Cannot be enchanted. Take 2 of these earrings to Blacksmith Baggins in Giran to exchange them for Essence of Orfen. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="EARRING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="91.0"/>
 			<stat type="MAX_MP" value="31.0"/>
 		</stats>
-		<skills>
-			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
-		</skills>
 	</armor>
 
 	<armor id="49579" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nSilence Atk. Rate and Resistance +20%\nFear Atk. Rate and Resistance +20%\n\n<Ring of Core>\nRemoves all debuffs and anomalies when used.\n\nEffects of two identical rings do not stack. Cannot be enchanted. Take 2 of these rings to Blacksmith Baggins in Giran to exchange them for Essence of Core. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
-		<skills>
-			<skill id="3563" level="14" value="-1"/>  <!-- TODO Skill not found -->
-			<skill id="35016" value="-1"/>  <!-- Core's Blessing -->
-		</skills>
 	</armor>
 
 	<armor id="49580" name="Baium's Ring" type="NONE" body-part="FINGER">
 	<!-- Max enchant value: +5.\n(Requires Scroll: Enchant Rare Accessories.)\nBoosts the item's parameters after enchanting.\nEffects of two identical rings do not stack.\nSafe enchanting to +1 -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="73.0"/>
 		</stats>
-		<skills>
-			<skill id="3561" level="12" value="-1"/>  <!-- Damaged Baium's Ring -->
-		</skills>
 	</armor>
 
 	<armor id="49581" name="Baium's Ring Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nP. Skill Power +6%\nM. Skill Power +6%\nAtk. Spd. +4%\nCasting Spd. +4%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nShock Atk. Rate and Resistance +15%\nInfection Atk. Rate and Resistance +10%\n\nEffects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="67.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
-		<skills>
-			<skill id="3561" level="13" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</armor>
 
 	<armor id="49582" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nP. Skill Power +10%\nM. Skill Power +10%\nAtk. Spd. +5%\nCasting Spd. +4%\nP. Accuracy +4\nM. Accuracy +4\nP. Critical Damage +15%\nM. Skill Critical Damage +10%\nMax MP +27\nShock Atk. Rate and Resistance +20%\nInfection Atk. Rate and Resistance +15%\n\nEffects of two identical rings do not stack. Cannot be enchanted. Take 2 of these rings to Blacksmith Baggins in Giran to exchange them for Essence of Baium. -->
-		<restriction freightable="false"/>
-		<attributes weight="150" commission-type="RING" />
+		<restriction/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="75.0"/>
 			<stat type="MAX_MP" value="27.0"/>
 		</stats>
-		<skills>
-			<skill id="3561" level="14" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</armor>
 
 	<item id="49583" name="Golden Chest of Mermaid's Fishing Supplies" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="49589" min-count="180" max-count="180"/>  <!-- Golden Bait -->
-			<item id="38154" min-count="180" max-count="180"/>  <!-- Fishing Shot -->
-			<item id="49502" min-count="5" max-count="5"/>  <!-- Scroll of Escape: Giran Harbor -->
-			<item id="49503" min-count="5" max-count="5"/>  <!-- Teleport: Gludin Harbor (Exchangeable) -->
-		</extract>
+		<attributes/>
 	</item>
 
 	<item id="49584" name="Golden Boot" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<extract>
-			<item id="45488"/>  <!-- Golden Treasure Chest -->
-		</extract>
+		<attributes/>
 	</item>
 
 	<item id="49585" name="Golden Mermaid's Tears" type="SCROLL">
 	<!-- Available for 7 days. Double-click to obtain a buff. Acquired XP/ SP +50% for 1 h.\n\nDoes not stack with the Sayha's Storm effect. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="10080" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39113" value="-1"/>  <!-- Golden Mermaid's Tears -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<weapon id="49586" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
 	<!-- Available for 30 days. Consumes 1 Fishing Shot.\n\nActivates the skill to teleport to Giran/ Gludin Harbor. Cooldown: 1 min. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1000" commission-type="OTHER_ITEM" duration="43200" enchant-enabled="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1000"/>
 		<crystal />
-		<damage radius="40" angle="240"/>
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
@@ -699,15 +620,14 @@
 
 	<weapon id="49587" name="Golden Mermaid's Fishing Rod" type="FISHING_ROD" body-part="TWO_HAND">
 	<!-- Consumes 1 Fishing Shot.\n\nActivates the skill to teleport to Giran/ Gludin Harbor. Cooldown: 1 min. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes weight="1000" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<restriction dropable="false" sellable="false"/>
+		<attributes weight="1000"/>
 		<crystal />
-		<damage radius="40" angle="240"/>
+		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="MAGIC_ATTACK" value="1.0"/>
 			<stat type="PHYSICAL_ATTACK" value="1.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="1.0"/>
 		</stats>
@@ -716,105 +636,89 @@
 	<item id="49588" name="Golden Mermaid's Fishing Rod Chest" type="NONE">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod for 30 days.\n\nNote!\nThe obtained item cannot be transferred. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="100" duration="43200" immediate-effect="true" action="PEEL"/>
+		<attributes weight="100"/>
 	</item>
 
-	<item id="49589" name="Golden Bait" type="LURE">
+	<item id="49589" name="Golden Bait" type="NONE">
 	<!-- Fishing bait. Can be used to catch a Whale. Gives a small chance to get a Golden Boot. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<attributes/>
 	</item>
 
 	<item id="49590" name="Rare Accessory Pack Lv. 3" type="NONE">
 	<!-- Double-click to obtain Queen Ant's Ring Lv. 3 (30-day), Orfen's Earring Lv. 3 (30-day), Ring of Core Lv. 3 (30-day). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Skill Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nInfection Atk. Rate and Resistance +20%\n\nAvailable for 30 d. Effects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
-		<skills>
-			<skill id="3562" level="3" value="-1"/>  <!-- Queen Ant's Ring -->
-		</skills>
 	</armor>
 
 	<armor id="49592" name="Orfen's Earring Lv. 3" type="NONE" body-part="EAR">
 	<!-- <Properties>\nMP Consumption -5%\nReceived Healing +6%\nWith a certain chance, absorbs some of the inflicted damage as MP.\nMax MP +31\nSilence Atk. Rate and Resistance +15%\nFear Atk. Rate and Resistance +15%\nHold Atk. Rate and Resistance +20%\n\nAvailable for 30 d. Effects of two identical earrings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="EARRING" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="91.0"/>
 			<stat type="MAX_MP" value="31.0"/>
 		</stats>
-		<skills>
-			<skill id="3560" level="3" value="-1"/>  <!-- Orfen's Earring -->
-		</skills>
 	</armor>
 
 	<armor id="49593" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Properties>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nSilence Atk. Rate and Resistance +20%\nFear Atk. Rate and Resistance +20%\n\n<Ring of Core>\nRemoves all debuffs and anomalies when used.\n\nAvailable for 30 d. Effects of two identical rings do not stack. Cannot be enchanted. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="63.0"/>
 			<stat type="MAX_MP" value="21.0"/>
 		</stats>
-		<skills>
-			<skill id="3563" level="3" value="-1"/>  <!-- Ring of Core -->
-			<skill id="35016" value="-1"/>  <!-- Core's Blessing -->
-		</skills>
 	</armor>
 
 	<item id="49594" name="Whale" type="SCROLL">
 	<!-- Double-click to obtain some SP. Can be exchanged for SP Scroll through a Fishing Guildsman. -->
 		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="49595" name="Scroll: 2000 SP (Exchangeable)" type="SCROLL">
 	<!-- Double-click to recover 2000 SP. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="40143" value="-1"/>  <!-- SP Scroll -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49596" name="Scroll: 10,000 SP (Exchangeable)" type="SCROLL">
-	<!-- Double-click to recover 10,000 SP. -->
+	<!-- SP +10,000. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="40143" level="2" value="-1"/>  <!-- SP Scroll -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="49597" name="Golden Boot - Not Available" type="NONE">
 	<!-- The item is not available. Double-click to obtain a valuable item. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<armor id="49598" name="Blue Talisman - P. Crit." type="NONE" body-part="BELT">
+	<armor id="49598" name="Blue Talisman - P. Crit." type="NONE" body-part="TALISMAN">
 	<!-- Available for 1 h. P. Critical Rate +10. Effects of two identical talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="60" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
 	</armor>
 
-	<armor id="49599" name="Blue Talisman - P. Atk." type="NONE" body-part="BELT">
+	<armor id="49599" name="Blue Talisman - P. Atk." type="NONE" body-part="TALISMAN">
 	<!-- Available for 1 h. P. Atk. +3%. Effects of two identical talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="60" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
 	</armor>
 

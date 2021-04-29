@@ -3,7 +3,7 @@
 	<item id="91200" name="Scroll of Escape: Wall of Argos" type="NONE">
 	<!-- A magical scroll that relocates you to the Wall of Argos.\n\nNote!\nAnother way to get to the Wall of Argos is by speaking with Gatekeeper Tatiana in Goddard. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="30" action="SKILL_REDUCE"/>
+		<attributes weight="30"/>
 	</item>
 
 	<item id="91201" name="Scroll: Full Knockdown" type="NONE">
@@ -36,208 +36,190 @@
 		<attributes/>
 	</item>
 
-	<item id="91206" name="Chronicle Mark" type="RUNE">
+	<item id="91206" name="Chronicle Mark" type="NONE">
 	<!-- CON/ MEN/ DEX/ WIT/ STR/ INT +1, Atk. Spd./ Casting Spd. +5%. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51124" value="-1"/>  <!-- Chronicle Token -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="91207" name="Wind's Blessing Chest" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="91208" name="Wind Golden Chest" type="NONE">
 	<!-- Double-click to obtain one of the following items: +15 A-grade weapon, +16 B/ C-grade weapon, Talisman of Authority, Jewel, Enchant Scroll. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="91209" name="Wind Silver Pack" type="NONE">
 	<!-- Double-click to obtain one of the following items: +10 Land/ Fire Dragon Pendant, +10 rare accessory. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<armor id="91210" name="Black Sayha's Cloak" type="NONE" body-part="BACK">
 	<!-- A cloak filled with Sayha's energy. Can be enchanted with Scrolls: Enchant Sayha's Cloak. Depending on the enchant value, activates special abilities. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" />
 		<crystal />
 	</armor>
 
 	<armor id="91211" name="White Sayha's Cloak" type="NONE" body-part="BACK">
 	<!-- A cloak filled with Sayha's energy. Can be enchanted with Sayha's Cloak Enchantment Scrolls. Depending on the enchant value, activates various abilities. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" />
 		<crystal />
 	</armor>
 
 	<armor id="91212" name="Red Sayha's Cloak" type="NONE" body-part="BACK">
 	<!-- A cloak filled with Sayha's energy. Can be enchanted with Sayha's Cloak Enchantment Scrolls. Depending on the enchant value, activates various abilities. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes weight="220" />
 		<crystal />
 	</armor>
 
-	<item id="91213" name="Sayha's Cloak Enchantment Scroll" type="ENCHANT_ARMOR">
+	<item id="91213" name="Sayha's Cloak Enchantment Scroll" type="NONE">
 	<!-- Required for enchanting Sayha's Cloak. The maximum enchant value is +10. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="91214" name="Radiant Sayha's Cloak Enchantment Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<item id="91214" name="Radiant Sayha's Cloak Enchantment Scroll" type="NONE">
 	<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +9. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="91215" name="Shining Sayha's Cloak Enchantment Scroll" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<item id="91215" name="Shining Sayha's Cloak Enchantment Scroll" type="NONE">
 	<!-- Required to enchant Sayha's Cloak. Can be used on a cloak enchanted up to +7. In case of failure the enchanted item doesn't disappear, and its enchant value remains the same. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
 	<item id="91216" name="+16 B-grade Weapon Pack" type="NONE">
 	<!-- Double-click to obtain a +16 B-grade weapon. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="91217" name="+10 Hair Accessory Pack" type="NONE">
 	<!-- Double-click to obtain a hair accessory enchanted to +10. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<item id="91218" name="Transformation Scroll: Panda" type="POTION">
+	<item id="91218" name="Transformation Scroll: Panda" type="NONE">
 	<!-- Changes the appearance to that of a panda.\n\n<Transformation effect>\nMax HP +20%\nMax MP +20%\nAcquired XP +20%\nAcquired SP +20%.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>\n<font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ cat/ Kat the Cat, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55895" value="-1"/>  <!-- TODO Skill not found -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91219" name="Transformation Scroll: Cat" type="POTION">
+	<item id="91219" name="Transformation Scroll: Cat" type="NONE">
 	<!-- Changes the appearance to that of a cat.\n\n<Transformation effect>\nMax HP +20%\nMax MP +20%\nAcquired XP +20%\nAcquired SP +20%.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(When Sayha's Grace is active, acquired XP/ SP are increased.)</font>\n<font color=eeaa22>(The effect is cancelled when transforming into a teddy bear/ panda/ Kat the Cat, or changing the armor appearance to that of Blue Dynasty.)</font> -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51148" value="-1"/>  <!-- Transformation into Cat -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="91220" name="Shining Fishing kit Lv. 2" type="NONE">
 	<!-- Double-click to obtain 2 Golden Mermaid's Fishing Rod Packs (30-day), 25,920 Silver Baits, 20 Einhasad's Protections, Refined Antharas' Earring Pack (30-day), Sayha's Jewel Box (30-day). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<armor id="91221" name="Antharas' Earring Lv. 3" type="NONE" body-part="EAR">
 	<!-- Available for 30 d. MP +40, CON +1, MEN +1, Bleed Resistance and Atk. Rate +30%, Stun Resistance and Atk. Rate +20%, Fear/ Silence Resistance and Atk. Rate +20%, Damage Reflection Resistance +15%, Received Healing +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. Effects of two identical earrings do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="119.0"/>
 			<stat type="MAX_MP" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="3558" level="14" value="-1"/>  <!-- TODO Skill not found -->
-		</skills>
 	</armor>
 
 	<item id="91222" name="Antharas' Earring Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain Antharas' Earring Lv. 3 (30-day). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<armor id="91223" name="Aquamarine Lv. 5" type="NONE" body-part="AGATHION">
+	<armor id="91223" name="Aquamarine Lv. 5" type="NONE" body-part="null">
 	<!-- Available for 30 days. With a certain chance MP +50 when using skills. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="5" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="5" />
 		<crystal />
-		<skills>
-			<skill id="17823" level="5"/>  <!-- Aquamarine -->
-		</skills>
 	</armor>
 
 	<item id="91224" name="Sayha's Jewel Box" type="NONE">
 	<!-- Double-click to obtain Cat's Eye Lv. 5 (30-day), Aquamarine Lv. 5 (30-day). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="91225" name="Gift from Wealthy Merchant Red" type="NONE">
 	<!-- Double-click to obtain Anakim's/ Lilith' Soul Crystal, Inventory Expansion Ticket Lv. 3-5, Red's Weapon Coupon. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<item id="91226" name="Red's Weapon Coupon" type="MATERIAL">
+	<item id="91226" name="Red's Weapon Coupon" type="NONE">
 	<!-- Can be exchanged for a weapon pack.\n<Weapon Pack Exchange>Done by Wealthy Merchant Red.\nRequired number:\nC-grade: 6\nB-grade: 20\nA-grade: 54\nTop A-grade: 320. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91227" name="Sayha's Cloak Coupon" type="MATERIAL">
+	<item id="91227" name="Sayha's Cloak Coupon" type="NONE">
 	<!-- Take it to the Game Assistant to exchange for Black/ White/ Red Sayha's Cloak. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91228" name="Chronicle Cube" type="ELIXIR">
+	<item id="91228" name="Chronicle Cube" type="NONE">
 	<!-- Available for 30 days. Double-click to obtain Shining Scrolls of Mood Melody (3 pcs.). With a certain chance you can also get one of the following items: Dandy's Home Run Ball, XP Growth Scroll (Event), Savior Scroll: Enchant Weapon. Can be used only once a day. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="43200" action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91229" name="Chronicle Cube" type="ELIXIR">
+	<item id="91229" name="Chronicle Cube" type="NONE">
 	<!-- Available for 90 days. Double-click to obtain Shining Scrolls of Mood Melody (3 pcs.). With a certain chance you can also get one of the following items: Dandy's Home Run Ball, XP Growth Scroll (Event), Savior Scroll: Enchant Weapon. Can be used only once a day. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="129600" action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91230" name="Chronicle Mark" type="RUNE">
+	<item id="91230" name="Chronicle Mark" type="NONE">
 	<!-- Available for 30 days. CON/ MEN/ DEX/ WIT/ STR/ INT +1, Atk. Spd./ Casting Spd. +5%. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="43200"/>
+		<attributes/>
 	</item>
 
-	<item id="91231" name="Chronicle Mark" type="RUNE">
+	<item id="91231" name="Chronicle Mark" type="NONE">
 	<!-- Available for 90 days. CON/ MEN/ DEX/ WIT/ STR/ INT +1, Atk. Spd./ Casting Spd. +5%. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="129600"/>
+		<attributes/>
 	</item>
 
-	<item id="91232" name="A-grade Enchant Scroll Ticket" type="MATERIAL">
+	<item id="91232" name="A-grade Enchant Scroll Ticket" type="NONE">
 	<!-- Take it along with Scroll: Enchant A-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<restriction dropable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91233" name="B-grade Enchant Scroll Ticket" type="MATERIAL">
+	<item id="91233" name="B-grade Enchant Scroll Ticket" type="NONE">
 	<!-- Take it along with Scroll: Enchant B-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<restriction dropable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91234" name="C-grade Enchant Scroll Ticket" type="MATERIAL">
+	<item id="91234" name="C-grade Enchant Scroll Ticket" type="NONE">
 	<!-- Take it along with Scroll: Enchant C-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<restriction dropable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="91235" name="D-grade Enchant Scroll Ticket" type="MATERIAL">
+	<item id="91235" name="D-grade Enchant Scroll Ticket" type="NONE">
 	<!-- Take it along with Scroll: Enchant D-grade Armor/ Weapon and some adena to the Prime Store to get Protecting/ Improved/ Stable Scroll. -->
 		<restriction dropable="false"/>
 		<attributes/>
@@ -246,49 +228,49 @@
 	<item id="91236" name="Santa Girl's Gift Pouch" type="NONE">
 	<!-- Double-click to obtain Blessed Talisman of Border, Venir's Talisman Lv. 18, A/ B/ C-grade equipment, A/ B/ C/ D-grade enchant scroll coupon. Can be transferred between characters within one account via the Game Assistant. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<item id="91237" name="Santa Girl's Magic Box" type="ELIXIR">
+	<item id="91237" name="Santa Girl's Magic Box" type="NONE">
 	<!-- Double-click to obtain Santa Girl's Gift Blessing. Can be used only once a day. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="91238" name="Rudolph's Growth Cube - 15 charges" type="NONE">
 	<!-- Double-click to obtain Rudolph's Growth Box (maximum 15 times). Can be used only once a day. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true"/>
+		<attributes/>
 	</item>
 
 	<item id="91239" name="Rudolph's Growth Cube Box" type="NONE">
 	<!-- Double-click to obtain Rudolph's Growth Cube - 15 charges. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<item id="91240" name="Christmas Amulet" type="RUNE">
+	<item id="91240" name="Christmas Amulet" type="NONE">
 	<!-- Available for 15 days. When in inventory, Acquired XP/ SP (hunting) +20%, Acquired XP/ SP (fishing) +20%. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="21600"/>
+		<attributes/>
 	</item>
 
 	<item id="91241" name="Christmas Amulet Box" type="NONE">
 	<!-- Double-click to obtain Christmas Amulet (15-day). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes duration="21600" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="91242" name="Rudolph's Growth Box" type="NONE">
 	<!-- Double-click to obtain 720 Shining Golden Baits, 1 Improved Master Fisherman's Blessing (4-hour), 2 Agathion Rudolph Packs (2-hour). -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<armor id="91243" name="Shining Savior's Earring" type="NONE" body-part="EAR">
 	<!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Fear/ Stun/ Silence Resistance +4%. Grants Vampiric Rage effect. Effects of two identical earrings do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="78.0"/>
@@ -297,8 +279,8 @@
 
 	<armor id="91244" name="Dragon Pendant Lv. 1" type="NONE" body-part="PENDANT">
 	<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Lv. 2 by Head Blacksmith Ferris.\nRequired materials: 200 C-grade Crystals, 2,000,000 adena. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="39.0"/>
@@ -307,8 +289,8 @@
 
 	<armor id="91245" name="Dragon Pendant Lv. 2" type="NONE" body-part="PENDANT">
 	<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Lv. 3 by Head Blacksmith Ferris.\nRequired materials: 1500 B-grade Crystals, 10,000,000 adena. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="48.0"/>
@@ -317,8 +299,8 @@
 
 	<armor id="91246" name="Dragon Pendant Lv. 3" type="NONE" body-part="PENDANT">
 	<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Lv. 4 by Head Blacksmith Ferris.\nRequired materials: 5000 B-grade Crystals, 50,000,000 adena. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="57.0"/>
@@ -327,8 +309,8 @@
 
 	<armor id="91247" name="Dragon Pendant Lv. 4" type="NONE" body-part="PENDANT">
 	<!-- Contains the dragon's energy. Can be enchanted up to +5 with Dragon Varnish. Activates special effects depending on the enchant value. +5 pendant can be upgraded to Blessed Dragon Pendant by Veruti in Giran.\nRequired materials: Blessed Land/ Fire Dragon Pendant. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="66.0"/>
@@ -337,44 +319,36 @@
 
 	<armor id="91248" name="Blessed Dragon Pendant" type="NONE" body-part="PENDANT">
 	<!-- <Properties>\nP. Atk. +20%\nM. Atk. +20%\nP. Critical Damage +15%\nM. Skill Critical Damage +15%\nAtk. Spd. +10%\nCasting Spd. +10%\nReceived P. Damage -30%\nReceived M. Damage -30%\nM. Def. +50%\nAcquired XP/ SP +30%\nDamage Reflection Resistance +20%\n\n<Dragon Meditation>\nIncreases HP/ MP Recovery Rate and Speed for a certain amount of time.\n\nAn item imbued with the dragon power. Cannot be enchanted. -->
-		<restriction freightable="false" dropable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction dropable="false" sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="75.0"/>
 		</stats>
 	</armor>
 
-	<item id="91249" name="Dragon Varnish" type="BLESSED_ENCHANT_ARMOR">
+	<item id="91249" name="Dragon Varnish" type="NONE">
 	<!-- Required for enchanting Dragon Pendant. The maximum enchant value is +5. In case of failure the enchant value resets to 0. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="91250" name="Radiant Dragon Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<item id="91250" name="Radiant Dragon Varnish" type="NONE">
 	<!-- Required for enchanting Dragon Pendant. The maximum enchant value is +5. In case of failure the enchant value remains the same. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="91251" name="Highest-grade HP Recovery Potion" type="POTION">
+	<item id="91251" name="Highest-grade HP Recovery Potion" type="NONE">
 	<!-- Momentarily recovers 800 HP. If HP is full, CP is recovered. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="1" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51161" value="-1"/>  <!-- Highest-grade HP Recovery Potion -->
-		</skill-reducer>
+		<attributes weight="1"/>
 	</item>
 
-	<item id="91252" name="High-grade MP Replenishing Potion" type="POTION">
+	<item id="91252" name="High-grade MP Replenishing Potion" type="NONE">
 	<!-- Instantly restores MP. Cannot be used when MP bar is full. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes weight="5" commission-type="POTION" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51162" value="-1"/>  <!-- High-grade MP Replenishing Potion -->
-		</skill-reducer>
+		<attributes weight="5"/>
 	</item>
 
 	<item id="91253" name="Lucky Herb Pouch" type="NONE">
@@ -392,263 +366,212 @@
 	<item id="91255" name="Dragon's Relic" type="NONE">
 	<!-- Double-click to obtain one of the following items: Enchanted Weapon Pack (A/ B/ C-grade), Radiant Talisman of Authority Lv. 5, Blessed Dragon Pendant, Attribute Necklace, Doll of Border, Spirit Transformation Scroll - Dancer/ Singer. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<item id="91256" name="Baium Doll Lv. 2" type="RUNE">
+	<item id="91256" name="Baium Doll Lv. 2" type="NONE">
 	<!-- <Baium Doll's Sorcery Lv. 2>\nSkill Cooldown -3%\nP. Def. +12%\nM. Def. +12%\nSilence Resistance +40%\nFear Resistance +40%\nParalysis Resistance +20%\nKnockback Resistance +20%\nPull Resistance +20%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39302" level="2"/>  <!-- Baium Doll's Sorcery -->
-		</skill-reducer>
 	</item>
 
-	<item id="91257" name="Queen Ant Doll Lv. 2" type="RUNE">
+	<item id="91257" name="Queen Ant Doll Lv. 2" type="NONE">
 	<!-- <Queen Ant Doll's Sorcery Lv. 2>\nP. Atk. +8%\nP. Critical Damage +8%\nP. Skill Critical Damage +8%\nMax HP +12%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39303" level="2"/>  <!-- Queen Ant Doll's Sorcery -->
-		</skill-reducer>
 	</item>
 
-	<item id="91258" name="Orfen Doll Lv. 2" type="RUNE">
+	<item id="91258" name="Orfen Doll Lv. 2" type="NONE">
 	<!-- <Orfen Doll's Sorcery Lv. 2>\nM. Atk. +8%\nM. Skill Critical Damage +8%\nMax MP +12%\n\nBoosts parameters when in inventory.\nCan be upgraded through compounding. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39304" level="2"/>  <!-- Orfen Doll's Sorcery -->
-		</skill-reducer>
 	</item>
 
-	<item id="91259" name="Spirit Transformation Scroll - Singer" type="POTION">
+	<item id="91259" name="Spirit Transformation Scroll - Singer" type="NONE">
 	<!-- For 30 min. transforms you into Singer Spirit. The effect remains after death. Cannot be used in the Spirit form. Cooldown: 10 min.\nSpirit - Singer: enables Song of Earth, Song of Wind, Song of Hunter, Song of Vitality. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91260" name="Spirit Transformation Scroll - Dancer" type="POTION">
+	<item id="91260" name="Spirit Transformation Scroll - Dancer" type="NONE">
 	<!-- For 30 min., transforms you into Dancer Spirit. The effect remains after death. Cannot be used in the Spirit form. Cooldown: 10 min.\nSpirit - Dancer: enables Dance of Warrior, Dance of Fire, Dance of Fury, Dance of Concentration. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<armor id="91261" name="Dragon Berserker Outfit" type="HEAVY" body-part="HAIR">
+	<armor id="91261" name="Dragon Berserker Outfit" type="HEAVY" body-part="ALL_DRESS">
 	<!-- Dragon berserker outfit. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<item id="91262" name="Transformation Scroll: Ninja Assassin" type="POTION">
+	<item id="91262" name="Transformation Scroll: Ninja Assassin" type="NONE">
 	<!-- Changes the appearance to that of Ninja Assassin.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to cancel enemy's target after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51184" value="-1"/>  <!-- Ninja Assassin -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="POTION">
+	<item id="91263" name="Transformation Scroll: Blood Noblesse" type="NONE">
 	<!-- Changes the appearance to that of Blood Noblesse.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to hit with powerful magic after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51191" value="-1"/>  <!-- Blood Noblesse -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91264" name="Transformation Scroll: White Noblesse" type="POTION">
+	<item id="91264" name="Transformation Scroll: White Noblesse" type="NONE">
 	<!-- Changes the appearance to that of White Noblesse.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to decrease enemy's M. Def. after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51192" value="-1"/>  <!-- White Noblesse -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="POTION">
+	<item id="91265" name="Transformation Scroll: Blue Musketeer" type="NONE">
 	<!-- Changes the appearance to that of Blue Musketeer.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to stun the enemy after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51185" value="-1"/>  <!-- Blue Musketeer -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="POTION">
+	<item id="91266" name="Transformation Scroll: Purple Cowboy" type="NONE">
 	<!-- Changes the appearance to that of Purple Cowboy.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to deal great physical damage after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51189" value="-1"/>  <!-- Purple Cowboy -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91267" name="Transformation Scroll: High Priest" type="POTION">
+	<item id="91267" name="Transformation Scroll: High Priest" type="NONE">
 	<!-- Changes the appearance to that of High Priest.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to recover party member's HP/ MP after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51190" value="-1"/>  <!-- High Priest -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91268" name="Transformation Scroll: Wild Wolf" type="POTION">
+	<item id="91268" name="Transformation Scroll: Wild Wolf" type="NONE">
 	<!-- Changes the appearance to that of Wild Wolf.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to decrease enemy's P. Def. after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51187" value="-1"/>  <!-- Wild Wolf -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91269" name="Transformation Scroll: Valkyrie" type="POTION">
+	<item id="91269" name="Transformation Scroll: Valkyrie" type="NONE">
 	<!-- Changes the appearance to that of Valkyrie.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to paralyze the enemy after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51186" value="-1"/>  <!-- Valkyrie -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91270" name="Transformation Scroll: Pirate" type="POTION">
+	<item id="91270" name="Transformation Scroll: Pirate" type="NONE">
 	<!-- Changes the appearance to that of Pirate.\n\n<Transformation effect>\nP. Atk. +7%\nM. Atk. +7%\nAcquired XP +10%.\n\n<When triggered>\nThere is a certain chance to increase party member's P./ M. Atk. after an attack.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="POTION">
+	<item id="91271" name="Transformation Scroll: Dragon Berserker" type="NONE">
 	<!-- Changes the appearance to that of Dragon Berserker.\n\n<Transformation effect>\nP. Atk. +10%\nM. Atk. +10%\nAcquired XP +20%\n\n<When triggered>\nThere is a certain chance to apply a buff after an attack.\nP. Atk. +50%\nM. Atk. +50%\nAtk. Spd. +50%\nCasting Spd. +50%\nDamage Reflection +15%.\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51183" value="-1"/>  <!-- Dragon Berserker -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="POTION">
+	<item id="91272" name="Transformation Sealbook: Ninja Assassin" type="NONE">
 	<!-- Required to learn Ninja Assassin transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91273" name="Transformation Sealbook: Blood Noblesse" type="POTION">
+	<item id="91273" name="Transformation Sealbook: Blood Noblesse" type="NONE">
 	<!-- Required to learn Blood Noblesse transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91274" name="Transformation Sealbook: White Noblesse" type="POTION">
+	<item id="91274" name="Transformation Sealbook: White Noblesse" type="NONE">
 	<!-- Required to learn White Noblesse transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91275" name="Transformation Sealbook: Blue Musketeer" type="POTION">
+	<item id="91275" name="Transformation Sealbook: Blue Musketeer" type="NONE">
 	<!-- Required to learn Blue Musketeer transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91276" name="Transformation Sealbook: Purple Cowboy" type="POTION">
+	<item id="91276" name="Transformation Sealbook: Purple Cowboy" type="NONE">
 	<!-- Required to learn Purple Cowboy transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91277" name="Transformation Sealbook: High Priest" type="POTION">
+	<item id="91277" name="Transformation Sealbook: High Priest" type="NONE">
 	<!-- Required to learn High Priest transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91278" name="Transformation Sealbook: Wild Wolf" type="POTION">
+	<item id="91278" name="Transformation Sealbook: Wild Wolf" type="NONE">
 	<!-- Required to learn Wild Wolf transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91279" name="Transformation Sealbook: Valkyrie" type="POTION">
+	<item id="91279" name="Transformation Sealbook: Valkyrie" type="NONE">
 	<!-- Required to learn Valkyrie transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91280" name="Transformation Sealbook: Pirate" type="POTION">
+	<item id="91280" name="Transformation Sealbook: Pirate" type="NONE">
 	<!-- Required to learn Pirate transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="91281" name="Transformation Sealbook: Dragon Berserker" type="POTION">
+	<item id="91281" name="Transformation Sealbook: Dragon Berserker" type="NONE">
 	<!-- Required to learn Dragon Berserker transformation skill. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="91282" name="Mysterious Transformation Box" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<item id="91283" name="Spirit Transformation Scroll - Singer &amp; Dancer" type="POTION">
+	<item id="91283" name="Spirit Transformation Scroll - Singer &amp; Dancer" type="NONE">
 	<!-- For 30 min., transforms you into Singer & Dancer Spirit. The effect remains after death. Cannot be used in the Spirit form. Cooldown: 10 min.\nSpirit - Singer & Dancer: enables Song of Earth, Song of Wind, Song of Hunter, Song of Vitality, Dance of Warrior, Dance of Fire, Dance of Fury, Dance of Concentration. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="91284" name="Fish Stew - Clarity Lv. 1 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Skill MP Consumption -10%\nM. Skill MP Consumption -4%\nSong/ Dance MP Consumption -10%\n\nDuration: 20 min. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51224" value="-1"/>  <!-- Fish Stew - Clarity -->
-		</skill-reducer>
 	</item>
 
 	<item id="91285" name="Fish Stew - Clarity Lv. 2 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Skill MP Consumption -15%\nM. Skill MP Consumption -7%\nSong/ Dance MP Consumption -15%\n\nDuration: 20 min. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51224" level="2" value="-1"/>  <!-- Fish Stew - Clarity -->
-		</skill-reducer>
 	</item>
 
 	<item id="91286" name="Fish Stew - Agility Lv. 1 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Evasion +2\n\nDuration: 20 min. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51225" value="-1"/>  <!-- Fish Stew - Agility -->
-		</skill-reducer>
 	</item>
 
 	<item id="91287" name="Fish Stew - Agility Lv. 2 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Evasion +3\n\nDuration: 20 min. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51225" level="2" value="-1"/>  <!-- Fish Stew - Agility -->
-		</skill-reducer>
 	</item>
 
 	<item id="91288" name="Fish Stew - Agility Lv. 3 (Tradable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Evasion +4\n\nDuration: 20 min. -->
 		<restriction dropable="false" sellable="false"/>
 		<attributes/>
-		<skill-reducer type="ItemSkills">
-			<skill id="51225" level="3" value="-1"/>  <!-- Fish Stew - Agility -->
-		</skill-reducer>
 	</item>
 
 	<item id="91289" name="Mysterious Transformation Sealbook Box" type="NONE">
 	<!-- Double-click to obtain a transformation sealbook, including transformation to Dragon Berserker. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="91290" name="Scroll: Critical Creation" type="NONE">
@@ -702,13 +625,13 @@
 	<item id="91298" name="Spring Energy Lv. 1" type="NONE">
 	<!-- For 20 min., Max HP/ MP +3%, P. Atk. +3%, M. Atk. +5%, Atk. Spd./ Casting Spd. +3%, P./ M. Def. +3%, Acquired XP/ SP +3%, Sayha's Grace Consumption -3%.\n\nNote!\nThe Spring Energy effects don't stack, the higher-level effect takes precedence.\n\nCan be exchanged for various items by Primavera. -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="91299" name="Spring Energy Lv. 2" type="NONE">
 	<!-- For 20 min., Max HP/ MP +5%, P. Atk. +3%, M. Atk. +8%, Atk. Spd./ Casting Spd. +5%, P./ M. Def. +5%, Acquired XP/ SP +5%, Sayha's Grace Consumption -5%.\n\nNote!\nThe Spring Energy effects don't stack, the higher-level effect takes precedence.\n\n -->
 		<restriction dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 </list>

@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="90000" name="Best DEX Dye (DEX +4 CON -2)" type="DYE">
+	<item id="90000" name="Best DEX Dye (DEX +4 CON -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90001" name="Best INT Dye (INT +4 MEN -2)" type="DYE">
+	<item id="90001" name="Best INT Dye (INT +4 MEN -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90002" name="Best INT Dye (INT +4 WIT -2)" type="DYE">
+	<item id="90002" name="Best INT Dye (INT +4 WIT -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90003" name="Best MEN Dye (MEN +4 INT -2)" type="DYE">
+	<item id="90003" name="Best MEN Dye (MEN +4 INT -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90004" name="Best MEN Dye (MEN +4 WIT -2)" type="DYE">
+	<item id="90004" name="Best MEN Dye (MEN +4 WIT -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90005" name="Best WIT Dye (WIT +4 INT -2)" type="DYE">
+	<item id="90005" name="Best WIT Dye (WIT +4 INT -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
 		<random_craft exp="400000" commission="8000"/>
 	</item>
 
-	<item id="90006" name="Best WIT Dye (WIT +4 MEN -2)" type="DYE">
+	<item id="90006" name="Best WIT Dye (WIT +4 MEN -2)" type="NONE">
 	<!-- Collect 10 units and take them to the Symbol Maker in town to get a symbol that boosts your abilities. Requirements: all 3rd classes. -->
 		<restriction sellable="false"/>
 		<attributes weight="150" price="800000"/>
@@ -116,7 +116,7 @@
 	<item id="90017" name="A-grade Weapon Ingredient Pack" type="NONE">
 	<!-- Double-click to obtain an ingredient for A-grade weapons. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90018" name="Elite Symbol of Monster Arena" type="NONE">
@@ -134,86 +134,71 @@
 	<item id="90020" name="Best Dye Pack" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
-	<armor id="90021" name="Warrior’s Talisman - Attack" type="NONE" body-part="BELT">
+	<armor id="90021" name="Warrior’s Talisman - Attack" type="NONE" body-part="TALISMAN">
 	<!-- Available for 30 days. PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
 	</armor>
 
-	<armor id="90022" name="Warrior’s Talisman - Defense" type="NONE" body-part="BELT">
+	<armor id="90022" name="Warrior’s Talisman - Defense" type="NONE" body-part="TALISMAN">
 	<!-- Available for 40 days. Received PvE Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
 	</armor>
 
-	<armor id="90023" name="Belt" type="LIGHT" body-part="NONE">
+	<armor id="90023" name="Belt" type="LIGHT" body-part="BELT">
 	<!-- Inventory Slots +2, Weight Limit +1000. Can be upgraded to Cloth Belt with a Magic Pin. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes weight="500" enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="35040" value="-1"/>  <!-- Belt -->
-		</skills>
 	</armor>
 
-	<armor id="90024" name="Cloth Belt" type="LIGHT" body-part="NONE">
+	<armor id="90024" name="Cloth Belt" type="LIGHT" body-part="BELT">
 	<!-- Inventory Slots +2, Weight Limit +2000, HP Recovery Rate +1.24, MP Recovery Rate +0.83, CP Recovery Rate +1.66. Can be upgraded to Leather Belt with a Mid-grade Magic Pin. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes weight="500" enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="35041" value="-1"/>  <!-- Cloth Belt -->
-		</skills>
 	</armor>
 
-	<armor id="90025" name="Leather Belt" type="LIGHT" body-part="NONE">
+	<armor id="90025" name="Leather Belt" type="LIGHT" body-part="BELT">
 	<!-- Inventory Slots +3, Weight Limit +3000, HP Recovery Rate +1.47, MP Recovery Rate +0.98, CP Recovery Rate +1.96, Max HP/ MP/ CP +100. Can be upgraded to Iron Belt with a High-grade Magic Pin. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes weight="500" enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="35042" value="-1"/>  <!-- Leather Belt -->
-		</skills>
 	</armor>
 
-	<armor id="90026" name="Iron Belt" type="LIGHT" body-part="NONE">
+	<armor id="90026" name="Iron Belt" type="LIGHT" body-part="BELT">
 	<!-- Inventory Slots +4, Weight Limit +4000, HP Recovery Rate +1.70, MP Recovery Rate +1.13, CP Recovery Rate +2.26, Max HP/ MP/ CP +150. Can be upgraded to Mithril Belt with a Top-grade Magic Pin. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes weight="500" enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="35043" value="-1"/>  <!-- Iron Belt -->
-		</skills>
 	</armor>
 
-	<armor id="90027" name="Mithril Belt" type="LIGHT" body-part="NONE">
+	<armor id="90027" name="Mithril Belt" type="LIGHT" body-part="BELT">
 	<!-- Inventory Slots +5, Weight Limit +5000, HP Recovery Rate +1.92, MP Recovery Rate +1.28, CP Recovery Rate +2.56, Max HP/ MP/ CP +200. -->
-		<restriction freightable="false" sellable="false"/>
-		<attributes weight="500" enchant-enabled="false" />
+		<restriction sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="35044" value="-1"/>  <!-- Mithril Belt -->
-		</skills>
 	</armor>
 
 	<item id="90028" name="Magic Pin" type="NONE">
@@ -240,54 +225,42 @@
 		<attributes weight="20"/>
 	</item>
 
-	<item id="90032" name="Elixir of Life" type="ELIXIR">
+	<item id="90032" name="Elixir of Life" type="NONE">
 	<!-- Restores a large amount of HP. Reuse Time: 3 minutes. -->
 		<restriction sellable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE"/>
+		<attributes weight="5"/>
 	</item>
 
-	<item id="90033" name="Elixir of Mind" type="ELIXIR">
+	<item id="90033" name="Elixir of Mind" type="NONE">
 	<!-- Restores a large amount of MP. Reuse Time: 3 minutes. -->
 		<restriction sellable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE"/>
+		<attributes weight="5"/>
 	</item>
 
 	<item id="90034" name="Spellbook Chest - 3rd Class Transfer" type="NONE">
 	<!-- Double-click to obtain one of the Spellbooks for 3rd Class Transfer. -->
 		<restriction sellable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39202" value="-1"/>  <!-- Spellbook Chest -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90035" name="Life Stone Pack" type="NONE">
 	<!-- Double-click to obtain one of the following items: Life Stone - Weapon/ Armor. -->
 		<restriction sellable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39203" value="-1"/>  <!-- Life Stone Pack -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<armor id="90036" name="Hero’s Talisman - Attack" type="NONE" body-part="BELT">
+	<armor id="90036" name="Hero’s Talisman - Attack" type="NONE" body-part="TALISMAN">
 	<!-- Available for 30 days. PvP Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
-		<skills>
-			<skill id="35038" value="-1"/>  <!-- Hero’s Talisman - Attack -->
-		</skills>
 	</armor>
 
-	<armor id="90037" name="Hero’s Talisman - Defense" type="NONE" body-part="BELT">
+	<armor id="90037" name="Hero’s Talisman - Defense" type="NONE" body-part="TALISMAN">
 	<!-- Available for 30 days. Received PvP Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
-		<skills>
-			<skill id="35039" value="-1"/>  <!-- Hero’s Talisman - Defense -->
-		</skills>
 	</armor>
 
 	<item id="90038" name="Spellbook: Mount Golden Lion " type="NONE">
@@ -320,22 +293,16 @@
 		<attributes/>
 	</item>
 
-	<item id="90043" name="Dark Assassin Transformation Potion" type="POTION">
+	<item id="90043" name="Dark Assassin Transformation Potion" type="NONE">
 	<!-- Transforms into Dark Assassin.\n\n<Transformation effect>\nP. Atk. +2%\nM. Atk. +2%\nP. Def. +2%\nM. Def. +2%\nP. Accuracy +1\nM. Accuracy +1\nMax HP +5%\nMax MP +5%\nAtk. Spd. +3%\nSpeed +4\nM. Critical Rate +1\n\nDuration: 20 min.\nThe effect remains after death. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="5" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39205" value="-1"/>  <!-- Dark Assassin Transformation -->
-		</skill-reducer>
+		<attributes weight="5"/>
 	</item>
 
 	<item id="90044" name="Dimensional Blessing" type="SCROLL">
 	<!-- XP +37 million, SP +1.11 million. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39204" value="-1"/>  <!-- Dimensional Blessing -->
-		</skill-reducer>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes/>
 	</item>
 
 	<item id="90045" name="Magical Tablet" type="NONE">
@@ -441,7 +408,7 @@
 	</item>
 
 	<item id="90062" name="Scroll: Real Target" type="NONE">
-	<!-- A scroll for learning the Real Target skill.\n\n<Classes>\nSagittarius, Moonlight Sentinel, Ghost Sentinel\n\n<Skill effect>\n\nIncreases Shock Atk. Rate.\nInflicts a debuff decreasing Bow Resistance and Shock Resistance after an attack. -->
+	<!-- A scroll for learning the Real Target skill.\n\n<Classes>\nSagittarius, Moonlight Sentinel, Ghost Sentinel\n\n<Skill effect>\nIncreases Shock Atk. Rate.\nInflicts a debuff decreasing Bow Resistance and Shock Resistance after an attack. -->
 		<restriction sellable="false"/>
 		<attributes/>
 	</item>
@@ -524,7 +491,7 @@
 		<attributes/>
 	</item>
 
-	<item id="90076" name="Scroll: Stun Burst" type="NONE">
+	<item id="90076" name="Scroll: Shocking Burst" type="NONE">
 	<!-- A scroll for learning the Stun Burst skill.\n\n<Class>\nDreadnought\n\n<Skill effect>\nCreates a powerful shockwave that deals damage to the target and nearby enemies, inflicting Shock on them and decreasing their P./ M. Def. -->
 		<restriction sellable="false"/>
 		<attributes/>

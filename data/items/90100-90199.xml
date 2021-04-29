@@ -192,10 +192,10 @@
 		<attributes/>
 	</item>
 
-	<armor id="90132" name="Monster Arena Belt" type="LIGHT" body-part="NONE">
+	<armor id="90132" name="Monster Arena Belt" type="LIGHT" body-part="BELT">
 	<!-- Available for 7 days. CON +1, MEN +1, HP Recovery Rate +2.31, MP Recovery Rate +1.54, CP Recovery Rate +3.07, Max HP/ MP/ CP +10%, Received Damage -3%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="500" duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="500" />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="10.0"/>
@@ -223,85 +223,74 @@
 	<item id="90136" name="Dimensional Gift" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39207" value="-1"/>  <!-- Dimensional Gift -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="90137" name="Matte Pendant Polish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<item id="90137" name="Matte Pendant Polish" type="NONE">
 	<!-- Enhances pendants' parameters. Can be used with Fire/ Earth Dragon Pendant up to +6. In case of failure, the pendant does not disappear, and its enchant value remains the same. Starting from +4, activates special effects depending on the item type. -->
 		<restriction dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="90138" name="Glittering Pendant Polish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
+	<item id="90138" name="Glittering Pendant Polish" type="NONE">
 	<!-- Enhances pendants' parameters. Can be used with Fire/ Earth Dragon Pendant up to +9. In case of failure, the pendant does not disappear, and its enchant value remains the same. Starting from +4, activates special effects depending on the item type. -->
 		<restriction dropable="false" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
-	<item id="90139" name="Silver Bait" type="LURE">
+	<item id="90139" name="Silver Bait" type="NONE">
 	<!-- Fishing Bait. Can be used for fishing Whales. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<attributes/>
 	</item>
 
-	<armor id="90140" name="Spirit Transformation Bracelet - Prophet" type="NONE" body-part="TALISMAN">
+	<armor id="90140" name="Spirit Transformation Bracelet - Prophet" type="NONE" body-part="FEET">
 	<!-- Available for 7 days. Transforms to Prophet Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="90141" name="Spirit Transformation Bracelet - Shillien Elder" type="NONE" body-part="TALISMAN">
+	<armor id="90141" name="Spirit Transformation Bracelet - Shillien Elder" type="NONE" body-part="FEET">
 	<!-- Available for 7 days. Transforms to Shillien Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="90142" name="Spirit Transformation Bracelet - Elven Elder" type="NONE" body-part="TALISMAN">
+	<armor id="90142" name="Spirit Transformation Bracelet - Elven Elder" type="NONE" body-part="FEET">
 	<!-- Available for 7 days. Required to transform to Elven Elder Spirit. Can be used once a day. After the transformation for 4 h. the following skills are available: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
 	<item id="90143" name="Einhasad's Protection (Exchangeable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nAcquired XP +100%\nAcquired SP +100%\n\nDuration: 60 min.\nCooldown: 1 min.\nThe effect remains after death. -->
 		<restriction sellable="false"/>
-		<attributes reuse-delay="3600000" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="55356" value="-1"/>  <!-- TODO Skill not found -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
-	<item id="90144" name="Transformation Scroll: White Assassin" type="POTION">
+	<item id="90144" name="Transformation Scroll: White Assassin" type="NONE">
 	<!-- Transforms into White Assassin.\n\n<Transformation effect>\nP. Atk. +3%\nM. Atk. +3%\nP. Def. +3%\nM. Def. +3%\nMax HP +7%\nMax MP +7%\nAtk. Spd. +5%\nSpeed +5\nP. Accuracy +2\nM. Accuracy +2\nM. Critical Rate +20\n\nDuration: 20 min.\nThe effect remains after death. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39210" value="-1"/>  <!-- White Assassin Transformation -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<armor id="90145" name="Ring of Savior" type="NONE" body-part="FINGER">
 	<!-- Stun Resistance +5%, HP Recovery Bonus +1.8, MP Recovery Bonus +1.1.when running. The effects do not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="150" enchant-enabled="false" />
+		<attributes weight="150" />
 		<crystal />
 		<stats>
 			<stat type="MAGICAL_DEFENCE" value="32.0"/>
 		</stats>
 	</armor>
 
-	<item id="90146" name="Savior’s Cube" type="ELIXIR">
+	<item id="90146" name="Savior’s Cube" type="NONE">
 	<!-- Available for 30 days. Double-click to obtain 1 Savior Scroll: Enchant Weapon and 1 Savior' Growth Scroll (can be used only once a day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="43200" action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="90147" name="Mark of Savior" type="NONE">
@@ -313,27 +302,24 @@
 	<item id="90148" name="Savior's Growth Scroll" type="NONE">
 	<!-- Acquired XP/ SP +50% for 2 h. Cooldown: 2 h. The effect remains after death. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
-	<item id="90149" name="Savior Scroll: Enchant Weapon" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON">
+	<item id="90149" name="Savior Scroll: Enchant Weapon" type="NONE">
 	<!-- Only for Savior’s weapons. In the case of failure, the item does not disappear, and its enchantment level remains the same. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<action handler="EnchantScrolls"/>
+		<attributes/>
 	</item>
 
 	<weapon id="90150" name="Savior’s Dual Sword" type="DUAL" body-part="TWO_HAND">
 	<!-- Available for 30 days.\n<Soul Crystal Enhancement>\nAtk. Spd. +5%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="2340" commission-type="OTHER_ITEM" duration="43200"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2340"/>
 		<crystal type="C"/>
-		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK" value="162.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
@@ -341,16 +327,14 @@
 
 	<weapon id="90151" name="Savior’s Staff" type="STAFF" body-part="TWO_HAND" magic="true">
 	<!-- Available for 30 d.\n<Soul Crystal Enhancement>\nCasting Spd. +12%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1010"/>
 		<crystal type="C"/>
-		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
 			<stat type="MAGIC_ATTACK" value="122.0"/>
 			<stat type="PHYSICAL_ATTACK" value="135.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
@@ -358,16 +342,14 @@
 
 	<weapon id="90152" name="Savior’s Bow" type="BOW" body-part="TWO_HAND" mana-consume="3">
 	<!-- Available for 30 days.\n<Soul Crystal Enhancement>\nP. Critical Rate +52. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1740" commission-type="OTHER_ITEM" reuse-delay="1500" duration="43200"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1740"/>
 		<crystal type="C"/>
-		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="92.0"/>
 			<stat type="PHYSICAL_ATTACK" value="316.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
 		</stats>
@@ -375,16 +357,14 @@
 
 	<weapon id="90153" name="Savior’s Dagger" type="DAGGER" body-part="RIGHT_HAND">
 	<!-- Available for 30 days.\n<Soul Crystal Enhancement>\nP. Critical Rate +66. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="1010" commission-type="OTHER_ITEM" duration="43200"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="1010"/>
 		<crystal type="C"/>
-		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
 			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="122.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
 		</stats>
@@ -392,162 +372,127 @@
 
 	<weapon id="90154" name="Savior's Spear" type="SPEAR" body-part="TWO_HAND">
 	<!-- Available for 30 days.\n<Soul Crystal Enhancement>\nA 25% chance to stun the target with a critical attack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="2010" commission-type="OTHER_ITEM" duration="43200"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="2010"/>
 		<crystal type="C"/>
-		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
-			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
-		<skills>
-			<skill id="3599" value="-1"/>  <!-- Polearm Multi-attack -->
-		</skills>
 	</weapon>
 
 	<item id="90155" name="Savior’s Herald" type="NONE">
 	<!-- Double-click to obtain Talisman of Border +6 (30-day) and Fire Dragon Pendant +6 (30-day). -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
-	<armor id="90156" name="Talisman of Border Lv. 6" type="NONE" body-part="BELT">
+	<armor id="90156" name="Talisman of Border Lv. 6" type="NONE" body-part="TALISMAN">
 	<!-- Available for 30 d. P./ M. Def. +24, P./ M. Evasion +2, HP/ MP/ CP +160, Speed +5, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +4%. Enables Border Purification (removes Paralysis, Petrification, Poisoning, and Bleeding). Effects of two identical talismans do not stack. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 	</armor>
 
-	<armor id="90157" name="Warrior’s Talisman - Attack" type="NONE" body-part="BELT">
+	<armor id="90157" name="Warrior’s Talisman - Attack" type="NONE" body-part="TALISMAN">
 	<!-- Available for 7 days. PvE Damage +3%, P. Critical Damage/ M. Skill Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
-		<skills>
-			<skill id="35036" value="-1"/>  <!-- Warrior’s Talisman - Attack -->
-		</skills>
 	</armor>
 
 	<armor id="90158" name="Fire Dragon Pendant +6" type="NONE" body-part="PENDANT">
 	<!-- M. Def. +16, Acquired XP/ SP +10%, P./ M. Atk. +20. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="40.0"/>
 		</stats>
-		<skills>
-			<skill id="35007" level="6" value="-1"/>  <!-- Fire Dragon Pendant +1 -->
-		</skills>
 	</armor>
 
-	<armor id="90159" name="Talisman of Battle - Liberate" type="NONE" body-part="BELT">
+	<armor id="90159" name="Talisman of Battle - Liberate" type="NONE" body-part="TALISMAN">
 	<!-- Removes all debuffs. Cooldown: 10 min. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="43200" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
-		<skills>
-			<skill id="35045" value="-1"/>  <!-- Talisman of Battle - Liberate -->
-		</skills>
 	</armor>
 
-	<armor id="90160" name="Warrior’s Talisman - Defense" type="NONE" body-part="BELT">
+	<armor id="90160" name="Warrior’s Talisman - Defense" type="NONE" body-part="TALISMAN">
 	<!-- Available for 7 days. Received PvE Damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes weight="120" duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes weight="120" />
 		<crystal />
-		<skills>
-			<skill id="35037" value="-1"/>  <!-- Warrior’s Talisman - Defense -->
-		</skills>
 	</armor>
 
 	<item id="90161" name="Chest of Glory" type="NONE">
 	<!-- Double-click to obtain Monster Arena Belt (7-day).\n\nNote!\nThe obtained item cannot be transferred. -->
 		<restriction sellable="false"/>
-		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90162" name="Warrior’s Talisman Pack - Attack" type="NONE">
 	<!-- Double-click to obtain Warrior’s Talisman - Attack (7-day). -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="90157"/>  <!-- Warrior’s Talisman - Attack -->
-		</extract>
+		<attributes/>
 	</item>
 
 	<item id="90163" name="Warrior’s Talisman Pack - Defense" type="NONE">
 	<!-- Double-click to obtain Warrior’s Talisman - Defense (7-day). -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes duration="10080" immediate-effect="true" action="PEEL"/>
-		<extract>
-			<item id="90160"/>  <!-- Warrior’s Talisman - Defense -->
-		</extract>
+		<attributes/>
 	</item>
 
-	<item id="90164" name="Battle Cure" type="ELIXIR">
+	<item id="90164" name="Battle Cure" type="NONE">
 	<!-- HP/ MP +1. Cooldown: 10 min. Can be used only in the Monster Arena. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes weight="2" action="SKILL_REDUCE"/>
+		<attributes weight="2"/>
 	</item>
 
 	<item id="90165" name="Ticket for Monster Arena " type="NONE">
 	<!-- An extra pass to a daily dungeon. Double-click to reset the Monster Arena timer. Can be used only once a day. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="90166" name="Elite Ticket for Monster Arena " type="NONE">
 	<!-- An extra pass to a daily dungeon. Double-click to reset the Elite Monster Arena timer. Can be used only once a day. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="90167" name="Bunch of Bananas" type="NONE">
 	<!-- For 5 min., Acquired XP/ SP +10%, P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +10%, Speed +10. The effect disappears after logout. -->
 		<restriction stackable="true" destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39223" value="-1"/>  <!-- Bunch of Bananas -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90168" name="Strawberry Banana Cocktail" type="SCROLL">
 	<!-- Activates the effect of Scroll: Prophecy of Fire Lv. 1 for 5 min.\n\nNote!\nEffects of two cocktails do not stack. -->
-		<restriction olympiad-restricted="true"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39224" value="-1"/>  <!-- Strawberry Banana Cocktail -->
-		</skill-reducer>
+		<restriction/>
+		<attributes/>
 	</item>
 
 	<item id="90169" name="Mango Banana Cocktail" type="SCROLL">
 	<!-- Activates the effect of Scroll: Prophecy of Water Lv. 1 for 5 min.\n\nNote!\nEffects of two cocktails do not stack. -->
-		<restriction olympiad-restricted="true"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39225" value="-1"/>  <!-- Mango Banana Cocktail -->
-		</skill-reducer>
+		<restriction/>
+		<attributes/>
 	</item>
 
 	<item id="90170" name="Cherry Banana Cocktail" type="SCROLL">
 	<!-- Activates the effect of Scroll: Prophecy of Wind Lv. 1 for 5 min.\n\nNote!\nEffects of two cocktails do not stack. -->
-		<restriction olympiad-restricted="true"/>
-		<attributes reuse-delay="3000" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39226" value="-1"/>  <!-- Cherry Banana Cocktail -->
-		</skill-reducer>
+		<restriction/>
+		<attributes/>
 	</item>
 
-	<item id="90171" name="Monkey Bait" type="LURE">
+	<item id="90171" name="Monkey Bait" type="NONE">
 	<!-- A fishing bait for catching a Tuna. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<attributes/>
 	</item>
 
 	<item id="90172" name="Gemstone of Border" type="NONE">
@@ -559,49 +504,49 @@
 	<item id="90173" name="Tuna" type="SCROLL">
 	<!-- Double-click to obtain some SP. Can be exchanged for SP Scroll through a Fishing Guildsman. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="90174" name="Silver Bait Box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90175" name="Golden Bait Box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90176" name="Golden Fishing kit Lv. 1" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90177" name="Golden Fishing kit Lv. 2" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90178" name="Golden Fishing kit Lv. 3" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90179" name="Golden Fishing kit Lv. 4" type="NONE">
 	<!-- Double-click to obtain Golden Mermaid's Fishing Rod Pack (30-day), 6480 Silver Baits, 10 Einhasad's Protections, and Refined Romantic Chapeau (Special Ability). -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90180" name="Golden Fishing kit Lv. 5" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="PEEL"/>
+		<attributes/>
 	</item>
 
 	<item id="90181" name="Shiny Coin" type="NONE">
@@ -610,58 +555,46 @@
 		<attributes/>
 	</item>
 
-	<item id="90182" name="Shining Golden Bait" type="LURE">
+	<item id="90182" name="Shining Golden Bait" type="NONE">
 	<!-- A fishing bait. Can be used to catch Glowing Whale. Gives a small chance to get Shiny Coin. -->
 		<restriction dropable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<attributes/>
 	</item>
 
 	<item id="90183" name="Chef's Fish Stew - Victory (Exchangeable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Accuracy +4\nM. Accuracy +4\nP. Evasion +4\nM. Evasion +4\nAtk. Spd. +10%\nCasting Spd. +10%\nHP Recovery Rate +20%\nMP Recovery Rate +20%\nP. Critical Rate +15%\nM. Critical Rate +15%\nP. Critical Damage +15%\nM. Critical Damage +15%\nDamage to monsters +15%\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(The effect does not stack with other Prophecy-type buffs.)</font> -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39253" value="-1"/>  <!-- Chef's Fish Stew - Victory -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90184" name="Chef's Fish Stew - Fire (Exchangeable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nMax HP +10%\nHP Recovery Rate +10%\nP. Def. +10%\nM. Def. +10%\nAtk. Spd. +10%\nCasting Spd. +10%\nDamage to monsters +15%\nP. Critical Rate +25%\nM. Critical Rate +25%\nDebuff Resistance +10%\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(The effect does not stack with other Prophecy-type buffs.)</font> -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39254" value="-1"/>  <!-- Chef's Fish Stew - Fire -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90185" name="Chef's Fish Stew - Water (Exchangeable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nMax MP +15%\nMP Recovery Rate +10%\nP. Def. +10%\nM. Def. +10%\nAtk. Spd. +10%\nCasting Spd. +10%\nSkill MP consumption -10%\nDamage to monsters +15%\nDebuff Resistance +10%\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(The effect does not stack with other Prophecy-type buffs.)</font> -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39255" value="-1"/>  <!-- Chef's Fish Stew - Water -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90186" name="Chef's Fish Stew - Wind (Exchangeable)" type="SCROLL">
 	<!-- Applies a buff when used.\n\n<Buff effect>\nP. Accuracy +4\nM. Accuracy +4\nP. Evasion +4\nM. Evasion +4\nP. Critical Rate +15%\nM. Critical Rate +15%\nP. Critical Damage +25%\nM. Critical Damage +25%\nSpeed +10%\nDebuff Resistance +10%\nDamage to monsters +15%\n\nDuration: 20 min.\nCooldown: 1 min.\nThe effect remains after death.\n<font color=ff6666>(The effect does not stack with other Prophecy-type buffs.)</font> -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="39256" value="-1"/>  <!-- Chef's Fish Stew - Wind -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="90187" name="Gold Urn" type="NONE">
 	<!-- Double-click to obtain one of various items. -->
 		<restriction dropable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90188" name="Glowing Whale" type="SCROLL">
 	<!-- Double-click to obtain some SP. Can be exchanged for SP Scroll through a Fishing Guildsman. -->
 		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE"/>
+		<attributes/>
 	</item>
 
 	<item id="90189" name="Blue Spinel" type="NONE">
@@ -672,80 +605,66 @@
 
 	<armor id="90190" name="Dandy's Pendant" type="NONE" body-part="PENDANT">
 	<!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon skill. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
 		</stats>
-		<skills>
-			<skill id="7096" value="-1"/>  <!-- Master's Blessing - Blessing of Fire Dragon -->
-		</skills>
 	</armor>
 
 	<armor id="90191" name="Dandy's Shining Pendant" type="NONE" body-part="PENDANT">
 	<!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon and Fire Dragon's Protection skills. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="10080" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
 		</stats>
-		<skills>
-			<skill id="7096" value="-1"/>  <!-- Master's Blessing - Blessing of Fire Dragon -->
-			<skill id="35001" value="-1"/>  <!-- Fire Dragon's Protection -->
-		</skills>
 	</armor>
 
 	<item id="90192" name="Giant's Enchant Scroll Pack" type="NONE">
 	<!-- Double-click to obtain one of the following items: common/ Improved/ Stable/ Protecting Scroll: Enchant C/ B-grade Weapon. -->
 		<restriction sellable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90193" name="Low-grade Arena Loot" type="NONE">
 	<!-- Reward for competing in the Arena.\nDouble-click to obtain one of the following items: Dandy's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Hero's Top-grade HP Replenishing Potion. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90194" name="Mid-grade Arena Loot" type="NONE">
 	<!-- Reward for competing in the Arena.\nDouble-click to obtain one of the following items: Spellbook Box - 3rd class change, Magic Gem, Spellbook Chest, Low-grade Life Stone, Scroll of Mood Melody. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<item id="90195" name="High-grade Arena Loot" type="NONE">
 	<!-- A reward for competing in the Arena.\nDouble-click to obtain one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Pack (15-day), Unidentified Rock, Dandy's Shining Pendant (7-day), Dandy's Shining Pendant (1-day), Dandy's Pendant (7-day), Dandy's Pendant (1-day). -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<attributes/>
 	</item>
 
 	<armor id="90196" name="Dandy's Pendant" type="NONE" body-part="PENDANT">
 	<!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon skill. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="120" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="49.0"/>
 		</stats>
-		<skills>
-			<skill id="7096" value="-1"/>  <!-- Master's Blessing - Blessing of Fire Dragon -->
-		</skills>
 	</armor>
 
 	<armor id="90197" name="Dandy's Shining Pendant" type="NONE" body-part="PENDANT">
 	<!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P. Critical Damage/ M. Skill Critical Damage +5%. Allows use of Blessing of Fire Dragon and Fire Dragon's Protection skills. -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
-		<attributes duration="120" enchant-enabled="false" />
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<attributes />
 		<crystal />
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="52.0"/>
 		</stats>
-		<skills>
-			<skill id="7096" value="-1"/>  <!-- Master's Blessing - Blessing of Fire Dragon -->
-			<skill id="35001" value="-1"/>  <!-- Fire Dragon's Protection -->
-		</skills>
 	</armor>
 
 	<item id="90198" name="MOPP Combat Ration" type="NONE">
@@ -757,8 +676,7 @@
 	<item id="90199" name="Hunter's Memo - Not Available" type="NONE">
 	<!-- The item is not available. Altran asked you to kill monsters who raided tombs of his family graveyard. Slay monsters from the list. -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" quest-item="true" action="SHOW_HTML"/>
-		<action handler="Bypass"/>
+		<attributes quest-item="true"/>
 	</item>
 
 </list>

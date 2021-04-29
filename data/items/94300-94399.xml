@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<armor id="94300" name="Sigil of Inevitability" type="SIGIL" body-part="BROOCH">
+	<armor id="94300" name="Sigil of Inevitability" type="SIGIL" body-part="null">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="1200" price="1422000" />
 		<random_craft exp="284400" commission="5688" locked="true"/>
@@ -101,12 +101,9 @@
 	</item>
 
 	<item id="94314" name="Elixir" type="NONE">
-	<!-- A vial with mysterious fluid.\n\n<Effect>\nStat points +1\n\n<Required level>\nLv. 76 and higher\n\n<Usage Limit>\nLv. 87: 5 times\nLv. 88 and higher: 10 times -->
+	<!-- A vial with mysterious fluid.\n\n<Effect>\nStats +1\n\n<Required level>\nLv. 76+\n\n<Usage limit>\nLv. 76-87: 5 times\nLv. 88+: 10 times -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-		<skill-reducer type="ItemSkills">
-			<skill id="40225" value="-1"/>  <!-- Elixir -->
-		</skill-reducer>
+		<attributes/>
 	</item>
 
 	<item id="94315" name="Package: Sigil of Inevitability" type="NONE">
@@ -199,7 +196,7 @@
 		<attributes/>
 	</item>
 
-	<item id="94330" name="Golden Wheel Guild Gift Box" type="NONE">
+	<item id="94330" name="Clan's Festival Gift Box" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
@@ -260,7 +257,7 @@
 	</item>
 
 	<item id="94340" name="Pack of Seals" type="NONE">
-	<!-- Double-click to obtain one of the following items\n\n<Guaranteed>\nGiran Seal\n\n<Random>\nSpellbook: Ultimate Death Knight Transformation\nBoss Weapon Pack\nTalisman of Baium\nFrintezza's Necklace\nBaium's Ring\nShield of Vengeance\nSigil of Inevitability\nStun Gauntlets\nPackage: Baium Doll Lv. 1\nPackage: Queen Ant Doll Lv. 1\nPackage: Orfen Doll Lv. 1\n+ other items. -->
+	<!-- Double-click to obtain one of the following items\n\n<Guaranteed>\nGiran Seal\n\n<Random>\nSpellbook: Ultimate Death Knight Transformation\nBoss Weapon Pack\nTalisman of Baium\nFrintezza's Necklace\nBaium's Ring\nShield of Vengeance\nSigil of Inevitability\nStun Gauntlets\nPackage: Baium Doll Lv. 1\nPackage: Queen Ant Doll Lv. 1\nPackage: Orfen Doll Lv. 1\n+ other items -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
@@ -378,7 +375,6 @@
 		<restriction dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="181"/>
 		<crystal type="D"/>
-		<damage radius="0" angle="0"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
 			<stat type="MAGIC_ATTACK" value="21.0"/>
@@ -388,7 +384,7 @@
 		</stats>
 	</weapon>
 
-	<item id="94360" name="Forgotten Primeval Garden's Time Stone - Not Available" type="POTION">
+	<item id="94360" name="Forgotten Primeval Garden's Time Stone - Not Available" type="NONE">
 	<!-- The item is not available. Prolongs your Session Zone's raid for 60 min.\n\n<Hunting Zone>\nForgotten Primeval Garden -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
@@ -478,7 +474,7 @@
 		<attributes/>
 	</item>
 
-	<item id="94375" name="Daily Cube: Supply - 30 charges" type="ELIXIR">
+	<item id="94375" name="Daily Cube: Supply - 30 charges" type="NONE">
 	<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nSupply Pack\n\nCan be used only once a day.\nCan be used up to 30 times.\nSpecial Supply Pack is granted after the 30th use. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
@@ -496,7 +492,7 @@
 		<attributes/>
 	</item>
 
-	<item id="94378" name="Daily Cube: Supply - 10 charges" type="ELIXIR">
+	<item id="94378" name="Daily Cube: Supply - 10 charges" type="NONE">
 	<!-- Double-click to obtain the following items.\n\n<Guaranteed>\nSupply Pack\n\nCan be used only once a day.\nCan be used up to 10 times. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
@@ -520,31 +516,31 @@
 		<attributes/>
 	</item>
 
-	<item id="94382" name="Special HP Recovery Potion" type="POTION">
+	<item id="94382" name="Special HP Recovery Potion" type="NONE">
 	<!-- Momentarily recovers 500 HP. If HP is full, CP is recovered. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94383" name="Scroll: Enchant Rare Accessories" type="ENCHANT_ARMOR">
+	<item id="94383" name="Scroll: Enchant Rare Accessories" type="NONE">
 	<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
 		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94384" name="Scroll: Enchant Rare Accessories" type="ENCHANT_ARMOR">
+	<item id="94384" name="Scroll: Enchant Rare Accessories" type="NONE">
 	<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1 -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94385" name="Improved Scroll: Enchant Rare Accessories" type="POLY_ENCHANT_ARMOR">
+	<item id="94385" name="Improved Scroll: Enchant Rare Accessories" type="NONE">
 	<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
 		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" type="POLY_ENCHANT_ARMOR">
+	<item id="94386" name="Improved Scroll: Enchant Rare Accessories" type="NONE">
 	<!-- <When enchanted from +1 to +3>\nAccessories: M. Def. +1\n\n<When enchanted to +4 or higher>\nAccessories: M. Def. +3\n\nSafe enchanting to +1\nThe enchanting is random from +1 to +2.\nFor rare accessories enchanted to +2 or lower. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
@@ -562,19 +558,19 @@
 		<attributes/>
 	</item>
 
-	<item id="94389" name="Package: + 3 Queen Ant's Ring" type="NONE">
+	<item id="94389" name="Package: +3 Queen Ant's Ring" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94390" name="Package: + +4 Queen Ant's Ring" type="NONE">
+	<item id="94390" name="Package: +4 Queen Ant's Ring" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="94391" name="Package: + +5 Queen Ant's Ring" type="NONE">
+	<item id="94391" name="Package: +5 Queen Ant's Ring" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
