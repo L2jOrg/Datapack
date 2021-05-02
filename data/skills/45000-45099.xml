@@ -659,7 +659,7 @@
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="6.5">
-                    <value level="2">8.0</value>                   
+                    <value level="2">8.0</value>
                     <value level="8">9.5</value>
                     <value level="9">11.0</value>
                     <value level="10">12.5</value>
@@ -704,7 +704,7 @@
         <effects>
             <stat-modify stat="HEAL_POWER">
                 <power initial="30.0">
-                    <value level="2">38.0</value>                    
+                    <value level="2">38.0</value>
                     <value level="8">46.0</value>
                     <value level="9">54.0</value>
                     <value level="10">62.0</value>
@@ -723,12 +723,7 @@
     <skill id="45017" name="Orfen's Earring - Special Ability">
         <!-- Enemy's MP -10% during PvP. -->
         <icon initial="icon.accessory_earring_of_orfen_i04"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
-			<magic-level initial="1"/>
-            <cast-range initial="600"/>
-            <reuse initial="120000"/>
-            <effect-point initial="-679"/>
-            <hit-time initial="1000"/>
+        <attributes magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
         </attributes>
         <target type="ENEMY_ONLY"/>
         <abnormal type="MULTI_DEBUFF">
@@ -742,7 +737,7 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
+    <skill id="45018" name="Zaken's Earring - Special Ability" debuff="true" action="A2">
         <!-- For 30 seconds, limits enemy's CP/HP/MP Recovery up to 80% during PvP. -->
         <icon initial="icon.accessory_earring_of_zaken_i04"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BOSS" level-bonus-rate="30">
@@ -751,7 +746,7 @@
             <effect-point initial="-679"/>
             <hit-time initial="1000"/>
         </attributes>
-		<target type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY"/>
         <abnormal type="HP_REGEN_DOWN">
             <level initial="2"/>
             <time initial="30"/>
@@ -761,15 +756,15 @@
             <stat-modify mode="PER" stat="REGENERATE_CP_RATE" stat-add="REGENERATE_CP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
+            <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
                 <power initial="-80.0"/>
             </stat-modify>
         </effects>
     </skill>
-    <skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A2" type="MAGIC">
+    <skill id="45019" name="Antharas' Earring - Special Ability" debuff="true" action="A2">
         <!-- Blocks all the enemy's P. Skills/M. Skills for 24 seconds. -->
         <icon initial="icon.accessory_earring_of_antaras_i04"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30">
@@ -778,7 +773,7 @@
             <effect-point initial="-666"/>
             <hit-time initial="1000"/>
         </attributes>
-		<target type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY"/>
         <abnormal type="SILENCE_ALL" visual="SILENCE">
             <level initial="2"/>
             <time initial="24"/>
@@ -794,7 +789,7 @@
         <icon initial="BranchSys2.Icon.br_zaken_cloak_i00"/>
         <attributes property="MAGIC"/>
         <target/>
-		<effects>
+        <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="5.0"/>
             </vital-stat-modify>
@@ -803,14 +798,13 @@
     <skill id="45021" name="White Uniform Hat (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -818,14 +812,13 @@
     <skill id="45022" name="White Uniform Hat (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -833,14 +826,13 @@
     <skill id="45023" name="White Uniform Hat (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="BranchSys2.icon.br_navy_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -848,14 +840,13 @@
     <skill id="45024" name="Napoleon Hat (STR +1, INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -863,14 +854,13 @@
     <skill id="45025" name="Napoleon Hat (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -878,14 +868,13 @@
     <skill id="45026" name="Napoleon Hat (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="BranchSys.icon.br_napoleonic_cap_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -893,14 +882,13 @@
     <skill id="45027" name="Ninja Hair Accessory (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -908,14 +896,13 @@
     <skill id="45028" name="Ninja Hair Accessory (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -923,14 +910,13 @@
     <skill id="45029" name="Ninja Hair Accessory (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="BranchSys3.icon1.g_co_ninja_hair"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -938,14 +924,13 @@
     <skill id="45030" name="Warrior's Helmet (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -953,14 +938,13 @@
     <skill id="45031" name="Warrior's Helmet (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -968,14 +952,13 @@
     <skill id="45032" name="Warrior's Helmet (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="BranchSys2.icon.br_close_helmet_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -983,14 +966,13 @@
     <skill id="45033" name="First Mate Hat (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -998,14 +980,13 @@
     <skill id="45034" name="First Mate Hat (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1013,14 +994,13 @@
     <skill id="45035" name="First Mate Hat (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="icon.Accessary_middle_ages_i01"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1028,14 +1008,13 @@
     <skill id="45036" name="Artisan's Goggles (STR +1 INT +1)">
         <!-- STR +1 and INT +1 -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="INT">
+            <base-stat type="INT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1043,14 +1022,13 @@
     <skill id="45037" name="Artisan's Goggles (DEX +1 WIT+1)">
         <!-- DEX +1 and WIT +1 -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="DEX">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="WIT">
+            <base-stat type="WIT">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1058,14 +1036,13 @@
     <skill id="45038" name="Artisan's Goggles (CON +1 MEN +1)">
         <!-- CON +1 and MEN +1. -->
         <icon initial="icon.accessory_dwarf_goggle_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <base-stat type="CON">
                 <power initial="1.0"/>
             </base-stat>
-			<base-stat type="MEN">
+            <base-stat type="MEN">
                 <power initial="1.0"/>
             </base-stat>
         </effects>
@@ -1074,7 +1051,7 @@
         <!-- When belt is equipped. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP Recovery Bonus +1.54, CP Recovery Bonus +3.07, Max HP/MP/CP +10%%, Inventory Slots +6, Weight Gauge +7,000, P./M. Critical Damage +4%%, HP Potions Effect +100. -->
         <icon initial="icon.bm_vallakas_belt"/>
         <attributes property="MAGIC"/>
-		<target/>
+        <target/>
         <effects>
             <base-stat type="STR">
                 <power initial="1.0"/>
@@ -1201,8 +1178,8 @@
         <icon initial="icon.bm_pendant_dragon_i00"/>
         <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
+        <effects>
+            <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
                 <power initial="20.0">
                     <value level="2">21.0</value>
                     <value level="3">22.0</value>
@@ -1221,7 +1198,7 @@
                     <value level="5">3.0</value>
                 </power>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="6">5.0</value>
                 </power>
@@ -1230,9 +1207,9 @@
                 <power>
                     <value level="6">5.0</value>
                 </power>
-            </stat-modify>           
+            </stat-modify>
             <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20.0"/>           
+                <power initial="20.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="20.0"/>
