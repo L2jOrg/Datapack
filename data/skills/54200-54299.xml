@@ -1,194 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-	<skill id="54200" name="Mount Winner’s Glory" action="A2">
-		<!-- Mounts a Winner’s Glory. -->
-		<icon initial="icon.warhorse_vehicle"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
-			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target/>
-		<abnormal type="TRANSFORM">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<conditions>
-			<condition name="CanTransform"/>
-		</conditions>
-		<effects>
-			<transformation id="205"/>
-		</effects>
-	</skill>
-	<skill id="54201" name="Mount White Wing" action="A2">
-		<!-- Ride White Wings. -->
-		<icon initial="icon.skill8605"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
-			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target/>
-		<abnormal type="TRANSFORM">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<conditions>
-			<condition name="CanTransform"/>
-		</conditions>
-		<effects>
-			<transformation id="206"/>
-		</effects>
-	</skill>
-	<skill id="54202" name="Mount Silver Saint" action="A2">
-		<!-- Mounts Silver Saint. -->
-		<icon initial="icon.skill8607"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
-			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target/>
-		<abnormal type="TRANSFORM">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<conditions>
-			<condition name="CanTransform"/>
-		</conditions>
-		<effects>
-			<transformation id="207"/>
-		</effects>
-	</skill>
-	<skill id="54203" name="Silent Riding">
-		<!-- For 30 seconds, protected from preemptive attacks from monsters. Speed -20%%. Can only use while mounted on a mount. Skill is cancelled when dismounted. -->
-		<icon initial="icon.skill0221"/>
-		<attributes property="PHYSIC">
-		</attributes>
-		<target/>
-	</skill>
-	<skill id="54204" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Human’s original power and transforms into a unique form.\n\nMax HP +300. -->
-		<icon initial="icon.skill14220"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_HUMAN">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54205" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out Jin Kamael’s original power and pulls out black wings.\n\nMax HP +300. -->
-		<icon initial="icon.skill1926"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_KAMAEL">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54209" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Orc’s original power and transforms into a unique form.\n\nMax HP +300. -->
-		<icon initial="icon.skill14220"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_ORC">
-		<level initial="1"/>
-		<time initial="3600"/>
-		<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54210" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
-		<icon initial="icon.skill5661"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_ELF">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54211" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dark Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
-		<icon initial="icon.skill5661"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_DARK_ELF">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54212" name="Ranker Transformation" action="A2">
-		<!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dwarf’s original power and transforms into a unique form.\n\nMax HP +300. -->
-		<icon initial="icon.skill5661"/>
-		<attributes property="PHYSIC" auto-use="TRANSFORM">
-			<reuse initial="10000" />
-		</attributes>
-		<target/>
-		<abnormal visual="RANKER_DWARF">
-			<level initial="1"/>
-			<time initial="3600"/>
-			<chance initial="100"/>
-		</abnormal>
-		<effects>
-			<stat-modify stat="MAX_HP">
-				<power initial="300" />
-			</stat-modify>
-		</effects>
-	</skill>
-	<skill id="54213" name="Mount Air Bike" action="A2">
-		<!-- Ride the Air Bike. -->
-		<icon initial="icon.etc_dwarf_craft_vehicle"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
-			<effect-point initial="1"/>
-			<hit-time initial="1000"/>
-		</attributes>
-		<target/>
-		<abnormal type="TRANSFORM">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<conditions>
-			<condition name="CanTransform"/>
-		</conditions>
-		<effects>
-			<transformation id="209"/>
-		</effects>
-	</skill>
+    <skill id="54200" name="Mount Winner’s Glory" action="A2">
+        <!-- Mounts a Winner’s Glory. -->
+        <icon initial="icon.warhorse_vehicle"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target/>
+        <abnormal type="TRANSFORM">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <conditions>
+            <condition name="CanTransform"/>
+        </conditions>
+        <effects>
+            <transformation id="205"/>
+        </effects>
+    </skill>
+    <skill id="54201" name="Summon White Wing" action="A2">
+        <!-- Ride White Wings. -->
+        <icon initial="icon.skill8605"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target/>
+        <abnormal type="TRANSFORM">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <conditions>
+            <condition name="CanTransform"/>
+        </conditions>
+        <effects>
+            <transformation id="206"/>
+        </effects>
+    </skill>
+    <skill id="54202" name="Summon Silver Saint" action="A2">
+        <!-- Mounts Silver Saint. -->
+        <icon initial="icon.skill8607"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target/>
+        <abnormal type="TRANSFORM">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <conditions>
+            <condition name="CanTransform"/>
+        </conditions>
+        <effects>
+            <transformation id="207"/>
+        </effects>
+    </skill>
+    <skill id="54203" name="Silent Riding">
+        <!-- For 30 seconds, protected from preemptive attacks from monsters. Speed -20%%. Can only use while mounted on a mount. Skill is cancelled when dismounted. -->
+        <icon initial="icon.skill0221"/>
+        <attributes property="PHYSIC">
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="54204" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Human’s original power and transforms into a unique form.\n\nMax HP +300. -->
+        <icon initial="icon.skill14220"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_HUMAN">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54205" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out Jin Kamael’s original power and pulls out black wings.\n\nMax HP +300. -->
+        <icon initial="icon.skill1926"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_KAMAEL">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54209" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Orc’s original power and transforms into a unique form.\n\nMax HP +300. -->
+        <icon initial="icon.skill14220"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_ORC">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54210" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_ELF">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54211" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dark Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_DARK_ELF">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54212" name="Ranker Transformation" action="A2">
+        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dwarf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes property="PHYSIC" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+            <activate-rate initial="100"/>
+        </attributes>
+        <target/>
+        <abnormal visual="RANKER_DWARF">
+            <level initial="1"/>
+            <time initial="3600"/>
+            <chance initial="100"/>
+        </abnormal>
+        <effects>
+            <stat-modify stat="MAX_HP">
+                <power initial="300"/>
+            </stat-modify>
+        </effects>
+    </skill>
+    <skill id="54213" name="Mount Air Bike" action="A2">
+        <!-- Ride the Air Bike. -->
+        <icon initial="icon.etc_dwarf_craft_vehicle"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+            <effect-point initial="1"/>
+            <hit-time initial="1000"/>
+        </attributes>
+        <target/>
+        <abnormal type="TRANSFORM">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <conditions>
+            <condition name="CanTransform"/>
+        </conditions>
+        <effects>
+            <transformation id="209"/>
+        </effects>
+    </skill>
 </list>

@@ -3,17 +3,18 @@
     <skill id="18564" name="Shiny Jewelry Box" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes>
+            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>
-        </conditions>	
+        </conditions>
         <effects>
             <random-restoration>
                 <item chance="9.0" id="70487"/> <!-- Topaz Chest -->
-                <item chance="9.0" id="70488"/> <!-- Garnet Chest --> 
+                <item chance="9.0" id="70488"/> <!-- Garnet Chest -->
                 <item chance="12.0" id="70489"/> <!-- Jade Chest -->
                 <item chance="9.0" id="70490"/> <!-- Ruby Chest -->
                 <item chance="9.0" id="70491"/> <!-- Sapphire Chest -->
@@ -22,7 +23,7 @@
 				<item chance="12.0" id="70494"/> <!-- Vital Stone Chest -->
 				<item chance="12.0" id="70525"/> <!-- Aquamarine Chest -->
             </random-restoration>
-        </effects>		
+        </effects>
     </skill>
     <skill id="18566" name="Garnet" max-level="10">
         <!--
@@ -83,7 +84,7 @@
                         <value level="10">40</value>
                     </power>
                 </trait>
-				<trait type="DERANGEMENT">
+                <trait type="DERANGEMENT">
                     <power initial="3">
                         <value level="2">5</value>
                         <value level="3">8</value>
@@ -96,20 +97,20 @@
                         <value level="10">40</value>
                     </power>
                 </trait>
-				<trait type="SLEEP">
-                    <power>                        
+                <trait type="SLEEP">
+                    <power>
                         <value level="10">10</value>
                     </power>
                 </trait>
-				<trait type="POISON">
-                    <power>                        
+                <trait type="POISON">
+                    <power>
                         <value level="10">10</value>
                     </power>
                 </trait>
             </defence-trait>
         </effects>
     </skill>
-    <skill id="18567" name="Garnet - Special Ability" max-level="7" action="A2" type="MAGIC">
+    <skill id="18567" name="Garnet - Special Ability" max-level="7" action="A2">
         <!--
             level 1: Becomes invincible to debuff attacks for 5 seconds.
             level 2: Becomes invincible to debuff attacks for 15 seconds.
@@ -123,14 +124,14 @@
             <value level="3">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
         </icon>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
-			<magic-level initial="1"/>
+            <magic-level initial="1"/>
             <reuse initial="300000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-		<abnormal type="ABNORMAL_INVINCIBILITY">
+        <abnormal type="ABNORMAL_INVINCIBILITY">
             <level initial="2">
-			    <value level="2">3</value>
+                <value level="2">3</value>
                 <value level="4">5</value>
                 <value level="6">7</value>
             </level>
@@ -141,8 +142,8 @@
                 <value level="5">18</value>
                 <value level="6">20</value>
                 <value level="7">25</value>
-            </time>              
-        </abnormal>        
+            </time>
+        </abnormal>
         <effects>
             <effect name="DebuffBlock"/>
         </effects>
@@ -153,7 +154,7 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>           
+        <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0"/>
             </stat-modify>
@@ -168,7 +169,7 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>           
+        <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="7.0"/>
             </stat-modify>
@@ -183,14 +184,14 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>           
+        <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0"/>
             </stat-modify>
             <stat-modify mode="PER" stat="BONUS_SP">
                 <power initial="3.0"/>
             </stat-modify>
-			<reduce-drop-penalty>
+            <reduce-drop-penalty>
                 <experience initial="-20"/>
                 <death-penalty initial="-20"/>
             </reduce-drop-penalty>
@@ -202,26 +203,26 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>   
-			<vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
+        <effects>
+            <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="200.0"/>
             </vital-stat-modify>
-			<vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
+            <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
                 <power initial="200.0"/>
             </vital-stat-modify>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="200.0"/>
             </vital-stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
                 <power initial="5.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
                 <power initial="5.0"/>
             </stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power initial="5.0"/>
             </stat-modify>
         </effects>
@@ -232,20 +233,20 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>   
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power initial="45.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
-				<power initial="30.0"/>
-			</stat-modify>
-			<stat-modify stat="CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>			
-        </effects>		
+        <effects>
+            <stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="45.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
+                <power initial="30.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="18577" name="Call to Battle">
         <!-- PvP Damage Received -5%%, Debuff Resistance +10%%. -->
@@ -260,14 +261,13 @@
         <attributes property="PHYSIC">
         </attributes>
         <target/>
-		<effects>
-			<stat-modify stat="WORLD_CHAT_POINTS">
+        <effects>
+            <stat-modify stat="WORLD_CHAT_POINTS">
                 <power initial="20"/>
             </stat-modify>
         </effects>
     </skill>
     <skill id="18588" name="Fortune Brooch" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
