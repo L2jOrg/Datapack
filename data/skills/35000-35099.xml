@@ -168,8 +168,7 @@
     <skill id="35006" name="Fire Dragon Pendant">
         <!-- M. Def. +9. -->
         <icon initial="icon.bm_pendant_pve"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -192,8 +191,7 @@
             level 11: M. Def. +24, XP/SP Gain +30%, P. Atk./M. Atk. +80, P. Critical Damage/M. Critical Damage +10%, and Damage Reflect Resistance +10%.
          -->
         <icon initial="icon.bm_pendant_pve"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -414,7 +412,7 @@
             level 4: P. Atk. +68, M. Atk. +109, Damage Magic Resistance +6%%, P. Skill Power/M. Skill Power +2%%, Weapon Resistance +2, CON +1, and MEN +1. Effects from two such Talismans do not stack.
             level 5: P. Atk. +170, M. Atk. +235, Damage Magic Resistance +7%%, P. Skill Power/M. Skill Power +2%%, Weapon Resistance +2, CON +1, MEN +1, STR +1, INT +1, and Skill MP Consumption -2%%. Effects from two such Talismans do not stack.
             level 6: P. Atk. +200, M. Atk. +275, Damage Magic Resistance +8%%, P. Skill Power/M. Skill Power +3%%, Weapon Resistance +3, CON +1, MEN +1, STR +1, INT +1, P. Critical Rate/M. Critical Rate +10, and Skill MP Consumption -4%%. Effects from two such Talismans do not stack.
-            level 7: P. Atk. +284, M. Atk. +392, Damage Magic Resistance +10%%, P. Skill Power/M. Skill Power +5%%, Weapon Resistance +5, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1, P. Critical Rate/M. Critical Rate +20, Skill cooldown -3% and Skill MP Consumption -5%%. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.
+            level 7: P. Atk. +284, M. Atk. +392, Damage Magic Resistance +10%%, P. Skill Power/M. Skill Power +5%%, Weapon Resistance +5, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1, P. Critical Rate/M. Critical Rate +20, and Skill MP Consumption -5%%. When two or more Talismans of identical effects are equipped, the effect of only one Talisman will be applied.
          -->
         <icon initial="icon.oman_tallisman_new_i02">
             <value level="6">icon.oman_tallisman_new_i01</value>
@@ -423,6 +421,15 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
+            <stat-modify mode="PER" start-level="2" stat="MAGIC_SUCCESS_RES">
+                <power initial="2.0">
+                    <value level="3">4.0</value>
+                    <value level="4">6.0</value>
+                    <value level="5">7.0</value>
+                    <value level="6">8.0</value>
+                    <value level="7">10.0</value>
+                </power>
+            </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="14.0">
                     <value level="2">27.0</value>
@@ -443,17 +450,7 @@
                     <value level="7">392.0</value>
                 </power>
             </stat-modify>
-            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DEFENCE">
-                <power>
-                    <value level="2">2.0</value>
-                    <value level="3">4.0</value>
-                    <value level="4">6.0</value>
-                    <value level="5">7.0</value>
-                    <value level="6">8.0</value>
-                    <value level="7">10.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify mode="PER" stat="PVE_MAGICAL_SKILL_DEFENCE">
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
                 <power>
                     <value level="2">2.0</value>
                     <value level="3">4.0</value>
@@ -604,31 +601,7 @@
                     <value level="7">-5.0</value>
                 </power>
             </magic-cost>
-            <magic-cost type="PHYSIC">
-                <power>
-                    <value level="5">-2.0</value>
-                    <value level="6">-4.0</value>
-                    <value level="7">-5.0</value>
-                </power>
-            </magic-cost>
-            <magic-cost type="DANCE">
-                <power>
-                    <value level="5">-2.0</value>
-                    <value level="6">-4.0</value>
-                    <value level="7">-5.0</value>
-                </power>
-            </magic-cost>
-            <reuse skill-type="MAGIC">
-                <power>
-                    <value level="7">-3.0</value>
-                </power>
-            </reuse>
             <reuse skill-type="PHYSIC">
-                <power>
-                    <value level="7">-3.0</value>
-                </power>
-            </reuse>
-            <reuse skill-type="DANCE">
                 <power>
                     <value level="7">-3.0</value>
                 </power>
@@ -638,7 +611,7 @@
     <skill id="35018" name="Equip Talisman of Insolence Lv. 6" action="A2">
         <!-- Imbues with Talisman of Insolence VI power. -->
         <icon initial="icon.oman_tallisman_new_i01"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" dispellable="false">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true" block-action-skill="true">
             <magic-level initial="60"/>
         </attributes>
         <target/>
@@ -666,7 +639,7 @@
     <skill id="35020" name="Talisman of Baium" action="A2">
         <!-- Imbues with Talisman of Baium power. -->
         <icon initial="icon.baium_talisman_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" irreplacable="true" block-action-skill="true" dispellable="false">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" dispellable="false" irreplacable="true" block-action-skill="true">
             <magic-level initial="60"/>
         </attributes>
         <target/>
@@ -1024,7 +997,7 @@
             <cast-range initial="600"/>
             <reuse initial="60000"/>
             <effect-point initial="100"/>
-            <hit-time initial="3"/>
+            <hit-time initial="3000"/>
         </attributes>
         <target type="TARGET"/>
         <effects>
@@ -1276,7 +1249,7 @@
         </attributes>
         <consume>
             <mana-init initial="10"/>
-            <mana initial="48"/>
+            <mana initial="38"/>
         </consume>
         <target/>
         <abnormal type="ATTACK_SPEED_UP_BOW">
@@ -1312,7 +1285,7 @@
         </attributes>
         <consume>
             <mana-init initial="10"/>
-            <mana initial="48"/>
+            <mana initial="38"/>
         </consume>
         <target/>
         <abnormal type="CASTING_TIME_DOWN">
