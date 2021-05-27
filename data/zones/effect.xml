@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Effect Zones -->
     <!-- Sea of Spores -->
-    <zone name="spore_boss_poison_zone" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="spore_boss_poison_zone">
         <polygon min-z="-4468" max-z="-4118">
             <point x="43084" y="15944"/>
             <point x="45140" y="15816"/>
@@ -12,221 +12,173 @@
             <point x="42476" y="18164"/>
             <point x="42480" y="16448"/>
         </polygon>
-        <property name="skillIdLvl" value="4070-1;"/> <!-- s_area_a_speed_down -->
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
+        <attributes delay="6000"/>
+        <skill id="4070"/> <!-- s_area_a_speed_down -->
+    </effect>
     <!-- 4 Sepulchers -->
-    <zone name="conquerors_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="conquerors_weakness">
         <polygon min-z="-7260" max-z="-7010">
             <point x="186739" y="-86322"/>
             <point x="190108" y="-86335"/>
             <point x="190110" y="-84794"/>
             <point x="186736" y="-84786"/>
         </polygon>
-        <property name="skillIdLvl" value="4146-3;"/> <!-- s_area_pd_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="conquerors_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" enabled="false"/>
+        <skill id="4146" level="3"/> <!-- s_area_pd_down3 -->
+    </effect>
+    <effect name="conquerors_pddown">
         <polygon min-z="-7260" max-z="-7010">
             <point x="186739" y="-86322"/>
             <point x="190108" y="-86335"/>
             <point x="190110" y="-84794"/>
             <point x="186736" y="-84786"/>
         </polygon>
-        <property name="skillIdLvl" value="4145-3;"/> <!-- s_area_pa_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="conquerors_poison" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4145" level="3"/>  <!-- s_area_pa_down3 -->
+    </effect>
+    <effect name="conquerors_poison">
         <polygon min-z="-7260" max-z="-7010">
             <point x="186739" y="-86322"/>
             <point x="190108" y="-86335"/>
             <point x="190110" y="-84794"/>
             <point x="186736" y="-84786"/>
         </polygon>
-        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="conquerors_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4148" level="9"/>  <!-- s_area_poison9 -->
+    </effect>
+    <effect name="conquerors_nonheal">
         <polygon min-z="-7260" max-z="-7010">
             <point x="186739" y="-86322"/>
             <point x="190108" y="-86335"/>
             <point x="190110" y="-84794"/>
             <point x="186736" y="-84786"/>
         </polygon>
-        <property name="skillIdLvl" value="4624-9;"/> <!-- s_area_disease9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="lords_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4624" level="9"/>
+    </effect>
+    <effect name="lords_weakness">
         <polygon min-z="-7265" max-z="-7015">
             <point x="185028" y="-89729"/>
             <point x="188398" y="-89741"/>
             <point x="188400" y="-88200"/>
             <point x="185026" y="-88192"/>
         </polygon>
-        <property name="skillIdLvl" value="4146-3;"/> <!-- s_area_pd_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="lords_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4146" level="3"/> <!-- s_area_pd_down3 -->
+    </effect>
+    <effect name="lords_pddown">
         <polygon min-z="-7265" max-z="-7015">
             <point x="185028" y="-89729"/>
             <point x="188398" y="-89741"/>
             <point x="188400" y="-88200"/>
             <point x="185026" y="-88192"/>
         </polygon>
-        <property name="skillIdLvl" value="4145-3;"/> <!-- s_area_pa_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="lords_poison" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4145" level="3"/>
+    </effect>
+    <effect name="lords_poison">
         <polygon min-z="-7265" max-z="-7015">
             <point x="185028" y="-89729"/>
             <point x="188398" y="-89741"/>
             <point x="188400" y="-88200"/>
             <point x="185026" y="-88192"/>
         </polygon>
-        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="lords_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4148" level="9"/> <!-- s_area_poison9 -->
+    </effect>
+    <effect name="lords_nonheal">
         <polygon min-z="-7265" max-z="-7015">
             <point x="185028" y="-89729"/>
             <point x="188398" y="-89741"/>
             <point x="188400" y="-88200"/>
             <point x="185026" y="-88192"/>
         </polygon>
-        <property name="skillIdLvl" value="4624-9;"/> <!-- s_area_disease9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="savants_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4624" level="9"/> <!-- s_area_disease9 -->
+    </effect>
+    <effect name="savants_weakness">
         <polygon min-z="-7262" max-z="-7012">
             <point x="172411" y="-81083"/>
             <point x="173942" y="-81073"/>
             <point x="173931" y="-77639"/>
             <point x="172418" y="-77644"/>
         </polygon>
-        <property name="skillIdLvl" value="4146-3;"/> <!-- s_area_pd_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="savants_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4146" level="3"/> <!-- s_area_pd_down3 -->
+    </effect>
+    <effect name="savants_pddown">
         <polygon min-z="-7262" max-z="-7012">
             <point x="172411" y="-81083"/>
             <point x="173942" y="-81073"/>
             <point x="173931" y="-77639"/>
             <point x="172418" y="-77644"/>
         </polygon>
-        <property name="skillIdLvl" value="4145-3;"/> <!-- s_area_pa_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="savants_poison" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4145" level="3"/> <!-- s_area_pa_down3 -->
+    </effect>
+    <effect name="savants_poison">
         <polygon min-z="-7262" max-z="-7012">
             <point x="172411" y="-81083"/>
             <point x="173942" y="-81073"/>
             <point x="173931" y="-77639"/>
             <point x="172418" y="-77644"/>
         </polygon>
-        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="savants_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4148" level="9"/> <!-- s_area_poison9 -->
+    </effect>
+    <effect name="savants_nonheal">
         <polygon min-z="-7262" max-z="-7012">
             <point x="172411" y="-81083"/>
             <point x="173942" y="-81073"/>
             <point x="173931" y="-77639"/>
             <point x="172418" y="-77644"/>
         </polygon>
-        <property name="skillIdLvl" value="4624-9;"/> <!-- s_area_disease9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="magistrates_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4624" level="9"/><!-- s_area_disease9 -->
+    </effect>
+    <effect name="magistrates_weakness">
         <polygon min-z="-7262" max-z="-7012">
             <point x="174822" y="-77261"/>
             <point x="176354" y="-77251"/>
             <point x="176342" y="-73817"/>
             <point x="174829" y="-73822"/>
         </polygon>
-        <property name="skillIdLvl" value="4146-3;"/> <!-- s_area_pd_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="magistrates_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4146" level="3"/>  <!-- s_area_pd_down3 -->
+    </effect>
+    <effect name="magistrates_pddown">
         <polygon min-z="-7262" max-z="-7012">
             <point x="174822" y="-77261"/>
             <point x="176354" y="-77251"/>
             <point x="176342" y="-73817"/>
             <point x="174829" y="-73822"/>
         </polygon>
-        <property name="skillIdLvl" value="4145-3;"/> <!-- s_area_pa_down3 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="magistrates_poison" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4145" level="3"/> <!-- s_area_pa_down3 -->
+    </effect>
+    <effect name="magistrates_poison">
         <polygon min-z="-7262" max-z="-7012">
             <point x="174822" y="-77261"/>
             <point x="176354" y="-77251"/>
             <point x="176342" y="-73817"/>
             <point x="174829" y="-73822"/>
         </polygon>
-        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
-    <zone name="magistrates_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes enabled="false" chance="70"/>
+        <skill id="4148" level="9"/> <!-- s_area_poison9 -->
+    </effect>
+    <effect name="magistrates_nonheal">
         <polygon min-z="-7262" max-z="-7012">
             <point x="174822" y="-77261"/>
             <point x="176354" y="-77251"/>
             <point x="176342" y="-73817"/>
             <point x="174829" y="-73822"/>
         </polygon>
-        <property name="skillIdLvl" value="4624-9;"/> <!-- s_area_disease9 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="default_enabled" value="false"/>
-        <property name="reuse" value="5000"/> <!-- Guess -->
-    </zone>
+        <attributes enabled="false" chance="70"/>
+        <skill id="4624" level="9"/><!-- s_area_disease9 -->
+    </effect>
     <!-- Hot Springs -->
     <!-- Hot Fantasy -->
-    <zone name="spa_11" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="spa_11">
         <polygon min-z="-3634" max-z="-3434">
             <point x="141249" y="-109636"/>
             <point x="141473" y="-109798"/>
@@ -238,14 +190,11 @@
             <point x="141321" y="-109091"/>
             <point x="141213" y="-109266"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Red 50075 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_21" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50075"/> <!-- spa_color: Red 50075 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_21">
         <polygon min-z="-3668" max-z="-3468">
             <point x="140174" y="-105832"/>
             <point x="140490" y="-105875"/>
@@ -254,14 +203,11 @@
             <point x="140872" y="-105119"/>
             <point x="140081" y="-105295"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50077-1;"/> <!-- spa_color: Yellow 50077  -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_31" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50077"/> <!-- spa_color: Yellow 50077  -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_31">
         <polygon min-z="-3724" max-z="-3524">
             <point x="144927" y="-105193"/>
             <point x="145226" y="-105412"/>
@@ -272,14 +218,11 @@
             <point x="144935" y="-104684"/>
             <point x="144832" y="-104959"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Green 50076 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_41" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50076"/> <!-- spa_color: Green 50076 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_41">
         <polygon min-z="-2871" max-z="-2671">
             <point x="152081" y="-108262"/>
             <point x="152455" y="-108588"/>
@@ -289,14 +232,11 @@
             <point x="152310" y="-107632"/>
             <point x="152069" y="-107905"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50077-1;"/> <!-- spa_color: Yellow 50077  -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_51" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50077"/> <!-- spa_color: Yellow 50077  -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_51">
         <polygon min-z="-2787" max-z="-2587">
             <point x="155279" y="-105735"/>
             <point x="155448" y="-105880"/>
@@ -307,14 +247,11 @@
             <point x="155459" y="-105254"/>
             <point x="155283" y="-105478"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Green 50076 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_61" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50076"/> <!-- spa_color: Green 50076 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_61">
         <polygon min-z="-2717" max-z="-2517">
             <point x="156838" y="-109948"/>
             <point x="157133" y="-110046"/>
@@ -324,14 +261,11 @@
             <point x="156843" y="-109261"/>
             <point x="156683" y="-109569"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Red 50075 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_71" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50076"/> <!-- spa_color: Red 50075 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_71">
         <polygon min-z="-1609" max-z="-1409">
             <point x="152063" y="-116732"/>
             <point x="152505" y="-116982"/>
@@ -342,14 +276,11 @@
             <point x="152285" y="-116160"/>
             <point x="152099" y="-116415"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50077-1;"/> <!-- spa_color: Yellow 50077  -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_81" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50077"/> <!-- spa_color: Yellow 50077  -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_81">
         <polygon min-z="-1694" max-z="-1494">
             <point x="152683" y="-112829"/>
             <point x="152796" y="-113129"/>
@@ -359,14 +290,11 @@
             <point x="153344" y="-112385"/>
             <point x="152937" y="-112409"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Green 50076 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_91" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50076"/>  <!-- spa_color: Green 50076 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_91">
         <polygon min-z="-1979" max-z="-1779">
             <point x="157444" y="-115790"/>
             <point x="157774" y="-115907"/>
@@ -375,14 +303,11 @@
             <point x="157625" y="-114984"/>
             <point x="157439" y="-115101"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Red 50075 -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_101" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="50076"/> <!-- spa_color: Red 50075 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
+    <effect name="spa_101">
         <polygon min-z="-2152" max-z="-1952">
             <point x="147182" y="-113255"/>
             <point x="147194" y="-113430"/>
@@ -394,15 +319,12 @@
             <point x="147512" y="-112956"/>
             <point x="147258" y="-113048"/>
         </polygon>
-        <property name="skillIdLvl" value="4559-1;50076-1;"/> <!-- spa_color: Red 50075 -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="50076"/> <!-- spa_color: Red 50075 -->
+        <skill id="4559"/> <!-- s_area_illusion -->
+    </effect>
     <!-- Medical treatment -->
-    <zone name="spa_12" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="spa_12">
         <polygon min-z="-3634" max-z="-3434">
             <point x="141249" y="-109636"/>
             <point x="141473" y="-109798"/>
@@ -414,14 +336,10 @@
             <point x="141321" y="-109091"/>
             <point x="141213" y="-109266"/>
         </polygon>
-        <property name="skillIdLvl" value="4557-1;"/> <!-- s_dispel_spa_disease_bd -->
-        <property name="chance" value="100"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_22" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes start-time="1000" delay="3000"/>
+        <skill id="4557"/> <!-- s_dispel_spa_disease_bd -->
+    </effect>
+    <effect name="spa_22">
         <polygon min-z="-3668" max-z="-3468">
             <point x="140174" y="-105832"/>
             <point x="140490" y="-105875"/>
@@ -430,14 +348,10 @@
             <point x="140872" y="-105119"/>
             <point x="140081" y="-105295"/>
         </polygon>
-        <property name="skillIdLvl" value="4556-1;"/> <!-- s_dispel_spa_disease_ad -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_32" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4556"/><!-- s_dispel_spa_disease_ad -->
+    </effect>
+    <effect name="spa_32">
         <polygon min-z="-3724" max-z="-3524">
             <point x="144927" y="-105193"/>
             <point x="145226" y="-105412"/>
@@ -448,14 +362,10 @@
             <point x="144935" y="-104684"/>
             <point x="144832" y="-104959"/>
         </polygon>
-        <property name="skillIdLvl" value="4558-1;"/> <!-- s_dispel_spa_disease_cd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_42" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4558"/><!--  s_dispel_spa_disease_cd -->
+    </effect>
+    <effect name="spa_42">
         <polygon min-z="-2871" max-z="-2671">
             <point x="152081" y="-108262"/>
             <point x="152455" y="-108588"/>
@@ -465,14 +375,10 @@
             <point x="152310" y="-107632"/>
             <point x="152069" y="-107905"/>
         </polygon>
-        <property name="skillIdLvl" value="4556-1;"/> <!-- s_dispel_spa_disease_ad -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_52" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4556"/><!--  s_dispel_spa_disease_ad -->
+    </effect>
+    <effect name="spa_52">
         <polygon min-z="-2787" max-z="-2587">
             <point x="155279" y="-105735"/>
             <point x="155448" y="-105880"/>
@@ -483,14 +389,10 @@
             <point x="155459" y="-105254"/>
             <point x="155283" y="-105478"/>
         </polygon>
-        <property name="skillIdLvl" value="4558-1;"/> <!-- s_dispel_spa_disease_cd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_62" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4558"/><!--  s_dispel_spa_disease_cd -->
+    </effect>
+    <effect name="spa_62">
         <polygon min-z="-2717" max-z="-2517">
             <point x="156838" y="-109948"/>
             <point x="157133" y="-110046"/>
@@ -500,14 +402,10 @@
             <point x="156843" y="-109261"/>
             <point x="156683" y="-109569"/>
         </polygon>
-        <property name="skillIdLvl" value="4557-1;"/> <!-- s_dispel_spa_disease_bd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_72" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4557"/><!--  s_dispel_spa_disease_bd -->
+    </effect>
+    <effect name="spa_72">
         <polygon min-z="-1609" max-z="-1409">
             <point x="152063" y="-116732"/>
             <point x="152505" y="-116982"/>
@@ -518,14 +416,10 @@
             <point x="152285" y="-116160"/>
             <point x="152099" y="-116415"/>
         </polygon>
-        <property name="skillIdLvl" value="4556-1;"/> <!-- s_dispel_spa_disease_ad -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_82" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4556"/><!--  s_dispel_spa_disease_ad -->
+    </effect>
+    <effect name="spa_82">
         <polygon min-z="-1694" max-z="-1494">
             <point x="152683" y="-112829"/>
             <point x="152796" y="-113129"/>
@@ -535,14 +429,10 @@
             <point x="153344" y="-112385"/>
             <point x="152937" y="-112409"/>
         </polygon>
-        <property name="skillIdLvl" value="4558-1;"/> <!-- s_dispel_spa_disease_cd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_92" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4558"/><!--  s_dispel_spa_disease_cd -->
+    </effect>
+    <effect name="spa_92">
         <polygon min-z="-1979" max-z="-1779">
             <point x="157444" y="-115790"/>
             <point x="157774" y="-115907"/>
@@ -551,14 +441,10 @@
             <point x="157625" y="-114984"/>
             <point x="157439" y="-115101"/>
         </polygon>
-        <property name="skillIdLvl" value="4557-1;"/> <!-- s_dispel_spa_disease_bd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
-    <zone name="spa_102" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4557"/><!--  s_dispel_spa_disease_bd -->
+    </effect>
+    <effect name="spa_102">
         <polygon min-z="-2152" max-z="-1952">
             <point x="147182" y="-113255"/>
             <point x="147194" y="-113430"/>
@@ -570,15 +456,11 @@
             <point x="147512" y="-112956"/>
             <point x="147258" y="-113048"/>
         </polygon>
-        <property name="skillIdLvl" value="4557-1;"/> <!-- s_dispel_spa_disease_bd -->
-        <property name="chance" value="70"/>
-        <!-- stat name="unitTick" val="5" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="3000"/> <!-- Guess -->
-    </zone>
+        <attributes chance="70" start-time="1000" delay="3000"/>
+        <skill id="4557"/><!--  s_dispel_spa_disease_bd -->
+    </effect>
     <!-- Valakas Nest Lava -->
-    <zone name="balakas_lava_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="balakas_lava_1">
         <polygon min-z="-1700" max-z="-1500">
             <point x="212916" y="-117204"/>
             <point x="213404" y="-117248"/>
@@ -586,14 +468,10 @@
             <point x="213012" y="-116444"/>
             <point x="212828" y="-116928"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_2">
         <polygon min-z="-1800" max-z="-1600">
             <point x="212304" y="-116608"/>
             <point x="212708" y="-116660"/>
@@ -601,28 +479,20 @@
             <point x="212416" y="-116144"/>
             <point x="212140" y="-116336"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_3">
         <polygon min-z="-1772" max-z="-1572">
             <point x="214032" y="-116748"/>
             <point x="214488" y="-116652"/>
             <point x="214548" y="-116352"/>
             <point x="214064" y="-116232"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_4" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_4">
         <polygon min-z="-1800" max-z="-1600">
             <point x="214424" y="-115452"/>
             <point x="214776" y="-115520"/>
@@ -631,14 +501,10 @@
             <point x="214460" y="-114824"/>
             <point x="214412" y="-115080"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_5" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_5">
         <polygon min-z="-1820" max-z="-1620">
             <point x="214668" y="-114276"/>
             <point x="214948" y="-113876"/>
@@ -646,14 +512,10 @@
             <point x="214228" y="-113884"/>
             <point x="214340" y="-114148"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_6" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_6">
         <polygon min-z="-1768" max-z="-1568">
             <point x="213916" y="-115660"/>
             <point x="214220" y="-114648"/>
@@ -665,28 +527,20 @@
             <point x="212696" y="-116036"/>
             <point x="213200" y="-116136"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_7" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_7">
         <polygon min-z="-1764" max-z="-1564">
             <point x="210524" y="-114376"/>
             <point x="211144" y="-114604"/>
             <point x="211148" y="-114340"/>
             <point x="210764" y="-114116"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_8" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_8">
         <polygon min-z="-1716" max-z="-1516">
             <point x="212276" y="-113016"/>
             <point x="212932" y="-112836"/>
@@ -695,14 +549,10 @@
             <point x="212188" y="-112604"/>
             <point x="212144" y="-112820"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_9" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_9">
         <polygon min-z="-1720" max-z="-1520">
             <point x="211608" y="-113560"/>
             <point x="211944" y="-113408"/>
@@ -710,14 +560,10 @@
             <point x="211220" y="-112780"/>
             <point x="211204" y="-113400"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_10" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_10">
         <polygon min-z="-1732" max-z="-1532">
             <point x="210596" y="-116292"/>
             <point x="210904" y="-116088"/>
@@ -725,14 +571,10 @@
             <point x="210784" y="-115612"/>
             <point x="210308" y="-115904"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_11" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_11">
         <polygon min-z="-1736" max-z="-1536">
             <point x="211272" y="-117352"/>
             <point x="211660" y="-117220"/>
@@ -745,14 +587,10 @@
             <point x="210928" y="-116296"/>
             <point x="210872" y="-117028"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_12" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_12">
         <polygon min-z="-1748" max-z="-1548">
             <point x="211528" y="-117312"/>
             <point x="212828" y="-117884"/>
@@ -761,14 +599,10 @@
             <point x="212300" y="-116812"/>
             <point x="211796" y="-117168"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_13" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_13">
         <polygon min-z="-1792" max-z="-1592">
             <point x="213224" y="-117956"/>
             <point x="213204" y="-117548"/>
@@ -776,28 +610,20 @@
             <point x="212792" y="-117456"/>
             <point x="212836" y="-117916"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_14" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_14">
         <polygon min-z="-1812" max-z="-1612">
             <point x="213440" y="-118004"/>
             <point x="213852" y="-118004"/>
             <point x="213728" y="-117728"/>
             <point x="213584" y="-117748"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_15" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_15">
         <polygon min-z="-1764" max-z="-1564">
             <point x="213988" y="-117184"/>
             <point x="213808" y="-117232"/>
@@ -807,14 +633,10 @@
             <point x="214232" y="-117560"/>
             <point x="214224" y="-117412"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_16" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_16">
         <polygon min-z="-1716" max-z="-1516">
             <point x="214564" y="-117840"/>
             <point x="214844" y="-117352"/>
@@ -822,28 +644,20 @@
             <point x="214436" y="-117300"/>
             <point x="214304" y="-117592"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_17" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_17">
         <polygon min-z="-1700" max-z="-1500">
             <point x="215148" y="-117144"/>
             <point x="215300" y="-117208"/>
             <point x="215516" y="-116568"/>
             <point x="215296" y="-116592"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_18" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_18">
         <polygon min-z="-1684" max-z="-1484">
             <point x="215356" y="-116304"/>
             <point x="215584" y="-116508"/>
@@ -857,14 +671,10 @@
             <point x="215420" y="-115756"/>
             <point x="215296" y="-115852"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_19" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_19">
         <polygon min-z="-1740" max-z="-1540">
             <point x="214888" y="-114200"/>
             <point x="216164" y="-114560"/>
@@ -873,28 +683,20 @@
             <point x="214240" y="-113388"/>
             <point x="215420" y="-113568"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_20" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_20">
         <polygon min-z="-1792" max-z="-1592">
             <point x="213792" y="-112592"/>
             <point x="214948" y="-111748"/>
             <point x="213932" y="-111516"/>
             <point x="213624" y="-112404"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_21" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_21">
         <polygon min-z="-1772" max-z="-1572">
             <point x="212408" y="-112372"/>
             <point x="212800" y="-111924"/>
@@ -904,14 +706,10 @@
             <point x="211904" y="-112736"/>
             <point x="212280" y="-112092"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_22" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_22">
         <polygon min-z="-1744" max-z="-1544">
             <point x="211120" y="-112784"/>
             <point x="211300" y="-112484"/>
@@ -923,28 +721,20 @@
             <point x="211088" y="-113220"/>
             <point x="210720" y="-112888"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_23" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_23">
         <polygon min-z="-1600" max-z="-1400">
             <point x="209504" y="-113076"/>
             <point x="209808" y="-113412"/>
             <point x="210004" y="-112864"/>
             <point x="209596" y="-112916"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_24" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_24">
         <polygon min-z="-1528" max-z="-1328">
             <point x="210400" y="-112656"/>
             <point x="210308" y="-112356"/>
@@ -956,28 +746,20 @@
             <point x="209772" y="-112672"/>
             <point x="209968" y="-112884"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_25" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_25">
         <polygon min-z="-1564" max-z="-1364">
             <point x="210032" y="-112148"/>
             <point x="210392" y="-112060"/>
             <point x="210104" y="-111444"/>
             <point x="209496" y="-112008"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_26" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_26">
         <polygon min-z="-1572" max-z="-1372">
             <point x="211096" y="-112400"/>
             <point x="211436" y="-111804"/>
@@ -985,14 +767,10 @@
             <point x="210628" y="-111792"/>
             <point x="210600" y="-112004"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_27" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_27">
         <polygon min-z="-1488" max-z="-1288">
             <point x="210552" y="-111368"/>
             <point x="210904" y="-111412"/>
@@ -1001,14 +779,10 @@
             <point x="210100" y="-111432"/>
             <point x="210408" y="-111488"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_28" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_28">
         <polygon min-z="-1492" max-z="-1292">
             <point x="212136" y="-110836"/>
             <point x="212552" y="-110896"/>
@@ -1016,28 +790,20 @@
             <point x="212724" y="-110460"/>
             <point x="212064" y="-110576"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_29" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_29">
         <polygon min-z="-1476" max-z="-1276">
             <point x="212620" y="-111604"/>
             <point x="213060" y="-111604"/>
             <point x="212740" y="-111304"/>
             <point x="212436" y="-111620"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_30" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_30">
         <polygon min-z="-1452" max-z="-1252">
             <point x="213416" y="-110968"/>
             <point x="213716" y="-110772"/>
@@ -1045,28 +811,20 @@
             <point x="213356" y="-110388"/>
             <point x="213328" y="-110760"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_31" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_31">
         <polygon min-z="-1548" max-z="-1348">
             <point x="214228" y="-111556"/>
             <point x="214196" y="-111120"/>
             <point x="213972" y="-111020"/>
             <point x="213624" y="-111248"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_32" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_32">
         <polygon min-z="-1484" max-z="-1284">
             <point x="215120" y="-112132"/>
             <point x="215460" y="-112124"/>
@@ -1074,42 +832,30 @@
             <point x="215376" y="-111736"/>
             <point x="214924" y="-111792"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_33" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_33">
         <polygon min-z="-1456" max-z="-1256">
             <point x="215564" y="-111380"/>
             <point x="215764" y="-111380"/>
             <point x="215764" y="-111180"/>
             <point x="215564" y="-111180"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_34" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_34">
         <polygon min-z="-1616" max-z="-1416">
             <point x="215776" y="-112812"/>
             <point x="216348" y="-112536"/>
             <point x="216268" y="-112392"/>
             <point x="215684" y="-112660"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_35" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_35">
         <polygon min-z="-1480" max-z="-1280">
             <point x="216040" y="-114340"/>
             <point x="216868" y="-114436"/>
@@ -1117,14 +863,10 @@
             <point x="216148" y="-113132"/>
             <point x="215996" y="-113324"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_36" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_36">
         <polygon min-z="-1520" max-z="-1320">
             <point x="216136" y="-115280"/>
             <point x="216760" y="-115372"/>
@@ -1134,28 +876,20 @@
             <point x="216364" y="-114832"/>
             <point x="216068" y="-114768"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_37" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_37">
         <polygon min-z="-1568" max-z="-1368">
             <point x="215964" y="-115796"/>
             <point x="216592" y="-115892"/>
             <point x="216592" y="-115580"/>
             <point x="216032" y="-115452"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_38" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_38">
         <polygon min-z="-1444" max-z="-1244">
             <point x="216040" y="-117792"/>
             <point x="216088" y="-117536"/>
@@ -1164,14 +898,10 @@
             <point x="215600" y="-117324"/>
             <point x="215692" y="-117736"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_39" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_39">
         <polygon min-z="-1448" max-z="-1248">
             <point x="214896" y="-117908"/>
             <point x="215156" y="-118020"/>
@@ -1179,28 +909,20 @@
             <point x="215204" y="-117084"/>
             <point x="214744" y="-117508"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_40" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_40">
         <polygon min-z="-1516" max-z="-1316">
             <point x="214468" y="-118700"/>
             <point x="214748" y="-118780"/>
             <point x="214484" y="-117908"/>
             <point x="214188" y="-118000"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_41" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_41">
         <polygon min-z="-1508" max-z="-1308">
             <point x="213396" y="-118452"/>
             <point x="213652" y="-118588"/>
@@ -1208,14 +930,10 @@
             <point x="213776" y="-118092"/>
             <point x="213312" y="-118056"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_42" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_42">
         <polygon min-z="-1480" max-z="-1280">
             <point x="212684" y="-118456"/>
             <point x="213148" y="-118436"/>
@@ -1223,14 +941,10 @@
             <point x="213008" y="-118204"/>
             <point x="212668" y="-118300"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_43" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_43">
         <polygon min-z="-1500" max-z="-1300">
             <point x="212156" y="-118020"/>
             <point x="212424" y="-118208"/>
@@ -1239,42 +953,30 @@
             <point x="211676" y="-118104"/>
             <point x="211880" y="-118132"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_44" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_44">
         <polygon min-z="-1576" max-z="-1376">
             <point x="210792" y="-117952"/>
             <point x="211464" y="-117376"/>
             <point x="210832" y="-116852"/>
             <point x="210296" y="-117456"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_45" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_45">
         <polygon min-z="-1556" max-z="-1356">
             <point x="209932" y="-116124"/>
             <point x="210112" y="-116340"/>
             <point x="210756" y="-116432"/>
             <point x="210080" y="-115704"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_46" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_46">
         <polygon min-z="-1508" max-z="-1308">
             <point x="209604" y="-115832"/>
             <point x="209676" y="-115672"/>
@@ -1282,110 +984,78 @@
             <point x="209064" y="-115396"/>
             <point x="209064" y="-116060"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_47" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_47">
         <polygon min-z="-1544" max-z="-1344">
             <point x="209596" y="-114804"/>
             <point x="209880" y="-114812"/>
             <point x="209852" y="-114156"/>
             <point x="209528" y="-114576"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_48" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_48">
         <polygon min-z="-1656" max-z="-1456">
             <point x="209452" y="-113908"/>
             <point x="209720" y="-114032"/>
             <point x="209648" y="-113588"/>
             <point x="209452" y="-113708"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="balakas_lava_49" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
+    <effect name="balakas_lava_49">
         <polygon min-z="-1608" max-z="-1408">
             <point x="211652" y="-111708"/>
             <point x="212000" y="-111640"/>
             <point x="211652" y="-110812"/>
             <point x="211420" y="-110828"/>
         </polygon>
-        <property name="skillIdLvl" value="4150-7;"/> <!-- s_area_fire7 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="4150" level="7"/><!--  s_area_fire7 -->
+    </effect>
     <!-- Valakas Nest Critical Lava -->
-    <zone name="godard11_2614_area_01" type="org.l2j.gameserver.world.zone.type.EffectZone">
+    <effect name="godard11_2614_area_01">
         <polygon min-z="-1426" max-z="-1226">
             <point x="209812" y="-111845"/>
             <point x="210096" y="-112047"/>
             <point x="210461" y="-111499"/>
             <point x="210031" y="-111287"/>
         </polygon>
-        <property name="skillIdLvl" value="5596-1;"/> <!-- s_area_critical_fire1 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="godard11_2614_area_02" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="5596"/><!--  s_area_critical_fire1 -->
+    </effect>
+    <effect name="godard11_2614_area_02">
         <polygon min-z="-1236" max-z="-1036">
             <point x="209392" y="-111958"/>
             <point x="209726" y="-112241"/>
             <point x="210070" y="-111714"/>
             <point x="209779" y="-111464"/>
         </polygon>
-        <property name="skillIdLvl" value="5596-1;"/> <!-- s_area_critical_fire1 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="godard11_2614_area_03" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="5596"/><!--  s_area_critical_fire1 -->
+    </effect>
+    <effect name="godard11_2614_area_03">
         <polygon min-z="-1519" max-z="-1319">
             <point x="209284" y="-116186"/>
             <point x="209691" y="-116033"/>
             <point x="209370" y="-115300"/>
             <point x="208910" y="-115598"/>
         </polygon>
-        <property name="skillIdLvl" value="5596-1;"/> <!-- s_area_critical_fire1 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
-    <zone name="godard11_2614_area_04" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="5596"/><!--  s_area_critical_fire1 -->
+    </effect>
+    <effect name="godard11_2614_area_04">
         <polygon min-z="-1220" max-z="-1020">
             <point x="209088" y="-116419"/>
             <point x="209511" y="-116247"/>
             <point x="209405" y="-115798"/>
             <point x="209059" y="-115803"/>
         </polygon>
-        <property name="skillIdLvl" value="5596-1;"/> <!-- s_area_critical_fire1 -->
-        <property name="chance" value="50"/>
-        <!-- stat name="unitTick" val="9" / -->
-        <property name="initialDelay" value="1000"/>
-        <property name="default_enabled" value="true"/>
-        <property name="reuse" value="6000"/> <!-- Guess -->
-    </zone>
+        <attributes chance="50" start-time="1000" delay="6000"/>
+        <skill id="5596"/><!--  s_area_critical_fire1 -->
+    </effect>
 </list>
