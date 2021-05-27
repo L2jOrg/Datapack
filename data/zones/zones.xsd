@@ -5,11 +5,12 @@
 		   elementFormDefault="qualified">
 
 	<xs:include schemaLocation="../xsd/common.xsd"/>
+	<xs:include schemaLocation="zone-types.xsd"/>
 
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="zone" type="Zone" maxOccurs="unbounded"/>
+				<xs:element ref="abstractZone" maxOccurs="unbounded"/>
 			</xs:sequence>
 			<xs:attribute name="enabled" type="xs:boolean" default="true" />
 		</xs:complexType>
@@ -20,73 +21,283 @@
 	<xs:element name="cylinder" type="Cylinder" substitutionGroup="form"/>
 	<xs:element name="polygon" type="Polygon" substitutionGroup="form"/>
 
+	<xs:element name="abstractZone" type="AbstractZone" abstract="true"/>
+	<xs:element name="castle" type="CastleZone" substitutionGroup="abstractZone"/>
+	<xs:element name="clan-hall" type="ClanHallZone" substitutionGroup="abstractZone"/>
+	<xs:element name="condition" type="ConditionZone" substitutionGroup="abstractZone"/>
+	<xs:element name="damage" type="DamageZone" substitutionGroup="abstractZone"/>
+	<xs:element name="effect" type="EffectZone" substitutionGroup="abstractZone"/>
+	<xs:element name="fishing" type="FishingZone" substitutionGroup="abstractZone"/>
+	<xs:element name="fort" type="FortZone" substitutionGroup="abstractZone"/>
+	<xs:element name="jail" type="JailZone" substitutionGroup="abstractZone"/>
+	<xs:element name="mother-tree" type="MotherTreeZone" substitutionGroup="abstractZone"/>
+	<xs:element name="no-landing" type="NoLandingZone" substitutionGroup="abstractZone"/>
+	<xs:element name="no-restart" type="NoRestartZone" substitutionGroup="abstractZone"/>
+	<xs:element name="olympiad-stadium" type="OlympiadStadiumZone" substitutionGroup="abstractZone"/>
+	<xs:element name="peace" type="PeaceZone" substitutionGroup="abstractZone"/>
+	<xs:element name="residence-teleport" type="ResidenceTeleportZone" substitutionGroup="abstractZone"/>
+	<xs:element name="respawn" type="RespawnZone" substitutionGroup="abstractZone"/>
+	<xs:element name="script-zone" type="ScriptZone" substitutionGroup="abstractZone"/>
+	<xs:element name="siege" type="SiegeZone" substitutionGroup="abstractZone"/>
+	<xs:element name="swamp" type="SwampZone" substitutionGroup="abstractZone"/>
+	<xs:element name="tax" type="TaxZone" substitutionGroup="abstractZone"/>
+	<xs:element name="water" type="WaterZone" substitutionGroup="abstractZone"/>
+	<xs:element name="zone" type="Zone" substitutionGroup="abstractZone"/>
+
+	<xs:element name="territory" type="Territory" substitutionGroup="abstractZone"/>
+
+	<xs:complexType name="Territory">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="FishingZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="JailZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="RespawnZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="respawn" type="Respawn" maxOccurs="unbounded" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ScriptZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="attributes" type="ZoneAttributes"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="WaterZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CastleZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="castle-id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ClanHallZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="hall-id" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ConditionZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="allow-bookmark" type="xs:boolean" default="true"/>
+				<xs:attribute name="allow-drop" type="xs:boolean" default="true"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="DamageZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="attributes" type="DamageAttributes"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="DamageAttributes">
+		<xs:complexContent>
+			<xs:extension base="ZoneAttributes">
+				<xs:attribute name="hp" type="xs:int" default="0"/>
+				<xs:attribute name="mp" type="xs:int" default="0"/>
+				<xs:attribute name="castle-id" type="xs:int" default="0"/>
+				<xs:attribute name="start-time" type="xs:int" default="10"/>
+				<xs:attribute name="delay" type="xs:int" default="5000"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EffectZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="attributes" type="EffectAttributes"/>
+					<xs:element name="skill" type="SkillInfo" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EffectAttributes">
+		<xs:complexContent>
+			<xs:extension base="ZoneAttributes">
+				<xs:attribute name="chance" type="xs:float" default="100"/>
+				<xs:attribute name="bypass-conditions" type="xs:boolean" default="false"/>
+				<xs:attribute name="show-danger-icon" type="xs:boolean" default="true"/>
+				<xs:attribute name="start-time" type="xs:int" default="10"/>
+				<xs:attribute name="delay" type="xs:int" default="5000"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="FortZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="fort-id" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="MotherTreeZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="enter-message" type="xs:int" use="required"/>
+				<xs:attribute name="leave-message" type="xs:int" use="required"/>
+				<xs:attribute name="regen-mp" type="xs:int" default="1"/>
+				<xs:attribute name="regen-hp" type="xs:int" default="1"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="NoLandingZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="dismount-delay" type="xs:int" default="5"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="NoRestartZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="attributes" type="NoRestartAttributes"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="NoRestartAttributes">
+		<xs:complexContent>
+			<xs:extension base="ZoneAttributes">
+				<xs:attribute name="allow-time" type="xs:int" default="0"/>
+				<xs:attribute name="restart-time" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="OlympiadStadiumZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="PeaceZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="allow-store" type="xs:boolean" default="true"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ResidenceTeleportZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:sequence>
+					<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="residence-id" type="xs:int" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SiegeZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="castle-id" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SwampZone">
+		<xs:complexContent>
+			<xs:extension base="Zone">
+				<xs:sequence>
+					<xs:element name="attributes" type="SwampAttributes" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SwampAttributes">
+		<xs:complexContent>
+			<xs:extension base="ZoneAttributes">
+				<xs:attribute name="move-bonus" type="xs:float" default="0.5"/>
+				<xs:attribute name="castle-id" type="xs:int" default="0"/>
+				<xs:attribute name="event-id" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="TaxZone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="castle-id" type="xs:int"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 
 	<xs:complexType name="Zone">
+		<xs:complexContent>
+			<xs:extension base="AbstractZone">
+				<xs:attribute name="type" type="ZoneType"/>
+				<xs:attribute name="enter-message" type="xs:int" default="0"/>
+				<xs:attribute name="leave-message" type="xs:int" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="AbstractZone" abstract="true">
 		<xs:sequence>
 			<xs:element ref="form"/>
-			<xs:element name="property" type="Property" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="respawn" type="Respawn" maxOccurs="unbounded" minOccurs="0"/>
-			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:positiveInteger"/>
 		<xs:attribute name="name" type="xs:normalizedString"/>
-		<xs:attribute name="type" type="xs:token" use="required"/>
+		<xs:attribute name="enabled" type="xs:boolean" default="true"/>
 	</xs:complexType>
 
-	<xs:complexType name="Property">
-		<xs:attribute name="name" use="required">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="affectedLvlMin" />
-					<xs:enumeration value="affectedRace" />
-					<xs:enumeration value="allowStore" />
-					<xs:enumeration value="bossId" />
-					<xs:enumeration value="castleId" />
-					<xs:enumeration value="chance" />
-					<xs:enumeration value="clanHallId" />
-					<xs:enumeration value="dmgHPSec" />
-					<xs:enumeration value="default_enabled" />
-					<xs:enumeration value="domainId" />
-					<xs:enumeration value="enterMsgId" />
-					<xs:enumeration value="eventId" />
-					<xs:enumeration value="fortId" />
-					<xs:enumeration value="HpRegenBonus" />
-					<xs:enumeration value="initialDelay" />
-					<xs:enumeration value="instanceId" />
-					<xs:enumeration value="instanceTemplate" />
-					<xs:enumeration value="InvadeTime" />
-					<xs:enumeration value="leaveMsgId" />
-					<xs:enumeration value="maxDynamicSkillCount" />
-					<xs:enumeration value="move_bonus" />
-					<xs:enumeration value="MpRegenBonus" />
-					<xs:enumeration value="NoBookmark" />
-					<xs:enumeration value="NoItemDrop" />
-					<xs:enumeration value="oustX" />
-					<xs:enumeration value="oustY" />
-					<xs:enumeration value="oustZ" />
-					<xs:enumeration value="residenceId" />
-					<xs:enumeration value="residenceZoneId" />
-					<xs:enumeration value="restartAllowedTime" />
-					<xs:enumeration value="restartTime" />
-					<xs:enumeration value="reuse" />
-					<xs:enumeration value="showDangerIcon" />
-					<xs:enumeration value="skillIdLvl" />
-					<xs:enumeration value="spawnMaxX" />
-					<xs:enumeration value="spawnMaxY" />
-					<xs:enumeration value="spawnMaxZ" />
-					<xs:enumeration value="spawnMinX" />
-					<xs:enumeration value="spawnMinY" />
-					<xs:enumeration value="spawnMinZ" />
-					<xs:enumeration value="spawnZ" />
-					<xs:enumeration value="targetClass" />
-					<xs:enumeration value="taxById" />
-					<xs:enumeration value="territoryId" />
-					<xs:enumeration value="townId" />
-					<xs:enumeration value="mapId" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="value" type="xs:token" use="required" />
+	<xs:complexType name="ZoneAttributes">
+		<xs:attribute name="enabled" type="xs:boolean" default="true"/>
 	</xs:complexType>
 
 	<xs:complexType name="Spawn">
@@ -102,9 +313,7 @@
 			<xs:enumeration value="banish" />
 			<xs:enumeration value="blueBanishPoint" />
 			<xs:enumeration value="blueStartPoint" />
-			<xs:enumeration value="challenger" />
 			<xs:enumeration value="chaotic" />
-			<xs:enumeration value="entrance" />
 			<xs:enumeration value="other" />
 			<xs:enumeration value="redBanishPoint" />
 			<xs:enumeration value="redStartPoint" />
