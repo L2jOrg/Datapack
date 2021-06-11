@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://l2j.org" xmlns="http://l2j.org" elementFormDefault="qualified">
+	<xs:include schemaLocation="../../xsd/common.xsd" />
+	<xs:include schemaLocation="shop-common.xsd" />
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="product" type="ProductInfo" />
+			</xs:sequence>
+			<xs:attribute name="chance-based" type="xs:boolean" default="false" />
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ProductInfo">
+		<xs:sequence>
+			<xs:element name="ingredient" type="ItemInfo" maxOccurs="4" />
+			<xs:element name="production" type="ItemInfo" maxOccurs="3" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" use="required" />
+		<xs:attribute name="index" type="xs:int" use="required" />
+		<xs:attribute name="chance" type="xs:int" default="100" />
+		<xs:attribute name="clan-level" type="xs:int" default="0" />
+		<xs:attribute name="restriction-amount" type="xs:int" default="0" />
+		<xs:attribute name="restriction-period" type="RestrictionPeriod" default="DAY" />
+		<xs:attribute name="min-level" type="xs:positiveInteger" default="1" />
+		<xs:attribute name="server-item-amount" type="xs:int" default="-1" />
+		<xs:attribute name="expiration-date">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="202[1-9]-[01][0-9]-[0-3][0-9] [0-2][0-9]:[0-5][0-9]:[0-5][0-9]" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

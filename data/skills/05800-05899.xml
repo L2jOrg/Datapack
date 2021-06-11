@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="5800" name="Self-destruction" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5800" name="Self-destruction" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-676"/>
             <element type="DARK" value="50"/>
@@ -13,10 +11,9 @@
         <consume>
             <mana initial="165"/>
         </consume>
-        <target object="NOT_FRIEND" range="500" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="500"/>
     </skill>
-    <skill id="5801" name="Drake Breath" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5801" name="Drake Breath" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -30,14 +27,14 @@
         <consume>
             <mana initial="75"/>
         </consume>
-        <target affect-min="5" affect-random="12" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="45" radius="600" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="600" angle="45"/>
         </target>
     </skill>
-    <skill id="5802" name="Stun" action="A2" debuff="true">
-        <!-- Immobilizes and stuns target. -->
+    <skill id="5802" name="Stun" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="400"/>
             <reuse initial="3000"/>
@@ -49,8 +46,8 @@
         <consume>
             <mana initial="83"/>
         </consume>
-        <target affect-min="5" affect-random="12" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="60" radius="400" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="400" angle="60"/>
         </target>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
@@ -58,8 +55,7 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5803" name="Green Chili" max-level="3" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5803" name="Green Chili" max-level="3" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75">
@@ -84,8 +80,7 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5804" name="Fireball" max-level="3" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5804" name="Fireball" max-level="3" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="70">
@@ -111,9 +106,8 @@
         <target type="ENEMY"/>
     </skill>
     <skill id="5805" name="Air Assault" action="DA1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0" next-action="ATTACK">
+        <attributes next-action="ATTACK" magic-critical-rate="-5.0">
             <magic-level initial="77"/>
             <cast-range initial="600"/>
             <reuse initial="1000"/>
@@ -127,13 +121,12 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="1973.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5806" name="High Wave Beam" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5806" name="High Wave Beam" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
@@ -149,12 +142,10 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5807" name="Self-destruction" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5807" name="Self-destruction" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-676"/>
             <element type="DARK" value="50"/>
@@ -162,10 +153,9 @@
         <consume>
             <mana initial="151"/>
         </consume>
-        <target object="NOT_FRIEND" range="500" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="500"/>
     </skill>
-    <skill id="5808" name="Burst Flame" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5808" name="Burst Flame" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="74"/>
@@ -181,8 +171,7 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5809" name="Dark Blood" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5809" name="Dark Blood" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="76"/>
@@ -198,10 +187,10 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5810" name="Decrease Speed" action="A2" debuff="true" type="MAGIC">
-        <!-- Immediately target's Speed -30%%. -->
+    <skill id="5810" name="Decrease Speed" debuff="true" action="A2" type="MAGIC">
+        <!-- Movement Speed has momentarily decreased by 30%%. -->
         <icon initial="icon.skill1160"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="75"/>
             <cast-range initial="900"/>
             <reuse initial="3000"/>
@@ -213,8 +202,8 @@
         <consume>
             <mana initial="69"/>
         </consume>
-        <target affect-min="5" affect-random="12" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="30" radius="600" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="600" angle="30"/>
         </target>
         <abnormal type="SPEED_DOWN">
             <level initial="3"/>
@@ -222,8 +211,7 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5811" name="Sonic Bomb" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5811" name="Sonic Bomb" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="78"/>
@@ -238,8 +226,7 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5812" name="Fire Breath" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5812" name="Fire Breath" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="78"/>
@@ -253,12 +240,11 @@
         <consume>
             <mana initial="72"/>
         </consume>
-        <target affect-min="5" affect-random="12" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="60" radius="600" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="12">
+            <fan-range start-angle="0" radius="600" angle="60"/>
         </target>
     </skill>
-    <skill id="5813" name="Sand Ball" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5813" name="Sand Ball" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="74"/>
@@ -274,15 +260,13 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5814" name="Self-destruction" max-level="3" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5814" name="Self-destruction" max-level="3" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="70">
                 <value level="2">75</value>
                 <value level="3">80</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-635">
                 <value level="2">-659</value>
@@ -296,110 +280,89 @@
                 <value level="3">159</value>
             </mana>
         </consume>
-        <target object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
     </skill>
     <skill id="5815" name="Presentation - Mercenary Troops Shout" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="2300"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5816" name="Presentation - Female Priest Transformation" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="7700"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5817" name="Presentation - Dragon Shout" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5818" name="Presentation - Repentance" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="2430"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5819" name="Presentation - Victory" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="5930"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5820" name="Presentation - Cancel" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="7000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5821" name="Presentation - Female Priest Exit" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="5330"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5823" name="Boss Defeat" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5824" name="Boss Arise" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5825" name="Presentation - Algraia Exit" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <hit-time initial="5330"/>
         </attributes>
         <target/>
     </skill>
     <skill id="5826" name="Fire Breath" max-level="3" action="A1" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="83">
@@ -419,8 +382,8 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" range="600" scope="FAN" type="ENEMY">
-            <fan-range angle="120" radius="600" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="600" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="600" angle="120"/>
         </target>
         <effects>
             <magical-attack>
@@ -431,7 +394,6 @@
         </effects>
     </skill>
     <skill id="5827" name="Fireball" max-level="6" action="A1" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75">
@@ -451,7 +413,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="150" scope="RANGE" type="ENEMY"/>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
         <effects>
             <magical-attack>
                 <power initial="55.0">
@@ -465,7 +427,6 @@
         </effects>
     </skill>
     <skill id="5828" name="Unholy Flare" max-level="6" action="A1" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75">
@@ -505,7 +466,6 @@
         </effects>
     </skill>
     <skill id="5829" name="Fire Flare" max-level="6" action="A1" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75">
@@ -545,7 +505,6 @@
         </effects>
     </skill>
     <skill id="5830" name="Polearm Thrust" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -560,17 +519,16 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="4640.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5831" name="Polearm Swing" action="A1" debuff="true">
-        <!-- Causes target to bleed severely, momentarily reducing HP. -->
+    <skill id="5831" name="Polearm Swing" debuff="true" action="A1">
+        <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
         <attributes magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="-689"/>
             <hit-time initial="1800"/>
@@ -578,9 +536,9 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target object="NOT_FRIEND" range="150" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="4640.0"/>
             </physical-attack>
             <damage-over-time ticks="5">
@@ -588,12 +546,11 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="5832" name="Aggression Aura" action="A2" debuff="true">
+    <skill id="5832" name="Aggression Aura" debuff="true" action="A2">
         <!-- Your mark is fixed. -->
         <icon initial="icon.skill0018"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="-6542"/>
             <hit-time initial="1000"/>
@@ -601,7 +558,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="600" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="600" affect-min="10" affect-random="10"/>
         <abnormal type="TARGET_LOCK">
             <level initial="1"/>
             <time initial="3"/>
@@ -612,11 +569,10 @@
         </effects>
     </skill>
     <skill id="5833" name="Shield" action="A2" type="MAGIC">
-        <!-- Temporarily P. Def. +15%%. -->
+        <!-- Increases P. Def. +15%% for a set time. -->
         <icon initial="icon.skill1040"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="100"/>
             <hit-time initial="2000"/>
@@ -624,7 +580,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="CLAN" range="600" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="CLAN" range="600" affect-min="10" affect-random="10"/>
         <abnormal type="PD_UP">
             <level initial="3"/>
             <time initial="3600"/>
@@ -636,11 +592,10 @@
         </effects>
     </skill>
     <skill id="5834" name="Magic Barrier" action="A2" type="MAGIC">
-        <!-- Temporarily M. Def. +33%%. -->
+        <!-- Increases M. Def. +33%% for a set time. -->
         <icon initial="icon.skill1036"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="100"/>
             <hit-time initial="2000"/>
@@ -648,7 +603,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="CLAN" range="600" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="CLAN" range="600" affect-min="10" affect-random="10"/>
         <abnormal type="MD_UP">
             <level initial="3"/>
             <time initial="3600"/>
@@ -660,7 +615,6 @@
         </effects>
     </skill>
     <skill id="5835" name="Major Heal" action="A1" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -681,11 +635,10 @@
         </effects>
     </skill>
     <skill id="5836" name="Greater Heal" action="A2" type="MAGIC">
-        <!-- Recovers HP and momentarily increases HP Recovery Bonus for party members. -->
+        <!-- Recovers party members' HP and momentarily increases HP Recovery Bonus. -->
         <icon initial="icon.skill1219"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-point initial="694"/>
             <hit-time initial="6000"/>
@@ -693,7 +646,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="CLAN" range="600" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="CLAN" range="600" affect-min="10" affect-random="10"/>
         <abnormal type="LIFE_FORCE_OTHERS">
             <level initial="5"/>
             <time initial="15"/>
@@ -708,7 +661,6 @@
         </effects>
     </skill>
     <skill id="5837" name="Double Throw Javelin" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -723,13 +675,12 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="4640.0"/>
             </physical-attack>
         </effects>
     </skill>
     <skill id="5838" name="Throw Javelin" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -744,13 +695,12 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="4640.0"/>
             </physical-attack>
         </effects>
     </skill>
     <skill id="5839" name="Breath" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -763,8 +713,8 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" range="1200" scope="FAN" type="ENEMY">
-            <fan-range angle="30" radius="1200" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="1200" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="1200" angle="30"/>
         </target>
         <effects>
             <magical-attack>
@@ -773,7 +723,6 @@
         </effects>
     </skill>
     <skill id="5840" name="Fire Breath" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -787,8 +736,8 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" range="1200" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="1200" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="1200" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="1200" angle="90"/>
         </target>
         <effects>
             <magical-attack>
@@ -797,11 +746,10 @@
         </effects>
     </skill>
     <skill id="5841" name="Multi Defense" action="A2">
-        <!-- P./ M. Def. are increased. -->
+        <!-- P. Def. and M. Def. are increased. -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="694"/>
             <hit-time initial="2120"/>
@@ -809,7 +757,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="CLAN" range="1000" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="CLAN" range="1000" affect-min="10" affect-random="10"/>
         <abnormal type="INSTINCT">
             <level initial="1"/>
             <time initial="3600"/>
@@ -824,11 +772,9 @@
         </effects>
     </skill>
     <skill id="5842" name="Spinning Slasher" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <cool-time initial="733"/>
             <effect-point initial="-100"/>
@@ -837,19 +783,18 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="6" affect-random="12" object="NOT_FRIEND" range="400" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="6" affect-random="12"/>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="17400.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="5843" name="Fear" action="A2" debuff="true" type="MAGIC">
-        <!-- Frightened into fleeing. -->
+    <skill id="5843" name="Fear" debuff="true" action="A2" type="MAGIC">
+        <!-- Afflicted with Fear and moving against own will. -->
         <icon initial="icon.skill1092"/>
-        <attributes hit-cancel-time="26.72" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" hit-cancel-time="26.72">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="6000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -858,7 +803,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="1000" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="1000" affect-min="10" affect-random="10"/>
         <abnormal type="TURN_FLEE" visual="TURN_FLEE">
             <level initial="1"/>
             <time initial="15"/>
@@ -870,11 +815,9 @@
         </effects>
     </skill>
     <skill id="5844" name="Thunder Storm" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <cool-time initial="2000"/>
             <effect-point initial="-100"/>
             <hit-time initial="6000"/>
@@ -883,7 +826,7 @@
         <consume>
             <mana initial="1"/>
         </consume>
-        <target object="NOT_FRIEND" range="300" scope="VALAKAS_SCOPE"/>
+        <target scope="VALAKAS_SCOPE" object="NOT_FRIEND" range="300"/>
         <effects>
             <magical-attack>
                 <power initial="834.0"/>
@@ -891,12 +834,12 @@
         </effects>
     </skill>
     <skill id="5845" name="Trigger Bleed" max-level="12">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0"/>
+        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        </attributes>
         <target/>
         <effects>
-            <trigger-skill-by-attack allow-reflect="false" critical-only="false" skill="5846" target="TARGET" trigger-by-normal-attack="true" trigger-by-skill="true">
+            <trigger-skill-by-attack skill="5846" target="TARGET">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
@@ -915,10 +858,10 @@
             </trigger-skill-by-attack>
         </effects>
     </skill>
-    <skill id="5846" name="Bleed" max-level="12" action="A2" debuff="true" type="MAGIC">
-        <!-- Causes target to bleed severely, momentarily reducing HP. -->
+    <skill id="5846" name="Bleed" max-level="12" debuff="true" action="A2" type="MAGIC">
+        <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -940,7 +883,7 @@
             <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -970,27 +913,25 @@
         </effects>
     </skill>
     <skill id="5847" name="Flip Nearby Blocks" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
             <hit-time initial="1000"/>
         </attributes>
-        <target affect-min="10" affect-random="10" range="200" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" range="200" affect-min="10" affect-random="10"/>
     </skill>
     <skill id="5848" name="Block Trigger Slow">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0"/>
+        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        </attributes>
         <target/>
     </skill>
-    <skill id="5849" name="Decrease Speed" action="A2" debuff="true">
-        <!-- Speed decreased. -->
+    <skill id="5849" name="Decrease Speed" debuff="true" action="A2">
+        <!-- Movement Speed decreased. -->
         <icon initial="icon.skill1160"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
@@ -1010,15 +951,15 @@
         </effects>
     </skill>
     <skill id="5850" name="Block Trigger Stun">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0"/>
+        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        </attributes>
         <target/>
     </skill>
-    <skill id="5851" name="Stun" action="A2" debuff="true">
-        <!-- Cannot move due to shock. -->
+    <skill id="5851" name="Stun" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
@@ -1062,10 +1003,10 @@
         </attributes>
         <target type="OTHERS"/>
     </skill>
-    <skill id="5854" name="Decrease Speed" action="A2" debuff="true">
-        <!-- Speed decreased. -->
+    <skill id="5854" name="Decrease Speed" debuff="true" action="A2">
+        <!-- Movement Speed decreased. -->
         <icon initial="icon.skill1160"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
@@ -1078,10 +1019,10 @@
             <time initial="30"/>
         </abnormal>
     </skill>
-    <skill id="5855" name="Stun" max-level="2" action="A2" debuff="true">
-        <!-- Cannot move due to shock. -->
+    <skill id="5855" name="Stun" max-level="2" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
-        <attributes magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="80">
                 <value level="2">85</value>
             </magic-level>
@@ -1102,8 +1043,8 @@
                 <value level="2">165</value>
             </mana>
         </consume>
-        <target object="NOT_FRIEND" type="ENEMY_ONLY">
-            <fan-range angle="90" radius="300" start-angle="0"/>
+        <target type="ENEMY_ONLY" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
@@ -1115,10 +1056,10 @@
             </chance>
         </abnormal>
     </skill>
-    <skill id="5860" name="Wrath of Valakas" action="A2" debuff="true">
-        <!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Body is activated, inflicting major physical damage on nearby allies. -->
+    <skill id="5860" name="Wrath of Valakas" debuff="true" action="A2">
+        <!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 seconds. -->
         <icon initial="icon.skill5860"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2">
             <magic-level initial="-1"/>
             <cast-range initial="1000"/>
             <effect-point initial="-100"/>
@@ -1133,10 +1074,10 @@
             <time initial="10"/>
         </abnormal>
     </skill>
-    <skill id="5861" name="Authority of Valakas" action="A2" debuff="true">
-        <!-- Temporarily blocks magic skills and decreases Speed. In 10 sec. Destruction of Soul is activated, inflicting major mental damage on nearby allies. -->
+    <skill id="5861" name="Authority of Valakas" debuff="true" action="A2">
+        <!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Mind is activated, inflicting major damage on the minds of nearby party members after 10 seconds. -->
         <icon initial="icon.skill5861"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="2">
             <magic-level initial="-1"/>
             <cast-range initial="1000"/>
             <effect-point initial="-100"/>
@@ -1151,8 +1092,7 @@
             <time initial="10"/>
         </abnormal>
     </skill>
-    <skill id="5862" name="Destruction of Body" action="A1">
-        <!-- none -->
+    <skill id="5862" name="Destruction of the Body" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
@@ -1160,15 +1100,14 @@
             <effect-point initial="-1000"/>
             <effect-range initial="2500"/>
         </attributes>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="700" scope="RANGE" type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="700" affect-min="10" affect-random="10"/>
         <effects>
             <hp mode="PER">
                 <power initial="-99.0"/>
             </hp>
         </effects>
     </skill>
-    <skill id="5863" name="Destruction of Soul" action="A1">
-        <!-- none -->
+    <skill id="5863" name="Destruction of the Soul" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
@@ -1176,7 +1115,7 @@
             <effect-point initial="-1000"/>
             <effect-range initial="2500"/>
         </attributes>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="700" scope="RANGE" type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="700" affect-min="10" affect-random="10"/>
         <effects>
             <mp mode="PER">
                 <power initial="-99.0"/>
@@ -1184,11 +1123,9 @@
         </effects>
     </skill>
     <skill id="5864" name="Decrease Valakas Defense" action="A2" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes hit-cancel-time="1.5" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <effect-point initial="100"/>
             <hit-time initial="4000"/>
@@ -1201,14 +1138,13 @@
             <level initial="1"/>
             <time initial="30"/>
         </abnormal>
-        <resist-abnormals>ABSORB AIRBIND CHANGEBODY DEPORT DERANGEMENT DISARM KNOCKDOWN MIRAGE MIRAGE_TRAP OBLIVION PARALYZE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY SILENCE SILENCE_ALL SILENCE_PHYSICAL SLEEP STUN TURN_FLEE TURN_STONE</resist-abnormals>
+        <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
+        </resist-abnormals>
     </skill>
     <skill id="5865" name="Wide-bodied Valakas" action="A2" type="MAGIC">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes hit-cancel-time="1.5" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5">
             <magic-level initial="80"/>
-            <cast-range initial="-1"/>
             <reuse initial="4000"/>
             <effect-point initial="100"/>
             <hit-time initial="4000"/>
@@ -1221,12 +1157,13 @@
             <level initial="1"/>
             <time initial="60"/>
         </abnormal>
-        <resist-abnormals>ABSORB AIRBIND CHANGEBODY DEPORT DERANGEMENT DISARM KNOCKDOWN MIRAGE MIRAGE_TRAP OBLIVION PARALYZE PUBLIC_SLOT ROOT_MAGICALLY ROOT_PHYSICALLY SILENCE SILENCE_ALL SILENCE_PHYSICAL SLEEP STUN TURN_FLEE TURN_STONE</resist-abnormals>
+        <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
+        </resist-abnormals>
     </skill>
-    <skill id="5866" name="Soul Worm" max-level="10" action="A2" debuff="true" type="MAGIC">
-        <!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
+    <skill id="5866" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
+        <!-- MEN blow is received. Current MP/Max MP/MP Bonus decreases. HP decreases from poison momentarily. -->
         <icon initial="icon.skill4035"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1244,7 +1181,7 @@
             <element type="DARK" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1253,10 +1190,10 @@
             <chance initial="70"/>
         </abnormal>
     </skill>
-    <skill id="5867" name="Soul Worm" max-level="10" action="A2" debuff="true" type="MAGIC">
-        <!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
+    <skill id="5867" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
+        <!-- MEN blow is received. Current MP/Max MP/MP Bonus decreases. HP decreases from poison momentarily. -->
         <icon initial="icon.skill4035"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1273,10 +1210,10 @@
             <effect-range initial="200"/>
             <element type="DARK" value="20"/>
         </attributes>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="150" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
-        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1285,10 +1222,10 @@
             <chance initial="70"/>
         </abnormal>
     </skill>
-    <skill id="5868" name="Soul Worm" max-level="10" action="A2" debuff="true" type="MAGIC">
-        <!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
+    <skill id="5868" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
+        <!-- MEN blow is received. Current MP/Max MP/MP Bonus decreases. HP decreases from poison momentarily. -->
         <icon initial="icon.skill4035"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1305,8 +1242,8 @@
             <effect-range initial="1200"/>
             <element type="DARK" value="20"/>
         </attributes>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
-        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
+        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1315,10 +1252,10 @@
             <chance initial="70"/>
         </abnormal>
     </skill>
-    <skill id="5869" name="Soul Worm" max-level="10" action="A2" debuff="true" type="MAGIC">
-        <!-- Mental blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
+    <skill id="5869" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
+        <!-- MEN blow is received. Current MP, Max MP, and MP Recovery Bonus decreases. HP decreases from poison momentarily. -->
         <icon initial="icon.skill4035"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="POISON">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1330,12 +1267,11 @@
                 <value level="9">84</value>
                 <value level="10">85</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <element type="DARK" value="20"/>
         </attributes>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
-        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
+        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1344,10 +1280,10 @@
             <chance initial="70"/>
         </abnormal>
     </skill>
-    <skill id="5870" name="Flash Worm" max-level="10" action="A2" debuff="true">
-        <!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
+    <skill id="5870" name="Flash Worm" max-level="10" debuff="true" action="A2">
+        <!-- Physical blow is received. P. Def., Max HP/HP, and HP regeneration bonus are decreased. Inflicted with Bleed and HP is temporarily decreased. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1365,7 +1301,7 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1374,10 +1310,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5871" name="Flash Worm" max-level="10" action="A2" debuff="true">
-        <!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
+    <skill id="5871" name="Flash Worm" max-level="10" debuff="true" action="A2">
+        <!-- Physical blow is received. P. Def., Max HP, and HP Recovery Bonus decreases. HP decreases from Bleed momentarily. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1394,10 +1330,10 @@
             <effect-range initial="200"/>
             <element type="EARTH" value="20"/>
         </attributes>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="150" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1406,10 +1342,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5872" name="Flash Worm" max-level="10" action="A2" debuff="true">
-        <!-- Physical blow is received. Max HP and HP Recovery Bonus decreases. HP decreases from bleeding momentarily. -->
+    <skill id="5872" name="Flash Worm" max-level="10" debuff="true" action="A2">
+        <!-- Physical blow is received. P. Def., Max HP/HP, and HP regeneration bonus are decreased. Inflicted with Bleed and HP is temporarily decreased. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="76">
                 <value level="2">77</value>
                 <value level="3">78</value>
@@ -1421,12 +1357,11 @@
                 <value level="9">84</value>
                 <value level="10">85</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <element type="EARTH" value="20"/>
         </attributes>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
@@ -1435,10 +1370,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5873" name="Death Worm" max-level="5" action="A2" debuff="true">
+    <skill id="5873" name="Death Worm" max-level="5" debuff="true" action="A2">
         <!-- Life force is being sapped out by the Leech of Darkness. -->
         <icon initial="icon.skill5873"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
@@ -1456,17 +1391,17 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5874" name="Death Worm" max-level="5" action="A2" debuff="true">
+    <skill id="5874" name="Death Worm" max-level="5" debuff="true" action="A2">
         <!-- Life force is being sapped out by the Leech of Darkness. -->
         <icon initial="icon.skill5873"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <effect-point initial="-100"/>
             <effect-range initial="200"/>
         </attributes>
-        <target object="NOT_FRIEND" scope="FAN" type="ENEMY_ONLY">
-            <fan-range angle="90" radius="150" start-angle="0"/>
+        <target type="ENEMY_ONLY" scope="FAN" object="NOT_FRIEND">
+            <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
         <abnormal type="DEATHWORM">
             <level initial="1">
@@ -1479,15 +1414,14 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5875" name="Death Worm" max-level="5" action="A2" debuff="true">
+    <skill id="5875" name="Death Worm" max-level="5" debuff="true" action="A2">
         <!-- Life force is being sapped out by the Leech of Darkness. -->
         <icon initial="icon.skill5873"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
-        <target range="300" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" range="300"/>
         <abnormal type="DEATHWORM">
             <level initial="1">
                 <value level="2">2</value>
@@ -1499,10 +1433,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5876" name="Begrudged Haunting" action="A2" debuff="true" type="MAGIC">
-        <!-- The grudge of those who didn't die. Can die by lethal malice after 5 min. -->
+    <skill id="5876" name="Begrudged Haunting" debuff="true" action="A2" type="MAGIC">
+        <!-- The grudge of those who didn't die. Can die by lethal malice after 5 minutes. -->
         <icon initial="icon.skill5876"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="85"/>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
@@ -1518,8 +1452,7 @@
             <time initial="300"/>
         </abnormal>
     </skill>
-    <skill id="5877" name="Chant of Worm Waking" max-level="4" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5877" name="Chant of Worm Waking" max-level="4" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="78">
@@ -1535,10 +1468,10 @@
         </attributes>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5878" name="Cruel Puncture" action="A2" debuff="true">
-        <!-- Inflicts damage and decreases Casting Spd. -->
+    <skill id="5878" name="Cruel Puncture" debuff="true" action="A2">
+        <!-- Life force lost and Casting Spd. decreased. -->
         <icon initial="icon.skill1386"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1564,10 +1497,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5879" name="Cruel Expunge" action="A2" debuff="true">
-        <!-- Causes target to bleed severely, momentarily reducing HP. -->
+    <skill id="5879" name="Cruel Expunge" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="83"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1579,7 +1512,7 @@
             <mana initial="165"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="60"/>
             <chance initial="80"/>
@@ -1590,10 +1523,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="5880" name="Vicious Mutilation" max-level="2" action="A2" debuff="true">
-        <!-- Speed decreased. -->
+    <skill id="5880" name="Vicious Mutilation" max-level="2" debuff="true" action="A2">
+        <!-- Movement Speed decreased. -->
         <icon initial="icon.skill1160"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1611,10 +1544,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5881" name="Vicious Mutilation" max-level="2" action="A2" debuff="true">
-        <!-- P. Def., P. Evasion, and Speed are decreased. -->
+    <skill id="5881" name="Vicious Mutilation" max-level="2" debuff="true" action="A2">
+        <!-- P. Def., P. Evasion, and Movement Speed are decreased. -->
         <icon initial="icon.skill1160"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1632,10 +1565,10 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5882" name="Weakened Pommel" max-level="2" action="A2" debuff="true">
-        <!-- Immobilizes and stuns target. -->
+    <skill id="5882" name="Weakened Pommel" max-level="2" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
             <magic-level initial="79">
                 <value level="2">83</value>
             </magic-level>
@@ -1650,23 +1583,23 @@
                 <value level="2">82</value>
             </mana>
         </consume>
-        <target range="150" type="ENEMY_ONLY"/>
+        <target type="ENEMY_ONLY" range="150"/>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="873.0"/>
             </physical-attack>
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5883" name="Meggling Injury" action="A2" debuff="true">
-        <!-- Causes target to bleed severely, momentarily reducing HP. -->
+    <skill id="5883" name="Meggling Injury" debuff="true" action="A2">
+        <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1678,7 +1611,7 @@
             <mana initial="165"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
+        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="60"/>
             <chance initial="80"/>
@@ -1689,10 +1622,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="5884" name="Weakened Sweep" max-level="2" action="A2" debuff="true">
+    <skill id="5884" name="Weakened Sweep" max-level="2" debuff="true" action="A2">
         <!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
         <icon initial="icon.skill0485"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="DISARM">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DISARM" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1703,8 +1636,8 @@
         <consume soul="1">
             <mana initial="165"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" range="300" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="300" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="300" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
         <abnormal type="DISARM" visual="DOT_BLEEDING">
             <level initial="1"/>
@@ -1712,7 +1645,7 @@
             <chance initial="70"/>
         </abnormal>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="2319.0">
                     <value level="2">18664.0</value>
                 </power>
@@ -1720,10 +1653,10 @@
             <effect name="Disarm"/>
         </effects>
     </skill>
-    <skill id="5885" name="Weakened Sweep" action="A2" debuff="true">
-        <!-- Immobilizes and stuns target. -->
+    <skill id="5885" name="Weakened Sweep" debuff="true" action="A2">
+        <!-- Stunned and temporarily rendered immobile. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="40"/>
             <reuse initial="1000"/>
@@ -1734,8 +1667,8 @@
         <consume>
             <mana initial="165"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" range="300" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="300" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="300" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
@@ -1743,18 +1676,17 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="2319.0"/>
             </physical-attack>
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="5886" name="Ground Shaker" action="A2" debuff="true">
-        <!-- P. Evasion and Speed are decreased. -->
+    <skill id="5886" name="Ground Shaker" debuff="true" action="A2">
+        <!-- P. Evasion and Movement Speed are decreased. -->
         <icon initial="icon.skill1160"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="-100"/>
             <effect-range initial="1100"/>
@@ -1763,7 +1695,7 @@
         <consume>
             <mana initial="165"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="150" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
         <abnormal type="SPEED_DOWN">
             <level initial="3"/>
             <time initial="10"/>
@@ -1778,12 +1710,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5887" name="Howl from Beyond" action="A2" debuff="true">
-        <!-- P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Rate and P. Critical Damage are decreased. -->
+    <skill id="5887" name="Howl from Beyond" debuff="true" action="A2">
+        <!-- P. Atk./M. Atk./Atk. Spd./P. Accuracy/P. Critical Rate/P. Critical Damage significantly decreased. -->
         <icon initial="icon.skill1337"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="85"/>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="-100"/>
             <hit-time initial="1000"/>
@@ -1791,17 +1722,17 @@
         <consume>
             <mana initial="165"/>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
         <abnormal type="MULTI_DEBUFF_C">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5888" name="Earthquake" max-level="2" action="A2" debuff="true">
-        <!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
+    <skill id="5888" name="Earth Shaker" max-level="2" debuff="true" action="A2">
+        <!-- Stun and unable to move momentarily. Lost the target. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
             <magic-level initial="83">
                 <value level="2">85</value>
             </magic-level>
@@ -1816,8 +1747,8 @@
                 <value level="2">83</value>
             </mana>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="300" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
         <abnormal type="STUN" visual="DOT_BLEEDING">
             <level initial="1"/>
@@ -1830,10 +1761,10 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5889" name="Tainted Shackle" max-level="3" action="A2" debuff="true">
+    <skill id="5889" name="Tainted Shackle" max-level="3" debuff="true" action="A2">
         <!-- Cannot act because the target is locked. -->
         <icon initial="icon.skill0100"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="76">
                 <value level="2">79</value>
                 <value level="3">81</value>
@@ -1857,15 +1788,14 @@
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5890" name="Tainted Mass Shackle" max-level="3" action="A2" debuff="true">
-        <!-- Cannot act because the target is locked. -->
+    <skill id="5890" name="Tainted Mass Shackle" max-level="3" debuff="true" action="A2">
+        <!-- Cannot move because the target is locked. -->
         <icon initial="icon.skill0402"/>
-        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
             <magic-level initial="83">
                 <value level="2">84</value>
                 <value level="3">85</value>
             </magic-level>
-            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <effect-point initial="-100"/>
             <hit-time initial="1000"/>
@@ -1875,15 +1805,14 @@
                 <value level="3">83</value>
             </mana>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="POINT_BLANK"/>
+        <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
         <abnormal type="TARGET_LOCK" visual="ROOT">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
         </abnormal>
     </skill>
-    <skill id="5891" name="Threatening Bellow" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5891" name="Threatening Bellow" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="83"/>
@@ -1898,10 +1827,10 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="5892" name="Cunning Coercion" max-level="2" action="A2" debuff="true">
-        <!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Momentarily inflicts mental shock on the enemy. -->
+    <skill id="5892" name="Cunning Coercion" max-level="2" debuff="true" action="A2">
+        <!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Inflicts mental shock on the enemy momentarily. -->
         <icon initial="icon.skill0358"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1">
             <magic-level initial="80">
                 <value level="2">85</value>
             </magic-level>
@@ -1931,8 +1860,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5893" name="Ritual of Cannibalism" action="A1" debuff="true">
-        <!-- none -->
+    <skill id="5893" name="Ritual of Cannibalism" debuff="true" action="A1">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="84"/>
@@ -1947,10 +1875,10 @@
         </consume>
         <target type="PC_BODY"/>
     </skill>
-    <skill id="5894" name="Mark of Despair" action="A2" debuff="true" type="MAGIC">
-        <!-- The target gets Mark of Despair that significantly decreases P./ M. Def., P. Evasion and Max HP, but P./ M. Atk., Atk. Spd., P. Accuracy, P. Critical Damage and P. Critical Rate are increased. -->
+    <skill id="5894" name="Mark of Despair" debuff="true" action="A2" type="MAGIC">
+        <!-- Marked with Stigma's Despair. Significantly decreases P. Def./M. Def./P. Evasion/Max HP. HP Recovery is limited, but P. Atk., M. Atk., Atk. Spd., P. Accuracy, P. Critical Damage and P. Critical Rate are increased. -->
         <icon initial="icon.skill1337"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1">
             <magic-level initial="81"/>
             <cast-range initial="300"/>
             <effect-point initial="100"/>
@@ -2002,10 +1930,10 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="5895" name="Mark of Cowardice" action="A2" debuff="true" type="MAGIC">
-        <!-- Significantly decreases Max HP, P./ M. Def. and P. Evasion. The use of attack and skills, HP Recovery Bonus are limited, but Speed is slightly increased. -->
+    <skill id="5895" name="Mark of Cowardice" debuff="true" action="A2" type="MAGIC">
+        <!-- Significantly decreases Max HP, P. Def., M. Def. and P. evasion. The use of attack actions and skills and HP Recovery are limited, but movement speed is slightly increased. -->
         <icon initial="icon.skill1337"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="DERANGEMENT">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="300"/>
             <effect-point initial="100"/>
@@ -2042,10 +1970,9 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="5896" name="Soulless" max-level="2" action="A3" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5896" name="Soulless" max-level="2" debuff="true" action="A3" type="MAGIC">
         <icon initial="icon.skill0000"/>
-        <attributes magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0">
             <magic-level initial="84"/>
             <cast-range initial="300"/>
             <effect-point initial="100"/>
@@ -2063,10 +1990,10 @@
             <time initial="10"/>
         </abnormal>
     </skill>
-    <skill id="5897" name="Spike of Anchor" action="A2" debuff="true" type="MAGIC">
-        <!-- P./ M. Def., P. Evasion and Speed are decreased. -->
+    <skill id="5897" name="Spike of Anchor" debuff="true" action="A2" type="MAGIC">
+        <!-- P. Def./M. Def./P. Evasion/Movement Speed decreased. -->
         <icon initial="icon.skill1164"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="81"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
@@ -2097,10 +2024,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5898" name="Blast of Anchor" max-level="2" action="A2" debuff="true" type="MAGIC">
-        <!-- P./ M. Def., P. Evasion and Speed are decreased. -->
+    <skill id="5898" name="Blast of Anchor" max-level="2" debuff="true" action="A2" type="MAGIC">
+        <!-- P. Def./M. Def./P. Evasion/Movement Speed decreased. -->
         <icon initial="icon.skill1164"/>
-        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
             <magic-level initial="85"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
@@ -2114,7 +2041,7 @@
                 <value level="2">150</value>
             </mana>
         </consume>
-        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY"/>
+        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
         <abnormal type="SPEED_DOWN">
             <level initial="1"/>
             <time initial="10"/>
@@ -2135,8 +2062,7 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="5899" name="Burst of Pain" max-level="2" action="A1" debuff="true" type="MAGIC">
-        <!-- none -->
+    <skill id="5899" name="Burst of Pain" max-level="2" debuff="true" action="A1" type="MAGIC">
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="84"/>
@@ -2150,11 +2076,11 @@
         <consume>
             <mana initial="224"/>
         </consume>
-        <target affect-min="5" affect-random="15" object="NOT_FRIEND" scope="FAN" type="ENEMY">
-            <fan-range angle="90" radius="150" start-angle="0"/>
+        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
+            <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
         <effects>
-            <physical-attack>
+            <physical-attack critical-chance="0.0">
                 <power initial="3000.0"/>
             </physical-attack>
         </effects>
