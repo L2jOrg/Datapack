@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="1201" name="Dryad Root" max-level="41" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Holds the enemy for 15 seconds. -->
         <icon initial="icon.skill1201"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="HOLD" level-bonus-rate="30" auto-use="ACTIVE">
@@ -118,7 +117,7 @@
                 <value level="8">24</value>
                 <value level="10">27</value>
                 <value level="12">28</value>
-                <value level="13">29</value>
+                <value level="13">30</value>
                 <value level="15">31</value>
                 <value level="16">33</value>
                 <value level="17">34</value>
@@ -133,7 +132,7 @@
                 <value level="26">44</value>
                 <value level="27">46</value>
                 <value level="28">48</value>
-                <value level="29">50</value>
+                <value level="29">49</value>
                 <value level="30">51</value>
                 <value level="31">52</value>
                 <value level="32">53</value>
@@ -142,8 +141,8 @@
                 <value level="35">59</value>
                 <value level="36">61</value>
                 <value level="37">63</value>
-                <value level="38">64</value>
-                <value level="39">66</value>
+                <value level="38">65</value>
+                <value level="39">67</value>
                 <value level="40">69</value>
                 <value level="41">71</value>
             </mana>
@@ -163,10 +162,14 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="1204" name="Wind Walk" max-level="2" action="A2" type="MAGIC">
+    <skill id="1204" name="Wind Walk" max-level="6" action="A2" type="MAGIC">
         <!--
 		level 1: Increases Speed by 20 for 20 minutes.
 		level 2: Increases Speed by 33 for 20 minutes.
+		level 3: Increases Speed by 20 for 20 minutes.
+		level 4: Increases Speed by 33 for 20 minutes.
+		level 5: Increases Speed by 20 for 10 min.
+		level 6: Increases Speed by 33 for 10 min.
 	 -->
         <icon initial="icon.skill1204"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
@@ -177,6 +180,10 @@
             <reuse initial="2000"/>
             <effect-point initial="204">
                 <value level="2">285</value>
+                <value level="3">204</value>
+                <value level="4">285</value>
+                <value level="5">204</value>
+                <value level="6">285</value>
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
@@ -184,9 +191,14 @@
         <consume>
             <mana-init initial="4">
                 <value level="2">6</value>
+                <value level="3">0</value>
             </mana-init>
-            <mana initial="20">
-                <value level="2">27</value>
+            <mana initial="16">
+                <value level="2">21</value>
+                <value level="3">20</value>
+                <value level="4">27</value>
+                <value level="5">20</value>
+                <value level="6">27</value>
             </mana>
         </consume>
         <target type="TARGET"/>
@@ -205,7 +217,6 @@
         </effects>
     </skill>
     <skill id="1206" name="Wind Shackle" max-level="27" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Decreases the enemy's Atk. Spd. by 17% for 30 seconds.
 		level 2: Decreases the enemy's Atk. Spd. by 20% for 30 seconds.
@@ -342,7 +353,6 @@
         </effects>
     </skill>
     <skill id="1208" name="Seal of Binding" max-level="25" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Holds nearby enemies for 15 seconds. Immune to Hold while the effect is on.
 		level 18: For 15 seconds inflicts Hold on the nearby targets. The target cannot be affected by any additional hold attacks while the effect lasts.
@@ -447,7 +457,7 @@
                 <value level="21">98</value>
                 <value level="22">101</value>
                 <value level="23">103</value>
-                <value level="24">105</value>
+                <value level="24">106</value>
                 <value level="25">108</value>
             </mana>
         </consume>
@@ -467,7 +477,6 @@
         </effects>
     </skill>
     <skill id="1209" name="Seal of Poison" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Poisons nearby enemies, causing loss of 14 HP per second for 30 seconds.
 		level 2: Poisons nearby enemies, causing loss of 19 HP per second for 30 seconds.
@@ -536,7 +545,6 @@
         </effects>
     </skill>
     <skill id="1210" name="Seal of Gloom" max-level="4" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Burns the MP of nearby enemies with bonus 29 M. Atk. Power and decreases 9 MP per second for 15 seconds.
 		level 2: Burns the MP of nearby enemies with bonus 36 M. Atk. Power and decreases 11 MP per second for 15 seconds.
@@ -598,7 +606,6 @@
         </effects>
     </skill>
     <skill id="1213" name="Seal of Mirage" max-level="13" debuff="true" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Throws nearby enemies into chaos, causing them to attack anybody randomly. -->
         <icon initial="icon.skill1213"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
@@ -839,7 +846,7 @@
                 <value level="37">28</value>
                 <value level="39">30</value>
             </mana-init>
-             <mana initial="46">
+            <mana initial="46">
                 <value level="2">48</value>
                 <value level="3">49</value>
                 <value level="4">51</value>
@@ -875,7 +882,6 @@
                 <value level="36">110</value>
                 <value level="37">112</value>
                 <value level="38">114</value>
-                <value level="39">114</value>
                 <value level="40">116</value>
                 <value level="41">118</value>
             </mana>
@@ -1097,7 +1103,6 @@
                 <value level="8">88</value>
                 <value level="9">91</value>
                 <value level="10">96</value>
-                <value level="11">96</value>
                 <value level="12">98</value>
                 <value level="13">103</value>
                 <value level="14">106</value>
@@ -1178,7 +1183,6 @@
         </effects>
     </skill>
     <skill id="1219" name="Greater Group Heal" max-level="41" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Restores all party members' HP with 261 Power.
 		level 2: Restores all party members' HP with 270 Power.
@@ -1631,7 +1635,6 @@
         </effects>
     </skill>
     <skill id="1222" name="Curse Chaos" max-level="17" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 30 seconds, enemy's P. Accuracy -9.
 		level 2: For 30 seconds, enemy's P. Accuracy -12.
@@ -1727,7 +1730,6 @@
         </effects>
     </skill>
     <skill id="1224" name="Surrender to Poison" max-level="17" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 30 seconds, enemy's Poison Resistance -25.
 		level 4: For 30 seconds, enemy's Poison Resistance -30.
@@ -1828,7 +1830,6 @@
         </effects>
     </skill>
     <skill id="1225" name="Summon Mew the Cat" max-level="18" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
 		level 3: Summons a Cute Kitty that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
@@ -1945,7 +1946,6 @@
         </effects>
     </skill>
     <skill id="1226" name="Summon Boxer the Unicorn" max-level="18" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons Boxer the Unicorn. Consumes 1 Spirit Ore when summoned.
 		level 3: Summons Boxer the Unicorn. Consumes 2 Spirit Ore when summoned.
@@ -2062,7 +2062,6 @@
         </effects>
     </skill>
     <skill id="1227" name="Summon Mirage the Unicorn" max-level="18" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Unicorn that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
 		level 3: Summons a Unicorn that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
@@ -2179,7 +2178,6 @@
         </effects>
     </skill>
     <skill id="1228" name="Summon Silhouette" max-level="18" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Shadow that uses combat magic to support you in battle. Consumes 1 Spirit Ore when summoned.
 		level 3: Summons a Shadow that uses combat magic to support you in battle. Consumes 2 Spirit Ore when summoned.
@@ -2296,7 +2294,6 @@
         </effects>
     </skill>
     <skill id="1229" name="Chant of Life" max-level="23" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Recovers 19 HP per second for all party members for 10 seconds.
 		level 2: Recovers 24 HP per second for all party members for 10 seconds.
@@ -2872,7 +2869,6 @@
         </effects>
     </skill>
     <skill id="1232" name="Blazing Skin" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, transfers 10% of the target's received damage back to the enemy. (Can only be used on party members.)
 		level 2: For 20 minutes, transfers 15% of the target's received damage back to the enemy. (Can only be used on party members.)
@@ -2926,7 +2922,6 @@
         </effects>
     </skill>
     <skill id="1233" name="Decay" max-level="4" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Rots the enemy, causing loss of 102 HP per second for 15 seconds.
 		level 2: Rots the enemy, causing loss of 125 HP per second for 15 seconds.
@@ -3321,7 +3316,7 @@
                 <value level="36">-346</value>
             </effect-point>
             <effect-range initial="1400"/>
-            <hit-time initial="4000"/>          
+            <hit-time initial="4000"/>
         </attributes>
         <consume>
             <mana-init initial="7">
@@ -3702,7 +3697,6 @@
         </effects>
     </skill>
     <skill id="1238" name="Freezing Skin" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, returns 10% of damage received by the target back to the enemy. (Can only be used on party members.)
 		level 2: For 20 minutes, returns 15% of damage received by the target back to the enemy. (Can only be used on party members.)
@@ -3873,8 +3867,8 @@
                 <value level="36">-346</value>
             </effect-point>
             <effect-range initial="1400"/>
-            <hit-time initial="4000"/> 
-			<element type="WIND" value="20"/>	
+            <hit-time initial="4000"/>
+            <element type="WIND" value="20"/>
         </attributes>
         <consume>
             <mana-init initial="7">
@@ -3963,12 +3957,14 @@
             </magical-attack>
         </effects>
     </skill>
-    <skill id="1240" name="Guidance" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
+    <skill id="1240" name="Guidance" max-level="6" action="A2" type="MAGIC">
         <!--
 		level 1: For 20 minutes, P. Accuracy +2.
 		level 2: For 20 minutes, P. Accuracy +3.
 		level 3: For 20 minutes, P. Accuracy +4.
+		level 4: For 20 minutes, P. Accuracy +2.
+		level 5: For 20 minutes, P. Accuracy +3.
+		level 6: For 20 minutes, P. Accuracy +4.
 	 -->
         <icon initial="icon.skill1240"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
@@ -3981,6 +3977,9 @@
             <effect-point initial="379">
                 <value level="2">457</value>
                 <value level="3">532</value>
+                <value level="4">379</value>
+                <value level="5">457</value>
+                <value level="6">532</value>
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
@@ -3989,10 +3988,14 @@
             <mana-init initial="7">
                 <value level="2">9</value>
                 <value level="3">11</value>
+                <value level="4">0</value>
             </mana-init>
             <mana initial="28">
                 <value level="2">35</value>
                 <value level="3">41</value>
+                <value level="4">35</value>
+                <value level="5">44</value>
+                <value level="6">52</value>
             </mana>
         </consume>
         <target type="TARGET"/>
@@ -4012,12 +4015,14 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="1242" name="Death Whisper" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
+    <skill id="1242" name="Death Whisper" max-level="6" action="A2" type="MAGIC">
         <!--
 		level 1: For 20 minutes, P. Critical Damage +25%.
 		level 2: For 20 minutes, P. Critical Damage +30%.
 		level 3: For 20 minutes, P. Critical Damage +35%.
+		level 4: For 20 minutes, P. Critical Damage +25%.
+		level 5: For 20 minutes, P. Critical Damage +30%.
+		level 6: For 20 minutes, P. Critical Damage +35%.
 	 -->
         <icon initial="icon.skill1242"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0">
@@ -4030,6 +4035,9 @@
             <effect-point initial="379">
                 <value level="2">457</value>
                 <value level="3">532</value>
+                <value level="4">379</value>
+                <value level="5">457</value>
+                <value level="6">532</value>
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
@@ -4038,10 +4046,14 @@
             <mana-init initial="7">
                 <value level="2">9</value>
                 <value level="3">11</value>
+                <value level="4">0</value>
             </mana-init>
             <mana initial="28">
                 <value level="2">35</value>
                 <value level="3">41</value>
+                <value level="4">35</value>
+                <value level="5">44</value>
+                <value level="6">52</value>
             </mana>
         </consume>
         <target type="TARGET"/>
@@ -4062,7 +4074,6 @@
         </effects>
     </skill>
     <skill id="1243" name="Blessed Shield" max-level="6" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, Shield Defense Rate +5%.
 		level 2: For 20 minutes, Shield Defense Rate +10%.
@@ -4131,7 +4142,6 @@
         </effects>
     </skill>
     <skill id="1244" name="Freezing Flame" max-level="14" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Strikes the target with a magical cold flame. For 10 seconds, causes - 132 HP per second on the enemy.
 		level 2: Strikes the target with a magical cold flame. For 10 seconds, causes - 162 HP per second on the enemy.
@@ -4208,10 +4218,8 @@
                 <value level="4">52</value>
                 <value level="5">54</value>
                 <value level="6">55</value>
-                <value level="7">55</value>
                 <value level="8">56</value>
                 <value level="10">57</value>
-                <value level="11">57</value>
                 <value level="13">58</value>
             </mana>
         </consume>
@@ -4384,7 +4392,6 @@
         </effects>
     </skill>
     <skill id="1246" name="Seal of Silence" max-level="20" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Blocks nearby enemies' use of magic for 24 seconds. -->
         <icon initial="icon.skill1246"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
@@ -4481,7 +4488,6 @@
         </effects>
     </skill>
     <skill id="1247" name="Seal of Scourge" max-level="16" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Blocks nearby enemies' natural HP Recovery Bonus by 100% for 2 minutes. -->
         <icon initial="icon.skill1247"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="BOSS" level-bonus-rate="20">
@@ -4566,7 +4572,6 @@
         </effects>
     </skill>
     <skill id="1248" name="Seal of Suspension" max-level="20" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- For 2 minutes, nearby enemies' P. Skill/M. Skill Cooldown +200%. -->
         <icon initial="icon.skill1248"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
@@ -4665,7 +4670,6 @@
         </effects>
     </skill>
     <skill id="1249" name="Pa'agrio's Vision" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, nearby clan member's P. Accuracy +2.
 		level 2: For 20 minutes, nearby clan member's P. Accuracy +3.
@@ -4712,7 +4716,6 @@
         </effects>
     </skill>
     <skill id="1250" name="Pa'agrio's Protection" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, clan member's Shield Defense Rate +30%.
 		level 2: For 20 minutes, clan member's Shield Defense Rate +40%.
@@ -4759,7 +4762,6 @@
         </effects>
     </skill>
     <skill id="1251" name="Chant of Fury" max-level="2" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Increases Atk. Spd. of all party members by 15% for 20 minutes.
 		level 2: Increases Atk. Spd. of all party members by 33% for 20 minutes.
@@ -4799,7 +4801,6 @@
         </effects>
     </skill>
     <skill id="1252" name="Chant of Evasion" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, all party members' P. Evasion +2.
 		level 2: For 20 minutes, all party members' P. Evasion +3.
@@ -4846,7 +4847,6 @@
         </effects>
     </skill>
     <skill id="1253" name="Chant of Rage" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, all party members' P. Critical Damage +25%.
 		level 2: For 20 minutes, all party members' P. Critical Damage +30%.
@@ -4893,7 +4893,6 @@
         </effects>
     </skill>
     <skill id="1254" name="Mass Resurrection" max-level="6" action="A1">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Resurrect a dead clan member.
 		level 2: Resurrects a dead clan member. Also restores 20% XP.
@@ -4955,7 +4954,6 @@
         </effects>
     </skill>
     <skill id="1255" name="Party Return" max-level="2" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Teleports party members to a village. This skill cannot be used in a specially designated place such as the GM Consultation Service. -->
         <icon initial="icon.skill1255"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true" auto-use="ACTIVE">
@@ -4984,7 +4982,6 @@
         </effects>
     </skill>
     <skill id="1256" name="Pa'agrio's Heart" max-level="18" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Restores a clan member's HP with 91 Power and recovers 31 HP per second for 15 seconds.
 		level 2: Restores a clan member's HP with 103 Power and recovers 35 HP per second for 15 seconds.
@@ -5156,7 +5153,6 @@
         </effects>
     </skill>
     <skill id="1257" name="Decrease Weight" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, Weight Penalty Segment +3000.
 		level 2: For 20 minutes, Weight Penalty Segment +6000.
@@ -5205,7 +5201,6 @@
         </effects>
     </skill>
     <skill id="1258" name="Restore Life" max-level="4" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Recovers HP by 15%.
 		level 2: Recovers HP by 20%.
@@ -5253,7 +5248,6 @@
         </effects>
     </skill>
     <skill id="1259" name="Stun Resistance" max-level="4" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For, 20 minutes Stun Attack Resistance +15%.
 		level 2: For, 20 minutes Stun Attack Resistance +20%.
@@ -5311,7 +5305,6 @@
         </effects>
     </skill>
     <skill id="1260" name="Pa'agrio's Tact" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, nearby clan member's P. Evasion +2.
 		level 2: For 20 minutes, nearby clan member's P. Evasion +3.
@@ -5358,7 +5351,6 @@
         </effects>
     </skill>
     <skill id="1261" name="Pa'agrio's Rage" max-level="2" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, nearby clan member's P. Def -5%, M. Def -10%, P. Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, and Movement Speed +5.
 		level 2: For 20 minutes, nearby clan member's P. Def -8%, M. Def -16%, P. Evasion -4, P. Atk. +8%, M. Atk. +16%, Atk. Spd. +8%, Casting Spd. +8%, and Movement Speed +8.
@@ -5456,12 +5448,6 @@
                 <value level="4">12</value>
                 <value level="5">13</value>
             </mana-init>
-            <mana initial="7">
-                <value level="2">9</value>
-                <value level="3">11</value>
-                <value level="4">12</value>
-                <value level="5">13</value>
-            </mana>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -5558,7 +5544,6 @@
                 <value level="15">59</value>
                 <value level="16">61</value>
                 <value level="17">62</value>
-                <value level="18">62</value>
                 <value level="19">63</value>
                 <value level="20">64</value>
             </mana>
@@ -5571,8 +5556,8 @@
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
-                <power initial="-23.0"/>                
-            </stat-modify> 
+                <power initial="-23.0"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="1264" name="Solar Spark" max-level="3" action="A1" type="MAGIC">
@@ -5602,7 +5587,7 @@
                 <value level="2">7</value>
                 <value level="3">8</value>
             </mana-init>
-             <mana initial="22">
+            <mana initial="22">
                 <value level="2">26</value>
                 <value level="3">30</value>
             </mana>
@@ -5866,7 +5851,6 @@
         </effects>
     </skill>
     <skill id="1268" name="Vampiric Rage" max-level="4" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, has a chance of recovering 6% of the damage inflicted on the enemy as HP.
 		level 2: For 20 minutes, has a chance of recovering 7% of the damage inflicted on the enemy as HP.
@@ -5987,9 +5971,7 @@
                 <value level="11">63</value>
                 <value level="12">64</value>
                 <value level="13">65</value>
-                <value level="14">65</value>
                 <value level="15">66</value>
-                <value level="16">66</value>
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
@@ -6005,7 +5987,6 @@
         </effects>
     </skill>
     <skill id="1271" name="Benediction" max-level="2" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Fully recovers a party member's HP. Available when MP is at 25% or below.
 		level 2: Fully recovers a party member's HP. Available when MP is at 30% or below.
@@ -6038,7 +6019,6 @@
         </effects>
     </skill>
     <skill id="1272" name="Word of Fear" max-level="15" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Frightens nearby enemies into fleeing for 7 seconds. -->
         <icon initial="icon.skill1272"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
@@ -6122,7 +6102,6 @@
         </effects>
     </skill>
     <skill id="1273" name="Eva's Serenade" max-level="15" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Soothes surrounding enemies, eliminating their desire to attack. -->
         <icon initial="icon.skill1273"/>
         <attributes magic-critical-rate="5.0" trait="DERANGEMENT">
@@ -6186,7 +6165,6 @@
         </effects>
     </skill>
     <skill id="1274" name="Energy Bolt" max-level="4" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Inflicts damage on the enemy with bonus 26 M. Atk. Power.
 		level 2: Inflicts damage on the enemy with bonus 33 M. Atk. Power.
@@ -6292,13 +6270,13 @@
                 <value level="10">7</value>
             </mana-init>
             <mana initial="14">
-                 <value level="2">16</value>
-                 <value level="3">18</value>
-                 <value level="4">19</value>
-                 <value level="5">21</value>
-                 <value level="6">22</value>
-                 <value level="8">23</value>
-                 <value level="9">24</value>
+                <value level="2">16</value>
+                <value level="3">18</value>
+                <value level="4">19</value>
+                <value level="5">21</value>
+                <value level="6">22</value>
+                <value level="8">23</value>
+                <value level="9">24</value>
                 <value level="10">25</value>
                 <value level="11">26</value>
                 <value level="13">27</value>
@@ -6327,7 +6305,6 @@
         </effects>
     </skill>
     <skill id="1276" name="Summon Kai the Cat" max-level="14" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons Servitor Kai the Cat. Consumes 4 Spirit Ore when summoned.
 		level 3: Summons Servitor Kai the Cat. Consumes 5 Spirit Ore when summoned.
@@ -6422,7 +6399,6 @@
         </effects>
     </skill>
     <skill id="1277" name="Summon Merrow the Unicorn" max-level="14" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons Servitor Merrow the Unicorn. Consumes 4 Spirit Ore when summoned.
 		level 3: Summons Servitor Merrow the Unicorn. Consumes 5 Spirit Ore when summoned.
@@ -6517,7 +6493,6 @@
         </effects>
     </skill>
     <skill id="1278" name="Summon Soulless" max-level="14" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons Servitor Soulless. Consumes 4 Spirit Ore when summoned.
 		level 3: Summons Servitor Soulless. Consumes 5 Spirit Ore when summoned.
@@ -6612,7 +6587,6 @@
         </effects>
     </skill>
     <skill id="1279" name="Summon Binding Cubic" max-level="15" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 2 Spirit Ore when summoned.
 		level 4: Summons a Binding Cubic. Binding Cubic uses magic that paralyzes a targeted enemy. Consumes 3 Spirit Ore when summoned.
@@ -6665,7 +6639,7 @@
                 <value level="6">44</value>
                 <value level="7">48</value>
                 <value level="8">51</value>
-                <value level="9">54</value>
+                <value level="9">53</value>
                 <value level="10">55</value>
                 <value level="11">57</value>
                 <value level="12">59</value>
@@ -6701,7 +6675,6 @@
         </effects>
     </skill>
     <skill id="1280" name="Summon Aqua Cubic" max-level="14" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 2 Spirit Ore when summoned.
 		level 4: Summons an Aqua Cubic. Aqua Cubic uses attack magic that inflicts continuous damage to the enemy. Consumes 3 Spirit Ore when summoned.
@@ -6787,7 +6760,6 @@
         </effects>
     </skill>
     <skill id="1281" name="Summon Spark Cubic" max-level="15" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 2 Spirit Ore when summoned.
 		level 4: Summons a Spark Cubic. Spark Cubic uses magic that stuns a targeted enemy. Consumes 3 Spirit Ore when summoned.
@@ -6876,7 +6848,6 @@
         </effects>
     </skill>
     <skill id="1282" name="Pa'agrio's Haste" max-level="2" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Increases Speed of nearby clan members by 20 for 20 minutes.
 		level 2: Increases Speed of nearby clan members by 33 for 20 minutes.
@@ -6957,14 +6928,6 @@
                 <value level="9">13</value>
                 <value level="12">14</value>
             </mana-init>
-            <mana initial="8">
-                <value level="2">9</value>
-                <value level="3">10</value>
-                <value level="4">11</value>
-                <value level="7">12</value>
-                <value level="9">13</value>
-                <value level="12">14</value>
-            </mana>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -6996,7 +6959,6 @@
         </effects>
     </skill>
     <skill id="1284" name="Chant of Revenge" max-level="3" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: For 20 minutes, gives a party member the ability to transfer 10% of received damage back to the enemy.
 		level 2: For 20 minutes, gives a party member the ability to transfer 15% of received damage back to the enemy.
@@ -7043,7 +7005,6 @@
         </effects>
     </skill>
     <skill id="1288" name="Aura Symphony" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!-- Inflicts damage on the enemy with bonus 150 M. Atk. Power. -->
         <icon initial="icon.skill1288"/>
         <attributes magic-critical-rate="5.0" auto-use="ACTIVE">
@@ -7066,7 +7027,6 @@
         </effects>
     </skill>
     <skill id="1289" name="Inferno" max-level="6" debuff="true" action="A2" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Appropriates fire energy to deal damage on an enemy with bonus 150 M. Atk. Power, and burns 5% of their mana. Decreases 60 per second for 15 seconds.
 		level 2: Appropriates fire energy to deal damage on an enemy with bonus 155 M. Atk. Power, and burns 6% of their mana. Decreases 80 per second for 15 seconds.
@@ -7186,7 +7146,7 @@
                 <value level="5">70</value>
                 <value level="6">75</value>
             </mana-init>
-              <mana initial="200">
+            <mana initial="200">
                 <value level="2">220</value>
                 <value level="3">230</value>
                 <value level="4">240</value>
@@ -7587,7 +7547,6 @@
         </effects>
     </skill>
     <skill id="1297" name="Clear Mind" max-level="6">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Increases MP Recovery Bonus by 2.6 while standing and by 3.2 when walking.
 		level 2: Increases MP Recovery Bonus by 3.2 while standing and by 4 when walking.
@@ -7597,22 +7556,21 @@
 		level 6: Increases MP Recovery Bonus by 4.9 while standing and by 6.2 when walking.
 	 -->
         <icon initial="icon.skill1297"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="REGENERATE_MP_RATE" type="WALKING">
                 <power initial="3.2">
-					<value level="2">4.0</value>
+                    <value level="2">4.0</value>
                     <value level="3">4.3</value>
                     <value level="4">5.1</value>
                     <value level="5">5.8</value>
                     <value level="6">6.2</value>
                 </power>
             </stat-by-move-type>
-			<stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
+            <stat-by-move-type stat="REGENERATE_MP_RATE" type="STANDING">
                 <power initial="2.6">
-					<value level="2">3.2</value>
+                    <value level="2">3.2</value>
                     <value level="3">3.5</value>
                     <value level="4">4.1</value>
                     <value level="5">4.7</value>
@@ -7723,8 +7681,8 @@
             <mana-init initial="10">
                 <value level="2">13</value>
             </mana-init>
-            <mana initial="48">
-                <value level="2">65</value>
+            <mana initial="38">
+                <value level="2">52</value>
             </mana>
         </consume>
         <target type="SUMMON"/>

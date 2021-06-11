@@ -178,7 +178,7 @@
             level 45: Attacks frontal enemies with bonus 2820 Power. Requires a sword or blunt weapon. Ignores Shield Defense. Over-hit.
          -->
         <icon initial="icon.skill1607"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
+        <attributes next-action="ATTACK" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="40">
                 <value level="4">41</value>
                 <value level="5">42</value>
@@ -427,7 +427,6 @@
         </attributes>
         <consume>
             <mana-init initial="1"/>
-            <mana initial="1"/>
         </consume>
         <target type="NONE"/>
         <conditions>
@@ -436,7 +435,7 @@
             </weapon>
         </conditions>
         <effects>
-			<effect name="MpConsumePerLevel" ticks="5">
+            <effect name="MpConsumePerLevel" ticks="5">
                 <power initial="0.4"/>
             </effect>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -461,7 +460,7 @@
                     <value level="4">80.0</value>
                 </power>
                 <weapon-type>SWORD TWO_HAND_SWORD</weapon-type>
-            </stat-modify>           
+            </stat-modify>
         </effects>
     </skill>
     <skill id="1610" name="Life Saver" max-level="29" action="A2" type="MAGIC">
@@ -578,35 +577,34 @@
                 <value level="20">20</value>
                 <value level="25">21</value>
             </mana-init>
-            <mana initial="32">
-                <value level="2">39</value>
-                <value level="3">45</value>
-                <value level="4">51</value>
-                <value level="5">58</value>
-                <value level="6">62</value>
-                <value level="7">67</value>
-                <value level="8">72</value>
-                <value level="9">75</value>
-                <value level="10">81</value>
-                <value level="11">85</value>
-                <value level="12">88</value>
-                <value level="13">90</value>
-                <value level="14">91</value>
-                <value level="15">92</value>
-                <value level="16">93</value>
-                <value level="17">95</value>
-                <value level="18">96</value>
-                <value level="19">97</value>
-                <value level="20">99</value>
-                <value level="21">100</value>
-                <value level="22">101</value>
-                <value level="23">102</value>
-                <value level="24">103</value>
-                <value level="25">105</value>
-                <value level="26">106</value>
-                <value level="27">107</value>
-                <value level="28">108</value>
-                <value level="29">109</value>
+            <mana initial="26">
+                <value level="2">31</value>
+                <value level="3">36</value>
+                <value level="4">41</value>
+                <value level="5">46</value>
+                <value level="6">50</value>
+                <value level="7">54</value>
+                <value level="8">58</value>
+                <value level="9">60</value>
+                <value level="10">65</value>
+                <value level="11">68</value>
+                <value level="12">70</value>
+                <value level="13">72</value>
+                <value level="14">73</value>
+                <value level="15">74</value>
+                <value level="17">76</value>
+                <value level="18">77</value>
+                <value level="19">78</value>
+                <value level="20">79</value>
+                <value level="21">80</value>
+                <value level="22">81</value>
+                <value level="23">82</value>
+                <value level="24">83</value>
+                <value level="25">84</value>
+                <value level="26">85</value>
+                <value level="27">86</value>
+                <value level="28">87</value>
+                <value level="29">88</value>
             </mana>
         </consume>
         <target type="TARGET" range="1000" affect-min="50" affect-random="50"/>
@@ -704,9 +702,10 @@
     <skill id="1612" name="Slow Force" debuff="true" action="A2">
         <!-- Movement Speed -20%% for 15 seconds. -->
         <icon initial="icon.skill0210"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" triggered="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" triggered="true" auto-use="ACTIVE">
             <cast-range initial="400"/>
             <effect-point initial="-204"/>
+            <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
         <abnormal type="SPEED_DOWN">
@@ -865,6 +864,7 @@
             <cast-range initial="600"/>
             <reuse initial="15000"/>
             <effect-point initial="-190"/>
+            <activate-rate initial="100"/>
         </attributes>
         <target type="ENEMY"/>
         <abnormal>
@@ -1259,7 +1259,7 @@
     <skill id="1626" name="Howl Spear" debuff="true" action="A1">
         <!-- Strikes with a spear to inflict damage on nearby enemies with bonus 2911 Power. Removes Movement Speed buffs. Requires a spear. -->
         <icon initial="icon.skill1626"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20">
+        <attributes magic-critical-rate="5.0" level-bonus-rate="20">
             <magic-level initial="80"/>
             <reuse initial="8000"/>
             <cool-time initial="500"/>
@@ -1368,7 +1368,7 @@
         <effects>
             <stat-modify stat="ATTACK_COUNT_MAX" stat-add="ATTACK_COUNT_MAX">
                 <power initial="2.0"/>
-				<weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD</weapon-type>
+                <weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD</weapon-type>
             </stat-modify>
         </effects>
     </skill>

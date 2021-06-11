@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="39300" name="Steamed Rice Cake of Grace" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="600000"/>
@@ -11,8 +10,7 @@
     <skill id="39301" name="My Teleport Book" action="A1">
         <!-- Increases number of Unoccupied Teleport Devices by 1. -->
         <icon initial="icon.bookmark_book_i00"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="39302" name="Baium Doll's Spell" max-level="3">
@@ -145,33 +143,12 @@
     </skill>
     <skill id="39305" name="Dark Knights Transformation" max-level="3" action="A2">
         <!--
-			< 1 >
-            level 1: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +5%, 
-			PvP P. Def. +5%, 
-			and Stun/Paralysis/MEN Resistance +5%. 
-			Effect remains even after death.
-			< 2 >
-            level 2: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +7%, 
-			PvP P. Def. +7%, 
-			and Stun/Paralysis/MEN Resistance +7%. 
-			Effect remains even after death.
-			< 3 >
-            level 3: Transforms into a Dark Knight. 
-			For 20 minutes, 
-			Max HP/Max MP +10%, 
-			PvP P. Atk. +10%, 
-			PvP P. Def. +10%, 
-			and Stun/Paralysis/MEN Resistance +10%. 
-			Effect remains even after death.
+            level 1: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +5%%, PvP P. Def. +5%%, and Stun/Paralysis/MEN Resistance +5%%. Effect remains even after death.
+            level 2: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +7%%, PvP P. Def. +7%%, and Stun/Paralysis/MEN Resistance +7%%. Effect remains even after death.
+            level 3: Transforms into a Dark Knight. For 20 minutes, Max HP/Max MP +10%%, PvP P. Atk. +10%%, PvP P. Def. +10%%, and Stun/Paralysis/MEN Resistance +10%%. Effect remains even after death.
          -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
-       <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -179,7 +156,7 @@
         <abnormal type="CHANGEBODY" visual="COSTUME_DARK_KNIGHT">
             <level initial="1"/>
             <time initial="1200"/>
-        </abnormal>	
+        </abnormal>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
                 <power initial="10.0"/>
@@ -187,62 +164,54 @@
             <vital-stat-modify mode="PER" stat="MAX_MP">
                 <power initial="10.0"/>
             </vital-stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>
-			<stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
-				<power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-				</power>		
-			</stat-modify>		
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DEFENCE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DEFENCE">
+                <power initial="5">
+                    <value level="2">7</value>
+                    <value level="3">10</value>
+                </power>
+            </stat-modify>
             <defence-trait>
                 <trait type="SHOCK">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
                 <trait type="DERANGEMENT">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
                 <trait type="PARALYZE">
                     <power initial="5">
-						<value level="2">7</value>
-						<value level="3">10</value>
-					</power>
+                        <value level="2">7</value>
+                        <value level="3">10</value>
+                    </power>
                 </trait>
-            </defence-trait>			
-		</effects>
+            </defence-trait>
+        </effects>
     </skill>
     <skill id="39306" name="White Assassin Transformation" action="A2">
-        <!-- Transformed into a White Assassin. For 20 minutes, 
-		Max HP/Max MP +7%, 
-		P. Accuracy/M. Accuracy +2, 
-		P. Atk./M. Atk. +3%, 
-		P. Def./M. Def. +3%,
-		Atk. Spd. +5%, 
-		M. Critical Rate +20, 
-		and Movement Speed +5. 
-		Effect remains even after death. -->
+        <!-- Transformed into a White Assassin. For 20 minutes, Max HP/Max MP +7%%, P. Accuracy/M. Accuracy +2, P. Atk./M. Atk. +3%%, P. Def./M. Def. +3%%, Atk. Spd. +5%%, M. Critical Rate +20, and Movement Speed +5. Effect remains even after death. -->
         <icon initial="icon.scroll_of_verification_i06"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
             <reuse initial="60000"/>
@@ -341,12 +310,10 @@
     <skill id="39309" name="Stabilized Eva's Scroll: Enchant Hair Accessory" action="A1">
         <!-- To Enchant Hair Accessory. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="39310" name="Eva's Enhancement Pack - Hair Accessory" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -356,7 +323,6 @@
         <target/>
     </skill>
     <skill id="39311" name="Eva's Hair Accessory Pack" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1145,7 +1111,6 @@
         <target/>
     </skill>
     <skill id="39359" name="Shining Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1155,7 +1120,6 @@
         <target/>
     </skill>
     <skill id="39360" name="Greater Jewel Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1178,7 +1142,6 @@
         <target/>
     </skill>
     <skill id="39362" name="Angler's Fishing Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1188,7 +1151,6 @@
         <target/>
     </skill>
     <skill id="39363" name="Angler's Silver Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1198,7 +1160,6 @@
         <target/>
     </skill>
     <skill id="39364" name="Angler's Gold Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1210,15 +1171,12 @@
     <skill id="39365" name="Scroll: Enchant Fishing Weapon" action="A1">
         <!-- Can only be used on fishing weapons. The item is not destroyed and will retain the current enchant value even if enchantment fails. -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="39366" name="Improved Scroll: Enchant Fishing Weapon" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="39367" name="Teddy Bear Transformation" action="A1">
@@ -1231,7 +1189,6 @@
         <target/>
     </skill>
     <skill id="39368" name="Weapon Supply Box +15 (A-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
@@ -1295,11 +1252,11 @@
         <icon initial="icon.bm_freya_rune"/>
         <attributes property="MAGIC"/>
         <target/>
-        <effects>		
+        <effects>
             <reduce-drop-penalty>
                 <experience initial="-20"/>
                 <death-penalty initial="-20"/>
             </reduce-drop-penalty>
-        </effects>	
+        </effects>
     </skill>
 </list>

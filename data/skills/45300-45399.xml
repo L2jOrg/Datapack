@@ -3,23 +3,23 @@
     <skill id="45361" name="Glory Ability" action="A2">
         <!-- For 2 hours, CON, MEN +1.\nItem Cost: 5 Spirit Ores -->
         <icon initial="icon.skill1288"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
-			<reuse initial="10000"/>
-            <hit-time initial="1500"/>
-		</attributes>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+            <reuse initial="10000"/>
+            <effect-point initial="1"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="5"/>
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
         <abnormal>
-			<level initial="1"/>
+            <level initial="1"/>
             <time initial="7200"/>
         </abnormal>
-		<effects>
-			<base-stats types="CON MEN">
+        <effects>
+            <base-stats types="CON MEN">
                 <power initial="1"/>
             </base-stats>
-        </effects>		
+        </effects>
     </skill>
 </list>

@@ -24,8 +24,7 @@
     <skill id="19032" name="Ability of Light">
         <!-- Imbued with the Ability of Light. Increases Max CP by 2000. Effects do not apply when in Chaotic state. -->
         <icon initial="icon.skill19008"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <conditions>
             <condition name="NonChaotic" scope="PASSIVE"/>
@@ -33,19 +32,36 @@
         <effects>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="2000.0"/>
-            </vital-stat-modify>            
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="19033" name="Ability of Darkness">
         <!-- Imbued with the Ability of Darkness. Increases Max CP by 1000. -->
         <icon initial="icon.skill19008"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_CP" stat-add="MAX_CP">
                 <power initial="1000.0"/>
-            </vital-stat-modify>         
+            </vital-stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_ATTACK_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_MAGICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PVP_PHYSICAL_SKILL_DAMAGE">
+                <power initial="10.0"/>
+            </stat-modify>
         </effects>
     </skill>
     <skill id="19034" name="Seal of Ruler" action="A1">
@@ -115,8 +131,7 @@
     <skill id="19039" name="Cloak of Light">
         <!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. Not available in a chaotic state. -->
         <icon initial="icon.amor_goodness_cloak"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <conditions>
             <condition name="NonChaotic" scope="PASSIVE"/>
@@ -138,6 +153,27 @@
                 <power initial="5.0"/>
             </stat-modify>
             <defence-trait>
+                <trait type="ANCIENT_SWORD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="RAPIER">
+                    <power initial="3"/>
+                </trait>
+                <trait type="STAFF">
+                    <power initial="3"/>
+                </trait>
+                <trait type="ROD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="HAMMER">
+                    <power initial="3"/>
+                </trait>
+                <trait type="MAGIC_SWORD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="TWO_HAND_SWORD">
+                    <power initial="3"/>
+                </trait>
                 <trait type="BOW">
                     <power initial="3"/>
                 </trait>
@@ -154,9 +190,6 @@
                     <power initial="3"/>
                 </trait>
                 <trait type="BLUNT">
-                    <power initial="3"/>
-                </trait>
-                <trait type="DUAL_DAGGER">
                     <power initial="3"/>
                 </trait>
                 <trait type="SPEAR">
@@ -177,8 +210,7 @@
     <skill id="19040" name="Cloak of Darkness">
         <!-- Max HP/Max MP/Max CP +5%%, P. Def. +3%%, M. Def. +5%%, Weapon Resistance +3, P. Critical Rate/M. Critical Rate +10 and damage reflection +3%%. -->
         <icon initial="icon.amor_evilness_cloak"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_HP">
@@ -197,6 +229,27 @@
                 <power initial="5.0"/>
             </stat-modify>
             <defence-trait>
+                <trait type="ANCIENT_SWORD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="RAPIER">
+                    <power initial="3"/>
+                </trait>
+                <trait type="STAFF">
+                    <power initial="3"/>
+                </trait>
+                <trait type="ROD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="HAMMER">
+                    <power initial="3"/>
+                </trait>
+                <trait type="MAGIC_SWORD">
+                    <power initial="3"/>
+                </trait>
+                <trait type="TWO_HAND_SWORD">
+                    <power initial="3"/>
+                </trait>
                 <trait type="BOW">
                     <power initial="3"/>
                 </trait>
@@ -213,9 +266,6 @@
                     <power initial="3"/>
                 </trait>
                 <trait type="BLUNT">
-                    <power initial="3"/>
-                </trait>
-                <trait type="DUAL_DAGGER">
                     <power initial="3"/>
                 </trait>
                 <trait type="SPEAR">

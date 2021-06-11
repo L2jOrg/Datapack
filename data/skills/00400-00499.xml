@@ -948,8 +948,7 @@
             level 3: Increases Weight limit by 50%.
          -->
         <icon initial="icon.skill0418"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="WEIGHT_LIMIT" stat-add="WEIGHT_LIMIT">
@@ -967,7 +966,7 @@
             level 3: Channels the power of your guardian deity for 1 minute. Debuff Resistance +80%, Buff-canceling Attack Resistance +40%, and Movement Speed +30. P. Accuracy +6, Atk. Spd. +30% when using a sword, blunt weapon, spear, or fist weapon. P. Critical Rate +100 when using a sword or spear. P. Critical Damage +100%, P. Skill MP consumption -50%, and Heal Received -1 minute0 when using a sword, blunt weapon, or fist weapon. Available when HP is at 1 minute1 or below.
          -->
         <icon initial="icon.skill0420"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="ACTIVE">
             <magic-level initial="58">
                 <value level="2">66</value>
                 <value level="3">74</value>
@@ -997,10 +996,10 @@
             <remain-status amount="30" stat="HP"/>
         </conditions>
         <effects>
-			<resist-abnormal-by-category category="DEBUFF">
+            <resist-abnormal-by-category category="DEBUFF">
                 <power initial="80.0"/>
             </resist-abnormal-by-category>
-			<resist-dispel-by-category category="BUFF">
+            <resist-dispel-by-category category="BUFF">
                 <power initial="40.0"/>
             </resist-dispel-by-category>
             <speed>
@@ -1020,7 +1019,7 @@
                 </power>
                 <weapon-type>SWORD BLUNT SPEAR FIST TWO_HAND_SWORD HAMMER</weapon-type>
             </stat-modify>
-			<stat-modify stat="CRITICAL_RATE">
+            <stat-modify stat="CRITICAL_RATE">
                 <power initial="33.0">
                     <value level="2">66.0</value>
                     <value level="3">100.0</value>
@@ -1034,12 +1033,12 @@
                 </power>
                 <weapon-type>SWORD BLUNT FIST TWO_HAND_SWORD HAMMER</weapon-type>
             </stat-modify>
-			<magic-cost type="PHYSIC">
+            <magic-cost type="PHYSIC">
                 <power initial="-50.0"/>
             </magic-cost>
             <stat-modify mode="PER" stat="HEAL_RECEIVE">
                 <power initial="-50.0"/>
-            </stat-modify>            
+            </stat-modify>
         </effects>
     </skill>
     <skill id="421" name="Fell Swoop" max-level="5" action="A2">
@@ -1155,8 +1154,7 @@
             level 13: P. Def. +130, Shield Def. +10% and Bow Attack Resistance +10% when equipped with a heavy armor.
          -->
         <icon initial="icon.skill0429"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -1172,14 +1170,14 @@
                     <value level="10">116.0</value>
                     <value level="11">120.0</value>
                     <value level="12">125.0</value>
-                    <value level="13">130.0</value>					
+                    <value level="13">130.0</value>
                 </power>
             </stat-modify>
             <stat-modify mode="PER" stat="SHIELD_DEFENCE">
                 <power initial="10.0"/>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" stat-add="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="DEFENCE_MAGIC_CRITICAL_DAMAGE" stat-add="DEFENCE_MAGIC_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="2">5.0</value>
                     <value level="3">10.0</value>
@@ -1187,7 +1185,7 @@
                     <value level="5">20.0</value>
                 </power>
                 <armor-type>HEAVY</armor-type>
-            </stat-modify>		
+            </stat-modify>
             <defence-trait>
                 <trait type="BOW">
                     <power initial="10.0"/>
@@ -1204,8 +1202,7 @@
             level 5: Max CP +10% and Max HP +5%. Received P. Critical Damage/M. Critical Damage -20% when equipped with a heavy armor.
          -->
         <icon initial="icon.skill0430"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_CP">
@@ -1223,7 +1220,7 @@
                     <value level="5">5.0</value>
                 </power>
             </vital-stat-modify>
-			<stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
+            <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE" stat-add="DEFENCE_CRITICAL_DAMAGE_ADD">
                 <power>
                     <value level="2">5.0</value>
                     <value level="3">10.0</value>
@@ -1235,7 +1232,6 @@
         </effects>
     </skill>
     <skill id="437" name="Song of Silence" max-level="3" debuff="true" action="A2">
-		<!-- Correct MP consumption -->
         <!-- Sings a Song of Silence. Blocks all the enemies' P. Skill/M. Skill for 10 seconds. -->
         <icon initial="icon.skill0437"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
@@ -1477,15 +1473,15 @@
                 <value level="8">18</value>
                 <value level="9">19</value>
             </mana-init>
-            <mana initial="58">
-                <value level="2">62</value>
-                <value level="3">65</value>
-                <value level="4">69</value>
-                <value level="5">73</value>
-                <value level="6">77</value>
-                <value level="7">81</value>
-                <value level="8">85</value>
-                <value level="9">89</value>
+            <mana initial="46">
+                <value level="2">49</value>
+                <value level="3">52</value>
+                <value level="4">55</value>
+                <value level="5">58</value>
+                <value level="6">61</value>
+                <value level="7">64</value>
+                <value level="8">67</value>
+                <value level="9">70</value>
             </mana>
             <item initial="3031"/>
             <item-count initial="4">
@@ -1631,8 +1627,7 @@
             level 5: Increases P. Atk. by 200 and additionally by 100.
          -->
         <icon initial="icon.skill0816"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -1655,15 +1650,14 @@
     </skill>
     <skill id="464" name="Armor Mastery" max-level="5">
         <!--
-            level 1: P. Def. +20 and M. Def. +20 +10
-            level 2: P. Def. +40 and M. Def. +20
-            level 3: P. Def. +60 and M. Def. +40
-            level 4: P. Def. +120 and M. Def. +60
-            level 5: P. Def. +200 and M. Def. +100
+            level 1: P. Def. +20 and MP Recovery Bonus +10
+            level 2: P. Def. +40 and MP Recovery Bonus +20
+            level 3: P. Def. +60 and MP Recovery Bonus +40
+            level 4: P. Def. +120 and MP Recovery Bonus +60
+            level 5: P. Def. +200 and MP Recovery Bonus +100
          -->
         <icon initial="icon.skill10097"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -1674,7 +1668,7 @@
                     <value level="5">200.0</value>
                 </power>
             </stat-modify>
-            <stat-modify stat="MAGICAL_DEFENCE">
+            <stat-modify stat="REGENERATE_MP_RATE">
                 <power initial="10.0">
                     <value level="2">20.0</value>
                     <value level="3">40.0</value>
@@ -1698,8 +1692,7 @@
             level 10: P. Def. +150, P. Evasion +5, P. Critical Attack Receival Rate and P. Critical Damage -25% when equipped with a light armor.
          -->
         <icon initial="icon.skill0465"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">

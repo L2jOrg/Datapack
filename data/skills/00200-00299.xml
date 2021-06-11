@@ -63,16 +63,15 @@
 		level 59: P. Atk. +210 when using a sword or blunt weapon. Additional +165 when using a sword and +180 when using a blunt weapon. Increases mastery when using a sword or blunt weapon, making it possible to use skills more proficiently.
 	 -->
         <icon initial="icon.skill0217"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
-			<trigger-skill-by-attack skill="5604" start-level="9">
-				<power initial="1.0"/>
+            <trigger-skill-by-attack skill="5604" start-level="9">
+                <power initial="1.0"/>
                 <chance initial="50"/>
                 <min-damage initial="1.0"/>
-				<weapons>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapons>
-            </trigger-skill-by-attack>		
+                <weapons>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapons>
+            </trigger-skill-by-attack>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="6">
                     <value level="2">9</value>
@@ -334,8 +333,7 @@
 		level 66: Increases P. Atk. by 915 when using a bow.
 	 -->
         <icon initial="icon.skill0208"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -473,8 +471,7 @@
 		level 59: Increases P. Atk. by 160 when using a dagger.
 	 -->
         <icon initial="icon.skill0209"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -605,8 +602,7 @@
 		level 59: P. Atk. +200 when using a fist weapon. Target's Movement Speed -20% at a certain chance when dealing physical attacks.
 	 -->
         <icon initial="icon.skill0210"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -694,8 +690,7 @@
 		level 10: Increases Max HP by 480.
 	 -->
         <icon initial="icon.skill0211"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_HP" stat-add="MAX_HP">
@@ -725,8 +720,7 @@
 		level 8: Increases HP Recovery Bonus by 4.
 	 -->
         <icon initial="icon.skill0212"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
@@ -754,8 +748,7 @@
 		level 8: Increases Max MP by 200.
 	 -->
         <icon initial="icon.skill0213"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <vital-stat-modify stat="MAX_MP" stat-add="MAX_MP">
@@ -774,8 +767,7 @@
     <skill id="214" name="Mana Recovery">
         <!-- Increases MP Recovery Bonus when equipped with a robe upper armor and pants. -->
         <icon initial="icon.skill0214"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
@@ -847,8 +839,7 @@
 		level 59: Increases P. Atk. by 200 when using a polearm, and allows an attack on multiple targets.
 	 -->
         <icon initial="icon.skill0216"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -920,7 +911,7 @@
                     <value level="28">16.0</value>
                     <value level="42">20.0</value>
                 </power>
-				<weapon-type>SPEAR</weapon-type>
+                <weapon-type>SPEAR</weapon-type>
             </stat-modify>
         </effects>
     </skill>
@@ -987,8 +978,7 @@
 		level 59: Increases P. Atk. by 340 when using a sword or blunt weapon.
 	 -->
         <icon initial="icon.skill0217"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -1057,14 +1047,13 @@
         </effects>
     </skill>
     <skill id="221" name="Silent Move" action="T">
-        <!-- Disables preemptive attacks from enemies. Decreases Speed by 20%% and continuously consumes MP. -->
+        <!-- Disables preemptive attacks from enemies. Decreases Speed by 40%% and continuously consumes MP. -->
         <icon initial="icon.skill0221"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="40"/>
         </attributes>
         <consume>
             <mana-init initial="7"/>
-            <mana initial="7"/>
         </consume>
         <target type="NONE"/>
         <abnormal type="STEALTH" visual="STEALTH">
@@ -1076,7 +1065,7 @@
             </effect>
             <effect name="SilentMove"/>
             <speed mode="PER">
-                <power initial="-20.0"/>
+                <power initial="-40.0"/>
             </speed>
         </effects>
     </skill>
@@ -1093,7 +1082,6 @@
         </attributes>
         <consume>
             <mana-init initial="8"/>
-            <mana initial="8"/>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -1422,8 +1410,7 @@
 		level 3: P. Evasion +6 while running.
 	 -->
         <icon initial="icon.skill0225"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-by-move-type stat="EVASION_RATE" type="RUNNING">
@@ -1442,7 +1429,6 @@
         </attributes>
         <consume>
             <mana-init initial="2"/>
-            <mana initial="2"/>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -1522,8 +1508,7 @@
 		level 64: Defense +130 and P. Evasion _10 when equipped with a light armor.
 	 -->
         <icon initial="icon.skill0227"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -1614,8 +1599,7 @@
 		level 3: Casting Spd. +10%
 	 -->
         <icon initial="icon.skill0228"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
@@ -1637,8 +1621,7 @@
 		level 7: Increases MP Recovery Bonus by 3.4.
 	 -->
         <icon initial="icon.skill0229"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="REGENERATE_MP_RATE" stat-add="REGENERATE_MP_RATE">
@@ -1673,8 +1656,8 @@
             <mana-init initial="3">
                 <value level="2">5</value>
             </mana-init>
-            <mana initial="14">
-                <value level="2">24</value>
+            <mana initial="11">
+                <value level="2">19</value>
             </mana>
         </consume>
         <target/>
@@ -1760,8 +1743,7 @@
 		level 64: P. Def. +130 when equipped with a heavy armor.
 	 -->
         <icon initial="icon.skill0231"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -1904,8 +1886,7 @@
 		level 66: P. Def. +225 and Received P. Critical Damage -35% when equipped with a heavy armor. Has a chance to increase P. Atk. And Atk. Spd. when hit.
 	 -->
         <icon initial="icon.skill0232"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -1985,16 +1966,16 @@
                 </power>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
-			<trigger-skill-by-damage skill="53007">
+            <trigger-skill-by-damage skill="53007">
                 <power initial="1.0">
-					<value level="16">2.0</value>
+                    <value level="16">2.0</value>
                     <value level="37">3.0</value>
                 </power>
                 <chance initial="80.0">
-					<value level="2">90.0</value>
+                    <value level="2">90.0</value>
                     <value level="3">100.0</value>
-				</chance>
-            </trigger-skill-by-damage>	
+                </chance>
+            </trigger-skill-by-damage>
         </effects>
     </skill>
     <skill id="233" name="Light Armor Mastery" max-level="61">
@@ -2062,8 +2043,7 @@
 		level 61: Defense +120 and P. Evasion +15 when equipped with a light armor and P. Critical Attack Receival Rate -35%.
 	 -->
         <icon initial="icon.skill0233"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE">
@@ -2209,8 +2189,7 @@
 		level 55: P. Def. +100 and Max HP +350 when equipped with a robe.
 	 -->
         <icon initial="icon.skill0234"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -2388,8 +2367,7 @@
 		level 55: P. Def. +135 when equipped with a robe.
 	 -->
         <icon initial="icon.skill0235"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -2512,8 +2490,7 @@
 		level 55: P. Def. +115, Casting Spd. +95%, Atk. Spd. +25%, and MP Recovery Bonus +20% when equipped with a light armor.
 	 -->
         <icon initial="icon.skill0236"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -2601,8 +2578,7 @@
 		level 3: Increases P. Def. by 9.2.
 	 -->
         <icon initial="icon.skill0244"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -2769,8 +2745,7 @@
 		level 6: Makes R-grade Crystallization possible.
 	 -->
         <icon initial="icon.skill0248"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
     </skill>
     <skill id="249" name="Weapon Mastery" max-level="56">
@@ -2833,8 +2808,7 @@
 		level 56: Increases P. Atk. by 150 and M. Atk. by 200. When a Bow/Spear is equipped Casting Spd is decreased.
 	 -->
         <icon initial="icon.skill0249"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -3021,8 +2995,7 @@
 		level 56: P. Atk. +150, M. Atk. +200. Has a chance to absorb 10%% of physical damage dealt to enemies as MP. When a Bow/Spear is equipped Casting Spd is decreased.
 	 -->
         <icon initial="icon.skill0250"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -3215,8 +3188,7 @@
 		level 59: P. Def. +180 when equipped with a robe.
 	 -->
         <icon initial="icon.skill0251"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -3347,8 +3319,7 @@
 		level 59: P. Def. +165, Casting Spd. +95%, Atk. Spd. +25%, and MP Recovery Bonus +20% when equipped with a light armor.
 	 -->
         <icon initial="icon.skill0252"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -3489,8 +3460,7 @@
 		level 57: P. Def. +135, Casting Spd. +75%, and Atk. Spd. +25% when equipped with a heavy armor.
 	 -->
         <icon initial="icon.skill0253"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -3743,7 +3713,6 @@
         </attributes>
         <consume>
             <mana-init initial="5"/>
-            <mana initial="5"/>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -3818,8 +3787,7 @@
 		level 59: Increases P. Atk. by 190 when using a sword or blunt weapon.
 	 -->
         <icon initial="icon.skill0257"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -3881,7 +3849,7 @@
                     <value level="56">176.0</value>
                     <value level="57">180.0</value>
                     <value level="58">185.0</value>
-                    <value level="59">190.0</value>					
+                    <value level="59">190.0</value>
                 </power>
                 <weapon-type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</weapon-type>
             </stat-modify>
@@ -3938,8 +3906,7 @@
 		level 47: P. Def. +85, Casting Spd. +90%, Atk. Spd. +25%, and MP Recovery Bonus +20% when equipped with a light armor.
 	 -->
         <icon initial="icon.skill0258"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -3985,11 +3952,11 @@
                     <value level="40">61.0</value>
                     <value level="41">63.0</value>
                     <value level="42">65.0</value>
-					<value level="43">68.0</value>
-					<value level="44">71.0</value>
-					<value level="45">74.0</value>
-					<value level="46">76.0</value>
-					<value level="47">85.0</value>
+                    <value level="43">68.0</value>
+                    <value level="44">71.0</value>
+                    <value level="45">74.0</value>
+                    <value level="46">76.0</value>
+                    <value level="47">85.0</value>
                 </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
@@ -3999,9 +3966,9 @@
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="88.0">
-					<value level="44">89.0</value>
+                    <value level="44">89.0</value>
                     <value level="46">90.0</value>
-				</power>
+                </power>
                 <armor-type>LIGHT</armor-type>
             </stat-modify>
             <stat-modify mode="PER" stat="REGENERATE_MP_RATE">
@@ -4061,8 +4028,7 @@
 		level 47: P. Def. +110, Casting Spd. +70%, and Atk. Spd. +25% when equipped with a heavy armor.
 	 -->
         <icon initial="icon.skill0259"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -4122,9 +4088,9 @@
             </stat-modify>
             <stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
                 <power initial="68.0">
-					<value level="45">69.0</value>
+                    <value level="45">69.0</value>
                     <value level="47">70.0</value>
-				</power>	
+                </power>
                 <armor-type>HEAVY</armor-type>
             </stat-modify>
         </effects>
@@ -4527,7 +4493,7 @@
         <target type="ENEMY"/>
         <conditions>
             <weapon>
-                <type>DUAL</type>
+                <type>SWORD TWO_HAND_SWORD BLUNT HAMMER DUAL</type>
             </weapon>
         </conditions>
         <effects>
@@ -4717,40 +4683,40 @@
                 <value level="35">47</value>
                 <value level="36">48</value>
             </mana-init>
-            <mana initial="115">
-                <value level="2">119</value>
-                <value level="3">122</value>
-                <value level="5">127</value>
-                <value level="6">130</value>
-                <value level="7">134</value>
-                <value level="8">139</value>
-                <value level="9">143</value>
-                <value level="10">148</value>
-                <value level="11">152</value>
-                <value level="12">157</value>
-                <value level="13">159</value>
-                <value level="15">164</value>
-                <value level="16">168</value>
-                <value level="17">173</value>
-                <value level="18">177</value>
-                <value level="19">180</value>
-                <value level="20">185</value>
-                <value level="21">189</value>
-                <value level="22">193</value>
-                <value level="23">195</value>
-                <value level="25">199</value>
-                <value level="26">203</value>
-                <value level="27">207</value>
-                <value level="28">210</value>
-                <value level="29">214</value>
-                <value level="30">218</value>
-                <value level="31">222</value>
-                <value level="32">224</value>
-                <value level="33">228</value>
-                <value level="34">230</value>
-                <value level="35">233</value>
-                <value level="36">237</value>
-                <value level="37">239</value>
+            <mana initial="92">
+                <value level="2">95</value>
+                <value level="3">97</value>
+                <value level="5">101</value>
+                <value level="6">104</value>
+                <value level="7">107</value>
+                <value level="8">111</value>
+                <value level="9">114</value>
+                <value level="10">118</value>
+                <value level="11">121</value>
+                <value level="12">125</value>
+                <value level="13">127</value>
+                <value level="15">131</value>
+                <value level="16">134</value>
+                <value level="17">138</value>
+                <value level="18">141</value>
+                <value level="19">144</value>
+                <value level="20">148</value>
+                <value level="21">151</value>
+                <value level="22">154</value>
+                <value level="23">156</value>
+                <value level="25">159</value>
+                <value level="26">162</value>
+                <value level="27">165</value>
+                <value level="28">168</value>
+                <value level="29">171</value>
+                <value level="30">174</value>
+                <value level="31">177</value>
+                <value level="32">179</value>
+                <value level="33">182</value>
+                <value level="34">184</value>
+                <value level="35">186</value>
+                <value level="36">189</value>
+                <value level="37">191</value>
             </mana>
         </consume>
         <target type="TARGET"/>
@@ -5550,7 +5516,6 @@
         </effects>
     </skill>
     <skill id="278" name="Summon Viper Cubic" max-level="12" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Viper Cubic. Viper Cubic uses magic that poisons a targeted enemy. Consumes 2 Spirit Ore when summoned.
 		level 2: Summons a Viper Cubic. Viper Cubic uses magic that poisons a targeted enemy. Consumes 3 Spirit Ore when summoned.
@@ -5959,7 +5924,7 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="281" name="Crushing Fist" max-level="45" debuff="true" action="A2">
+    <skill id="281" name="Fist Breaker" max-level="45" debuff="true" action="A2">
         <!--
 		level 1: Hurls an iron-fist to attack the target with bonus 487 Power, and stuns the target for 7 seconds. Requires a fist weapon. Ignores Shield Defense. Over-hit.
 		level 2: Hurls an iron-fist to attack the target with bonus 518 Power, and stuns the target for 7 seconds. Requires a fist weapon. Ignores Shield Defense. Over-hit.
@@ -6260,7 +6225,6 @@
         </effects>
     </skill>
     <skill id="283" name="Summon Dark Panther" max-level="11" action="A1" type="MAGIC">
-		<!-- Correct MP consumption -->
         <!--
 		level 1: Summons a Dark Panther that attacks with agility. Requires 1 C-grade Crystals.
 		level 2: Summons a Dark Panther that attacks with agility. Requires 2 C-grade Crystals.
@@ -6340,8 +6304,7 @@
                     <value level="10">14808.0</value>
                     <value level="11">14809.0</value>
                 </npc>
-                <consume-count initial="1.0">                   
-                </consume-count>
+                <consume-count initial="1.0"/>
             </summon>
         </effects>
     </skill>
@@ -6613,8 +6576,7 @@
     <skill id="285" name="Higher Mana Gain" max-level="35">
         <!-- Increases the recovery rate when MP is being recovered by recharge. -->
         <icon initial="icon.skill0285"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="MANA_CHARGE" stat-add="MANA_CHARGE">
@@ -6766,7 +6728,7 @@
                         <value level="11">-20</value>
                     </power>
                 </trait>
-				<trait type="TWO_HAND_SWORD">
+                <trait type="TWO_HAND_SWORD">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6780,7 +6742,7 @@
                         <value level="11">-20</value>
                     </power>
                 </trait>
-				<trait type="MAGIC_SWORD">
+                <trait type="MAGIC_SWORD">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6794,7 +6756,7 @@
                         <value level="11">-20</value>
                     </power>
                 </trait>
-				<trait type="HAMMER">
+                <trait type="HAMMER">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6808,7 +6770,7 @@
                         <value level="11">-20</value>
                     </power>
                 </trait>
-				<trait type="ROD">
+                <trait type="ROD">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6822,7 +6784,7 @@
                         <value level="11">-20</value>
                     </power>
                 </trait>
-				<trait type="STAFF">
+                <trait type="STAFF">
                     <power initial="-10">
                         <value level="2">-11</value>
                         <value level="3">-12</value>
@@ -6834,7 +6796,7 @@
                         <value level="9">-18</value>
                         <value level="10">-19</value>
                         <value level="11">-20</value>
-                    </power>				
+                    </power>
                 </trait>
             </defence-trait>
         </effects>
@@ -6931,12 +6893,6 @@
                 <value level="4">13</value>
                 <value level="5">14</value>
             </mana-init>
-            <mana initial="8">
-                <value level="2">10</value>
-                <value level="3">12</value>
-                <value level="4">13</value>
-                <value level="5">14</value>
-            </mana>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -7094,12 +7050,11 @@
 		level 14: P. Atk. +129.3 when HP is at 30% or below.
 	 -->
         <icon initial="icon.skill0290"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
-		<conditions>
-			<remain-status amount="30" stat="HP"/>
-		</conditions>
+        <conditions>
+            <remain-status amount="30" stat="HP"/>
+        </conditions>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
                 <power initial="32.9">
@@ -7150,12 +7105,11 @@
 		level 26: P. Def. +360 when HP is at 30% or below.
 	 -->
         <icon initial="icon.skill0291"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
-		<conditions>
-			<remain-status amount="30" stat="HP"/>
-		</conditions>		
+        <conditions>
+            <remain-status amount="30" stat="HP"/>
+        </conditions>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
                 <power initial="116.875">
@@ -7179,11 +7133,11 @@
                     <value level="19">292.75</value>
                     <value level="20">302.375</value>
                     <value level="21">312.0</value>
-					<value level="22">322.0</value>
-					<value level="23">331.0</value>
-					<value level="24">340.0</value>
-					<value level="25">350.0</value>
-					<value level="26">360.0</value>
+                    <value level="22">322.0</value>
+                    <value level="23">331.0</value>
+                    <value level="24">340.0</value>
+                    <value level="25">350.0</value>
+                    <value level="26">360.0</value>
                 </power>
             </stat-modify>
         </effects>
@@ -7266,7 +7220,7 @@
             <stat-hp-based hp-percent="30" mode="PER" stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="10"/>
                 <weapon-type>FIST</weapon-type>
-            </stat-hp-based>			
+            </stat-hp-based>
             <stat-hp-based hp-percent="30" stat="CRITICAL_RATE">
                 <power initial="200"/>
                 <weapon-type>FIST</weapon-type>
@@ -7311,8 +7265,7 @@
 		level 34: P. Atk. +200 and P. Accuracy +5 when using a two-handed sword or a two-handed blunt weapon.
 	 -->
         <icon initial="icon.skill0293"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -7355,8 +7308,8 @@
             </stat-modify>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
                 <power initial="3.0">
-					<value level="30">4.0</value>
-					<value level="33">5.0</value>
+                    <value level="30">4.0</value>
+                    <value level="33">5.0</value>
                 </power>
                 <weapon-type>TWO_HAND_SWORD HAMMER STAFF</weapon-type>
             </stat-modify>
@@ -7365,8 +7318,7 @@
     <skill id="294" name="Shadow Sense">
         <!-- P. Accuracy +3 at night. -->
         <icon initial="icon.skill0294"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="HIT_AT_NIGHT" stat-add="HIT_AT_NIGHT">
@@ -7377,8 +7329,7 @@
     <skill id="295" name="Iron Body">
         <!-- Environment-related damage is decreased by 40%%. -->
         <icon initial="icon.skill0295"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0">
-        </attributes>
+        <attributes property="MAGIC" magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify stat="DAMAGE_ZONE_VULN" stat-add="DAMAGE_ZONE_VULN">
@@ -7394,7 +7345,6 @@
         </attributes>
         <consume>
             <mana-init initial="9"/>
-            <mana initial="9"/>
         </consume>
         <target type="NONE"/>
         <effects>
@@ -7440,7 +7390,7 @@
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
                 <power initial="8.0">
                     <value level="2">12.0</value>
-					<value level="3">15.0</value>
+                    <value level="3">15.0</value>
                 </power>
                 <weapon-type>DUAL</weapon-type>
             </stat-modify>
@@ -7495,8 +7445,7 @@
             <hit-time initial="15000"/>
         </attributes>
         <consume>
-            <mana-init initial="150"/>
-            <mana initial="380"/>
+            <mana-init initial="530"/>
             <item initial="1460"/>
             <item-count initial="70"/>
         </consume>
