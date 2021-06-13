@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="distance" type="FishingDistance"/>
+				<xs:element name="experience" type="ValueRangeRate"/>
+				<xs:element name="skill-points-rate" type="ValueRangeRate"/>
+				<xs:element name="bait" type="Bait" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="FishingDistance">
+		<xs:attribute name="min" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="max" type="xs:positiveInteger" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="ValueRangeRate">
+		<xs:attribute name="min" type="xs:double" use="required" />
+		<xs:attribute name="max" type="xs:double" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Bait">
+		<xs:sequence>
+			<xs:element name="catch" type="ChancedItem" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="level" type="xs:positiveInteger" default="1"/>
+		<xs:attribute name="min-player-level" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="chance" type="xs:double" use="required" />
+		<xs:attribute name="min-time" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="max-time" type="xs:positiveInteger"/>
+		<xs:attribute name="min-wait" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="max-wait" type="xs:positiveInteger"/>
+	</xs:complexType>
+
+</xs:schema>
