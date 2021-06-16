@@ -22,7 +22,11 @@
 	<item id="70303" name="Monkey Bait" type="LURE">
 	<!-- Fishing Time: 20 seconds\nFishing Standby Time: 10 seconds\n\nFish bait bought from Chef Monkey. Fish using this bait to catch Tuna.  -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<item id="70304" name="Tuna" type="NONE">

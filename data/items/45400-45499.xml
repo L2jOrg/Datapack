@@ -46,7 +46,11 @@
 	<item id="45495" name="Normal Bait" type="LURE">
 	<!-- Bait for fishing. Use to catch fish.  -->
 		<restriction stackable="true" sellable="false"/>
-		<attributes price="7" immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes price="7"/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 </list>

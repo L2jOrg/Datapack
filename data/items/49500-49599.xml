@@ -73,7 +73,11 @@
 	<item id="49508" name="Normal Bait" type="LURE">
 	<!-- Fishing bait enables to fish.   -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER">
@@ -717,7 +721,11 @@
 	<item id="49589" name="Golden Bait" type="LURE">
 	<!-- Fishing Bait. Can be used for fishing Whales.  -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<item id="49590" name="Rare Accessory Lv. 3 Box" type="NONE">
