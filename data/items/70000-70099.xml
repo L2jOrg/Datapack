@@ -408,7 +408,11 @@
 	<item id="70046" name="High Quality Bait" type="LURE">
 	<!-- Intended for VIP, used in fishing. Increases the chance to get Golden Treasure Chest. Cannot be sold to NPC. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes price="7" immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes price="7"/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<item id="70047" name="Instant Acceleration Potion" type="POTION">
