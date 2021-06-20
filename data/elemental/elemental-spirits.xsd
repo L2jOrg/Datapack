@@ -17,13 +17,13 @@
         <xs:sequence>
             <xs:element name="level" type="LevelData" maxOccurs="unbounded"/>
             <xs:element name="evolve-item" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="absorb-item" type="AbsorbItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="absorb-item" type="SpiritItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="extract-item" type="SpiritItemInfo" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="name" type="xs:string" use="required"/>
         <xs:attribute name="type" type="xs:byte" use="required"/>
         <xs:attribute name="stage" type="xs:byte" use="required"/>
         <xs:attribute name="npc" type="xs:int" use="required"/>
-        <xs:attribute name="extract-item" type="xs:int" use="required"/>
         <xs:attribute name="max-characteristics" type="xs:int" use="required"/>
     </xs:complexType>
 
@@ -36,7 +36,7 @@
         <xs:attribute name="max-exp" type="xs:long" use="required"/>
     </xs:complexType>
 
-    <xs:complexType name="AbsorbItemInfo">
+    <xs:complexType name="SpiritItemInfo">
         <xs:attribute name="id" type="xs:int" use="required"/>
         <xs:attribute name="experience" type="xs:int" use="required"/>
     </xs:complexType>
