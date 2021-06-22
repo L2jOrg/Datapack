@@ -1,18 +1,18 @@
-# L2jOrg Open Source Project
+# L2jOrg Datapack
 
-Discord: https://discord.gg/RbPgE5V
+<a href="https://discord.gg/RbPgE5V">
+<img src="https://img.shields.io/discord/691934366980505611?logo=discord" alt="chat on Discord"></a>
+
+This project is the datapack side of L2jOrg emulator
+https://github.com/L2jOrg/L2jOrg
 
 ## How to contribute
 Please read the full WIKI PAGE: 
 https://github.com/L2jOrg/Datapack/wiki
 
 
-## Bugs fixs
+## Bugs fixes
 * You can post issues here: https://github.com/L2jOrg/Datapack/issues
-
-## Releases
-
-We will do a new release of the pack every month! To download the last server release download it here: https://github.com/JoeAlisson/L2jOrg/releases
 
 ## Support the project
 
