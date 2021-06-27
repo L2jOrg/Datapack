@@ -294,14 +294,22 @@
             <xs:element name="item" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="time" type="xs:int" use="required"/>
-        <xs:attribute name="time-extension" type="xs:int" use="required"/>
+        <xs:attribute name="recharge-time" type="xs:int" use="required"/>
         <xs:attribute name="allow-pvp" default="true"/>
         <xs:attribute name="min-level" default="1"/>
         <xs:attribute name="max-level" default="999"/>
         <xs:attribute name="user-bound" type="xs:boolean" default="false"/>
         <xs:attribute name="vip-only" type="xs:boolean" default="false"/>
         <xs:attribute name="world-in-zone" type="xs:boolean" default="false"/>
+        <xs:attribute name="reset-cycle" type="TimedZoneResetCycle" default="DAILY"/>
     </xs:complexType>
+
+    <xs:simpleType name="TimedZoneResetCycle">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="WEEKLY"/>
+            <xs:enumeration value="DAILY"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:complexType name="Zone">
         <xs:complexContent>
