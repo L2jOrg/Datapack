@@ -284,10 +284,15 @@
         <xs:attribute name="types" type="WeaponTypeList"/>
     </xs:complexType>
 
+    <xs:complexType name="RestrictTimeRechargeConditionType">
+        <xs:attribute name="zone" type="xs:int" use="required"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemUseCondition">
         <xs:choice maxOccurs="unbounded" minOccurs="0">
             <xs:element name="player" type="PlayerConditionType"/>
             <xs:element name="weapon" type="WeaponConditionType"/>
+            <xs:element name="restrict-time-recharge" type="RestrictTimeRechargeConditionType"/>
         </xs:choice>
         <xs:attribute name="msg-id" type="xs:short" />
         <xs:attribute name="add-name" type="xs:boolean" />
