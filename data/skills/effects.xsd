@@ -7,20 +7,20 @@
     <xs:include schemaLocation="../xsd/common.xsd"/>
 
     <xs:element name="abstractEffect" type="Effect" abstract="true"/>
-    <xs:element name="effect" type="NamedEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="physical-attack" type="PhysicalAttackEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="randomize-hate" type="RandomizeHateEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="stat-modify" type="StatModifyEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="stat-hp-based" type="StatHpBasedEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="stat-position-based" type="StatPositionBasedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-costume" type="AcquireCostumeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-random-costume" type="AcquireRandomCostumeEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="acquire-xp-sp" type="AcquireXpAndSpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="attack-trait" type="AttackTraitEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="backstab" type="BackstabEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="base-stat" type="StatEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="base-stats" type="BaseStatsEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="block-abnormal" type="BlockAbnormalEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="block-action" type="BlockActionEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="block-all-actions" type="BlockAllActionsEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="block-skill" type="BlockSkillEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="call-pc" type="CallPcEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="call-skill" type="CallSkillEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="clan-system-message" type="ClanSystemMessageEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="cp" type="CpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="damage-block" type="DamageBlockEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="damage-by-attack" type="DamageByAttackEffect" substitutionGroup="abstractEffect"/>
@@ -30,12 +30,12 @@
     <xs:element name="dispel" type="DispelEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="dispel-myself" type="DispelMyselfEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="dispel-probability" type="DispelProbabilityEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="effect" type="NamedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="energy-attack" type="EnergyAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="enlarge-slot" type="EnlargeSlotEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="escape" type="EscapeEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="fatal-blow" type="FatalBlowEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="feed" type="FeedEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="acquire-xp-sp" type="AcquireXpAndSpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="headquarter" type="HeadquarterEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="hp" type="HpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="hp-drain" type="HpDrainEffect" substitutionGroup="abstractEffect"/>
@@ -46,12 +46,13 @@
     <xs:element name="magical-attack-mp" type="MagicalAttackMpEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="magical-attack-range" type="MagicalAttackRangeEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="magic-cost" type="MagicCostEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="vital-stat-modify" type="VitalStatModifyEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="vital-modify" type="VitalModifyEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="mp" type="MpEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="physical-attack" type="PhysicalAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="physical-attack-hp-link" type="PhysicalAttackHpLinkEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="physical-soul-attack" type="PhysicalSoulAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="pull-back" type="PullBackEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="obtain-soul" type="ObtainSoulEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="randomize-hate" type="RandomizeHateEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="reduce-drop-penalty" type="ReduceDropPenaltyEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="resist-abnormal-by-category" type="ResistAbnormalByCategoryEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="resist-dispel-by-category" type="ResistDispelByCategoryEffect" substitutionGroup="abstractEffect"/>
@@ -59,7 +60,9 @@
     <xs:element name="random-restoration" type="RandomRestorationEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="reuse" type="ReuseEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="reuse-skill" type="ReuseSkillEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="clan-system-message" type="ClanSystemMessageEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-modify" type="StatModifyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-hp-based" type="StatHpBasedEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stat-position-based" type="StatPositionBasedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="servitor-share" type="ServitorShareEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="skill-critical" type="SkillCriticalEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="skill-evasion" type="SkillEvasionEffect" substitutionGroup="abstractEffect"/>
@@ -67,7 +70,7 @@
     <xs:element name="soul-eating" type="SoulEatingEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="speed" type="SpeedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="stat-by-move-type" type="StatByMoveType" substitutionGroup="abstractEffect"/>
-    <xs:element name="base-stat" type="StatEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="stats-linked" type="StatsLinkedEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="steal-abnormal" type="StealAbnormalEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon" type="SummonEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon-agathion" type="SummonAgathionEffect" substitutionGroup="abstractEffect"/>
@@ -75,6 +78,7 @@
     <xs:element name="summon-npc" type="SummonNpcEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="take-castle" type="TakeCastleEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="teleport" type="TeleportEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="time-restrict-zone-recharge" type="TimeRestrictZoneRecharge" substitutionGroup="abstractEffect"/>
     <xs:element name="transformation" type="TransformationEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-attack" type="TriggerSkillByAttackEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="trigger-skill-by-attacking" type="TriggerSkillByAttackingEffect" substitutionGroup="abstractEffect"/>
@@ -86,13 +90,9 @@
     <xs:element name="trigger-skill-by-skill" type="TriggerSkillBySkillEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="two-hand-blunt-bonus" type="TwoHandBluntBonusEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="two-hand-sword-bonus" type="TwoHandSwordBonusEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="vital-stat-modify" type="VitalStatModifyEffect" substitutionGroup="abstractEffect"/>
+    <xs:element name="vital-modify" type="VitalModifyEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="vampiric-attack" type="VampiricAttackEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="obtain-soul" type="ObtainSoulEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="stats-linked" type="StatsLinkedEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="base-stats" type="BaseStatsEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="acquire-costume" type="AcquireCostumeEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="acquire-random-costume" type="AcquireRandomCostumeEffect" substitutionGroup="abstractEffect"/>
-
 
     <xs:complexType name="AcquireRandomCostumeEffect">
         <xs:complexContent>
@@ -287,6 +287,14 @@
                     <xs:element name="location" type="LeveledLocation" maxOccurs="unbounded" minOccurs="0"/>
                 </xs:sequence>
                 <xs:attribute name="use-request" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TimeRestrictZoneRecharge">
+        <xs:complexContent>
+            <xs:extension base="Effect">
+                <xs:attribute name="zone" type="xs:int" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -1015,4 +1023,5 @@
             <xs:enumeration value="PHYSICAL_ATTACK_960"/>
         </xs:restriction>
     </xs:simpleType>
+
 </xs:schema>
