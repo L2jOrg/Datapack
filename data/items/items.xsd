@@ -86,6 +86,7 @@
                         <xs:element name="extract" type="ItemExtract"/>
                         <xs:element name="skill-reducer" type="SkillReducer"/>
                         <xs:element name="transformation-book" type="TransformationBook"/>
+                        <xs:element name="equip" type="EquipAction"/>
                     </xs:choice>
                 </xs:sequence>
                 <xs:attribute name="type" type="EtcItemType" use="required"/>
@@ -174,6 +175,10 @@
         <xs:attribute name="max" type="xs:int" default="-1"/>
     </xs:complexType>
 
+    <xs:complexType name="EquipAction">
+        <xs:attribute name="body-part" type="BodyPart" use="required"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemAction">
         <xs:attribute name="handler">
             <xs:simpleType>
@@ -248,7 +253,7 @@
         <xs:attribute name="chance" type="xs:double"/>
     </xs:complexType>
 
-    <xs:complexType name="playerType">
+    <xs:complexType name="PlayerConditionType">
         <xs:attribute name="castle">
             <xs:simpleType>
                 <xs:restriction base="xs:int">
@@ -260,14 +265,7 @@
         <xs:attribute name="hero" type="xs:boolean"/>
         <xs:attribute name="zone" type="xs:normalizedString"/>
         <xs:attribute name="level-min" type="xs:positiveInteger"/>
-        <xs:attribute name="pledge-class">
-            <xs:simpleType>
-                <xs:restriction base="xs:int">
-                    <xs:minInclusive value="-1"/>
-                    <xs:maxInclusive value="11"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:attribute>
+        <xs:attribute name="social-status" type="SocialStatus"/>
         <xs:attribute name="level-max" type="xs:positiveInteger"/>
         <xs:attribute name="sex">
             <xs:simpleType>
@@ -282,9 +280,14 @@
         <xs:attribute name="races" type="RaceList"/>
     </xs:complexType>
 
+    <xs:complexType name="WeaponConditionType">
+        <xs:attribute name="types" type="WeaponTypeList"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemUseCondition">
         <xs:choice maxOccurs="unbounded" minOccurs="0">
-            <xs:element name="player" type="playerType"/>
+            <xs:element name="player" type="PlayerConditionType"/>
+            <xs:element name="weapon" type="WeaponConditionType"/>
         </xs:choice>
         <xs:attribute name="msg-id" type="xs:short" />
         <xs:attribute name="add-name" type="xs:boolean" />
@@ -401,6 +404,5 @@
             <xs:enumeration value="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
             <xs:enumeration value="SHOW_TUTORIAL"/>
         </xs:restriction>
-
     </xs:simpleType>
 </xs:schema>

@@ -16,49 +16,29 @@
 
 	<xs:complexType name="ClanHall">
 		<xs:sequence>
-			<xs:element name="auction">
-				<xs:complexType>
-					<xs:attribute type="xs:string" name="min-bid" use="required" />
-					<xs:attribute type="xs:string" name="lease" use="required" />
-					<xs:attribute type="xs:string" name="deposit" use="required" />
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="npcs" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="npc" maxOccurs="unbounded" minOccurs="0">
-							<xs:complexType>
-								<xs:attribute type="xs:int" name="id"/>
-							</xs:complexType>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="doors" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="door" maxOccurs="unbounded">
-							<xs:complexType>
-								<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-							</xs:complexType>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="ownerRestartPoint" type="Location"/>
-			<xs:element name="banishPoint" type="Location"/>
+			<xs:element name="auction" type="Auction"/>
+			<xs:element name="npcs"  type="intList"/>
+			<xs:element name="doors" type="intList"/>
+			<xs:element name="restart-point" type="Location"/>
+			<xs:element name="banish-point" type="Location"/>
 		</xs:sequence>
 		<xs:attribute type="xs:short" name="id" use="required" />
 		<xs:attribute type="xs:string" name="name" />
-		<xs:attribute name="grade" type="CrystalType"/>
-		<xs:attribute name="type">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="AUCTIONABLE" />
-					<xs:enumeration value="SIEGEABLE" />
-					<xs:enumeration value="INSTANCED" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
+		<xs:attribute name="grade" type="CrystalType" default="NONE"/>
+		<xs:attribute name="type" type="ClanHallType" default="OTHER"/>
 	</xs:complexType>
+
+	<xs:complexType name="Auction">
+		<xs:attribute name="min-bid" type="xs:long" use="required" />
+		<xs:attribute name="lease" type="xs:long" use="required" />
+	</xs:complexType>
+
+	<xs:simpleType name="ClanHallType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="AUCTIONABLE" />
+			<xs:enumeration value="SIEGEABLE" />
+			<xs:enumeration value="INSTANCED" />
+			<xs:enumeration value="OTHER" />
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

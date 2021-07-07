@@ -40,7 +40,7 @@
         <attributes property="MAGIC"/>
         <target/>
         <effects>
-			<stat-modify stat="PHYSICAL_DEFENCE">
+            <stat-modify stat="PHYSICAL_DEFENCE">
                 <power initial="15.0"/>
             </stat-modify>
             <stat-modify stat="WEIGHT_LIMIT">
@@ -80,8 +80,9 @@
     <skill id="55407" name="For victory in Tryout - 2nd class transfer effect" action="A2">
         <!-- For 20 minutes,  Shield Lv. 3, Might Lv. 3, Acumen Lv. 2, Wind Walk Lv. 2, Focus Lv. 2, Regeneration Lv. 1, Guidance Lv. 1, Death Whisper Lv. 1, Magic Barrier Lv. 1, Blessed Body Lv. 1, Blessed Soul Lv. 1, Haste Lv. 1, Agility Lv. 2, Empower Lv. 2. -->
         <icon initial="icon.etc_trophy_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes property="PHYSIC" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="400"/>
             <reuse initial="1000"/>
             <hit-time initial="200"/>
         </attributes>
@@ -138,7 +139,6 @@
         <target/>
     </skill>
     <skill id="55409" name="Kusto's Support Box: Enhance Weapon (A-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="3000"/>
@@ -148,7 +148,6 @@
         <target/>
     </skill>
     <skill id="55410" name="Kusto's Support Box: Enhance Weapon (B-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="3000"/>
@@ -158,7 +157,6 @@
         <target/>
     </skill>
     <skill id="55411" name="Kusto's Support Box: Enhance Weapon (C-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="3000"/>
@@ -171,157 +169,146 @@
         <!-- Transformation to Pirate. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i03"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="3.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="3.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="3.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="PIRATE_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="3.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="3.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55413" name="Transformation Scroll: Dark Assassin" action="A2">
         <!-- Transformation to Dark Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i05"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="4.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="DARK_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="4.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55414" name="White Assassin Transformation Scroll" action="A2">
         <!-- Transformation to White Assassin. Combat stats are increased. This effect doesn't disappear after death. -->
         <icon initial="icon.etc_charm_of_courage_i00"/>
-       <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="5.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-		</effects>	
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="WHITE_ASSASSIN_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55415" name="Scroll: Enchant Armor (A-grade)" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55416" name="Summon Agathion - One-eyed Bat Drove" action="A1">
@@ -910,7 +897,6 @@
         <target/>
     </skill>
     <skill id="55465" name="Shaft with Antharas treasures" action="A1">
-        <!-- none -->
         <icon initial="BranchIcon.Icon.g_bm_antaras_pocket_i00"/>
         <attributes>
             <cool-time initial="500"/>
@@ -1010,7 +996,7 @@
         </attributes>
         <target type="ENEMY"/>
         <effects>
-			<effect name="SkillTurning"/>
+            <effect name="SkillTurning"/>
             <effect name="RealDamage">
                 <power initial="475">
                     <value level="2">633</value>
@@ -1044,7 +1030,6 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-        <!-- <abnormal type="EXP_SP_U"/> -->
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
                 <power initial="3.0">
@@ -1194,13 +1179,13 @@
                 <trait type="BLUNT">
                     <power initial="10"/>
                 </trait>
-				<trait type="HAMMER">
+                <trait type="HAMMER">
                     <power initial="10"/>
                 </trait>
-				<trait type="STAFF">
+                <trait type="STAFF">
                     <power initial="10"/>
-                </trait>				
-				<trait type="ROD">
+                </trait>
+                <trait type="ROD">
                     <power initial="10"/>
                 </trait>
                 <trait type="SPEAR">
@@ -1318,7 +1303,7 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-         <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1333,8 +1318,8 @@
                     <value level="9">20</value>
                     <value level="10">20</value>
                 </power>
-            </stat-modify>           
-		</effects>	
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55478" name="Ruby" max-level="10" action="A1">
         <!--
@@ -1351,9 +1336,9 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1366,8 +1351,8 @@
                     <value level="9">20</value>
                     <value level="10">20</value>
                 </power>
-            </stat-modify>           
-		</effects>	
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55479" name="Ruby" max-level="10" action="A1">
         <!--
@@ -1384,7 +1369,7 @@
         <icon initial="icon.etc_bm_jewel_ruby_i00">
             <value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="SOUL_SHOTS_BONUS">
@@ -1398,8 +1383,8 @@
                     <value level="8">19</value>
                     <value level="9">20</value>
                 </power>
-            </stat-modify>           
-		</effects>	
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55481" name="Sapphire" max-level="10" action="A1">
         <!--
@@ -1416,9 +1401,9 @@
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1432,7 +1417,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="55482" name="Sapphire" max-level="10" action="A1">
         <!--
@@ -1449,9 +1434,9 @@
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1465,7 +1450,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="55483" name="Sapphire" max-level="10" action="A1">
         <!--
@@ -1482,9 +1467,9 @@
         <icon initial="icon.etc_bm_jewel_sapphire_i00">
             <value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
-		<effects>
+        <effects>
             <stat-modify mode="PER" stat="SPIRIT_SHOTS_BONUS">
                 <power initial="2">
                     <value level="2">3</value>
@@ -1498,7 +1483,7 @@
                     <value level="10">20</value>
                 </power>
             </stat-modify>
-		</effects>
+        </effects>
     </skill>
     <skill id="55485" name="Garnet" max-level="10">
         <!--
@@ -1585,7 +1570,7 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A2" type="MAGIC">
+    <skill id="55486" name="Garnet - Special Ability" max-level="7" action="A2">
         <!--
             level 1: Becomes invincible from debuffs for 5 seconds.
             level 2: Becomes invincible from debuffs for 15 seconds.
@@ -1601,10 +1586,9 @@
         <attributes property="PHYSIC" magic-critical-rate="5.0">
             <reuse initial="300000"/>
             <effect-point initial="1"/>
-			<hit-time initial="500"/>
         </attributes>
         <target/>
-		<abnormal type="ABNORMAL_INVINCIBILITY">
+        <abnormal type="ABNORMAL_INVINCIBILITY">
             <level initial="4"/>
             <time initial="5">
                 <value level="2">15</value>
@@ -1614,22 +1598,22 @@
                 <value level="6">20</value>
                 <value level="7">25</value>
             </time>
-        </abnormal>        
+        </abnormal>
         <effects>
             <effect name="DebuffBlock"/>
         </effects>
     </skill>
     <skill id="55495" name="Fortune Brooch" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>
-        </conditions>	
+        </conditions>
         <effects>
             <random-restoration>
                 <item id="70434" chance="60"/> <!-- Brooch Lv. 1  -->
@@ -1638,10 +1622,9 @@
                 <item id="70831" chance="7"/> <!-- Brooch Lv. 4  -->
                 <item id="71413" chance="3"/> <!-- Brooch Lv. 5  -->
             </random-restoration>
-        </effects>			
+        </effects>
     </skill>
     <skill id="55496" name="Topaz Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1651,7 +1634,6 @@
         <target/>
     </skill>
     <skill id="55497" name="Garnet Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1661,7 +1643,6 @@
         <target/>
     </skill>
     <skill id="55498" name="Jade Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -1671,7 +1652,6 @@
         <target/>
     </skill>
     <skill id="55499" name="Ruby Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>

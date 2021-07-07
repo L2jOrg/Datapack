@@ -277,7 +277,11 @@
 	<item id="70834" name="Shining Golden Bait" type="LURE">
 	<!-- Fishing bait. Can be used to catch a Glowing Whale with a low probability of getting a Shining Golden Boot.  -->
 		<restriction stackable="true" dropable="false"/>
-		<attributes immediate-effect="true" action="EQUIP"/>
+		<condition add-name="true" msg-id="1453">
+			<weapon types="FISHING_ROD"/>
+		</condition>
+		<attributes/>
+		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<item id="70835" name="Shining Golden Boot" type="NONE">

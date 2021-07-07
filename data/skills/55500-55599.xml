@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="55500" name="Sapphire Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -11,7 +10,6 @@
         <target/>
     </skill>
     <skill id="55501" name="Diamond Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -21,7 +19,6 @@
         <target/>
     </skill>
     <skill id="55502" name="Pearl Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -31,7 +28,6 @@
         <target/>
     </skill>
     <skill id="55503" name="Vital Stone Jewelry Box" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -41,16 +37,16 @@
         <target/>
     </skill>
     <skill id="55504" name="Shiny Jewelry Box" action="A1">
-        <!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Jewelry Boxes. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>
-        </conditions>	
+        </conditions>
         <effects>
             <random-restoration>
 				<item id="92176" chance="14"/><!-- Amber Lv. 1 Jewelry Box -->
@@ -61,19 +57,19 @@
 				<item id="92226" chance="14"/><!-- Zircon Lv. 1 Jewelry Box -->
 				<item id="92236" chance="14"/><!-- Moonstone Lv. 1 Jewelry Box -->
             </random-restoration>
-        </effects>	
+        </effects>
     </skill>
     <skill id="55505" name="Shiny Jewelry Box" action="A1">
-        <!-- Double-click to obtain one of the Amber, Opal, Coral, Onyx, Spinel, Zircon, and Moonstone Lv. 1 Gems -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
             <encumbered slots="10" weight="20"/>
-        </conditions>	
+        </conditions>
         <effects>
             <random-restoration>
 				<item id="92036" chance="14"/><!-- Amber Lv. 1 -->
@@ -84,18 +80,17 @@
 				<item id="92086" chance="14"/><!-- Zircon Lv. 1 -->
 				<item id="92096" chance="14"/><!-- Moonstone Lv. 1 -->
             </random-restoration>
-        </effects>			
+        </effects>
     </skill>
     <skill id="55506" name="Aquamarine" max-level="2" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
-		<attributes static-reuse="true" magic-critical-rate="5.0">
+        <attributes static-reuse="true" magic-critical-rate="5.0">
         </attributes>
         <target/>
-		<effects>
+        <effects>
             <effect name="ManaHeal">
-                <power initial="136.0">                   
-                    <value level="2">150.0</value>                    
+                <power initial="136.0">
+                    <value level="2">150.0</value>
                 </power>
             </effect>
         </effects>
@@ -118,22 +113,22 @@
         </icon>
         <attributes property="MAGIC"/>
         <target/>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
-				<power>				   
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
+                <power>
                     <value level="6">2.0</value>
                     <value level="7">5.0</value>
                     <value level="8">8.0</value>
                     <value level="9">12.0</value>
-                    <value level="10">20.0</value>                    
+                    <value level="10">20.0</value>
                 </power>
-			</vital-stat-modify>
-			<trigger-skill-by-magic skill="55506" target="SELF">
-				<power initial="1.0">				    
-                    <value level="10">2.0</value>                    
+            </vital-stat-modify>
+            <trigger-skill-by-magic skill="55506" target="SELF">
+                <power initial="1.0">
+                    <value level="10">2.0</value>
                 </power>
-				<chance initial="1.0">
-				    <value level="2">2.0</value>
+                <chance initial="1.0">
+                    <value level="2">2.0</value>
                     <value level="3">4.0</value>
                     <value level="4">9.0</value>
                     <value level="5">17.0</value>
@@ -141,11 +136,11 @@
                     <value level="7">20.0</value>
                     <value level="8">21.0</value>
                     <value level="9">22.0</value>
-                    <value level="10">25.0</value>                    
+                    <value level="10">25.0</value>
                 </chance>
-				<types>PHYSIC MAGIC STATIC DANCE</types>
-			</trigger-skill-by-magic>			
-		</effects>
+                <types>PHYSIC MAGIC STATIC DANCE</types>
+            </trigger-skill-by-magic>
+        </effects>
     </skill>
     <skill id="55508" name="Put on Lv. 3 Brooch" action="A1">
         <!-- Brooch radiates bright light. -->
@@ -185,7 +180,6 @@
         </effects>
     </skill>
     <skill id="55512" name="Aquamarine Fortune Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <reuse initial="1000"/>
@@ -195,7 +189,6 @@
         <target/>
     </skill>
     <skill id="55513" name="Golden Boots" action="A1">
-        <!-- none -->
         <icon initial="icon.card_event_blue_box"/>
         <attributes>
             <cool-time initial="500"/>
@@ -213,54 +206,46 @@
     <skill id="55515" name="Staff Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Branch of the Mother Tree/ Dasparion's Staff/ Staff of Evil Spirits/ Spirit's Staff. -->
         <icon initial="icon.etc_treasure_box_i02"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55516" name="Fist Weapon Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Dragon Grinder/ Blood Tornado/ Bellion Cestus/ Arthro Nail. -->
         <icon initial="icon.etc_treasure_box_i03"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55517" name="Spear Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Tallum Glaive/ Halberd/ Lance/ Great Axe. -->
         <icon initial="icon.etc_treasure_box_i04"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55518" name="Blunt Weapon Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Elysian/ Meteor Shower/ Art of Battle Axe/ Heavy War Axe. -->
         <icon initial="icon.etc_treasure_box_i05"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55519" name="Dagger Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Soul Separator/ Bloody Orchid/ Demon's Dagger/ Kris. -->
         <icon initial="icon.etc_treasure_box_i06"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55520" name="One-handed Sword Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Dark Legion's Edg/ Tallum Blade/ Damascus Sword/ Keshanberk. -->
         <icon initial="icon.etc_treasure_box_i07"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55521" name="Bow Chest" action="A1">
         <!-- Double-click to acquire one of the following items: Soul Bow/ Carnage Bow/ Bow of Peril/ Dark Elven Longbow. -->
         <icon initial="icon.etc_treasure_box_i08"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55522" name="Valakas Treasure Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.bm_sheep_agathion_30d_box"/>
         <attributes>
             <cool-time initial="500"/>
@@ -324,7 +309,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="55527" name="Noble Blessed Body - Event" action="A1">
+    <skill id="55527" name="Blessed Body" action="A1">
         <!-- For 1 hour, Max. HP +35%%. -->
         <icon initial="icon.skill1045"/>
         <attributes property="PHYSIC">
@@ -338,7 +323,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="55528" name="Noble Blessed Soul - Event" action="A1">
+    <skill id="55528" name="Blessed Soul" action="A1">
         <!-- For 1 hour, Max. MP +35%%. -->
         <icon initial="icon.skill1048"/>
         <attributes property="PHYSIC">
@@ -656,10 +641,10 @@
             <magic-cost>
                 <power initial="-3.0"/>
             </magic-cost>
-			<magic-cost type="PHYSIC">
+            <magic-cost type="PHYSIC">
                 <power initial="-3.0"/>
             </magic-cost>
-			<magic-cost type="DANCE">
+            <magic-cost type="DANCE">
                 <power initial="-3.0"/>
             </magic-cost>
         </effects>
@@ -705,10 +690,6 @@
             <reuse initial="7200000"/>
             <effect-point initial="1"/>
         </attributes>
-        <consume>
-            <item initial="90835"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <abnormal>
             <level initial="2"/>
@@ -748,7 +729,6 @@
         <target/>
     </skill>
     <skill id="55559" name="+10 Damascus Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -758,7 +738,6 @@
         <target/>
     </skill>
     <skill id="55560" name="+10 Lance Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -768,7 +747,6 @@
         <target/>
     </skill>
     <skill id="55561" name="+10 Deadman's Glory Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -778,7 +756,6 @@
         <target/>
     </skill>
     <skill id="55562" name="+10 Art of Battle Axe Chest" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -788,7 +765,6 @@
         <target/>
     </skill>
     <skill id="55563" name="+10 Staff of Evil Spirits" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -798,7 +774,6 @@
         <target/>
     </skill>
     <skill id="55564" name="+10 Demon's Dagger" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -808,7 +783,6 @@
         <target/>
     </skill>
     <skill id="55565" name="+10 Bellion Cestus" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -818,7 +792,6 @@
         <target/>
     </skill>
     <skill id="55566" name="+10 Bow of Peril" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -828,7 +801,6 @@
         <target/>
     </skill>
     <skill id="55567" name="+10 Samurai Long Sword*Samurai Long Sword" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -838,7 +810,6 @@
         <target/>
     </skill>
     <skill id="55568" name="+10 Guardian's Sword" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_treasure_box_i07"/>
         <attributes>
             <reuse initial="3000"/>
@@ -892,17 +863,13 @@
         <target/>
     </skill>
     <skill id="55574" name="Major Quick Recovery Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55575" name="The Finest Quick Recovery Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_bm_hero_red_potion"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55576" name="Einhasad's Protection" action="A1">
@@ -955,101 +922,95 @@
         <!-- Makes you armor look like Blue Dynasty armor. Combat stats are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i01"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="7.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="5.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="5.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="20.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="3.0"/>
-			</stat-modify>
-		</effects>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="BLUE_DYNASTY_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="7.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="5.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="20.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="3.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55582" name="Red Zubei Transformation Scroll" action="A2">
         <!-- Makes you armor look like Red Zubei armor. Combat stats are improved. Remains after death. -->
         <icon initial="icon.etc_charm_of_courage_i04"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
-			<reuse initial="600000"/>
-			<cool-time initial="500"/>
-			<effect-point initial="1"/>
-			<hit-time initial="3050"/>
-		</attributes>		
-		<target/>
-		<abnormal type="CHANGEBODY" visual="RED_ZUBEI_SUIT">
-			<level initial="1"/>
-			<time initial="3600"/>
-		</abnormal>
-		<effects>
-			<vital-stat-modify mode="PER" stat="MAX_HP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<vital-stat-modify mode="PER" stat="MAX_MP">
-				<power initial="5.0"/>
-			</vital-stat-modify>
-			<speed>
-				<power initial="4.0"/>
-			</speed>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
-				<power initial="3.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="ACCURACY_MAGIC">
-				<power initial="1.0"/>
-			</stat-modify>
-			<stat-modify stat="MAGIC_CRITICAL_RATE">
-				<power initial="10.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-			<stat-modify mode="PER" stat="MAGICAL_DEFENCE">
-				<power initial="2.0"/>
-			</stat-modify>
-		</effects>
+            <effect-point initial="1"/>
+        </attributes>
+        <target/>
+        <abnormal type="CHANGEBODY" visual="RED_ZUBEI_SUIT">
+            <level initial="1"/>
+            <time initial="3600"/>
+        </abnormal>
+        <effects>
+            <vital-stat-modify mode="PER" stat="MAX_HP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <vital-stat-modify mode="PER" stat="MAX_MP">
+                <power initial="5.0"/>
+            </vital-stat-modify>
+            <speed>
+                <power initial="4.0"/>
+            </speed>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="3.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="ACCURACY_MAGIC">
+                <power initial="1.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+                <power initial="10.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGIC_ATTACK">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="MAGICAL_DEFENCE">
+                <power initial="2.0"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="55583" name="Formal Wear Appearance Scroll" action="A1">
         <!-- Makes you armor look like Formal Wear. Combat stats are improved. Remains after death. -->
@@ -1088,7 +1049,7 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
-		<abnormal type="EXP_SP_I">
+        <abnormal type="EXP_SP_I">
             <level initial="2"/>
             <time initial="1200"/>
         </abnormal>
@@ -1102,21 +1063,16 @@
         </effects>
     </skill>
     <skill id="55587" name="Hero's Recovery Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_potion_scarlet_i00"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55588" name="Hero's Major Recovery Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_potion_red_i00"/>
-        <attributes>
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="55589" name="Hero's MP Recovery Potion" action="A1">
-        <!-- none -->
         <icon initial="icon.etc_potion_blue_i00"/>
         <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
             <magic-level initial="1"/>
@@ -1214,7 +1170,6 @@
         <target/>
     </skill>
     <skill id="55595" name="Party Support Cube - Lv. 1" action="A1">
-        <!-- none -->
         <icon initial="[icon.etc_clear_crystal_cube_pc_i00"/>
         <attributes>
             <reuse initial="-1000"/>
@@ -1222,7 +1177,6 @@
         <target/>
     </skill>
     <skill id="55596" name="Soulshot Support Cube" action="A1">
-        <!-- none -->
         <icon initial="[icon.etc_violet_crystal_cube_pc_i00"/>
         <attributes>
             <reuse initial="-1000"/>
@@ -1230,7 +1184,6 @@
         <target/>
     </skill>
     <skill id="55597" name="Spiritshot Support Cube" action="A1">
-        <!-- none -->
         <icon initial="[icon.etc_pink_crystal_cube_pc_i00"/>
         <attributes>
             <reuse initial="-1000"/>
@@ -1238,7 +1191,6 @@
         <target/>
     </skill>
     <skill id="55598" name="Buff Support Cube" action="A1">
-        <!-- none -->
         <icon initial="[icon.etc_dkbrown_crystal_cube_pc_i00"/>
         <attributes>
             <reuse initial="-1000"/>
@@ -1246,7 +1198,6 @@
         <target/>
     </skill>
     <skill id="55599" name="Potion Support Cube - Lv. 1" action="A1">
-        <!-- none -->
         <icon initial="[icon.etc_black_crystal_cube_pc_i00"/>
         <attributes>
             <reuse initial="-1000"/>

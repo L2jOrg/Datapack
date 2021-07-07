@@ -60,7 +60,7 @@
 	<item id="37704" name="Love Potion" type="NONE">
 	<!-- Herb to change the appearance of a Valentine's Day weapon. -->
 		<restriction depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true"/>
+		<attributes for-npc="true" immediate-effect="true" ex-immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer>
 			<skill id="17154" value="-1"/>  <!-- Love Potion -->
 		</skill-reducer>
@@ -70,6 +70,9 @@
 	<!-- Fishing consumables. Fishing success +100%. Cannot be sold in the grocery store. -->
 		<restriction stackable="true" sellable="false"/>
 		<attributes weight="3" price="56" immediate-effect="true" action="FISHINGSHOT"/>
+		<skill-reducer type="FishShots">
+			<skill id="17386" value="-1"/>  <!-- Normal Fishing Shot -->
+		</skill-reducer>
 	</item>
 
 	<armor id="37725" name="Dinos Uniform" type="HEAVY" body-part="ALL_DRESS">

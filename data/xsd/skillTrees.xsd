@@ -30,14 +30,12 @@
 					<xs:enumeration value="collectSkillTree" />
 					<xs:enumeration value="dualClassSkillTree" />
 					<xs:enumeration value="fishingSkillTree" />
-					<xs:enumeration value="gameMasterAuraSkillTree" />
 					<xs:enumeration value="gameMasterSkillTree" />
 					<xs:enumeration value="heroSkillTree" />
 					<xs:enumeration value="nobleSkillTree" />
 					<xs:enumeration value="pledgeSkillTree" />
 					<xs:enumeration value="raceSkillTree" />
 					<xs:enumeration value="revelationSkillTree" />
-					<xs:enumeration value="subPledgeSkillTree" />
 					<xs:enumeration value="transferSkillTree" />
 					<xs:enumeration value="transformSkillTree" />
 				</xs:restriction>
@@ -81,26 +79,7 @@
 					<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="socialClass" minOccurs="0">
-				<xs:simpleType>
-					<xs:restriction base="xs:token">
-						<xs:enumeration value="VAGABOND" />
-						<xs:enumeration value="VASSAL" />
-						<xs:enumeration value="APPRENTICE" />
-						<xs:enumeration value="HEIR" />
-						<xs:enumeration value="KNIGHT" />
-						<xs:enumeration value="ELDER" />
-						<xs:enumeration value="BARON" />
-						<xs:enumeration value="VISCOUNT" />
-						<xs:enumeration value="COUNT" />
-						<xs:enumeration value="MARQUIS" />
-						<xs:enumeration value="DUKE" />
-						<xs:enumeration value="GRAND_DUKE" />
-						<xs:enumeration value="DISTINGUISHED_KING" />
-						<xs:enumeration value="EMPEROR" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element name="social-status" type="SocialStatus" minOccurs="0"/>
 			<xs:element name="residenceId" minOccurs="0" maxOccurs="unbounded">
 				<xs:simpleType>
 					<xs:restriction base="xs:positiveInteger">
