@@ -807,13 +807,15 @@
         </effects>
     </skill>
     <skill id="55120" name="Wind Dragon's Pendant MP Increase" action="A1">
+        <!-- Recover 12 MP -->
         <icon initial="BranchIcon.Icon.bm_pendant_pve_white"/>
         <attributes static-reuse="true">
+            <reuse initial="100"/>
         </attributes>
         <target/>
         <effects>
             <effect name="ManaHeal">
-                <power initial="12.0"/>
+                <power initial="12.0"/>            
             </effect>
         </effects>
     </skill>
@@ -1296,8 +1298,7 @@
     <skill id="55141" name="Reported" action="A1">
         <!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
         <icon initial="icon.skill6038"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes property="PHYSIC"/>
         <target/>
     </skill>
     <skill id="55142" name="MP Potion" action="A1">
@@ -2472,12 +2473,11 @@
             </base-stat>
         </effects>
     </skill>
-    <skill id="55193" name="Sealed Rune Lvl 1" action="A1">
+    <skill id="55193" name="Sealed Rune Lvl 1" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2485,23 +2485,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29818"/>
-                <item chance="12.5" id="29838"/>
-                <item chance="12.5" id="29858"/>
-                <item chance="12.5" id="29878"/>
-                <item chance="12.5" id="29898"/>
-                <item chance="12.5" id="29918"/>
-                <item chance="12.5" id="29938"/>
-                <item chance="12.5" id="29958"/>
+                <item chance="13" id="29818"/>
+                <item chance="12" id="29838"/>
+                <item chance="13" id="29858"/>
+                <item chance="12" id="29878"/>
+                <item chance="13" id="29898"/>
+                <item chance="12" id="29918"/>
+                <item chance="13" id="29938"/>
+                <item chance="12" id="29958"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55194" name="Sealed Rune Lvl 2" action="A1">
+    <skill id="55194" name="Sealed Rune Lvl 2" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2509,23 +2508,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29819"/>
-                <item chance="12.5" id="29839"/>
-                <item chance="12.5" id="29859"/>
-                <item chance="12.5" id="29879"/>
-                <item chance="12.5" id="29899"/>
-                <item chance="12.5" id="29919"/>
-                <item chance="12.5" id="29939"/>
-                <item chance="12.5" id="29959"/>
+                <item chance="13" id="29819"/>
+                <item chance="12" id="29839"/>
+                <item chance="13" id="29859"/>
+                <item chance="12" id="29879"/>
+                <item chance="13" id="29899"/>
+                <item chance="12" id="29919"/>
+                <item chance="13" id="29939"/>
+                <item chance="12" id="29959"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55195" name="Sealed Rune Lvl 3" action="A1">
+    <skill id="55195" name="Sealed Rune Lvl 3" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2533,23 +2531,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29820"/>
-                <item chance="12.5" id="29840"/>
-                <item chance="12.5" id="29860"/>
-                <item chance="12.5" id="29880"/>
-                <item chance="12.5" id="29900"/>
-                <item chance="12.5" id="29920"/>
-                <item chance="12.5" id="29940"/>
-                <item chance="12.5" id="29960"/>
+                <item chance="13" id="29820"/>
+                <item chance="12" id="29840"/>
+                <item chance="13" id="29860"/>
+                <item chance="12" id="29880"/>
+                <item chance="13" id="29900"/>
+                <item chance="12" id="29920"/>
+                <item chance="13" id="29940"/>
+                <item chance="12" id="29960"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55196" name="Sealed Rune Lvl 4" action="A1">
+    <skill id="55196" name="Sealed Rune Lvl 4" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2557,23 +2554,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29821"/>
-                <item chance="12.5" id="29841"/>
-                <item chance="12.5" id="29861"/>
-                <item chance="12.5" id="29881"/>
-                <item chance="12.5" id="29901"/>
-                <item chance="12.5" id="29921"/>
-                <item chance="12.5" id="29941"/>
-                <item chance="12.5" id="29961"/>
+                <item chance="13" id="29821"/>
+                <item chance="12" id="29841"/>
+                <item chance="13" id="29861"/>
+                <item chance="12" id="29881"/>
+                <item chance="13" id="29901"/>
+                <item chance="12" id="29921"/>
+                <item chance="13" id="29941"/>
+                <item chance="12" id="29961"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55197" name="Sealed Rune Lvl 5" action="A1">
+    <skill id="55197" name="Sealed Rune Lvl 5" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_green_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2581,23 +2577,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29822"/>
-                <item chance="12.5" id="29842"/>
-                <item chance="12.5" id="29862"/>
-                <item chance="12.5" id="29882"/>
-                <item chance="12.5" id="29902"/>
-                <item chance="12.5" id="29922"/>
-                <item chance="12.5" id="29942"/>
-                <item chance="12.5" id="29962"/>
+                <item chance="13" id="29822"/>
+                <item chance="12" id="29842"/>
+                <item chance="13" id="29862"/>
+                <item chance="12" id="29882"/>
+                <item chance="13" id="29902"/>
+                <item chance="12" id="29922"/>
+                <item chance="13" id="29942"/>
+                <item chance="12" id="29962"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55198" name="Sealed Rune Lvl 6" action="A1">
+    <skill id="55198" name="Sealed Rune Lvl 6" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2605,23 +2600,22 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29823"/>
-                <item chance="12.5" id="29843"/>
-                <item chance="12.5" id="29863"/>
-                <item chance="12.5" id="29883"/>
-                <item chance="12.5" id="29903"/>
-                <item chance="12.5" id="29923"/>
-                <item chance="12.5" id="29943"/>
-                <item chance="12.5" id="29963"/>
+                <item chance="13" id="29823"/>
+                <item chance="12" id="29843"/>
+                <item chance="13" id="29863"/>
+                <item chance="12" id="29883"/>
+                <item chance="13" id="29903"/>
+                <item chance="12" id="29923"/>
+                <item chance="13" id="29943"/>
+                <item chance="12" id="29963"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="55199" name="Sealed Rune Lvl 7" action="A1">
+    <skill id="55199" name="Sealed Rune Lvl 7" action="A1" type="STATIC">
+        <!-- none -->
         <icon initial="BranchIcon.Icon.g_blue_sealed_rune"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
         </attributes>
         <target/>
         <conditions>
@@ -2629,14 +2623,14 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="12.5" id="29824"/>
-                <item chance="12.5" id="29844"/>
-                <item chance="12.5" id="29864"/>
-                <item chance="12.5" id="29884"/>
-                <item chance="12.5" id="29904"/>
-                <item chance="12.5" id="29924"/>
-                <item chance="12.5" id="29944"/>
-                <item chance="12.5" id="29964"/>
+                <item chance="13" id="29824"/>
+                <item chance="12" id="29844"/>
+                <item chance="13" id="29864"/>
+                <item chance="12" id="29884"/>
+                <item chance="13" id="29904"/>
+                <item chance="12" id="29924"/>
+                <item chance="13" id="29944"/>
+                <item chance="12" id="29964"/>
             </random-restoration>
         </effects>
     </skill>
