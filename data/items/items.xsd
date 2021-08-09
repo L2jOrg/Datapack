@@ -91,6 +91,7 @@
                         <xs:element name="extract" type="ItemExtract"/>
                         <xs:element name="skill-reducer" type="SkillReducer"/>
                         <xs:element name="transformation-book" type="TransformationBook"/>
+                        <xs:element name="equip" type="EquipAction"/>
                     </xs:choice>
                 </xs:sequence>
                 <xs:attribute name="type" type="EtcItemType" use="required"/>
@@ -188,6 +189,10 @@
         <xs:attribute name="max" type="xs:int" default="-1"/>
     </xs:complexType>
 
+    <xs:complexType name="EquipAction">
+        <xs:attribute name="body-part" type="BodyPart" use="required"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemAction">
         <xs:attribute name="handler">
             <xs:simpleType>
@@ -206,7 +211,6 @@
                     <xs:enumeration value="EventItem"/>
                     <xs:enumeration value="FatedSupportBox"/>
                     <xs:enumeration value="FishShots"/>
-                    <xs:enumeration value="Harvester"/>
                     <xs:enumeration value="Maps"/>
                     <xs:enumeration value="MercTicket"/>
                     <xs:enumeration value="NicknameColor"/>
@@ -265,7 +269,7 @@
         <xs:attribute name="chance" type="xs:double"/>
     </xs:complexType>
 
-    <xs:complexType name="playerType">
+    <xs:complexType name="PlayerConditionType">
         <xs:attribute name="castle">
             <xs:simpleType>
                 <xs:restriction base="xs:int">
@@ -292,9 +296,19 @@
         <xs:attribute name="races" type="RaceList"/>
     </xs:complexType>
 
+    <xs:complexType name="WeaponConditionType">
+        <xs:attribute name="types" type="WeaponTypeList"/>
+    </xs:complexType>
+
+    <xs:complexType name="RestrictTimeRechargeConditionType">
+        <xs:attribute name="zone" type="xs:int" use="required"/>
+    </xs:complexType>
+
     <xs:complexType name="ItemUseCondition">
         <xs:choice maxOccurs="unbounded" minOccurs="0">
-            <xs:element name="player" type="playerType"/>
+            <xs:element name="player" type="PlayerConditionType"/>
+            <xs:element name="weapon" type="WeaponConditionType"/>
+            <xs:element name="restrict-time-recharge" type="RestrictTimeRechargeConditionType"/>
         </xs:choice>
         <xs:attribute name="msg-id" type="xs:short" />
         <xs:attribute name="add-name" type="xs:boolean" />
@@ -411,6 +425,5 @@
             <xs:enumeration value="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
             <xs:enumeration value="SHOW_TUTORIAL"/>
         </xs:restriction>
-
     </xs:simpleType>
 </xs:schema>
