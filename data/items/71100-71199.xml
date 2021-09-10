@@ -19,26 +19,26 @@
 	<!-- 1-hour item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. \n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="60"/>
-				<skill-reducer>
-			<skill id="222222" value="-1"/>  <!-- XP Rune 100% -->
-	    	</skill-reducer>
+		<skill-reducer>
+			<skill id="56003"/>  <!-- XP Rune 50% -->
+	    </skill-reducer>
 	</item>
 
 	<item id="71102" name="XP/SP Rune - 50% (1-hour) Pack" type="NONE">
 	<!-- Double-click to obtain XP/SP Rune - 50% (1 hour).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-			<skill-reducer>
-			<skill id="222222" value="-1"/>  <!-- XP Rune 100% -->
-	    	</skill-reducer>
+		<extract>
+			<item id="71101"/> <!-- XP/SP Rune - 50% (1 hour) -->
+		</extract>
 	</item>
 
 	<item id="71103" name="XP/SP Rune - 50%" type="RUNE">
 	<!-- 5-hour itemв. When in inventory, your XP and SP gain is increased by 50%. \nIntended for Lv. 1 - 75 characters.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="300"/>
-			<skill-reducer>
-			<skill id="222222" value="-1"/>  <!-- XP Rune 100% -->
+		<skill-reducer>
+			<skill id="56003"/>  <!-- XP Rune 50% -->
 		</skill-reducer>
 	</item>
 
@@ -46,25 +46,27 @@
 	<!-- Double-click to obtain XP/SP Rune - 50% (5 hours).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-				<skill-reducer>
-			<skill id="222222" value="-1"/>  <!-- XP Rune 100% -->
-	    	</skill-reducer>
+		<extract>
+			<item id="71103"/> <!-- XP/SP Rune - 50% (5 hours) -->
+		</extract>
 	</item>
 
 	<item id="71105" name="XP/SP Rune - 50%" type="RUNE">
 	<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%.\nIntended for Lv. 1 - 75 characters.\n -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
-				<skill-reducer>
-			<skill id="222222" value="-1"/>  <!-- XP Rune 100% -->
-	    	</skill-reducer>
+		<skill-reducer>
+			<skill id="56003"/>  <!-- XP Rune 50% -->
+		</skill-reducer>
 	</item>
 
 	<item id="71106" name="XP/SP Rune - 50% (7-day) Pack" type="NONE">
 	<!-- Double-click to obtain XP/SP Rune - 50% (7 days).\nIntended for Lv. 1 - 75 characters. -->
 		<restriction stackable="true" sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
-		
+		<extract>
+			<item id="71105"/> <!-- XP/SP Rune - 50% (7 days) -->
+		</extract>
 	</item>
 
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="POTION">
