@@ -66,6 +66,12 @@
         <xs:attribute name="level" type="xs:int" default="1"/>
     </xs:complexType>
 
+    <xs:complexType name="SkillInfoList">
+        <xs:sequence>
+            <xs:element name="skill" type="SkillInfo" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:simpleType name="CostumeGrade">
         <xs:restriction base="xs:token">
             <xs:enumeration value="STANDARD"/>
