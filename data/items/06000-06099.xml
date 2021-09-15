@@ -2,407 +2,410 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="6002" name="Ancient Porcelain" type="NONE">
 	<!-- Porcelain from the era of an ancient empire found in the Tower of Insolence. It Has not been evaluated by antique experts yet. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="8000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6003" name="Ancient Porcelain: Excellent" type="NONE">
 	<!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade "excellent" porcelain. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="80000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6004" name="Ancient Porcelain: High Quality" type="NONE">
 	<!-- Porcelain from the era of an ancient empire. Judged to be of "high grade" porcelain. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="16000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6005" name="Ancient Porcelain: Low Quality" type="NONE">
 	<!-- Porcelain from the era of an ancient empire. Judged to be of "low grade" porcelain. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="4000" immediate-effect="true" quest-item="true"/>
 	</item>
 
 	<item id="6006" name="Ancient Porcelain: Lowest Quality" type="NONE">
 	<!-- Porcelain from the era of an ancient empire. Judged to be of the "lowest grade" porcelain. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes weight="10" price="2640" immediate-effect="true" quest-item="true"/>
 	</item>
 
-	<item id="6035" name="Magic Haste Potion" type="POTION">
-	<!-- Casting Spd. is raised. -->
-		<restriction olympiad-restricted="true" stackable="true"/>
-		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<item id="6035" name="Magic Haste Enhancement Potion" type="POTION">
+	<!-- Increases Casting Spd. when used. -->
+		<restriction olympiad-restricted="true"/>
+		<attributes weight="20" price="2400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<random_craft exp="1200" commission="24"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="2169" value="-1"/>  <!-- Magic Haste Enhancement Potion -->
 		</skill-reducer>
 	</item>
 
-	<item id="6036" name="Greater Magic Haste Potion" type="POTION">
-	<!-- Casting Spd. increases for 5 minutes. -->
-		<restriction olympiad-restricted="true" stackable="true"/>
-		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<item id="6036" name="Greater Casting Spd. Boosting Potion" type="POTION">
+	<!-- Increases Casting Spd. when used\n\n- Duration: 5 minutes -->
+		<restriction olympiad-restricted="true"/>
+		<attributes weight="20" price="3400" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
+		<random_craft exp="1700" commission="34"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="2169" level="2" value="-1"/>  <!-- Magic Haste Enhancement Potion -->
 		</skill-reducer>
 	</item>
 
 	<item id="6037" name="Scroll: Cancel Sleep" type="SCROLL">
 	<!-- If you use it on the target who is asleep, the target will wake up. -->
-		<restriction olympiad-restricted="true" stackable="true"/>
+		<restriction olympiad-restricted="true"/>
 		<attributes weight="5" price="100" commission-type="SCROLL_OTHER" action="SKILL_REDUCE"/>
-		<skill-reducer>
+		<random_craft exp="50" commission="1"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="2170" value="-1"/>  <!-- Scroll: Cancel Sleep -->
 		</skill-reducer>
 	</item>
 
-	<item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6038" name="Not Available - Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6039" name="Not Available - Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6040" name="Not Available - Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6041" name="Not Available - Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
-	<!-- Cannot be used. Can be sold at an NPC’s store. -->
-		<restriction stackable="true"/>
+	<item id="6042" name="Not Available - Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6043" name="Not Available - Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6044" name="Not Available - Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6045" name="Not Available - Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
-	<!-- Cannot be used.  -->
-		<restriction stackable="true"/>
+	<item id="6046" name="Not Available - Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
-	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
-	<!-- Cannot be used. Can be sold at an NPC’s store. -->
-		<restriction stackable="true"/>
+	<item id="6047" name="Not Available - Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
+	<!-- Not available. Cannot be used. -->
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6051" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
 	<!-- Dion/Sword/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6052" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
 	<!-- Dion/Spear/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6053" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
 	<!-- Dion/Bow/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6054" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
 	<!-- Dion/Cleric/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6055" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
 	<!-- Dion/Wizard/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6056" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
 	<!-- Dion/Sword/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6057" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
 	<!-- Dion/Spear/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6058" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
 	<!-- Dion/Bow/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6059" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
 	<!-- Dion/Cleric/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6060" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
 	<!-- Dion/Wizard/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6064" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
 	<!-- Giran/Sword/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6065" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
 	<!-- Giran/Spear/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6066" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
 	<!-- Giran/Bow/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6067" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
 	<!-- Giran/Cleric/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6068" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
 	<!-- Giran/Wizard/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6069" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
 	<!-- Giran/Sword/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6070" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
 	<!-- Giran/Spear/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6071" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
 	<!-- Giran/Bow/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6072" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
 	<!-- Giran/Cleric/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6073" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
 	<!-- Giran/Wizard/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6077" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
 	<!-- Oren/Sword/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6078" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
 	<!-- Oren/Spear/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6079" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
 	<!-- Oren/Bow/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6080" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
 	<!-- Oren/Cleric/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6081" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
 	<!-- Oren/Wizard/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6082" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
 	<!-- Oren/Sword/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6083" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
 	<!-- Oren/Spear/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6084" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
 	<!-- Oren/Bow/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6085" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
 	<!-- Oren/Cleric/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6086" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
 	<!-- Oren/Wizard/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6090" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="CASTLE_GUARD">
 	<!-- Aden/Sword/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6091" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="CASTLE_GUARD">
 	<!-- Aden/Spear/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6092" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="CASTLE_GUARD">
 	<!-- Aden/Bow/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6093" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="CASTLE_GUARD">
 	<!-- Aden/Cleric/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6094" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="CASTLE_GUARD">
 	<!-- Aden/Wizard/Stationary. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6095" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="CASTLE_GUARD">
 	<!-- Aden/Sword/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="60000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6096" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="CASTLE_GUARD">
 	<!-- Aden/Spear/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="80000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6097" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="CASTLE_GUARD">
 	<!-- Aden/Bow/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="100000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6098" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="CASTLE_GUARD">
 	<!-- Aden/Cleric/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>
 
 	<item id="6099" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="CASTLE_GUARD">
 	<!-- Aden/Wizard/Mobile. -->
-		<restriction stackable="true"/>
+		<restriction/>
 		<attributes price="200000" immediate-effect="true"/>
 		<action handler="MercTicket"/>
 	</item>

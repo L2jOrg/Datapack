@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="92400" name="Primeval Garden Time Recharge Stone" type="POTION">
-	<!-- Adds 60 minutes to the duration of the Primeval Garden timed hunting zone. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92400" name="Forgotten Primeval Garden Time Recharge Stone" type="POTION">
+	<!-- Extends use time of timed hunting zone for 60 min.\n\n<Applied Hunting Zone>\nForgotten Primeval Garden -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5"/>
 	</item>
 
 	<item id="92401" name="Spellbook: White Guardian" type="POTION">
-	<!-- Spellbook to obtain the power of the White Guardian. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes/>
+	<!-- Spellbook to obtain the power of the White Guardian.\n\n<Acquiring Class>\nAll classes, except Jin Kamael and Death Knight\n\n<Skill Effect>\nTransforms into White Guardian. Increases Max HP/MP, P./M. Accuracy, P./M. Atk., P./M. Def., Atk. Spd., P. Skill Critical Damage, M. Skill Critical Rate, Speed. -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes price="9300000"/>
+		<random_craft exp="4650000" commission="93000"/>
 	</item>
 
 	<item id="92402" name="Enchant Scroll: Talisman - Speed" type="ENCHANT_ARMOR">
 	<!-- A scroll used to enchant Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 		<action handler="EnchantScrolls"/>
 	</item>
@@ -33,8 +34,8 @@
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="137.0"/>
-			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="271.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
@@ -52,10 +53,10 @@
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
-			<stat type="MAGIC_ATTACK" value="151.0"/>
-			<stat type="PHYSICAL_ATTACK" value="570.0"/>
+			<stat type="MAGIC_ATTACK" value="160.0"/>
+			<stat type="PHYSICAL_ATTACK" value="610.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="500.0"/>
-			<stat type="PHYSICAL_ATTACK_SPEED" value="227.0"/>
+			<stat type="PHYSICAL_ATTACK_SPEED" value="293.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
 		</stats>
 		<skills>
@@ -63,7 +64,8 @@
 		</skills>
 	</weapon>
 
-	<weapon id="92406" name="Queen Ant’s Stone Spear" type="SPEAR" body-part="TWO_HAND">
+	<weapon id="92406" name="Not Available - Queen Ant’s Stone Spear" type="SPEAR" body-part="TWO_HAND">
+	<!-- Not available. -->
 		<restriction freightable="false"/>
 		<attributes weight="1820" commission-type="SPEAR"/>
 		<crystal type="A" count="2157"/>
@@ -90,8 +92,8 @@
 		<damage radius="46" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="137.0"/>
-			<stat type="PHYSICAL_ATTACK" value="305.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="329.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
@@ -109,8 +111,8 @@
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="12.0"/>
-			<stat type="MAGIC_ATTACK" value="137.0"/>
-			<stat type="PHYSICAL_ATTACK" value="220.0"/>
+			<stat type="MAGIC_ATTACK" value="145.0"/>
+			<stat type="PHYSICAL_ATTACK" value="238.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="433.0"/>
 			<stat type="RANDOM_DAMAGE" value="5.0"/>
@@ -121,80 +123,80 @@
 	</weapon>
 
 	<item id="92409" name="Special Dragon's Fruit Lv. 2" type="SCROLL">
-	<!-- For 20 minutes, P./M. Atk. +15%, P./M. Def. +20%, Max. HP/CP/MP +30%, P./M. Critical Rate +20, P./M. Critical Damage +7%, HP/MP Recovery Bonus +40%. At a certain chance absorbs 7% of the damage inflicted on target as HP. XP and SP gained through hunting +15%. Cooldown is 1 minute. Buff remains after death. -->
-		<restriction stackable="true" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="40202" value="-1"/>  <!-- Golden Fruit Buff Lv. 2 -->
+	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Atk. +15%\nM. Atk. +15%\nP. Def. +20%\nM. Def. +20%\nMax HP +30%\nMax MP +30%\nMax CP +30%\nHP Recovery Bonus +40%\nMP Recovery Bonus +40%\nP. Critical Rate +20\nM. Critical Rate +20\nP. Critical Damage +7%\nM. Critical Damage +7%\nXP Gain +15%\nSP Gain +15%\nRecover 7% of damage hit as HP\n\n- Duration: 20 minutes\n- Cooldown: 1 minute\n- Buff remains at death -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="40202" value="-1"/>  <!-- Special Dragon's Fruit Lv. 2 - Event -->
 		</skill-reducer>
 	</item>
 
 	<item id="92410" name="Dragon's Special Elixir Lv. 2" type="SCROLL">
-	<!-- When used, XP/SP Gain +50%, P. Atk. +300, M. Atk. +450, P. Def. +400, M. Def. +550, P/M. Critical Rate +40, P./M. Critical Damage +12%, Atk. Spd./Casting Spd. +70, HP +3000, MP +2000, CP +3000, HP/MP Recovery Bonus +12, Sayha's Grace Consumption Speed -25% for 20 minutes. Has a chance to recover 7% of damage dealt to enemy as HP.\n<Caution>When Dragon's Special Elixir is used while having Dragon's Miracle Potion applied, the effect will change to that of the Dragon's Special Elixir. -->
-		<restriction stackable="true" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
-			<skill id="59688" level="2"/>  <!-- Dragon's Special Elixir Lv. 2 -->
+	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Atk. +300\nM. Atk. +450\nP. Def. +400\nM. Def. +550\nAtk. Spd. +70\nCasting Spd. +70\nMax HP +3000\nMax MP +2000\nMax CP +3000\nHP Recovery Bonus +12\nMP Recovery Bonus +12\nP. Critical Rate +40\nM. Critical Rate +40\nP. Critical Damage +12%\nM. Critical Damage +12%\nXP Gain +50%\nSP Gain +50%\nSayha's Grace Consumption -25%\nRecover 7% of damage hit as HP (chance activated)\n\n- Duration: 20 minutes\n(If Dragon’s Special Elixir is used while the effect is applied, the effect will change) -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
+			<skill id="59688" level="2"/>  <!-- Dragon's Special Elixir -->
 		</skill-reducer>
 	</item>
 
 	<item id="92411" name="Sealed Treasure Chest" type="NONE">
-	<!-- Double-click to obtain one of the rare items at random, such as Sealed Power Powder, Lilith Rune Lv. +10, Anakim Rune Lv. 10, or +10 Dragon’s Belt. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the rare items at random, such as Sealed Power Powder, Hardin's Soul Crystal Lv. 10, +10 Dragon’s Belt Box. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92412" name="Sealed Power Powder" type="NONE">
-	<!-- Collect Sealed Power Powder and other consumables and take them to the Store Manager to exchange for Special Dragon's Fruit Lv. 2, Dragon's Special Elixir Lv. 2. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Collect Sealed Power Powder and other consumables and take them to the Store Manager to exchange for Golden Fruit Buff Lv. 2, Dragon's Special Elixir Lv. 2. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92413" name="Mystery Box Lv. 1" type="NONE">
 	<!-- Double-click to obtain one of the following: Mystery Box Lv. 2, Sayha's Blessing, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92414" name="Mystery Box Lv. 2" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 3, Sayha's Blessing, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92415" name="Mystery Box Lv. 3" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 4, Sayha’s Blessing, XP Boost Scroll, Dragon Pendant. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92416" name="Mystery Box Lv. 4" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 5, Sayha's Blessing, Battle Scroll, Dragon’s Belt Box. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92417" name="Mystery Box Lv. 5" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 6, Sayha's Benefaction, Agathion Exchange Ticket. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92418" name="Mystery Box Lv. 6" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 7, Sayha's Storm, Magic Lamp Acceleration Potion, Lv. 3 Gem. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92419" name="Mystery Box Lv. 7" type="NONE">
 	<!-- Double-click to obtain one of various items such as Mystery Box Lv. 8, Magic Lamp Acceleration Potion, A-grade weapon. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92420" name="Mystery Box Lv. 8" type="NONE">
 	<!-- Double-click to obtain one of various items such as Antharas' Earring, Talisman of Baium, Brooch Lv. 4. -->
-		<restriction stackable="true" sellable="false"/>
+		<restriction sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -206,11 +208,11 @@
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
-			<stat type="MAGIC_ATTACK" value="173.0"/>
-			<stat type="PHYSICAL_ATTACK" value="251.0"/>
+			<stat type="MAGIC_ATTACK" value="182.0"/>
+			<stat type="PHYSICAL_ATTACK" value="271.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 		<skills>
 			<skill id="50300" value="-1"/>  <!-- Queen Ant’s Stone Crasher -->
@@ -219,568 +221,591 @@
 
 	<item id="92422" name="Tower of Insolence Stone of Memory: 1st Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 1st Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92423" name="Tower of Insolence Stone of Memory: 2nd Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 2nd Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92424" name="Tower of Insolence Stone of Memory: 3rd Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 3rd Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92425" name="Tower of Insolence Stone of Memory: 4th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 4th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92426" name="Tower of Insolence Stone of Memory: 5th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 5th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92427" name="Tower of Insolence Stone of Memory: 6th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 6th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92428" name="Tower of Insolence Stone of Memory: 7th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 7th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92429" name="Tower of Insolence Stone of Memory: 8th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 8th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92430" name="Tower of Insolence Stone of Memory: 9th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 9th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92431" name="Tower of Insolence Stone of Memory: 10th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 10th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92432" name="Tower of Insolence Stone of Memory: 11th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 11th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92433" name="Tower of Insolence Stone of Memory: 12th Floor" type="SCROLL">
 	<!-- Takes you to the Tower of Insolence: 12th Floor. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92434" name="Mystery Talisman Box" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 1, Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92435" name="Mystery Talisman Pack Lv. 1" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 2, +1 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92436" name="Mystery Talisman Pack Lv. 2" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 3, +2 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92437" name="Mystery Talisman Pack Lv. 3" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 4, +3 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92438" name="Mystery Talisman Pack Lv. 4" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 5, +4 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92439" name="Mystery Talisman Pack Lv. 5" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 6, +5 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92440" name="Mystery Talisman Pack Lv. 6" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 7, +6 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92441" name="Mystery Talisman Pack Lv. 7" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman Pack Lv. 8, +7 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92442" name="Mystery Talisman Pack Lv. 8" type="NONE">
 	<!-- Double-click to obtain one of various items such as Talisman of Baium, +8 Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="92443" name="+1 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +1 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="1" max-enchant="1"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="1" max-enchant="1"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92444" name="+2 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +2 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="2" max-enchant="2"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="2" max-enchant="2"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92445" name="+3 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +3 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="3" max-enchant="3"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="3" max-enchant="3"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92446" name="+4 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +4 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="4" max-enchant="4"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="4" max-enchant="4"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92447" name="+5 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +5 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="5" max-enchant="5"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="5" max-enchant="5"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92448" name="+6 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +6 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="6" max-enchant="6"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="6" max-enchant="6"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92449" name="+7 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +7 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="7" max-enchant="7"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="7" max-enchant="7"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
 	<item id="92450" name="+8 Aden Talisman Box" type="NONE">
-	<!-- Double-click to obtain +8 Enchanted Aden Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="91745" min-enchant="8" max-enchant="8"/>  <!-- Enchanted Aden Talisman -->
+			<item id="91745" min-enchant="8" max-enchant="8"/>  <!-- Aden Talisman -->
 		</extract>
 	</item>
 
-	<item id="92451" name="+1 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +1 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92451" name="+1 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="1" max-enchant="1"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="1" max-enchant="1"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92452" name="+2 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +2 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92452" name="+2 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="2" max-enchant="2"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="2" max-enchant="2"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92453" name="+3 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +3 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92453" name="+3 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="3" max-enchant="3"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="3" max-enchant="3"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92454" name="+4 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +4 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92454" name="+4 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="4" max-enchant="4"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="4" max-enchant="4"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92455" name="+5 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +5 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92455" name="+5 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="5" max-enchant="5"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="5" max-enchant="5"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92456" name="+6 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +6 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92456" name="+6 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="6" max-enchant="6"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="6" max-enchant="6"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92457" name="+7 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +7 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92457" name="+7 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="7" max-enchant="7"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="7" max-enchant="7"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
-	<item id="92458" name="+8 Eva’s Talisman Box" type="NONE">
-	<!-- Double-click to obtain +8 Enchanted Eva's Talisman. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<item id="92458" name="+8 Eva's Talisman Box" type="NONE">
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92018" min-enchant="8" max-enchant="8"/>  <!-- Enchanted Eva's Talisman -->
+			<item id="92018" min-enchant="8" max-enchant="8"/>  <!-- Eva's Talisman -->
 		</extract>
 	</item>
 
 	<item id="92459" name="Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92460" name="+1 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +1 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="1" max-enchant="1"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="1" max-enchant="1"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92461" name="+2 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +2 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="2" max-enchant="2"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="2" max-enchant="2"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92462" name="+3 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +3 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="3" max-enchant="3"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="3" max-enchant="3"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92463" name="+4 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +4 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="4" max-enchant="4"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="4" max-enchant="4"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92464" name="+5 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +5 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="5" max-enchant="5"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="5" max-enchant="5"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92465" name="+6 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +6 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="6" max-enchant="6"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="6" max-enchant="6"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92466" name="+7 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +7 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="7" max-enchant="7"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="7" max-enchant="7"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92467" name="+8 Speed Talisman Box" type="NONE">
-	<!-- Double-click to obtain a +8 Enchanted Talisman - Speed. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="92403" min-enchant="8" max-enchant="8"/>  <!-- Enchanted Speed Talisman -->
+			<item id="92403" min-enchant="8" max-enchant="8"/>  <!-- Talisman - Speed -->
 		</extract>
 	</item>
 
 	<item id="92468" name="Venir's Talisman Lv. 1 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 1. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71271"/>  <!-- Venir's Talisman -->
+			<item id="71271"/>  <!-- 71271 -->
 		</extract>
 	</item>
 
 	<item id="92469" name="Venir's Talisman Lv. 2 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 2. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71272"/>  <!-- Venir's Talisman -->
+			<item id="71272"/>  <!-- 71272 -->
 		</extract>
 	</item>
 
 	<item id="92470" name="Venir's Talisman Lv. 3 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 3. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71273"/>  <!-- Venir's Talisman -->
+			<item id="71273"/>  <!-- 71273 -->
 		</extract>
 	</item>
 
 	<item id="92471" name="Venir's Talisman Lv. 4 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 4. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71274"/>  <!-- Venir's Talisman -->
+			<item id="71274"/>  <!-- 71274 -->
 		</extract>
 	</item>
 
 	<item id="92472" name="Venir's Talisman Lv. 5 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 5. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71275"/>  <!-- Venir's Talisman -->
+			<item id="71275"/>  <!-- 71275 -->
 		</extract>
 	</item>
 
 	<item id="92473" name="Venir's Talisman Lv. 6 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 6. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71276"/>  <!-- Venir's Talisman -->
+			<item id="71276"/>  <!-- 71276 -->
 		</extract>
 	</item>
 
 	<item id="92474" name="Venir's Talisman Lv. 7 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 7. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71277"/>  <!-- Venir's Talisman -->
+			<item id="71277"/>  <!-- 71277 -->
 		</extract>
 	</item>
 
 	<item id="92475" name="Venir's Talisman Lv. 8 Box" type="NONE">
-	<!-- Double-click to obtain Venir's Talisman Lv. 8. -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
-			<item id="71278"/>  <!-- Venir's Talisman -->
+			<item id="71278"/>  <!-- 71278 -->
 		</extract>
 	</item>
 
 	<item id="92476" name="Metal Ingot" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for swords (one-handed), blunt weapons (one-handed), daggers, dualswords, fist weapons (two-handed). -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92477" name="Wood" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for spears, swords (two-handed), blunt weapons (two-handed). -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92478" name="Varnish" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for accessories. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92479" name="Metallograph" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for heavy armor. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92480" name="Leather" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for light armor. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92481" name="Cloth" type="MATERIAL">
-	<!-- Ingredient to craft a Dwarven item. Ingredient for robes. -->
-		<restriction stackable="true"/>
-		<attributes weight="2" price="1000"/>
+	<!-- Ingredient used for Dwarf Item Crafting and Special Crafting -->
+		<restriction/>
+		<attributes price="1000"/>
+		<random_craft exp="500" commission="10"/>
 	</item>
 
 	<item id="92482" name="Item Points" type="NONE">
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="100"/>
 	</item>
 
 	<item id="92483" name="Necklace of Anguish Chain" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Necklace of Anguish. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="12500"/>
+	<!-- Key material that Dwarves use to make the Necklace of Anguish. -->
+		<restriction/>
+		<attributes weight="60" price="4680"/>
+		<random_craft exp="2340" commission="47"/>
 	</item>
 
 	<item id="92484" name="Necklace of Wisdom Chain" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Necklace of Wisdom. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="12500"/>
+	<!-- Key material that Dwarves use to make the Necklace of Wisdom. -->
+		<restriction/>
+		<attributes weight="60" price="11900"/>
+		<random_craft exp="5950" commission="119"/>
 	</item>
 
 	<item id="92485" name="Blue Diamond Necklace Gem" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Blue Diamond Necklace. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="12500"/>
+	<!-- Key material that Dwarves use to make the Blue Diamond Necklace. -->
+		<restriction/>
+		<attributes weight="60" price="21300"/>
+		<random_craft exp="10650" commission="213"/>
 	</item>
 
 	<item id="92486" name="Necklace of Devotion Chain" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Necklace of Devotion. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="54100"/>
+	<!-- Key material that Dwarves use to make the Necklace of Devotion. -->
+		<restriction/>
+		<attributes weight="60" price="11967"/>
+		<random_craft exp="5983" commission="120"/>
 	</item>
 
 	<item id="92487" name="Necklace Chain of Magic" type="MATERIAL">
-	<!-- Key material that Dwarves use to make a Magic Necklace. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="54100"/>
+	<!-- Key material that Dwarves use to make a Magic Necklace. -->
+		<restriction/>
+		<attributes weight="60" price="18934"/>
+		<random_craft exp="9467" commission="190"/>
 	</item>
 
 	<item id="92488" name="Tiger's Eye Stone" type="MATERIAL">
-	<!-- Key material that Dwarves use to make Tiger's Eye. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="54100"/>
+	<!-- Key material that Dwarves use to make Tiger's Eye. -->
+		<restriction/>
+		<attributes weight="60" price="21434"/>
+		<random_craft exp="10717" commission="215"/>
 	</item>
 
 	<item id="92489" name="Elven Earring Beads" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Elven Earring. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="136000"/>
+	<!-- Key material that Dwarves use to make the Elven Earring. -->
+		<restriction/>
+		<attributes weight="60" price="31134"/>
+		<random_craft exp="15567" commission="312"/>
 	</item>
 
 	<item id="92490" name="Elven Ring Piece" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Elven Ring. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="136000"/>
+	<!-- Key material that Dwarves use to make the Elven Ring. -->
+		<restriction/>
+		<attributes weight="60" price="20767"/>
+		<random_craft exp="10383" commission="208"/>
 	</item>
 
 	<item id="92491" name="Elven Necklace Beads" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Elven Necklace. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="136000"/>
+	<!-- Key material that Dwarves use to make the Elven Necklace. -->
+		<restriction/>
+		<attributes weight="60" price="41667"/>
+		<random_craft exp="20833" commission="417"/>
 	</item>
 
 	<item id="92492" name="Onyx Beast's Eye Earring Gemstone" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Onyx Beast's Eye. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="2650"/>
+	<!-- Key material that Dwarves use to make the Onyx Beast's Eye Earring. -->
+		<restriction/>
+		<attributes weight="60" price="40334"/>
+		<random_craft exp="20167" commission="404"/>
 	</item>
 
 	<item id="92493" name="Mithril Ring Wire" type="MATERIAL">
-	<!-- Key material that Dwarves use to make a Mithril Ring. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="7960"/>
+	<!-- Key material that Dwarves use to make a Mithril Ring. -->
+		<restriction/>
+		<attributes weight="60" price="26934"/>
+		<random_craft exp="13467" commission="270"/>
 	</item>
 
 	<item id="92494" name="Necklace of Darkness Gem" type="MATERIAL">
-	<!-- Key material that Dwarves need to make a Necklace of Darkness. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="4970"/>
+	<!-- Key material that Dwarves need to make a Necklace of Darkness. -->
+		<restriction/>
+		<attributes weight="60" price="54000"/>
+		<random_craft exp="27000" commission="540"/>
 	</item>
 
 	<item id="92495" name="Moonstone Earring Wire" type="MATERIAL">
-	<!-- Key material that Dwarves use to make a Moonstone Earring. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="10200"/>
+	<!-- Key material that Dwarves use to make a Moonstone Earring. -->
+		<restriction/>
+		<attributes weight="60" price="31000"/>
+		<random_craft exp="15500" commission="310"/>
 	</item>
 
 	<item id="92496" name="Aquastone Ring Wire" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Aquastone Ring. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="6770"/>
+	<!-- Key material that Dwarves use to make the Aquastone Ring. -->
+		<restriction/>
+		<attributes weight="60" price="20600"/>
+		<random_craft exp="10300" commission="206"/>
 	</item>
 
 	<item id="92497" name="Aquastone Necklace Chain" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Aquastone Necklace. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="31800"/>
+	<!-- Key material that Dwarves use to make the Aquastone Necklace. -->
+		<restriction/>
+		<attributes weight="60" price="41400"/>
+		<random_craft exp="20700" commission="414"/>
 	</item>
 
 	<item id="92498" name="Earring of Protection Gemstone" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Earring of Protection. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="19900"/>
+	<!-- Key material that Dwarves use to make the Earring of Protection. -->
+		<restriction/>
+		<attributes weight="60" price="39200"/>
+		<random_craft exp="19600" commission="392"/>
 	</item>
 
 	<item id="92499" name="Ring of Protection Gemstone" type="MATERIAL">
-	<!-- Key material that Dwarves use to make the Ring of Protection. Can be sold in any shop. -->
-		<restriction stackable="true"/>
-		<attributes weight="60" price="4680"/>
+	<!-- Key material that Dwarves use to make the Ring of Protection. -->
+		<restriction/>
+		<attributes weight="60" price="26000"/>
+		<random_craft exp="13000" commission="260"/>
 	</item>
 
 </list>

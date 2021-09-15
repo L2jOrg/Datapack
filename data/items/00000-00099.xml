@@ -57,7 +57,7 @@
 			<stat type="PHYSICAL_ATTACK" value="8.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -73,7 +73,7 @@
 			<stat type="PHYSICAL_ATTACK" value="11.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -89,7 +89,7 @@
 			<stat type="PHYSICAL_ATTACK" value="5.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -105,7 +105,7 @@
 			<stat type="PHYSICAL_ATTACK" value="6.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -121,7 +121,7 @@
 			<stat type="PHYSICAL_ATTACK" value="11.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -137,7 +137,7 @@
 			<stat type="PHYSICAL_ATTACK" value="16.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -261,9 +261,10 @@
 
 	<item id="17" name="Wooden Arrow" type="ARROW">
 	<!-- Arrow made of wood. It is an arrow used for a No-grade bow. -->
-		<restriction stackable="true"/>
-		<attributes weight="6" price="2" immediate-effect="true" action="EQUIP"/>
-		<crystal/>
+		<restriction/>
+		<attributes weight="1" price="1" immediate-effect="true" action="EQUIP"/>
+		<random_craft commission="1"/>
+		<crystal type="NONE"/>
 	</item>
 
 	<armor id="18" name="Leather Shield" type="SHIELD" body-part="LEFT_HAND">
@@ -271,7 +272,6 @@
 		<attributes weight="1430" price="39" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="EVASION_RATE" value="-8.0"/>
 			<stat type="SHIELD_DEFENCE" value="47.0"/>
 			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
@@ -282,7 +282,6 @@
 		<attributes weight="1420" price="638" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="EVASION_RATE" value="-8.0"/>
 			<stat type="SHIELD_DEFENCE" value="56.0"/>
 			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
@@ -293,7 +292,6 @@
 		<attributes weight="1410" price="2780" commission-type="SHIELD" enchant-enabled="false" />
 		<crystal />
 		<stats>
-			<stat type="EVASION_RATE" value="-8.0"/>
 			<stat type="SHIELD_DEFENCE" value="67.0"/>
 			<stat type="SHIELD_DEFENCE_RATE" value="20.0"/>
 		</stats>
@@ -473,6 +471,7 @@
 	<armor id="40" name="Leather Boots" type="NONE" body-part="FEET">
 		<restriction freightable="false"/>
 		<attributes weight="1300" price="20900" commission-type="FEET" />
+		<random_craft exp="10450" commission="209" locked="true"/>
 		<crystal type="D" count="38"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="19.0"/>
@@ -518,6 +517,7 @@
 	<armor id="45" name="Bone Helmet" type="NONE" body-part="HEAD">
 		<restriction freightable="false"/>
 		<attributes weight="640" price="31300" commission-type="HELMET" />
+		<random_craft exp="15650" commission="313" locked="true"/>
 		<crystal type="D" count="56"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
@@ -527,6 +527,7 @@
 	<armor id="46" name="Bronze Helmet" type="NONE" body-part="HEAD">
 		<restriction freightable="false"/>
 		<attributes weight="630" price="50000" commission-type="HELMET" />
+		<random_craft exp="25000" commission="500" locked="true"/>
 		<crystal type="D" count="90"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="33.0"/>
@@ -536,6 +537,7 @@
 	<armor id="47" name="Helmet" type="NONE" body-part="HEAD">
 		<restriction freightable="false"/>
 		<attributes weight="640" price="76200" commission-type="HELMET" />
+		<random_craft exp="38100" commission="762" locked="true"/>
 		<crystal type="D" count="138"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="37.0"/>
@@ -586,6 +588,7 @@
 	<armor id="58" name="Mithril Breastplate" type="HEAVY" body-part="CHEST">
 		<restriction freightable="false"/>
 		<attributes weight="8670" price="183000" commission-type="ARMOR_TOP" />
+		<random_craft exp="91500" commission="1830" locked="true"/>
 		<crystal type="D" count="332"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="95.0"/>
@@ -595,6 +598,7 @@
 	<armor id="59" name="Mithril Gaiters" type="HEAVY" body-part="LEGS">
 		<restriction freightable="false"/>
 		<attributes weight="3830" price="127000" commission-type="ARMOR_PANTS" />
+		<random_craft exp="63500" commission="1270" locked="true"/>
 		<crystal type="D" count="230"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="61.0"/>
@@ -605,6 +609,7 @@
 	<!-- Full body armor. -->
 		<restriction freightable="false"/>
 		<attributes weight="10980" price="1440000" commission-type="FULL_BODY" />
+		<random_craft exp="720000" commission="14400" locked="true"/>
 		<crystal type="C" count="576"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="224.0"/>
@@ -614,6 +619,7 @@
 	<armor id="61" name="Mithril Gloves" type="NONE" body-part="GLOVES">
 		<restriction freightable="false"/>
 		<attributes weight="630" price="97800" commission-type="GLOVES" />
+		<random_craft exp="48900" commission="978" locked="true"/>
 		<crystal type="D" count="177"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="29.0"/>
@@ -623,6 +629,7 @@
 	<armor id="62" name="Reinforced Mithril Boots" type="NONE" body-part="FEET">
 		<restriction freightable="false"/>
 		<attributes weight="1230" price="126000" commission-type="FEET" />
+		<random_craft exp="63000" commission="1260" locked="true"/>
 		<crystal type="C" count="50"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="32.0"/>
@@ -632,6 +639,7 @@
 	<armor id="63" name="Gauntlets" type="NONE" body-part="GLOVES">
 		<restriction freightable="false"/>
 		<attributes weight="640" price="50800" commission-type="GLOVES" />
+		<random_craft exp="25400" commission="508" locked="true"/>
 		<crystal type="D" count="92"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="24.0"/>
@@ -641,6 +649,7 @@
 	<armor id="64" name="Compound Boots" type="NONE" body-part="FEET">
 		<restriction freightable="false"/>
 		<attributes weight="1220" price="245000" commission-type="FEET" />
+		<random_craft exp="122500" commission="2450" locked="true"/>
 		<crystal type="C" count="98"/>
 		<stats>
 			<stat type="PHYSICAL_DEFENCE" value="36.0"/>
@@ -695,6 +704,7 @@
 	<weapon id="69" name="Bastard Sword" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1510" price="644000" commission-type="ONE_HAND_SWORD" change-weapon="9213"/>
+		<random_craft exp="322000" commission="6440" locked="true"/>
 		<crystal type="D" count="1170"/>
 		<damage radius="42" angle="240"/>
 		<stats>
@@ -710,6 +720,7 @@
 	<weapon id="70" name="Claymore" type="TWO_HAND_SWORD" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2090" price="1800000" commission-type="TWO_HAND_SWORD" change-weapon="9226"/>
+		<random_craft exp="900000" commission="18000" locked="true"/>
 		<crystal type="D" count="3272"/>
 		<damage radius="44" angle="240"/>
 		<stats>
@@ -725,11 +736,12 @@
 	<weapon id="71" name="Flamberge" type="TWO_HAND_SWORD" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2010" price="2290000" commission-type="TWO_HAND_SWORD" change-weapon="9232"/>
+		<random_craft exp="1145000" commission="22900" locked="true"/>
 		<crystal type="C" count="916"/>
 		<damage radius="44" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
 			<stat type="PHYSICAL_ATTACK" value="130.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -740,11 +752,12 @@
 	<weapon id="72" name="Stormbringer" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1430" price="2290000" commission-type="ONE_HAND_SWORD" change-weapon="9228"/>
+		<random_craft exp="1145000" commission="22900" locked="true"/>
 		<crystal type="C" count="916"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
 			<stat type="PHYSICAL_ATTACK" value="107.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -755,11 +768,12 @@
 	<weapon id="73" name="Shamshir" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1420" price="2870000" commission-type="ONE_HAND_SWORD" change-weapon="9240"/>
+		<random_craft exp="1435000" commission="28700" locked="true"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="MAGIC_ATTACK" value="74.0"/>
 			<stat type="PHYSICAL_ATTACK" value="122.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -770,11 +784,12 @@
 	<weapon id="74" name="Katana" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1420" price="2870000" commission-type="ONE_HAND_SWORD" change-weapon="9244"/>
+		<random_craft exp="1435000" commission="28700" locked="true"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="MAGIC_ATTACK" value="74.0"/>
 			<stat type="PHYSICAL_ATTACK" value="122.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -785,11 +800,12 @@
 	<weapon id="75" name="Caliburs" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9264"/>
+		<random_craft exp="2150000" commission="43000" locked="true"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -800,11 +816,12 @@
 	<weapon id="76" name="Sword of Delusion" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9268"/>
+		<random_craft exp="2150000" commission="43000" locked="true"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -815,11 +832,12 @@
 	<weapon id="77" name="Tsurugi" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1400" price="4300000" commission-type="ONE_HAND_SWORD" change-weapon="9272"/>
+		<random_craft exp="2150000" commission="43000" locked="true"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -830,11 +848,12 @@
 	<weapon id="78" name="Great Sword" type="TWO_HAND_SWORD" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1930" price="8680000" commission-type="TWO_HAND_SWORD" change-weapon="9308"/>
+		<random_craft exp="4340000" commission="86800" locked="true"/>
 		<crystal type="B" count="1157"/>
 		<damage radius="44" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="MAGIC_ATTACK" value="102.0"/>
 			<stat type="PHYSICAL_ATTACK" value="213.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -845,11 +864,12 @@
 	<weapon id="79" name="Damascus Sword" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1350" price="13100000" commission-type="ONE_HAND_SWORD" change-weapon="9316"/>
+		<random_craft exp="6550000" commission="131000" locked="true"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -860,11 +880,12 @@
 	<weapon id="80" name="Tallum Blade" type="SWORD" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1330" price="14098000" commission-type="ONE_HAND_SWORD" change-weapon="9328"/>
+		<random_craft exp="7049000" commission="140980" locked="true"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="MAGIC_ATTACK" value="121.0"/>
 			<stat type="PHYSICAL_ATTACK" value="213.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -875,11 +896,12 @@
 	<weapon id="81" name="Dragon Slayer" type="TWO_HAND_SWORD" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1840" price="20741000" commission-type="TWO_HAND_SWORD" change-weapon="9344"/>
+		<random_craft exp="10370500" commission="207410" locked="true"/>
 		<crystal type="A" count="1659"/>
 		<damage radius="46" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="114.0"/>
+			<stat type="MAGIC_ATTACK" value="129.0"/>
 			<stat type="PHYSICAL_ATTACK" value="282.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -890,6 +912,7 @@
 	<weapon id="83" name="Sword of Magic" type="MAGIC_SWORD" body-part="RIGHT_HAND" magic="true">
 		<restriction freightable="false"/>
 		<attributes weight="970" price="716000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<random_craft exp="358000" commission="7160" locked="true"/>
 		<crystal type="D" count="1301"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -905,11 +928,12 @@
 	<weapon id="84" name="Homunkulus' Sword" type="MAGIC_SWORD" body-part="RIGHT_HAND" magic="true">
 		<restriction freightable="false"/>
 		<attributes weight="950" price="4300000" commission-type="ONE_HAND_MAGIC_SWORD"/>
+		<random_craft exp="2150000" commission="43000" locked="true"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="101.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
 			<stat type="PHYSICAL_ATTACK" value="111.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
@@ -920,6 +944,7 @@
 	<weapon id="86" name="Tomahawk" type="BLUNT" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1780" price="644000" commission-type="BLUNT_WEAPON"/>
+		<random_craft exp="322000" commission="6440" locked="true"/>
 		<crystal type="D" count="1170"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -929,7 +954,7 @@
 			<stat type="PHYSICAL_ATTACK" value="51.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
@@ -945,13 +970,14 @@
 			<stat type="PHYSICAL_ATTACK" value="31.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="88" name="Morning Star" type="BLUNT" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1720" price="1400000" commission-type="BLUNT_WEAPON"/>
+		<random_craft exp="700000" commission="14000" locked="true"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -961,29 +987,31 @@
 			<stat type="PHYSICAL_ATTACK" value="79.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="89" name="Big Hammer" type="BLUNT" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1710" price="2290000" commission-type="BLUNT_WEAPON"/>
+		<random_craft exp="1145000" commission="22900" locked="true"/>
 		<crystal type="C" count="916"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
-			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
 			<stat type="PHYSICAL_ATTACK" value="107.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="90" name="Goat Head Staff" type="STAFF" body-part="TWO_HAND" magic="true">
 		<restriction freightable="false"/>
 		<attributes weight="1000" price="1400000" commission-type="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+		<random_craft exp="700000" commission="14000" locked="true"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="46" angle="240"/>
 		<stats>
@@ -993,45 +1021,48 @@
 			<stat type="PHYSICAL_ATTACK" value="77.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="91" name="Heavy War Axe" type="BLUNT" body-part="RIGHT_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1620" price="8680000" commission-type="BLUNT_WEAPON"/>
+		<random_craft exp="4340000" commission="86800" locked="true"/>
 		<crystal type="B" count="1157"/>
 		<damage radius="40" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
-			<stat type="MAGIC_ATTACK" value="91.0"/>
+			<stat type="MAGIC_ATTACK" value="102.0"/>
 			<stat type="PHYSICAL_ATTACK" value="175.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="379.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="92" name="Spirit's Staff" type="STAFF" body-part="TWO_HAND" magic="true">
 		<restriction freightable="false"/>
 		<attributes weight="960" price="8680000" commission-type="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+		<random_craft exp="4340000" commission="86800" locked="true"/>
 		<crystal type="B" count="1157"/>
 		<damage radius="46" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="8.0"/>
 			<stat type="CRITICAL_RATE" value="6.0"/>
-			<stat type="MAGIC_ATTACK" value="134.0"/>
+			<stat type="MAGIC_ATTACK" value="151.0"/>
 			<stat type="PHYSICAL_ATTACK" value="170.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="40.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
-			<stat type="RANDOM_DAMAGE" value="20.0"/>
+			<stat type="RANDOM_DAMAGE" value="19.0"/>
 		</stats>
 	</weapon>
 
 	<weapon id="93" name="Winged Spear" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2060" price="1400000" commission-type="SPEAR"/>
+		<random_craft exp="700000" commission="14000" locked="true"/>
 		<crystal type="D" count="2545"/>
 		<damage radius="66" angle="240"/>
 		<stats>
@@ -1051,12 +1082,13 @@
 	<weapon id="94" name="Bec de Corbin" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2020" price="2870000" commission-type="SPEAR"/>
+		<random_craft exp="1435000" commission="28700" locked="true"/>
 		<crystal type="C" count="1148"/>
 		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="68.0"/>
+			<stat type="MAGIC_ATTACK" value="74.0"/>
 			<stat type="PHYSICAL_ATTACK" value="122.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -1070,12 +1102,13 @@
 	<weapon id="95" name="Poleaxe" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2010" price="4300000" commission-type="SPEAR"/>
+		<random_craft exp="2150000" commission="43000" locked="true"/>
 		<crystal type="C" count="1720"/>
 		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="76.0"/>
+			<stat type="MAGIC_ATTACK" value="83.0"/>
 			<stat type="PHYSICAL_ATTACK" value="139.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -1089,12 +1122,13 @@
 	<weapon id="96" name="Scythe" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="2040" price="2290000" commission-type="SPEAR"/>
+		<random_craft exp="1145000" commission="22900" locked="true"/>
 		<crystal type="C" count="916"/>
 		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="61.0"/>
+			<stat type="MAGIC_ATTACK" value="67.0"/>
 			<stat type="PHYSICAL_ATTACK" value="107.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -1108,12 +1142,13 @@
 	<weapon id="97" name="Lance" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1920" price="13100000" commission-type="SPEAR"/>
+		<random_craft exp="6550000" commission="131000" locked="true"/>
 		<crystal type="B" count="1746"/>
 		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="99.0"/>
+			<stat type="MAGIC_ATTACK" value="111.0"/>
 			<stat type="PHYSICAL_ATTACK" value="194.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -1127,12 +1162,13 @@
 	<weapon id="98" name="Halberd" type="SPEAR" body-part="TWO_HAND">
 		<restriction freightable="false"/>
 		<attributes weight="1900" price="14098000" commission-type="SPEAR"/>
+		<random_craft exp="7049000" commission="140980" locked="true"/>
 		<crystal type="A" count="1128"/>
 		<damage radius="66" angle="240"/>
 		<stats>
 			<stat type="ACCURACY" value="-3.75"/>
 			<stat type="CRITICAL_RATE" value="8.0"/>
-			<stat type="MAGIC_ATTACK" value="107.0"/>
+			<stat type="MAGIC_ATTACK" value="121.0"/>
 			<stat type="PHYSICAL_ATTACK" value="213.0"/>
 			<stat type="PHYSICAL_ATTACK_RANGE" value="80.0"/>
 			<stat type="PHYSICAL_ATTACK_SPEED" value="325.0"/>
@@ -1157,4 +1193,5 @@
 			<stat type="RANDOM_DAMAGE" value="10.0"/>
 		</stats>
 	</weapon>
+
 </list>

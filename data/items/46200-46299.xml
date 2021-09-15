@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<item id="46254" name="Dandy's Home Run Ball" type="SCROLL">
-	<!-- Golden Ball received from Dandy. For 1 hr., acquired XP/SP +100%. Cannot be stacked with Fish Stew - The Guild's Gratitude. Changes the appearance of your armor into that of a Uniform. Buff remains after death.\n\n -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<item id="46254" name="Dandy's Homerun Ball" type="SCROLL">
+	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +100%\nSP Gain +100%\n\n- Duration: 60 minutes\n(Armor appearance changes to that of NC Dinos Uniform) -->
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="32030" value="-1"/>  <!-- Dandy's Homerun Ball -->
 		</skill-reducer>
 	</item>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="91300" name="Spring Energy Lv. 3" type="NONE">
-	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.  \n\n<Note>\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\n\n -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Max HP/MP +15%, P. Atk. +15%, M. Atk. +23%, Atk. Spd./Casting Spd. +15%, P. Def/M. Def +15%, XP/SP gain +15%, Sayha's Grace Consumption Rate -15% for 20 minutes when used.\n\n<Note>\nIf two Spring Energies of different levels are used, only the effects of the higher level will be applied.\n\n -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="91301" name="Sayha's Spring Breeze" type="NONE">
 	<!-- An item containing a fresh spring breeze. Sayha's Grace Consumption +100% and XP/SP gain +150% when hunting monsters. Remains active after death. Duration is 20 minutes. Cooldown is 20 minutes. Available only when there is at least 1 slot left for Sayha's Grace. \n\n<Note>\nCannot be used with Sayha's Storm or Sayha's Gust.\n\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="51228" value="-1"/>  <!-- Sayha's Spring Breeze -->
 		</skill-reducer>
 	</item>
 
 	<item id="91302" name="Spring's Blessing Box" type="NONE">
 	<!-- A blessed box that Primavera prepared with great care. Double-click to obtain 1 item at random among Fire Dragon Belt, Earth Dragon Belt, Enchant Scroll Enchant Scroll by grade, and various supply items. \n\n -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -173,7 +173,7 @@
 	</armor>
 
 	<armor id="91319" name="Greater Jade Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Resistance to Melee Weapon Attack +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<!-- When equipped, Atk. Spd./Casting Spd. +20%, Movement Speed +7%, Resistance to Melee Weapon Resistance +10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -323,7 +323,7 @@
 	</armor>
 
 	<armor id="91334" name="Greater Diamond Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P. Def +400, P. Critical Damage Received -20%, and P. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<!-- When equipped, P. Def +400, P. Critical Damage Received -20%, and P. Critical Attack Receive Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -333,7 +333,7 @@
 	</armor>
 
 	<armor id="91335" name="Greater Pearl Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +85 and M. Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
+	<!-- When equipped, M. Def +85 and M. Skill Critical Damage Received -11%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -343,7 +343,7 @@
 	</armor>
 
 	<armor id="91336" name="Greater Pearl Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +100 and M. Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, M. Def +100 and M. Skill Critical Damage Received -12%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -353,7 +353,7 @@
 	</armor>
 
 	<armor id="91337" name="Greater Pearl Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +125 and M. Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, M. Def +125 and M. Skill Critical Damage Received -14%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -363,7 +363,7 @@
 	</armor>
 
 	<armor id="91338" name="Greater Pearl Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +160 and M. Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, M. Def +160 and M. Skill Critical Damage Received -16%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -373,7 +373,7 @@
 	</armor>
 
 	<armor id="91339" name="Greater Pearl Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, M. Def +250, M. Critical Damage Received -20%, and M. Critical Attack Receival Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<!-- When equipped, M. Def +250, M. Skill Critical Damage Received -20%, and M. Skill Critical Attack Receive Rate -10%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -383,7 +383,7 @@
 	</armor>
 
 	<armor id="91340" name="Greater Vital Stone Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +17% and Sayha's Grace Consumption Rate -30% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<!-- XP/SP Gain +17% and Sayha's Grace Consumption -30% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -393,7 +393,7 @@
 	</armor>
 
 	<armor id="91341" name="Greater Vital Stone Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +19% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- XP/SP Gain +19% and Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -403,7 +403,7 @@
 	</armor>
 
 	<armor id="91342" name="Greater Vital Stone Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +21% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- XP/SP Gain +21% and Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -413,7 +413,7 @@
 	</armor>
 
 	<armor id="91343" name="Greater Vital Stone Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +23% and Sayha's Grace Consumption Rate -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- XP/SP Gain +23% and Sayha's Grace Consumption -32% while hunting during Sayha's Grace effect. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -423,7 +423,7 @@
 	</armor>
 
 	<armor id="91344" name="Greater Vital Stone Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- XP/SP gain +30% and Attribute XP +50% for hunting attribute NPCs while hunting during Sayha's Grace effect. Sayha's Grace Consumption Rate -35%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<!-- XP/SP Gain +30% and Attribute XP +50% for hunting attribute NPCs while hunting during Sayha's Grace effect. Sayha's Grace Consumption -35%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -468,49 +468,49 @@
 	</armor>
 
 	<armor id="91350" name="Greater Cat's Eye Lv. 1" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +16% and P./M. Skill Power +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. -->
+	<!-- When equipped, P. Critical/M. Skill Critical Damage +16% and P./M. Skill Power +1%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91351" name="Greater Cat's Eye Lv. 2" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +17% and P./M. Skill Power +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, P. Critical/M. Skill Critical Damage +17% and P./M. Skill Power +2%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91352" name="Greater Cat's Eye Lv. 3" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +18% and P./M. Skill Power +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, P. Critical/M. Skill Critical Damage +18% and P./M. Skill Power +3%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91353" name="Greater Cat's Eye Lv. 4" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +19% and P./M. Skill Power +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with the Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
+	<!-- When equipped, P. Critical/M. Skill Critical Damage +19% and P./M. Skill Power +5%. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a higher-grade Gem when combined with Gem Energy. If combination fails, the Gem will be reset to Lv. 1. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<armor id="91354" name="Greater Cat's Eye Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, P./M. Critical Damage +20%, P./M. Skill Power +7%, and Buff-canceling Resistance +40%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
+	<!-- When equipped, P. Critical/M. Skill Critical Damage +20%, P./M. Skill Power +7%, and Buff-canceling Resistance +40%. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" dropable="false" sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
 	</armor>
 
 	<item id="91355" name="Brilliant Jewelry Box" type="NONE">
-	<!-- Double-click to obtain 1 Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Cat's Eye, or Emerald (Lv. 1) Box.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain one of the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
 	<item id="91356" name="Gem Energy" type="NONE">
 	<!-- Returns a higher-grade Gem when combined with a Greater Gem. Can be exchanged for a Glittering Rough Jewel through the Store Manager. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -543,7 +543,7 @@
 	</armor>
 
 	<armor id="91361" name="Emerald Lv. 5" type="NONE" body-part="BROOCH_JEWEL">
-	<!-- When equipped, CON, MEN, DEX, WIT, STR, INT +1. If identical Gems are equipped, only the effect of the highest level Gem is applied. Returns a Greater Gem when combined with the Gem Energy. -->
+	<!-- CON, MEN, DEX, WIT, STR, INT +1 when equipped. If identical Gems are equipped, only the effect of the highest level Gem is applied. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="5" enchant-enabled="false" />
 		<crystal />
@@ -585,77 +585,75 @@
 	</armor>
 
 	<item id="91367" name="Emerald Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 1.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91368" name="Emerald Lv. 3 Jewelry Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 3.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91369" name="Emerald Lv. 4 Jewelry Box" type="NONE">
-	<!-- Double-click to obtain an Emerald Lv. 4.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+	<!-- Double-click to obtain the following items. -->
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91370" name="Emerald Lv. 5 Jewelry Box" type="NONE">
+	<item id="91370" name="Emerald Lv. 5 Jewel Box" type="NONE">
 	<!-- Double-click to obtain an Emerald Lv. 5.  -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91371" name="Brilliant Brooch Fragment" type="NONE">
 	<!-- Take 1 Brooch Lv. 4 and 1 Brilliant Brooch Fragment to the Store Manager to exchange them for a Brooch Lv. 5. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91372" name="Bait of Grace" type="LURE">
 	<!-- Event fishing bait. Use it to obtain Blue Mackerels, Whales, or Coins of Grace.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<condition add-name="true" msg-id="1453">
-			<weapon types="FISHING_ROD"/>
 		</condition>
 		<attributes/>
-		<equip body-part="LEFT_HAND"/>
 	</item>
 
 	<item id="91373" name="Fishing Kit of Grace" type="NONE">
 	<!-- Double-click to obtain a box containing 85,000 Bait of Grace, 85,000 Normal Fishing Shots, and 1 Golden Mermaid's Fishing Rod (30-day) Pack.  -->
-		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="91374" name="Coin of Grace" type="NONE">
 	<!-- Coins that Cavalia saved to buy a present. Gather the coins that have been dropped in the water and take them to Cavalia at the Gludin Harbor or Giran Harbor to exchange them for useful items.   -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction dropable="false" sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91375" name="Angler's Rune - Veteran" type="RUNE">
 	<!-- A 7-day item. Only for characters level 76 and below. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91376" name="Angler's Rune - Master" type="RUNE">
 	<!-- A 7-day item. Only for characters level 77 to 80. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
 	<item id="91377" name="Angler's Rune - Supreme" type="RUNE">
 	<!-- A 7-day item. Only for characters level 81 and above. When stored in the inventory, Fishing XP and SP bonus +300%.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080"/>
 	</item>
 
-	<armor id="91378" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nPoison Attack and Resistance +30%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="91378" name="Queen Ant's Ring Lv. 4" type="NONE" body-part="NECK">
+	<!-- <Options>\nP. Atk. +10%\nM. Atk. +15%\nP. Critical Damage +15%\nM. Skill Critical Damage +10%\nP. Accuracy +5\nM. Accuracy +5\nMax MP +30\nInfection Attack and Resistance +30%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -668,8 +666,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- <Options>\nMP Consumption -10%\nHeal Received +12%\nChance to activate MP Drain\nMax MP +40\nMental Attack and Resistance +20%\nHold Attack and Resistance +30%\n\n<Orfen's Earring>\nWhen used in PvP, Max MP -10%.\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
+	<armor id="91379" name="Orfen's Earring Lv. 4" type="NONE" body-part="PENDANT">
+	<!-- <Options>\nMP Consumption -10%\nHeal Received +12%\nChance to activate MP Drain\nMax MP +40\nSilence Attack and Resistance +20%\nFear Attack and Resistance +20%\nHold Attack and Resistance +30%\n\n<Orfen's Earring>\nWhen used in PvP, Max MP -10%.\n\nThe effect does not stack if two identical earrings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -682,8 +680,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91380" name="Ring of Core Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nMental Attack and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nAll debuffs are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="91380" name="Ring of Core Lv. 4" type="NONE" body-part="NECK">
+	<!-- <Options>\nReceived P. Damage -10%\nReceived M. Damage -10%\nP. Evasion +5\nM. Evasion +5\nMax MP +30\nSilence Attack and Resistance +30%\nFear Attack and Resistance +30%\nSleep Resistance +20%\n\n<Ring of Core>\nAll debuffs and Mes are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -697,8 +695,8 @@
 		</skills>
 	</armor>
 
-	<armor id="91381" name="Baium's Ring Lv. 4" type="NONE" body-part="FINGER">
-	<!-- <Options>\nP. Skill Power +20%\nM. Skill Power +20%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Accuracy +8\nM. Accuracy +8\nP. Critical Damage 20%\nM. Critical Damage +20%\nMax MP +35\nStun Attack and Resistance +30%\nBleed Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
+	<armor id="91381" name="Baium's Ring Lv. 4" type="NONE" body-part="NECK">
+	<!-- <Options>\nP. Skill Power +20%\nM. Skill Power +20%\nAtk. Spd. +10%\nCasting Spd. +10%\nP. Accuracy +8\nM. Accuracy +8\nP. Critical Damage 20%\nM. Skill Critical Damage +20%\nMax MP +35\nStun Attack and Resistance +30%\nInfection Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -707,12 +705,12 @@
 			<stat type="MAX_MP" value="35.0"/>
 		</stats>
 		<skills>
-			<skill id="3561" level="15" value="-1"/>  <!-- Baium's Ring -->
+			<skill id="3561" level="15" value="-1"/>  <!-- Damaged Baium's Ring -->
 		</skills>
 	</armor>
 
-	<armor id="91382" name="Zaken's Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- <Options>\nMP Consumption -10%\nHeal Received +15%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +45\nBleed Attack and Resistance +30%\nStun Attack and Resistance +20%\nMental Attack and Resistance +20%\n\n<Zaken’s Earring>\nLimits HP/MP/CP Recovery of enemies when used in PvP.\n\nWhen two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
+	<armor id="91382" name="Zaken's Earring Lv. 4" type="NONE" body-part="PENDANT">
+	<!-- <Options>\nMP Consumption -10%\nHeal Received +15%\nHP Recovery +20%\nVampiric Rage +8%\nMax MP +45\nInfection Attack and Resistance +30%\nStun Attack and Resistance +20%\nSilence Attack and Resistance +20%\nFear Attack and Resistance +20%\n\n<Zaken's Earring>\nLimits HP/MP/CP Recovery of enemies when used in PvP.\n\nWhen two identical earrings are equipped, only one effect is applied. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -721,12 +719,12 @@
 			<stat type="MAX_MP" value="45.0"/>
 		</stats>
 		<skills>
-			<skill id="3559" level="15" value="-1"/>  <!-- Zaken's Earring -->
+			<skill id="3559" level="15" value="-1"/>  <!-- Damaged Zaken's Earring -->
 		</skills>
 	</armor>
 
-	<armor id="91383" name="Antharas' Earring Lv. 4" type="NONE" body-part="EAR">
-	<!-- MP +50, CON +2, MEN +2, Bleed Attack and Resistance +40%, Stun Attack and Resistance +30%, MEN Attack and Resistance +30%, Damage Reflect Resistance +20%, Heal Received +20%, Vampiric Rage +6%, Skill MP Consumption -15%. Enables skills that prevent using physical and magic skills. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
+	<armor id="91383" name="Antharas' Earring Lv. 4" type="NONE" body-part="PENDANT">
+	<!-- MP +50, CON +2, MEN +2, Bleed Attack and Resistance +40%, Stun Attack and Resistance +30%, Silence/Fear Attack and Resistance +30%, Damage Reflect Resistance +20%, Heal Received +20%, Vampiric Rage +6%, Skill MP Consumption -15%. Enables skills that prevent using physical and magic skills. When two identical earrings are equipped, the effect of only one earring will be applied. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
 		<crystal />
@@ -735,43 +733,43 @@
 			<stat type="MAX_MP" value="50.0"/>
 		</stats>
 		<skills>
-			<skill id="3558" level="15" value="-1"/>  <!-- Antharas' Earring -->
+			<skill id="3558" level="15" value="-1"/>  <!-- Damaged Antharas' Earring -->
 		</skills>
 	</armor>
 
 	<item id="91384" name="Queen Ant Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Phoenix Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Queen Ant's Ring Lv. 4 through upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91385" name="Orfen Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Black Ore Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Orfen's Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91386" name="Core Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Black Ore Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Ring of Core Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91387" name="Baium Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Majestic Ring to Head Blacksmith Ferris in the Town of Aden to obtain a Baium's Ring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91388" name="Zaken Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Phoenix Earring to Head Blacksmith Ferris in the Town of Aden to obtain a Zaken's Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91389" name="Antharas Essence" type="NONE">
 	<!-- Take the essence and a +10 to +12 Majestic Earring to Head Blacksmith Ferris in the Town of Aden to obtain the an Antharas' Earring Lv. 4 via upgrade. -->
-		<restriction stackable="true" destroyable="false"/>
+		<restriction destroyable="false"/>
 		<attributes/>
 	</item>
 
@@ -782,60 +780,60 @@
 		<crystal />
 	</armor>
 
-	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2 - Tradable" type="SCROLL">
-	<!-- XP/SP gain +30% while hunting for 20 minutes when used. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
-		<attributes action="SKILL_REDUCE" auto-use="SUPPLY"/>
-		<skill-reducer>
+	<item id="91391" name="Fish Stew - Guildsman's Gratitude Lv. 2" type="SCROLL">
+	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +30%\nSP Gain +30%\n\n- Duration: 20 minutes -->
+		<restriction dropable="false" sellable="false"/>
+		<attributes action="SKILL_REDUCE"/>
+		<skill-reducer type="ItemSkills">
 			<skill id="39076" level="2" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>
 
 	<item id="91392" name="Night Goblin Liquor" type="NONE">
 	<!-- P. Atk. +15%, M. Atk. +23%, P./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP/MP Recovery Bonus +30% for 5 minutes. -->
-		<restriction destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" destroyable="false" tradable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="91393" name="Forgotten Codex - Chapter 1" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91394" name="Forgotten Codex - Chapter 2" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91395" name="Forgotten Codex - Chapter 3" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91396" name="Forgotten Codex - Chapter 4" type="NONE">
-	<!-- A book that contains the record of a forgotten skill. Gather the Forgotten Codex Chapters 1 to 4 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the codex. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91397" name="Codex Piece - Chapter 1" type="NONE">
-	<!-- A piece of the codex that contains the record of a forgotten skill. Gather 100 and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 1. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91398" name="Codex Piece - Chapter 2" type="NONE">
-	<!-- A piece of the codex that contains the record of a forgotten skill. Has a low chance to return the Forgotten Codex Chapter 2 when combined with the Tablet of Magic. When the combination fails, it returns 2 Codex Fragments. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
 	<item id="91399" name="Codex Fragment - Chapter 2" type="NONE">
-	<!-- Codex fragment. Gather 50 fragments and take them to Spellbook Trader Lorenzo in the Town of Aden to exchange them for the Forgotten Codex Chapter 2. The exchange costs 3 million Adena. -->
-		<restriction stackable="true"/>
+	<!-- Not available. For Dwarves only. Recipe for creating Arrow of Light. No longer used because of advances in techniques. -->
+		<restriction/>
 		<attributes/>
 	</item>
 
