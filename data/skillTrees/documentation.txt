@@ -3,8 +3,8 @@ Freya Skill Trees created by Zoey76 (28/03/2011).
 Structure example:
 <list>
 	<skillTree type="" classId="" parentClassId="">
-		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" learnedByFS="" />
-		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" learnedByFS="">
+		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" />
+		<skill skillName="" skillId="" skillLvl="" getLevel="" levelUpSp="" autoGet="" socialClass="" residenceSkill="" learnedByNpc="" >
 			<item id="" count="" />
 			<preRequisiteSkill id="" lvl="" />
 			<race>Human</race>
@@ -37,7 +37,6 @@ It's possible to add a skill(s) common to all classes by omitting the classId at
 Attribute description:
 autoGet = Boolean to define if skill is learned automatically.
 getLevel = Minimum player/clan level required to learn  the skill (depend of the skill tree type).
-learnedByFS = Boolean to identify if skill is learned by Forgotten Scroll.
 learnedByNpc = Boolean to identify if skill is learned by NPC.
 levelUpSp = SP or Reputation cost to learn skill (depend of the skill tree type).
 preRequisiteSkill = Skill Id and level of the required skill (this skill should be learned before).
