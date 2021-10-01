@@ -77,14 +77,7 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="autoGet" type="xs:boolean" default="false"/>  
-		<xs:attribute name="getLevel">
-			<xs:simpleType>
-				<xs:restriction base="xs:positiveInteger">
-					<xs:minInclusive value="1" />
-					<xs:maxInclusive value="105" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
+		<xs:attribute name="required-level" type="xs:positiveInteger"/>
 		<xs:attribute name="learnedByNpc" type="xs:boolean" />
 		<xs:attribute name="levelUpSp" type="xs:long" />
 		<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
