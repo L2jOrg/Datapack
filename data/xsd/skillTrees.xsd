@@ -53,26 +53,6 @@
 
 	<xs:complexType name="LearnSkillType">
 		<xs:sequence>
-			<xs:element name="subClassConditions" minOccurs="0" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:attribute name="slot" use="required">
-						<xs:simpleType>
-							<xs:restriction base="xs:positiveInteger">
-								<xs:minInclusive value="1" />
-								<xs:maxInclusive value="3" />
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:attribute>
-					<xs:attribute name="lvl" use="required">
-						<xs:simpleType>
-							<xs:restriction base="xs:positiveInteger">
-								<xs:minInclusive value="1" />
-								<xs:maxInclusive value="105" />
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:attribute>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="social-status" type="SocialStatus" minOccurs="0"/>
 			<xs:element name="residenceId" minOccurs="0" maxOccurs="unbounded">
 				<xs:simpleType>
