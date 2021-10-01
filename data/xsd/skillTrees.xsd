@@ -20,61 +20,17 @@
 		</xs:sequence>
 		<xs:attribute name="classId" type="ClassId"/>
 		<xs:attribute name="parentClassId" type="ClassId"/>
-		<xs:attribute name="type" use="required">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="abilitySkillTree" />
-					<xs:enumeration value="alchemySkillTree" />
-					<xs:enumeration value="awakeningSaveSkillTree" />
-					<xs:enumeration value="classSkillTree" />
-					<xs:enumeration value="collectSkillTree" />
-					<xs:enumeration value="dualClassSkillTree" />
-					<xs:enumeration value="fishingSkillTree" />
-					<xs:enumeration value="gameMasterSkillTree" />
-					<xs:enumeration value="heroSkillTree" />
-					<xs:enumeration value="pledgeSkillTree" />
-					<xs:enumeration value="raceSkillTree" />
-					<xs:enumeration value="revelationSkillTree" />
-					<xs:enumeration value="transferSkillTree" />
-					<xs:enumeration value="transformSkillTree" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
+		<xs:attribute name="type" type="TreeType" use="required"/>
 		<xs:attribute name="race" type="Race"/>
-		<xs:attribute name="subType">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="BASECLASS" />
-					<xs:enumeration value="DUALCLASS" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
 	</xs:complexType>
 
 	<xs:complexType name="LearnSkillType">
 		<xs:sequence>
 			<xs:element name="social-status" type="SocialStatus" minOccurs="0"/>
-			<xs:element name="residenceId" minOccurs="0" maxOccurs="unbounded">
-				<xs:simpleType>
-					<xs:restriction base="xs:positiveInteger">
-						<xs:minInclusive value="1" />
-						<xs:maxInclusive value="200" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element name="residenceId" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="race" type="Race" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="preRequisiteSkill" minOccurs="0" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-					<xs:attribute name="lvl" type="xs:positiveInteger" use="required" />
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-					<xs:attribute name="count" type="xs:positiveInteger" use="required" />
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="replace-skill" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="item"  type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="autoGet" type="xs:boolean" default="false"/>  
 		<xs:attribute name="required-level" type="xs:positiveInteger"/>
@@ -84,4 +40,20 @@
 		<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />
 		<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
 	</xs:complexType>
+
+	<xs:simpleType name="TreeType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="abilitySkillTree" />
+			<xs:enumeration value="alchemySkillTree" />
+			<xs:enumeration value="classSkillTree" />
+			<xs:enumeration value="collectSkillTree" />
+			<xs:enumeration value="fishingSkillTree" />
+			<xs:enumeration value="gameMasterSkillTree" />
+			<xs:enumeration value="heroSkillTree" />
+			<xs:enumeration value="pledgeSkillTree" />
+			<xs:enumeration value="raceSkillTree" />
+			<xs:enumeration value="transferSkillTree" />
+			<xs:enumeration value="transformSkillTree" />
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
