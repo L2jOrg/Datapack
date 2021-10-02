@@ -26,19 +26,19 @@
 
 	<xs:complexType name="LearnSkillType">
 		<xs:sequence>
-			<xs:element name="social-status" type="SocialStatus" minOccurs="0"/>
-			<xs:element name="residenceId" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="race" type="Race" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="replace-skill" type="SkillInfo" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="item"  type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="autoGet" type="xs:boolean" default="false"/>  
+		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="level" type="xs:positiveInteger" use="required" />
 		<xs:attribute name="required-level" type="xs:positiveInteger"/>
-		<xs:attribute name="learnedByNpc" type="xs:boolean" />
-		<xs:attribute name="levelUpSp" type="xs:long" />
-		<xs:attribute name="skillId" type="xs:positiveInteger" use="required" />
-		<xs:attribute name="skillLvl" type="xs:positiveInteger" use="required" />
-		<xs:attribute name="skillName" type="xs:normalizedString" use="required" />
+		<xs:attribute name="auto-learn" type="xs:boolean" default="false"/>
+		<xs:attribute name="sp" type="xs:long" default="0"/>
+		<xs:attribute name="learned-by-npc" type="xs:boolean" default="false"/>
+		<xs:attribute name="name" type="xs:normalizedString" use="required" />
+		<xs:attribute name="social-status" type="SocialStatus" default="VAGABOND"/>
+		<xs:attribute name="races" type="RaceList"/>
+		<xs:attribute name="residences" type="intList" />
 	</xs:complexType>
 
 	<xs:simpleType name="TreeType">

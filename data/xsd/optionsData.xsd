@@ -2,21 +2,21 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="list">
         <xs:complexType>
-            <xs:sequence maxOccurs="1" minOccurs="1">
-                <xs:element name="option" maxOccurs="100" minOccurs="1">
+            <xs:sequence>
+                <xs:element name="option" maxOccurs="100">
                     <xs:complexType>
-                        <xs:sequence maxOccurs="1" minOccurs="1">
-                            <xs:element name="effects" minOccurs="0" maxOccurs="1">
+                        <xs:sequence>
+                            <xs:element name="effects" minOccurs="0">
                                 <xs:complexType>
-                                    <xs:sequence maxOccurs="unbounded" minOccurs="1">
+                                    <xs:sequence maxOccurs="unbounded">
                                         <xs:element name="effect" maxOccurs="unbounded" minOccurs="0">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element type="xs:float" name="amount" minOccurs="0" maxOccurs="1" />
-                                                    <xs:element type="xs:string" name="mode" minOccurs="0" maxOccurs="1" />
-                                                    <xs:element type="xs:string" name="attribute" minOccurs="0" maxOccurs="1" />
-                                                    <xs:element type="xs:byte" name="magicType" minOccurs="0" maxOccurs="1" />
-                                                    <xs:element type="xs:string" name="stat" minOccurs="0" maxOccurs="1" />
+                                                    <xs:element type="xs:float" name="amount" minOccurs="0"/>
+                                                    <xs:element type="xs:string" name="mode" minOccurs="0"/>
+                                                    <xs:element type="xs:string" name="attribute" minOccurs="0"/>
+                                                    <xs:element type="xs:byte" name="magicType" minOccurs="0"/>
+                                                    <xs:element type="xs:string" name="stat" minOccurs="0"/>
                                                 </xs:sequence>
                                                 <xs:attribute name="name" type="xs:string" />
                                             </xs:complexType>
