@@ -4,18 +4,18 @@
     <event name="Daily Reset" class="org.l2j.gameserver.instancemanager.DailyTaskManager">
         <scheduler>
             <!-- Schedule of the reset every day at 06:30 -->
-            <schedule name="reset" event="onReset" hour="06" minute="30"/>
+            <schedule name="reset" event="onReset" hour="06" minute="30" repeat="true"/>
 
             <!-- Schedule the save task 30th or 0 minute -->
-            <schedule name="save" event="onSave" minute="30,0"/>
+            <schedule name="save" event="onSave" minute="30,0" repeat="true"/>
 
             <!-- Schedule the clan leader apply task every WEDNESDAY at 6:30 -->
-            <schedule name="clanTasks" event="onClansTask" hour="06" minute="30" dayOfWeek="3"/>
+            <schedule name="clanTasks" event="onClansTask" hour="06" minute="30" dayOfWeek="3" repeat="true"/>
 
             <!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
             <conditionalSchedule>
-                <run name="reset" if="HAVENT_RUN"/>
-                <run name="clanTasks" if="HAVENT_RUN"/>
+                <run name="reset"/>
+                <run name="clanTasks"/>
             </conditionalSchedule>
         </scheduler>
 
