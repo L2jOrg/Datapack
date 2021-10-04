@@ -71,11 +71,11 @@
 						<xs:element type="xs:string" name="schedule" maxOccurs="unbounded" minOccurs="0"/>
 					</xs:sequence>
 					<xs:attribute type="xs:string" name="name" />
-					<xs:attribute name="if">
+					<xs:attribute name="if" default="HAS_NOT_RUN">
 						<xs:simpleType>
 							<xs:restriction base="xs:token">
-								<xs:enumeration value="BETWEEN" />
-								<xs:enumeration value="HAVENT_RUN" />
+								<xs:enumeration value="BETWEEN"/>
+								<xs:enumeration value="HAS_NOT_RUN" />
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:attribute>
