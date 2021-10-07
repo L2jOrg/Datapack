@@ -1,0 +1,77 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://l2j.org"
+           xmlns="http://l2j.org"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="drop" type="ExtendDrop" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ExtendDrop">
+        <xs:sequence>
+            <xs:element name="items" type="ExtendDropItems"/>
+            <xs:element name="conditions" type="ExtendDropConditions" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute type="xs:int" name="id"/>
+    </xs:complexType>
+
+    <xs:complexType name="ExtendDropItems">
+        <xs:sequence>
+            <xs:element name="item" type="ExtendDropItem"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ExtendDropConditions">
+        <xs:sequence>
+            <xs:element ref="abstractCondition"  maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ExtendDropItem">
+        <xs:complexContent>
+            <xs:extension base="ChancedItem">
+                <xs:attribute type="xs:long" name="max-count"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="abstractCondition" type="ExtendDropAbstractCondition" abstract="true"/>
+    <xs:element name="player-level" type="PlayerLevelCondition" substitutionGroup="abstractCondition"/>
+    <xs:element name="npc-level" type="NpcLevelCondition" substitutionGroup="abstractCondition"/>
+    <xs:element name="category" type="CategoryTypeCondition" substitutionGroup="abstractCondition"/>
+
+    <xs:complexType name="ExtendDropAbstractCondition" abstract="true"/>
+
+    <xs:complexType name="NpcLevelCondition">
+        <xs:complexContent>
+            <xs:extension base="ExtendDropAbstractCondition">
+                <xs:attribute name="min-level" type="xs:short"/>
+                <xs:attribute name="max-level" type="xs:short"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PlayerLevelCondition">
+        <xs:complexContent>
+            <xs:extension base="ExtendDropAbstractCondition">
+                <xs:attribute name="min-level" type="xs:short"/>
+                <xs:attribute name="max-level" type="xs:short"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="CategoryTypeCondition">
+        <xs:complexContent>
+            <xs:extension base="ExtendDropAbstractCondition">
+                <xs:attribute name="types" type="CategoryTypeList"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>
