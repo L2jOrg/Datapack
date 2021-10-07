@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="53001" name="Create Critical" max-level="3">
-        <!--
-            level 1: Critical Crafting Trigger Rate +3% when crating an equipment.
-            level 2: Critical Crafting Trigger Rate +5% when crating an equipment.
-            level 3: Critical Crafting Trigger Rate +10% when crating an equipment.
-         -->
+    <skill id="53001" name="Critical Creation" max-level="3">
+        <!-- 
+			level 1: Critical Craft Success Rate +3% (The effect depends on the item type and grade.)
+			level 2: Critical Craft Success Rate +5% (The effect depends on the item type and grade.)
+			level 3: Critical Craft Success Rate +10% (The effect depends on the item type and grade.)
+		-->
         <icon initial="icon.skill10701"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="CRAFT_RATE_CRITICAL">
@@ -18,14 +18,14 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="53002" name="Create Master" max-level="3">
-        <!--
-            level 1: Craft Success Rate +5%.
-            level 2: Craft Success Rate +10%.
-            level 3: Craft Success Rate +20%.
-         -->
+    <skill id="53002" name="Master of Creation" max-level="3">
+        <!-- 
+			level 1: Craft Success Rate +5%
+			level 2: Craft Success Rate +10%
+			level 3: Craft Success Rate +20%
+		-->
         <icon initial="icon.skill10312"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify stat="CRAFT_RATE_MASTER">
@@ -36,15 +36,15 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="53003" name="Mass Chain Strike" max-level="3" debuff="true" action="A2">
-        <!-- Pulls the targeted enemy and nearby enemies to your position, making them attack you. -->
+    <skill id="53003" name="Mass Chain Strike" max-level="3" action="A2" debuff="true">
+        <!-- <Pull Skill>\n\nPulls the target and nearby enemies. -->
         <icon initial="icon.skill53003"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="PULL" level-bonus-rate="30" auto-use="ACTIVE">
+        <attributes auto-use="ACTIVE" level-bonus-rate="30" magic-critical-rate="5.0" trait="PULL">
             <magic-level initial="78">
                 <value level="2">81</value>
                 <value level="3">84</value>
             </magic-level>
-            <cast-range initial="600"/>
+            <cast-range initial="700"/>
             <reuse initial="60000"/>
             <cool-time initial="1000"/>
             <effect-point initial="-4186">
@@ -60,7 +60,7 @@
                 <value level="3">132</value>
             </mana>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="4" affect-random="5"/>
+        <target affect-min="4" affect-random="5" object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY_ONLY"/>
         <abnormal type="STUN">
             <level initial="1">
                 <value level="2">2</value>
@@ -82,16 +82,16 @@
             <effect name="GetAgro"/>
         </effects>
     </skill>
-    <skill id="53004" name="Reduce Crisis" max-level="5">
-        <!--
-            level 1: Chance of receiving Deadly Stab -20% and the chance of receiving P. Critical Attack -30%.
-            level 2: Chance of receiving Deadly Stab -25% and the chance of receiving P. Critical Attack -35%.
-            level 3: Chance of receiving Deadly Stab -30% and the chance of receiving P. Critical Attack -40%.
-            level 4: Chance of receiving Deadly Stab -35% and the chance of receiving P. Critical Attack -45%.
-            level 5: Chance of receiving Deadly Stab -40% and the chance of receiving P. Critical Attack -50%.
-         -->
+    <skill id="53004" name="Critical Vulnerability Decrease" max-level="5">
+        <!-- 
+			level 1: Received Vital Point Attack Rate -20% Received P. Critical Rate -30%
+			level 2: Received Vital Point Attack Rate -25% Received P. Critical Rate -35%
+			level 3: Received Vital Point Attack Rate -30% Received P. Critical Rate -40%
+			level 4: Received Vital Point Attack Rate -35% Received P. Critical Rate -45%
+			level 5: Received Vital Point Attack Rate -40% Received P. Critical Rate -50%
+		-->
         <icon initial="icon.skill53004"/>
-        <attributes property="MAGIC" magic-critical-rate="5.0"/>
+        <attributes magic-critical-rate="5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_RATE" stat-add="DEFENCE_CRITICAL_RATE_ADD">
@@ -104,11 +104,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="53005" name="Detect Darkness" debuff="true" action="A2">
-        <!-- Cancels all Hide around you. The target cannot Hide for 2 seconds and this debuff cannot be removed. Requires a bow. -->
+    <skill id="53005" name="Detect Darkness" action="A2" debuff="true">
+        <!-- Allows to find invisible enemies nearby.\nThe target can't become invisible and cancel this effect for 2 sec. -->
         <icon initial="icon.skill53005"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0">
+        <attributes magic-critical-rate="5.0">
             <magic-level initial="76"/>
+            <cast-range initial="-1"/>
             <reuse initial="30000"/>
             <cool-time initial="300"/>
             <effect-point initial="-760"/>
@@ -117,7 +118,7 @@
         <consume>
             <mana initial="70"/>
         </consume>
-        <target scope="RANGE" object="INVISIBLE" range="300"/>
+        <target object="INVISIBLE" range="300" scope="RANGE"/>
         <abnormal type="BLOCK_ESCAPE">
             <time initial="2"/>
         </abnormal>
@@ -133,18 +134,18 @@
             </block-abnormal>
         </effects>
     </skill>
-    <skill id="53006" name="Bind" max-level="5" debuff="true" action="A2" type="MAGIC">
-        <!-- Block's the enemy's P. Skills for 10 seconds. -->
+    <skill id="53006" name="Bind" max-level="5" action="A2" debuff="true" type="MAGIC">
+        <!-- <Silence Skill>\n\nThe effect lasts for 3 sec.\nBlocks enemy's physical skill usage. -->
         <icon initial="icon.skill6320"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="30" auto-use="ACTIVE">
+        <attributes auto-use="ACTIVE" level-bonus-rate="30" magic-critical-rate="5.0" trait="DERANGEMENT">
             <magic-level initial="76">
                 <value level="2">78</value>
                 <value level="3">80</value>
                 <value level="4">82</value>
                 <value level="5">84</value>
             </magic-level>
-            <cast-range initial="900"/>
-            <reuse initial="120000"/>
+            <cast-range initial="600"/>
+            <reuse initial="20000"/>
             <effect-point initial="-666">
                 <value level="2">-670</value>
                 <value level="3">-674</value>
@@ -161,11 +162,11 @@
                 <value level="4">29</value>
                 <value level="5">31</value>
             </mana-init>
-            <mana initial="80">
-                <value level="2">82</value>
-                <value level="3">84</value>
-                <value level="4">86</value>
-                <value level="5">88</value>
+            <mana initial="103">
+                <value level="2">107</value>
+                <value level="3">111</value>
+                <value level="4">115</value>
+                <value level="5">119</value>
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
@@ -183,18 +184,19 @@
             <effect name="PhysicalMute"/>
         </effects>
     </skill>
-    <skill id="53007" name="Heavy Armor Mastery" max-level="3" action="A2">
-        <!--
-            level 1: P. Atk. +50, Atk. Spd. +10% for a certain time
-            level 2: P. Atk. +100, Atk. Spd. +12% for a certain time
-            level 3: P. Atk. +150, Atk. Spd. +15% for a certain time
-         -->
-        <icon initial="icon.skill0232"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" triggered="true">
+    <skill id="53007" name="Power Stance" max-level="3" action="A2">
+        <!-- 
+			level 1: P. Atk. +50 Atk. Spd. +10%
+			level 2: P. Atk. +100 Atk. Spd. +12%
+			level 3: P. Atk. +150 Atk. Spd. +15%
+		-->
+        <icon initial="icon.skill10244"/>
+        <attributes magic-critical-rate="-5.0" triggered="true">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">76</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
         </attributes>
         <target/>
@@ -222,22 +224,33 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="53009" name="Sharpness">
-        <!-- Increases the success rate of Stab by 10%. -->
-        <icon initial="icon.skill0409"/>
-        <attributes property="MAGIC"/>
+    <skill id="53008" name="Children of Eva">
+        <!-- M. Atk. +10\nM. Critical Rate +5%%\nHP Recovery Rate +5%% -->
+        <icon initial="icon.skill1906"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="53010" name="Knight Protection" max-level="5" action="A2">
-        <!--
-            level 1: For 20 minutes, Shield Defense Rate +10%, Shield Def. +10%
-            level 2: For 20 minutes, Shield Defense Rate +20%, Shield Def. +15%
-            level 3: For 20 minutes, Shield Defense Rate +30%, Shield Def. +20%
-            level 4: For 20 minutes, Shield Defense Rate +40%, Shield Def. +25%
-            level 5: For 20 minutes, Shield Defense Rate +50%, Shield Def. +30%
-         -->
-        <icon initial="icon.skill10012"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+    <skill id="53009" name="Sharpness" max-level="3">
+        <!-- 
+			level 1: Vital Point Attack Rate +10%.
+			level 2: Vital Point Attack Rate +15%.
+			level 3: Vital Point Attack Rate +20%.
+		-->
+        <icon initial="icon.skill0409"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="53010" name="Knight's Protection" max-level="5" action="A2">
+        <!-- 
+			level 1: The effect lasts for 20 min. Shield Defense Rate +10% Shield Defense +120
+			level 2: The effect lasts for 20 min. Shield Defense Rate +20% Shield Defense +140
+			level 3: The effect lasts for 20 min. Shield Defense Rate +30% Shield Defense +160
+			level 4: The effect lasts for 20 min. Shield Defense Rate +40% Shield Defense +180
+			level 5: The effect lasts for 20 min. Shield Defense Rate +50% Shield Defense +200
+		-->
+        <icon initial="icon.skill3584"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <hit-time initial="2500"/>
         </attributes>
@@ -277,5 +290,14 @@
                 </power>
             </stat-modify>
         </effects>
+    </skill>
+    <skill id="53011" name="Knight’s Fortress" max-level="2">
+        <!-- 
+			level 1: P. Atk. +50
+			level 2: P. Atk. +100
+		-->
+        <icon initial="icon.skill10020"/>
+        <attributes/>
+        <target/>
     </skill>
 </list>

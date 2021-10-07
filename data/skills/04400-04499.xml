@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="4400" name="Acumen" max-level="3" action="A2" type="MAGIC">
-        <!-- Casting Spd. temporarily increased. -->
+        <!-- Increases Casting Spd. for a certain amount of time. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -26,9 +26,9 @@
         </effects>
     </skill>
     <skill id="4401" name="Empower" max-level="3" action="A2" type="MAGIC">
-        <!-- M. Atk. temporarily increased. -->
+        <!-- Increases M. Atk. for a certain amount of time. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -51,9 +51,9 @@
         </effects>
     </skill>
     <skill id="4402" name="Haste" max-level="2" action="A2" type="MAGIC">
-        <!-- Atk. Spd. temporarily increased. -->
+        <!-- Increases Atk. Spd. for a certain amount of time. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -74,9 +74,9 @@
         </effects>
     </skill>
     <skill id="4403" name="Guidance" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Accuracy temporarily increased. -->
+        <!-- Increases P. Accuracy for a certain amount of time. -->
         <icon initial="icon.skill1240"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -99,9 +99,9 @@
         </effects>
     </skill>
     <skill id="4404" name="Focus" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Critical Rate temporarily increased. -->
+        <!-- Temporarily increases P. Critical Rate. -->
         <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -124,9 +124,9 @@
         </effects>
     </skill>
     <skill id="4405" name="Death Whisper" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Critical Damage temporarily increased. -->
+        <!-- Increases P. Critical Damage for a certain amount of time. -->
         <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -149,9 +149,9 @@
         </effects>
     </skill>
     <skill id="4406" name="Agility" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Evasion temporarily increased. -->
+        <!-- Increases P. Evasion for a certain amount of time. -->
         <icon initial="icon.skill1087"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -174,14 +174,15 @@
         </effects>
     </skill>
     <skill id="4407" name="Ordinary Monster" max-level="2">
+        <!--  -->
         <icon initial="icon.skill0000">
             <value level="2">icon.skill4407</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4408" name="HP Increase (1x)" max-level="20">
+        <!--  -->
         <icon initial="icon.skill0000">
             <value level="8">icon.skill4381</value>
             <value level="9">icon.skill4311</value>
@@ -197,8 +198,7 @@
             <value level="19">icon.skill4408_x11</value>
             <value level="20">icon.skill4408_x12</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="REGENERATE_HP_RATE" stat-add="REGENERATE_HP_RATE">
@@ -250,6 +250,7 @@
         </effects>
     </skill>
     <skill id="4409" name="MP Increase (1x)" max-level="20">
+        <!--  -->
         <icon initial="icon.skill0000">
             <value level="8">icon.skill4381</value>
             <value level="9">icon.skill4311</value>
@@ -265,8 +266,7 @@
             <value level="19">icon.skill4409_x11</value>
             <value level="20">icon.skill4409_x12</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <vital-stat-modify mode="PER" stat="MAX_MP" stat-add="MAX_MP">
@@ -318,13 +318,13 @@
         </effects>
     </skill>
     <skill id="4410" name="Extremely Weak P. Atk." max-level="22">
+        <!--  -->
         <icon initial="icon.skill0141">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill0141</value>
             <value level="22">icon.skill4410_max</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -355,13 +355,13 @@
         </effects>
     </skill>
     <skill id="4411" name="Extremely Weak M. Atk." max-level="22">
+        <!--  -->
         <icon initial="icon.skill4411_normal">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill4411_normal</value>
             <value level="22">icon.skill4411_max</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGIC_ATTACK" stat-add="MAGIC_ATTACK">
@@ -392,13 +392,13 @@
         </effects>
     </skill>
     <skill id="4412" name="Extremely Weak P. Def." max-level="22">
+        <!--  -->
         <icon initial="icon.skill0142">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill0142</value>
             <value level="22">icon.skill4412_new</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -429,13 +429,13 @@
         </effects>
     </skill>
     <skill id="4413" name="Extremely Weak M. Def." max-level="22">
+        <!--  -->
         <icon initial="icon.skill4413_normal">
             <value level="11">icon.skill0000</value>
             <value level="12">icon.skill4413_normal</value>
             <value level="22">icon.skill4413_max</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="MAGICAL_DEFENCE" stat-add="MAGICAL_DEFENCE">
@@ -466,16 +466,15 @@
         </effects>
     </skill>
     <skill id="4414" name="Heavy Armor Type" max-level="3">
-        <!--
-		level 1: Strong P. Def. and weak P. Evasion.
-		level 3: Weak P. Def. and strong P. Evasion.
-	 -->
+        <!-- 
+			level 1: Increases P. Def, decreases P. Evasion.
+			level 3: Decreases P. Def, increases P. Evasion.
+		-->
         <icon initial="icon.skill4312">
             <value level="2">icon.skill0000</value>
             <value level="3">icon.skill4313</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -493,9 +492,9 @@
         </effects>
     </skill>
     <skill id="4415" name="Bare Hands" max-level="26">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
@@ -559,32 +558,32 @@
         </effects>
     </skill>
     <skill id="4416" name="Undead" max-level="26">
-        <!--
-		level 1: Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids.
-		level 2: The common name for the biotechnological items of the Magic and Lesser Giant Ages. Their M. Atk. is generally strong and they sometimes use high-Lv. magic, such as teleportation.
-		level 3: Generally considers humans as food. Classifies attacking animals as monsters. This also includes chimeras that have fused more than 2 types of cells, as well as other fantasy creatures from mythology.
-		level 4: These general animals are hunted by humanoids. They sometimes attack humanoids, but only to defend themselves or their territory.
-		level 5: These consist of trees and grasses. Instinctual creatures, it is generally impossible to have a conversation with them.
-		level 6: They have two arms, two legs, and they walk upright. Culture and communal life varies by race.
-		level 7: They are not necessarily creatures, but elemental energy beings. They basically belong to the 4 elements, which are water, fire, wind, and earth, but they also dwell in natural objects. They are known to be governed by the gods of water, fire, wind, and earth.
-		level 8: These creatures of the heavenly realm or the race posses holy blessings and were originally creatures of the spirits of light. In some very rare cases, angels can manifest the gods' will in reality.
-		level 9: This race of darkness opposes the angels. Beings that are changed by the curse of darkness become demons as well.
-		level 10: This word refers to True Dragon that is the most powerful and represents evil creatures Shilen gave birth to and its kinds. Most of this race flies with two wings like reptiles and emits strong energy through its mouth.
-		level 11: This race looks similar to a humanoid, but they are approximately 2-3 times in size. This includes the ancient Giants who once ruled the continent, their descendants, and even the monsters that have regressed and in whom only a small fragment of the race's history remains.
-		level 12: They consist of insects, spiders and worms and act upon their highly refined instincts. Sometimes their instincts present themselves in a more developed form than that of humanoid society.
-		level 13: Many members of this ancient race left our world as it changed to become more hostile. Some scholars theorize that Fairies were actually living works of art created by the gods for their entertainment.
-		level 14: The last race created by the gods, Humans won the race war for domination of the entire world. Their strong desire for domination is perhaps fueled by the fact that their life span is the shortest among all the races.
-		level 15: This water race worships Eva and love peace. They possess vast knowledge, but lack the will and strength to implement it. The original students of magic, they have since taught its principles to humans.
-		level 16: These Elves formed an alliance long ago and dedicated themselves to understanding the dark arts which were forbidden by their kin. Gradually they became darker in their appearance and personality as generations passed. They are now adept in the practice and usage of black magic and continue to worship Shilen as their God.
-		level 17: Created by Pa'agrio, the Orcs are the physically strongest of all the races. They worship the spirits of the past and have a very tribal culture.
-		level 18: Although unable to use magic, Dwarves are strong and good with their hands. They have sharp eyes and intelligent minds. Their business savvy is impressive, and they sometimes invent strange mechanical devices.
-		level 21: These massive Dwarf-made weapons are built to besiege castles.
-		level 22: The soldiers hired to protect castles; normally hired by a lord.
-		level 23: The soldiers hired to attack castles; normally hired by a lord with payment.
-		level 24: An unknown life form that has never been discovered before.
-		level 25: Battle race who have been sealed for a long time, and their origin is unknown. Their military-like classes and unique battle abilities cannot be copied by other races.
-		level 26: Followers of Sayha, these children of the wind were thrust into the Material Realm from their own world. Naturally curious, they are talented mana users. They are composed of the Surr faction and the Nann faction.
-	 -->
+        <!-- 
+			level 1: Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids.
+			level 2: The common name for the biotechnological items of the Magic and Lesser Giant Ages. Their M. Atk. is generally strong and they sometimes use high-Lv. magic, such as teleportation.
+			level 3: Generally considers humans as food. Classifies attacking animals as monsters. This also includes chimeras that have fused more than 2 types of cells, as well as other fantasy creatures from mythology.
+			level 4: These general animals are hunted by humanoids. They sometimes attack humanoids, but only to defend themselves or their territory.
+			level 5: These consist of trees, grasses, mushrooms, and fungi. Instinctual creatures, it is generally impossible to have a conversation with them.
+			level 6: They have two arms, two legs, and they walk upright. Culture and communal life varies by race.
+			level 7: They are not necessarily creatures, but elemental energy beings. They basically belong to the 4 elements, which are water, fire, wind, and earth, but they also dwell in natural objects. They are known to be governed by the gods of water, fire, wind, and earth.
+			level 8: These creatures of the heavenly realm or the race posses holy blessings and were originally creatures of the spirits of light. In some very rare cases, angels can manifest the gods' will in reality.
+			level 9: This race of darkness opposes the angels. Beings that are changed by the curse of darkness become demons as well.
+			level 10: This word refers to True Dragon that is the most powerful and represents evil creatures Shillien gave birth to and its kinds. Most of this race flies with two wings like reptiles and emits strong energy through its mouth.
+			level 11: This race looks similar to a humanoid, but they are approximately 2-3 times in size. This includes the ancient Giants who once ruled the continent, their descendants, and even the monsters that have regressed and in whom only a small fragment of the race's history remains.
+			level 12: They consist of insects, spiders and worms and act upon their highly refined instincts. Sometimes their instincts present themselves in a more developed form than that of humanoid society.
+			level 13: Many members of this ancient race left our world as it changed to become more hostile. Some scholars theorize that Fairies were actually living works of art created by the gods for their entertainment.
+			level 14: The last race created by the gods, Humans won the race war for domination of the entire world. Their strong desire for domination is perhaps fueled by the fact that their life span is the shortest among all the races.
+			level 15: This water race worships Eva and love peace. They possess vast knowledge, but lack the will and strength to implement it. The original students of magic, they have since taught its principles to humans.
+			level 16: These Elves formed an alliance long ago and dedicated themselves to understanding the dark arts which were forbidden by their kin. Gradually they became darker in their appearance and personality as generations passed. They are now adept in the practice and usage of black magic and continue to worship Shillien's their God.
+			level 17: Created by Pa'agrio, the Orcs are the physically strongest of all the races. They worship the spirits of the past and have a very tribal culture.
+			level 18: Although unable to use magic, Dwarves are strong and good with their hands. They have sharp eyes and intelligent minds. Their business savvy is impressive, and they sometimes invent strange mechanical devices.
+			level 21: These massive Dwarf-made weapons are built to besiege castles.
+			level 22: The soldiers hired to protect castles; normally hired by a lord.
+			level 23: The soldiers hired to attack castles; normally hired by a lord with payment.
+			level 24: An unknown life form that has never been discovered before.
+			level 25: Battle race who have been sealed for a long time, and their origin is unknown. Their military-like classes and unique battle abilities cannot be copied by other races.
+			level 26: Followers of Sayha, these children of the wind were thrust into the Material Realm from their own world. Naturally curious, they are talented mana users. They are composed of the Surr faction and the Nann faction.
+		-->
         <icon initial="icon.skill4290">
             <value level="2">icon.skill4291</value>
             <value level="3">icon.skill4292</value>
@@ -612,8 +611,7 @@
             <value level="25">icon.skill4416_kamael</value>
             <value level="26">icon.skill_4416_ertheia</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -693,21 +691,21 @@
         </effects>
     </skill>
     <skill id="4417" name="Animals" max-level="38">
-        <!--
-		level 1: Animals
-		level 2: Beast
-		level 6: Bugs
-		level 9: Magic Creatures
-		level 12: Demons
-		level 15: Angels
-		level 18: Dragons
-		level 19: Spirits
-		level 24: Fairies
-		level 25: Giants
-		level 26: Humanoids
-		level 33: Plants
-		level 34: Undead
-	 -->
+        <!-- 
+			level 1: Animals
+			level 2: Beasts
+			level 6: Bugs
+			level 9: Magical Creatures
+			level 12: Demons
+			level 15: Angels
+			level 18: Dragons
+			level 19: Spirits
+			level 24: Fairies
+			level 25: Giants
+			level 26: Humanoids
+			level 33: Plants
+			level 34: Undead
+		-->
         <icon initial="icon.skill4293">
             <value level="2">icon.skill4292</value>
             <value level="6">icon.skill4301</value>
@@ -722,8 +720,7 @@
             <value level="33">icon.skill4294</value>
             <value level="34">icon.skill4290</value>
         </icon>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -799,131 +796,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4418" name="Fire Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Fire. Resistant to Fire attacks. -->
-        <icon initial="icon.etc_fire_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="FIRE_RES" stat-add="FIRE_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="FIRE_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4419" name="Water Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Water. Resistant to Water attacks. -->
-        <icon initial="icon.etc_water_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="WATER_RES" stat-add="WATER_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="WATER_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4420" name="Wind Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Wind. Resistant to Wind attacks. -->
-        <icon initial="icon.etc_wind_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="WIND_RES" stat-add="WIND_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="WIND_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4421" name="Earth Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Earth. Resistant to Earth attacks. -->
-        <icon initial="icon.etc_earth_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="EARTH_RES" stat-add="EARTH_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="EARTH_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4422" name="Dark Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Dark. Resistant to Dark attacks. -->
-        <icon initial="icon.etc_unholy_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="DARK_RES" stat-add="DARK_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="DARK_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4423" name="Holy Attack" max-level="5">
-        <!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
-        <icon initial="icon.etc_holy_crystal_i00"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="HOLY_RES" stat-add="HOLY_RES">
-                <power initial="10.0">
-                    <value level="2">20.0</value>
-                    <value level="3">30.0</value>
-                    <value level="4">40.0</value>
-                    <value level="5">50.0</value>
-                </power>
-            </stat-modify>
-            <stat-modify stat="HOLY_POWER">
-                <power initial="10.0"/>
-            </stat-modify>
-        </effects>
-    </skill>
     <skill id="4424" name="Fist Weapon Resistance" max-level="5">
-        <!-- Resistant to Fist Weapons. -->
+        <!-- Resistance to fist weapon. -->
         <icon initial="icon.skill4424"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -939,10 +815,9 @@
         </effects>
     </skill>
     <skill id="4425" name="Blunt Weapon Resistance" max-level="5">
-        <!-- Strong Blunt weapon resistance. -->
+        <!-- Resistance to blunt weapon. -->
         <icon initial="icon.skill4425"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -957,11 +832,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4426" name="Dualsword Resistance" max-level="5">
-        <!-- Strong Dualsword resistance. -->
+    <skill id="4426" name="Dual Sword Resistance" max-level="5">
+        <!-- Resistance to dual sword. -->
         <icon initial="icon.skill4426"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -977,10 +851,9 @@
         </effects>
     </skill>
     <skill id="4427" name="Sword Resistance" max-level="5">
-        <!-- Strong Sword resistance. -->
+        <!-- Resistance to sword. -->
         <icon initial="icon.skill4427"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -996,119 +869,15 @@
         </effects>
     </skill>
     <skill id="4428" name="Two-handed Weapon Resistance" max-level="5">
-        <!-- Strong Two-handed weapon resistance. -->
+        <!-- Resistance to two-handed weapon. -->
         <icon initial="icon.skill4428"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4429" name="Greater Fire Resistance" max-level="5">
-        <!-- Very strong Fire attack resistance. -->
-        <icon initial="icon.skill4429"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="FIRE_RES" stat-add="FIRE_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4430" name="Greater Water Resistance" max-level="5">
-        <!-- Very strong Water attack resistance. -->
-        <icon initial="icon.skill4430"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="WATER_RES" stat-add="WATER_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4431" name="Greater Wind Resistance" max-level="5">
-        <!-- Very strong Wind attack resistance. -->
-        <icon initial="icon.skill4431"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="WIND_RES" stat-add="WIND_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4432" name="Greater Earth Resistance" max-level="5">
-        <!-- Very strong Earth attack resistance. -->
-        <icon initial="icon.skill4432"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="EARTH_RES" stat-add="EARTH_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4433" name="Greater Holy Attack Resistance" max-level="5">
-        <!-- Very strong Holy attack resistance. -->
-        <icon initial="icon.skill4433"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="HOLY_RES" stat-add="HOLY_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4434" name="Greater Dark Attack Resistance" max-level="5">
-        <!-- Very strong Dark attack resistance. -->
-        <icon initial="icon.skill4434"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
-        <target/>
-        <effects>
-            <stat-modify stat="DARK_RES" stat-add="DARK_RES">
-                <power initial="60.0">
-                    <value level="2">70.0</value>
-                    <value level="3">80.0</value>
-                    <value level="4">90.0</value>
-                    <value level="5">100.0</value>
-                </power>
-            </stat-modify>
-        </effects>
-    </skill>
-    <skill id="4435" name="Greater Stun Resistance" max-level="5">
-        <!-- Very strong Stun attack resistance. -->
-        <icon initial="icon.skill4435"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4435" name="Greater Shock Resistance" max-level="5">
+        <!-- Highly resistant to Shock. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1123,11 +892,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4436" name="Greater Poison Resistance" max-level="5">
-        <!-- Very strong Poison attack resistance. -->
-        <icon initial="icon.skill4436"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4436" name="Greater Infection Resistance" max-level="5">
+        <!-- Highly resistant to Infection. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1142,11 +910,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4437" name="Greater Bleed Resistance" max-level="5">
-        <!-- Very strong Bleed attack resistance. -->
-        <icon initial="icon.skill4437"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4437" name="Greater Infection Resistance" max-level="5">
+        <!-- Highly resistant to Infection. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1162,10 +929,9 @@
         </effects>
     </skill>
     <skill id="4438" name="Greater Sleep Resistance" max-level="5">
-        <!-- Very strong Sleep attack resistance. -->
-        <icon initial="icon.skill4286"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Very resistant to Sleep. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1181,10 +947,9 @@
         </effects>
     </skill>
     <skill id="4439" name="Greater Hold Resistance" max-level="5">
-        <!-- Very strong Hold attack resistance. -->
-        <icon initial="icon.skill4288"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Very resistant to Hold. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1200,10 +965,9 @@
         </effects>
     </skill>
     <skill id="4440" name="Greater Paralysis Resistance" max-level="5">
-        <!-- Very strong Paralysis attack resistance. -->
-        <icon initial="icon.skill4440"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Very resistant to Paralysis. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1218,11 +982,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4441" name="Greater Mental Attack Resistance" max-level="5">
-        <!-- Very strong MEN attack resistance. -->
-        <icon initial="icon.skill4441"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4441" name="Greater Fear Resistance" max-level="5">
+        <!-- Highly resistant to Fear. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1238,10 +1001,9 @@
         </effects>
     </skill>
     <skill id="4442" name="Greater Fist Weapon Resistance" max-level="5">
-        <!-- Very strong Fist weapon resistance. -->
+        <!-- Very resistant to fist weapon. -->
         <icon initial="icon.skill4442"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1257,10 +1019,9 @@
         </effects>
     </skill>
     <skill id="4443" name="Greater Blunt Weapon Resistance" max-level="5">
-        <!-- Very strong Blunt weapon resistance. -->
+        <!-- Very resistant to blunt weapon. -->
         <icon initial="icon.skill4443"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1276,10 +1037,9 @@
         </effects>
     </skill>
     <skill id="4444" name="Greater Bow Resistance" max-level="5">
-        <!-- Very strong Bow resistance. -->
+        <!-- Very resistant to bow. -->
         <icon initial="icon.skill4444"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1303,10 +1063,9 @@
         </effects>
     </skill>
     <skill id="4445" name="Greater Spear Resistance" max-level="5">
-        <!-- Very strong Spear resistance. -->
+        <!-- Very resistant to spear. -->
         <icon initial="icon.skill4445"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1321,11 +1080,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4446" name="Greater Dualsword Resistance" max-level="5">
-        <!-- Very strong Dualsword resistance. -->
+    <skill id="4446" name="Greater Dual Sword Resistance" max-level="5">
+        <!-- Very resistant to dual sword. -->
         <icon initial="icon.skill4446"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1341,10 +1099,9 @@
         </effects>
     </skill>
     <skill id="4447" name="Greater Sword Resistance" max-level="5">
-        <!-- Very strong Sword resistance. -->
+        <!-- Very resistant to sword. -->
         <icon initial="icon.skill4447"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1360,10 +1117,9 @@
         </effects>
     </skill>
     <skill id="4448" name="Greater Dagger Resistance" max-level="5">
-        <!-- Very strong Dagger resistance. -->
+        <!-- Very resistant to dagger. -->
         <icon initial="icon.skill4448"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1395,17 +1151,15 @@
         </effects>
     </skill>
     <skill id="4449" name="Greater Two-handed Weapon Resistance" max-level="5">
-        <!-- Very strong Two-handed weapon resistance. -->
+        <!-- Very resistant to two-handed weapon. -->
         <icon initial="icon.skill4449"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4450" name="Stun Vulnerability" max-level="5">
-        <!-- Vulnerable to Stun attack. -->
-        <icon initial="icon.skill4450"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4450" name="Shock Vulnerability" max-level="5">
+        <!-- Vulnerable to Shock. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1420,11 +1174,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4451" name="Poison Vulnerability" max-level="5">
-        <!-- Vulnerable to Poison attack. -->
-        <icon initial="icon.skill4451"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4451" name="Infection Vulnerability" max-level="5">
+        <!-- Vulnerable to Infection. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1439,11 +1192,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4452" name="Bleed Vulnerability" max-level="5">
-        <!-- Vulnerable to Bleed attack. -->
-        <icon initial="icon.skill4452"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4452" name="Infection Vulnerability" max-level="5">
+        <!-- Vulnerable to Infection. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1459,10 +1211,9 @@
         </effects>
     </skill>
     <skill id="4453" name="Sleep Vulnerability" max-level="5">
-        <!-- Vulnerable to Sleep attack. -->
-        <icon initial="icon.skill4453"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Vulnerable to Sleep. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1478,10 +1229,9 @@
         </effects>
     </skill>
     <skill id="4454" name="Hold Vulnerability" max-level="5">
-        <!-- Vulnerable to Hold attack. -->
-        <icon initial="icon.skill4454"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Vulnerable to Hold. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1497,10 +1247,9 @@
         </effects>
     </skill>
     <skill id="4455" name="Paralysis Vulnerability" max-level="5">
-        <!-- Vulnerable to Paralysis attack. -->
-        <icon initial="icon.skill4455"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Vulnerable to Paralysis. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1515,11 +1264,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4456" name="Mental Attack Vulnerability" max-level="5">
-        <!-- Vulnerable to MEN attack. -->
-        <icon initial="icon.skill4456"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4456" name="Fear Vulnerability" max-level="5">
+        <!-- Vulnerable to Fear. -->
+        <icon initial="icon.skill30887"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1535,10 +1283,9 @@
         </effects>
     </skill>
     <skill id="4457" name="Fist Weapon Vulnerability" max-level="5">
-        <!-- Vulnerable to Fist weapon attack. -->
+        <!-- Vulnerable to fist weapon. -->
         <icon initial="icon.skill4457"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1554,10 +1301,9 @@
         </effects>
     </skill>
     <skill id="4458" name="Spear Vulnerability" max-level="5">
-        <!-- Vulnerable to Spear attack. -->
+        <!-- Vulnerable to spear. -->
         <icon initial="icon.skill4458"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1572,11 +1318,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4459" name="Dualsword Vulnerability" max-level="5">
-        <!-- Vulnerable to Dualsword attack. -->
+    <skill id="4459" name="Dual Sword Vulnerability" max-level="5">
+        <!-- Vulnerable to dual sword. -->
         <icon initial="icon.skill4459"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1592,10 +1337,9 @@
         </effects>
     </skill>
     <skill id="4460" name="Sword Vulnerability" max-level="5">
-        <!-- Vulnerable to Sword attack. -->
+        <!-- Vulnerable to sword. -->
         <icon initial="icon.skill4460"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1611,10 +1355,9 @@
         </effects>
     </skill>
     <skill id="4461" name="Dagger Vulnerability" max-level="5">
-        <!-- Vulnerable to Dagger attack. -->
+        <!-- Vulnerable to dagger. -->
         <icon initial="icon.skill4461"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1646,10 +1389,9 @@
         </effects>
     </skill>
     <skill id="4462" name="Two-handed Weapon Vulnerability" max-level="5">
-        <!-- Vulnerable to Two-handed weapon attack. -->
+        <!-- Vulnerable to two-handed weapon. -->
         <icon initial="icon.skill4462"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1680,10 +1422,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4463" name="Surrender to Water" max-level="3" debuff="true" action="A2" type="MAGIC">
-        <!-- Water Resistance decreases and Fire Resistance increases momentarily. -->
+    <skill id="4463" name="Surrender to Water" max-level="3" action="A2" debuff="true" type="MAGIC">
+        <!-- Fire Resistance decreases and Water Resistance increases momentarily. -->
         <icon initial="icon.skill4280_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
+        <attributes hit-cancel-time="1.5" level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">70</value>
@@ -1718,10 +1460,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4464" name="Surrender to Wind" max-level="3" debuff="true" action="A2" type="MAGIC">
-        <!-- Wind Resistance decreases and Earth Resistance increases momentarily. -->
+    <skill id="4464" name="Surrender to Wind" max-level="3" action="A2" debuff="true" type="MAGIC">
+        <!-- Immediately decreases Wind Resistance and increases Earth Resistance. -->
         <icon initial="icon.skill4281_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
+        <attributes hit-cancel-time="1.5" level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">70</value>
@@ -1756,10 +1498,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4465" name="Surrender to Earth" max-level="3" debuff="true" action="A2" type="MAGIC">
-        <!-- Earth Resistance decreases and Wind Resistance increases momentarily. -->
+    <skill id="4465" name="Surrender to Earth" max-level="3" action="A2" debuff="true" type="MAGIC">
+        <!-- Immediately decreases Earth Resistance and increases Wind Resistance. -->
         <icon initial="icon.skill4282_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
+        <attributes hit-cancel-time="1.5" level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">70</value>
@@ -1794,10 +1536,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4466" name="Surrender to Dark" max-level="3" debuff="true" action="A2" type="MAGIC">
-        <!-- Dark Attack Resistance is momentarily decreased, while Holy Attack Resistance is increased. -->
+    <skill id="4466" name="Surrender to Dark" max-level="3" action="A2" debuff="true" type="MAGIC">
+        <!-- Dark Resistance has been momentarily decreased, while Holy Resistance has been increased. -->
         <icon initial="icon.skill4336_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
+        <attributes hit-cancel-time="1.5" level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">70</value>
@@ -1832,10 +1574,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4467" name="Surrender to Holy" max-level="3" debuff="true" action="A2" type="MAGIC">
-        <!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. -->
+    <skill id="4467" name="Surrender to Holy" max-level="3" action="A2" debuff="true" type="MAGIC">
+        <!-- Immediately decreases Holy Resistance and increases Dark Resistance. -->
         <icon initial="icon.skill4275_new"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" hit-cancel-time="1.5" level-bonus-rate="2">
+        <attributes hit-cancel-time="1.5" level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="20">
                 <value level="2">40</value>
                 <value level="3">70</value>
@@ -1871,11 +1613,13 @@
         </effects>
     </skill>
     <skill id="4468" name="Wind Walk" max-level="2" action="A2" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="30">
                 <value level="2">70</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target type="TARGET"/>
@@ -1894,13 +1638,16 @@
         </effects>
     </skill>
     <skill id="4469" name="Potion Drinking" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="35"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="4470" name="Spoil" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="35"/>
@@ -1918,7 +1665,7 @@
     <skill id="4471" name="Anger" max-level="12" action="A2" type="MAGIC">
         <!-- Increases NPC's P. Atk. and P. Def. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -1932,6 +1679,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="1800"/>
         </attributes>
@@ -2001,10 +1749,10 @@
         </effects>
     </skill>
     <skill id="4472" name="Golem Strike" max-level="12" action="A1">
-        <!--
-		level 1: For powerful Golems that are 1.5x stronger
-		level 2: none
-	 -->
+        <!-- 
+			level 1: For powerful Golems that are 1.5x stronger.
+			level 2: none
+		-->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -2043,7 +1791,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="46.0">
                     <value level="2">105.0</value>
                     <value level="3">219.0</value>
@@ -2060,10 +1808,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4473" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4473" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2105,7 +1853,7 @@
             <chance initial="50"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="46.0">
                     <value level="2">105.0</value>
                     <value level="3">219.0</value>
@@ -2124,6 +1872,7 @@
         </effects>
     </skill>
     <skill id="4474" name="Restore Life" max-level="5" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -2132,6 +1881,7 @@
                 <value level="4">40</value>
                 <value level="5">50</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target type="TARGET"/>
@@ -2146,10 +1896,10 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4475" name="Complete Bleed Resistance" action="A2" type="MAGIC">
-        <!-- Completely resistant to Bleed. -->
+    <skill id="4475" name="Complete Infection Resistance" action="A2" type="MAGIC">
+        <!-- Completely resistant to Infection. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="55"/>
             <cast-range initial="700"/>
             <reuse initial="3000"/>
@@ -2176,13 +1926,14 @@
     <skill id="4476" name="Silent Move" max-level="5" action="A2" type="MAGIC">
         <!-- Protected from preemptive attacks from monsters. -->
         <icon initial="icon.skill0221"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
                 <value level="4">40</value>
                 <value level="5">50</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="100"/>
             <hit-time initial="1500"/>
@@ -2210,6 +1961,7 @@
         </effects>
     </skill>
     <skill id="4477" name="Frost Wall" max-level="12" action="A1" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -2247,8 +1999,8 @@
                 <value level="12">117</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
-            <fan-range start-angle="0" radius="200" angle="180"/>
+        <target object="NOT_FRIEND" range="200" scope="FAN" type="ENEMY">
+            <fan-range angle="180" radius="200" start-angle="0"/>
         </target>
         <effects>
             <magical-attack>
@@ -2269,6 +2021,7 @@
         </effects>
     </skill>
     <skill id="4478" name="Aqua Splash" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="64"/>
@@ -2281,7 +2034,7 @@
         <consume>
             <mana initial="23"/>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="183.0"/>
@@ -2291,7 +2044,7 @@
     <skill id="4479" name="Ice Fairy's Blessing" action="A2" type="MAGIC">
         <!-- Increases Water Resistance. -->
         <icon initial="icon.skill1182"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="64"/>
             <cast-range initial="700"/>
             <reuse initial="6000"/>
@@ -2313,9 +2066,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4480" name="Curse Gloom" debuff="true" action="A2" type="MAGIC">
+    <skill id="4480" name="Curse Gloom" action="A2" debuff="true" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="64"/>
             <cast-range initial="1000"/>
             <reuse initial="6000"/>
@@ -2337,9 +2091,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4481" name="Hex" debuff="true" action="A2">
+    <skill id="4481" name="Hex" action="A2" debuff="true">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="64"/>
             <cast-range initial="1000"/>
             <reuse initial="6000"/>
@@ -2361,9 +2116,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4482" name="Silence" debuff="true" action="A2">
+    <skill id="4482" name="Silence" action="A2" debuff="true">
+        <!-- none -->
         <icon initial="icon.skill1064"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="1000"/>
             <effect-point initial="100"/>
             <effect-range initial="1500"/>
@@ -2379,10 +2135,10 @@
             <effect name="PhysicalMute"/>
         </effects>
     </skill>
-    <skill id="4483" name="Hold" max-level="12" debuff="true" action="A2">
-        <!-- Afflicted with Hold and unable to move momentarily. -->
+    <skill id="4483" name="Hold" max-level="12" action="A2" debuff="true">
+        <!-- Holds the target. -->
         <icon initial="icon.skill4047"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD">
+        <attributes magic-critical-rate="-5.0" trait="HOLD">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2396,6 +2152,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
             <hit-time initial="3300"/>
@@ -2415,7 +2172,7 @@
                 <value level="12">155</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <abnormal type="ROOT_MAGICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="30"/>
@@ -2426,6 +2183,7 @@
         </effects>
     </skill>
     <skill id="4484" name="Devour Subordinate" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
@@ -2442,6 +2200,7 @@
         </effects>
     </skill>
     <skill id="4485" name="Devour Subordinate" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="75"/>
@@ -2452,13 +2211,10 @@
         </attributes>
         <target type="TARGET"/>
     </skill>
-    <skill id="4486" name="Decrease P. Def." max-level="12" debuff="true" action="A2">
-        <!--
-		level 1: Defense has been momentarily decreased.
-		level 2: P. Def. decreases temporarily.
-	 -->
+    <skill id="4486" name="Decrease P. Def." max-level="12" action="A2" debuff="true">
+        <!-- Temporarily decreases the enemy's P. Def. -->
         <icon initial="icon.skill0122"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2493,7 +2249,7 @@
                 <value level="12">155</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <abnormal type="PD_DOWN">
             <level initial="1">
                 <value level="2">2</value>
@@ -2511,10 +2267,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4487" name="Decrease M. Def." max-level="12" debuff="true" action="A2" type="MAGIC">
-        <!-- M. Def. has been momentarily decreased. -->
+    <skill id="4487" name="Decrease M. Def." max-level="12" action="A2" debuff="true" type="MAGIC">
+        <!-- Temporarily decreases the enemy's M. Def. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2549,7 +2305,7 @@
                 <value level="12">155</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <abnormal type="MD_DOWN">
             <level initial="1">
                 <value level="2">2</value>
@@ -2567,10 +2323,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4488" name="Hold" max-level="12" debuff="true" action="A2">
-        <!-- Afflicted with Hold and unable to move momentarily. -->
+    <skill id="4488" name="Hold" max-level="12" action="A2" debuff="true">
+        <!-- Holds the target. -->
         <icon initial="icon.skill4047"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2584,6 +2340,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <effect-range initial="1100"/>
         </attributes>
@@ -2602,7 +2359,7 @@
                 <value level="12">128</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
+        <target object="NOT_FRIEND" range="150" scope="POINT_BLANK"/>
         <abnormal type="ROOT_MAGICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="30"/>
@@ -2613,6 +2370,7 @@
         </effects>
     </skill>
     <skill id="4489" name="Death Bomb" max-level="12" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -2628,6 +2386,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
         </attributes>
         <consume>
@@ -2645,7 +2404,7 @@
                 <value level="12">128</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
+        <target object="NOT_FRIEND" range="150" scope="POINT_BLANK"/>
         <effects>
             <magical-attack-mp critical="false" critical-limit="0">
                 <power initial="52.0">
@@ -2665,6 +2424,7 @@
         </effects>
     </skill>
     <skill id="4490" name="Holy War" max-level="12" action="A1" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -2702,8 +2462,8 @@
                 <value level="12">117</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
-            <fan-range start-angle="0" radius="200" angle="180"/>
+        <target object="NOT_FRIEND" range="200" scope="FAN" type="ENEMY">
+            <fan-range angle="180" radius="200" start-angle="0"/>
         </target>
         <effects>
             <magical-attack>
@@ -2724,9 +2484,9 @@
         </effects>
     </skill>
     <skill id="4491" name="Holy Weapon" max-level="12" action="A2">
-        <!-- Makes Holy attacks. -->
+        <!-- Deals Holy damage. -->
         <icon initial="icon.skill1043"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0">
             <cast-range initial="500"/>
             <reuse initial="25000"/>
             <cool-time initial="800"/>
@@ -2750,14 +2510,14 @@
                 <value level="12">255</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <target object="NOT_FRIEND" range="150" scope="RANGE" type="ENEMY"/>
         <abnormal type="HOLY_ATTACK">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="40"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="31.0">
                     <value level="2">70.0</value>
                     <value level="3">146.0</value>
@@ -2777,10 +2537,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4492" name="Enlarging Head Curse" max-level="12" debuff="true" action="A2">
-        <!-- Momentarily enlarges the head. -->
+    <skill id="4492" name="Enlarging Head Curse" max-level="12" action="A2" debuff="true">
+        <!-- Increases your head size a certain amount of time. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2823,7 +2583,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="46.0">
                     <value level="2">105.0</value>
                     <value level="3">219.0</value>
@@ -2841,8 +2601,9 @@
         </effects>
     </skill>
     <skill id="4493" name="Mystic Immunity" max-level="12" action="A2">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2902,16 +2663,16 @@
         </effects>
     </skill>
     <skill id="4494" name="Raid Boss" max-level="2">
-        <!--
-		level 1: If the person who made the greatest contribution is 3 or more Lv.s higher than the raid monster, then the item/Adena rewards will decrease. If the difference is 9 or more Lv.s, the monster will drop nothing at all.
-		level 2: If the person who made the greatest contribution is 3 or more Lv.s higher than the underground prisoner, then the item/Adena rewards will decrease. If the difference is 9 or more Lv.s, then the monster will drop nothing at all.
-	 -->
+        <!-- 
+			level 1: If the person who has made the greatest contribution is 15 or more levels higher than the Raid Boss, then there are no item/ adena rewards.
+			level 2: If the person who has made the greatest contribution is 3 or more levels higher than the Raid Boss, then the item/ adena rewards will decrease. If the difference is 9 levels or more, the monster will drop nothing at all.
+		-->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4495" name="Power Shot" max-level="12" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
@@ -2949,7 +2710,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="352.0">
                     <value level="2">949.0</value>
                     <value level="3">2607.0</value>
@@ -2966,10 +2727,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4496" name="Stun" max-level="12" debuff="true" action="A2">
-        <!-- Stunned and temporarily rendered immobile. -->
+    <skill id="4496" name="Stun" max-level="12" action="A2" debuff="true">
+        <!-- Immobilizes and stuns target. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK">
+        <attributes magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -3012,7 +2773,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="176.0">
                     <value level="2">475.0</value>
                     <value level="3">1304.0</value>
@@ -3033,22 +2794,19 @@
     <skill id="4497" name="Treasure Chest (Lv. 21)">
         <!-- A locked chest that could contain treasure or a nasty surprise. -->
         <icon initial="icon.skill0042"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4498" name="Treasure Chest (Lv. 22)">
         <!-- A locked chest that could contain treasure or a nasty surprise. -->
         <icon initial="icon.skill0042"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4499" name="Treasure Chest (Lv. 25)">
         <!-- A locked chest that could contain treasure or a nasty surprise. -->
         <icon initial="icon.skill0042"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
 </list>

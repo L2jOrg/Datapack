@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="54200" name="Mount Winner’s Glory" action="A2">
-        <!-- Mounts a Winner’s Glory. -->
+    <skill id="54200" name="Mount Glory of Champion" action="A2">
+        <!-- You can mount Glory of Champion. -->
         <icon initial="icon.warhorse_vehicle"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -19,10 +20,11 @@
             <transformation id="205"/>
         </effects>
     </skill>
-    <skill id="54201" name="Summon White Wing" action="A2">
-        <!-- Ride White Wings. -->
+    <skill id="54201" name="Mount White Wing" action="A2">
+        <!-- You can mount White Wing. -->
         <icon initial="icon.skill8605"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -38,10 +40,11 @@
             <transformation id="206"/>
         </effects>
     </skill>
-    <skill id="54202" name="Summon Silver Saint" action="A2">
-        <!-- Mounts Silver Saint. -->
+    <skill id="54202" name="Mount Shining Lady" action="A2">
+        <!-- You can mount Shining Lady. -->
         <icon initial="icon.skill8607"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -57,17 +60,17 @@
             <transformation id="207"/>
         </effects>
     </skill>
-    <skill id="54203" name="Silent Riding">
-        <!-- For 30 seconds, protected from preemptive attacks from monsters. Speed -20%%. Can only use while mounted on a mount. Skill is cancelled when dismounted. -->
+    <skill id="54203" name="Silent Ride">
+        <!-- Monsters don't attack first for 30 sec.\nSpeed -20%%.\n\nCan be used during riding only.\nThe skill is disabled when the character is dismounted. -->
         <icon initial="icon.skill0221"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="54204" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Human’s original power and transforms into a unique form.\n\nMax HP +300. -->
-        <icon initial="icon.skill14220"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+    <skill id="54204" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nHuman Power grants unique appearance to a hero.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -86,10 +89,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54205" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out Jin Kamael’s original power and pulls out black wings.\n\nMax HP +300. -->
+    <skill id="54205" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nTransforms into a Kamael with two black wings.\n\nMax HP +300. -->
         <icon initial="icon.skill1926"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -108,10 +112,33 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54209" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Orc’s original power and transforms into a unique form.\n\nMax HP +300. -->
-        <icon initial="icon.skill14220"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+    <skill id="54206" name="Ultimate Death Knight Transformation">
+        <!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers.\n\n<Appearance effect>\nP. Atk. +40%%\nP. Critical Damage +40%%\nP. Skill Critical Damage +40%%\nAtk. Spd. +50%%\nSpeed +5\nDecreases penalty of Received Healing.\nIncreases holy defense. -->
+        <icon initial="icon.death_knight_transform"/>
+        <attributes auto-use="BUFF"/>
+        <consume>
+            <item initial="3031"/>
+            <item-count initial="50"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="54207" name="Mount Night Mare">
+        <!-- Mounts a Night Mare. -->
+        <icon initial="icon.riding_knightmare"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54208" name="Worthy Warrior Bonus">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among Death Knights.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes auto-use="BUFF"/>
+        <target/>
+    </skill>
+    <skill id="54209" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nPower of Orcs grants unique appearance to a hero.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -130,10 +157,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54210" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+    <skill id="54210" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nElven Power grants unique appearance to a hero.\n\nMax HP +300. -->
         <icon initial="icon.skill5661"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -152,10 +180,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54211" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dark Elf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+    <skill id="54211" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nPower of Dark Elves grants unique appearance to a hero.\n\nMax HP +300. -->
         <icon initial="icon.skill5661"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -174,10 +203,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54212" name="Ranker Transformation" action="A2">
-        <!-- Benefits for Race Ranking 1st-3rd.\n\nBrings out the Dwarf’s original power and transforms into a unique form.\n\nMax HP +300. -->
+    <skill id="54212" name="Worthy Warrior Transformation" action="A2">
+        <!-- For warriors that has taken the 1st-3rd places in rankings among their race.\n\nDwarven Power grants unique appearance to a hero.\n\nMax HP +300. -->
         <icon initial="icon.skill5661"/>
-        <attributes property="PHYSIC" auto-use="BUFF">
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="500"/>
             <effect-point initial="1"/>
@@ -197,9 +227,10 @@
         </effects>
     </skill>
     <skill id="54213" name="Mount Air Bike" action="A2">
-        <!-- Ride the Air Bike. -->
+        <!-- Allows to ride Air Bike. -->
         <icon initial="icon.etc_dwarf_craft_vehicle"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -214,5 +245,89 @@
         <effects>
             <transformation id="209"/>
         </effects>
+    </skill>
+    <skill id="54214" name="Dragon Berserker Evolver">
+        <!-- P. Atk. +500\nM. Atk. +500\nAtk. Spd. +100\nCasting Spd. +100\nP. Critical Rate +30\nSkill Critical Rate +30%\nAcquired XP/ SP +30%\nSayha's Grace Consumption -15%\n\n -->
+        <icon initial="icon.bm2018_dragon_i01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54215" name="High Priest Transformation">
+        <!-- P. Atk. +300\nM. Atk. +300\nAtk. Spd. +50\nCasting Spd. +50\nP. Critical Rate +15\nSkill Critical Rate +15%\nAcquired XP/ SP +30%\nSayha's Grace Consumption -10%\n\n -->
+        <icon initial="icon.bm2018_healer_i01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54216" name="Baby Shark Transformation">
+        <!-- P. Atk. +200\nM. Atk. +200\nAtk. Spd. +20\nCasting Spd. +20\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\nSayha's Grace Consumption -3%\n\n -->
+        <icon initial="icon.shark_suit"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54217" name="Panda Transformation">
+        <!-- P. Atk. +100\nM. Atk. +100\nAtk. Spd. +10\nCasting Spd. +10\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\n\n -->
+        <icon initial="icon.sayha2017_panda"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54218" name="Cat Transformation">
+        <!-- P. Atk. +100\nM. Atk. +100\nAtk. Spd. +10\nCasting Spd. +10\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\n\n -->
+        <icon initial="icon.sayha2017_cat"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54219" name="Teddy Bear Transformation">
+        <!-- P. Atk. +100\nM. Atk. +100\nAtk. Spd. +10\nCasting Spd. +10\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\n\n -->
+        <icon initial="icon.gomdori_chest_change"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54220" name="Dragon Berserker Evolver">
+        <!-- P. Atk. +500\nM. Atk. +500\nAtk. Spd. +100\nCasting Spd. +100\nP. Critical Rate +30\nSkill Critical Rate +30%\nAcquired XP/ SP +30%\nSayha's Grace Consumption -15% -->
+        <icon initial="icon.bm2018_dragon_i01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54221" name="Wild Wolf Transformation">
+        <!-- P. Atk. +300\nM. Atk. +300\nAtk. Spd. +50\nCasting Spd. +50\nP. Critical Rate +15\nSkill Critical Rate +15%\nAcquired XP/ SP +30%\nSayha's Grace Consumption -10% -->
+        <icon initial="icon.bm2018_barbarian_i01"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54222" name="Valentine Transformation">
+        <!-- P. Atk. +200\nM. Atk. +200\nAtk. Spd. +20\nCasting Spd. +20\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\nSayha's Grace Consumption -3% -->
+        <icon initial="icon.whiteday_suit"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54223" name="Transform: Kat the Cat">
+        <!-- P. Atk. +100\nM. Atk. +100\nAtk. Spd. +10\nCasting Spd. +10\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\nSayha's Grace Consumption -3% -->
+        <icon initial="icon.cat_the_cat_change_0"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54224" name="Hanbok Transformation">
+        <!-- P. Atk. +200\nM. Atk. +200\nAtk. Spd. +20\nCasting Spd. +20\nP. Critical Rate +5\nSkill Critical Rate +5%\nAcquired XP/ SP +20%\nSayha's Grace Consumption -3%\n\n -->
+        <icon initial="icon.ev_kr_traditional_dress"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54225" name="Mount Elemental Lyn Draco">
+        <!-- Mounts an Elemental Lyn Draco. -->
+        <icon initial="icon.etc_lind_vehicle"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="54226" name="Worthy Warrior Transformation">
+        <!-- For warriors that have taken the 1st-3rd places in rankings among their race.\n\nSylph Power grants unique appearance to a hero.\n\nMax HP +300. -->
+        <icon initial="icon.skill5661"/>
+        <attributes auto-use="BUFF"/>
+        <target/>
+    </skill>
+    <skill id="54227" name="Mount Black Wyvern">
+        <!-- Allows to mount Black Wyvern.\nWhen the character is riding Wyvern, weapon/ sigil is unequipped.\nOnly select Buff skills are available while riding the Wyvern. -->
+        <icon initial="icon.s_wyvern_black"/>
+        <attributes/>
+        <target/>
     </skill>
 </list>

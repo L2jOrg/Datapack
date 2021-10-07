@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="15500" name="Major Energy of Life" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="2000"/>
@@ -11,6 +12,7 @@
         <target/>
     </skill>
     <skill id="15501" name="Superior Energy of Life" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="2000"/>
@@ -21,6 +23,7 @@
         <target/>
     </skill>
     <skill id="15502" name="Energy of Mana" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="2000"/>
@@ -31,6 +34,7 @@
         <target/>
     </skill>
     <skill id="15503" name="Major Energy of Mana" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="2000"/>
@@ -41,6 +45,7 @@
         <target/>
     </skill>
     <skill id="15504" name="Superior Energy of Mana" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="2000"/>
@@ -51,9 +56,9 @@
         <target/>
     </skill>
     <skill id="15506" name="Wondrous Herb of Power" action="A2">
-        <!-- For 1 hr. 30 sec., P. Atk. + 100%%. -->
+        <!-- P. Atk. +100%% for 1 min. 30 sec. -->
         <icon initial="icon.etc_warrior_set_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="2000"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
@@ -71,9 +76,9 @@
         </effects>
     </skill>
     <skill id="15507" name="Wondrous Herb of Magic" action="A2">
-        <!-- For 1 hr. 30 sec., M. Atk. + 400%%. -->
+        <!-- M. Atk. +400%% for 1 min. 30 sec. -->
         <icon initial="icon.etc_magic_set_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="2000"/>
             <reuse initial="2000"/>
             <effect-point initial="100"/>
@@ -93,11 +98,11 @@
     <skill id="15508" name="Special Armor" max-level="4">
         <!-- Special armor reduces damage received from servitors. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
     <skill id="15509" name="Laido Destruction" action="A1">
-        <!-- Powerful attack on enemies near target. -->
+        <!-- Inflicts great damage on the enemies near the target. -->
         <icon initial="icon.skill0036"/>
         <attributes>
             <cast-range initial="40"/>
@@ -205,7 +210,7 @@
         <target/>
     </skill>
     <skill id="15517" name="Chaos Attack" action="A1">
-        <!-- Swings arms to attack target. -->
+        <!-- Inflicts powerful physical damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="70"/>
@@ -218,13 +223,13 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15518" name="Confuse Body" max-level="2" debuff="true" action="A2" type="MAGIC">
-        <!--
-            level 1: Confuses the interior of the target's body, decreasing P. Def. /M. Def. by 10%.
-            level 2: Confuses the interior of the target's body, decreasing P. Def. /M. Def. by 15%.
-         -->
+    <skill id="15518" name="Confuse Body" max-level="2" action="A2" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Confuses the interior of the target's body, decreasing P. Def./ M. Def. by 10%.
+			level 2: Confuses the interior of the target's body, decreasing P. Def./ M. Def. by 15%.
+		-->
         <icon initial="icon.skill1422"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="300"/>
             <effect-point initial="-100"/>
             <hit-time initial="1500"/>
@@ -256,7 +261,7 @@
         <target/>
     </skill>
     <skill id="15521" name="Flailing Spin" action="A1">
-        <!-- Swings arms to attack target. -->
+        <!-- Inflicts powerful physical damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="70"/>
@@ -269,10 +274,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15522" name="Dark Poison" debuff="true" action="A2" type="MAGIC">
+    <skill id="15522" name="Dark Poison" action="A2" debuff="true" type="MAGIC">
         <!-- Damages enemy with dark poison and drains HP gradually. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="40"/>
             <reuse initial="4000"/>
             <cool-time initial="500"/>
@@ -287,7 +292,8 @@
     <skill id="15523" name="Accelerate" action="A2" type="MAGIC">
         <!-- Increases Speed. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="2"/>
             <hit-time initial="1000"/>
@@ -322,7 +328,7 @@
         <target/>
     </skill>
     <skill id="15526" name="Karamar Breaker" action="A1">
-        <!-- Powerful attack on enemies near target. -->
+        <!-- Inflicts great damage on the enemies near the target. -->
         <icon initial="icon.skill0036"/>
         <attributes>
             <cast-range initial="600"/>
@@ -336,7 +342,7 @@
         <target/>
     </skill>
     <skill id="15527" name="Chaos Breath" action="A1" type="MAGIC">
-        <!-- AoE M. Atk. On target's area. -->
+        <!-- AoE M. Atk. on target's area. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="300"/>
@@ -362,20 +368,20 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15529" name="Absorb Spirit" debuff="true" action="A2" type="MAGIC">
-        <!-- Soul is drained. P. Def/M. Def. -30%% and Atk. Spd. +10%%. -->
+    <skill id="15529" name="Absorb Spirit" action="A2" debuff="true" type="MAGIC">
+        <!-- Soul is drained. P. Def./ M. Def. -30%%, and Atk. Spd. +10%%. -->
         <icon initial="icon.skill1422"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="300"/>
             <effect-point initial="-100"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15530" name="Slumber" debuff="true" action="A2" type="MAGIC">
-        <!-- Momentarily immobile due to the Sleep effect. -->
+    <skill id="15530" name="Slumber" action="A2" debuff="true" type="MAGIC">
+        <!-- Immobilizes and puts a target into sleep. -->
         <icon initial="icon.skill4046"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
@@ -386,10 +392,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15531" name="Hold" debuff="true" action="A2" type="MAGIC">
-        <!-- Afflicted with Hold and unable to move momentarily. -->
+    <skill id="15531" name="Hold" action="A2" debuff="true" type="MAGIC">
+        <!-- Holds the target. -->
         <icon initial="icon.skill4047"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <reuse initial="8000"/>
             <effect-point initial="-100"/>
@@ -413,10 +419,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15533" name="Spiteful Grudge" debuff="true" action="A2" type="MAGIC">
+    <skill id="15533" name="Spiteful Grudge" action="A2" debuff="true" type="MAGIC">
         <!-- Damages enemy with poison and drains HP gradually. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="40"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -459,56 +465,57 @@
     <skill id="15536" name="Chaotic Mana" action="A2">
         <!-- You are in the Land of Chaos. You can feel Krogel's power around you. -->
         <icon initial="icon.skill0046"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="1"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15537" name="Blood Sacrifice: Decrease Movement Speed" max-level="2" debuff="true" action="A2">
-        <!--
-            level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
-            level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
-         -->
+    <skill id="15537" name="Blood Sacrifice: Decrease Speed" max-level="2" action="A2" debuff="true">
+        <!-- 
+			level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
+			level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
+		-->
         <icon initial="icon.skill1160"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15538" name="Blood Sacrifice: Decrease P. Accuracy" max-level="2" debuff="true" action="A2">
-        <!--
-            level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
-            level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
-         -->
+    <skill id="15538" name="Blood Sacrifice: Decrease P. Accuracy" max-level="2" action="A2" debuff="true">
+        <!-- 
+			level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
+			level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
+		-->
         <icon initial="icon.skill1160"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15539" name="Blood Sacrifice: Decrease P. Def." max-level="2" debuff="true" action="A2">
-        <!--
-            level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
-            level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
-         -->
+    <skill id="15539" name="Blood Sacrifice: Decrease P. Def." max-level="2" action="A2" debuff="true">
+        <!-- 
+			level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
+			level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
+		-->
         <icon initial="icon.skill1160"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15540" name="Blood Sacrifice: Decrease M. Def." max-level="2" debuff="true" action="A2">
-        <!--
-            level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
-            level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
-         -->
+    <skill id="15540" name="Blood Sacrifice: Decrease M. Def." max-level="2" action="A2" debuff="true">
+        <!-- 
+			level 1: Restores 50% of enemy's HP and gives an abnormal status debuff.
+			level 2: Restores 100% of enemy's HP and gives an abnormal status debuff.
+		-->
         <icon initial="icon.skill1160"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <effect-point initial="-100"/>
         </attributes>
@@ -528,7 +535,7 @@
         <target/>
     </skill>
     <skill id="15542" name="Rush Raid" action="A2">
-        <!-- Charges at the target to inflict damage. -->
+        <!-- Rush toward target, inflicts damage. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="600"/>
@@ -540,10 +547,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15543" name="Poison Fog" debuff="true" action="A2" type="MAGIC">
+    <skill id="15543" name="Poison Fog" action="A2" debuff="true" type="MAGIC">
         <!-- Throws poison dust on enemy, draining their HP. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="300"/>
             <cool-time initial="500"/>
             <effect-point initial="-687"/>
@@ -569,7 +576,7 @@
         <target/>
     </skill>
     <skill id="15545" name="Cubit Attack" action="A1">
-        <!-- Inflicts powerful damage on targets within a fan-shaped range. -->
+        <!-- Powerful attack on enemies in a fan-shaped radius of you. -->
         <icon initial="icon.skill0003"/>
         <attributes>
             <cast-range initial="200"/>
@@ -583,9 +590,10 @@
         <target/>
     </skill>
     <skill id="15546" name="Dark Invisibility" action="A2">
-        <!-- Hides for a while. -->
+        <!-- Temporarily grants invisibility. -->
         <icon initial="icon.skill10784"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="2"/>
             <hit-time initial="1000"/>
@@ -611,7 +619,7 @@
     <skill id="15548" name="Partial Healing" action="A2">
         <!-- Restores a part of allies' HP. -->
         <icon initial="icon.skill1219"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <cool-time initial="500"/>
             <effect-point initial="694"/>
@@ -622,10 +630,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15549" name="Soul Break" debuff="true" action="A2" type="MAGIC">
-        <!-- Deceases nearby targets' Casting Spd. by 20%% and P. Critical Damage by 30%%. -->
+    <skill id="15549" name="Soul Break" action="A2" debuff="true" type="MAGIC">
+        <!-- For 20 min., nearby enemies' Casting Spd. -20%% and P. Critical Damage -30%%. -->
         <icon initial="icon.skill0036"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="600"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
@@ -638,9 +646,9 @@
         <target/>
     </skill>
     <skill id="15550" name="Heart Destroyer" action="A2">
-        <!-- Powerful attack on enemy's vital point. Movement Speed increases upon hit. Has a low chance of doing Half-kill. -->
+        <!-- Powerful attack on enemy's vital point. Speed increases upon hit. Has a low chance of doing Half-kill. -->
         <icon initial="icon.skill10509"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="40"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
@@ -655,7 +663,7 @@
     <skill id="15551" name="Heavy Attack" action="A2">
         <!-- Hits enemy's vital point, weakening P. Atk. -->
         <icon initial="icon.skill1160"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="200"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
@@ -667,9 +675,9 @@
         <target/>
     </skill>
     <skill id="15552" name="Hell's Prison" action="A2">
-        <!-- Decreases the target's P. Atk. by 30%%. -->
+        <!-- Target's P. Atk. -30%%. -->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="200"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
@@ -708,10 +716,11 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15556" name="Provoke" debuff="true" action="A1">
+    <skill id="15556" name="Provoke" action="A1" debuff="true">
         <!-- Provokes target into attacking you by forcefully changing their target. -->
         <icon initial="icon.skill10027"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -722,10 +731,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15557" name="Crossbow Attack" debuff="true" action="A2">
+    <skill id="15557" name="Crane Strike" action="A2" debuff="true">
         <!-- Decreases target's Atk. Spd. by 10%%. -->
         <icon initial="icon.skill0101"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="300"/>
             <cool-time initial="500"/>
             <effect-point initial="-867"/>
@@ -736,10 +745,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15558" name="Soul Howl" debuff="true" action="A2" type="MAGIC">
+    <skill id="15558" name="Soul Howl" action="A2" debuff="true" type="MAGIC">
         <!-- Attacks enemy and decreases their Casting Spd. -->
         <icon initial="icon.skill4038"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="300"/>
             <cool-time initial="500"/>
             <effect-point initial="-507"/>
@@ -750,10 +759,11 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15559" name="Poison Attack" debuff="true" action="A2">
+    <skill id="15559" name="Poison Attack" action="A2" debuff="true">
         <!-- Powerful attack on the whole party and poison damage. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="7000"/>
             <cool-time initial="500"/>
             <effect-point initial="-100"/>
@@ -764,10 +774,10 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15561" name="Connected Drain" debuff="true" action="A2">
+    <skill id="15561" name="Connected Drain" action="A2" debuff="true">
         <!-- Bleeding for 5 sec. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <reuse initial="5000"/>
             <cool-time initial="500"/>
@@ -779,7 +789,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15562" name="Lethal Edge" debuff="true" action="A1">
+    <skill id="15562" name="Lethal Edge" action="A1" debuff="true">
         <!-- Instantly kills a party member. -->
         <icon initial="icon.skill0223"/>
         <attributes>
@@ -795,7 +805,7 @@
         <target/>
     </skill>
     <skill id="15564" name="Theor's Attack" max-level="2" action="A1">
-        <!-- P. Atk. On a single enemy. -->
+        <!-- Inflicts physical damage on a single target. -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="70"/>
@@ -808,10 +818,11 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15565" name="Theor's AoE Attack" action="A1">
+    <skill id="15565" name="Theor's Range Attack" action="A1">
         <!-- AoE P. Atk. On nearby enemies. -->
         <icon initial="icon.skill0036"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <hit-time initial="3000"/>
@@ -821,10 +832,11 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15566" name="Disarm" action="A2">
+    <skill id="15566" name="Lightning Disarm" action="A2">
         <!-- Disarms nearby enemies. -->
         <icon initial="icon.skill0485"/>
-        <attributes property="PHYSIC" trait="DISARM">
+        <attributes trait="DISARM">
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <hit-time initial="2000"/>
@@ -834,10 +846,11 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15567" name="Aerial Yoke" debuff="true" action="A2">
+    <skill id="15567" name="Aerial Yoke" action="A2" debuff="true">
         <!-- Aerial Yoke. -->
         <icon initial="icon.skill1042"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
             <hit-time initial="2000"/>
@@ -847,7 +860,7 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15568" name="Forward March" action="A1">
+    <skill id="15568" name="Charge" action="A1">
         <!-- Powerful rush attack on enemy. -->
         <icon initial="icon.skill0000"/>
         <attributes>
@@ -862,9 +875,10 @@
         <target/>
     </skill>
     <skill id="15570" name="Master Siege Shield" action="A2">
-        <!-- For 30 sec., reflects 50%% of received damage. -->
+        <!-- For 30 sec., reflects 50%% of the received damage. -->
         <icon initial="icon.skill_transform_buff"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="150000"/>
             <cool-time initial="500"/>
             <effect-point initial="379"/>
@@ -893,7 +907,8 @@
     <skill id="15572" name="Krogel's Haste" action="A2" type="MAGIC">
         <!-- Atk. Spd. +15%%. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -915,7 +930,7 @@
         <target/>
     </skill>
     <skill id="15575" name="Dedicated Blow" action="A1">
-        <!-- Powerful P. Atk. on enemy. -->
+        <!-- Deals a lot of physical damage to the target. -->
         <icon initial="icon.skill0003"/>
         <attributes>
             <cast-range initial="150"/>
@@ -927,7 +942,7 @@
         <target/>
     </skill>
     <skill id="15576" name="Dedicated Shot" action="A1">
-        <!-- Powerful P. Atk. on enemy. -->
+        <!-- Deals a lot of physical damage to the target. -->
         <icon initial="icon.skill0056"/>
         <attributes>
             <cast-range initial="250"/>
@@ -1001,7 +1016,7 @@
     <skill id="15582" name="Fearsome Bombing" action="A1" type="MAGIC">
         <!-- Powerful M. Atk. On target and nearby enemies. -->
         <icon initial="icon.skill0003"/>
-        <attributes>
+        <attributes property="ALTER">
             <cast-range initial="250"/>
             <reuse initial="10000"/>
             <cool-time initial="200"/>
@@ -1023,9 +1038,10 @@
         <target/>
     </skill>
     <skill id="15584" name="Despairing Bombing" action="A1">
-        <!-- Powerful attack on nearby enemies. -->
+        <!-- Powerful attack on surrounding area. -->
         <icon initial="icon.skill0922"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="200"/>
             <effect-point initial="-100"/>
@@ -1081,7 +1097,7 @@
         <target/>
     </skill>
     <skill id="15589" name="Painful Blow" action="A1">
-        <!-- Powerful P. Atk. on enemy. -->
+        <!-- Deals a lot of physical damage to the target. -->
         <icon initial="icon.skill1275"/>
         <attributes>
             <cast-range initial="150"/>
@@ -1095,7 +1111,8 @@
     <skill id="15590" name="Fear of Lindvior" action="A2" type="MAGIC">
         <!-- Afflicted with Fear and moving against own will. -->
         <icon initial="icon.skill4108"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-867"/>
             <hit-time initial="3000"/>
@@ -1103,9 +1120,10 @@
         <target/>
     </skill>
     <skill id="15592" name="Dark Wind Armor" action="A2">
-        <!-- Reflects a part of received damage. -->
+        <!-- Reflects a portion of the received damage. -->
         <icon initial="icon.skill4095"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="1500"/>
             <effect-point initial="100"/>
             <hit-time initial="3000"/>
@@ -1123,19 +1141,21 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="15594" name="Lindvior Decrease Movement Speed" action="A2">
+    <skill id="15594" name="Lindvior's Speed Decrease" action="A2">
         <!-- Stomping on the ground when enraged. -->
         <icon initial="icon.skill0127"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="-867"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15595" name="Lindvior's Fall" debuff="true" action="A2" type="MAGIC">
+    <skill id="15595" name="Lindvior's Fall" action="A2" debuff="true" type="MAGIC">
         <!-- P. Atk. On nearby enemies. -->
         <icon initial="icon.skill0036"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="-574"/>
         </attributes>
         <target/>
@@ -1144,6 +1164,7 @@
         <!-- Lindvior takes off. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="4200"/>
         </attributes>
         <target/>
@@ -1152,6 +1173,7 @@
         <!-- Lindvior lands. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="5000"/>
         </attributes>
         <target/>

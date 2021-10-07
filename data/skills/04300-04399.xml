@@ -1,104 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="4300" name="Race">
-        <!-- Giant -->
+        <!-- Giants -->
         <icon initial="icon.skill4300"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4301" name="Race">
-        <!-- Bug -->
+        <!-- Bugs -->
         <icon initial="icon.skill4301"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4302" name="Race">
-        <!-- Fairy -->
+        <!-- Fairies -->
         <icon initial="icon.skill4302"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4303" name="Enchant Type">
         <!-- Monster whose HP is 2 times higher than normal. -->
         <icon initial="icon.skill4303"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4304" name="Enchant Type">
         <!-- Monster whose HP is 3 times higher than normal. -->
         <icon initial="icon.skill4304"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4305" name="Enchant Type">
         <!-- Monster whose HP is 4 times higher than normal. -->
         <icon initial="icon.skill4305"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4306" name="Enchant Type">
         <!-- Monster whose HP is 5 times higher than normal. -->
         <icon initial="icon.skill4306"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4307" name="Enchant Type">
         <!-- Monster whose HP is 6 times higher than normal. -->
         <icon initial="icon.skill4307"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4308" name="Enchant Type">
         <!-- Monster whose HP is 7 times higher than normal. -->
         <icon initial="icon.skill4308"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4309" name="Enchant Type">
         <!-- Monster whose HP is 8 times higher than normal. -->
         <icon initial="icon.skill4309"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4310" name="Enchant Type">
         <!-- Monster whose HP is 9 times higher than normal. -->
         <icon initial="icon.skill4310"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4311" name="Week Type">
-        <!-- Monster with 1/2 the normal HP. -->
+        <!-- Monster with 1/ 2 the normal HP. -->
         <icon initial="icon.skill4311"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4312" name="Defense Type">
         <!-- Monster equipped with heavy armor. -->
         <icon initial="icon.skill4312"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4313" name="Defense Type">
         <!-- Monster equipped with light armor. -->
         <icon initial="icon.skill4313"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="4314" name="Holy Light Burst" max-level="12" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
@@ -135,7 +122,7 @@
                 <value level="12">116</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <effects>
             <magical-attack>
                 <power initial="21.0">
@@ -154,10 +141,10 @@
             </magical-attack>
         </effects>
     </skill>
-    <skill id="4315" name="Hold" max-level="12" debuff="true" action="A2">
-        <!-- Afflicted with Hold and unable to move momentarily. -->
+    <skill id="4315" name="Hold" max-level="12" action="A2" debuff="true">
+        <!-- Holds the target. -->
         <icon initial="icon.skill1201"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="HOLD">
+        <attributes magic-critical-rate="-5.0" trait="HOLD">
             <magic-level initial="14">
                 <value level="2">24</value>
                 <value level="3">34</value>
@@ -191,7 +178,7 @@
                 <value level="12">116</value>
             </mana>
         </consume>
-        <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
+        <target object="NOT_FRIEND" range="300" scope="RANGE" type="ENEMY_ONLY"/>
         <abnormal type="ROOT_MAGICALLY" visual="ROOT">
             <level initial="1"/>
             <time initial="30"/>
@@ -201,7 +188,8 @@
             <effect name="Root"/>
         </effects>
     </skill>
-    <skill id="4316" name="Drain Energy" max-level="12" action="A1">
+    <skill id="4316" name="Drain HP" max-level="12" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="14">
@@ -238,7 +226,7 @@
                 <value level="12">209</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150"/>
+        <target object="NOT_FRIEND" range="150" scope="RANGE" type="ENEMY"/>
         <effects>
             <hp-drain percentage="40">
                 <power initial="11.0">
@@ -258,9 +246,11 @@
         </effects>
     </skill>
     <skill id="4317" name="Increase Rage Might" max-level="5" action="A2">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="1800"/>
         </attributes>
@@ -289,15 +279,16 @@
         </effects>
     </skill>
     <skill id="4318" name="Ultimate Buff" max-level="2" action="A2">
-        <!--
-            level 1: P. Atk. and P. Def. are increased.
-            level 2: Attack and Defense abilities are increased.
-         -->
+        <!-- 
+			level 1: P. Atk. and P. Def. are increased.
+			level 2: Attack and Defense abilities are increased.
+		-->
         <icon initial="icon.skill0755">
             <value level="2">icon.skill0757</value>
         </icon>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <consume>
@@ -339,10 +330,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4319" name="Paralysis" debuff="true" action="A2" type="MAGIC">
+    <skill id="4319" name="Paralysis" action="A2" debuff="true" type="MAGIC">
         <!-- Paralyzed and unable to move momentarily. -->
         <icon initial="icon.skill1170"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE">
+        <attributes magic-critical-rate="-5.0" trait="PARALYZE">
             <magic-level initial="60"/>
             <cast-range initial="1500"/>
             <effect-point initial="-100"/>
@@ -360,10 +351,10 @@
             <block-all-actions/>
         </effects>
     </skill>
-    <skill id="4320" name="Poison" max-level="12" debuff="true" action="A2" type="MAGIC">
-        <!-- HP has been momentarily decreased due to Poison. -->
+    <skill id="4320" name="Poison" max-level="12" action="A2" debuff="true" type="MAGIC">
+        <!-- Instantly decreases HP. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON">
+        <attributes magic-critical-rate="-5.0" trait="POISON">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -397,7 +388,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON" visual="DOT_POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -425,10 +416,10 @@
             </damage-over-time>
         </effects>
     </skill>
-    <skill id="4321" name="Decrease P. Def." debuff="true" action="A2" type="MAGIC">
-        <!-- P. Def. greatly decreases temporarily. -->
+    <skill id="4321" name="Decrease P. Def." action="A2" debuff="true" type="MAGIC">
+        <!-- Temporarily greatly decreases the enemy's P. Def. -->
         <icon initial="icon.skill0122"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="1500"/>
             <effect-point initial="-100"/>
@@ -449,9 +440,9 @@
         </effects>
     </skill>
     <skill id="4322" name="Adventurer's Wind Walk" action="A2" type="MAGIC">
-        <!-- Increases movement speed by 33 for 60 minutes. -->
+        <!-- Temporarily increases Speed. Effect 2. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -468,9 +459,9 @@
         </effects>
     </skill>
     <skill id="4323" name="Adventurer's Shield" action="A2" type="MAGIC">
-        <!-- Increases P. Def. by 15%% for 60 minutes. -->
+        <!-- P. Def. +15%% for 60 min. -->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -487,9 +478,9 @@
         </effects>
     </skill>
     <skill id="4324" name="Adventurer's Blessed Body" action="A2" type="MAGIC">
-        <!-- Increases Max HP by 35%% for 60 minutes. -->
+        <!-- Max HP +35%% for 60 min. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -506,9 +497,9 @@
         </effects>
     </skill>
     <skill id="4325" name="Adventurer's Vampiric Rage" action="A2" type="MAGIC">
-        <!-- For 60 minutes, 9%% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+        <!-- With a certain chance, absorbs 9%% of the inflicted damage as HP. Duration: 60 min. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -525,9 +516,9 @@
         </effects>
     </skill>
     <skill id="4326" name="Adventurer's Regeneration" action="A2" type="MAGIC">
-        <!-- Increases HP regeneration bonus by 20%% for 60 minutes. -->
+        <!-- HP Recovery Rate +20%% for 60 min. -->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -544,9 +535,9 @@
         </effects>
     </skill>
     <skill id="4327" name="Adventurer's Haste" action="A2" type="MAGIC">
-        <!-- Increases Atk. Spd. by 15%% for 60 minutes. -->
+        <!-- Increases Atk. Spd. by 15%% for 60 min. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -563,9 +554,9 @@
         </effects>
     </skill>
     <skill id="4328" name="Adventurer's Blessed Soul" action="A2" type="MAGIC">
-        <!-- Increases Max MP by 35%% for 60 minutes. -->
+        <!-- For 60 min., Max MP +35%%. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -582,9 +573,9 @@
         </effects>
     </skill>
     <skill id="4329" name="Adventurer's Acumen" action="A2" type="MAGIC">
-        <!-- Increases Casting Spd. +30%% for 60 minutes. -->
+        <!-- Casting Spd. +30%% for 60 min. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -601,9 +592,9 @@
         </effects>
     </skill>
     <skill id="4330" name="Adventurer's Concentration" action="A2" type="MAGIC">
-        <!-- Decreases magic cancel damage by 18 for 60 minutes. -->
+        <!-- Buff Cancel Rate -18 for 60 min. -->
         <icon initial="icon.skill1078"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -620,9 +611,9 @@
         </effects>
     </skill>
     <skill id="4331" name="Adventurer's Empower" action="A2" type="MAGIC">
-        <!-- Increases M. Atk. by 55%% for 60 minutes. -->
+        <!-- For 60 min., M. Atk. +200. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -639,10 +630,9 @@
         </effects>
     </skill>
     <skill id="4332" name="Mental Aegis">
-        <!-- Provides powerful Hold/Sleep/Fear/Silence Resistance. -->
+        <!-- Provides powerful Hold/ Sleep/ Fear/ Silence Resistance. -->
         <icon initial="icon.skill1035"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -659,10 +649,9 @@
         </effects>
     </skill>
     <skill id="4333" name="Dark Attack Resistance" max-level="5">
-        <!-- Strong Dark attack resistance. -->
+        <!-- Resistance to Dark. -->
         <icon initial="icon.skill4333"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify stat="DARK_RES" stat-add="DARK_RES">
@@ -676,22 +665,22 @@
         </effects>
     </skill>
     <skill id="4334" name="SSQ Cancel" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
             <cast-range initial="1000"/>
             <effect-range initial="1500"/>
         </attributes>
-        <target type="TARGET" scope="PARTY" object="FRIEND" range="2000"/>
+        <target object="FRIEND" range="2000" scope="PARTY" type="TARGET"/>
         <effects>
             <effect name="DispelAll"/>
         </effects>
     </skill>
     <skill id="4335" name="Holy Attack">
-        <!-- Unleashes a holy attack. -->
+        <!-- Inflicts attack of Holy. -->
         <icon initial="icon.skill1043"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify stat="HOLY_POWER" stat-add="HOLY_POWER">
@@ -700,10 +689,9 @@
         </effects>
     </skill>
     <skill id="4336" name="Dark Attack Vulnerability" max-level="5">
-        <!-- Vulnerable to Dark attack. -->
+        <!-- Vulnerable to Dark. -->
         <icon initial="icon.skill4336_new"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify stat="DARK_RES" stat-add="DARK_RES">
@@ -717,10 +705,9 @@
         </effects>
     </skill>
     <skill id="4337" name="Holy Attack Resistance" max-level="5">
-        <!-- Strong Holy attack resistance. -->
+        <!-- Resistance to Holy. -->
         <icon initial="icon.skill4337"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify stat="HOLY_RES" stat-add="HOLY_RES">
@@ -734,6 +721,7 @@
         </effects>
     </skill>
     <skill id="4339" name="Mimir's Elixir" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
@@ -743,9 +731,11 @@
         <target type="TARGET"/>
     </skill>
     <skill id="4340" name="Ultimate Buff" action="A2">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <consume>
@@ -764,9 +754,11 @@
         </effects>
     </skill>
     <skill id="4341" name="Ultimate Buff" action="A2">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="60"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <consume>
@@ -788,9 +780,9 @@
         </effects>
     </skill>
     <skill id="4342" name="Wind Walk" max-level="2" action="A2" type="MAGIC">
-        <!-- Movement Speed temporarily increased. -->
+        <!-- Increases Speed for a certain amount of time. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -816,9 +808,9 @@
         </effects>
     </skill>
     <skill id="4343" name="Decrease Weight" max-level="3" action="A2" type="MAGIC">
-        <!-- Reduces current weight. -->
+        <!-- Temporarily reduces current weight. -->
         <icon initial="icon.skill1257"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -847,9 +839,9 @@
         </effects>
     </skill>
     <skill id="4344" name="Shield" max-level="3" action="A2" type="MAGIC">
-        <!-- Movement Speed temporarily increased. -->
+        <!-- Increases P. Def. for a certain amount of time. -->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="7">
                 <value level="2">25</value>
                 <value level="3">44</value>
@@ -881,9 +873,9 @@
         </effects>
     </skill>
     <skill id="4345" name="Might" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Atk. temporarily increased. -->
+        <!-- Increases P. Atk. for a certain amount of time. -->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -912,9 +904,9 @@
         </effects>
     </skill>
     <skill id="4346" name="Mental Shield" max-level="4" action="A2" type="MAGIC">
-        <!-- Momentarily increases Hold/Sleep/Fear/MEN Attack Resistance. -->
+        <!-- Temporarily increases Hold/ Sleep/ Mental Resistance. -->
         <icon initial="icon.skill1035"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -961,9 +953,9 @@
         </effects>
     </skill>
     <skill id="4347" name="Blessed Body" max-level="6" action="A2" type="MAGIC">
-        <!-- Max HP temporarily increased. -->
+        <!-- Increases Max HP for a certain amount of time. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -999,9 +991,9 @@
         </effects>
     </skill>
     <skill id="4348" name="Blessed Soul" max-level="6" action="A2" type="MAGIC">
-        <!-- Max MP temporarily increased. -->
+        <!-- Increases Max MP for a certain amount of time. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1037,9 +1029,9 @@
         </effects>
     </skill>
     <skill id="4349" name="Magic Barrier" max-level="2" action="A2" type="MAGIC">
-        <!-- M. Def temporarily increased. -->
+        <!-- Increases M. Def. for a certain amount of time. -->
         <icon initial="icon.skill1036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1065,9 +1057,9 @@
         </effects>
     </skill>
     <skill id="4350" name="Stun Resistance" max-level="4" action="A2" type="MAGIC">
-        <!-- Stun Resistance temporarily increased. -->
+        <!-- Increases Stun Resistance for a certain amount of time. -->
         <icon initial="icon.skill1259"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1100,9 +1092,9 @@
         </effects>
     </skill>
     <skill id="4351" name="Concentration" max-level="6" action="A2" type="MAGIC">
-        <!-- Momentarily lowers the probability of magic being canceled due to damage taken. -->
+        <!-- Temporarily lowers the probability of magic being canceled due to damage taken. -->
         <icon initial="icon.skill1078"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1138,9 +1130,9 @@
         </effects>
     </skill>
     <skill id="4352" name="Berserker Spirit" max-level="2" action="A2" type="MAGIC">
-        <!-- P. Def. decreases momentarily., M. Def. and P. Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. -->
+        <!-- Temporarily decreases P./ M. Def. and P. Evasion, and increases P./ M. Atk., Atk. Spd., Casting Spd., and Speed. -->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1201,9 +1193,9 @@
         </effects>
     </skill>
     <skill id="4353" name="Blessed Shield" max-level="6" action="A2" type="MAGIC">
-        <!-- Shield Defense Rate temporarily increased. -->
+        <!-- Increases Shield Defense Rate for a certain amount of time. -->
         <icon initial="icon.skill1243"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1239,9 +1231,9 @@
         </effects>
     </skill>
     <skill id="4354" name="Vampiric Rage" max-level="4" action="A2" type="MAGIC">
-        <!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. -->
+        <!-- Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1272,9 +1264,9 @@
         </effects>
     </skill>
     <skill id="4355" name="Acumen" max-level="3" action="A2" type="MAGIC">
-        <!-- Casting Spd. temporarily increased. -->
+        <!-- Increases Casting Spd. for a certain amount of time. -->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1303,9 +1295,9 @@
         </effects>
     </skill>
     <skill id="4356" name="Empower" max-level="3" action="A2" type="MAGIC">
-        <!-- M. Atk. temporarily increased. -->
+        <!-- Increases M. Atk. for a certain amount of time. -->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1334,9 +1326,9 @@
         </effects>
     </skill>
     <skill id="4357" name="Haste" max-level="2" action="A2" type="MAGIC">
-        <!-- Atk. Spd. temporarily increased. -->
+        <!-- Increases Atk. Spd. for a certain amount of time. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1362,9 +1354,9 @@
         </effects>
     </skill>
     <skill id="4358" name="Guidance" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Accuracy temporarily increased. -->
+        <!-- Increases P. Accuracy for a certain amount of time. -->
         <icon initial="icon.skill1240"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1393,9 +1385,9 @@
         </effects>
     </skill>
     <skill id="4359" name="Focus" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Critical Rate temporarily increased. -->
+        <!-- Increases P. Critical Rate for a certain amount of time. -->
         <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1424,9 +1416,9 @@
         </effects>
     </skill>
     <skill id="4360" name="Death Whisper" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Critical Damage temporarily increased. -->
+        <!-- Increases P. Critical Damage for a certain amount of time. -->
         <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -1454,13 +1446,13 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4361" name="Curse of Destruction" max-level="2" debuff="true" action="A2" type="MAGIC">
-        <!--
-            level 1: Curse of the Preacher of Doom. P. Accuracy temporarily decreased by 12.
-            level 2: Curse of the Preacher of Doom. Temporarily P. Accuracy decreased by 12 and Sleep/Hold/Stun Resistance decreased by 50.
-         -->
+    <skill id="4361" name="Curse of Destruction" max-level="2" action="A2" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Curse of the Preacher of Doom. Temporarily P. Accuracy -12.
+			level 2: Curse of the Preacher of Doom. Temporarily P. Accuracy -12, Sleep/ Hold/ Stun Resistance -50.
+		-->
         <icon initial="icon.skill0046"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="600"/>
             <effect-range initial="1100"/>
         </attributes>
@@ -1494,13 +1486,13 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4362" name="Curse of Destruction" max-level="2" debuff="true" action="A2" type="MAGIC">
-        <!--
-            level 1: Curse of the Preacher of Doom. Casting Spd. temporarily decreased by 30%%.
-            level 2: Curse of the Preacher of Doom. Temporarily Casting Spd. decreased by 30%% and Sleep/Hold/Stun Resistance decreased by 50.
-         -->
+    <skill id="4362" name="Curse of Destruction" max-level="2" action="A2" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Curse of the Preacher of Doom. Temporarily Casting Spd. -30%%.
+			level 2: Curse of the Preacher of Doom. Temporarily Casting Spd. -30%%, Sleep/ Hold/ Stun Resistance -50.
+		-->
         <icon initial="icon.skill0046"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="600"/>
             <effect-range initial="1100"/>
         </attributes>
@@ -1534,10 +1526,10 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="4363" name="Curse of Destruction" debuff="true" action="A2" type="MAGIC">
-        <!-- Curse of the Preacher of Doom. P. Accuracy temporarily decreased by 12. -->
+    <skill id="4363" name="Curse of Destruction" action="A2" debuff="true" type="MAGIC">
+        <!-- Curse of the Preacher of Doom. Temporarily P. Accuracy -12. -->
         <icon initial="icon.skill0046"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="600"/>
             <effect-range initial="1100"/>
         </attributes>
@@ -1553,12 +1545,12 @@
         </effects>
     </skill>
     <skill id="4364" name="Blessing of Revelations" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Blessing of the Orator of Revelations. Temporarily body weight decreased and Poison/Bleed Resistance increased by 25.
-            level 2: Blessing of the Orator of Revelations. Temporarily body weight decreased and Poison/Bleed Hold/Stun/Paralysis Resistance increased by 25.
-         -->
+        <!-- 
+			level 1: Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance +25%%.
+			level 2: Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection/ Hold/ Shock/ Paralysis Resistance +25%%.
+		-->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-range initial="900"/>
         </attributes>
@@ -1599,9 +1591,12 @@
         </effects>
     </skill>
     <skill id="4365" name="Blessing of Revelations" max-level="2" action="A2" type="MAGIC">
-        <!-- Blessing of the Orator of Revelations. Momentarily increases your Hold/MEN Attack Resistance and lessens the probability of magic cancellation due to damage. -->
+        <!-- 
+			level 1: Blessing of the Orator of Revelations. Temporarily increases Hold/ Fear/ Silence Resistance and lessens the probability of magic cancellation due to damage.
+			level 2: Blessing of the Orator of Revelations. Temporarily increases Hold/ Silence/ Fear/ Shock/ Paralysis Resistance and lessens the probability of magic cancellation due to damage.
+		-->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-range initial="900"/>
         </attributes>
@@ -1637,9 +1632,9 @@
         </effects>
     </skill>
     <skill id="4366" name="Blessing of Revelations" action="A2" type="MAGIC">
-        <!-- Blessing of the Orator of Revelations. Temporarily body weight decreased and Poison/Bleed Resistance increased by 25. -->
+        <!-- Blessing of the Orator of Revelations. Temporarily decreases body weight and increases Infection Resistance +25%%. -->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <cast-range initial="400"/>
             <effect-range initial="900"/>
         </attributes>
@@ -1665,7 +1660,8 @@
     <skill id="4367" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1681,7 +1677,8 @@
     <skill id="4368" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1700,7 +1697,8 @@
     <skill id="4369" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1719,7 +1717,8 @@
     <skill id="4370" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1738,7 +1737,8 @@
     <skill id="4371" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1757,7 +1757,8 @@
     <skill id="4372" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1776,7 +1777,8 @@
     <skill id="4373" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1795,7 +1797,8 @@
     <skill id="4374" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1814,7 +1817,8 @@
     <skill id="4375" name="Clan Hall Blessing" action="A2">
         <!-- Receiving the fortress blessing. -->
         <icon initial="icon.skill11756"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <target type="TARGET"/>
         <abnormal type="PUBLIC_SLOT">
@@ -1833,8 +1837,7 @@
     <skill id="4376" name="Greater Physical Attack Resistance">
         <!-- Provides very strong resistance against P. Atk. -->
         <icon initial="icon.skill4376"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -1843,6 +1846,7 @@
         </effects>
     </skill>
     <skill id="4377" name="Wield Temper" max-level="12" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
@@ -1882,7 +1886,7 @@
         </consume>
         <target type="ENEMY"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="46.0">
                     <value level="2">105.0</value>
                     <value level="3">219.0</value>
@@ -1899,10 +1903,10 @@
             </physical-attack>
         </effects>
     </skill>
-    <skill id="4378" name="Self Damage Shield" max-level="12" action="A2">
+    <skill id="4378" name="Personal Damage Shield" max-level="12" action="A2">
         <!-- Temporarily returns some of the received damage back to the enemy. -->
         <icon initial="icon.action105"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -1916,6 +1920,7 @@
                 <value level="11">90</value>
                 <value level="12">95</value>
             </magic-level>
+            <cast-range initial="-1"/>
             <reuse initial="8000">
                 <value level="4">5000</value>
                 <value level="8">8000</value>
@@ -1953,10 +1958,9 @@
         </effects>
     </skill>
     <skill id="4379" name="Spear Resistance" max-level="5">
-        <!-- Strong Spear resistance. -->
+        <!-- Resistance to spear. -->
         <icon initial="icon.skill4379"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -1972,6 +1976,7 @@
         </effects>
     </skill>
     <skill id="4380" name="Arena CP Recovery" action="A1" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
@@ -1986,16 +1991,15 @@
         </effects>
     </skill>
     <skill id="4381" name="Week Type">
-        <!-- Monster with 1/4 the normal HP. -->
+        <!-- Monster with 1/ 4 the normal HP. -->
         <icon initial="icon.skill4381"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="4382" name="Curse of Lake Ghost" max-level="12" debuff="true" action="A2">
+    <skill id="4382" name="Curse of Lake Ghost" max-level="12" action="A2" debuff="true">
         <!-- The Lake Ghost hexes you, temporarily increasing the size of your head. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -2037,7 +2041,7 @@
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="46.0">
                     <value level="2">105.0</value>
                     <value level="3">219.0</value>
@@ -2055,13 +2059,15 @@
         </effects>
     </skill>
     <skill id="4383" name="Aggression Stone" action="A3">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <element type="EARTH" value="20"/>
         </attributes>
-        <target type="TARGET" scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK" type="TARGET"/>
         <abnormal type="TURN_STONE" visual="FLESH_STONE">
             <level initial="2"/>
             <time initial="10"/>
@@ -2076,7 +2082,7 @@
     <skill id="4384" name="Scapegoat's Grace" action="A2">
         <!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Def. -->
         <icon initial="icon.skill0122"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
@@ -2091,7 +2097,7 @@
     <skill id="4385" name="Scapegoat's Grace" action="A2">
         <!-- Scapegoat's Grace. Temporarily protects against any debuff that lowers P. Atk. -->
         <icon initial="icon.skill4037"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
@@ -2103,25 +2109,25 @@
             <time initial="120"/>
         </abnormal>
     </skill>
-    <skill id="4386" name="Scapegoat's Grace" debuff="true" action="A2">
+    <skill id="4386" name="Scapegoat's Grace" action="A2" debuff="true">
         <!-- Scapegoat's Grace. Temporarily protects against poison. -->
         <icon initial="icon.skill4036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
             <effect-range initial="1100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" subordination="POISON">
+        <abnormal subordination="POISON" type="POISON">
             <level initial="10"/>
             <time initial="120"/>
         </abnormal>
     </skill>
     <skill id="4387" name="Scapegoat's Grace" action="A2">
-        <!-- Scapegoat's Grace. Temporarily protected against any debuff that lowers HP Recovery. -->
+        <!-- Scapegoat's Grace. Temporarily protects against any de-buff that diminishes the effect of HP recovery magic. -->
         <icon initial="icon.skill1269"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="80"/>
             <cast-range initial="600"/>
             <effect-point initial="100"/>
@@ -2134,10 +2140,9 @@
         </abnormal>
     </skill>
     <skill id="4388" name="Paralysis Resistance" max-level="5">
-        <!-- Strong Paralysis attack resistance. -->
-        <icon initial="icon.skill4388"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <!-- Resistance to Paralysis. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -2152,11 +2157,10 @@
             </defence-trait>
         </effects>
     </skill>
-    <skill id="4389" name="Mental Attack Resistance" max-level="5">
-        <!-- Strong MEN attack resistance. -->
-        <icon initial="icon.skill4389"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+    <skill id="4389" name="Fear Resistance" max-level="5">
+        <!-- Resistant to Fear attacks. -->
+        <icon initial="icon.skill30888"/>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <defence-trait>
@@ -2172,9 +2176,9 @@
         </effects>
     </skill>
     <skill id="4390" name="Mystic Immunity" max-level="2">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
         <effects>
             <effect name="BuffBlock"/>
@@ -2182,9 +2186,9 @@
         </effects>
     </skill>
     <skill id="4391" name="Wind Walk" max-level="2" action="A2" type="MAGIC">
-        <!-- Movement Speed temporarily increased. -->
+        <!-- Increases Speed for a certain amount of time. -->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2205,9 +2209,9 @@
         </effects>
     </skill>
     <skill id="4392" name="Shield" max-level="3" action="A2" type="MAGIC">
-        <!-- Movement Speed temporarily increased. -->
+        <!-- Increases P. Def. for a certain amount of time. -->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2230,9 +2234,9 @@
         </effects>
     </skill>
     <skill id="4393" name="Might" max-level="3" action="A2" type="MAGIC">
-        <!-- P. Atk. temporarily increased. -->
+        <!-- Increases P. Atk. for a certain amount of time. -->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2255,9 +2259,9 @@
         </effects>
     </skill>
     <skill id="4394" name="Blessed Body" max-level="6" action="A2" type="MAGIC">
-        <!-- Max HP temporarily increased. -->
+        <!-- Increases Max HP for a certain amount of time. -->
         <icon initial="icon.skill1045"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2286,9 +2290,9 @@
         </effects>
     </skill>
     <skill id="4395" name="Blessed Soul" max-level="6" action="A2" type="MAGIC">
-        <!-- Max MP temporarily increase. -->
+        <!-- Increases Max MP for a certain amount of time. -->
         <icon initial="icon.skill1048"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2317,9 +2321,9 @@
         </effects>
     </skill>
     <skill id="4396" name="Magic Barrier" max-level="2" action="A2" type="MAGIC">
-        <!-- M. Def temporarily increased. -->
+        <!-- Increases M. Def. for a certain amount of time. -->
         <icon initial="icon.skill1036"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2340,9 +2344,12 @@
         </effects>
     </skill>
     <skill id="4397" name="Berserker Spirit" max-level="2" action="A2" type="MAGIC">
-        <!-- P. Def. decreases momentarily., M. Def. and P. Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Movement Speed. -->
+        <!-- 
+			level 1: Temporarily Max HP/ MP -20%, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5.
+			level 2: Temporarily Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.
+		-->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2398,9 +2405,9 @@
         </effects>
     </skill>
     <skill id="4398" name="Blessed Shield" max-level="6" action="A2" type="MAGIC">
-        <!-- Shield Defense Rate temporarily increased. -->
+        <!-- Increases Shield Defense Rate for a certain amount of time. -->
         <icon initial="icon.skill1243"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>
@@ -2429,9 +2436,9 @@
         </effects>
     </skill>
     <skill id="4399" name="Vampiric Rage" max-level="4" action="A2" type="MAGIC">
-        <!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. -->
+        <!-- Temporarily increases the amount of HP restored while absorbing part of the inflicted damage as HP. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="1"/>
             <cast-range initial="400"/>
             <effect-range initial="900"/>

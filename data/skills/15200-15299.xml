@@ -1,29 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="15206" name="Explosion" action="A1" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-574"/>
         </attributes>
-        <target scope="POINT_BLANK" range="100" affect-min="10" affect-random="10"/>
+        <target affect-min="10" affect-random="10" range="100" scope="POINT_BLANK"/>
     </skill>
     <skill id="15207" name="Debuff Immunity">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="15208" name="Weakened Chaos Shield" max-level="9" action="A2" type="MAGIC">
-        <!--
-            level 1: Lethal Strike Resistance is weakened through the armor destruction skill.
-            level 9: P. Def. and M. Def. increased.
-         -->
+        <!-- 
+			level 1: Armor Destruction. Lethal Strike Resistance decreased.
+			level 9: P./ M. Def. are increased.
+		-->
         <icon initial="icon.skill0035">
             <value level="9">icon.skill1418</value>
         </icon>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" stay-after-death="true" irreplacable="true">
+        <attributes irreplacable="true" magic-critical-rate="-5.0" stay-after-death="true">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
@@ -42,31 +45,27 @@
         </abnormal>
     </skill>
     <skill id="15214" name="Tauti">
-        <!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
+        <!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shillien's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shillien's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
         <icon initial="icon.skillboss"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="15215" name="Lv. 97 Raid Boss">
-        <!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
+    <skill id="15215" name="Raid Boss (Lv. 97)">
+        <!-- The Guillotine was once an executioner. After drinking the blood of Shillien that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shillien. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="15216" name="Lv. 97 Raid Boss">
-        <!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
+    <skill id="15216" name="Raid Boss (Lv. 97)">
+        <!-- This is an undead monster that was created through the blood of Shillien from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shillien by killing everything, thereby taking sacrifices for the darkness. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
-    <skill id="15217" name="Lv. 97 Raid Boss">
-        <!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
+    <skill id="15217" name="Raid Boss (Lv. 97)">
+        <!-- The master criminal who resurrected after drinking the blood of Shillien that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
         <icon initial="icon.skillraid"/>
-        <attributes property="MAGIC" magic-critical-rate="-5.0">
-        </attributes>
+        <attributes magic-critical-rate="-5.0"/>
         <target/>
     </skill>
     <skill id="15218" name="Clear Target" action="A1" type="MAGIC">
@@ -91,7 +90,7 @@
         </effects>
     </skill>
     <skill id="15219" name="Double Strike" action="A1">
-        <!-- Inflicts strong damage upon the enemies near the target. -->
+        <!-- Inflicts great damage on the enemies near the target. -->
         <icon initial="icon.skill0036"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="94"/>
@@ -104,31 +103,32 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100"/>
+        <target object="NOT_FRIEND" range="100" scope="RANGE" type="TARGET"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="15220" name="Explosion" debuff="true" action="A2">
-        <!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 seconds. -->
+    <skill id="15220" name="Detonate" action="A2" debuff="true">
+        <!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2" suicide="true">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" suicide="true" trait="BLEED">
             <magic-level initial="93"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <hit-time initial="2000"/>
         </attributes>
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="FRIEND" range="150"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <target object="FRIEND" range="150" scope="POINT_BLANK"/>
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="1"/>
             <time initial="5"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
             <damage-over-time ticks="5">
@@ -181,7 +181,7 @@
         </consume>
         <target type="TARGET"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="30000.0">
                     <value level="2">40000.0</value>
                     <value level="3">50000.0</value>
@@ -202,19 +202,19 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="TARGET" scope="FAN" object="NOT_FRIEND">
-            <fan-range start-angle="0" radius="100" angle="120"/>
+        <target object="NOT_FRIEND" scope="FAN" type="TARGET">
+            <fan-range angle="120" radius="100" start-angle="0"/>
         </target>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="15224" name="Bloody Breath" debuff="true" action="A2" type="MAGIC">
-        <!-- Soul is drained. P. Def./M. Def. are decreased. -->
+    <skill id="15224" name="Bloody Breath" action="A2" debuff="true" type="MAGIC">
+        <!-- Your soul is sucked away, and your P./ M. Def. is decreased. -->
         <icon initial="icon.skill11769"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
             <cast-range initial="250"/>
             <reuse initial="5000"/>
@@ -225,7 +225,7 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="ENEMY"/>
         <abnormal type="PD_DOWN">
             <level initial="1"/>
             <time initial="5"/>
@@ -254,9 +254,9 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
         </effects>
@@ -275,9 +275,9 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
             <magical-attack-by-abnormal abnormals="PD_DOWN">
@@ -285,11 +285,12 @@
             </magical-attack-by-abnormal>
         </effects>
     </skill>
-    <skill id="15227" name="Added Blow" action="A1">
+    <skill id="15227" name="Extra Hit" action="A1">
         <!-- Additional damage received when debuffed with Soul Drain. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="94"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <consume>
@@ -297,7 +298,7 @@
         </consume>
         <target/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="30000.0"/>
             </physical-attack>
         </effects>
@@ -307,6 +308,7 @@
         <icon initial="icon.skill0003"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="94"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-2"/>
             <hit-time initial="2500"/>
@@ -314,8 +316,8 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="FAN_PB" object="NOT_FRIEND">
-            <fan-range start-angle="0" radius="150" angle="120"/>
+        <target object="NOT_FRIEND" scope="FAN_PB">
+            <fan-range angle="120" radius="150" start-angle="0"/>
         </target>
         <effects>
             <magical-attack-by-abnormal abnormals="PD_DOWN">
@@ -328,6 +330,7 @@
         <icon initial="icon.skill0003"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="94"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-2"/>
             <hit-time initial="2500"/>
@@ -335,11 +338,11 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="FAN_PB" object="NOT_FRIEND">
-            <fan-range start-angle="0" radius="150" angle="120"/>
+        <target object="NOT_FRIEND" scope="FAN_PB">
+            <fan-range angle="120" radius="150" start-angle="0"/>
         </target>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
             <magical-attack-by-abnormal abnormals="PD_DOWN">
@@ -347,11 +350,12 @@
             </magical-attack-by-abnormal>
         </effects>
     </skill>
-    <skill id="15230" name="Added Blow" action="A1">
+    <skill id="15230" name="Extra Hit" action="A1">
         <!-- Additional damage received when debuffed with Soul Drain. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="94"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <consume>
@@ -389,7 +393,8 @@
     <skill id="15232" name="Speed Up" action="A2" type="MAGIC">
         <!-- Increases your Atk. Spd. by 200%%. -->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
+            <cast-range initial="-1"/>
         </attributes>
         <consume>
             <mana initial="10"/>
@@ -410,6 +415,7 @@
         <icon initial="icon.skill0036"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-2"/>
             <hit-time initial="2000"/>
@@ -417,9 +423,9 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="POINT_BLANK"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="40000.0"/>
             </physical-attack>
         </effects>
@@ -438,11 +444,11 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="TARGET" scope="FAN" object="NOT_FRIEND">
-            <fan-range start-angle="0" radius="200" angle="120"/>
+        <target object="NOT_FRIEND" scope="FAN" type="TARGET">
+            <fan-range angle="120" radius="200" start-angle="0"/>
         </target>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="200000.0"/>
             </physical-attack>
             <magical-attack-by-abnormal abnormals="PD_DOWN">
@@ -453,8 +459,9 @@
     <skill id="15235" name="Wind of Darkness" max-level="2" action="A2">
         <!-- Creates a powerful wind around a character, throwing back enemies. -->
         <icon initial="icon.skill4107"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="96"/>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <cool-time initial="3000"/>
             <effect-point initial="-200">
@@ -467,14 +474,14 @@
                 <value level="2">78</value>
             </mana>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="250" affect-min="10" affect-random="10"/>
+        <target affect-min="10" affect-random="10" object="NOT_FRIEND" range="250" scope="POINT_BLANK"/>
         <abnormal type="KNOCKDOWN">
             <level initial="1"/>
             <time initial="1"/>
             <chance initial="80"/>
         </abnormal>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="180000.0"/>
             </physical-attack>
             <magical-attack-by-abnormal abnormals="PD_DOWN">
@@ -504,15 +511,17 @@
         </consume>
         <target type="TARGET"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="200000.0"/>
             </physical-attack>
         </effects>
     </skill>
     <skill id="15237" name="Dark Buster" max-level="2" action="A1" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="96"/>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="800"/>
             <effect-point initial="-300">
@@ -526,17 +535,17 @@
                 <value level="2">94</value>
             </mana>
         </consume>
-        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE" type="TARGET"/>
         <effects>
-            <physical-attack critical-chance="0.0">
+            <physical-attack>
                 <power initial="200000.0"/>
             </physical-attack>
         </effects>
     </skill>
-    <skill id="15238" name="Dark Breath" debuff="true" action="A2" type="MAGIC">
-        <!-- Absorb the souls of enemies within 180 degrees of you and decrease their P. Def./M. Def. by 30%%. -->
+    <skill id="15238" name="Dark Breath" action="A2" debuff="true" type="MAGIC">
+        <!-- Absorb the souls of enemies within 180 degrees of you and decrease their P./ M. Def. by 30%%. -->
         <icon initial="icon.skill11769"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="96"/>
             <cast-range initial="250"/>
             <effect-point initial="-100"/>
@@ -546,8 +555,8 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
-            <fan-range start-angle="0" radius="200" angle="180"/>
+        <target object="NOT_FRIEND" scope="FAN" type="ENEMY">
+            <fan-range angle="180" radius="200" start-angle="0"/>
         </target>
         <abnormal type="PD_DOWN">
             <level initial="1"/>
@@ -555,11 +564,12 @@
             <chance initial="200"/>
         </abnormal>
     </skill>
-    <skill id="15239" name="Added Blow" action="A1">
+    <skill id="15239" name="Extra Hit" action="A1">
         <!-- Additional damage received when debuffed with Soul Drain. -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="93"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <consume>
@@ -568,6 +578,7 @@
         <target/>
     </skill>
     <skill id="15241" name="" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
@@ -582,6 +593,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <target/>
@@ -591,6 +603,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <target/>
@@ -600,6 +613,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -608,12 +622,13 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="1500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="15246" name="Nurka Blow" action="A1">
-        <!-- Inflicts powerful damage on target and nearby enemies. -->
+        <!-- Inflicts a powerful blow on the target and nearby enemies. -->
         <icon initial="icon.skill0036"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
@@ -626,13 +641,14 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="100"/>
+        <target object="NOT_FRIEND" range="100" scope="RANGE" type="TARGET"/>
     </skill>
     <skill id="15248" name="Nurka Howl" action="A2" type="MAGIC">
         <!-- Nurka's P. Atk. and Atk. Spd. increased and P. Def. decreased. -->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="121"/>
             <hit-time initial="2000"/>
@@ -664,10 +680,11 @@
         <target type="TARGET"/>
     </skill>
     <skill id="15250" name="Nurka's Cold Shoulders" action="A2" type="MAGIC">
-        <!-- Inflicts Aerial Yoke on nearby enemies. -->
+        <!-- Binds all enemies who surround your character. -->
         <icon initial="icon.skill1042"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="AIRBIND">
+        <attributes magic-critical-rate="-5.0" trait="AIRBIND">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-707"/>
             <hit-time initial="2500"/>
@@ -675,7 +692,7 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
+        <target object="NOT_FRIEND" range="150" scope="POINT_BLANK"/>
         <abnormal type="AIRBIND" visual="AIRBIND">
             <level initial="1"/>
             <time initial="3"/>
@@ -683,10 +700,11 @@
         </abnormal>
     </skill>
     <skill id="15251" name="Invincible Nurka" action="A2" type="MAGIC">
-        <!-- No attacks are working on Nurka. -->
+        <!-- Nurka won't attack. -->
         <icon initial="icon.skill11758"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0" static-reuse="true">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="867"/>
             <hit-time initial="2000"/>
@@ -700,11 +718,12 @@
             <time initial="10"/>
         </abnormal>
     </skill>
-    <skill id="15253" name="Earth-rumbling Nurka" debuff="true" action="A2">
-        <!-- Damages nearby enemies and decreases their Spd. -->
+    <skill id="15253" name="Earth-rumbling Nurka" action="A2" debuff="true">
+        <!-- Inflicts damage to target and nearby enemies, decreases Speed. -->
         <icon initial="icon.skill11509"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="300"/>
             <effect-point initial="-687"/>
@@ -714,7 +733,7 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="100"/>
+        <target object="NOT_FRIEND" range="100" scope="POINT_BLANK"/>
         <abnormal type="SPEED_DOWN">
             <level initial="1"/>
             <time initial="5"/>
@@ -726,6 +745,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="1"/>
             <hit-time initial="1500"/>
@@ -733,13 +753,14 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="RANGE" object="NOT_FRIEND" range="200"/>
+        <target object="NOT_FRIEND" range="200" scope="RANGE"/>
     </skill>
     <skill id="15255" name="Defensive Nurka" action="A2" type="MAGIC">
-        <!-- Nurka's P. Def. + 50%%. -->
+        <!-- Nurka's P. Def. +50%%. -->
         <icon initial="icon.skill11252"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
@@ -754,10 +775,11 @@
         </abnormal>
     </skill>
     <skill id="15256" name="Aggressive Nurka" action="A2" type="MAGIC">
-        <!-- Nurka's P. Atk. + 50%%. -->
+        <!-- Nurka's P. Atk. +50%%. -->
         <icon initial="icon.skill10252"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="1"/>
             <hit-time initial="1000"/>
@@ -771,10 +793,10 @@
             <time initial="7200"/>
         </abnormal>
     </skill>
-    <skill id="15257" name="Resistance Blaze" debuff="true" action="A2" type="MAGIC">
-        <!-- Movement Speed decreased. -->
+    <skill id="15257" name="Resistance Blaze" action="A2" debuff="true" type="MAGIC">
+        <!-- Speed decreased. -->
         <icon initial="icon.skill0003"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
             <cast-range initial="300"/>
             <reuse initial="5000"/>
@@ -813,6 +835,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -821,6 +844,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
@@ -829,6 +853,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="17000"/>
         </attributes>
         <target/>
@@ -838,6 +863,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="17000"/>
         </attributes>
         <target/>
@@ -847,6 +873,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="17000"/>
         </attributes>
         <target/>
@@ -867,6 +894,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="17000"/>
         </attributes>
         <target/>
@@ -876,16 +904,18 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="8000"/>
             <hit-time initial="15000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="15270" name="Lindvior's Mass Yoke" debuff="true" action="A2" type="MAGIC">
+    <skill id="15270" name="Lindvior's Mass Yoke" action="A2" debuff="true" type="MAGIC">
         <!-- Lindvior's Aerial Yoke for All Skill Area Data -->
         <icon initial="icon.skill1042"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="-707"/>
             <hit-time initial="2000"/>
         </attributes>
@@ -894,7 +924,7 @@
     <skill id="15271" name="Body Slam" action="A2">
         <!-- Lindvior's stun -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
             <cast-range initial="400"/>
             <cool-time initial="1000"/>
@@ -908,6 +938,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <cool-time initial="1500"/>
             <effect-point initial="-574"/>
             <hit-time initial="2500"/>
@@ -928,7 +959,7 @@
     <skill id="15276" name="Bleed" action="A2">
         <!-- Bleeding -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
             <cast-range initial="600"/>
             <cool-time initial="500"/>
@@ -937,10 +968,10 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="15278" name="Yoke" debuff="true" action="A2" type="MAGIC">
+    <skill id="15278" name="Hold" action="A2" debuff="true" type="MAGIC">
         <!-- Lindvior's aerial yoke -->
         <icon initial="icon.skill1042"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
             <cast-range initial="1100"/>
             <cool-time initial="500"/>
@@ -954,24 +985,26 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="5000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="15280" name="Lindvior's Berserk" action="A2">
-        <!-- Lindvior Raid's Berserk -->
+        <!-- Lindvior Raid's Berserk. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="700"/>
         </attributes>
         <target/>
     </skill>
     <skill id="15281" name="Lindvior's Skill 21" action="A2" type="MAGIC">
-        <!-- Atk. Spd. and Speed + 30%%. -->
+        <!-- Atk. Spd. and Speed +30%%. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
             <cast-range initial="1100"/>
             <effect-point initial="100"/>
@@ -983,6 +1016,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="99"/>
+            <cast-range initial="-1"/>
             <hit-time initial="17000"/>
         </attributes>
         <target/>
@@ -1004,10 +1038,10 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="15287" name="Twister" debuff="true" action="A2">
+    <skill id="15287" name="Twister" action="A2" debuff="true">
         <!-- Inflicts magical damage on PCs near the target and immobilizes them. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="SHOCK" level-bonus-rate="1">
+        <attributes level-bonus-rate="1" magic-critical-rate="-5.0" trait="SHOCK">
             <magic-level initial="95"/>
             <cast-range initial="200"/>
             <reuse initial="5000"/>
@@ -1019,18 +1053,19 @@
         <consume>
             <mana initial="10"/>
         </consume>
-        <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="100"/>
+        <target object="NOT_FRIEND" range="100" scope="RANGE" type="ENEMY"/>
         <abnormal type="STUN" visual="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="150"/>
         </abnormal>
     </skill>
-    <skill id="15288" name="Recovery Bonus Increase" action="A2">
-        <!-- Lidia's HP Recovery Bonus is greatly increased. -->
+    <skill id="15288" name="Increase Recovery Bonus" action="A2">
+        <!-- Greatly increases Lidia's HP Recovery Bonus. -->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -1043,11 +1078,12 @@
             <time initial="15"/>
         </abnormal>
     </skill>
-    <skill id="15289" name="Decrease Atk. Spd." debuff="true" action="A2">
+    <skill id="15289" name="Decrease Atk. Spd." action="A2" debuff="true">
         <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Atk. Spd. is decreased. -->
         <icon initial="icon.skill11509"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="300"/>
             <effect-point initial="-687"/>
@@ -1057,11 +1093,12 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="15290" name="Decrease Casting Spd." debuff="true" action="A2">
+    <skill id="15290" name="Decrease Casting Spd." action="A2" debuff="true">
         <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Casting Spd. is decreased. -->
         <icon initial="icon.skill11509"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <cool-time initial="300"/>
             <effect-point initial="-687"/>
@@ -1071,11 +1108,12 @@
         </consume>
         <target type="ENEMY"/>
     </skill>
-    <skill id="15291" name="Bleed" debuff="true" action="A2" type="MAGIC">
+    <skill id="15291" name="Bleed" action="A2" debuff="true" type="MAGIC">
         <!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. HP continues to decrease. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="2">
+        <attributes level-bonus-rate="2" magic-critical-rate="-5.0" trait="BLEED">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="-100"/>
         </attributes>
@@ -1083,7 +1121,7 @@
             <mana initial="10"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal subordination="BLEEDING" type="BLEEDING" visual="DOT_BLEEDING">
             <level initial="2"/>
             <time initial="20"/>
             <chance initial="100"/>
@@ -1097,8 +1135,9 @@
     <skill id="15292" name="Logan's Revenge" action="A2" type="MAGIC">
         <!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased. -->
         <icon initial="icon.skill0168"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <consume>
@@ -1116,10 +1155,11 @@
         </effects>
     </skill>
     <skill id="15293" name="Logan's Revenge" action="A2" type="MAGIC">
-        <!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
+        <!-- Logan's revenge left in his dying breath. Grants invincibility temporarily. -->
         <icon initial="icon.skill11758"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0" static-reuse="true">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="867"/>
         </attributes>
@@ -1132,7 +1172,7 @@
             <time initial="40"/>
         </abnormal>
         <effects>
-            <damage-block block-hp="true"/>
+            <damage-block block-hp="true" block-mp="false"/>
             <effect name="DebuffBlock"/>
             <resist-dispel-by-category category="ALL">
                 <power initial="100.0"/>
@@ -1147,6 +1187,7 @@
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -1155,11 +1196,12 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15295" name="Logan's Mistake" action="A2" type="MAGIC">
+    <skill id="15295" name="Logan's Revenge" action="A2" type="MAGIC">
         <!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased. -->
         <icon initial="icon.skill0168"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <consume>
@@ -1171,11 +1213,12 @@
             <time initial="180"/>
         </abnormal>
     </skill>
-    <skill id="15296" name="Logan's Mistake" action="A2" type="MAGIC">
-        <!-- Logan's mistake left in his escape. Momentarily invincible. -->
+    <skill id="15296" name="Logan's Revenge" action="A2" type="MAGIC">
+        <!-- Logan's mistake left in his escape. Grants invincibility temporarily. -->
         <icon initial="icon.skill11758"/>
-        <attributes property="PHYSIC" static-reuse="true" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0" static-reuse="true">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="867"/>
         </attributes>
@@ -1188,11 +1231,12 @@
             <time initial="40"/>
         </abnormal>
     </skill>
-    <skill id="15297" name="Logan's Mistake" action="A1" type="MAGIC">
+    <skill id="15297" name="Logan's Revenge" action="A1" type="MAGIC">
         <!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased (Presentation). -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <hit-time initial="1000"/>
         </attributes>
@@ -1201,18 +1245,19 @@
         </consume>
         <target/>
     </skill>
-    <skill id="15298" name="Logan's Token of Gratitude" action="A2" type="MAGIC">
+    <skill id="15298" name="Logan's Revenge" action="A2" type="MAGIC">
         <!-- Logan's token of gratitude left in his escape. Character's HP Recovery Rate is greatly increased temporarily. -->
         <icon initial="icon.skill1044"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <hit-time initial="1000"/>
         </attributes>
         <consume>
             <mana initial="10"/>
         </consume>
-        <target scope="POINT_BLANK" object="NOT_FRIEND" range="500"/>
+        <target object="NOT_FRIEND" range="500" scope="POINT_BLANK"/>
         <abnormal type="HP_REGEN_UP">
             <level initial="1"/>
             <time initial="60"/>
@@ -1221,8 +1266,9 @@
     <skill id="15299" name="Blood Siphon Energy" action="A2" type="MAGIC">
         <!-- Giselle von Hellmann attacks to recover her own HP. -->
         <icon initial="icon.skill1268"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0">
+        <attributes magic-critical-rate="-5.0">
             <magic-level initial="95"/>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
             <effect-point initial="285"/>
             <hit-time initial="1000"/>

@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
     <skill id="51100" name="Fishing Agathion's Blessing">
-        <!-- Increases Fishing XP/SP +10%%. -->
+        <!-- Acquired XP/ SP while fishing +10%%. -->
         <icon initial="icon.agathion_tersi_guard_1"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="51101" name="Summon Ignis Agathion" action="A1">
-        <!-- Unseals Ignis Agathion. -->
+    <skill id="51101" name="Summon Agathion Ignis" action="A1">
+        <!-- Summons Agathion Ignis. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -18,11 +19,12 @@
             <summon-agathion id="13568"/>
         </effects>
     </skill>
-    <skill id="51102" name="Summon Nebula Agathion" action="A1">
-        <!-- Unseals Nebula Agathion. -->
+    <skill id="51102" name="Summon Agathion Nebula" action="A1">
+        <!-- Summons Agathion Nebula. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -30,11 +32,12 @@
             <summon-agathion id="13572"/>
         </effects>
     </skill>
-    <skill id="51103" name="Summon Procella Agathion" action="A1">
-        <!-- Unseals Procella Agathion. -->
+    <skill id="51103" name="Summon Agathion Procella" action="A1">
+        <!-- Summons Agathion Procella. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -42,11 +45,12 @@
             <summon-agathion id="13576"/>
         </effects>
     </skill>
-    <skill id="51104" name="Summon Petram Agathion" action="A1">
-        <!-- Unseals Petram Agathion. -->
+    <skill id="51104" name="Summon Agathion Petram" action="A1">
+        <!-- Summons Agathion Petram. -->
         <icon initial="icon.etc_summon_aga_agit_i00"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="85"/>
+            <cast-range initial="-1"/>
             <hit-time initial="3000"/>
         </attributes>
         <target/>
@@ -54,86 +58,97 @@
             <summon-agathion id="13580"/>
         </effects>
     </skill>
-    <skill id="51105" name="High-grade Fisher's Blessing" action="A1">
-        <!-- For 2 hours Fishing XP/SP +200%%. Effect remains after death. -->
+    <skill id="51105" name="Improved Master Fisherman's Blessing" action="A1">
+        <!-- For 2 h. Acquired XP/ SP through fishing +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51106" name="High-grade Fisher's Blessing" action="A1">
-        <!-- For 4 hours Fishing XP/SP +200%%. Effect remains after death. -->
+    <skill id="51106" name="Improved Master Fisherman's Blessing" action="A1">
+        <!-- For 4 h. Acquired XP/ SP through fishing +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51107" name="High-grade Fisher's Blessing" action="A1">
-        <!-- For 8 hours Fishing XP/SP +200%%. Effect remains after death. -->
+    <skill id="51107" name="Improved Master Fisherman's Blessing" action="A1">
+        <!-- For 8 h. Acquired XP/ SP through fishing +200%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51108" name="Dandy's Golden Ball" action="A1">
-        <!-- Sayha's Grace recovers all, for 1 hour XP/SP +100%%. Armor changes to NC Dinos Uniform. -->
-        <icon initial="BranchIcon.icon.g_ev_goldenball"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <!-- Sayha's Grace points +140,000. For 1 h., Acquired XP/ SP +100%%. Changes the armor's appearance to that of NC Dinos Uniform. The effect remains after death. -->
+        <icon initial="icon.ev_dinos_baseball_gold"/>
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51109" name="Windstorm Box" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51110" name="Fisher's Blessing" action="A1">
-        <!-- For 24 hours Fishing XP/SP +50%%. Effect remains after death. -->
+    <skill id="51110" name="Fisherman's Blessing" action="A1">
+        <!-- For 24 h., Acquired XP/ SP through fishing +50%%. Effect remains after death. -->
         <icon initial="icon.fishing_zone_ticket_1"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10000"/>
-            <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51111" name="Rally Dreamland" action="A1">
-        <!-- You've got a big head. -->
-        <icon initial="icon.ev_kr_traditional_dress"/>
-        <attributes property="PHYSIC">
-        </attributes>
-        <target/>
-    </skill>
-    <skill id="51112" name="Soaring Fireworks" action="A1">
-        <!-- Shoots beautiful fireworks into the sky. -->
+    <skill id="51111" name="Head Enlargement" action="A1">
+        <!-- Increases your head's size. -->
         <icon initial="icon.ev_kr_traditional_dress"/>
         <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51112" name="Firecracker" action="A1">
+        <!-- Launches fireworks. -->
+        <icon initial="icon.ev_kr_traditional_dress"/>
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51113" name="Rice Cake Soup" action="A1">
-        <!-- For 5 minutes, XP/SP Gain +10%%, P. Atk./M. Atk. +15%%, P. Def./M. Def +15%%, Atk. Spd./Casting Spd. +10%%, and Movement Speed +10. Sayha's Grace Consumption Rate -30%%. Changes appearance to Hanbok. The effects disappear upon restart. -->
+    <skill id="51113" name="Dumpling Soup" action="A1">
+        <!-- For 5 min., changes armor appearance to that of Hanbok. Acquired XP/ SP +10%%, P./ M. Atk. +15%%, P./ M. Def. +15%%, Atk. Spd./ Casting Spd. +10%%, Speed +10, Sayha's Grace Consumption -30%%. The effect disappears after logout. -->
         <icon initial="BranchSys.icon.br_taiwan_newyear_food_d_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51114" name="Agathion Enchant Scroll Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -144,26 +159,30 @@
         </conditions>
         <effects>
             <random-restoration>
-                <item chance="70.0" id="48046"/>
-                <item chance="20.0" id="48047"/>
-                <item chance="5.0" id="90963"/>
-                <item chance="3.0" id="90898"/>
-                <item chance="2.0" id="90899"/>
+                <item chance="70.0" count="1" id="48046"/>
+                <item chance="20.0" count="1" id="48047"/>
+                <item chance="5.0" count="1" id="90963"/>
+                <item chance="3.0" count="1" id="90898"/>
+                <item chance="2.0" count="1" id="90899"/>
             </random-restoration>
         </effects>
     </skill>
-    <skill id="51115" name="Top-grade Jewel Box" action="A1">
+    <skill id="51115" name="Exquisite Jewel Box" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51116" name="Attribute Necklace Box" action="A1">
+    <skill id="51116" name="Attribute Necklace Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -171,83 +190,79 @@
         <target/>
     </skill>
     <skill id="51117" name="Blessed Pendant Box" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51118" name="+5 Agathion Box" action="A1">
+    <skill id="51118" name="+5 Agathion Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51119" name="+10 Agathion Box" action="A1">
+    <skill id="51119" name="+10 Agathion Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
-            <reuse initial="3000"/>
-            <cool-time initial="500"/>
-            <hit-time initial="500"/>
-        </attributes>
-        <target/>
-        <conditions>
-            <encumbered slots="10" weight="20"/>
-        </conditions>
-        <effects>
-            <random-restoration>
-                <item id="48048" chance="11.0"/> <!-- Agathion - Virgo -->
-                <item id="48049" chance="11.0"/> <!-- Agathion - Capricorn -->
-                <item id="48050" chance="11.0"/> <!-- Agathion - Libra -->
-                <item id="48052" chance="11.0"/> <!-- Agathion - Taurus -->
-                <item id="48053" chance="11.0"/> <!-- Agathion - Leo -->
-                <item id="48054" chance="11.0"/> <!-- Agathion - Gemini -->
-                <item id="48055" chance="11.0"/> <!-- Agathion - Scorpio -->
-                <item id="48056" chance="11.0"/> <!-- Agathion - Aquarius -->
-                <item id="48058" chance="12.0"/> <!-- Agathion - Sagittarius -->
-            </random-restoration>
-        </effects>
-    </skill>
-    <skill id="51120" name="+15 A-grade Top-grade Weapon Pack" action="A1">
-        <icon initial="icon.skill0000"/>
-        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51121" name="Sibis Weapon Enchant Scroll" action="A1">
-        <!-- Can use Sibis' Black Samurai Long Sword. -->
+    <skill id="51120" name="+15 Top-grade A-grade Weapon Pack" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+            <reuse initial="3000"/>
+            <cool-time initial="500"/>
+            <hit-time initial="500"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51121" name="Sibi's Weapon Enchant Scroll" action="A1">
+        <!-- Enchants Sibi's Samurai Black Long Sword. -->
         <icon initial="icon.yogi_scroll_of_enchant_weapon_grade_i00"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="51122" name="Maphr Potion" action="A1" type="MAGIC">
-        <!-- Maphr's Blessing increases Enchant Chance for 10 seconds. Cannot be applied to partial enchantment. -->
+        <!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. -->
         <icon initial="icon.etc_instant_lucky_potion_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51123" name="Maphr Potion" action="A1" type="MAGIC">
-        <!-- Maphr's Blessing increases Enchant Chance for 10 seconds. Cannot be applied to partial enchantment. -->
+        <!-- For 10 min. the enchant success rate is increased. Cannot be used to enchant some items. -->
         <icon initial="icon.etc_instant_lucky_potion_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="5000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51124" name="Chronicle Token">
-        <!-- CON +1, MEN +1, DEX +1, WIT +1, STR +1, INT +1 and Atk. Spd./Casting Spd. +5%% when equipped. -->
+        <!-- CON +1, MEN +1, DEX +1, WIT +1, STR +1, INT +1, Atk. Spd./ Casting Spd. +5%%. -->
         <icon initial="icon.etc_scroll_of_memory_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <base-stats types="CON MEN DEX WIT STR INT">
@@ -261,10 +276,12 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51125" name="Quick MP Potion" action="A1">
+    <skill id="51125" name="MP Replenishing Potion" action="A1">
+        <!-- none -->
         <icon initial="icon.etc_potion_blue_i00"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -273,11 +290,12 @@
             </mp>
         </effects>
     </skill>
-    <skill id="51126" name="Intermediate Spirit's Blessing" action="A2">
-        <!-- For 20 minutes obtain extra Hunting XP +30%%. -->
+    <skill id="51126" name="Mid-grade Spirit's Blessing" action="A2">
+        <!-- For 20 min., Acquired attribute XP +30%%. -->
         <icon initial="icon.elemental_bless_scrl_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal>
@@ -291,10 +309,11 @@
         </effects>
     </skill>
     <skill id="51127" name="High-grade Spirit's Blessing" action="A2">
-        <!-- For 20 minutes obtain extra Hunting XP +50%%. -->
+        <!-- For 20 min., Acquired attribute XP +50%%. -->
         <icon initial="icon.elemental_bless_scrl_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <abnormal>
@@ -308,20 +327,27 @@
         </effects>
     </skill>
     <skill id="51128" name="Spirit's Varnish" action="A1">
+        <!-- none -->
         <icon initial="icon.ev_charge_scroll"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="51129" name="Blessed Spirit's Varnish" action="A1">
+        <!-- none -->
         <icon initial="icon.ev_charge_scroll"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
     <skill id="51130" name="Fire Attack Potion" action="A2">
-        <!-- Increases Fire Attack +50 for 20 min. Cooldown: 1 minute. -->
+        <!-- For 20 min., Fire Attack +50. Cooldown: 1 min. -->
         <icon initial="icon.etc_fire_potion_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -336,10 +362,11 @@
         </effects>
     </skill>
     <skill id="51131" name="Water Attack Potion" action="A2">
-        <!-- Increases Water Attack +50 for 20 min. Cooldown: 1 minute. -->
+        <!-- For 20 min., Water Attack +50. Cooldown: 1 min. -->
         <icon initial="icon.etc_water_potion_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -354,10 +381,11 @@
         </effects>
     </skill>
     <skill id="51132" name="Wind Attack Potion" action="A2">
-        <!-- Increases Wind Attack +50 for 20 min. Cooldown: 1 minute. -->
+        <!-- For 20 min., Wind Attack +50. Cooldown: 1 min. -->
         <icon initial="icon.etc_wind_potion_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -372,10 +400,11 @@
         </effects>
     </skill>
     <skill id="51133" name="Earth Attack Potion" action="A2">
-        <!-- Increases Earth Attack +50 for 20 min. Cooldown: 1 minute. -->
+        <!-- For 20 min., Earth Attack +50. Cooldown: 1 min. -->
         <icon initial="icon.etc_earth_potion_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes stay-after-death="true">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
@@ -390,87 +419,114 @@
         </effects>
     </skill>
     <skill id="51134" name="Scroll of Escape: Forge of the Gods" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51135" name="Scroll of Escape: Garden of Eva" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51136" name="Escape - Wind Plateau" action="A1">
+    <skill id="51136" name="Scroll of Escape: Land of Winds" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51137" name="Scroll of Escape: Wall of Argos" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51138" name="Wind Treasure Chest" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51139" name="Blessing of Wind Box" action="A1">
+    <skill id="51139" name="Wind's Blessing Chest" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51140" name="Wind Gold Box" action="A1">
+    <skill id="51140" name="Wind Golden Chest" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51141" name="Wind Silver Box" action="A1">
+    <skill id="51141" name="Wind Silver Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51142" name="Sayha's Cloak - Enchant Scroll" action="A1">
-        <icon initial="icon.skill0000"/>
-        <attributes/>
-        <target/>
-    </skill>
-    <skill id="51143" name="Brilliant Sayha's Cloak - Enchant Scroll" action="A1">
-        <icon initial="icon.skill0000"/>
-        <attributes/>
-        <target/>
-    </skill>
-    <skill id="51144" name="Shining Sayha's Cloak - Enchant Scroll" action="A1">
-        <icon initial="icon.skill0000"/>
-        <attributes/>
-        <target/>
-    </skill>
-    <skill id="51145" name="+16 B-grade Weapon Pack" action="A1">
+    <skill id="51142" name="Sayha's Cloak Enchantment Scroll" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51143" name="Radiant Sayha's Cloak Enchantment Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51144" name="Shining Sayha's Cloak Enchantment Scroll" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
+        <target/>
+    </skill>
+    <skill id="51145" name="+8 B-grade Weapon Pack" action="A1">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -478,27 +534,31 @@
         <target/>
     </skill>
     <skill id="51146" name="+10 Hair Accessory Pack" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51147" name="Panda Transformation" action="A1">
-        <!-- Transforms to Panda. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
+    <skill id="51147" name="Transformation into Panda" action="A1">
+        <!-- Panda transformation. Max HP/ MP +20%%, Acquired XP/ SP +20%% while Sayha's Grace is active. The effect remains after death. -->
         <icon initial="icon.sayha2017_panda"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51148" name="Cat Transformation" action="A2">
-        <!-- Transforms to Cat. Max HP/Max MP +20%%, Sayha's Grace Bonus Hunting XP/SP +20%%. Effect remains even after death. -->
+    <skill id="51148" name="Transformation into Cat" action="A2">
+        <!-- Cat transformation. Max HP/ MP +20%%, Acquired XP/ SP +20%% while Sayha's Grace is active. The effect remains after death. -->
         <icon initial="icon.sayha2017_cat"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -516,82 +576,79 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="51149" name="Wealthy Merchant Red's Gift" action="A1">
+    <skill id="51149" name="Gift from Wealthy Merchant Red" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51150" name="Chronicle Cube - 30-day" action="A1">
+    <skill id="51150" name="Chronicle Cube - 30 d." action="A1">
+        <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51151" name="Chronicle Cube - 90-day" action="A1">
+    <skill id="51151" name="Chronicle Cube - 90 d." action="A1">
+        <!-- none -->
         <icon initial="icon.sa_cube"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51152" name="Santa Girl's Gift" max-level="2" action="A2">
-        <!--
-            level 1: Santa Girl's gift buff. Rewards Santa Girl's gift pouch when it disappears. Decreases MP Cost of P./M./Song/Dance skills -15%% and increases Hunting XP/SP gain +20%%. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory.
-            level 2: Gift buff that Santa Girl gives to celebrate Christmas. Rewards Santa Girl's gift pouch when it disappears. <Caution> You cannot obtain the item if you are dead or your inventory is full when you receive it.
-         -->
+    <skill id="51152" name="Santa Girl's Gift" max-level="2" action="A1">
+        <!-- 
+			level 1: Santa Girl's Gift. You can receive a Santa Girl's Gift Pouch once the buff expires. Songs/ dances skills' MP Consumption -15%%. Acquired XP/ SP +20%%. <Warning> If your character dies at the time the item is given, you cannot receive the gift. You also cannot receive the gift if there is no empty slot in your inventory.
+			level 2: Santa Girl's Gift - Christmas Buss Set. You can receive an Santa Girl's Gift Pouch when the Buff is no longer in effect. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory.
+		-->
         <icon initial="BranchSys.Icon.Br_santa_gift_click_i00"/>
-        <attributes property="PHYSIC" stay-after-death="true">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal>
-            <time initial="7200"/>
-        </abnormal>
-        <effects>
-            <stat-modify mode="PER" stat="BONUS_EXP">
-                <power initial="20.0"/>
-            </stat-modify>
-            <stat-modify mode="PER" stat="BONUS_SP">
-                <power initial="20.0"/>
-            </stat-modify>
-            <magic-cost>
-                <power initial="-15.0"/>
-            </magic-cost>
-        </effects>
     </skill>
-    <skill id="51153" name="Holiday Gift" action="A1">
-        <!-- Skill that rewards Santa Girl's gift pouch. -->
+    <skill id="51153" name="Christmas Gift" action="A1">
+        <!-- Santa Girl's Gift Pouch can be obtained. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51154" name="Santa Girl's Magic Box" action="A1">
-        <!-- Skill that casts Santa Girl's gift buff which is activated when the magic box is used -->
+        <!-- Activates Santa Girl's Gift when used. -->
         <icon initial="BranchSys.icon.br_valentine_agathion_pack_i00"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51155" name="Holiday Tree's Blessing" action="A1" type="MAGIC">
-        <!-- Recovers all party members' HP by 5000 and MP by 1500. -->
+    <skill id="51155" name="Christmas Tree Blessing" action="A1" type="MAGIC">
+        <!-- Immediately restores 5000 HP and 1500 MP of party members. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51156" name="Santa Girl's Gift Purse" action="A1">
-        <!-- Skill that rewards an item when the gift pouch is used -->
+    <skill id="51156" name="Santa Girl's Gift Pouch" action="A1">
+        <!-- Allows to obtain an item. -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
@@ -599,9 +656,9 @@
         <target/>
     </skill>
     <skill id="51157" name="Christmas Amulet">
-        <!-- Increases Hunting XP/SP gain +20%% and Fishing XP/SP gain +20%%. -->
+        <!-- Acquired XP/ SP through hunting/ fishing +20%%. -->
         <icon initial="BranchSys.icon.br_xmas_present_luck_i00"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
         <effects>
             <stat-modify mode="PER" stat="BONUS_EXP">
@@ -615,34 +672,45 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51158" name="New Year Herb" action="A1">
-        <!-- For 5 minutes, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP Recovery Bonus/MP Recovery Bonus +30%, and Movement Speed +10. The effects disappear upon restart. -->
+    <skill id="51158" name="Lucky Herb Pouch" action="A1">
+        <!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Bonus Recovery +30%, Speed +10. Disappears after restart. -->
         <icon initial="icon.christmas_card_box2"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51159" name="Dragon Varnish" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
-    <skill id="51160" name="Brilliant Dragon Varnish" action="A1">
+    <skill id="51160" name="Radiant Dragon Varnish" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
-    <skill id="51161" name="Top-grade HP Potion" action="A1">
+    <skill id="51161" name="Highest-grade HP Recovery Potion" action="A1">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes>
+            <cast-range initial="-1"/>
+        </attributes>
         <target/>
     </skill>
-    <skill id="51162" name="High-grade Quick MP Potion" action="A1">
+    <skill id="51162" name="High-grade MP Replenishing Potion" action="A1">
         <!-- Instantly recovers 300 MP. -->
         <icon initial="icon.etc_potion_blue_i00"/>
-        <attributes magic-critical-rate="5.0" blocked-on-olympiad="true">
+        <attributes blocked-on-olympiad="true" magic-critical-rate="5.0">
             <magic-level initial="1"/>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
         <effects>
@@ -651,36 +719,42 @@
             </mp>
         </effects>
     </skill>
-    <skill id="51163" name="Sealed Rune - Stage 14" action="A1">
+    <skill id="51163" name="Sealed Rune Lv. 14" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51164" name="Sealed Rune - Stage 15" action="A1">
+    <skill id="51164" name="Sealed Rune Lv. 15" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51165" name="White Day Party Herb" action="A1">
-        <!-- For 5 minutes, P. Atk./M. Atk. +15%, P. Def./M. Def. +15%, Atk. Spd./Casting Spd. +15%, HP Recovery Bonus/MP Recovery Bonus +30%, and Movement Speed +10. The effects disappear upon restart. -->
+    <skill id="51165" name="Valentine Party Herb" action="A1">
+        <!-- For 5 min., P./ M. Atk. +15%, P./ M. Def. +15%, Atk. Spd./ Casting Spd. +15%, HP/ MP Bonus Recovery +30%, Speed +10. Disappears after restart. -->
         <icon initial="icon.etc_red_rose_i00"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51166" name="Transformation - Song of Earth" action="A2" type="DANCE">
-        <!-- Increases P. Def. of all party members by 25%% for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
+    <skill id="51166" name="Spirit - Song of Earth" action="A2" type="DANCE">
+        <!-- For 5 min., all party members' P. Def. +25%%. -->
         <icon initial="icon.skill0264"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -688,7 +762,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="SONG_OF_EARTH">
             <level initial="1"/>
             <time initial="300"/>
@@ -699,10 +773,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51167" name="Transformation - Song of Wind" action="A2" type="DANCE">
-        <!-- Increases Speed of all party members by 20 for 5 minutes. Increases MP Consumption when singing while sing/dance effect lasts. -->
+    <skill id="51167" name="Spirit - Song of Wind" action="A2" type="DANCE">
+        <!-- For 5 min., Speed +20 for all party members. -->
         <icon initial="icon.skill0268"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="438"/>
             <hit-time initial="2500"/>
@@ -710,7 +785,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="SONG_OF_WIND">
             <level initial="1"/>
             <time initial="300"/>
@@ -721,10 +796,11 @@
             </speed>
         </effects>
     </skill>
-    <skill id="51168" name="Transformation - Hunter's Song" action="A2" type="DANCE">
-        <!-- Increases P. Critical Rate of all party members +100%% for 5 minutes. Also increases MP Consumption when singing while song/dance is in effect. -->
+    <skill id="51168" name="Spirit - Song of Hunter" action="A2" type="DANCE">
+        <!-- For 5 min., P. Critical Rate +100%% for all party members. -->
         <icon initial="icon.skill0269"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="467"/>
             <hit-time initial="2500"/>
@@ -732,7 +808,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="SONG_OF_HUNTER">
             <level initial="1"/>
             <time initial="300"/>
@@ -743,10 +819,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51169" name="Transformation - Song of Vitality" action="A2" type="DANCE">
-        <!-- Increases Max HP of all party members by 30%% for 5 minutes. Additionally increases MP Consumption when singing while sing/dance is in effect. -->
+    <skill id="51169" name="Spirit - Song of Vitality" action="A2" type="DANCE">
+        <!-- For 5 min., HP +30%% for all party members. -->
         <icon initial="icon.skill0304"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="611"/>
             <hit-time initial="2500"/>
@@ -754,7 +831,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="SONG_OF_VITALITY">
             <level initial="1"/>
             <time initial="300"/>
@@ -765,10 +842,11 @@
             </vital-stat-modify>
         </effects>
     </skill>
-    <skill id="51170" name="Transformation - Dance of the Warrior" action="A2" type="DANCE">
-        <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
+    <skill id="51170" name="Adventurer - Dance of Warrior" action="A2" type="DANCE">
+        <!-- For 5 min., P. Def. +12%% for all party members. -->
         <icon initial="icon.skill0271"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -776,7 +854,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_WARRIOR">
             <level initial="1"/>
             <time initial="300"/>
@@ -787,10 +865,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51171" name="Transformation - Dance of Fire" action="A2" type="DANCE">
-        <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
+    <skill id="51171" name="Spirit - Dance of Fire" action="A2" type="DANCE">
+        <!-- For 5 min., P. Critical Damage +35%% for all party members. -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <hit-time initial="2500"/>
@@ -798,7 +877,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_FIRE">
             <level initial="1"/>
             <time initial="300"/>
@@ -809,10 +888,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51172" name="Transformation - Dance of Fury" action="A2" type="DANCE">
-        <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
+    <skill id="51172" name="Spirit - Dance of Rage" action="A2" type="DANCE">
+        <!-- For 5 min., Atk. Spd. +15%% for all party members. -->
         <icon initial="icon.skill0275"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <hit-time initial="2500"/>
@@ -820,7 +900,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_FURY">
             <level initial="1"/>
             <time initial="300"/>
@@ -831,10 +911,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51173" name="Transformation - Dance of Concentration" action="A2" type="DANCE">
-        <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
+    <skill id="51173" name="Spirit - Dance of Concentration" action="A2" type="DANCE">
+        <!-- For 5 min., all party members' Casting Spd. +30%%, Casting Interruption Rate -40. -->
         <icon initial="icon.skill0276"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <hit-time initial="2500"/>
@@ -842,7 +923,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_CONCENTRATION">
             <level initial="1"/>
             <time initial="300"/>
@@ -856,37 +937,42 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51174" name="Transform Swordsinger" action="A1">
-        <!-- Transforms into Swordsinger. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
+    <skill id="51174" name="Transformation into a Sword Singer" action="A1">
+        <!-- Transformation into a Sword Singer. Attacking is not possible. After a restart or when used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.ev_13th_paper_inzone"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51175" name="Transform Blade Dancer" action="A1">
-        <!-- Transforms into Blade Dancer. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
+    <skill id="51175" name="Transformation into a Blade Dancer" action="A1">
+        <!-- Transformation into a Blade Dancer. Attacking is not possible. After a restart or when used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.ev_13th_paper_field"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51176" name="Dragon Relic" action="A1">
+    <skill id="51176" name="Dragon's Relic" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="1000"/>
             <cool-time initial="500"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51177" name="Transform Song Dance" action="A2">
-        <!-- Transforms into Song Dance. Cannot attack while transformed. When used during a duel, the transformation is removed once the duel ends. -->
+    <skill id="51177" name="Transformation into a Singer and Dancer" action="A2">
+        <!-- Transformation into a Singer and Dancer. Attacking is not possible. After a restart or when used during a duel, the Buff is removed after duel ends. -->
         <icon initial="icon.etc_roll_of_paper_black_i00"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" irreplacable="true">
+        <attributes blocked-on-olympiad="true" irreplacable="true" magic-critical-rate="5.0" stay-after-death="true">
+            <cast-range initial="-1"/>
             <reuse initial="600000"/>
             <effect-point initial="1"/>
         </attributes>
@@ -902,10 +988,11 @@
             <transformation id="170"/>
         </effects>
     </skill>
-    <skill id="51178" name="Transformation - Dance of the Warrior" action="A2" type="DANCE">
-        <!-- Increases P. Atk. of all party members by 12%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
+    <skill id="51178" name="Adventurer - Dance of Warrior" action="A2" type="DANCE">
+        <!-- For 5 min., P. Def. +12%% for all party members. -->
         <icon initial="icon.skill0271"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="523"/>
             <hit-time initial="2500"/>
@@ -913,7 +1000,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_WARRIOR">
             <level initial="1"/>
             <time initial="300"/>
@@ -924,10 +1011,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51179" name="Transformation - Dance of Fire" action="A2" type="DANCE">
-        <!-- Increases P. Critical Damage of all party members +35%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
+    <skill id="51179" name="Spirit - Dance of Fire" action="A2" type="DANCE">
+        <!-- For 5 min., P. Critical Damage +35%% for all party members. -->
         <icon initial="icon.skill0274"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="379"/>
             <hit-time initial="2500"/>
@@ -935,7 +1023,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_FIRE">
             <level initial="1"/>
             <time initial="300"/>
@@ -946,10 +1034,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51180" name="Transformation - Dance of Fury" action="A2" type="DANCE">
-        <!-- Increases Atk. Spd. of all party members by 15%% for 5 minutes. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
+    <skill id="51180" name="Spirit - Dance of Rage" action="A2" type="DANCE">
+        <!-- For 5 min., Atk. Spd. +15%% for all party members. -->
         <icon initial="icon.skill0275"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="549"/>
             <hit-time initial="2500"/>
@@ -957,7 +1046,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_FURY">
             <level initial="1"/>
             <time initial="300"/>
@@ -968,10 +1057,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51181" name="Transformation - Dance of Concentration" action="A2" type="DANCE">
-        <!-- Decreases all party members' magic cancel damage -40 and increases Casting Spd. +30%% for 5 minutes. Additionally increases MP Consumption when dancing while song/dance is in effect. -->
+    <skill id="51181" name="Spirit - Dance of Concentration" action="A2" type="DANCE">
+        <!-- For 5 min., all party members' Casting Spd. +30%%, Casting Interruption Rate -40. -->
         <icon initial="icon.skill0276"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="495"/>
             <hit-time initial="2500"/>
@@ -979,7 +1069,7 @@
         <consume>
             <mana initial="66"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_CONCENTRATION">
             <level initial="1"/>
             <time initial="300"/>
@@ -993,10 +1083,11 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="51182" name="Transformation - Dance of Shadows" action="A2" type="DANCE">
-        <!-- For 5 minutes, decreases all party members' Speed by 50%% and prevents them from being pre-emptively attacked by monsters. The effect will be canceled if any party member launches an attack. Additionally increases MP Consumption when dancing while sing/dance is in effect. -->
+    <skill id="51182" name="Spirit - Dance of Shadow" action="A2" type="DANCE">
+        <!-- For 5 min., party members' Speed -50%%, they are protected from monsters' preemptive attacks. The effect is cancelled if any party member launches an attack. -->
         <icon initial="icon.skill0366"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+        <attributes magic-critical-rate="5.0">
+            <cast-range initial="-1"/>
             <reuse initial="3000"/>
             <effect-point initial="666"/>
             <hit-time initial="2500"/>
@@ -1004,7 +1095,7 @@
         <consume>
             <mana initial="73"/>
         </consume>
-        <target scope="PARTY" object="FRIEND" range="1000"/>
+        <target object="FRIEND" range="1000" scope="PARTY"/>
         <abnormal type="DANCE_OF_SHADOW" visual="STEALTH">
             <level initial="1"/>
             <time initial="300"/>
@@ -1016,7 +1107,7 @@
                 <chance initial="100.0"/>
                 <types>PHYSIC MAGIC STATIC DANCE</types>
             </trigger-skill-by-magic>
-            <trigger-skill-by-attack skill="7097" target="MY_PARTY">
+            <trigger-skill-by-attack allow-reflect="false" critical-only="false" skill="7097" target="MY_PARTY" trigger-by-normal-attack="true" trigger-by-skill="true">
                 <power initial="1.0"/>
                 <chance initial="100.0"/>
                 <min-damage initial="1.0"/>
@@ -1028,10 +1119,12 @@
         </effects>
     </skill>
     <skill id="51183" name="Dragon Berserker" action="A1">
-        <!-- Transforms into Dragon Berserker. For 20 minutes, XP Gain +30%%, P. Atk. +15%%, M. Atk. +15%%, P. Critical/M. Critical Damage +10%%. Cooldown is 2 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or using skills transformed as Dragon Berserker, there's a chance to cast Berserker Soul buff on self that increases P./M. Atk. +50%%, Atk. Spd./Casting Spd. +50%%, Reflects 15%% of received damage to the enemy. -->
+        <!-- You are transformed into Dragon Berserker. For 20 min., Atk. Spd. +200, Casting Spd. +250, P. Atk. +1000, M. Atk. +1500. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 4 pcs. -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC" stay-after-death="true">
-            <reuse initial="7200000"/>
+        <attributes auto-use="BUFF" stay-after-death="true">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
         <abnormal type="TRANSFORM" visual="COSTUME_DRAGON_LV2">
@@ -1053,7 +1146,7 @@
             <stat-modify mode="PER" stat="MAGIC_CRITICAL_DAMAGE" stat-add="MAGIC_CRITICAL_DAMAGE_ADD">
                 <power initial="10"/>
             </stat-modify>
-            <trigger-skill-by-attack skill="59313">
+            <trigger-skill-by-attack allow-reflect="false" critical-only="false" skill="59313" target="SELF" trigger-by-normal-attack="true" trigger-by-skill="true">
                 <power initial="1"/>
                 <chance initial="40"/>
                 <min-damage initial="10"/>
@@ -1066,129 +1159,150 @@
         </effects>
     </skill>
     <skill id="51184" name="Ninja Assassin" action="A1">
-        <!-- Transforms into Ninja Assassin. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Ninja Assassin there's a 100%% chance to cancel enemy's target. -->
+        <!-- You are transformed into Ninja Assassin. For 20 min. Acquired XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/ M. Skill Critical Damage +5%%. Cooldown: 3 h. Transformation effect remains after death.\n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100%% chance. -->
         <icon initial="icon.bm2018_ninja_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51185" name="Blue Musketeer" action="A1">
-        <!-- Transforms into Blue Musketeer. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blue Musketeer there's a chance to stun the enemy for 5 seconds. -->
+        <!-- You are transformed into Blue Musketeer. For 20 min. Acquired XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/ M. Skill Critical Damage +5%%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51186" name="Valkyrie" action="A1">
-        <!-- Transforms into Valkyrie. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Valkyrie there's a chance to paralyze the enemy for 5 seconds. -->
+        <!-- You are transformed into Valkyrie. For 20 min, Atk. Spd. +100, P. Atk. +300. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 2 pcs. -->
         <icon initial="icon.bm2018_valkyrie_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="10800000"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51187" name="Wild Wolf" action="A1">
-        <!-- Transforms into Wild Wolf. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Wild Wolf there's a chance to reduce the enemy's P. Def. by 23%%. -->
+        <!-- You are transformed into Wild Wolf. For 20 min. Acquired XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/ M. Skill Critical Damage +5%%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%%. -->
         <icon initial="icon.bm2018_barbarian_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51188" name="Caravan" action="A1">
-        <!-- Transforms into Caravan. For 20 minutes, XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage /M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Caravan there's a chance cast the Caravan Buff that increases party members' P./M. Atk. +10%%. -->
+    <skill id="51188" name="Pirate" action="A1">
+        <!-- You are transformed into Pirate. For 20 min, Atk. Spd. +50, Casting Spd. +80. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 1 pcs. -->
         <icon initial="icon.bm2018_pirate_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="10800000"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51189" name="Purple Cowboy" action="A1">
-        <!-- Transforms into Purple Cowboy. For 20 minutes, XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Purple Cowboy there's a chance to inflict an additional 3939 physical attack. -->
+        <!-- You are transformed into Purple Cowboy. For 20 min., Atk. Spd. +100, P. Critical Rate +120. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 2 pcs. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="10800000"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51190" name="High Priest" action="A1">
-        <!-- Transforms into High Priest. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 1000 and MP by 200. -->
+        <!-- You are transformed into High Priest. For 20 min., Casting Spd. +150, Max MP +20%%. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 2 pcs. -->
         <icon initial="icon.bm2018_healer_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="10800000"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51191" name="Blood Noblesse" action="A1">
-        <!-- Transforms into Blood Noblesse. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Blood Noblesse there's a chance to inflict an additional 145 magic attack. -->
+        <!-- You are transformed into Blood Noblesse. For 20 min. Acquired XP +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/ M. Skill Critical Damage +5%%. Cooldown: 3 h. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
         <icon initial="icon.bm2018_rednoblesse_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="10800000"/>
         </attributes>
         <target/>
     </skill>
     <skill id="51192" name="White Noblesse" action="A1">
-        <!-- Transforms into White Noblesse. For 20 minutes, XP Gain +20%%, P. Atk. +10%%, M. Atk. +10%%, P. Critical Damage/M. Critical Damage +5%%. Cooldown is 3 hours. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as White Noblesse there's a chance to reduce the enemy's M. Def. by 23%%. -->
+        <!-- You are transformed into White Noblesse. For 20 min., Atk. Spd. +150, M. Atk. +500. Cooldown: 20 min. Transformation effect remains after death.\n\n<Item consumption>\nIncarnation Fragment 2 pcs. -->
         <icon initial="icon.bm2018_whitenoblesse_i01"/>
-        <attributes property="PHYSIC">
-            <reuse initial="10800000"/>
+        <attributes auto-use="BUFF">
+            <cast-range initial="-1"/>
+            <reuse initial="1200000"/>
+            <cool-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51193" name="Dragon Berserker's Energy" action="A1">
-        <!-- Transforms into Dragon Berserker through the scroll. For 20 min., XP Gain +20%%, P. Atk. +10%%, M. Atk. + 10%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or using skills transformed as Dragon Berserker, there's a chance to cast Berserker Soul buff on self that increases P./M. Atk. +50%%, Atk. Spd./Casting Spd. +50%%, Reflects 15%% of received damage to enemy. -->
+    <skill id="51193" name="Dragon Berserker Energy" action="A1">
+        <!-- Grants the power of Dragon Berserker. For 20 min. Acquired XP +20%%, P. Atk. +10%%, M. Atk. +10%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P. Atk. +50%%, M. Atk. +50%%, Atk. Spd. +50%%, Casting Spd. +50%%, Damage Reflection +15%%. -->
         <icon initial="icon.bm2018_dragon_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51194" name="Ninja Assassin's Energy" action="A1">
-        <!-- Transforms into Ninja Assassin through the scroll.. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Ninja Assassin there's a 100%% chance to cancel enemy's target. -->
+    <skill id="51194" name="Ninja Assassin Energy" action="A1">
+        <!-- Grants the power of Ninja Assassin. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance cancels the target of an random enemy with 100%% chance. -->
         <icon initial="icon.bm2018_ninja_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51195" name="Blue Musketeer's Energy" action="A1">
-        <!-- Transforms into Blue Musketeer through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\nSpecial Ability>\nWhen attacking or casting skills while transformed as Blue Musketeer there's a chance to stun the enemy for 5 seconds. -->
+    <skill id="51195" name="Blue Musketeer Energy" action="A1">
+        <!-- Grants the power of Blue Musketeer. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance stuns for 5 sec. -->
         <icon initial="icon.bm2018_bluemusketeer_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51196" name="Valkyrie's Energy" action="A1">
-        <!-- Transforms into Valkyrie through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Valkyrie there's a chance to paralyze the enemy for 5 seconds. -->
+    <skill id="51196" name="Valkyrie Energy" action="A1">
+        <!-- Grants the power of Valkyrie. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance paralyses for 5 sec. -->
         <icon initial="icon.bm2018_valkyrie_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51197" name="Wild Wolf's Energy" action="A1">
-        <!-- Transforms into Wild Wolf through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Wild Wolf there's a chance to reduce the enemy's P. Def. by 23%%. -->
+    <skill id="51197" name="Wild Wolf Energy" action="A1">
+        <!-- Grants the power of Wild Wolf. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance decreases enemy's P. Def. by 23%%. -->
         <icon initial="icon.bm2018_barbarian_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51198" name="Caravan's Energy" action="A1">
-        <!-- Transforms into Caravan through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\nSpecial Ability>\nWhen attacking or casting skills while transformed as Caravan there's a chance cast the Caravan Buff that increases party members' P./M. Atk. by 10%%. -->
+    <skill id="51198" name="Pirate Energy" action="A1">
+        <!-- Grants the power of Pirate. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance P./ M. Atk. +10%%. -->
         <icon initial="icon.bm2018_pirate_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="51199" name="Purple Cowboy's Energy" action="A1">
-        <!-- Transforms into Purple Cowboy through the scroll. For 20 min., XP Gain +10%%, P. Atk. +7%%, M. Atk. + 7%%. Cooldown is 1 minute. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as Purple Cowboy there's a chance to inflict an additional 3939 physical attack. -->
+    <skill id="51199" name="Purple Cowboy Energy" action="A1">
+        <!-- Grants the power of Purple Cowboy. For 20 min. Acquired XP +10%%, P. Atk. +7%%, M. Atk. +7%%. Cooldown: 1 min. Transformation effect remains after death. \n\n<Special ability>\nDuring transformation in case of successful attack or skill use with a certain chance strikes the target with 3939 Power added to P. Atk. -->
         <icon initial="icon.bm2018_cowboy_i01"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="60000"/>
         </attributes>
         <target/>

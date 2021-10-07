@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="48001" name="Little Pig's Luck - Stage 1" max-level="9" action="A1">
-        <!-- For 60 minutes, appearances changes to Hanbok, Atk. Spd./Casting Spd. +100, Speed +10. Additionally, obtain items after 2, 5, 8 hours. Does not disappear after death / restarting.\n<Caution> If you are dead at the time the item is sent, or if you don't have enough space in the inventory, you cannot receive the gift. You also can't receive the next stage of the buff if you are dead. -->
+    <skill id="48001" name="Piggy's Good Luck - Lv. 1" max-level="9" action="A1">
+        <!-- Changes the armor appearance to that of Hanbok for 60 min. Atk. Spd./ Casting Spd. +100, Speed +10. Additionally you can obtain items after 2 h., 5 h., and 8 h. The effect remains after death and logout.\nNote!\nThe items can't be obtained if your character is dead or if there is no free space in your inventory. You can't get the next level buff if your character is dead. -->
         <icon initial="icon.skill_piggy_bless"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="900">
                 <value level="2">-1</value>
             </cast-range>
@@ -11,55 +11,62 @@
         </attributes>
         <target/>
     </skill>
-    <skill id="48002" name="Little Pig's Luck - Reward" action="A1">
+    <skill id="48002" name="Piggy's Good Luck - Reward" action="A1">
+        <!--  -->
         <icon initial="icon.skill_piggy_bless"/>
         <attributes>
+            <cast-range initial="-1"/>
             <reuse initial="-1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48011" name="Respectful Greeting" debuff="true" action="A1">
-        <!-- Respectfully greet the Wild Orc. -->
+    <skill id="48011" name="You make bow as a sign of respect" action="A1" debuff="true">
+        <!-- You politely offer greetings to Wild Orc. -->
         <icon initial="icon.ev_greeting1"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="-100"/>
             <hit-time initial="5000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48012" name="Wild Orc Stamp" debuff="true" action="A1">
-        <!-- Flying away because of the impact. -->
+    <skill id="48012" name="Mark of Wild Orc." action="A1" debuff="true">
+        <!-- Knocks back and stuns the target. -->
         <icon initial="icon.skill4107"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48013" name="Wild Orc Stamp" debuff="true" action="A1">
-        <!-- Flying away because of the impact. -->
+    <skill id="48013" name="Mark of Wild Orc." action="A1" debuff="true">
+        <!-- Knocks back and stuns the target. -->
         <icon initial="icon.skill4107"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48014" name="Wild Orc Typhoon" debuff="true" action="A1">
-        <!-- Flying away because of the impact. -->
+    <skill id="48014" name="Typhoon of Wild Orc" action="A1" debuff="true">
+        <!-- Knocks back and stuns the target. -->
         <icon initial="icon.skill3080"/>
         <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
             <hit-time initial="10000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48015" name="Wild Orc Typhoon" debuff="true" action="A1">
-        <!-- Flying away because of the impact. -->
+    <skill id="48015" name="Typhoon of Wild Orc" action="A1" debuff="true">
+        <!-- Knocks back and stuns the target. -->
         <icon initial="icon.skill3080"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <cool-time initial="500"/>
             <effect-point initial="-1"/>
         </attributes>
@@ -69,21 +76,24 @@
         <!-- Presentation skill -->
         <icon initial="icon.skill5008_psycho"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="5000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48017" name="Dance Time" debuff="true" action="A1">
-        <!-- Dancing against your will and cannot move. -->
+    <skill id="48017" name="Dance Time" action="A1" debuff="true">
+        <!-- Forced to dance against own will. -->
         <icon initial="icon.skill5008_psycho"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="100"/>
             <hit-time initial="1000"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48018" name="Recover Sayha's Grace" action="A1">
+    <skill id="48018" name="Sayha's Grace Regeneration" max-level="2" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
             <cast-range initial="400"/>
@@ -93,222 +103,222 @@
         <target/>
     </skill>
     <skill id="48019" name="Raid Reward - Shield" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: P. Def. +300 for 60 minutes with raid reward.
-            level 2: P. Def. + 300 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., P. Def. +300.
+			level 2: For 120 min., P. Def. +300.
+		-->
         <icon initial="icon.skill1040"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48020" name="Raid Reward - Magic Barrier" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: M. Def. +350 with 60 minutes with raid reward.
-            level 2: M. Def. +350 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., M. Def. +350.
+			level 2: For 120 min., M. Def. +350.
+		-->
         <icon initial="icon.skill1036"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48021" name="Raid Reward - Decrease Weight" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Weight Limit +9000 for 60 minutes with raid reward.
-            level 2: Weight Limit +9000 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., weight limit +9000.
+			level 2: For 120 min., Weight Limit +9000.
+		-->
         <icon initial="icon.skill1257"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48022" name="Raid Reward - Clarity" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, Song/Dance Skill MP Consumption -20%% for 60 minutes with raid reward.
-            level 2: P. Skill MP Consumption -20%%, M. Skill MP Consumption -10%%, Song/Dance Skill MP Consumption -20%% for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., MP Consumption -20%% for physical skills, -10%% for magical skills, -20%% for song/ dance skills.
+			level 2: For 120 min., MP Consumption -20%% for physical skills, -10%% for magical skills, -20%% for song/ dance skills.
+		-->
         <icon initial="icon.skill1397"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48023" name="Raid Reward - Berserker Spirit" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: For 60 minutes, Max HP/MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8 with raid reward.
-            level 2: For 120 minutes, Max HP/MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8 with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.
+			level 2: For 120 min., Max HP/ MP -15%, P. Atk. +10%, M. Atk. +20%, Atk. Spd. +8%, Casting Spd. +8%, Speed +8.
+		-->
         <icon initial="icon.skill1062"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48024" name="Raid Reward - Wind Walk" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Speed +33 for 60 minutes with raid reward.
-            level 2: Speed +33 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: Speed +33 for 60 min.
+			level 2: For 120 min., Speed +33.
+		-->
         <icon initial="icon.skill1204"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48025" name="Raid Reward - Might" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: P. Atk. +230 for 60 minutes with raid reward.
-            level 2: P. Atk. +230 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., P. Atk. +230.
+			level 2: For 120 min., P. Atk. +230.
+		-->
         <icon initial="icon.skill1068"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48026" name="Raid Reward - Focus" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: P. Critical Rate +40 for 60 minutes with raid reward.
-            level 2: P. Critical Rate +40 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., P. Critical Rate +40.
+			level 2: For 120 min., P. Critical Rate +40.
+		-->
         <icon initial="icon.skill1077"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48027" name="Raid Reward - Haste" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Atk. Spd. +33%% for 60 minutes with raid reward.
-            level 2: Atk. Spd. +33%% for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: Atk. Spd. +33%% for 60 min.
+			level 2: For 120 min., Atk. Spd. +33%%.
+		-->
         <icon initial="icon.skill1086"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48028" name="Raid Reward - Death Whisper" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: P. Critical Damage +35%% for 60 minutes with raid reward.
-            level 2: P. Critical Damage +35%% for 120 minutes with raid reward.
-         -->
+    <skill id="48028" name="Raid Reward -Death Whisper" max-level="2" action="A2" type="MAGIC">
+        <!-- 
+			level 1: For 60 min., P. Critical Damage +35%%.
+			level 2: For 120 min., P. Critical Damage +35%%.
+		-->
         <icon initial="icon.skill1242"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48029" name="Raid Reward - Empower" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: M. Atk. + 300 for 60 minutes with raid reward.
-            level 2: M. Atk. + 300 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., M. Atk. +300.
+			level 2: For 120 min., M. Atk. +300.
+		-->
         <icon initial="icon.skill1059"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48030" name="Raid Reward - Wild Magic" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: M. Critical Rate +20 for 60 minutes with raid reward.
-            level 2: M. Critical Rate +20 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: M. Skill Critical Rate +20 for +60 min.
+			level 2: M. Skill Critical Rate +20 for +120 min.
+		-->
         <icon initial="icon.skill1303"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48031" name="Raid Reward - Acumen" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Casting Spd. +30%% for 60 minutes with raid reward.
-            level 2: Casting Spd. +30%% for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: Casting Spd. +30%% for 60 min.
+			level 2: For 120 min., Casting Spd. +30%%.
+		-->
         <icon initial="icon.skill1085"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48032" name="Raid Reward - Concentration" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Magic Cancel Damage +53 for 60 minutes with raid reward.
-            level 2: Magic Cancel Damage +53 for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., Casting Interruption Rate -53.
+			level 2: For 120 min., Casting Interruption Rate -53.
+		-->
         <icon initial="icon.skill1078"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48033" name="Raid Reward - Victory" max-level="2" action="A2" type="MAGIC">
-        <!--
-            level 1: Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% for 60 minutes with raid reward.
-            level 2: Max HP/Max MP/Max CP +300, P. Atk./M. Atk. +200, Atk. Spd./Casting Spd. +60, P. Critical/M. Critical Rate+20, P. Critical Damage/M. Critical Damage +10%% for 120 minutes with raid reward.
-         -->
+        <!-- 
+			level 1: For 60 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%%.
+			level 2: For 120 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk./ Casting Spd. +60, P. Critical Rate/ M. Skill Critical Rate +20, P. Critical Damage/ M. Skill Critical Damage +10%%.
+		-->
         <icon initial="icon.skill5074"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48034" name="Raid Reward - Restore HP" max-level="2" action="A2">
-        <!--
-            level 1: Recovers HP continuously for 60 minutes with raid reward.
-            level 2: Recovers HP continuously for 120 minutes with raid reward.
-         -->
+    <skill id="48034" name="Raid Reward - HP Recovery" max-level="2" action="A2">
+        <!-- 
+			level 1: For 60 min., it recovers HP.
+			level 2: For 120 min., it recovers HP.
+		-->
         <icon initial="icon.skill0211"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48035" name="Raid Reward - Restore MP" max-level="2" action="A2">
-        <!--
-            level 1: Recovers MP continuously for 60 minutes with raid reward. While the skill is active, Sayha's Buff Scroll cannot be used.
-            level 2: Recovers MP continuously for 120 minutes with raid reward. While the skill is active, Sayha's Buff Scroll cannot be used.
-         -->
+    <skill id="48035" name="Raid Reward - MP Recovery" max-level="2" action="A2">
+        <!-- 
+			level 1: For 60 min., recovers MP. The Sayha's Buff Scroll cannot be used if the buff is active.
+			level 2: For 120 min., recovers MP. The Sayha's Buff Scroll cannot be used if the buff is active.
+		-->
         <icon initial="icon.skill0213"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48036" name="Einhasad's Protection" action="A1">
-        <!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Einhasad's Grace does not disappear at death. -->
+    <skill id="48036" name="Einhasad’s Protection" action="A1">
+        <!-- For 1 h., Acquired XP/ SP +100%%. The effect remains after death. -->
         <icon initial="icon.etc_dragons_blood_i03"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <hit-time initial="500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48037" name="Lightning Strike" debuff="true" action="A1">
-        <!-- Strikes the enemy with a lightning bolt that inflicts damage with 2927 Power. Paralyzes for 3 seconds. -->
+    <skill id="48037" name="Lightning Strike" action="A1" debuff="true">
+        <!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with 2927 power. Paralyzes for 3 sec. -->
         <icon initial="icon.skill0279"/>
-        <attributes property="PHYSIC">
+        <attributes>
             <cast-range initial="400"/>
             <reuse initial="20000"/>
             <cool-time initial="500"/>
@@ -320,45 +330,52 @@
         </consume>
         <target/>
     </skill>
-    <skill id="48038" name="Explorer's Buff - Melee" action="A2">
-        <!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, P. Atk. +10%%, P. Critical Rate +10, Melee Weapon Value +10. -->
+    <skill id="48038" name="Buff of Seeker - Short Distance" action="A2">
+        <!-- The buff for adventurers who are going to explore the Tower of Insolence. For 5 min., P. Atk. +10%%, P. Critical Rate +10, melee weapon efficiency +10. -->
         <icon initial="icon.skill5076_b"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48039" name="Explorer's Buff - Ranged" action="A2">
-        <!-- Buff given to those who explore the Tower of Insolence. For 5 minutes, M. Atk. +10%%, Ranged Weapon Value +10. -->
+    <skill id="48039" name="Buff of Seeker - Long Distance" action="A2">
+        <!-- The buff for adventurers who are going to explore the Tower of Insolence. For 5 min., M. Atk. +10%%, melee weapon efficiency +10. -->
         <icon initial="icon.skill5076_c"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48040" name="Heavenly Rift Explorer" action="A2">
-        <!-- Buff given to those who explore Heavenly Rift. Receive it from the Dimensional Vortex in Tower of Insolence: 1st Floor. -->
+    <skill id="48040" name="Heavenly Rift Seeker" action="A2">
+        <!-- The buff for adventurers who are going to explore the Heavenly Rift. You can get there using Dimensional Vortex on the first floor of the Tower of Insolence. -->
         <icon initial="icon.skill19222"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48041" name="Remove Blessing of Protection" action="A1">
+    <skill id="48041" name="Cancel Blessing of Protection" action="A1">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes>
+            <cast-range initial="-1"/>
             <effect-point initial="709"/>
         </attributes>
         <target/>
     </skill>
-    <skill id="48042" name="Explorer’s Buff" action="A2">
-        <!-- A buff given to those who explore the Tower of Insolence. For 5 min, P. Atk. +10%%, M. Atk. +10%%, and P. Critical/M. Critical Rate +10. -->
+    <skill id="48042" name="Buff of Seeker" action="A2">
+        <!-- The buff for adventurers who are going to explore the Tower of Insolence. For 5 min., P./ M. Atk. +10%%, P. Critical Rate/ M. Skill Critical Rate +10. -->
         <icon initial="icon.skill5076_a"/>
-        <attributes property="PHYSIC">
+        <attributes>
+            <cast-range initial="-1"/>
             <hit-time initial="2500"/>
         </attributes>
         <target/>
     </skill>
     <skill id="48043" name="Fatal Strike" action="A1">
+        <!--  -->
         <icon initial="icon.skill0190"/>
         <attributes>
             <cast-range initial="40"/>
@@ -372,32 +389,32 @@
         </consume>
         <target/>
     </skill>
-    <skill id="48044" name="Fire Monster">
-        <!-- Fire Monster. Water Attacks inflict additional damage on the monster. -->
+    <skill id="48044" name="Monster of Fire Element">
+        <!-- Water Attacks are dealing additional damage. -->
         <icon initial="icon.elemental_fire"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48045" name="Water Monster">
-        <!-- Water Monster. Wind Attacks inflict additional damage on the monster. -->
+    <skill id="48045" name="Monster of Water Element">
+        <!-- Wind Attacks are dealing additional damage. -->
         <icon initial="icon.elemental_water"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48046" name="Wind Monster">
-        <!-- Wind Monster. Earth Attacks inflict additional damage on the monster. -->
+    <skill id="48046" name="Monster of Wind Element">
+        <!-- Earth Attacks are dealing additional damage. -->
         <icon initial="icon.elemental_wind"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48047" name="Earth Monster">
-        <!-- Earth Monster. Fire Attacks inflict additional damage on the monster. -->
+    <skill id="48047" name="Monster of Earth Element">
+        <!-- Fire Attacks are dealing additional damage. -->
         <icon initial="icon.elemental_earth"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48048" name="King Watermelon Sacrifice" max-level="5">
-        <!-- Skill to reduce your own HP when receiving a certain amount of damage. -->
+    <skill id="48048" name="Sublime Self-Sacrifice" max-level="5">
+        <!-- When received damage exceeds a certain value, the character's HP is restored by difference between inflicted damage and this value. -->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <consume>
@@ -410,57 +427,260 @@
         </consume>
         <target/>
     </skill>
-    <skill id="48049" name="King Watermelon Blessing - Stage 1" max-level="5">
-        <!-- Inflicted great damage to the King Watermelon. I have a good feeling. -->
+    <skill id="48049" name="Raid Blessing Lv. 1" max-level="5">
+        <!-- You've dealt great damage to the Raid Boss. Your mood has improved. -->
         <icon initial="icon.skill30530"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
     <skill id="48050" name="Battle Aura">
-        <!-- Summons NPC’s AU skill, Battle Zone within a distance of 1500. -->
+        <!-- Creates a battle zone within 1500 range. -->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <target/>
     </skill>
     <skill id="48051" name="Battle Zone">
-        <!-- When PK/PvP occurs while Battle Zone is in effect, the player that dies will not receive the XP penalty and the attacker won’t receive the Karma penalty. -->
+        <!-- If the character is killed in the battle zone by another character, the killed one doesn't lose XP and the attacking one doesn't get reputation penalty for the killing. -->
         <icon initial="icon.battlebuff"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48052" name="Recharge item gauge by 100 Points" max-level="12">
-        <!--
-            level 1: Recharge item gauge by 100 Points
-            level 2: Recharge item gauge by 500 Points
-            level 3: Recharge item gauge by 1,000 Points
-            level 4: Recharge item gauge by 3,000 Points
-            level 5: Recharge item gauge by 5,000 Points
-            level 6: Recharge item gauge by 10,000 Points
-            level 7: Recharge item gauge by 30,000 Points
-            level 8: Recharge item gauge by 50,000 Points
-            level 9: Recharge item gauge by 100,000 Points
-            level 10: Recharge item gauge by 300,000 Points
-            level 11: Recharge item gauge by 500,000 Points
-            level 12: Recharge item gauge by 1,000,000 Points
-         -->
+    <skill id="48052" name="Craft Points +100" max-level="12">
+        <!-- 
+			level 1: Craft points +100.
+			level 2: Craft points +500.
+			level 3: Craft points +1,000.
+			level 4: Craft points +3,000.
+			level 5: Craft points +5,000.
+			level 6: Craft points +10,000.
+			level 7: Craft points +30,000.
+			level 8: Craft points +50,000.
+			level 9: Craft points +100,000.
+			level 10: Craft points +300,000.
+			level 11: Craft points +500,000.
+			level 12: Craft points +1,000,000.
+		-->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <target/>
     </skill>
-    <skill id="48053" name="PC Cafe Battle Support Buff">
-        <!-- For 20 minutes, Max CP +1000 -->
+    <skill id="48053" name="PA Battle Buff">
+        <!-- Max CP +1000 for 20 min. -->
         <icon initial="icon.soul_spirit2"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48054" name="Burning">
-        <!-- Attack a special monster and for 30 seconds, XP/SP Gain +50%. -->
+    <skill id="48054" name="Burning" max-level="2">
+        <!-- 
+			level 1: When the character is attacking an unique monster, acquired XP/ SP +50% for 30 sec..
+			level 2: When the character is attacking a unique monster, acquired XP/ SP +50% for 60 sec.
+		-->
         <icon initial="icon.skill3238"/>
-        <attributes property="PHYSIC">
-        </attributes>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48055" name="Yogi’s Energy" max-level="5">
+        <!-- Even Yogi himself does not understand the nature of this energy. But for sure it is connected to Yogi’s Weapon. -->
+        <icon initial="icon.skill10526"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48056" name="Golden Pig’s Teleport" type="MAGIC">
+        <!-- Teleports to Golden Pig. -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48057" name="Ultimate Death Knight Experience">
+        <!-- <Ultimate Death Knight Transformation>\n\nYou can experience Death Knight’s destiny being cursed by the Fire Dragon Valakas, but having a great power. -->
+        <icon initial="icon.death_knight_transform"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48058" name="Good Luck Buff Lv. 1" max-level="4">
+        <!-- 
+			level 1: P./ M. Atk. and P./ M. Def. +100, Acquired XP/ SP +5%. When Lv. 1 effect expires, the character obtains Lucky Box and Lv. 2 buff.  Note! You cannot obtain the item if you are dead or your inventory is full when you receive it. You can't get the next level buff if your character is dead.
+			level 2: P./ M. Atk. and P./ M. Def. +150, Acquired XP/ SP +10%. When Lv. 2 effect expires, the character obtains Lucky Box and Lv. 3 buff.  Note! You cannot obtain the item if you are dead or your inventory is full when you receive it. You can't get the next level buff if your character is dead.
+			level 3: P./ M. Atk. and P./ M. Def. +200, acquired XP/ SP +15%. When Lv. 3 effect expires, the character obtains Lucky Box.  Note! You cannot obtain the item if you are dead or if there is no free space in your inventory. You can't get the next level buff if your character is dead.
+			level 4: You obtain Lucky Buff Lv. 3 Pack.
+		-->
+        <icon initial="icon.etc_charm_of_luck_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48059" name="Good Luck Buff - Reward Lv. 1" max-level="3">
+        <!-- none -->
+        <icon initial="icon.etc_charm_of_luck_i00"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48060" name="Burning Fist">
+        <!--  -->
+        <icon initial="icon.skill0280"/>
+        <attributes/>
+        <consume>
+            <mana initial="87"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="48061" name="Double Shot">
+        <!--  -->
+        <icon initial="icon.skill0019"/>
+        <attributes/>
+        <consume>
+            <mana initial="158"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="48062" name="Jeras’ Fire Show" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill1285"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48063" name="Fortress Battle - Meteor" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48064" name="Fortress Battle - Flame" debuff="true" type="MAGIC">
+        <!-- Powerful flames burn off HP. -->
+        <icon initial="icon.skill1101"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48065" name="Fortress Battle - Bleed" debuff="true" type="MAGIC">
+        <!-- Causes target to bleed severely, momentarily reducing HP. -->
+        <icon initial="icon.skill0096"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48066" name="Fortress Battle - Sword Storm" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48067" name="Fortress Battle - Theor's Range Attack Type 1">
+        <!-- AoE P. Atk. On nearby enemies. -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48068" name="Fortress Battle - Theor's Range Attack Type 2">
+        <!-- AoE P. Atk. On nearby enemies. -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48069" name="Fortress Battle - Theor's Range Attack Type 3">
+        <!-- AoE P. Atk. On nearby enemies. -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48070" name="Master's Blessing">
+        <!-- For 2 h., Acquired XP/ SP +30%, MP Recovery Rate +5. -->
+        <icon initial="icon.macrownd_icon08"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48071" name="Master’s Protection">
+        <!-- For 4 h., P./ M. Atk. and P./ M. Def. +250. -->
+        <icon initial="icon.ev_L2_soul_ore"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48072" name="HP Recovery Block">
+        <!-- Natural HP recovery is deactivated. -->
+        <icon initial="icon.skill19186"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48073" name="Prominence" max-level="10" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48074" name="Twister" max-level="10" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48075" name="Burning" max-level="10" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48076" name="Aura Burn" max-level="10" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48077" name="Blaze" max-level="10" type="MAGIC">
+        <!-- none -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48078" name="Clan Stronghold Effect">
+        <!-- Buff for the members of the clan that secured the Cruma Tower Clan Stronghold Device.\n\n For 5 min.\nAcquired XP +50%\nAcquired SP +50% -->
+        <icon initial="icon.skill_exp_sp_up"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48079" name="Triple Slash" debuff="true">
+        <!--  -->
+        <icon initial="icon.skill0001"/>
+        <attributes auto-use="ACTIVE"/>
+        <consume>
+            <mana initial="58"/>
+        </consume>
+        <target/>
+    </skill>
+    <skill id="48080" name="Karim's Range Attack">
+        <!--  -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48081" name="Beast's Range Attack">
+        <!--  -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48082" name="Beast's Range Fear" debuff="true" type="MAGIC">
+        <!-- Afflicted with Fear and moving against own will. -->
+        <icon initial="icon.skill0036"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48083" name="Antharas' Resistance">
+        <!--  -->
+        <icon initial="icon.skill0000"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48084" name="Weakness" max-level="3" debuff="true" type="MAGIC">
+        <!-- 
+			level 1: Instantly P./ M. Atk. -17%.
+			level 2: Instantly P./ M. Atk. -20%.
+			level 3: Instantly P./ M. Atk. -23%.
+		-->
+        <icon initial="icon.skill4037"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48085" name="Speed Boost" type="MAGIC">
+        <!-- For 10 sec., increases Speed while crossing the zone borders in Antharas' Lair. -->
+        <icon initial="icon.skill0169"/>
+        <attributes/>
         <target/>
     </skill>
     <skill id="48086" name="Dimensional Door A">
@@ -476,32 +696,78 @@
         <target/>
     </skill>
     <skill id="48088" name="Earthquake">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <target/>
     </skill>
     <skill id="48089" name="Lightning" type="MAGIC">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <target/>
     </skill>
     <skill id="48090" name="Baium's Gift">
+        <!-- none -->
         <icon initial="icon.skill0000"/>
         <attributes/>
         <target/>
     </skill>
-    <skill id="48091" name="Evasion is weak." max-level="2">
-        <!--
-            level 1: P. Evasion/M. Evasion have weakened.
-            level 2: P. Evasion/M. Evasion have weakened greatly.
-         -->
+    <skill id="48091" name="Slow Evasion" max-level="2">
+        <!-- 
+			level 1: P./ M. Evasion decreased.
+			level 2: P./ M. Evasion drastically decreased.
+		-->
         <icon initial="icon.skill0078"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
         <target/>
     </skill>
-    <skill id="48092" name="Limit Damage" max-level="10">
+    <skill id="48092" name="Damage of Limit" max-level="6">
+        <!--  -->
         <icon initial="icon.skill0000"/>
-        <attributes property="MAGIC"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48093" name="Raid Boss (Lv. 82)">
+        <!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
+        <icon initial="icon.skillraid"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48094" name="Raid Boss (Lv. 82)">
+        <!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
+        <icon initial="icon.skillraid"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48095" name="Raid Boss (Lv. 82)">
+        <!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
+        <icon initial="icon.skillraid"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48096" name="Raid Boss (Lv. 82)">
+        <!-- He has snatched all pets in the continent and forced them to serve him to create a pet legion. He has bound them to his will by some kind of mysterious magic. Connection between Atingo and enslaved pets is so strong that they cannot be killed while he is alive. -->
+        <icon initial="icon.skillraid"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48097" name="Small Rat Transformation">
+        <!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
+        <icon initial="icon.skill30530"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48098" name="Mid Rat Transformation">
+        <!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
+        <icon initial="icon.skill30530"/>
+        <attributes/>
+        <target/>
+    </skill>
+    <skill id="48099" name="Big Rat Transformation">
+        <!-- NPC helps you to transform into a white rat so you can save the Year of the Rat. -->
+        <icon initial="icon.skill30530"/>
+        <attributes/>
         <target/>
     </skill>
 </list>
