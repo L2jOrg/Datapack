@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org skills.xsd">
-    <skill id="47101" name="Elemental Spirit" max-level="4" action="P">
+    <skill id="47101" name="Elemental Spirit" max-level="4" action="A2">
         <!-- 
 			level 1: The spirit power runs through your body.  An incarnated Spirit Lv. 1 can be used.
 			level 2: The spirit power runs through your body.  An incarnated Spirit Lv. 2 can be used.  <<font color="34FF43">Elemental Guard</font>> For 10 sec., decreases received damage. Triggered after receiving damage (Probability: 10%%) Cooldown: 60 sec.
@@ -10,9 +10,11 @@
         <icon initial="icon.skill30401"/>
         <attributes/>
         <target/>
-        <abnormal visual="H_SY_BOARDA_DECO">
-            <level initial="1"/>
-            <time initial="-1"/>
+        <abnormal type="ELEMENTAL_SPIRIT" visual="H_SY_BOARDA_DECO">
+                <level initial="1">
+                    <value level="1">1</value>
+                </level>
+                <time initial="-1"/>
         </abnormal>
     </skill>
     <skill id="47104" name="Elemental Connection" max-level="5">
