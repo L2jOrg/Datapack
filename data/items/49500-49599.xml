@@ -2,31 +2,31 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="49500" name="Blessed Scroll of Escape" type="SCROLL">
 	<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49501" name="Fish Stew - Guildsman's Gratitude Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +10%\nSP Gain +10%\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39076" value="-1"/>  <!-- Fish Stew- Guildsman's Gratitude -->
 		</skill-reducer>
 	</item>
 
-	<item id="49502" name="Scroll of Escape: Giran Harbor" type="NONE">
+	<item id="49502" name="Scroll of Escape: Giran Harbor" type="SCROLL">
 	<!-- Magic scroll that teleports you to Giran Harbor. -->
-		<restriction olympiad-restricted="true" sellable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39078" value="-1"/>  <!-- Return: Giran Harbor -->
 		</skill-reducer>
 	</item>
 
-	<item id="49503" name="Return: Gludin Harbor" type="NONE">
+	<item id="49503" name="Return: Gludin Harbor" type="SCROLL">
 	<!-- Magic scroll that teleports you to Gludin Harbor. -->
-		<restriction olympiad-restricted="true" sellable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39077" value="-1"/>  <!-- Return: Gludin Harbor -->
@@ -78,7 +78,7 @@
 		<attributes/>
 	</item>
 
-	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="NECK">
+	<armor id="49509" name="Ring of Core Lv. 1" type="NONE" body-part="FINGER">
 	<!-- <Options>\nReceived P. Damage -2%\nReceived M. Damage -2%\nP. Evasion +1\nM. Evasion +1\nMax MP +9\nSilence Attack and Resistance +10%\nFear Attack and Resistance +10%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="21600" />
@@ -100,7 +100,7 @@
 
 	<item id="49511" name="Sheepish Gift" type="NONE">
 	<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick HP Potion, Warrior's Major HP Potion.   -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -115,7 +115,7 @@
 
 	<item id="49513" name="Shiny Pendant Varnish Box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
@@ -142,13 +142,13 @@
 
 	<item id="49517" name="Pirate’s Island Treasure Chest" type="NONE">
 	<!-- Double-click to obtain various items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49518" name="Special Fruit Buff" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Atk. +7%\nM. Atk. +7%\nP. Def. +10%\nM. Def. +10%\nMax HP +15%\nMax MP +15%\nMax CP +15%\nHP Recovery Bonus +20%\nMP Recovery Bonus +20%\nRecover 3% of damage hit as HP (chance activated)\nXP Gain +5%\nSP Gain +5%\n\n- Duration: 20 minutes\n- Cooldown: 1 minute\n- Buff remains at death -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39144" value="-1"/>  <!-- Special Fruit Buff -->
@@ -157,7 +157,7 @@
 
 	<item id="49519" name="Pirate King's Reward Box" type="NONE">
 	<!-- Double-click to obtain 1 random item. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 	</item>
 
@@ -196,7 +196,7 @@
 
 	<item id="49525" name="Rare Accessory Lv. 1 Box" type="NONE">
 	<!-- Double-click to receive one of the following items: Queen Ant's Ring Lv. 1 (15-day), Orfen's Earring Lv. 1(15-day), Ring of Core Lv. 1(15-day). -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="55089" value="-1"/>  <!-- Rare Accessory Pack -->
@@ -205,19 +205,19 @@
 
 	<item id="49526" name="Greater Scroll of Resurrection" type="SCROLL">
 	<!-- Magic scroll used to resurrect a dead party member, restoring 50% of XP. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49527" name="My Teleport Box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49528" name="Pirate's HP Potion" type="POTION">
 	<!-- After instant 600 HP Recovery, CP Recovery with remaining points. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39089" value="-1"/>  <!-- Pirate's HP Potion -->
@@ -254,7 +254,7 @@
 
 	<item id="49533" name="Hero HP Potion" type="POTION">
 	<!-- After instant 500 HP Recovery, CP Recovery with remaining points. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="1" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39103" value="-1"/>  <!-- Hero HP Potion -->
@@ -281,25 +281,25 @@
 
 	<item id="49537" name="Scroll of Escape: Dragon Valley Bridge" type="SCROLL">
 	<!-- Magic scroll that teleports you to the Dragon Valley Bridge. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49538" name="Return: Inside Antharas' Lair" type="SCROLL">
 	<!-- Magic scroll that teleports you into Antharas' Lair. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49539" name="Scroll of Escape: Entrance to Cruma Tower" type="SCROLL">
 	<!-- Magic scroll that teleports you to the entrance of Cruma Tower. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49540" name="Return: Turek Orc Campsite Entrance" type="SCROLL">
 	<!-- Magic scroll that teleports you to the entrance of Turek Orc Campsite. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
@@ -314,7 +314,7 @@
 
 	<item id="49542" name="Greater Scroll of Resurrection" type="SCROLL">
 	<!-- Magic scroll that resurrects a dead party member and restores 50% of XP. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="120" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39109" value="-1"/>  <!-- Greater Scroll of Resurrection -->
@@ -323,7 +323,7 @@
 
 	<item id="49543" name="Elemental Stone (Time-limited)" type="NONE">
 	<!-- An ore with rare power. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes price="20000"/>
 		<random_craft exp="10000" commission="200"/>
 	</item>
@@ -372,7 +372,7 @@
 
 	<item id="49550" name="Return: Enchanted Valley Entrance" type="SCROLL">
 	<!-- Magic scroll that teleports you to the entrance of Enchanted Valley. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="30" action="SKILL_REDUCE"/>
 	</item>
 
@@ -527,7 +527,7 @@
 		</stats>
 	</weapon>
 
-	<armor id="49574" name="Queen Ant's Ring Lv. 2" type="NONE" body-part="NECK">
+	<armor id="49574" name="Queen Ant's Ring Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Atk. +6%\nM. Atk. +6%\nP. Accuracy +2\nM. Accuracy +2\nMax MP +15\nInfection Attack and Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -555,7 +555,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49576" name="Ring of Core Lv. 2" type="NONE" body-part="NECK">
+	<armor id="49576" name="Ring of Core Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Options>\nReceived P. Damage -4%\nReceived M. Damage -4%\nP. Evasion +2\nM. Evasion +2\nMax MP +15\nSilence Attack and Resistance +15%\nFear Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -569,7 +569,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49577" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="NECK">
+	<armor id="49577" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Skill Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nInfection Attack and Resistance +20%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Queen Ant's Ring Lv. 3 to Beggins to obtain the Queen Ant Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -597,7 +597,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49579" name="Ring of Core Lv. 3" type="NONE" body-part="NECK">
+	<armor id="49579" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Options>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nSilence Attack and Resistance +20%\nFear Attack and Resistance +20%\n\n<Ring of Core>\nAll debuffs and mes are canceled when used.\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Ring of Core Lv. 3 to Beggins to obtain the Core Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -612,7 +612,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49580" name="Baium's Ring" type="NONE" body-part="NECK">
+	<armor id="49580" name="Baium's Ring" type="NONE" body-part="FINGER">
 	<!-- Can be enchanted up to +5\n(Requires Scroll: Enchant Rare Accessories.)\nBoosts the item's parameters after enchanting.\nEffects of two identical rings do not stack.\n<Safe Enchant Level: +1> -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -625,7 +625,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49581" name="Baium's Ring Lv. 2" type="NONE" body-part="NECK">
+	<armor id="49581" name="Baium's Ring Lv. 2" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Skill Power +6%\nM. Skill Power +6%\nAtk. Spd. +4%\nCasting Spd. +4%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nStun Attack and Resistance +15%\nInfection Attack and Resistance +10%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -639,7 +639,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49582" name="Baium's Ring Lv. 3" type="NONE" body-part="NECK">
+	<armor id="49582" name="Baium's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Skill Power +10%\nM. Skill Power +10%\nAtk. Spd. +5%\nCasting Spd. +5%\nP. Accuracy +4\nM. Accuracy +4\nP. Critical Damage +15%\nM. Skill Critical Damage +10%\nMax MP +27\nStun Attack and Resistance +20%\nInfection Attack and Resistance +15%\n\nThe effect does not stack if two identical rings are equipped. Cannot be enchanted. Give 2 Baium's Ring Lv. 3 to Beggins to obtain the Baium Essence. -->
 		<restriction freightable="false"/>
 		<attributes weight="150" commission-type="RING" />
@@ -667,7 +667,7 @@
 
 	<item id="49584" name="Golden Boots" type="NONE">
 	<!-- Double-click to obtain 1 random item. -->
-		<restriction dropable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<extract>
 			<item id="45488"/>  <!-- Golden Treasure Chest -->
@@ -717,13 +717,13 @@
 
 	<item id="49588" name="Golden Mermaid's Fishing Rod Box" type="NONE">
 	<!-- Use to obtain a 30-day Golden Mermaid's Fishing Rod. \n\n<Note>\nThe item in the box has movement limitations, so keep that in mind when opening the box. -->
-		<restriction dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes weight="100" duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49589" name="Golden Bait" type="LURE">
 	<!-- Fishing bait. Can be used to catch a Whale. Gives a small chance to get a Golden Boot. -->
-		<restriction dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<condition add-name="true" msg-id="1453">
 		</condition>
 		<attributes/>
@@ -731,11 +731,11 @@
 
 	<item id="49590" name="Rare Accessory Lv. 3 Box" type="NONE">
 	<!-- Double-click to obtain the following: Enhanced Queen Ant's Ring Lv. 3 (30-day), Enhanced Orfen's Earring Lv. 3 (30-day), Enhanced Ring of Core Lv. 3 (30-day). -->
-		<restriction dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes duration="43200" immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="NECK">
+	<armor id="49591" name="Queen Ant's Ring Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Atk. +7%\nM. Atk. +7%\nP. Critical Damage +10%\nM. Skill Critical Damage +5%\nP. Accuracy +3\nM. Accuracy +3\nMax MP +21\nInfection Attack and Resistance +20%\n\n30-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
@@ -763,7 +763,7 @@
 		</skills>
 	</armor>
 
-	<armor id="49593" name="Ring of Core Lv. 3" type="NONE" body-part="NECK">
+	<armor id="49593" name="Ring of Core Lv. 3" type="NONE" body-part="FINGER">
 	<!-- <Options>\nReceived P. Damage -6%\nReceived M. Damage -6%\nP. Evasion +3\nM. Evasion +3\nMax MP +21\nSilence Attack and Resistance +20%\nFear Attack and Resistance +20%\n\n<Ring of Core>\nAll debuffs and Mes are canceled when used.\n\n30-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="43200" enchant-enabled="false" />
@@ -780,13 +780,13 @@
 
 	<item id="49594" name="Whale" type="SCROLL">
 	<!-- Double-click to recover a small amount of SP. You can exchange it for a scroll that replenishes SP through a Fishing Guild Member.  -->
-		<restriction tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49595" name="Scroll: 2,000 SP" type="SCROLL">
 	<!-- Scroll that replenishes 2,000 SP. -->
-		<restriction dropable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="40143" value="-1"/>  <!-- SP Scroll -->
@@ -795,7 +795,7 @@
 
 	<item id="49596" name="Scroll: 10,000 SP" type="SCROLL">
 	<!-- Scroll that replenishes 10,000 SP. -->
-		<restriction dropable="false"/>
+		<restriction stackable="true" dropable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="40143" level="2" value="-1"/>  <!-- SP Scroll -->

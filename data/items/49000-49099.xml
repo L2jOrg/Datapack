@@ -50,13 +50,13 @@
 
 	<item id="49004" name="Ol Mahum Memo" type="NONE">
 	<!-- 10-year-old Memo from the Ol Mahum. Take 10 of these to the Turek Orc Elder for a Mahum Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish.   -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="49005" name="Turek Orc Memo" type="NONE">
 	<!-- 10-year-old Memo from the Turek Orcs. Take 10 of these to the Turek Orc Elder for an Orc Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Deleted after event. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -98,7 +98,7 @@
 
 	<item id="49012" name="HP Potion" type="POTION">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="54117" value="-1"/>  <!-- Sayha's Restore HP -->
@@ -107,85 +107,85 @@
 
 	<item id="49013" name="Greater HP Potion" type="POTION">
 	<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="5" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49014" name="Facelifting Potion - A" type="POTION">
 	<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49015" name="Facelifting Potion - B" type="POTION">
 	<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49016" name="Facelifting Potion - C" type="POTION">
 	<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49017" name="Dye Potion - A" type="POTION">
 	<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49018" name="Dye Potion - B" type="POTION">
 	<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49019" name="Dye Potion - C" type="POTION">
 	<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49020" name="Dye Potion - D" type="POTION">
 	<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="50" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49021" name="Facelifting Potion Pack" type="NONE">
 	<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49022" name="Dye Potion Pack" type="NONE">
 	<!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="CAPSULE"/>
 	</item>
 
 	<item id="49023" name="Scroll: Empower" type="SCROLL">
 	<!-- Double click for a buff that increases your magic. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49024" name="Scroll: Might" type="SCROLL">
 	<!-- Double click for a buff that increases your P. Atk. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49025" name="Scroll: Shield" type="SCROLL">
 	<!-- Double click for a buff that increases your defenses. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="120" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49026" name="Scroll: PK (No-grade)" type="SCROLL">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. Can be used by PC levels 1-19, and can only be used once a day. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="10" price="500" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="250" commission="5"/>
 		<skill-reducer type="ItemSkills">
@@ -195,7 +195,7 @@
 
 	<item id="49027" name="Scroll: PK (D-grade)" type="SCROLL">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. Can be used by PC levels 20-39, and can only be used once a day. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="10" price="3000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="1500" commission="30"/>
 		<skill-reducer type="ItemSkills">
@@ -205,7 +205,7 @@
 
 	<item id="49028" name="Scroll: PK (C-grade)" type="SCROLL">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. Can be used by PC levels 40-51, and can only be used once a day. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="10" price="9000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="4500" commission="90"/>
 		<skill-reducer type="ItemSkills">
@@ -215,7 +215,7 @@
 
 	<item id="49029" name="Scroll: PK (B-grade)" type="SCROLL">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. Can be used by PC levels 52-60, and can only be used once a day. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="10" price="54000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="27000" commission="540"/>
 		<skill-reducer type="ItemSkills">
@@ -225,7 +225,7 @@
 
 	<item id="49030" name="Scroll: PK (A-grade)" type="SCROLL">
 	<!-- Double-click to lower PK value by 1. It can only be used when PK is 1 or higher and Inclination is 0. Can be used by PC levels 61+, and can only be used once a day. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true" sellable="false"/>
 		<attributes weight="10" price="540000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="270000" commission="5400"/>
 		<skill-reducer type="ItemSkills">
@@ -233,9 +233,9 @@
 		</skill-reducer>
 	</item>
 
-	<armor id="49031" name="Chronicle Ring" type="NONE" body-part="NECK">
+	<armor id="49031" name="Chronicle Ring" type="NONE" body-part="FINGER">
 	<!-- HP Recovery Bonus + 5%, P./M. Accuracy + 1, Weight Limit + 5000. The bonuses from this item do not stack.  -->
-		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<restriction stackable="true" freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" enchant-enabled="false" />
 		<crystal />
 		<stats>
@@ -276,7 +276,7 @@
 
 	<item id="49036" name="Adventurer's Wind Walk Potion" type="POTION">
 	<!-- Increases Speed when used. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="20" commission-type="POTION" reuse-delay="500" for-npc="true" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39028" value="-1"/>  <!-- Adventurer's Wind Walk Potion -->
@@ -303,7 +303,7 @@
 		</stats>
 	</armor>
 
-	<armor id="49040" name="Earring (Novice)" type="NONE" body-part="PENDANT">
+	<armor id="49040" name="Earring (Novice)" type="NONE" body-part="EAR">
 	<!-- Novice Earring. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -313,7 +313,7 @@
 		</stats>
 	</armor>
 
-	<armor id="49041" name="Ring (Novice)" type="NONE" body-part="NECK">
+	<armor id="49041" name="Ring (Novice)" type="NONE" body-part="FINGER">
 	<!-- Novice Ring. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" enchant-enabled="false" />
@@ -518,7 +518,7 @@
 
 	<item id="49054" name="Forgotten Soulshot Shard" type="NONE">
 	<!-- Soulshot shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" depositable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes quest-item="true"/>
 	</item>
 
@@ -671,19 +671,19 @@
 
 	<item id="49078" name="Chapeau 100-day Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49079" name="Chapeau 33-day Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49080" name="Rice Cake of Fighting Spirit" type="NONE">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +20%\nSP Gain +20%\n\n- Duration: 20 minutes\n- Cooldown: 1 minute\n- Buff remains at death\n(When using an XP Boost Scroll while the buff is applied, it will be changed to the effect of the XP Boost Scroll) -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32000" value="-1"/>  <!-- Rice Cake of Fighting Spirit -->
@@ -692,7 +692,7 @@
 
 	<item id="49081" name="XP Boost Scroll" type="NONE">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +30%\nSP Gain +30%\n\n- Duration: 20 minutes\n- Cooldown: 1 minute\n- Buff remains at death -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32002" value="-1"/>  <!-- XP Boost Scroll - Exchangeable -->
@@ -701,7 +701,7 @@
 
 	<item id="49082" name="Get-Rich-Quick Supply Chest" type="NONE">
 	<!-- Double-click to obtain one of the following items. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -724,20 +724,20 @@
 
 	<item id="49084" name="Greater Scroll of Resurrection" type="SCROLL">
 	<!-- Magic scroll used to resurrect a dead party member, restoring 50% of XP. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="120" price="100000" action="SKILL_REDUCE"/>
 		<random_craft exp="50000" commission="1000"/>
 	</item>
 
 	<item id="49085" name="Battle Support Chest" type="NONE">
 	<!-- Double-click to obtain various items. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49086" name="Rice Cake of Fighting Spirit" type="NONE">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nXP Gain +20%\nSP Gain +20%\n\n- Duration: 20 minutes\n- Cooldown: 1 minute\n- Buff remains at death\n(When using an XP Boost Scroll while the buff is applied, it will be changed to the effect of the XP Boost Scroll) -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32000"/>  <!-- Rice Cake of Fighting Spirit -->
@@ -746,7 +746,7 @@
 
 	<item id="49087" name="Blessed Scroll of Escape" type="SCROLL">
 	<!-- Magic scroll used to quickly teleport the character to the nearest town. -->
-		<restriction/>
+		<restriction stackable="true"/>
 		<attributes weight="120" price="20000" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<random_craft exp="10000" commission="200"/>
 		<skill-reducer type="ItemSkills">
@@ -756,13 +756,13 @@
 
 	<item id="49088" name="Gold Medal" type="NONE">
 	<!-- Shiny medal. Any trader will pay good money for a gold medal. -->
-		<restriction destroyable="false" dropable="false"/>
+		<restriction stackable="true" destroyable="false" dropable="false"/>
 		<attributes price="2200000"/>
 	</item>
 
 	<item id="49089" name="Scroll of Escape: Entrance to Cruma Tower" type="SCROLL">
 	<!-- Magic scroll used to teleport the character to the Entrance to Cruma Tower.  -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32044" value="-1"/>  <!-- Scroll of Espcape: Entrance to Cruma Tower -->
@@ -771,7 +771,7 @@
 
 	<item id="49090" name="Scroll of Escape: Entrance to Dragon Valley" type="SCROLL">
 	<!-- Magic scroll used to teleport the character to the Entrance to Dragon Valley. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="30" commission-type="SCROLL_OTHER" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="32045" value="-1"/>  <!-- Scroll of Espcape: Entrance to Dragon Valley -->

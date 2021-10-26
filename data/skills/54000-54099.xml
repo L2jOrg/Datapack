@@ -2472,8 +2472,20 @@
     <skill id="54050" name="Scroll of Escape: High Priest Orven" action="A1">
         <!-- A magic scroll that teleports you to High Priest Orven in the Town of Aden. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <icon initial="icon.skill0000"/>
-        <attributes/>
+        <attributes magic-critical-rate="5.0">
+            <magic-level initial="1"/>
+            <cast-range initial="-1"/>
+            <hit-time initial="20000"/>
+        </attributes>
         <target/>
+        <conditions>
+            <condition name="OpCanEscape"/>
+        </conditions>
+        <effects>
+            <teleport>
+                <location x="147455" y="22641" z="-1997"/>
+            </teleport>
+        </effects>
     </skill>
     <skill id="54051" name="Magic Lamp Acceleration Potion - 1-hour" action="A1">
         <!-- Magic Lamp recharge speed +20%% -->
