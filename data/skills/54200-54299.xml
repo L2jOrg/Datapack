@@ -112,15 +112,51 @@
             </stat-modify>
         </effects>
     </skill>
-    <skill id="54206" name="Ultimate Death Knight Transformation">
-        <!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers.\n\n<Appearance effect>\nP. Atk. +40%%\nP. Critical Damage +40%%\nP. Skill Critical Damage +40%%\nAtk. Spd. +50%%\nSpeed +5\nDecreases penalty of Received Healing.\nIncreases holy defense. -->
+    <skill id="54206" name="Ultimate Death Knight Transformation" action="A2" type="MAGIC">
+        <!-- For 20 min., you are transformed into a Death Knight who is cursed by the Fire Dragon Valakas, but possesses great powers.
+        Transformation Effect - Atk. +40%, P. Critical Damage +40, P. Skill Critical Damage +40%, Atk. Spd. +50%, Speed +5
+        Decreases penalty of Received Healing 30%, Increases holy defense 20 Attribute Points.
+         -->
         <icon initial="icon.death_knight_transform"/>
-        <attributes auto-use="BUFF"/>
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+            <magic-level initial="56"/>
+            <reuse initial="60000"/>
+            <cool-time initial="500"/>
+            <effect-point initial="1"/>
+            <hit-time initial="1500"/>
+        </attributes>
         <consume>
             <item initial="3031"/>
             <item-count initial="50"/>
         </consume>
         <target/>
+        <abnormal type="CHANGEBODY" visual="JDK_BODY_FIRE_1">
+            <level initial="1"/>
+            <time initial="1200"/>
+        </abnormal>
+        <effects>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK" stat-add="PHYSICAL_ATTACK">
+                <power initial="40"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+                <power initial="40"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="CRITICAL_DAMAGE_SKILL" stat-add="CRITICAL_DAMAGE_SKILL_ADD">
+                <power initial="40"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="PHYSICAL_ATTACK_SPEED" stat-add="PHYSICAL_ATTACK_SPEED">
+                <power initial="50"/>
+            </stat-modify>
+            <stat-modify stat="RUN_SPEED" stat-add="RUN_SPEED">
+                <power initial="5"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="HEAL_RECEIVE" stat-add="HEAL_RECEIVE">
+                <power initial="30"/>
+            </stat-modify>
+            <stat-modify stat="HOLY_RES" stat-add="HOLY_RES">
+                <power initial="20"/>
+            </stat-modify>
+        </effects>
     </skill>
     <skill id="54207" name="Mount Night Mare">
         <!-- Mounts a Night Mare. -->
