@@ -2,52 +2,52 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
 	<item id="93100" name="Life Stone Lv. 2 - Shield/Sigil" type="NONE">
 	<!-- Augments shields/sigils.\n\nAdena required. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes weight="2" price="1500000"/>
 		<random_craft exp="750000" commission="15000"/>
 	</item>
 
 	<item id="93101" name="High-grade Life Stone - Shield/Sigil" type="NONE">
 	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (B-grade).  -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes weight="2" price="4500000"/>
 		<random_craft exp="2250000" commission="45000"/>
 	</item>
 
 	<item id="93102" name="Top-grade Life Stone - Shield/Sigil" type="NONE">
 	<!-- Standard mineral formed inside a monster by Physical and Magic hits. Serves as a material for weapon augmentation. To use it for augmentation, go to Giran/Aden and give it to Blacksmiths Jeris and Zelos.\n\nAugmentation requires 200 Gemstones (A-grade).  -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes weight="2" price="13500000"/>
 		<random_craft exp="6750000" commission="135000"/>
 	</item>
 
 	<item id="93103" name="Spellbook: Holy Ray" type="NONE">
 	<!-- Spellbook needed to learn Holy Ray.\n\n<Acquiring Class>\nCardinal, Hierophant, Eva's Saint, Shillien Saint\n\n<Skill Effect>\nA divine beam strikes the target. Inflicts magic damage. When you are attacking the enemy affected by Hold, the debuff is removed and an extra attack is triggered. Deals additional damage to demons and undead. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93104" name="Scroll: Ground Smash" type="NONE">
 	<!-- Scroll needed to learn Ground Smash.\n\n<Acquiring Class>\nMaestro\n\n<Skill Effect>\nAttacks the enemy with the power of earth. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93105" name="Scroll: Prophecy of Light" type="NONE">
 	<!-- Scroll needed to learn Prophecy of Light.\n\n<Acquiring Class>\nCardinal\n\n<Skill Effect>\nIncreases Max HP/ MP, P./ M. Def, damage to monsters, Healing Power, Debuff Resistance, and Mes Resistance. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93106" name="Scroll: Mass Dryad Root" type="NONE">
 	<!-- Scroll needed to learn Mass Dryad Root.\n\n<Acquiring Class>\nShillien Saint\n\n<Skill Effect>\nHolds nearby enemies. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes/>
 	</item>
 
 	<item id="93107" name="Scroll: Mass Wind Shackle" type="NONE">
 	<!-- Scroll needed to learn Mass Wind Shackle.\n\n<Acquiring Class>\nShillien Saint\n\n<Skill Effect>\nDecreases nearby enemies' Atk. Spd. and Casting Spd. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes/>
 	</item>
 
@@ -263,39 +263,63 @@
 
 	<item id="93133" name="Agathion Enchant Scroll" type="ENCHANT_AGATHION">
 	<!-- An enchant scroll for Agathion. Increases the Agathion’s M. Def. Can enchant safely to +3 and up to a max of +10. Increases unique abilities gradually from +1. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
-
+	<!-- Ignis Agathion (Imprint) -->
 	<item id="93134" name="Ignis Agathion Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93128" />  <!-- Ignis Agathion (Imprint) -->
+			<item id="93133" min-count="10" max-count="10"/>  <!-- Agathion Enchant Scroll (Imprint) -->
+		</extract>
 	</item>
 
+	<!-- Nebula Agathion (Imprint) -->
 	<item id="93135" name="Nebula Agathion Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93129" />  <!-- Nebula Agathion (Imprint) -->
+			<item id="93133" min-count="10" max-count="10"/>  <!-- Agathion Enchant Scroll (Imprint) -->
+		</extract>
 	</item>
 
+	<!-- Procella Agathion (Imprint) -->
 	<item id="93136" name="Procella Agathion Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93130" />  <!-- Procella Agathion (Imprint) -->
+			<item id="93133" min-count="10" max-count="10"/>  <!-- Agathion Enchant Scroll (Imprint) -->
+		</extract>
 	</item>
 
+	<!-- Petram Agathion (Imprint) -->
 	<item id="93137" name="Petram Agathion Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93131" />  <!-- Petram Agathion (Imprint) -->
+			<item id="93133" min-count="10" max-count="10"/>  <!-- Agathion Enchant Scroll (Imprint) -->
+		</extract>
 	</item>
 
+	<!-- Joy Agathion (Imprint) -->
 	<item id="93138" name="Shiny Agathion Pack" type="NONE">
 	<!-- Double-click to obtain the following items. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93132" />  <!-- Joy Agathion (Imprint) -->
+			<item id="93133" min-count="10" max-count="10"/>  <!-- Agathion Enchant Scroll (Imprint) -->
+		</extract>
 	</item>
 
 	<armor id="93139" name="Freeze Breastplate" type="HEAVY" body-part="CHEST">

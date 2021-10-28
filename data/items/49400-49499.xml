@@ -290,7 +290,7 @@
 
 	<item id="49416" name="Blade’s Soul (Time-limited)" type="NONE">
 	<!--  Can be stored in a private warehouse or transferred between characters on the same account through Dimensional Merchants. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
@@ -300,13 +300,13 @@
 		<attributes price="50000"/>
 	</item>
 
-	<item id="49418" name="Cube of Sayha " type="ELIXIR">
+	<item id="49418" name="Cube of Sayha (30-Days) " type="ELIXIR">
 	<!-- 30-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="43200" action="SKILL_REDUCE"/>
 	</item>
 
-	<item id="49419" name="Cube of Sayha " type="ELIXIR">
+	<item id="49419" name="Cube of Sayha (90-Days)" type="ELIXIR">
 	<!-- 90-day item. Double-click the Cube to receive 1 Scroll: Summon Storm and 1 Sayha's Treasure Chest. (Can be used only once per day.)  -->
 		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="129600" action="SKILL_REDUCE"/>
@@ -320,14 +320,20 @@
 
 	<item id="49421" name="Package: Cube of Sayha (30-day)" type="NONE">
 	<!-- Double-click the package to receive 30-day Cube of Sayha.   Available since level 40. -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49418" /> <!-- Cube of Sayha (30-Days) -->
+		</extract>
 	</item>
 
 	<item id="49422" name="Package: Cube of Sayha (90-day)" type="NONE">
 	<!-- Double-click the package to receive 90-day Cube of Sayha.   Available since level 40. -->
-		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="49419" /> <!-- Cube of Sayha (90-Days) -->
+		</extract>
 	</item>
 
 	<item id="49423" name="Not Available - Spellbook: Dual Weapon Defense" type="NONE">
@@ -585,72 +591,72 @@
 
 	<item id="49446" name="Blue Mackerel Chest: One-handed Sword" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49447" name="Trumpetfish Chest: Dagger" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49448" name="Shark Chest: Two-handed Sword" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49449" name="Squid Chest: Spear" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49450" name="Sea Horse Chest: Two-handed Magic Blunt Weapon" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49451" name="Lobster Chest: Fist Weapon" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49452" name="Giant Crab Chest: Bow" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49453" name="Turtle Chest: Shield" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49454" name="Blue Mackerel Chest: Dualsword" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49455" name="Blue Mackerel Chest: One-handed Blunt Weapon" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49456" name="Blade's Soul Chest (5 pcs.)" type="NONE">
 	<!-- Double-click to receive 5 Blade Soul pieces. Once opened, the chest cannot be transferred between characters on the same account. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49457" name="Letter Collector's Gift" type="SCROLL">
-	<!-- Letter Collector's Gift\nFor 1 hr., XP/SP + 10%, Max HP/MP/ + 10%, Speed + 5. Change your armor to that of Santa.  -->
+	<!-- Letter Collector's Gift For 1 hr., XP/SP + 10%, Max HP/MP/ + 10%, Speed + 5. Change your armor to that of Santa.  -->
 		<restriction sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
@@ -687,7 +693,7 @@
 
 	<item id="49460" name="Fish Stew - Might Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Atk. +8%\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39047" value="-1"/>  <!-- Fish Stew - Might -->
@@ -696,7 +702,7 @@
 
 	<item id="49461" name="Fish Stew - Shield Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nP. Def. +8%\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39048" value="-1"/>  <!-- Fish Stew - Shield -->
@@ -705,7 +711,7 @@
 
 	<item id="49462" name="Fish Stew - Magic Barrier Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nM. Def. +23%\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39049" value="-1"/>  <!-- Fish Stew - Magic Barrier -->
@@ -714,7 +720,7 @@
 
 	<item id="49463" name="Fish Stew - Vampiric Rage Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nRecover 6% of damage hit as HP (chance activated)\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39050" value="-1"/>  <!-- Fish Stew - Vampiric Rage -->
@@ -723,7 +729,7 @@
 
 	<item id="49464" name="Fish Stew - Empower Lv. 1" type="SCROLL">
 	<!-- The following effects are applied when used\n\n<Use Effect>\nM. Atk. +55%\n\n- Duration: 20 minutes -->
-		<restriction olympiad-restricted="true" dropable="false" sellable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" dropable="false" sellable="false"/>
 		<attributes for-npc="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39051" value="-1"/>  <!-- Fish Stew - Empower -->
@@ -776,21 +782,21 @@
 
 	<item id="49469" name="Pendant Polish" type="ENCHANT_ARMOR">
 	<!-- Enhances pendants' parameters. Up to +3, the enchanting chance is 100%. The maximum enchantment level is +10. Starting from +4, activates special effects depending on the item type. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49470" name="Shining Pendant Varnish" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
 	<!-- Enhances pendants' parameters. Can be used with Fire/Earth Dragon Pendant up to +8. In case of failure, the pendant does not disappear, and its enchant value remains the same. Starting from +4, activates special effects depending on the item type. -->
-		<restriction dropable="false" sellable="false"/>
+		<restriction stackable="true"  dropable="false" sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49471" name="Fire Dragon's Pendant Box" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 		<extract>
 			<item id="49467"/>  <!-- Fire Dragon Pendant -->
@@ -831,7 +837,7 @@
 		<random_craft exp="10000" commission="200"/>
 	</item>
 
-	<armor id="49477" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="NECK">
+	<armor id="49477" name="Queen Ant's Ring Lv. 1" type="NONE" body-part="FINGER">
 	<!-- <Options>\nP. Atk. +4%\nM. Atk. +4%\nP. Accuracy +1\nM. Accuracy +1\nMax MP +9\nInfection Attack and Resistance +10%\n\n15-day. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
 		<restriction freightable="false" tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="150" commission-type="RING" duration="21600" />
@@ -868,55 +874,55 @@
 
 	<item id="49481" name="Stable Armor Enchant Scroll (D-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
 	<!-- <+1~3 Armor / Accessory Enchant Effect>\nArmor: P. Def. +1\nAccessory: M. Def. +1\n\n<+4 or higher Armor/ Accessory Enchant Effect>\nArmor: P. Def. +3\nAccessory: M. Def. +3\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Cannot use on +6 or higher enchanted Armor / Accessory> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49482" name="Stable Scroll: Enchant Weapon (D-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON">
 	<!-- <+1~3 Weapon Enchant Effect>\nOne-handed Swords / One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +4, M. Atk. +3\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +5, M. Atk. +3\nBow/Shooter: P. Atk. +8, M. Atk. +3\n\n<+4 or higher Weapon Enchant Effect>\nOne-handed Swords /One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +8, M. Atk. +6\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +10, M. Atk. +6\nBow/Shooter: P. Atk. +16, M. Atk. +6\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Can only be used on +7 weapon> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49483" name="Stable Armor Enchant Scroll (C-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
 	<!-- <+1~3 Armor / Accessory Enchant Effect>\nArmor: P. Def. +1\nAccessory: M. Def. +1\n\n<+4 or higher Armor/ Accessory Enchant Effect>\nArmor: P. Def. +3\nAccessory: M. Def. +3\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Cannot use on +6 or higher enchanted Armor / Accessory> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49484" name="Stable Scroll: Enchant Weapon (C-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON">
 	<!-- <+1~3 Weapon Enchant Effect>\nOne-handed Swords / One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +4, M. Atk. +3\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +5, M. Atk. +3\nBow/Shooter: P. Atk. +8, M. Atk. +3\n\n<+4 or higher Weapon Enchant Effect>\nOne-handed Swords /One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +8, M. Atk. +6\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +10, M. Atk. +6\nBow/Shooter: P. Atk. +16, M. Atk. +6\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Can only be used on +7 weapon> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49485" name="Stable Armor Enchant Scroll (B-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_ARMOR">
 	<!-- <+1~3 Armor / Accessory Enchant Effect>\nArmor: P. Def. +1\nAccessory: M. Def. +1\n\n<+4 or higher Armor/ Accessory Enchant Effect>\nArmor: P. Def. +3\nAccessory: M. Def. +3\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Cannot use on +6 or higher enchanted Armor / Accessory> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
 	<item id="49486" name="Stable Scroll: Enchant Weapon (B-grade)" type="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WEAPON">
 	<!-- <+1~3 Weapon Enchant Effect>\nOne-handed Swords / One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +4, M. Atk. +3\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +5, M. Atk. +3\nBow/Shooter: P. Atk. +8, M. Atk. +3\n\n<+4 or higher Weapon Enchant Effect>\nOne-handed Swords /One-handed Blunt Weapon / Dagger / Rapier / Spear: P. Atk. +8, M. Atk. +6\nTwo-handed Blunt / Dualsword / Fist Weapon / Ancient Sword: P. Atk. +10, M. Atk. +6\nBow/Shooter: P. Atk. +16, M. Atk. +6\n\n<Safe Enchant Level: +4>\n<Current enchant level remains if it fails>\n<Can only be used on +7 weapon> -->
-		<restriction sellable="false"/>
+		<restriction stackable="true"  sellable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 		<action handler="EnchantScrolls"/>
 	</item>
 
-	<item id="49487" name="Soulshot Ticket" type="NONE">
+	<item id="49487" name="Soulshot Ticket (Imprint)" type="NONE">
 	<!-- Using the Dimensional Merchant, you can exchange it for a Soulshot, Blessed Spiritshot, Beast Soulshot, Spiritshot. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
 	</item>
 
-	<item id="49488" name="Major Warrior Healing Potion" type="POTION">
+	<item id="49488" name="Major Warrior Healing Potion (imprint) " type="POTION">
 	<!-- Magical potion that quickly restores HP. Its effect lasts for 15 seconds. -->
-		<restriction olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  olympiad-restricted="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes weight="5" reuse-delay="10000" immediate-effect="true" action="SKILL_REDUCE"/>
 		<skill-reducer type="ItemSkills">
 			<skill id="39069" value="-1"/>  <!-- Warrior's Major HP Potion -->
@@ -931,19 +937,24 @@
 
 	<item id="49490" name="Fishing Kit" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="45492"/> <!-- Fishing Rod (1-day) -->
+			<item id="49508" min-count="720" max-count="720"/> <!-- Normal Bait (Imprint) -->
+			<item id="90907"/> <!-- Soulshot Ticket (Imprint) non shareable -->
+		</extract>
 	</item>
 
 	<item id="49491" name="D grade Weapon Pack" type="NONE">
 	<!-- Double-click to get the highest quality D-grade weapon.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49492" name="C grade Weapon Pack" type="NONE">
 	<!-- Double-click to get the highest quality C-grade weapon.  -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes action="SKILL_REDUCE"/>
 	</item>
 
@@ -984,19 +995,19 @@
 
 	<item id="49496" name="Luck Cube" type="ELIXIR">
 	<!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major HP Potion, Angel Cat's Blessing, Improved Scroll of Escape, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport Package, Weapon Supply Box (D-grade), Weapon Supply Box (C-grade). (Can be used only once per day.)  -->
-		<restriction stackable="true" destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction destroyable="false" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes duration="10080" action="SKILL_REDUCE"/>
 	</item>
 
 	<item id="49497" name="Hero's Fishing Kit" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
 	<item id="49498" name="My Teleport Scroll Package" type="NONE">
 	<!-- Double-click to obtain the following items. -->
-		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<restriction stackable="true"  tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
