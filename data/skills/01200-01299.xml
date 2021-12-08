@@ -148,10 +148,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -462,10 +463,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="40"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -521,7 +523,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="3">
                 <value level="2">4</value>
                 <value level="3">5</value>
@@ -531,6 +533,7 @@
             </level>
             <time initial="30"/>
             <chance initial="60"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -579,7 +582,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="DOT_MP" visual="DOT_BLEEDING">
+        <abnormal type="DOT_MP">
             <level initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
@@ -587,6 +590,7 @@
             </level>
             <time initial="15"/>
             <chance initial="60"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <magical-attack-mp critical="true" critical-limit="1600">
@@ -2959,7 +2963,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
@@ -2967,6 +2971,7 @@
             </level>
             <time initial="15"/>
             <chance initial="70"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -3654,7 +3659,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="5">
                 <value level="5">6</value>
                 <value level="10">7</value>
@@ -3662,6 +3667,7 @@
             </level>
             <time initial="15"/>
             <chance initial="60"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <magical-attack>
@@ -4224,7 +4230,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
@@ -4241,6 +4247,7 @@
             </level>
             <time initial="10"/>
             <chance initial="70"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -4478,10 +4485,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="SILENCE" visual="SILENCE">
+        <abnormal type="SILENCE">
             <level initial="1"/>
             <time initial="60"/>
             <chance initial="40"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>
@@ -6091,10 +6099,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="7"/>
             <chance initial="30"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -7074,9 +7083,10 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="10"/>
             <time initial="15"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <magical-attack>

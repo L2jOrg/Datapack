@@ -110,10 +110,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="6"/>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" over-hit="true">
@@ -211,10 +212,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="6" affect-random="12"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="40"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -505,9 +507,10 @@
             <effect-point initial="-100"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
-        <abnormal type="SPEED_DOWN" visual="SPEED_DOWN">
+        <abnormal type="SPEED_DOWN">
             <level initial="3"/>
             <time initial="10"/>
+            <visual initial="SPEED_DOWN"/>
         </abnormal>
         <effects>
             <speed mode="PER">
@@ -525,9 +528,10 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="SPEED_DOWN" visual="SPEED_DOWN">
+        <abnormal type="SPEED_DOWN">
             <level initial="4"/>
             <time initial="20"/>
+            <visual initial="SPEED_DOWN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -874,10 +878,11 @@
             <mana initial="78"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="100"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="2"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="6264" name="Golem Boom" action="A1">
@@ -916,10 +921,11 @@
             <mana initial="82"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="6267" name="Soul Drain" debuff="true" action="CA2">
@@ -970,10 +976,11 @@
             <mana initial="117"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="10"/>
             <chance initial="80"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="6270" name="Poison Gas" action="A1">
@@ -1170,9 +1177,10 @@
             <mana initial="85"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="DEATH_CLACK" visual="DOT_BLEEDING">
+        <abnormal type="DEATH_CLACK">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
         </resist-abnormals>

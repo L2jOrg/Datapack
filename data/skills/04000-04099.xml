@@ -527,12 +527,13 @@
             </mana>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="PA_UP" visual="BIG_BODY">
+        <abnormal type="PA_UP">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
             <time initial="300"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -885,7 +886,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -898,6 +899,7 @@
             </level>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="3">
@@ -953,7 +955,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -966,6 +968,7 @@
             </level>
             <time initial="30"/>
             <chance initial="35"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="3">
@@ -1360,10 +1363,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SLEEP" visual="SLEEP">
+        <abnormal type="SLEEP">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="SLEEP"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1410,10 +1414,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -1677,7 +1682,7 @@
             </effect-point>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
@@ -1685,6 +1690,7 @@
             </level>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="3">
@@ -1928,10 +1934,11 @@
             <hit-time initial="3600"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="90"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -1951,10 +1958,11 @@
             <hit-time initial="4000"/>
         </attributes>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="30"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -2331,12 +2339,13 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3">
                 <value level="9">9</value>
             </time>
             <chance initial="30"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -2397,7 +2406,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3">
                 <value level="3">9</value>
@@ -2405,6 +2414,7 @@
                 <value level="10">9</value>
             </time>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -2501,10 +2511,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -2718,9 +2729,10 @@
             <effect-range initial="1100"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="FATAL_POISON" visual="DOT_POISON">
+        <abnormal type="FATAL_POISON">
             <level initial="1"/>
             <time initial="4200"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time can-kill="true" ticks="3">
@@ -2892,7 +2904,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -2905,6 +2917,7 @@
             </level>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="3">
@@ -2992,9 +3005,10 @@
             </mana>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="POSSESSION" visual="BIG_BODY">
+        <abnormal type="POSSESSION">
             <level initial="1"/>
             <time initial="300"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -3277,10 +3291,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE" visual="SILENCE">
+        <abnormal type="SILENCE">
             <level initial="1"/>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>

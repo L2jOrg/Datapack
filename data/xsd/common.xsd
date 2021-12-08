@@ -476,6 +476,21 @@
         </xs:simpleContent>
     </xs:complexType>
 
+    <xs:complexType name="MappedLevelAbnormalVisualList">
+        <xs:sequence>
+            <xs:element name="value" type="AbnormalVisualListLeveled" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="initial" type="AbnormalVisualList" default="NONE"/>
+    </xs:complexType>
+
+    <xs:complexType name="AbnormalVisualListLeveled">
+        <xs:simpleContent>
+            <xs:extension base="AbnormalVisualList">
+                <xs:attribute name="level" type="xs:positiveInteger" default="1"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
     <xs:complexType name="IntervalValue">
         <xs:attribute name="from" type="xs:float" use="required"/>
         <xs:attribute name="until" type="xs:float" use="required"/>
@@ -1467,6 +1482,10 @@
             <xs:enumeration value="ISHKA_EFFECT"/>
             <xs:enumeration value="TRANSFORM_EFFECT"/>
         </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AbnormalVisualList">
+        <xs:list itemType="AbnormalVisualEffect"/>
     </xs:simpleType>
 
     <xs:simpleType name="AbnormalVisualEffect">

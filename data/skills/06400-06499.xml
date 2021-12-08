@@ -18,10 +18,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
             <fan-range start-angle="0" radius="200" angle="90"/>
         </target>
-        <abnormal type="DOT_MP" visual="DOT_POISON">
+        <abnormal type="DOT_MP">
             <level initial="8"/>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <effect name="ManaDamOverTime" ticks="5">
@@ -45,10 +46,11 @@
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="DOT_MP" visual="DOT_POISON">
+        <abnormal type="DOT_MP">
             <level initial="8"/>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <effect name="ManaDamOverTime" ticks="5">
@@ -72,10 +74,11 @@
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="DOT_MP" visual="DOT_POISON">
+        <abnormal type="DOT_MP">
             <level initial="8"/>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -175,10 +178,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="100"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -264,10 +268,11 @@
             <mana initial="110"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -518,10 +523,11 @@
             <element type="WATER" value="20"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="15"/>
             <chance initial="80"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -544,10 +550,11 @@
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="15"/>
             <chance initial="80"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="6439" name="Energy of Wisdom" debuff="true" action="A2">
@@ -936,9 +943,10 @@
             <hit-time initial="500"/>
         </attributes>
         <target/>
-        <abnormal type="BIG_HEAD" visual="BIG_HEAD">
+        <abnormal type="BIG_HEAD">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="BIG_HEAD"/>
         </abnormal>
     </skill>
     <skill id="6465" name="Jack O'Lantern Card" action="A1">

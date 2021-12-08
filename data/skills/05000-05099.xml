@@ -162,12 +162,13 @@
             </activate-rate>
         </attributes>
         <target type="TARGET"/>
-        <abnormal visual="DANCE_ROOT">
+        <abnormal>
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="-1">
                 <value level="4">10</value>
             </chance>
+            <visual initial="DANCE_ROOT"/>
         </abnormal>
         <effects>
             <effect name="HealPercent" stop-level="3">
@@ -280,10 +281,11 @@
             <hit-time initial="1500"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="GHOST_STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="GHOST_STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -348,10 +350,11 @@
             <hit-time initial="3000"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="PARALYZE" visual="FLOATING_ROOT">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="FLOATING_ROOT"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -367,9 +370,10 @@
             <hit-time initial="1000"/>
         </attributes>
         <target/>
-        <abnormal type="BIG_BODY" visual="BIG_BODY">
+        <abnormal type="BIG_BODY">
             <level initial="1"/>
             <time initial="7200"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -524,10 +528,11 @@
             <effect-range initial="400"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
     </skill>
     <skill id="5024" name="Decrease Atk. Spd." max-level="12" debuff="true" action="A2" type="MAGIC">
@@ -872,13 +877,14 @@
             </mana>
         </consume>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="30">
                 <value level="3">5</value>
             </time>
+            <visual initial="ULTIMATE_DEFENCE"/>
         </abnormal>
         <effects>
             <effect name="BlockMove"/>
@@ -2425,8 +2431,9 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="SILENCE_PHYSICAL" visual="SILENCE">
+        <abnormal type="SILENCE_PHYSICAL">
             <time initial="15"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <fatal-blow chance-boost="200.0" over-hit="false">
@@ -2476,12 +2483,13 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3">
                 <value level="2">9</value>
             </time>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -2536,10 +2544,11 @@
             <mana initial="23"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="ANESTHESIA" visual="PARALYZE">
+        <abnormal type="ANESTHESIA">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="20"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -2556,10 +2565,11 @@
             <mana initial="23"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="CRITICAL_POISON" visual="DOT_POISON">
+        <abnormal type="CRITICAL_POISON">
             <level initial="2"/>
             <time initial="60"/>
             <chance initial="50"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time can-kill="true" ticks="5">
@@ -2640,10 +2650,11 @@
             <hit-time initial="2300"/>
         </attributes>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="400"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="20"/>
             <chance initial="90"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -2748,11 +2759,12 @@
             <effect-point initial="566"/>
         </attributes>
         <target/>
-        <abnormal type="SEIZURE_PENALTY" visual="SEIZURE1">
+        <abnormal type="SEIZURE_PENALTY">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="60"/>
+            <visual initial="SEIZURE1"/>
         </abnormal>
         <effects>
             <defence-trait>

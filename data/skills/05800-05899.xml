@@ -49,10 +49,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="12">
             <fan-range start-angle="0" radius="400" angle="60"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="5803" name="Green Chili" max-level="3" debuff="true" action="A1" type="MAGIC">
@@ -804,10 +805,11 @@
             <mana initial="1"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="1000" affect-min="10" affect-random="10"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="80"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -883,7 +885,7 @@
             <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -896,6 +898,7 @@
             </level>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -967,10 +970,11 @@
             <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1046,7 +1050,7 @@
         <target type="ENEMY_ONLY" object="NOT_FRIEND">
             <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="15">
                 <value level="2">3</value>
@@ -1054,6 +1058,7 @@
             <chance initial="-1">
                 <value level="2">80</value>
             </chance>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="5860" name="Wrath of Valakas" debuff="true" action="A2">
@@ -1069,9 +1074,10 @@
             <mana initial="75"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE" visual="SILENCE">
+        <abnormal type="SILENCE">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="SILENCE"/>
         </abnormal>
     </skill>
     <skill id="5861" name="Authority of Valakas" debuff="true" action="A2">
@@ -1087,9 +1093,10 @@
             <mana initial="75"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE" visual="SILENCE">
+        <abnormal type="SILENCE">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="SILENCE"/>
         </abnormal>
     </skill>
     <skill id="5862" name="Destruction of the Body" action="A1">
@@ -1181,13 +1188,14 @@
             <element type="DARK" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5867" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
@@ -1213,13 +1221,14 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
             <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5868" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
@@ -1243,13 +1252,14 @@
             <element type="DARK" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5869" name="Soul Worm" max-level="10" debuff="true" action="A2" type="MAGIC">
@@ -1271,13 +1281,14 @@
             <element type="DARK" value="20"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5870" name="Flash Worm" max-level="10" debuff="true" action="A2">
@@ -1301,13 +1312,14 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5871" name="Flash Worm" max-level="10" debuff="true" action="A2">
@@ -1333,13 +1345,14 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
             <fan-range start-angle="0" radius="150" angle="90"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5872" name="Flash Worm" max-level="10" debuff="true" action="A2">
@@ -1361,13 +1374,14 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="8">
                 <value level="4">9</value>
                 <value level="8">10</value>
             </level>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5873" name="Death Worm" max-level="5" debuff="true" action="A2">
@@ -1447,9 +1461,10 @@
             <mana initial="85"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DEATH_CLACK" visual="DOT_BLEEDING">
+        <abnormal type="DEATH_CLACK">
             <level initial="1"/>
             <time initial="300"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5877" name="Chant of Worm Waking" max-level="4" debuff="true" action="A1">
@@ -1512,10 +1527,11 @@
             <mana initial="165"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1584,10 +1600,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" range="150"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -1611,10 +1628,11 @@
             <mana initial="165"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="60"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1639,10 +1657,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="300" affect-min="5" affect-random="15">
             <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
-        <abnormal type="DISARM" visual="DOT_BLEEDING">
+        <abnormal type="DISARM">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="70"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -1670,10 +1689,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="300" affect-min="5" affect-random="15">
             <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -1750,10 +1770,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" affect-min="5" affect-random="15">
             <fan-range start-angle="0" radius="300" angle="90"/>
         </target>
-        <abnormal type="STUN" visual="DOT_BLEEDING">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <effect name="TargetCancel">
@@ -1782,10 +1803,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="TARGET_LOCK" visual="STUN">
+        <abnormal type="TARGET_LOCK">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="5890" name="Tainted Mass Shackle" max-level="3" debuff="true" action="A2">
@@ -1806,10 +1828,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300" affect-min="10" affect-random="10"/>
-        <abnormal type="TARGET_LOCK" visual="ROOT">
+        <abnormal type="TARGET_LOCK">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
     </skill>
     <skill id="5891" name="Threatening Bellow" debuff="true" action="A1">
@@ -1846,10 +1869,11 @@
             <mana initial="70"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="40"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <effect name="Bluff">

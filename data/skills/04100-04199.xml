@@ -220,7 +220,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -233,6 +233,7 @@
             </level>
             <time initial="45"/>
             <chance initial="70"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -316,9 +317,10 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="1100"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
+            <visual initial="STUN"/>
         </abnormal>
         <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
         </resist-abnormals>
@@ -352,10 +354,11 @@
             <element type="FIRE" value="180"/>
         </attributes>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="400"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
         </resist-abnormals>
@@ -455,10 +458,11 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="700"/>
-        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+        <abnormal type="TURN_STONE">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="50"/>
+            <visual initial="FLESH_STONE"/>
         </abnormal>
         <resist-abnormals>OBLIVION TURN_STONE TURN_FLEE ROOT_MAGICALLY CHANGEBODY PARALYZE STUN SILENCE_PHYSICAL AIRBIND SLEEP ABSORB PUBLIC_SLOT DISARM SILENCE MIRAGE_TRAP MIRAGE KNOCKDOWN DERANGEMENT SILENCE_ALL DEPORT ROOT_PHYSICALLY
         </resist-abnormals>
@@ -617,10 +621,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="40"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -665,10 +670,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="20"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -751,7 +757,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9">
                 <value level="2">3</value>
@@ -760,6 +766,7 @@
                 <value level="7">9</value>
             </time>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1049,10 +1056,11 @@
             <hit-time initial="3600"/>
         </attributes>
         <target type="TARGET" scope="RANGE" object="NOT_FRIEND" range="150"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="2"/>
             <time initial="30"/>
             <chance initial="10"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1334,7 +1342,7 @@
             <effect-range initial="1100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="DOT_MP" visual="DOT_BLEEDING">
+        <abnormal type="DOT_MP">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -1346,6 +1354,7 @@
                 <value level="11">9</value>
             </level>
             <time initial="60"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <effect name="ManaDamOverTime" ticks="5">
@@ -1715,7 +1724,7 @@
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1728,6 +1737,7 @@
             </level>
             <time initial="5"/>
             <chance initial="10"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1764,7 +1774,7 @@
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1777,6 +1787,7 @@
             </level>
             <time initial="5"/>
             <chance initial="10"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1814,7 +1825,7 @@
             <element type="FIRE" value="20"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1827,6 +1838,7 @@
             </level>
             <time initial="5"/>
             <chance initial="10"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -2585,10 +2597,11 @@
             </magic-level>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -2711,12 +2724,13 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5">
                 <value level="10">9</value>
             </time>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -2884,10 +2898,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -3274,12 +3289,13 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5">
                 <value level="10">9</value>
             </time>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -3392,7 +3408,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -3405,6 +3421,7 @@
             </level>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -3563,12 +3580,13 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="SLEEP" visual="SLEEP">
+        <abnormal type="SLEEP">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="70"/>
+            <visual initial="SLEEP"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -3610,12 +3628,13 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="70"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -3710,7 +3729,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -3723,6 +3742,7 @@
             </level>
             <time initial="20"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -3775,12 +3795,13 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="20"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -3822,7 +3843,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="DOT_MP" visual="DOT_BLEEDING">
+        <abnormal type="DOT_MP">
             <level initial="2">
                 <value level="6">3</value>
                 <value level="7">4</value>
@@ -3833,6 +3854,7 @@
             </level>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <effect name="ManaDamOverTime" ticks="5">
@@ -4229,12 +4251,13 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="70"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -4278,7 +4301,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -4291,6 +4314,7 @@
             </level>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">

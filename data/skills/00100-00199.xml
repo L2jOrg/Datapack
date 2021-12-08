@@ -75,10 +75,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="7"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -316,10 +317,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="7"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -520,7 +522,7 @@
             </mana>
         </consume>
         <target type="NPC_BODY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="5">
                 <value level="2">6</value>
                 <value level="3">7</value>
@@ -529,6 +531,7 @@
             </level>
             <time initial="30"/>
             <chance initial="35"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <conditions>
             <condition name="ConsumeBody"/>
@@ -836,10 +839,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="UNDEAD_REAL_ENEMY" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="40"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -913,11 +917,12 @@
             </mana>
         </consume>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="G_BARRIER_AVE">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="30"/>
+            <visual initial="G_BARRIER_AVE"/>
         </abnormal>
         <effects>
             <effect name="BlockMove"/>
@@ -1301,10 +1306,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="7"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1660,7 +1666,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="3">
                 <value level="2">5</value>
                 <value level="3">6</value>
@@ -1669,6 +1675,7 @@
             </level>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">

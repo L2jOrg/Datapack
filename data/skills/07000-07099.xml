@@ -141,10 +141,11 @@
             <mana initial="153"/>
         </consume>
         <target type="TARGET" scope="PLEDGE" object="NOT_FRIEND" range="200"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="8"/>
             <time initial="15"/>
             <chance initial="35"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="7008" name="Feather of Blessing" debuff="true" action="A2">
@@ -1348,10 +1349,11 @@
             <mana initial="50"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions>
@@ -1373,10 +1375,11 @@
             <mana initial="50"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="1"/>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="7068" name="Test Steal Abnormal State" action="A1" type="MAGIC">
@@ -1462,10 +1465,11 @@
             <mana initial="30"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="8"/>
             <time initial="20"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="7077" name="Test - Delay Debuff - Call" debuff="true" action="A2">
@@ -1475,9 +1479,10 @@
             <magic-level initial="70"/>
         </attributes>
         <target/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="7079" name="Test - Party Damage Absorb" action="A2">
@@ -2005,9 +2010,10 @@
             <mana initial="5"/>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="3"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>

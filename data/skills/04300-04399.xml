@@ -192,10 +192,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -304,9 +305,10 @@
             <mana initial="50"/>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="ULTIMATE_BUFF" visual="BIG_BODY">
+        <abnormal type="ULTIMATE_BUFF">
             <level initial="1"/>
             <time initial="15"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -352,9 +354,10 @@
             <mana initial="50"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -397,7 +400,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -409,6 +412,7 @@
                 <value level="11">10</value>
             </level>
             <time initial="30"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -752,9 +756,10 @@
             <mana initial="50"/>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="ULTIMATE_BUFF" visual="BIG_BODY">
+        <abnormal type="ULTIMATE_BUFF">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -773,9 +778,10 @@
             <mana initial="50"/>
         </consume>
         <target type="TARGET"/>
-        <abnormal type="ULTIMATE_BUFF" visual="BIG_BODY">
+        <abnormal type="ULTIMATE_BUFF">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="BIG_BODY"/>
         </abnormal>
         <effects>
             <effect name="Grow"/>
@@ -2031,10 +2037,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BIG_HEAD" visual="BIG_HEAD">
+        <abnormal type="BIG_HEAD">
             <level initial="1"/>
             <time initial="300"/>
             <chance initial="80"/>
+            <visual initial="BIG_HEAD"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -2062,9 +2069,10 @@
             <element type="EARTH" value="20"/>
         </attributes>
         <target type="TARGET" scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+        <abnormal type="TURN_STONE">
             <level initial="2"/>
             <time initial="10"/>
+            <visual initial="FLESH_STONE"/>
         </abnormal>
         <effects>
             <block-all-actions/>

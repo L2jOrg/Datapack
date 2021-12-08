@@ -145,10 +145,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -191,10 +192,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="50"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -489,10 +491,11 @@
             <mana initial="43"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -514,10 +517,11 @@
             <mana initial="43"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="10" affect-random="10"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="50"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -616,9 +620,10 @@
             <effect-point initial="100"/>
         </attributes>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="INVINCIBILITY">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1"/>
             <time initial="600"/>
+            <visual initial="INVINCIBILITY"/>
         </abnormal>
         <effects>
             <damage-block block-hp="true"/>
@@ -657,10 +662,11 @@
             <mana initial="195"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -681,10 +687,11 @@
             <mana initial="390"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -705,10 +712,11 @@
             <mana initial="779"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="300"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -930,10 +938,11 @@
             <mana initial="1"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="MAX_BREATH_UP" visual="SHAKE">
+        <abnormal type="MAX_BREATH_UP">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="80"/>
+            <visual initial="SHAKE"/>
         </abnormal>
     </skill>
     <skill id="5243" name="Blind" debuff="true" action="A2">
@@ -1094,7 +1103,7 @@
             </mana>
         </consume>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="DARK_SEED" visual="DOT_BLEEDING">
+        <abnormal type="DARK_SEED">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1107,6 +1116,7 @@
             </level>
             <time initial="15"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1246,10 +1256,11 @@
             <mana initial="76"/>
         </consume>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1294,7 +1305,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1307,6 +1318,7 @@
             </level>
             <time initial="15"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1359,9 +1371,10 @@
             <effect-range initial="900"/>
         </attributes>
         <target/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1407,7 +1420,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -1420,6 +1433,7 @@
             </level>
             <time initial="10"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1489,7 +1503,7 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DOT_MP" visual="DOT_BLEEDING">
+        <abnormal type="DOT_MP">
             <level initial="2">
                 <value level="6">3</value>
                 <value level="7">4</value>
@@ -1500,6 +1514,7 @@
             </level>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1584,9 +1599,10 @@
             <mana initial="85"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DEATH_CLACK" visual="DOT_BLEEDING">
+        <abnormal type="DEATH_CLACK">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <call-skill scope="END" skill="5257">
@@ -1703,10 +1719,11 @@
             </mana>
         </consume>
         <target type="ENEMY" range="150"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="15"/>
             <chance initial="40"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -1751,10 +1768,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DISARM" visual="DOT_BLEEDING">
+        <abnormal type="DISARM">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="70"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <effect name="Disarm"/>
@@ -1912,10 +1930,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="DEATH_MARK" visual="DOT_POISON">
+        <abnormal type="DEATH_MARK">
             <level initial="3"/>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5265" name="Soul Emission" max-level="12" action="A1" type="MAGIC">
@@ -2112,10 +2131,11 @@
             <effect-point initial="-100"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -2195,10 +2215,11 @@
             <effect-point initial="-100"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -2236,10 +2257,11 @@
             <effect-range initial="1100"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
