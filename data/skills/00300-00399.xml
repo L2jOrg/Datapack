@@ -602,8 +602,9 @@
             </mana-init>
         </consume>
         <target type="NONE"/>
-        <abnormal type="IRON_SHIELD" visual="RAISE_SHIELD">
+        <abnormal type="IRON_SHIELD">
             <time initial="-1"/>
+            <visual initial="RAISE_SHIELD"/>
         </abnormal>
         <effects>
             <effect name="MpConsumePerLevel" ticks="5">
@@ -812,10 +813,11 @@
             <hp initial="669"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="TOUCH_OF_DEATH" visual="REVENGE_AURA">
+        <abnormal type="TOUCH_OF_DEATH">
             <level initial="1"/>
             <time initial="120"/>
             <chance initial="80"/>
+            <visual initial="REVENGE_AURA"/>
         </abnormal>
         <effects>
             <dispel-by-category category="BUFF" max="3">
@@ -1329,10 +1331,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="2"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <condition name="EquipShield"/>
@@ -1374,10 +1377,11 @@
             <mana initial="35"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE_PHYSICAL" visual="SILENCE">
+        <abnormal type="SILENCE_PHYSICAL">
             <level initial="1"/>
             <time initial="60"/>
             <chance initial="40"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <conditions>
             <condition name="EquipShield"/>
@@ -1573,10 +1577,11 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="85"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1633,10 +1638,11 @@
             </hp>
         </consume>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="3"/>
             <time initial="7"/>
             <chance initial="40"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1719,10 +1725,11 @@
             </hp>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="2"/>
             <time initial="7"/>
             <chance initial="40"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1851,12 +1858,13 @@
             </mana>
         </consume>
         <target scope="PARTY" object="FRIEND" range="1000"/>
-        <abnormal type="DANCE_OF_SHADOW" visual="STEALTH">
+        <abnormal type="DANCE_OF_SHADOW">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
             <time initial="300"/>
+            <visual initial="STEALTH"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -1912,13 +1920,14 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="10" affect-random="10"/>
-        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+        <abnormal type="TURN_STONE">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
             <time initial="10"/>
             <chance initial="60"/>
+            <visual initial="FLESH_STONE"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -2512,9 +2521,10 @@
             <item-count initial="40"/>
         </consume>
         <target/>
-        <abnormal type="HERO_BUFF" visual="ULTIMATE_DEFENCE">
+        <abnormal type="HERO_BUFF">
             <level initial="3"/>
             <time initial="30"/>
+            <visual initial="ULTIMATE_DEFENCE"/>
         </abnormal>
         <effects>
             <stat-modify stat="PHYSICAL_DEFENCE" stat-add="PHYSICAL_DEFENCE">
@@ -2546,9 +2556,10 @@
             <item-count initial="40"/>
         </consume>
         <target/>
-        <abnormal type="HERO_BUFF" visual="AURA_DEBUFF">
+        <abnormal type="HERO_BUFF">
             <level initial="2"/>
             <time initial="120"/>
+            <visual initial="AURA_DEBUFF"/>
         </abnormal>
         <effects>
             <stat-modify stat="ACCURACY" stat-add="ACCURACY">
@@ -2597,11 +2608,12 @@
             <magic-level initial="1"/>
         </attributes>
         <target/>
-        <abnormal type="KAMAEL_SPECIAL" visual="WHITE_STANCE_AVE KAMAEL_WHITE_TRANSFORM LONG_RAPIER_WHITE_AVE">
+        <abnormal type="KAMAEL_SPECIAL">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="30"/>
+            <visual initial="WHITE_STANCE_AVE KAMAEL_WHITE_TRANSFORM LONG_RAPIER_WHITE_AVE"/>
         </abnormal>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">
@@ -2663,11 +2675,12 @@
             <magic-level initial="1"/>
         </attributes>
         <target/>
-        <abnormal type="KAMAEL_SPECIAL" visual="BLACK_STANCE_AVE KAMAEL_BLACK_TRANSFORM LONG_RAPIER_BLACK_AVE">
+        <abnormal type="KAMAEL_SPECIAL">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="60"/>
+            <visual initial="BLACK_STANCE_AVE KAMAEL_BLACK_TRANSFORM LONG_RAPIER_BLACK_AVE"/>
         </abnormal>
         <effects>
             <stat-modify stat="PHYSICAL_ATTACK">

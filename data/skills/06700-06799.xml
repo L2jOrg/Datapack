@@ -41,10 +41,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
             <fan-range start-angle="0" radius="300" angle="65"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
     </skill>
     <skill id="6706" name="Piercing Attack" action="A1">
@@ -506,9 +507,10 @@
             <effect-range initial="200"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="STEALTH" visual="STEALTH">
+        <abnormal type="STEALTH">
             <level initial="1"/>
             <time initial="1200"/>
+            <visual initial="STEALTH"/>
         </abnormal>
         <conditions>
             <target>
@@ -548,9 +550,10 @@
             <hit-time initial="3000"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="TIME_BOMB" visual="TIME_BOMB">
+        <abnormal type="TIME_BOMB">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="TIME_BOMB"/>
         </abnormal>
     </skill>
     <skill id="6734" name="Energy of Destruction" debuff="true" action="A2">
@@ -562,9 +565,10 @@
             <element type="EARTH" value="120"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="5"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="6735" name="Petrify" debuff="true" action="A2">
@@ -575,9 +579,10 @@
             <effect-point initial="-1000"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="100"/>
-        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+        <abnormal type="TURN_STONE">
             <level initial="1"/>
             <time initial="5"/>
+            <visual initial="FLESH_STONE"/>
         </abnormal>
     </skill>
     <skill id="6736" name="Fierce Attack" action="A1">
@@ -632,9 +637,10 @@
             <mana initial="80"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="3"/>
+            <visual initial="ROOT"/>
         </abnormal>
     </skill>
     <skill id="6739" name="Presentation - Behemoth Leader Casting Preparation" action="A1">
@@ -692,10 +698,11 @@
             <mana initial="25"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="120"/>
             <chance initial="30"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -798,10 +805,11 @@
             <mana initial="33"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="20.0">
@@ -925,10 +933,11 @@
             <mana initial="100"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="120"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -1224,10 +1233,11 @@
             <mana initial="158"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="20.0">
@@ -1252,10 +1262,11 @@
             <mana initial="155"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="TURN_STONE" visual="FLESH_STONE">
+        <abnormal type="TURN_STONE">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="80"/>
+            <visual initial="FLESH_STONE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1368,10 +1379,11 @@
             <mana initial="85"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="20.0">
@@ -1418,10 +1430,11 @@
             <mana initial="69"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="10"/>
             <chance initial="80"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <speed mode="PER">
@@ -1452,10 +1465,11 @@
             <mana initial="89"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="9"/>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">
@@ -1495,9 +1509,10 @@
             <effect-point initial="1"/>
         </attributes>
         <target/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="10"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>

@@ -575,10 +575,11 @@
             <element type="DARK" value="120"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="5"/>
             <chance initial="80"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -705,7 +706,7 @@
             <hit-time initial="1500"/>
         </attributes>
         <target type="ENEMY" scope="RANGE" object="NOT_FRIEND"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -719,6 +720,7 @@
             </level>
             <time initial="-1"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">

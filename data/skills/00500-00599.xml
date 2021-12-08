@@ -107,13 +107,14 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="REAL_TARGET" visual="REAL_TARGET">
+        <abnormal type="REAL_TARGET">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
                 <value level="4">4</value>
             </level>
             <time initial="30"/>
+            <visual initial="REAL_TARGET"/>
         </abnormal>
         <effects>
             <defence-trait>
@@ -282,12 +283,13 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="6">
                 <value level="3">7</value>
             </level>
             <time initial="10"/>
             <chance initial="50"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" over-hit="true">
@@ -744,12 +746,13 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="400" affect-min="5" affect-random="12"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="6">
                 <value level="3">7</value>
             </level>
             <time initial="30"/>
             <chance initial="70"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -830,10 +833,11 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="5" affect-random="12"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="15.0" over-hit="true">
@@ -1236,9 +1240,10 @@
             </mana>
         </consume>
         <target/>
-        <abnormal type="STEALTH" visual="STEALTH">
+        <abnormal type="STEALTH">
             <level initial="1"/>
             <time initial="120"/>
+            <visual initial="STEALTH"/>
         </abnormal>
         <effects>
             <effect name="SilentMove"/>

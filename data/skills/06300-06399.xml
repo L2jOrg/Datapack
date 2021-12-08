@@ -115,10 +115,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="2"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -161,10 +162,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="10"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -316,9 +318,10 @@
             <mana initial="74"/>
         </consume>
         <target scope="POINT_BLANK" object="FRIEND" range="200"/>
-        <abnormal type="PD_UP_SPECIAL" visual="STUN">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1"/>
             <time initial="15"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="PHYSICAL_SKILL_POWER">
@@ -744,10 +747,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="3"/>
             <chance initial="1"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -774,10 +778,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="4"/>
             <chance initial="40"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -886,10 +891,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="3"/>
             <chance initial="1"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -916,9 +922,10 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="4"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -1176,9 +1183,10 @@
             <hit-time initial="3500"/>
         </attributes>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="INVINCIBILITY">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="INVINCIBILITY"/>
         </abnormal>
     </skill>
     <skill id="6372" name="Power Up" max-level="10" action="A2" type="MAGIC">
@@ -1384,10 +1392,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
             <fan-range start-angle="0" radius="150" angle="120"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="15"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="6380" name="Bistakon Roar" debuff="true" action="A2" type="MAGIC">
@@ -1405,10 +1414,11 @@
         <target scope="RING_RANGE" object="NOT_FRIEND" range="300">
             <fan-range start-angle="0" radius="200" angle="0"/>
         </target>
-        <abnormal type="SILENCE_ALL" visual="SILENCE">
+        <abnormal type="SILENCE_ALL">
             <level initial="1"/>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>
@@ -1430,12 +1440,13 @@
             <mana initial="70"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="300"/>
-        <abnormal type="SILENCE_ALL" visual="SILENCE">
+        <abnormal type="SILENCE_ALL">
             <level initial="1">
                 <value level="2">2</value>
             </level>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>
@@ -1458,10 +1469,11 @@
         <target scope="RING_RANGE" object="NOT_FRIEND" range="300">
             <fan-range start-angle="0" radius="200" angle="0"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="15"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1484,10 +1496,11 @@
             <mana initial="70"/>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE_ALL" visual="SILENCE">
+        <abnormal type="SILENCE_ALL">
             <level initial="1"/>
             <time initial="20"/>
             <chance initial="80"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>
@@ -1535,10 +1548,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND">
             <fan-range start-angle="0" radius="150" angle="100"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="15"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -1562,10 +1576,11 @@
             <mana initial="121"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="150"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">

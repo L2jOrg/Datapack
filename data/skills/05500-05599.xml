@@ -14,10 +14,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="600">
             <fan-range start-angle="0" radius="600" angle="60"/>
         </target>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="10"/>
             <time initial="20"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -41,10 +42,11 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="200">
             <fan-range start-angle="0" radius="200" angle="120"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="100"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -62,10 +64,11 @@
             <hit-time initial="1500"/>
         </attributes>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="600"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="100"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -83,9 +86,10 @@
             <hit-time initial="2000"/>
         </attributes>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="1"/>
             <time initial="30"/>
+            <visual initial="ULTIMATE_DEFENCE"/>
         </abnormal>
         <effects>
             <effect name="BlockMove"/>
@@ -730,7 +734,7 @@
             </mana>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="200"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -744,6 +748,7 @@
             </level>
             <time initial="10"/>
             <chance initial="100"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5531" name="Presentation - Beleth Magic Skill 1" action="A1" type="MAGIC">
@@ -837,8 +842,9 @@
             <reuse initial="1800000"/>
         </attributes>
         <target/>
-        <abnormal type="BIG_HEAD" visual="BIG_HEAD">
+        <abnormal type="BIG_HEAD">
             <time initial="600"/>
+            <visual initial="BIG_HEAD"/>
         </abnormal>
     </skill>
     <skill id="5540" name="Little Angel Agathion Special Skill: Blessed Escape" action="A1">
@@ -895,8 +901,9 @@
             <reuse initial="1800000"/>
         </attributes>
         <target/>
-        <abnormal type="BIG_HEAD" visual="BIG_HEAD">
+        <abnormal type="BIG_HEAD">
             <time initial="600"/>
+            <visual initial="BIG_HEAD"/>
         </abnormal>
     </skill>
     <skill id="5544" name="Little Devil Agathion Special Skill: Ability of Blessed Escape" action="A1">
@@ -1077,10 +1084,11 @@
             <hit-time initial="2500"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1618,7 +1626,7 @@
             <effect-range initial="1100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80">
@@ -1627,6 +1635,7 @@
                 <value level="4">83</value>
                 <value level="5">84</value>
             </chance>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -1663,10 +1672,11 @@
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="10"/>
             <time initial="5"/>
             <chance initial="11"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
     </skill>
     <skill id="5595" name="Bleed" debuff="true" action="A2">
@@ -1677,10 +1687,11 @@
             <effect-point initial="-100"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="10"/>
             <time initial="5"/>
             <chance initial="11"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
     </skill>
     <skill id="5596" name="Flame" debuff="true" action="A2">
@@ -1692,10 +1703,11 @@
             <element type="FIRE" value="150"/>
         </attributes>
         <target type="TARGET"/>
-        <abnormal type="DOT_ATTR" visual="DOT_BLEEDING">
+        <abnormal type="DOT_ATTR">
             <level initial="10"/>
             <time initial="5"/>
             <chance initial="11"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="1">

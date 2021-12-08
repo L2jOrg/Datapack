@@ -402,10 +402,11 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="TURN_FLEE" visual="TURN_FLEE">
+        <abnormal type="TURN_FLEE">
             <level initial="1"/>
             <time initial="3"/>
             <chance initial="80"/>
+            <visual initial="TURN_FLEE"/>
         </abnormal>
         <effects>
             <effect name="BlockControl"/>
@@ -587,10 +588,11 @@
             <mana initial="76"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" over-hit="true">
@@ -613,10 +615,11 @@
             <mana initial="114"/>
         </consume>
         <target scope="POINT_BLANK" object="NOT_FRIEND" range="150" affect-min="6" affect-random="12"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" ignore-shield="true" over-hit="true">
@@ -638,9 +641,10 @@
             <mana initial="36"/>
         </consume>
         <target/>
-        <abnormal type="PD_UP_SPECIAL" visual="ULTIMATE_DEFENCE">
+        <abnormal type="PD_UP_SPECIAL">
             <level initial="2"/>
             <time initial="30"/>
+            <visual initial="ULTIMATE_DEFENCE"/>
         </abnormal>
         <effects>
             <effect name="BlockMove"/>
@@ -697,10 +701,11 @@
             <mana initial="116"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="9"/>
             <chance initial="50"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" over-hit="true">
@@ -750,10 +755,11 @@
             <mana initial="80"/>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="3"/>
             <time initial="20"/>
             <chance initial="50"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0" over-hit="true">
@@ -921,10 +927,11 @@
             <mana initial="109"/>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="9" affect-random="10"/>
-        <abnormal type="SLEEP" visual="SLEEP">
+        <abnormal type="SLEEP">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="40"/>
+            <visual initial="SLEEP"/>
         </abnormal>
         <effects>
             <block-all-actions/>

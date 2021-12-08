@@ -93,12 +93,13 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SLEEP" visual="SLEEP">
+        <abnormal type="SLEEP">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="70"/>
+            <visual initial="SLEEP"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -142,12 +143,13 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="70"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -246,7 +248,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="BLEEDING" visual="DOT_BLEEDING" subordination="BLEEDING">
+        <abnormal type="BLEEDING" subordination="BLEEDING">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -259,6 +261,7 @@
             </level>
             <time initial="20"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -313,12 +316,13 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="PARALYZE" visual="PARALYZE">
+        <abnormal type="PARALYZE">
             <level initial="1"/>
             <time initial="10">
                 <value level="10">30</value>
             </time>
             <chance initial="40"/>
+            <visual initial="PARALYZE"/>
         </abnormal>
         <effects>
             <block-all-actions/>
@@ -362,7 +366,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="DOT_MP" visual="DOT_BLEEDING">
+        <abnormal type="DOT_MP">
             <level initial="2">
                 <value level="6">3</value>
                 <value level="7">4</value>
@@ -373,6 +377,7 @@
             </level>
             <time initial="30"/>
             <chance initial="90"/>
+            <visual initial="DOT_BLEEDING"/>
         </abnormal>
         <effects>
             <effect name="ManaDamOverTime" ticks="5">
@@ -480,12 +485,13 @@
             </mana>
         </consume>
         <target type="ENEMY"/>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1"/>
             <time initial="5">
                 <value level="10">9</value>
             </time>
             <chance initial="80"/>
+            <visual initial="STUN"/>
         </abnormal>
         <effects>
             <physical-attack critical-chance="0.0">
@@ -822,9 +828,10 @@
             <effect-range initial="2000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="SILENCE_ALL" visual="SILENCE">
+        <abnormal type="SILENCE_ALL">
             <level initial="99"/>
             <time initial="120"/>
+            <visual initial="SILENCE"/>
         </abnormal>
         <effects>
             <effect name="Mute"/>
@@ -888,10 +895,11 @@
             <hit-time initial="2000"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="ROOT_MAGICALLY" visual="ROOT">
+        <abnormal type="ROOT_MAGICALLY">
             <level initial="1"/>
             <time initial="30"/>
             <chance initial="95"/>
+            <visual initial="ROOT"/>
         </abnormal>
         <effects>
             <effect name="Root"/>
@@ -945,9 +953,10 @@
             <hit-time initial="1100"/>
         </attributes>
         <target/>
-        <abnormal type="PUBLIC_SLOT" visual="CHANGE_TEXTURE">
+        <abnormal type="PUBLIC_SLOT">
             <level initial="1"/>
             <time initial="14400"/>
+            <visual initial="CHANGE_TEXTURE"/>
         </abnormal>
     </skill>
     <skill id="4224" name="Nighttime Zaken" action="A2">
@@ -1464,9 +1473,10 @@
             <effect-range initial="2500"/>
         </attributes>
         <target type="ENEMY_ONLY"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="9"/>
             <time initial="3600"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">
@@ -2179,7 +2189,7 @@
             </mana>
         </consume>
         <target type="ENEMY_ONLY" scope="RANGE" object="NOT_FRIEND" range="200" affect-min="5" affect-random="12"/>
-        <abnormal type="POISON" visual="DOT_POISON" subordination="POISON">
+        <abnormal type="POISON" subordination="POISON">
             <level initial="2">
                 <value level="2">3</value>
                 <value level="3">4</value>
@@ -2192,6 +2202,7 @@
             </level>
             <time initial="30"/>
             <chance initial="35"/>
+            <visual initial="DOT_POISON"/>
         </abnormal>
         <effects>
             <damage-over-time ticks="5">

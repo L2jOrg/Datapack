@@ -1709,7 +1709,7 @@
             <effect-point initial="-655"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="DEATH_MARK" visual="DEATH_MARK">
+        <abnormal type="DEATH_MARK">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
@@ -1718,6 +1718,7 @@
             </level>
             <time initial="10"/>
             <chance initial="80"/>
+            <visual initial="DEATH_MARK"/>
         </abnormal>
         <effects>
             <stat-modify mode="PER" stat="DEFENCE_CRITICAL_DAMAGE">
@@ -2013,13 +2014,14 @@
         <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="600" affect-min="5" affect-random="7">
             <fan-range start-angle="0" radius="600" angle="90"/>
         </target>
-        <abnormal type="STUN" visual="STUN">
+        <abnormal type="STUN">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
             <time initial="3"/>
             <chance initial="60"/>
+            <visual initial="STUN"/>
         </abnormal>
         <conditions>
             <weapon>
@@ -2943,12 +2945,13 @@
             <hit-time initial="1000"/>
         </attributes>
         <target type="ENEMY"/>
-        <abnormal type="REAL_TARGET" visual="REAL_TARGET">
+        <abnormal type="REAL_TARGET">
             <level initial="1">
                 <value level="2">2</value>
                 <value level="3">3</value>
             </level>
             <time initial="10"/>
+            <visual initial="REAL_TARGET"/>
         </abnormal>
         <effects>
             <defence-trait>
