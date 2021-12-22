@@ -2,6 +2,12 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element name="config" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="max-schemas" type="xs:byte" default="4"/>
+						<xs:attribute name="static-cost" type="xs:long" default="-1"/>
+					</xs:complexType>
+				</xs:element>
 				<xs:element name="category" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
@@ -21,8 +27,7 @@
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
-			<xs:attribute name="max-schemas" type="xs:byte" default="4"/>
-			<xs:attribute name="static-cost" type="xs:long" default="-1"/>
+
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
