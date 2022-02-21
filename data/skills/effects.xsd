@@ -76,7 +76,6 @@
     <xs:element name="summon-agathion" type="SummonAgathionEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon-cubic" type="SummonCubicEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="summon-npc" type="SummonNpcEffect" substitutionGroup="abstractEffect"/>
-    <xs:element name="take-castle" type="TakeCastleEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="teleport" type="TeleportEffect" substitutionGroup="abstractEffect"/>
     <xs:element name="time-restrict-zone-recharge" type="TimeRestrictZoneRecharge" substitutionGroup="abstractEffect"/>
     <xs:element name="transformation" type="TransformationEffect" substitutionGroup="abstractEffect"/>
@@ -303,14 +302,6 @@
         <xs:complexContent>
             <xs:extension base="Location">
                 <xs:attribute name="level" type="xs:int" default="1"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="TakeCastleEffect">
-        <xs:complexContent>
-            <xs:extension base="Effect">
-                <xs:attribute name="side" type="CastleSide" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
