@@ -210,7 +210,7 @@
     <skill id="5422" name="Flame" max-level="12" debuff="true" action="A2" type="MAGIC">
         <!-- Body is on fire. HP continually decreases. -->
         <icon initial="icon.skill1101"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="10">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -271,7 +271,7 @@
     <skill id="5423" name="Poison" max-level="12" debuff="true" action="A2">
         <!-- HP decreases from poison momentarily. -->
         <icon initial="icon.skill4035"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="POISON" level-bonus-rate="10">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -318,7 +318,7 @@
     <skill id="5424" name="Bleed" max-level="12" debuff="true" action="A2">
         <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="10">
             <magic-level initial="10">
                 <value level="2">20</value>
                 <value level="3">30</value>
@@ -377,7 +377,7 @@
     <skill id="5431" name="Decrease Speed" debuff="true" action="A2">
         <!-- Atk. Spd. and Casting Spd. decreases for a set time. -->
         <icon initial="icon.skill0000"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" level-bonus-rate="20">
             <magic-level initial="40"/>
             <cast-range initial="40"/>
             <reuse initial="8000"/>
@@ -411,7 +411,7 @@
     <skill id="5434" name="Gust" debuff="true" action="A2">
         <!-- Inflicted with gust and unable to move momentarily. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="GUST" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="GUST" level-bonus-rate="10">
             <magic-level initial="86"/>
             <cool-time initial="720"/>
             <effect-point initial="-100"/>
@@ -437,7 +437,7 @@
     <skill id="5435" name="Gust" debuff="true" action="A2">
         <!-- Inflicted with gust and unable to move momentarily. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="GUST" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="GUST" level-bonus-rate="10">
             <magic-level initial="86"/>
             <cast-range initial="900"/>
             <cool-time initial="720"/>
@@ -660,7 +660,7 @@
     <skill id="5443" name="Cry of the Wolf" max-level="4" debuff="true" action="A2">
         <!-- Dominate nearby enemies with a mighty roar. -->
         <icon initial="icon.action109"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="2">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="20">
             <magic-level initial="55">
                 <value level="2">60</value>
                 <value level="3">65</value>
@@ -692,7 +692,7 @@
     <skill id="5444" name="Maul" max-level="2" debuff="true" action="A2">
         <!-- Attacks with fore-claws to create wound. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="1">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="-5.0" trait="BLEED" level-bonus-rate="10">
             <magic-level initial="65">
                 <value level="2">70</value>
             </magic-level>
@@ -873,7 +873,7 @@
     <skill id="5447" name="Paralysis" max-level="7" debuff="true" action="A2">
         <!-- Paralyzed and unable to move momentarily. -->
         <icon initial="icon.skill0523"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1" triggered="true">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="10" triggered="true">
             <magic-level initial="62">
                 <value level="2">64</value>
                 <value level="3">66</value>
@@ -970,7 +970,7 @@
     <skill id="5459" name="Paralysis" debuff="true" action="A2">
         <!-- Paralyzed and unable to move temporarily. -->
         <icon initial="icon.skill1170"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="PARALYZE" level-bonus-rate="10">
             <magic-level initial="99"/>
             <effect-point initial="-100"/>
         </attributes>
@@ -985,7 +985,7 @@
     <skill id="5460" name="Fear" debuff="true" action="A2">
         <!-- Causes a temporary fear so strong that a target flees mindlessly. -->
         <icon initial="icon.skill1092"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="DERANGEMENT" level-bonus-rate="10">
             <magic-level initial="99"/>
             <effect-point initial="-100"/>
         </attributes>
@@ -1426,7 +1426,7 @@
     <skill id="5495" name="Bleed" debuff="true" action="A2">
         <!-- HP has been momentarily decreased due to Bleed. -->
         <icon initial="icon.skill0096"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="0.8" level-bonus-rate="2">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" trait="BLEED" hit-cancel-time="0.8" level-bonus-rate="20">
             <magic-level initial="85"/>
             <effect-point initial="-100"/>
             <hit-time initial="3000"/>
@@ -1467,7 +1467,7 @@
     <skill id="5497" name="Horn of Rising Darkness" debuff="true" action="A2">
         <!-- Cannot move and HP decreases temporarily due to the stun and bleeding. -->
         <icon initial="icon.skill0100"/>
-        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="1">
+        <attributes property="PHYSIC" magic-critical-rate="-5.0" level-bonus-rate="10">
             <magic-level initial="85"/>
             <cast-range initial="1000"/>
             <effect-point initial="-100"/>
